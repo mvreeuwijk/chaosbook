@@ -377,9 +377,13 @@ latex_elements = {
 latex_documents = [
   ('index', 'main.tex', u'From Stability to Chaos',
    u'Harmen J. Jonker and Maarten van Reeuwijk', 'manual'),
-  # The cookbook is a separate deliverable: its own standalone PDF.
+  # The cookbook is a separate deliverable: its own standalone PDF. It is built
+  # as a 'howto' (article-based) document, not a 'manual' (book): its top-level
+  # headings then become sections rather than chapters (so they flow instead of
+  # each starting a new page), and Sphinx does not append latex_appendices to
+  # 'howto' documents (the appendices belong to the book only).
   ('app_cookbook', 'cookbook.tex', u'The Maple Cookbook',
-   u'Harmen J. Jonker and Maarten van Reeuwijk', 'manual'),
+   u'Harmen J. Jonker and Maarten van Reeuwijk', 'howto'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

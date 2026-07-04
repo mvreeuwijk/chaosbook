@@ -62,10 +62,19 @@
 \newgeometry{vmargin={3cm}, hmargin={2.4cm,2.4cm}}
 \setlength{\headheight}{14pt}  % Fix header height warning
 \makeatletter
-\renewcommand{\@chapapp}{}
+% \chapter exists only in the book/report classes (the main book), not in the
+% article-based cookbook ('howto'). Guard chapter-specific setup so this shared
+% package loads cleanly in both. In the article case, provide a dummy chapter
+% counter so that [chapter]-based \newtheorem declarations (from custom.sty and
+% from sphinxcontrib-proof) still load; the cookbook has no such environments,
+% so nothing is actually numbered against it.
+\@ifundefined{chapter}{%
+  \newcounter{chapter}%
+}{%
+  \renewcommand{\@chapapp}{}%
+  \titleformat{\chapter}{\Huge\bf\rmfamily\color{TitleColor}}{\thechapter}{0.5em}{}%
+}
 \makeatother
-\titleformat{\chapter}{\Huge\bf\rmfamily\color{TitleColor}}%
-{\thechapter}{0.5em}{}
 \titleformat{\section}{\Large\bf\rmfamily\color{TitleColor}}%
 {\thesection}{0.5em}{}
 \titleformat{\subsection}
@@ -134,7 +143,8 @@
 
 % --- Custom theorem counters for proof environments ---
 
-% Separate counters per type, reset per chapter
+% Separate counters per type, reset per chapter (a dummy chapter counter is
+% provided above for the article-based cookbook, which has no real chapters).
 \newtheorem{definitioncounter}{Definition}[chapter]
 \newtheorem{exercisecounter}{Exercise}[chapter]
 \newtheorem{tutorialcounter}{Tutorial}[chapter]
