@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this book, please cite it as below."
+title: "From Stability to Chaos: A Hands-On Introduction to Nonlinear Dynamics"
+abstract: >-
+  A hands-on introduction to nonlinear dynamics and chaos, developing the theory
+  alongside concrete computations. The current (Maple) edition covers one- and
+  higher-dimensional maps, continuous systems up to strange attractors, and
+  fractal geometry, with an exercise for every topic.
+authors:
+  - family-names: Jonker
+    given-names: Harmen J.
+  - family-names: Reeuwijk
+    name-particle: van
+    given-names: Maarten
+repository-code: "https://github.com/mvreeuwijk/chaosbook"
+url: "https://mvreeuwijk.github.io/chaosbook/"
+license:
+  - CC-BY-NC-SA-4.0
+  - MIT
+keywords:
+  - nonlinear dynamics
+  - chaos
+  - dynamical systems
+  - bifurcations
+  - fractals
+  - Lyapunov exponents
+# Once a release is archived on Zenodo, add the minted DOI here and set the
+# version/date-released to match that release:
+#   doi: "10.5281/zenodo.XXXXXXX"
+#   version: "v1.0-maple"
+#   date-released: "YYYY-MM-DD"
+preferred-citation:
+  type: book
+  title: "From Stability to Chaos: A Hands-On Introduction to Nonlinear Dynamics"
+  authors:
+    - family-names: Jonker
+      given-names: Harmen J.
+    - family-names: Reeuwijk
+      name-particle: van
+      given-names: Maarten
+  url: "https://mvreeuwijk.github.io/chaosbook/"
