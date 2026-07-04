@@ -1,5 +1,5 @@
 sphinx
-myst-parser
+myst-parser[linkify]
 sphinx-book-theme
 sphinxcontrib-bibtex
 sphinx-subfigure
