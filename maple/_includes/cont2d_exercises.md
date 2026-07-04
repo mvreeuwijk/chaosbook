@@ -1,4 +1,6 @@
-## Fixed Points and linearization
+## Exercises
+
+### Fixed Points and linearization
 
 **Downloads:** {download}`FixedPointsLinearization.mws <_static/exercises/FixedPointsLinearization.mws>`
 
@@ -13,7 +15,7 @@ $$
 $$
 
 
-## Rabbits versus Sheep
+### Rabbits versus Sheep
 
 **Downloads:** {download}`RabbitsSheep.mws <_static/exercises/RabbitsSheep.mws>`
 
@@ -52,7 +54,7 @@ d) Calculate with `maple` the linear stability of the fixed points for the case 
 e) Take $b_1 = 1$. Find the critical value of $b_2$ such that the species can still co-exist.
 
 
-## Predator-Prey with Alee effect
+### Predator-Prey with Alee effect
 
 **Downloads:** {download}`PredatorPreyAlee.mws <_static/exercises/PredatorPreyAlee.mws>`
 
@@ -96,7 +98,7 @@ f) Take $a = 0.75$. Show the phaseportrait of the system, together with the traj
 g) Again take $a = 0.75$ and $x(0) =0.4$. Since the prey population at $t=0$ is larger than the equilibrium population, biologists have decided to intervene and increase the predator population to $y(0) = 0.25 + \delta$. However, to their utter disbelief they find both species to go rapidly extinct. Study the phaseportrait and trajectories for different $\delta$ and find an estimate for the minimal value of $\delta$ they must have used.
 
 
-## Nuclear Reactor Cooling
+### Nuclear Reactor Cooling
 
 **Downloads:** {download}`NuclearReactorCooling.mws <_static/exercises/NuclearReactorCooling.mws>`, {download}`NuclearReactorCooling.eps <_static/exercises/NuclearReactorCooling.eps>`
 

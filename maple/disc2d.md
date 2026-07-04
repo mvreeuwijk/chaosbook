@@ -1235,8 +1235,5 @@ For more information, we refer to e.g. {cite}`Ott1993,Schuster1995`.
 [^fn1]: This is a somewhat simpler version of a ball bouncing in a wedge shaped confinement
 [^fn2]: The state $w=4/6$ does not exist for the linear map {eq}`eq:disc2d:lincircle`. The realisable period-6 solutions, after excluding the period 1,2 and 3 solutions from {eq}`eq:disc2d:lincircle_p`, are $w= \in \{ 1/6, 5/6 \}$. However, for nonlinear maps a state like $w=4/6$ can exist, because not all increments have the same size.
 
-```{toctree}
-:hidden:
-
-exercises_disc2d
+```{include} _includes/disc2d_exercises.md
 ```

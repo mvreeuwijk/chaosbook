@@ -1157,8 +1157,5 @@ When comparing the phase portraits just before the bifurcation ({numref}`fig:con
 [^fn3]: Assume that a closed orbit exists for which $\mathbf{x}(t+T) = \mathbf{x}(t)$ (periodic motion). If $V$ is single-valued, this implies that $\int_0^T \frac{dV}{dt} dt = 0$. Substituting $ds = | \dot{\mathbf{x}} | dt$ and $\frac{dV}{d t} = \nabla V \cdot \dot{\mathbf{x}} = - \dot{\mathbf{x}} \cdot \dot{\mathbf{x}}$, we obtain that $\oint | \dot{\mathbf{x}} | ds = 0$. This can only occur when $|\dot{\mathbf{x}}|=0$ for each point on the orbit. In this case, the entire “orbit” is a fixed “point” (e.g. $V(r) = 1 - r^2+ r^3$). We therefore conclude that closed orbits cannot exist when $V$ is single-valued.
 [^fn4]: A more rigorous argument can be made using the property $\nabla \cdot \rho \mathbf{f} = 0$.
 
-```{toctree}
-:hidden:
-
-exercises_cont2d
+```{include} _includes/cont2d_exercises.md
 ```

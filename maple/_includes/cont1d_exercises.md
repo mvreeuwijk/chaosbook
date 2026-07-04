@@ -1,4 +1,6 @@
-## Hysteresis
+## Exercises
+
+### Hysteresis
 
 **Downloads:** {download}`Hysteresis.mws <_static/exercises/Hysteresis.mws>`
 
@@ -35,7 +37,7 @@ f) Repeat the procedure of (e) for $r$ *decreasing* from 0.5 to -0.5.
 g) Plot the results of (e) and (f) in the same graph, and give an explanation. You may want to include the branches obtained in (b) in the same plot.
 
 
-## Stability and bifurcations
+### Stability and bifurcations
 
 **Downloads:** {download}`PitchforkBifurcation.mws <_static/exercises/PitchforkBifurcation.mws>`
 
@@ -56,7 +58,7 @@ c) Does the system exhibit a bifurcation? If so, indicate for which value of $\n
 d) Set $\nu = 1/4$ and determine with Maple the numerical solution for the initial conditions $x(0) = 10^{-4}$ and $x(0) = 3$ and plot the time evolution.
 
 
-## Stability and bifurcations (2)
+### Stability and bifurcations (2)
 
 **Downloads:** {download}`StabilityBifurcationsExp.mws <_static/exercises/StabilityBifurcationsExp.mws>`
 
@@ -81,7 +83,7 @@ e) Prove analytically that the system undergoes a bifurcation when the stable fi
 f) Can this system exhibit hysteresis? If so, give a detailed description of the hysteresis cycle, for example by drawing a sketch (pen and paper) or by a numerical method.
 
 
-## Earth's heat balance
+### Earth's heat balance
 
 **Downloads:** {download}`EarthHeatBalance.mw <_static/exercises/EarthHeatBalance.mw>`
 

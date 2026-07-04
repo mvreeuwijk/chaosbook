@@ -1,4 +1,6 @@
-## Sensitive dependence on initital conditions in the Lorenz System
+## Exercises
+
+### Sensitive dependence on initital conditions in the Lorenz System
 
 **Downloads:** {download}`LorenzSensitiveDependence_start.mws <_static/exercises/LorenzSensitiveDependence_start.mws>`, {download}`LorenzSensitiveDependence.mws <_static/exercises/LorenzSensitiveDependence.mws>`
 
@@ -32,14 +34,14 @@ f) Make a plot of the 3d-*phase-space* by plotting $[x(t),y(t),z(t)]$ instead of
 g) If everything went well you saw a so-called “strange attractor”. Why it is called *strange* will be dealt with later, but to see that the object is really attracting, change the initial condition $x(0) = 2$ to $x(0) = 100$ and look at the trajectories in phase-space. Study other initial conditions and verify that the trajectories converge upon the *attractor*.
 
 
-## Classification of timeseries
+### Classification of timeseries
 
 **Downloads:** {download}`ClassifyingTimeseries.mws <_static/exercises/ClassifyingTimeseries.mws>`, {download}`SomeDatasets.mws <_static/exercises/SomeDatasets.mws>`
 
 Open the Maple file `SomeDatasets.mws` to view different data sets `set1, set2, set3`. Find out which one is a: pure random noise, b: a one dimensional mapping, c: a higher order mapping. Explain your answer.
 
 
-## Three body problem
+### Three body problem
 
 **Downloads:** {download}`ThreeBody.mws <_static/exercises/ThreeBody.mws>`, {download}`ThreeBody_start.mws <_static/exercises/ThreeBody_start.mws>`, {download}`ex0036r03_fig1.pstex <_static/exercises/ex0036r03_fig1.pstex>`
 
@@ -104,7 +106,7 @@ b) Check the sensitive dependence on initial conditions. Take $x_0=2 \times 10^8
 c) In reality the mass of the moon is a factor $81$ lower than the earth's. If you change this, are there still chaotic trajectories? You may need to increase the initial velocity a bit.
 
 
-## Attractor reconstruction
+### Attractor reconstruction
 
 **Downloads:** {download}`LorenzReconstruct.mws <_static/exercises/LorenzReconstruct.mws>`, {download}`LorenzReconstructStart.mws <_static/exercises/LorenzReconstructStart.mws>`, {download}`LorenzConstruct.mws <_static/exercises/LorenzConstruct.mws>`, {download}`dataset1.txt <_static/exercises/dataset1.txt>`, {download}`dataset2.txt <_static/exercises/dataset2.txt>`
 

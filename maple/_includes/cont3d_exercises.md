@@ -1,4 +1,6 @@
-## Poincar\'{e
+## Exercises
+
+### Poincar\'{e
 
 **Downloads:** {download}`PoincareSectionRossler.mws <_static/exercises/PoincareSectionRossler.mws>`
 
@@ -24,7 +26,7 @@ b) Display the Poincaré-section and the attractor in the same plot.
 c) Repeat the procedure for different values of $c$ between 2 and 6.
 
 
-## Earth Magnetic Field
+### Earth Magnetic Field
 
 **Downloads:** {download}`EarthMagneticField.mws <_static/exercises/EarthMagneticField.mws>`
 
@@ -63,7 +65,7 @@ e) Take $k=0.72$ and calculate a numerical solution for $t=500\ldots 1000$, star
 f) Discuss the results of question {ref}`eq0101:num <eq0101:num>` with respect to the stability analysis conducted in question {ref}`eq0101:stab <eq0101:stab>`.
 
 
-## Belousov-Zhabotinski reaction
+### Belousov-Zhabotinski reaction
 
 **Downloads:** {download}`BelousovZhabotinski.mws <_static/exercises/BelousovZhabotinski.mws>`
 
@@ -100,7 +102,7 @@ d) Use the fixed point with $d$-dependence and classify it for $d=0.25$ and $d=0
 e) What does it mean when a dynamical system is called dissipative? Find an appropriate measure for the 'dissipativeness' of the system and plot its time-evolution for $d=0.5$.
 
 
-## Signal transmission in neurons
+### Signal transmission in neurons
 
 **Downloads:** {download}`BVP.mws <_static/exercises/BVP.mws>`, {download}`ex0089r01_1.eps <_static/exercises/ex0089r01_1.eps>`
 

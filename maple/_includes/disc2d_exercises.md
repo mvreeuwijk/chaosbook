@@ -1,4 +1,6 @@
-## Bouncing Ball
+## Exercises
+
+### Bouncing Ball
 
 **Downloads:** {download}`BouncingBall.mws <_static/exercises/BouncingBall.mws>`, {download}`BouncingBallFixedPoint.mws <_static/exercises/BouncingBallFixedPoint.mws>`
 
@@ -26,7 +28,7 @@ e) Find a value for $r$ for which a fixed point is stable.
 f) Prove analytically with `maple` that the fixed point is stable
 
 
-## Dripping Faucet Model
+### Dripping Faucet Model
 
 **Downloads:** {download}`DrippingFaucetModel.mws <_static/exercises/DrippingFaucetModel.mws>`
 
@@ -99,7 +101,7 @@ $$
 and determine $f$ and $g$. Use this to show that the fixed point is indeed stable.
 
 
-## Kicked U-tube
+### Kicked U-tube
 
 **Downloads:** {download}`KickedBubble.mws <_static/exercises/KickedBubble.mws>`, {download}`KickedBubble_Phase.mws <_static/exercises/KickedBubble_Phase.mws>`
 
