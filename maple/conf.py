@@ -191,6 +191,12 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
     "icon_links": [
         {
+            "name": "Download PDF",
+            "url": "https://mvreeuwijk.github.io/chaosbook/chaosbook.pdf",
+            "icon": "fa-solid fa-file-pdf",
+            "type": "fontawesome",
+        },
+        {
             "name": "GitHub",
             "url": "https://github.com/mvreeuwijk/chaosbook",
             "icon": "fa-brands fa-github",

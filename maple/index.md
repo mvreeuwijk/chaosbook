@@ -25,6 +25,14 @@ experimented with directly.
 
 Start reading →
 ```
+
+```{button-link} chaosbook.pdf
+:color: secondary
+:outline:
+:class: sfc-cta
+
+Download PDF
+```
 :::
 
 :::{grid-item}

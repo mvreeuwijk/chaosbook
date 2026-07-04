@@ -33,6 +33,26 @@ jobs:
       - name: Build the Maple edition (HTML)
         run: sphinx-build -b html maple build/maple/html
 
+      - name: Install LaTeX toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-pictures \
+            texlive-science \
+            tex-gyre
+
+      - name: Build the Maple edition (PDF)
+        run: |
+          sphinx-build -b latex maple build/maple/latex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/main.tex
+          # Publish the PDF at the site root so it is downloadable.
+          cp build/maple/latex/main.pdf build/maple/html/chaosbook.pdf
+
       # GitHub Pages serves the artifact as-is (no Jekyll), but a .nojekyll
       # keeps underscore-prefixed dirs (_static, _images) safe on any path.
       - name: Disable Jekyll processing
