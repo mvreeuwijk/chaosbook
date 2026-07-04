@@ -24,10 +24,10 @@ to reach this point, and we are delighted that it is finally available.
 
 Harmen J. Jonker is Professor of Atmospheric Physics in the Department of
 Geoscience and Remote Sensing at
-[Delft University of Technology](https://www.tudelft.nl), and CTO of
-[Whiffle](https://whiffle.nl). His research focuses on turbulence, atmospheric
-boundary-layer physics and large-eddy simulation, with applications to weather
-and wind energy.
+[Delft University of Technology](https://www.tudelft.nl). He co-founded
+[Whiffle](https://whiffle.nl), where he is Chief Innovation Officer. His
+research focuses on turbulence, atmospheric boundary-layer physics and
+large-eddy simulation, with applications to weather and wind energy.
 
 ## [Maarten van Reeuwijk](https://profiles.imperial.ac.uk/m.vanreeuwijk)
 
