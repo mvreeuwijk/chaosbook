@@ -1,0 +1,12 @@
+# --- GitHub Linguist language statistics ---
+# This repository is a MyST/Markdown book, not a TeX or Python project.
+# By default Linguist excludes Markdown (prose) from the language bar and then
+# measures the few remaining support files, making the repo look like ~80%
+# "TeX" (from refs.bib + custom.sty). Fix that:
+
+# Count the Markdown prose so the bar reflects the actual book content.
+*.md linguist-detectable
+
+# Exclude build-support / data files that were skewing the stats.
+shared/refs.bib   linguist-detectable=false
+shared/custom.sty linguist-detectable=false
