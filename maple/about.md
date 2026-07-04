@@ -17,7 +17,7 @@ to reach this point, and we are delighted that it is finally available.
 
 ## [Harmen J. Jonker](https://www.tudelft.nl/en/staff/h.j.j.jonker/)
 
-```{image} _static/about/harmen-jonker.png
+```{image} _static/about/harmen-jonker.jpg
 :alt: Harmen J. Jonker
 :class: sfc-portrait
 ```
