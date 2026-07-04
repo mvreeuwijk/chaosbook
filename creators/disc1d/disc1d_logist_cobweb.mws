@@ -1,0 +1,161 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle7" -1 201 "Times" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "_cstyle5" -1 203 "Courier" 1 12 255 0 0 1 2 1 2 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle4" -1 204 "Courier" 1 12 255 0 0 1 2 1 2 
+2 1 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 205 "Times" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle2" -1 206 "Times" 1 18 0 0 0 0 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "_cstyle1" -1 207 "Courier" 1 12 255 0 0 1 2 1 2 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle21" -1 209 "Times" 1 18 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle20" -1 210 "Times" 1 24 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "Text" -1 211 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle8" -1 213 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle29
+" -1 234 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle30" -1 235 1 {CSTYLE 
+"" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle31" -1 236 1 {CSTYLE "" -1 -1 "Times" 1 
+12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle32" -1 237 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 
+1 2 1 2 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_psty
+le33" -1 238 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle34" -1 239 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle35" -1 240 1 {CSTYLE "" -1 -1 
+"Times" 1 18 0 0 0 0 0 2 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle36" -1 241 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle37" -1 242 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 2 1 2 2 1 
+2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle38" -1 
+243 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 
+0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle39" -1 244 1 {CSTYLE "" 
+-1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle40" -1 245 1 {CSTYLE "" -1 -1 "Courier" 
+1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle41" -1 246 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 
+0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle42" 
+-1 247 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle43" -1 248 1 {CSTYLE "" -1 
+-1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 
+1 }}
+{SECT 0 {EXCHG {PARA 234 "" 0 "" {TEXT 205 0 "" }}{PARA 235 "" 0 "" 
+{TEXT 210 37 " Logistic Map: time-series and cobweb" }}{PARA 236 "" 0 
+"" {TEXT -1 0 "" }}}{EXCHG {PARA 237 "> " 0 "" {MPLTEXT 1 207 38 "rest
+art; with(plots): with(plottools):" }}}{EXCHG {PARA 238 "> " 0 "" 
+{MPLTEXT 1 0 26 "f := x -> r * x * (1 - x);" }}}{EXCHG {PARA 234 "" 0 
+"" {TEXT 205 0 "" }}{PARA 239 "" 0 "" {TEXT 209 20 "generate time seri
+es" }}{PARA 236 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 237 "> " 0 "" 
+{MPLTEXT 1 207 8 "N := 40;" }}}{EXCHG {PARA 237 "> " 0 "" {MPLTEXT 1 
+207 18 "xs := Array(1..N):" }}}{EXCHG {PARA 237 "> " 0 "" {MPLTEXT 1 
+207 9 "r := 2.7;" }}}{EXCHG {PARA 237 "> " 0 "" {MPLTEXT 1 207 13 "xs[
+1] := 0.1;" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 22 "for n from \+
+1 to N-1 do" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 31 "  xs[n+1] := evalf
+( f(xs[n]) );" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}
+{EXCHG {PARA 240 "" 0 "" {TEXT -1 0 "" }}{PARA 239 "" 0 "" {TEXT 209 
+16 "plot time series" }}{PARA 236 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 237 "> " 0 "" {MPLTEXT 1 207 27 "l := seq([n,xs[n]],n=1..N):" }}
+}{EXCHG {PARA 237 "> " 0 "" {MPLTEXT 1 207 58 "pointplot([l],labels=[
+\"n\",\"xn\"],color=blue,symbolsize=10);" }}}{EXCHG {PARA 234 "" 0 "" 
+{TEXT 205 0 "" }}{PARA 241 "" 0 "" {TEXT 206 26 "Create and plot the c
+obweb" }}{PARA 234 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 238 "> " 0 "
+" {MPLTEXT 1 0 32 "ppv1 := [0,xs[2]],[xs[1],xs[2]];" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "ppv2 := [0,xs[3]],[xs[2],xs[3]];" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "ppv3 := [0,xs[4]],[xs[3],xs[
+4]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "ppv4 := [0,xs[5]],[
+xs[4],xs[5]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "ppv5 := [0
+,xs[6]],[xs[5],xs[6]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "p
+pv6 := [0,xs[7]],[xs[6],xs[7]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 32 "ppv7 := [0,xs[8]],[xs[7],xs[8]];" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "ppv8 := [0,xs[9]],[xs[8],xs[9]];" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 32 "pph1 := [xs[2],0],[xs[2],xs[3]];" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "pph2 := [xs[3],0],[xs[3],xs[4]];" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "pph3 := [xs[4],0],[xs[4],x
+s[5]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "pph4 := [xs[5],0]
+,[xs[5],xs[6]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "pph5 := \+
+[xs[6],0],[xs[6],xs[7]];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 
+"pph6 := [xs[7],0],[xs[7],xs[8]];" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "pph7 := [xs[8],0],[xs[8],xs[9]];" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 33 "pph8 := [xs[9],0],[xs[9],xs[10]];" }}}
+{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 17 "pp := [xs[1], 0]:" }}}
+{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}
+{PARA 238 "> " 0 "" {MPLTEXT 1 0 45 "  pp := pp, [xs[n], xs[n]], [xs[n
+], xs[n+1]];" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}
+{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 134 "pl1 := plot([f(x), x, [pp
+] ], x=0..1, y=0..1, color = black,labels=[\"x[n]\", \"x[n+1]\"],thick
+ness=[3,3,2],linestyle=[SOLID,DASH,SOLID]):" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 164 "plv := plot([[ppv1],[ppv2],[ppv3],[ppv4]], x=0..1
+, y=0..1, color = black,labels=[\"x[n]\", \"x[n+1]\"],labeldirections=
+[horizontal,vertical],thickness=1,linestyle=DOT):" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 126 "plh := plot([[pph1],[pph2],[pph3],[pph4]], \+
+x=0..1, y=0..1, color = black,labels=[\"x[n]\", \"x[n+1]\"],thickness=
+1,linestyle=DOT):" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 86 "disp
+lay(pl1,plv,plh,scaling=constrained,axes=boxed,xtickmarks=[0,1],ytickm
+arks=[0,1]);" }}}{EXCHG {PARA 242 "> " 0 "" {MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 44 "th1 := textplot([xs[1],0,`x0`],align=BELOW):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "th2 := textplot([xs[2],0,`x1
+`],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "th3 := \+
+textplot([xs[3],0,`x2`],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "th4 := textplot([xs[4],0,`x3`],align=BELOW):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "th5 := textplot([xs[5],0,`x4
+`],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "tv1 := \+
+textplot([0,xs[2],`x1`],align=LEFT):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 43 "tv2 := textplot([0,xs[3],`x2`],align=LEFT):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "tv3 := textplot([0,xs[4],`x3
+`],align=LEFT):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "tv4 := t
+extplot([0,xs[5],`x4`],align=LEFT):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 43 "tv5 := textplot([0,xs[6],`x5`],align=LEFT):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 122 "display(th1,th2,th3,th4,th5
+,tv1,tv2,tv3,tv4,pl1,plv,plh,scaling=constrained,axes=boxed,xtickmarks
+=[0,1],ytickmarks=[0,1]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+113 "plotsetup(ps,plotoutput=`disc1d_logist_cobweb_r2_7.ps`,plotoption
+s=`portrait,noborder,width=7.2cm,height=7.2cm`);" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 122 "display(th1,th2,th3,th4,th5,tv1,tv2,tv3,tv4,
+pl1,plv,plh,scaling=constrained,axes=boxed,xtickmarks=[0,1],ytickmarks
+=[0,1]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "#?plottools" }}
+}{EXCHG {PARA 243 "" 0 "" {TEXT 211 0 "" }}}{EXCHG {PARA 237 "> " 0 "
+" {MPLTEXT 1 207 9 "r := 3.2;" }}}{EXCHG {PARA 237 "> " 0 "" {MPLTEXT 
+1 207 13 "xs[1] := 0.1;" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 
+22 "for n from 1 to N-1 do" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 31 "  x
+s[n+1] := evalf( f(xs[n]) );" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 7 "en
+d do:" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 17 "pp := [xs[1], 0]
+:" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}
+{PARA 238 "> " 0 "" {MPLTEXT 1 0 45 "  pp := pp, [xs[n], xs[n]], [xs[n
+], xs[n+1]];" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}{PARA 
+238 "> " 0 "" {MPLTEXT 1 0 171 "pl1 := plot([f(x), x, [pp] ], x=0..1, \+
+y=0..1, color =black,labels=[\"x[n]\", \"x[n+1]\"],labeldirections=[ho
+rizontal,vertical],thickness=[3,3,2],linestyle=[SOLID,DASH,SOLID]):" }
+}}{EXCHG {PARA 244 "> " 0 "" {MPLTEXT 1 -1 36 "fp := seq([xs[n-1],xs[n
+]],n=N-1..N):" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 40 "disk2a :
+= disk(fp[1],0.014,color=black):" }}}{EXCHG {PARA 238 "> " 0 "" 
+{MPLTEXT 1 0 40 "disk2b := disk(fp[2],0.014,color=black):" }}}{EXCHG 
+{PARA 244 "> " 0 "" {MPLTEXT 1 -1 58 "pl2 := plot([fp],style=point,sym
+bol=CIRCLE,symbolsize=20):" }}}{EXCHG {PARA 245 "> " 0 "" {MPLTEXT 1 
+203 113 "plotsetup(ps,plotoutput=`disc1d_logist_cobweb_r3_2.ps`,plotop
+tions=`portrait,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 
+238 "> " 0 "" {MPLTEXT 1 0 47 "display(pl1,disk2a,disk2b,scaling=const
+rained);" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 237 "> " 0 "" {MPLTEXT 1 207 9 "r := 3.9;" }}}{EXCHG {PARA 237 "
+> " 0 "" {MPLTEXT 1 207 9 "N := 100;" }}}{EXCHG {PARA 237 "> " 0 "" 
+{MPLTEXT 1 207 18 "xs := Array(1..N):" }}}{EXCHG {PARA 237 "> " 0 "" 
+{MPLTEXT 1 207 13 "xs[1] := 0.1;" }}}{EXCHG {PARA 238 "> " 0 "" 
+{MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}{PARA 238 "> " 0 "" 
+{MPLTEXT 1 0 31 "  xs[n+1] := evalf( f(xs[n]) );" }}{PARA 238 "> " 0 "
+" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG {PARA 238 "> " 0 "" {MPLTEXT 1 0 
+17 "pp := [xs[1], 0]:" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 22 "for n fr
+om 1 to N-1 do" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 45 "  pp := pp, [xs
+[n], xs[n]], [xs[n], xs[n+1]];" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 7 "
+end do:" }}{PARA 238 "> " 0 "" {MPLTEXT 1 0 172 "pl1 := plot([f(x), x,
+ [pp] ], x=0..1, y=0..1, color = black,labels=[\"x[n]\", \"x[n+1]\"],l
+abeldirections=[horizontal,vertical],thickness=[3,3,2],linestyle=[SOLI
+D,DASH,SOLID]):" }}}{EXCHG {PARA 245 "> " 0 "" {MPLTEXT 1 203 113 "plo
+tsetup(ps,plotoutput=`disc1d_logist_cobweb_r3_9.ps`,plotoptions=`portr
+ait,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 238 "> " 0 "
+" {MPLTEXT 1 0 33 "display(pl1,scaling=constrained);" }}}{EXCHG {PARA 
+238 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 246 "" 0 "" {TEXT 201 0 "
+" }}{PARA 247 "" 0 "" {TEXT 213 0 "" }}{PARA 248 "" 0 "" {TEXT -1 0 "
+" }}}{MARK "69 0 0" 53 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

@@ -1,0 +1,39 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plots)
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "modf := x->x-floor(x);
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "f := x->modf(2*x);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "N :=400;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 18 "xs := Array(0..N):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 21 "xs[0] := evalf(1/Pi);" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 23 "for n from 0 to N-1 do " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "  xs[n+1] := f(xs[n]);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "l := seq([n,x
+s[n]],n=0..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 110 "plotsetu
+p(ps,plotoutput=`disc1d_shiftmap_series.ps`,plotoptions=`portrait,nobo
+rder,width=8.0cm,height=5.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 106 "plot([l],x=0..N,0..1,labels=[\"n\",\"y[n]\"],style=p
+oint,symbolsize=20,symbol=CIRCLE,thickness=1,color=black);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "ret := seq([xs[i],xs[i+1]],i=0..N-1
+):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 114 "plotsetup(ps,plotout
+put=`disc1d_shiftmap_returnplot.ps`,plotoptions=`portrait,noborder,wid
+th=5.0cm,height=5.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+164 "pointplot([ret],labels=[\"y[n]\",\"y[n+1]\"],style=point,symbolsi
+ze=20,symbol=CIRCLE,thickness=1,color=black,scaling=constrained,labeld
+irections=[horizontal,vertical]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+28 "bit representation of 1/pi: " }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "r := xs[0]; Nb := 40;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "for i from 1 to Nb do " }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 23 " r1 := evalf(r-2^(-i));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "
+ if( r1 < 0 ) then b[i] := 0; else r := r1; b[i] := 1; end if;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 " print(i,r,r1,b[i]);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+18 "seq(b[i],i=1..Nb);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "i \+
+:= 'i';" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "sum(b[i]*2^(-i),
+i=1..Nb);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "evalf(%);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "xs[0]-%;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "11 0 0" 
+32 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

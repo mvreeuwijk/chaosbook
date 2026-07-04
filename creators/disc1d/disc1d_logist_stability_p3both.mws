@@ -1,0 +1,72 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 1 12 255 0 0 1 0 1 0 
+2 1 2 0 0 0 1 }{CSTYLE "_cstyle4" -1 208 "Courier" 1 12 255 0 0 1 0 1 
+0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle5" -1 209 "Times" 0 1 0 0 0 0 0 0 0 
+2 2 2 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_p
+style5" -1 204 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 
+2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle6" -1 205 
+1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 
+0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 206 1 {CSTYLE "" -1 
+-1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 
+2 2 -1 1 }{PSTYLE "_pstyle8" -1 207 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+9" -1 208 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 
+0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 204 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plot
+s):" }}}{EXCHG {PARA 204 "> " 0 "" {MPLTEXT 1 0 13 "Digits := 20;" }}}
+{EXCHG {PARA 204 "> " 0 "" {MPLTEXT 1 0 18 "f := x->r*x*(1-x);" }}}
+{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 14 "f1 := x->f(x);" }}}{EXCHG 
+{PARA 204 "> " 0 "" {MPLTEXT 1 0 19 "f2 := x->(f@@2)(x);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "f3 := x->(f@@3)(x);" }}}{EXCHG 
+{PARA 206 "> " 0 "" {MPLTEXT 1 208 19 "f4 := x->(f@@4)(x);" }}}{EXCHG 
+{PARA 205 "> " 0 "" {MPLTEXT 1 -1 23 "fp1 := solve(f(x)-x,x);" }}}
+{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 -1 37 "eq2 := simplify((f2(x)-x)
+/(f1(x)-x));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 205 "> " 0 "" 
+{MPLTEXT 1 -1 20 "fp2 := solve(eq2,x);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 205 "> " 0 "" {MPLTEXT 1 0 11 "df := D(f);" }}}{EXCHG {PARA 205 
+"> " 0 "" {MPLTEXT 1 0 34 "sigma[2] := df(fp2[1])*df(fp2[2]);" }}}
+{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 21 "solve(sigma[2]=-1,r);" }}}
+{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 11 "r4 := %[2];" }}}{EXCHG 
+{PARA 205 "> " 0 "" {MPLTEXT 1 0 10 "evalf(r4);" }}}{EXCHG {PARA 205 "
+> " 0 "" {MPLTEXT 1 0 31 "plot([sigma[2],-1,1],r=2.7..4);" }}}{EXCHG 
+{PARA 205 "> " 0 "" {MPLTEXT 1 -1 37 "eq4 := simplify((f4(x)-x)/(f2(x)
+-x));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 
+20 "fp4 := solve(eq4,x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 
+"fp4 := allvalues(%):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "fp4
+[1];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "eq3 := simplify((f3
+(x)-x)/(f1(x)-x));" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 -1 20 "fp
+3 := solve(eq3,x);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "df3 := D(f3);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 23 "fp3a := allvalues(fp3):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 25 "sigma[3] := df3(fp3a[1]):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "r3max := fsolve(sigma[3]=-1,r=3.83);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "fsolve(sigma[3]=0.9999,r=3.82842712
+8);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "plot(sigma[3],r=3.82
+84..3.842,-1..1,thickness=3,linestyle=DASH,color=gray);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 130 "pl3stab := plot([fp3a[1],fp3a[3],f
+p3a[5]],r=3.8..r3max,thickness=3,linestyle=SOLID,color=black,numpoints
+=100,labels=[\"r\",\"x(r)\"]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 131 "pl3ustab1 := plot([fp3a[2],fp3a[4],fp3a[6]],r=3.8..r3max,thic
+kness=3,linestyle=SOLID,color=gray,numpoints=100,labels=[\"r\",\"x(r)
+\"]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 94 "pl3ustab2 := plot(
+[fp3a],r=r3max..4,thickness=3,linestyle=DOT,color=gray,labels=[\"r\",
+\"x(r)\"]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "display(pl3u
+stab1,pl3ustab2,pl3stab);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+111 "#plotsetup(ps,plotoutput=`logist_stability_p3all.ps`,plotoptions=
+`portrait,noborder,width=8.0cm,height=7.0cm`);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 38 "#display(pl3ustab1,pl3ustab2,pl3stab);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 108 "#plotsetup(ps,plotoutput=`l
+ogist_stability_p3.ps`,plotoptions=`portrait,noborder,width=8.0cm,heig
+ht=7.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "#display(pl3
+stab,view=[3.8..3.9,0..1]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+118 "plotsetup(ps,plotoutput=`disc1d_logist_stability_p3both.ps`,ploto
+ptions=`portrait,noborder,width=8.0cm,height=6.0cm`);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 95 "display(pl3stab,pl3ustab1,view=[3.8
+15..3.865,0..1],xtickmarks=[3.81,3.82,3.83,3.84,3.85,3.86]);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{PARA 207 "" 0 "" {TEXT 209 0 "" }}{PARA 208 "
+" 0 "" {TEXT -1 0 "" }}}{MARK "36 0 0" 32 }{VIEWOPTS 1 1 0 1 1 1803 1 
+1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

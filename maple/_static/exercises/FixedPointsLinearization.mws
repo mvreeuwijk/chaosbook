@@ -1,0 +1,29 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "" -1 256 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 257 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "restart; with(plots)
+: with(linalg): with(DEtools):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "
+" }}{PARA 0 "" 0 "" {TEXT 256 7 "4.2a)  " }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "f1 := (x, y) -> x - \+
+y;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "f2 := (x, y) -> x^2 - 4;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "fp :=solve(\{f1(x,y)=0, f2(x
+,y)=0\},\{x,y\});" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "jac11 \+
+:= diff(f1(x,y),x);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "jac12 := dif
+f(f1(x,y),y);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "jac21 := diff(f2(x
+,y),x);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "jac22 := diff(f2(x,y),y)
+;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "jacmat := matrix(2,2,[jac11,ja
+c12,jac21,jac22]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "jacfp
+1 := subs(fp[1],evalm(jacmat));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 36 "jacfp2 := subs(fp[2],evalm(jacmat));" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 27 "evalf(eigenvalues(jacfp1));" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 64 "Complex eigenvalues, with positive real parts -> u
+nstable spiral" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "evalf(eig
+envalues(jacfp2));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "real eigenv
+alues, one positive, one negative -> saddle  node" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 257 6 "4.2b) " }{TEXT -1 
+6 "etc..." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}}{MARK "13" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 
+1 }{PAGENUMBERS 0 1 2 33 1 1 }

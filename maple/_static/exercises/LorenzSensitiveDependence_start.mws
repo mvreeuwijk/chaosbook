@@ -1,0 +1,76 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle17" -1 211 "Times" 1 24 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 225 "Times" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "_cstyle31" -1 232 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 
+0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_psty
+le3" -1 230 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 234 1 
+{CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle23" -1 250 1 {CSTYLE "" -1 
+-1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 
+2 -1 1 }{PSTYLE "_pstyle57" -1 256 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+58" -1 257 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 
+0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 250 "" 0 "" 
+{TEXT 211 64 "Sensitive dependence on initital conditions in the Loren
+z System" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 36 "restart; with(plots): with(DEtools):" }}}{EXCHG 
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 31 "* D
+efine  the Lorenz equations " }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 33 "f1 := (x,y,z) -> sigma * (
+y - x);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 36 "f2 := (x,y,z) -> -x * \+
+z + r * x - y;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 32 "f3 := (x,y,z) -
+>  x * y - b * z;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 41 "DE1 := diff(
+x(t),t) = f1(x(t),y(t),z(t)):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 41 "
+DE2 := diff(y(t),t) = f2(x(t),y(t),z(t)):" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 41 "DE3 := diff(z(t),t) = f3(x(t),y(t),z(t));" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 20 "DE := DE1, DE2, DE3;" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 20 "* Set the param
+eters" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "r:=28; b:=8/3; sigma:=10;" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 28 "* Set the initial conditi
+ons" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "ic1 := x(0)=2,y(0)=5,z(0)=5;" }}}{EXCHG {PARA 230 "" 
+0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 96 "* Solve system w
+ith dsolve. To see more options see the \"cookbook.mws\" or use the he
+lp function." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "
+> " 0 "" {MPLTEXT 1 0 65 "sol1 := dsolve(\{DE,ic1\},[x(t),y(t),z(t)],t
+ype=numeric,maxfun=-1);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 30 "* Set \+
+the integration range .." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 22 "tstart := 0; tend:=20;" }}}{EXCHG {PARA 230 "
+" 0 "" {TEXT -1 0 "" }}{PARA 230 "" 0 "" {TEXT 225 27 "* And plot the \+
+timeseries. " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 91 "odeplot(sol1,[t,x(t)],tstart..tend,labels=[\"t\"
+,\"x\"],numpoints=1000,color=blue,axes=normal);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 39 "* Introduce a second initial \+
+condition " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "#ic1 := x(0)=
+2,y(0)=5,z(0)=5;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "#epsilo
+n := 10;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "#ic2 := x(0)=2+
+epsilon,y(0)=5,z(0)=5;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "#
+sol1 := dsolve(\{DE,ic1\},[x(t),y(t),z(t)],type=numeric,maxfun=-1);" }
+}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 66 "#sol2 := dsolve(\{DE,ic2
+\},[x(t),y(t),z(t)],type=numeric,maxfun=-1);" }}}{EXCHG {PARA 230 "" 
+0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 20 "*Plot 2 timeseri
+es. " }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "#tstart := 0; tend:=20;" }}}{EXCHG {PARA 234 "> " 0 "
+" {MPLTEXT 1 0 98 "#p1 := odeplot(sol1,[t,x(t)],tstart..tend,labels=[
+\"t\",\"x\"],numpoints=1000,color=blue,axes=normal):" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 97 "#p2 := odeplot(sol2,[t,x(t)],tstart..tend,labe
+ls=[\"t\",\"x\"],numpoints=1000,color=red,axes=normal):" }}{PARA 234 "
+> " 0 "" {MPLTEXT 1 0 18 "#display([p1,p2]);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 257 "" 0 "" 
+{TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" 
+{TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" 
+{TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" 
+{TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" 
+{TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT -1 0 "" }}}{MARK "25 0 0" 66 
+}{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

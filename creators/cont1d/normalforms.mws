@@ -1,0 +1,127 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "restart; with(plots)
+: with(plottools):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "f := \+
+(x,r) -> r - x^2;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 117 "p1 :=
+ plot([f(x,0),f(x,1/2),f(x,-1/2)],x=-1..1,color=black,thickness=3,xtic
+kmarks=[2],ytickmarks=[2],labels=[\"\",\"\"]):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 47 "thl := textplot([0.45,0.22,\"r>0\"],align=BELO
+W):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "the := textplot([0.4
+5,-0.3,\"r=0\"],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 47 "ths := textplot([0.45,-0.8,\"r<0\"],align=BELOW):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "thx := textplot([0.95,0.1,\"x\"],al
+ign=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "thdxdt := te
+xtplot([0.2,0.75,\"dx/dt\"],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 48 "#thdxdt := textplot([0.05,0.7,\"x\"],align=BELOW):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#thdot := textplot([0.0
+5,0.73,\".\"],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "d1 := disk([ sqrt(1/2),0],0.025,color=black):" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 44 "d2 := disk([-sqrt(1/2),0],0.025,color=gray):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 110 "plotsetup(ps,plotoutpu
+t=`cont1d_saddlenodeplots.ps`,plotoptions=`portrait,noborder,width=8.0
+cm,height=8.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "#plot
+setup(default):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "display(
+p1,thx,thdxdt,thl,the,ths,d1,d2,view=[-1..1,-1.5..0.8]);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "sols := solve(f(x,r)=0,x);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "p1 := plot([sols],r=-1..1,th
+ickness=10,color=[black,gray]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 116 "plotsetup(ps,plotoutput=`cont1d_saddlenodebifurcation.ps`,plo
+toptions=`portrait,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 103 "display([p1],labels=[\"r\",\"x*(r)
+\"],labeldirections=[horizontal,vertical],xtickmarks=[0],ytickmarks=[2
+]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 13 "TRAN
+SCRITICAL" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "plotsetup(defa
+ult):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "f := (x,r) -> r*x \+
+- x^2;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "rv := 3.5;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "rr := rv + 1;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 95 "plot([f(x,0),f(x,rr-1),f(x,-(rr-1))
+],x=-rr..rr,-rr..rr,color=black,thickness=3,labels=[\"\",\"\"]);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 "p1 := plot([f(x,0),f(x,rv),
+f(x,-rv)],x=-rr..rr,-rr..rr,color=black,thickness=3,labels=[\"\",\"\"]
+,xtickmarks=[20],ytickmarks=[20],labels=[\"\",\"\"]):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "thl := textplot([rv/2+0.5,rv^2/4,\"
+r>0\"],align=RIGHT):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "the
+ := textplot([1.2,-1.0,\"r=0\"],align=RIGHT):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 53 "ths := textplot([-rv/2-0.5,rv^2/4,\"r<0\"],align
+=LEFT):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "thx := textplot(
+[rv+0.7,-0.2,\"x\"],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 53 "thdxdt := textplot([0.2,rv+0.5,\"dx/dt\"],align=RIGHT
+):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "d1 := disk([ rv,0],0.
+15,color=black):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "d2 := d
+isk([-rv,0],0.15,color=gray):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 54 "d3a := pieslice([0,0], 0.18, -Pi/2..Pi/2, color=gray):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "d3b := pieslice([0,0], 0.18,
+ Pi/2..3*Pi/2, color=black):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 113 "plotsetup(ps,plotoutput=`cont1d_transcriticalplots.ps`,plotopti
+ons=`portrait,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 20 "#plotsetup(default):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 72 "display(p1,thx,thdxdt,thl,the,ths,d1,d2,d3a,d3
+b,view=[-rr..rr,-rr..rr]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+14 "df := D[1](f);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "xmax \+
+:= solve(df(x,r)=0,x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "x
+dmax := f(xmax,r);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "sols \+
+:= solve(f(x,r)=0,x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "p1
+ := plot([sols],r=0..1,thickness=10,color=[gray,black]):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "p2 := plot([sols],r=-1..0,thickness
+=10,color=[black,gray]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 
+"plotsetup(default):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 119 "pl
+otsetup(ps,plotoutput=`cont1d_transcriticalbifurcation.ps`,plotoptions
+=`portrait,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 118 "display([p1,p2],axes=normal,labels=[\"r\",\"x
+*(r)\"],labeldirections=[horizontal,vertical],xtickmarks=[0],ytickmark
+s=[0]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 9 "PITCHFORK" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "plotsetu
+p(default):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "f := (x,r) -
+> r*x - x^3;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "df := D[1](
+f);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "xmax := solve(df(x,r
+)=0,x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "xdmax := f(xmax[
+1],r);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "xnul := solve(f(x
+,r)=0,x)[2];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "solve(xdmax
+=xnul,r);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "evalf(%);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "rv := 1.2;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 13 "rr := 1.1*rv;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 89 "plot([f(x,0),f(x,rv),f(x,-rv)],x=-rr..rr,-rr..rr,co
+lor=black,thickness=3,labels=[\"\",\"\"]);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 36 "xl := evalf(subs(r=rv,xmax[1]))+0.2;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "yl := evalf(subs(r=rv,xdmax));" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "x0 := evalf(subs(r=rv,xnul))
+;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 "p1 := plot([f(x,0),f(
+x,rv),f(x,-rv)],x=-rr..rr,-rr..rr,color=black,thickness=3,labels=[\"\"
+,\"\"],xtickmarks=[20],ytickmarks=[20],labels=[\"\",\"\"]):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "thl := textplot([ xl, yl,\"r
+>0\"],align=RIGHT):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "the \+
+:= textplot([ -0.89*rv,  1.1,\"r=0\"],align=LEFT):" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 46 "ths := textplot([ -0.3,1.0,\"r<0\"],align=L
+EFT):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "thx := textplot([1
+.05*rv,-0.05,\"x\"],align=BELOW):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 55 "thdxdt := textplot([0.05,1.05*rv,\"dx/dt\"],align=RIG
+HT):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "d1 := disk([ x0,0],
+0.05,color=black):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "d2 :=
+ disk([-x0,0],0.05,color=gray):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 54 "d3a := pieslice([0,0], 0.06, -Pi/2..Pi/2, color=gray):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "d3b := pieslice([0,0], 0.06,
+ Pi/2..3*Pi/2, color=black):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 109 "plotsetup(ps,plotoutput=`cont1d_pitchforkplots.ps`,plotoptions=
+`portrait,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 20 "#plotsetup(default):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 72 "display(p1,thx,thdxdt,thl,the,ths,d1,d2,d3a,d3b,
+view=[-rr..rr,-rr..rr]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "sols := solve(f(x,r)=0,
+x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "p1 := plot([sols],r=
+0..1,thickness=10,color=[gray,black,black]):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 64 "p2 := plot([sols],r=-1..0,thickness=10,color=[bl
+ack,gray,gray]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 115 "plotse
+tup(ps,plotoutput=`cont1d_pitchforkbifurcation.ps`,plotoptions=`portra
+it,noborder,width=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 118 "display([p1,p2],axes=normal,labels=[\"r\",\"x*(r)\"]
+,labeldirections=[horizontal,vertical],xtickmarks=[0],ytickmarks=[0]);
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}}{MARK "91" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 
+1 2 33 1 1 }

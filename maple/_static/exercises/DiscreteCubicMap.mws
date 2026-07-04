@@ -1,0 +1,136 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plots)
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "f := x -> r *x*(3-4*x^
+2); " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "N := 1000;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "xs := Array(0..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "r := 0.97;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 13 "xs[0] := 0.2;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 23 "for n from 0 to N-1 do " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 " xs[n+1] := evalf(f(xs[n]));" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "end do:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "
+pointplot([seq([n,xs[n]],n=0..N)],labels=[\"n\",\"x[n]\"]);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "pointplot([seq([xs[n],xs[n+1
+]],n=0..N-1)],labels=[\"x[n]\",\"x[n+1]\"]);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 9 "r := 'r';" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 11 "df := D(f);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "x_ex
+tr := solve(df(x)=0,x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "
+fmax := f(x_extr[1]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "fm
+in := f(x_extr[2]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 107 "This show
+s that when |r| <=1, all x_n+1 = f(x_n) are between -1 and 1, as long \+
+as x_n is between -1 and 1. " }}{PARA 0 "" 0 "" {TEXT -1 79 "Since x_0
+ satisfies this criterion, the series wll always be bounded if |r|<=1.
+" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+13 "fixed points:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "fp := \+
+solve(f(x)=x,x);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 10 "stability:" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "sigma[1] := df(fp[1]);" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "solve(abs(sigma[1])<1,r);" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 100 "The  fixed point 0 is stable w
+hen |sigma|<1, so it is stable for |r| <1/3; for r >1/3 it is unstable
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "sigma[2] := simplify(df
+(fp[2]));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "solve(abs(sigm
+a[2])<1,r);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 45 "This fixed point i
+s stable when 1/3 < r < 2/3" }}{PARA 0 "" 0 "" {TEXT -1 1 " " }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "sigma[3] := simplify(df(fp[3
+]));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "solve(abs(sigma[2])<1,r);" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 50 "This fixed point is also stable
+ when 1/3 < r < 2/3" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "x2s \+
+:= sqrt(2*r*(3*r-sqrt(9*r^2-4)))/(4*r);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 11 "f2 := f@@2;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 22 "simplify(f2(x2s)-x2s);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 67 "I
+ndeed this point satisfies the condition for a period-2 solution. " }}
+{PARA 0 "" 0 "" {TEXT -1 81 "It was not a member of the period-1 solut
+ions, so it is a true period-2 solution." }}{PARA 0 "" 0 "" {TEXT -1 
+14 "now stability:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "df2 :
+= D(f2);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "sigma2[1] := si
+mplify(df2(x2s));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "solve(
+abs(sigma2[1])<1,r);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "eva
+lf(sqrt(5)/3);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 76 "So this period-
+2 solution is stable beween 2/3 < r sqrt(5)/3     (= 0.745..)" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 20 "Bifurcation diagram:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "N := 500; Nr := 500; rmin := 0; rma
+x := 1; Nmin := N/2; Nmax := N;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 20 "Npts := Nmax-Nmin+1;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 29 "pl := Array(1..Npts*Nr,1..2):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "xs := Array(1..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "xs[1] := 0.57:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 7 "j := 0;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "for i fro
+m 1 to Nr do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "  r := evalf(rmin +
+ (i-1) / (Nr-1) * (rmax - rmin));" }}{PARA 0 "" 0 "" {TEXT -1 32 "    \+
+   Calculate the x[n] series" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "  f
+or n from 1 to N-1 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "    xs[n+1
+] := evalf( f(xs[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "  end do:
+" }}{PARA 0 "" 0 "" {TEXT -1 66 "      Add the converged last part of \+
+the series to the bifurcation" }}{PARA 0 "" 0 "" {TEXT -1 4 "list" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "  for n from Nmin to Nmax do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "    j := j + 1;" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 35 "    pl[j,1] := r; pl[j,2] := xs[n];" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 9 "  end do:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "
+end do:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "Convert the Array to a
+ list and plot the bifurcation diagram" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 22 "convert(pl, listlist):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 59 "pointplot(%, symbol=point, symbolsize=1,labels=[\"r\", \"x\"])
+;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 19 "Lyapunov exponents:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "r := 1;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "
+Digits := 40;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "N := 100;" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "xs := Array(0..N): ys := \+
+Array(0..N): epsilon := Array(0..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 61 "epsilon[0] := 1e-20; xs[0] := 0.2; ys[0] := xs[0]+eps
+ilon[0];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "for n from 0 to
+ N-1 do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 " xs[n+1] := evalf(f(xs[
+n]));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 " ys[n+1] := evalf(f(ys[n])
+);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 " epsilon[n+1] := ys[n+1]-xs[n
++1];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 74 "logplot([seq([n,abs(epsilon[n])],n=0..N)],la
+bels=[\"n\",\"ln(|x[n]-y[n]|)\"]);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "lyap :=
+ log(abs(epsilon[40]/epsilon[0]))/(40);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 42 "The estimated Lyapunov exponents is 1.05.." }}{PARA 0 "" 
+0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "N := 10
+0;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "xa := Array(0..N):" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "r := 1;" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 21 "theta := arcsin(0.2);" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 7 "sin(%);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 21 "for n from 0 to N do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 " x
+a[n] := evalf(sin(3^n*theta));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "en
+d do:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "pointplot([seq([n,
+xa[n]],n=0..N)],labels=[\"n\",\"xa[n]\"]);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 70 "pointplot([seq([xa[n],xa[n+1]],n=0..N-1)],labels=[
+\"xa[n]\",\"xa[n+1]\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 43 "seem \+
+ok, but let's look at it analytically " }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "expand(
+sin(3*x));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "subs(cos(x)^2
+=1-sin(x)^2,%);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "expand(%
+);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 31 "so sin(3x)=3sin(x) - 4 sin^
+3(x)" }}{PARA 0 "" 0 "" {TEXT -1 4 "then" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{PARA 0 "" 0 "" {TEXT -1 28 "x[n+1] = sin(3^(n+1) theta) " }}
+{PARA 0 "" 0 "" {TEXT -1 19 "= sin(3 3^n theta) " }}{PARA 0 "" 0 "" 
+{TEXT -1 37 "= 3 sin(3^n theta)-4sin(3^n theta )^3" }}{PARA 0 "" 0 "" 
+{TEXT -1 14 "=3x[n]-4x[n]^3" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 
+0 "" 0 "" {TEXT -1 35 "so, indeed x[n+1] = x[n](3-4x[n]^2)" }}{PARA 0 
+"" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 41 "and theta is such
+ that x[0] = sin(theta) " }}{PARA 0 "" 0 "" {TEXT -1 3 "QED" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 39 "There is still a predictability issue. " }}{PARA 0 "" 0 "
+" {TEXT -1 102 "Even though one has a closed form, it will be hard to \+
+calculate accurately sin(3^n theta) for large n." }}{PARA 0 "" 0 "" 
+{TEXT -1 71 "Related to this issue, we can calculate the Lyapunov expo
+nent directly." }}{PARA 0 "" 0 "" {TEXT -1 121 "Suppose we two series \+
+xn, and yn, where yn with initialized with a slightly different value \+
+of theta, say theta + dtheta." }}{PARA 0 "" 0 "" {TEXT -1 33 " the dif
+ference after n staps is " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+27 "theta := 'theta'; n := 'n';" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 52 "dn := sin(3^n * (theta+dtheta)) - sin(3^n * theta); " }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "dn := taylor(dn,dtheta,2);" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "dn  := convert(dn,polynom
+);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 55 "the Lyapunov exponent arise
+s from: dn ~exp(Lambda * n)," }}{PARA 0 "" 0 "" {TEXT -1 49 "since dn \+
+~ 3^n, we get for the Lyapunov exponent:" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "Lambda := ln(3.0);" 
+}}}{EXCHG }{EXCHG {PARA 0 "" 0 "" {TEXT -1 47 "The previous estimate o
+f 1.05 was pretty close." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}}{MARK "82" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 
+1 2 33 1 1 }

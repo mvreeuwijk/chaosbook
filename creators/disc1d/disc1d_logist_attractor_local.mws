@@ -1,0 +1,145 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle21" -1 203 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle20" -1 204 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle3" -1 205 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle1" -1 206 "Courier" 1 12 255 0 0 1 2 1 2 2 1 2 0 
+0 0 1 }{CSTYLE "_cstyle2" -1 208 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle10
+" -1 216 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle11" -1 217 1 {CSTYLE 
+"" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle12" -1 218 1 {CSTYLE "" -1 -1 "Courier" 
+1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle15" -1 219 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 
+0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+16" -1 220 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle17" -1 221 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle18" -1 222 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle19" -1 223 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle20
+" -1 224 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 216 "" 0 "" {TEXT 205 0 "" }}{PARA 217 "" 0 "" 
+{TEXT 204 26 " Logistic Map: time series" }}{PARA 216 "" 0 "" {TEXT 
+205 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 21 "restart; wit
+h(plots):" }}}{EXCHG {PARA 219 "> " 0 "" {MPLTEXT 1 0 26 "f := x -> r \+
+* x * (1 - x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "fp := sol
+ve(x=f(x),x);" }}}{EXCHG {PARA 216 "" 0 "" {TEXT 205 0 "" }}{PARA 220 
+"" 0 "" {TEXT 203 20 "generate time series" }}{PARA 221 "" 0 "" {TEXT 
+-1 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 8 "N := 40;" }}}
+{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 19 "xs1 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs2 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs3 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs4 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs5 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs6 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs7 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs8 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "dx := 0.01;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "nmin := -0.3; nmax := 8;" }}}
+{EXCHG {PARA 222 "" 0 "" {TEXT 201 15 "p1: superstable" }}}{EXCHG 
+{PARA 218 "> " 0 "" {MPLTEXT 1 206 7 "r := 2;" }}}{EXCHG {PARA 218 "> \+
+" 0 "" {MPLTEXT 1 206 16 "xs1[1] := fp[2];" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 19 "xs2[1] := fp[2]+dx;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "xs3[1] := fp[2]+dx*2;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "xs4[1] := fp[2]+dx*3;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "xs5[1] := fp[2];" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "xs6[1] := fp[2]-dx*3;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "xs7[1] := fp[2]-dx*2;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "xs8[1] := fp[2]-dx;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 219 "> " 0 "" {MPLTEXT 1 0 22 "for n
+ from 1 to N-1 do" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 33 "  xs1[n+1] :
+= evalf( f(xs1[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs2[n+1]
+ := evalf( f(xs2[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs3[n+
+1] := evalf( f(xs3[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs4[
+n+1] := evalf( f(xs4[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs
+5[n+1] := evalf( f(xs5[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  \+
+xs6[n+1] := evalf( f(xs6[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "
+  xs7[n+1] := evalf( f(xs7[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+33 "  xs8[n+1] := evalf( f(xs8[n]) );" }}{PARA 219 "> " 0 "" {MPLTEXT 
+1 0 7 "end do:" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 31 "l1 :=
+ seq([n-1,xs1[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "l2 := seq([n-1,xs2[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "l3 := seq([n-1,xs3[n]],n=1..N):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 31 "l4 := seq([n-1,xs4[n]],n=1..N):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l5 := seq([n-1,xs5[n]],n=1..N):" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l6 := seq([n-1,xs6[n]],n=1.
+.N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l7 := seq([n-1,xs7[
+n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l8 := seq([
+n-1,xs8[n]],n=1..N):" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 
+122 "plotsetup(ps,plotoutput=`disc1d_logist_attractor_local_r2_0.ps`,p
+lotoptions=`portrait,noborder,width=8.0cm,height=5.0cm`);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 151 "pl1 := plot([[l1],[l2],[l3],[l4],[
+l5],[l6],[l7],[l8]],x=0..25,0..1,labels=[\"n\",\"x[n]\"],style=line,sy
+mbolsize=20,symbol=CIRCLE,thickness=1,color=black):" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 152 "pl2 := plot([[l1],[l2],[l3],[l4],[l5],[l
+6],[l7],[l8]],x=0..25,0..1,labels=[\"n\",\"x[n]\"],style=point,symbols
+ize=20,symbol=CIRCLE,thickness=1,color=black):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 138 "display(pl1,pl2,view=[nmin..nmax,fp[2]-4*dx..
+fp[2]+4*dx],axes=framed,xtickmarks=[seq(n,n=0..10)],ytickmarks=[seq(0.
+5-5*dx+n*dx,n=0..10)]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "
+plotsetup(default):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 9 "r := 1.5;" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 
+206 16 "xs1[1] := fp[2];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 
+"xs2[1] := fp[2]+dx;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "xs3
+[1] := fp[2]+dx*2;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "xs4[1
+] := fp[2]+dx*3;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "xs5[1] \+
+:= fp[2];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "xs6[1] := fp[2
+]-dx*3;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "xs7[1] := fp[2]-
+dx*2;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs8[1] := fp[2]-dx
+;" }}}{EXCHG {PARA 219 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 \+
+do" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 33 "  xs1[n+1] := evalf( f(xs1[
+n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs2[n+1] := evalf( f(xs
+2[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs3[n+1] := evalf( f(
+xs3[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs4[n+1] := evalf( \+
+f(xs4[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs5[n+1] := evalf
+( f(xs5[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs6[n+1] := eva
+lf( f(xs6[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs7[n+1] := e
+valf( f(xs7[n]) );" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs8[n+1] :=
+ evalf( f(xs8[n]) );" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }
+}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 31 "l1 := seq([n-1,xs1[n]]
+,n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l2 := seq([n-1
+,xs2[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l3 := \+
+seq([n-1,xs3[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "l4 := seq([n-1,xs4[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "l5 := seq([n-1,xs5[n]],n=1..N):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 31 "l6 := seq([n-1,xs6[n]],n=1..N):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l7 := seq([n-1,xs7[n]],n=1..N):" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l8 := seq([n-1,xs8[n]],n=1.
+.N):" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 122 "plotsetup(ps,p
+lotoutput=`disc1d_logist_attractor_local_r1_5.ps`,plotoptions=`portrai
+t,noborder,width=8.0cm,height=5.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 151 "pl1 := plot([[l1],[l2],[l3],[l4],[l5],[l6],[l7],[l8]
+],x=0..25,0..1,labels=[\"n\",\"x[n]\"],style=line,symbolsize=20,symbol
+=CIRCLE,thickness=1,color=black):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 152 "pl2 := plot([[l1],[l2],[l3],[l4],[l5],[l6],[l7],[l8]
+],x=0..25,0..1,labels=[\"n\",\"x[n]\"],style=point,symbolsize=20,symbo
+l=CIRCLE,thickness=1,color=black):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 142 "display(pl1,pl2,view=[nmin..nmax,fp[2]-4*dx..fp[2]+4
+*dx],axes=framed,xtickmarks=[seq(n,n=0..10)]);#,ytickmarks=[seq(0.33-5
+*dx+n*dx,n=0..10)]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "plo
+tsetup(default):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "dx;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "fp[2];" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 23 "fp[2]-4*dx..fp[2]+4*dx;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{PARA 223 "" 0 "" {TEXT 208 0 "" }}{PARA 224 "" 0 "" {TEXT -1 0 "" }}}
+{MARK "90" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 
+1 1 }

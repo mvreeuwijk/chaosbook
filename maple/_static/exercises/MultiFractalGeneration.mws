@@ -1,0 +1,22 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plots)
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "li := [1];" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "K := 10;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 21 "for k from 1 to K do " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "  li2 := NULL:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "
+  for n from 1 to nops(li) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "  \+
+  li2 := li2, li[n]*p1 , li[n]*p2;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+5 "  od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "  li := [li2];" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "pli := seq([n,li[n]],n=1..nops(li)):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "p2 := 1-p1;" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 10 "p1 := 0.3;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 12 "plot([pli]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 17 "dat := evalf(li);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "
+save dat,\"p1p2.dat\";" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "n
+ops(dat);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "0 0 0" 21 }{VIEWOPTS 1 
+1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

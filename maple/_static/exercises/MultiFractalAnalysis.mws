@@ -1,0 +1,85 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "restart; with(plots)
+: with(stats):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "read \"p1p2.dat\": #reads array dat
+[1..N] from file " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "N:= nops(dat);" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 48 " create positions \+
+for the data-set: x in [ 0..1]" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "x:=vector([seq(n/N,n=1..N)])
+:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 
+36 "plot the data set to be analysed ..." }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "plot([seq([x[n],dat[
+n]],n=1..N)],labels=[\"position\",\"value\"]);" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 28 "determine extrema of
+ the set" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "xmax := max(seq(x[n],n=1..N));" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "xmin := min(seq(x[n],n=1..N));" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "i := '
+i'; p := 'p'; li := NULL; loli := NULL:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "pmin := 2; pmax := 9; dp := 1;" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 50 "here is the main par
+t of the boxcounting procedure" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "for p from pmin to pmax by d
+p do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "  delta := 1.0/2^p;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 35 "  ni := trunc((xmax-xmin)/delta)+1;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "  print(p,ni,delta);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 24 "  nr := Vector(1..ni,0);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "  for n from 1 to N do" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 36 "    i := trunc((x[n]-xmin)/delta)+1;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "    nr[i] := nr[i]+dat[n];" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "  od:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "  i := 'i';" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 13 "  boxes := 0;" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 23 "  for i from 1 to ni do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "
+       if( nr[i] > 0 ) then boxes := boxes + nr[i]^q; end if;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "  od;" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "  li := li,[delta,boxes]
+;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "  loli := loli, [log(delta),lo
+g(boxes)];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 39 "plot the result
+s in log-log fashion ..." }}{PARA 0 "" 0 "" {TEXT -1 4 "and " }}{PARA 
+0 "" 0 "" {TEXT -1 42 "analysis of the slope -> fractal dimension" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 42 "xli := [seq(loli[n,1],n=1..nops([loli]))]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "yli := [seq(loli[n,2],n=1..nops([loli]))]:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 20 " the plot ranges ..." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "lmax := evalf(xli[1])+0.1; lmin := \+
+evalf(xli[nops([loli])])-0.1;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "
+" }}{PARA 0 "" 0 "" {TEXT -1 11 "set q-range" }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "qmin := -10.3; qm
+ax := 10; dq := 1; listDq := NULL: z := NULL;" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 31 "the main loop to deter
+mine D(q)" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 32 "for q from qmin to qmax by dq do" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 67 " eq:=fit[leastsquare[[x,y],y=a*x+b]]([xli,yli]); #
+ fit data to line" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 " Dq := coeff(r
+hs(eq),x)/(q-1); #determine dimension from the slope " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 26 " listDq := listDq, [q,Dq];" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 72 " pl4 := plot([loli],style=point,symbolsize=15,color=b
+lue,symbol=circle):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 " pl5 := plot
+(rhs(eq),x=lmin..lmax+0.1,style=line,thickness=1,color=red):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 22 " z := z, [pl4], [pl5];" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "" 0 "" {TEXT -1 111 " plot the partition function as a functi
+on of box-size in a log-log plot to assess the \"scaling behaviour\" .
+.. " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "display(z,labels=[\"log(l)\",\"log Z(q,l)\"]);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 64 "pl
+ot the determined D(q) values versus the analytical result ..." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 48 "pp1:=pointplot([listDq],view=[qmin..qmax,0..2]):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "q:= 'q'; Dq := q -> -log(p1^q+p2^q)
+/(log(2.0)*(q-1));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "p1 :=
+ 0.7; p2 := 1-p1;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "pp2:=p
+lot( Dq(q),q=qmin..qmax,0..2):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 6 "Dq(q);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "display(\{
+pp1,pp2\},labels=[\"q\",\"D(q)\"]);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}}{MARK "37" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 
+1 }{PAGENUMBERS 0 1 2 33 1 1 }

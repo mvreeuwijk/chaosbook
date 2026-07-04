@@ -1,0 +1,93 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 202 "Times" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "_cstyle1" -1 204 "Courier" 1 12 255 0 0 1 2 1 2 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle21" -1 206 "Times" 1 18 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle20" -1 207 "Times" 1 24 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle258" -1 256 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 2 0 2 2 2 
+0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle45" -1 257 
+1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle46" -1 258 1 {CSTYLE "" -1 -1 
+"Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle47" -1 259 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 
+0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle48" -1 260 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 2 1 2 2 
+1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle49" -1 
+261 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 
+0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle50" -1 262 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 
+0 2 2 -1 1 }{PSTYLE "_pstyle51" -1 263 1 {CSTYLE "" -1 -1 "Times" 1 
+18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle52" -1 264 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 
+1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle53
+" -1 265 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle54" -1 266 1 {CSTYLE 
+"" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle55" -1 267 1 {CSTYLE "" -1 -1 "Times" 1 
+18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle56" -1 268 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 
+1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle59
+" -1 269 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle60" -1 270 1 {CSTYLE 
+"" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle61" -1 271 1 {CSTYLE "" -1 -1 "Times" 1 
+18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle62" -1 272 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 
+1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle63
+" -1 273 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle64" -1 274 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 
+-1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle65" -1 275 1 {CSTYLE "" -1 -1 "Ti
+mes" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle66" -1 276 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 
+0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+67" -1 277 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 
+0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle68" -1 278 1 {CSTYLE "" 
+-1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 
+-1 1 }}
+{SECT 0 {EXCHG {PARA 257 "" 0 "" {TEXT 202 0 "" }}{PARA 258 "" 0 "" 
+{TEXT 207 33 " Logistic Map: Lyapunov exponents" }}{PARA 257 "" 0 "" 
+{TEXT 202 0 "" }}}{EXCHG {PARA 259 "> " 0 "" {MPLTEXT 1 0 35 "restart;
+ with(plots): Digits := 40;" }}}{EXCHG {PARA 259 "> " 0 "" {MPLTEXT 1 
+0 26 "f := x -> r * x * (1 - x);" }}}{EXCHG {PARA 257 "" 0 "" {TEXT 
+202 0 "" }}{PARA 261 "" 0 "" {TEXT 206 33 "generate two time series, x
+ and y" }}{PARA 262 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 260 "> " 0 "
+" {MPLTEXT 1 204 9 "r := 3.9;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 7 "N:=100;" }}}{EXCHG {PARA 259 "> " 0 "" {MPLTEXT 1 0 37 "xs := Arr
+ay(0..N): ys := Array(0..N):" }}}{EXCHG {PARA 259 "> " 0 "" {MPLTEXT 
+1 0 40 "xs[0] := 0.1; ys[0] := xs[0] + epsilon: " }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 16 "epsilon := 1e-9;" }}}{EXCHG {PARA 259 "> " 0 
+"" {MPLTEXT 1 0 22 "for n from 0 to N-1 do" }}{PARA 259 "> " 0 "" 
+{MPLTEXT 1 0 31 "  xs[n+1] := evalf( f(xs[n]) );" }}{PARA 260 "> " 0 "
+" {MPLTEXT 1 204 31 "  ys[n+1] := evalf( f(ys[n]) );" }}{PARA 259 "> \+
+" 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG {PARA 263 "" 0 "" {TEXT -1 
+0 "" }}{PARA 264 "" 0 "" {TEXT -1 45 "calculate the difference and plo
+t on logscale" }}{PARA 262 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 57 "lx := seq([n,xs[n]],n=0..N): ly := seq([n,ys[n
+]],n=0..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 111 "plotsetup(p
+s,plotoutput=`disc1d_logist_lyap_r39_lin.ps`,plotoptions=`portrait,nob
+order,width=12cm,height=6cm`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 181 "plot([[lx],[ly]],x=0..50,0..1,labels=[\"n\",\"x[n], y[n]\"],
+\nlabeldirections=[horizontal,vertical],style=[point,point],symbolsize
+=[32,32],symbol=[CIRCLE,CROSS],thickness=1,color=black);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "plotsetup(default);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "ldelta := seq([n,abs(xs[n]-ys[n])],
+n=0..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "logdelta := seq
+([n,log(abs(xs[n]-ys[n]))],n=0..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 110 "plotsetup(ps,plotoutput=`disc1d_logist_lyap_r39_log.
+ps`,plotoptions=`portrait,noborder,width=7cm,height=7cm`);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 184 "plot([log(epsilon*exp(nn*0.6)),[lo
+gdelta]],nn=0..50,log(epsilon)..log(10^3),labels=[\"n\",\"ln|y-x|\"],l
+abeldirections=[horizontal,vertical],color=black,linestyle=[DOT,SOLID]
+,thickness=3);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "plotsetup
+(default);" }}}{EXCHG {PARA 265 "" 0 "" {TEXT -1 0 "" }}{PARA 266 "" 
+0 "" {TEXT -1 53 "calculate lambda using the formal definition  lambda
+ " }}{PARA 262 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 260 "> " 0 "" 
+{MPLTEXT 1 204 13 "dfdx := D(f);" }}}{EXCHG {PARA 260 "> " 0 "" 
+{MPLTEXT 1 204 22 "Nmin := 0; Nmax := 25;" }}}{EXCHG {PARA 260 "> " 0 
+"" {MPLTEXT 1 204 74 "lambda := add(evalf(log(abs(dfdx(xs[i])))), i = \+
+Nmin..Nmax)/(Nmax-Nmin+1);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "26" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

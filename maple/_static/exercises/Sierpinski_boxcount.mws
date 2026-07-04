@@ -1,0 +1,191 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Left Justified Maple Output" -1 12 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "D
+ash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Heading 4" -1 20 1 
+{CSTYLE "" -1 -1 "Times" 1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "Times
+" 1 12 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 255 1 0 
+0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Author" 
+-1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 
+1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 
+-1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 2 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 255 1 
+0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Text Ou
+tput" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 
+0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 
+4 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "M
+aple Plot" -1 13 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed Output" 
+-1 6 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }
+1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 {CSTYLE "" 
+-1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 1 }3 1 0 0 12 12 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+64 128 64 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }
+{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }3 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "List Item"
+ -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 
+1 0 0 3 3 2 0 2 0 2 2 -1 5 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 
+2 -1 2 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "La
+TeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple Comment"
+ -1 21 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bol
+d" -1 5 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underli
+ned" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Output L
+abels" -1 29 "Times" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple I
+nput" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Page \+
+Number" -1 33 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Maple \+
+Input Placeholder" -1 200 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 0 
+0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+{CSTYLE "2D Math Italic Small" -1 202 "Times" 0 1 0 0 0 0 1 0 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 0 0 0 0 1 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Normal" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Nonterminal" -1 24 "Courier" 0 1 0 0 0 1 0 1 
+0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 0 
+2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" -1 43 "Times" 1 12 
+0 0 0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 
+0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 0 0 
+2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Hyperlink" -1 17 "" 0 1 0 128 128 1 2 0 
+1 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 10 0 0 0 0 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 0 1 255 0 0 1 0 0 2 2 1 2 
+0 0 0 1 }{CSTYLE "Help Maple Name" -1 35 "" 0 1 104 64 92 1 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 0 0 
+0 1 1 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "" 0 1 147 0 15 1 2 
+0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "Times" 0 1 0 0 255 1 0 
+0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times" 0 1 0 0 0 0 
+1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 1 2 
+2 2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 2 2 
+2 2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 2 2 
+0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 
+1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 0 0 0 1 
+}{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }
+{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 
+1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Emphasized" -1 203 "" 0 1 0 0 0 0 1 2 0 2 2 2 
+0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle1" -1 200 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "_ps
+tyle2" -1 201 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 
+0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle3" -1 202 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 
+0 2 0 2 2 -1 1 }{CSTYLE "_cstyle1" -1 204 "Times" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{PSTYLE "_pstyle4" -1 203 1 {CSTYLE "" -1 -1 "Times" 1 
+12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle5" -1 204 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 34 "restart; with(plot
+s): with(stats):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 13 "r := rand(3):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 0 8 "N:=5000;" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 22 "xs[0]:= 1; ys[0] := 0;" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 20 "for i
+ from 1 to N do" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 14 "  dice := r();" }
+{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 21 "  if( dice = \+
+0) then " }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 25 "  \+
+  xs[i] := 0.5*xs[i-1];" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 25 "    ys[i] := 0.5*ys[i-1];" }{MPLTEXT 1 0 0 "" }}
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 7 "  else " }{MPLTEXT 1 0 0 "" }}
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 24 "    if( dice = 1 ) then " }
+{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 33 "       xs[i] \+
+:= 0.5*xs[i-1]+0.25;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 33 "       ys[i] := 0.5*ys[i-1]+0.50;" }{MPLTEXT 1 0 0 ""
+ }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 8 "    else" }{MPLTEXT 1 0 0 "" }}
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 32 "       xs[i] := 0.5*xs[i-1]+0.5;"
+ }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 28 "       ys[i
+] := 0.5*ys[i-1];" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 
+1 0 11 "    end if;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 9 "  end if;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 3 "od:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 40 "plotl
+ist := [seq([xs[i],ys[i]],i=1..N)]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 44 "pointplot(plotlist,symbolsize=1,c
+olor=blue);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "> " 0 "" 
+{MPLTEXT 1 0 32 "pmin := 2; pmax := 7; dp := 0.5;" }{MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT 
+204 32 "Determine the extrema of the map" }{TEXT 204 0 "" }}{PARA 202 
+"" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 201 "> " 0 "" {MPLTEXT 1 0 22 "
+op(convert(xs, list)):" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" 
+{MPLTEXT 1 0 15 "xmin := min(%);" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 
+0 "" {MPLTEXT 1 0 16 "xmax := max(%%);" }{MPLTEXT 1 0 0 "" }}{PARA 
+201 "> " 0 "" {MPLTEXT 1 0 22 "op(convert(ys, list)):" }{MPLTEXT 1 0 
+0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 16 "ymin := min(%); " }
+{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 16 "ymax := max(%
+%);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "" 0 "" {TEXT 204 0 "" }}
+{PARA 202 "" 0 "" {TEXT 204 25 "Loop over all resolutions" }{TEXT 204 
+0 "" }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 201 "> " 0 "" 
+{MPLTEXT 1 0 11 "li := NULL:" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 ""
+ {MPLTEXT 1 0 32 "for p from pmin to pmax by dp do" }{MPLTEXT 1 0 0 ""
+ }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT 204 34 "
+       Calculate extents of boxes " }{TEXT 204 0 "" }}{PARA 201 "> " 0
+ "" {MPLTEXT 1 0 27 "  delta := (xmax-xmin)/2^p;" }{MPLTEXT 1 0 0 "" }
+}{PARA 201 "> " 0 "" {MPLTEXT 1 0 35 "  ni := trunc((xmax-xmin)/delta)
++1;" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 35 "  nj :=
+ trunc((ymax-ymin)/delta)+1;" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 ""
+ {MPLTEXT 1 0 23 "  print(p,ni,nj,delta);" }{MPLTEXT 1 0 0 "" }}{PARA 
+202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT 204 66 "       Co
+nstruct a boxes matrix and set the initial values to zero" }{TEXT 204 
+0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 31 "  nr := Array(1..ni, 1..nj
+, 0);" }{MPLTEXT 1 0 0 "" }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 
+202 "" 0 "" {TEXT 204 37 "       Check which boxes are occupied" }
+{TEXT 204 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 22 "  for n from 1 t
+o N do" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 37 "    \+
+i := trunc((xs[n]-xmin)/delta)+1;" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> "
+ 0 "" {MPLTEXT 1 0 37 "    j := trunc((ys[n]-ymin)/delta)+1;" }
+{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 17 "    nr[i,j] :
+= 1;" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 5 "  od:" 
+}{MPLTEXT 1 0 0 "" }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 0
+ "" {TEXT 204 37 "       Count number of occupied boxes" }{TEXT 204 0 
+"" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 13 "  boxes := 0;" }{MPLTEXT 1 
+0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 23 "  for i from 1 to ni do"
+ }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 25 "    for j f
+rom 1 to nj do" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 
+32 "       boxes := boxes + nr[i,j];" }{MPLTEXT 1 0 0 "" }}{PARA 201 "
+> " 0 "" {MPLTEXT 1 0 7 "    od;" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 
+0 "" {MPLTEXT 1 0 5 "  od;" }{MPLTEXT 1 0 0 "" }}{PARA 202 "" 0 "" 
+{TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT 204 25 "       Add result to \+
+list" }{TEXT 204 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 26 "  li := l
+i, [delta,boxes];" }{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 
+1 0 3 "od:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "" 0 "" {TEXT 204 
+0 "" }}{PARA 202 "" 0 "" {TEXT 204 39 "Plot the results in log-log fas
+hion ..." }{TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 201 "> " 0 "" {MPLTEXT 1 0 104 "loglogplot([[li], [li]],s
+tyle=[point, line],symbolsize=15,color=black,symbol=circle, labels=[\"
+p\", \"n\"]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "" 0 "" {TEXT 
+204 0 "" }}{PARA 202 "" 0 "" {TEXT 204 165 "Calculate box dimension. W
+e could do this by fitting a function by trial and error, but we use t
+he function fit from the stats package to achieve this automatically."
+ }{TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 0 "
+" {TEXT 204 47 "Firstly, fit needs lists of x and y separately." }
+{TEXT 204 0 "" }}}{EXCHG {PARA 201 "> " 0 "" {MPLTEXT 1 0 43 "xli := s
+eq(log(li[i][1]), i=1..nops([li]));" }{MPLTEXT 1 0 0 "" }}{PARA 201 ">
+ " 0 "" {MPLTEXT 1 0 43 "yli := seq(log(li[i][2]), i=1..nops([li]));" 
+}{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 203 "" 0 "" {TEXT 201 0 "" }}{PARA 
+203 "" 0 "" {TEXT 201 69 "Feeding this into the fit command, we get th
+e least-squared solution." }{TEXT 201 0 "" }}{PARA 203 "" 0 "" {TEXT 
+201 0 "" }}}{EXCHG {PARA 201 "> " 0 "" {MPLTEXT 1 0 12 "with(stats):" 
+}{MPLTEXT 1 0 0 "" }}{PARA 201 "> " 0 "" {MPLTEXT 1 0 48 "fit[leastsqu
+are[[x,y], y=a*x+b]]([[xli],[yli]]);" }{MPLTEXT 1 0 0 "" }}{PARA 201 "
+> " 0 "" {MPLTEXT 1 0 26 "lseq := unapply(rhs(%),x);" }{MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 0 "" 
+{TEXT 204 41 "Plot the fit together with box-dimensions" }{TEXT 204 0 
+"" }}{PARA 202 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 201 "> " 0 "" 
+{MPLTEXT 1 0 48 "loli := seq([xli[i], yli[i]], i=1..nops([xli])):" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "> " 0 "" {MPLTEXT 1 0 56 "plot(
+[lseq(xx), [loli]], xx=-7..3, style=[line, point], " }{MPLTEXT 1 0 0 "
+" }{MPLTEXT 1 0 76 "\ncolor=[red,black], symbolsize=15,symbol=circle, \+
+labels=[\"log p\", \"log n\"]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 204 "" 0 "" {TEXT -1 0 "" }}}
+{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

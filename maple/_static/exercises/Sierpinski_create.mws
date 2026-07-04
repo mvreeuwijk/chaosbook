@@ -1,0 +1,26 @@
+{VERSION 5 0 "IBM INTEL LINUX" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "restart; with(plots)
+: with(stats):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "r := rand
+(3):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "N:=5000;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "x[0]:= 1; y[0] := 0;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "for i from 1 to N do" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "  dice :
+= r();" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "  if( dice = 0) then " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "    x[i] := 0.5*x[i-1];" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 23 "    y[i] := 0.5*y[i-1];" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 7 "  else " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "    if
+( dice = 1 ) then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "       x[i] :
+= 0.5*x[i-1]+0.25;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "       y[i] :
+= 0.5*y[i-1]+0.50;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "    else" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "       x[i] := 0.5*x[i-1]+0.5;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "       y[i] := 0.5*y[i-1];" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "    end if;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "  end if;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 38 "plotlist := [seq([x[i],y[i]],i=1..N)]:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "pointplot(plotlist,symbolsize=1,col
+or=blue);" }}}}{MARK "6 0 0" 44 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

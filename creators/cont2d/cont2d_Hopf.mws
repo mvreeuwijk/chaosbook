@@ -1,0 +1,574 @@
+{VERSION 14 0 "Windows 7" "14.0" }
+{USTYLETAB {PSTYLE "Ordered List 1" -1 200 1 {CSTYLE "" -1 -1 "Times"
+ 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Ordered List 2" -1 201 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 36 2 0 2 2 -1 1 }{PSTYLE "Ordered
+ List 3" -1 202 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 
+0 0 1 }1 1 0 0 3 3 2 72 2 0 2 2 -1 1 }{PSTYLE "Ordered List 4" -1 203 
+1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3
+ 3 2 108 2 0 2 2 -1 1 }{PSTYLE "Ordered List 5" -1 204 1 {CSTYLE "" -1
+ -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 144 2 0 2 
+2 -1 1 }{PSTYLE "Author" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1
+ 2 2 2 2 2 2 1 0 0 1 }3 1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Warning" 
+-1 7 1 {CSTYLE "" -1 -1 "Courier New" 1 12 0 0 255 1 2 2 2 2 2 1 1 0 0
+ 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Annotation Title" -1 205 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 0 0 1 }3 1 0 0 12 
+12 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "Ti
+mes" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Line Printed Output" -1 6 1 {CSTYLE "" -1 -1 "Courier New" 1 
+12 0 0 255 1 2 2 2 2 2 1 2 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Text Output" -1 2 1 {CSTYLE "" -1 -1 "Courier New" 1 12 0 0 
+255 1 2 2 2 2 2 1 3 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Diag
+nostic" -1 9 1 {CSTYLE "" -1 -1 "Courier New" 1 12 40 120 40 1 2 2 2 2
+ 2 1 2 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 0
+ 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Ti
+mes" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Dash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 
+2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 1 }{PSTYLE "HyperlinkError
+" -1 206 1 {CSTYLE "" -1 -1 "Courier New" 1 12 255 0 255 1 2 2 1 2 2 1
+ 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Error" -1 8 1 {CSTYLE
+ "" -1 -1 "Courier New" 1 12 255 0 255 1 2 2 2 2 2 1 1 0 0 1 }1 1 0 0 
+0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 {CSTYLE "" -1 -1 "Times"
+ 1 18 0 0 0 1 2 1 2 2 2 2 1 0 0 1 }3 1 0 0 12 12 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2
+ 2 2 2 1 0 0 1 }1 1 0 0 8 4 2 0 2 0 2 2 -1 1 }{PSTYLE "Bullet Item" -1
+ 15 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0
+ 0 3 3 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 4" -1 20 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 1 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1
+ }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "Times" 1 14 0 0 0 1 1 1
+ 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 2" -1
+ 4 1 {CSTYLE "" -1 -1 "Times" 1 16 0 0 0 1 2 1 2 2 2 2 1 0 0 1 }1 1 0 
+0 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "HyperlinkWarning" -1 207 1 {CSTYLE ""
+ -1 -1 "Courier New" 1 12 0 0 255 1 2 2 1 2 2 1 1 0 0 1 }1 1 0 0 0 0 2
+ 0 2 0 2 2 -1 1 }{PSTYLE "List Item" -1 14 1 {CSTYLE "" -1 -1 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 1 }
+{CSTYLE "Annotation Text" -1 200 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 
+0 1 }{CSTYLE "Caption Reference" -1 201 "Times" 1 12 0 0 0 1 2 1 2 2 2
+ 2 0 0 0 1 }{CSTYLE "Maple Input Placeholder" -1 202 "Courier New" 1 
+12 200 0 200 1 2 1 2 2 1 2 0 0 0 1 }{CSTYLE "Code" -1 203 "Courier New
+" 1 12 255 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "2D Inert Output" -1 204
+ "Times" 1 12 144 144 144 1 2 2 2 2 1 2 0 0 0 1 }{CSTYLE "Hyperlink" 
+-1 17 "Times" 1 12 0 128 128 1 2 2 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" 
+-1 2 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Maple Input" 
+-1 0 "Courier New" 1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 1 }{CSTYLE "2D Out
+put" -1 20 "Times" 1 12 0 0 255 1 2 2 2 2 2 1 0 0 0 1 }{CSTYLE "2D Inp
+ut" -1 19 "Times" 1 12 0 0 0 1 2 2 2 2 1 2 0 0 0 1 }{CSTYLE "Header an
+d Footer" -1 205 "Times" 1 10 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Te
+xt" -1 206 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Equation
+ Label" -1 207 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "Dict
+ionary Hyperlink" -1 45 "Times" 1 12 147 0 15 1 2 2 1 2 2 2 0 0 0 1 }
+{CSTYLE "Caption Text" -1 208 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1
+ }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "restart; with(Linea
+rAlgebra): with(DEtools): with(plots):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 43 "f := (x,y) -> - y - x * (- mu + x^2 + y^2);" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 25 "g := (x,y) ->   x - y * (" }{MPLTEXT 1 0 17 "- mu \+
++ x^2 + y^2)" }{MPLTEXT 1 0 1 ";" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 
+"DE1 := diff(x(t),t) = f(x(t), y(t)):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 36 "DE2 := diff(y(t),t) = g(x(t), y(t)):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "DE  := DE1, DE2;" }}{PARA 11 "" 1 "" {XPPMATH 20 "f*6
+$I\"xG6\"I\"yGF%F%6$I)operatorGF%I&arrowGF%F%,&9%!\"\"*&9$\"\"\",(I#mu
+GF%F,*$F.\"\"#F/*$F+F3F/F/F,F%F%F%" }}{PARA 11 "" 1 "" {XPPMATH 20 "f*
+6$I\"xG6\"I\"yGF%F%6$I)operatorGF%I&arrowGF%F%,&9$\"\"\"*&9%F,,(I#muGF
+%!\"\"*$F+\"\"#F,*$F.F3F,F,F1F%F%F%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+$/-I%diffG%*protectedG6$-I\"xG6\"6#I\"tGF*F,,&-I\"yGF*F+!\"\"*&F(\"\"
+\",(I#muGF*F0*$F(\"\"#F2*$F.F6F2F2F0/-F%6$F.F,,&F(F2*&F.F2F3F2F0" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "jac := VectorCalculus[Jacobi
+an]([f(x,y), g(x,y)], [x, y]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "-I'Mat
+rixG6$%*protectedGI(_syslibG6\"6#/I$%idGF'\"*377([" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 14 "subs(fp, jac);" }}{PARA 206 "" 1 "" {TEXT 
+209 0 "" }{HYPERLNK 209 "Error, invalid input: subs received fp, which
+ is not valid for its 1st argument" 4 "http://www.maplesoft.com/suppor
+t/help/errors/view.aspx?path=Error,%20invalid%20input%3A%20subs%20rece
+ived%20fp,%20which%20is%20not%20valid%20for%20its%201st%20argument" ""
+ }{TEXT 209 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "fp := so
+lve(\{f(x,y)=0, g(x,y)=0\}, \{x,y\});" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"<$/I\"xG6\"\"\"!/I\"yGF%F&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+32 "ev = Eigenvalues(subs(fp, jac));" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+/I#evG6\"-&I'VectorG6$%*protectedGI(_syslibGF$6#I'columnGF$6#/I$%idGF$
+\"*sa3([" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "mu := -0.1;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "ic := x(0) = .15, y(0) = 0;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "tstart := 0; tend := 100;" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "$!\"\"F#" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$/-
+I\"xG6\"6#\"\"!$\"#:!\"#/-I\"yGF&F'F(" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "\"$+\"" }}}{EXCHG {PARA 0 "" 0
+ "" {TEXT 206 15 "Plot timeseries" }}{PARA 0 "" 0 "" {TEXT 206 0 "" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "sol := dsolve(\{DE, ic\}, [
+x(t), y(t)], type = numeric, maxfun = -1);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "f*6#I(x_rkf45G6\"6+I%_resGF%I%_datGF%I&_varsGF%I*_solnpro
+cGF%I&_xoutGF%I'_ndsolGF%I&_parsGF%I#_nGF%I#_iGF%6#IinCopyright~(c)~20
+00~by~Waterloo~Maple~Inc.~All~rights~reserved.GF%F%C-@$2\"\"\"9#YQBinv
+alid~input:~too~many~argumentsF%>I8_EnvDSNumericSaveDigitsGF%I'DigitsG
+F%>F;\"#:@%/I-_EnvInFsolveGF%I%trueG%*protectedG>8(-&I&evalfGFB6#F:6#9
+$>FD-FGFI>8%X*I)anythingGFBF%F%[gl!!%!!!\"%\"%f*6#I%_xinGF%65F+I&_dtbl
+GF%F(I&_vmapGF%I$_x0GF%I$_y0GF%I%_valGF%I%_digGF%F.I$_neGF%I$_ndGF%I$_
+nvGF%F-I%_iniGF%I%_parGF%F/I#_jGF%I#_kGF%I%_srcGF%6#IinCopyright~(c)~2
+002~by~Waterloo~Maple~Inc.~All~rights~reserved.GF%E\\s\"Q(complexF%I&f
+alseGFBC9>8$FJ>807\">FN=F%6#;F5\"\"%E\\[l\"F5=F%6#;F5\"#=E\\[l3F56%/I)
+datatypeGF%&I&floatGFB6#\"\")/I&orderGFBI(C_orderGF%/I(storageGF%I,rec
+tangularGF%\"\"#Fcp\"\"$7&\"\"!FcqFcqX,FPF%F%[gl'!%\"!!#!\"!\"#F\\pX*F
+PF%F%[gl&!%!!!\"C\"C##!!!!\"!!!!!!!!!!\"!!!\"%!\"0\"\"\"$$!\"!\"\"&X*F
+PF%F%[gl'!%\"!!\"5\"500000000000000003EB0C6F7A0B5ED8D00000000000000003
+CF6849E7A354D2D00000000000000003FA13AB6265E932D00000000000000003EB0C6F
+7A0B5ED8D0000000000000000000000000000000000000000000000000000000000000
+0003FF000000000000000000000000000003FE000000000000000000000000000003FF
+00000000000003FF000000000000000000000000000000000000000000000\"\"'X*FP
+F%F%[gl'!%\"!!\"#\"#3FC33333333333330000000000000000\"\"(7)X,FPF%F%[gl
+'!%\"!!#=\"%\"(00000000000000003FCA0000000000003FD38000000000003FE8000
+0000000003FEA0000000000003FDA0000000000003FEA0000000000003FB0540000000
+00000000000000000003FD1E000000000003FD16EA800000000BFB8CC60000000003F9
+40A00000000003FE13898000000003FA05400000000000000000000000000BFD600000
+0000000BFD57480000000003FCD6400000000003FDAB800000000004026F6200000000
+03FB8DBE30000000000000000000000003FD9D300000000003F94C8DC00000000BF78C
+C6000000000BFA86C30000000003FE8EA2C80000000X,FPF%F%[gl'!%\"!!#E\"'\"'0
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000003FF00000000000003FD000000000000000000000000000000000000000000
+000000000000000000000000000000000003FF00000000000003FC80000000000003FE
+2000000000000000000000000000000000000000000000000000000000000400000000
+00000003FCE300000000000BFEC2000000000003FEC800000000000000000000000000
+000000000000000003FD12A00000000003FC04A8000000000BFE00800000000003FDCC
+00000000000BF8A68000000000000000000000000003FB0080000000000BFB7C000000
+000003FE40A0000000000BFDBB000000000003FC2278000000000BFB60B00000000003
+FD40A0000000000X*FPF%F%[gl'!%\"!!\"'\"'00000000000000003FD8B4395810624
+E3FCAE147AE147AE13FE428F5C28F5C293FF00000000000003FF0000000000000X*FPF
+%F%[gl'!%\"!!\"'\"'3FD0000000000000BFBAB367A0F9096C3FBA7EF9DB22D0E5BFA
+288CE703AFB7F00000000000000000000000000000000X,FPF%F%[gl'!%\"!!#?\"'\"
+&000000000000000000000000000000000000000000000000000000000000000000000
+000000000003FF8B4395810624E0000000000000000000000000000000000000000000
+0000000000000000000003FEE4B30C4BDF12A3FD05D687090C3ED00000000000000000
+0000000000000000000000000000000400A84C31153547640072B43116E15673FEFF4D
+FE3212149000000000000000000000000000000003FF38A22B603354040181397FD4D6
+D62402912FC960D51E5BFE60329938E658900000000000000003FF38A22B6033540401
+81397FD4D6D62402912FC960D51E5BFE60329938E65893FF0000000000000X,FPF%F%[
+gl'!%\"!!#?\"'\"&00000000000000000000000000000000000000000000000000000
+000000000000000000000000000C016ACD9E83E425B000000000000000000000000000
+0000000000000000000000000000000000000C00370D4C92E9F70BFCA6A00709669810
+00000000000000000000000000000000000000000000000BFBB7B7AE39A9D03C023306
+A769F267FC0347864AC49D5B500000000000000000000000000000000401DFC5BA2D74
+093C0247E5D2297CA9DC040FFFCD6BC628F40276AF61C8E17FB0000000000000000402
+02A9F52F3F793C01FECAE20430693C03F858734B7BBC0403051BE003092EAC0183C3AD
+930CD64X,FPF%F%[gl'!%\"!!#0\"$\"&0000000000000000000000000000000000000
+0000000000000000000000000000000000000000000402440A1E286064EC01DF3B530F
+BA163C0416684804E49D1C01FF89925819B673FF066F6D037359CBFE5A416AA846D564
+01859D1DEA15BCC40306E4BBD9408F54038C468DD7616B2C01A60A78B0034D9Fip7%X*
+FPF%F%[gl'!%\"!!\"#\"#00000000000000000000000000000000X*FPF%F%[gl'!%\"
+!!\"#\"#00000000000000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"#BF92D0
+E5604189373FC3333333333333\"\"*7/X*FPF%F%[gl'!%\"!!\"#\"#3FB9999999999
+99A3FB999999999999AX*FPF%F%[gl'!%\"!!\"#\"#000000000000000000000000000
+00000X*FPF%F%[gl'!%\"!!\"#\"#00000000000000000000000000000000X*FPF%F%[
+gl'!%\"!!\"#\"#00000000000000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"
+#00000000000000000000000000000000X,FPF%F%[gl'!%\"!!#%\"#\"#00000000000
+00000000000000000000000000000000000000000000000000000X,FPF%F%[gl'!%\"!
+!#%\"#\"#0000000000000000000000000000000000000000000000000000000000000
+000X,FPF%F%[gl'!%\"!!#-\"#\"'00000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+00000000000X*FPF%F%[gl&!%!!!\"#\"#!!X*FPF%F%[gl'!%\"!!\"#\"#3FC3333333
+3333330000000000000000X*FPF%F%[gl'!%\"!!\"#\"#000000000000000000000000
+00000000X*FPF%F%[gl'!%\"!!\"#\"#00000000000000000000000000000000X*FPF%
+F%[gl'!%\"!!\"#\"#00000000000000000000000000000000\"#57(f*6&I\"NGF%I\"
+XGF%I\"YGF%I#YPGF%F%6#I;[Y[1]~=~x(t),~Y[2]~=~y(t)]GF%F%C%>&9'6#F5,&&9&
+6#F`q!\"\"*&&FgtFdtF5,($F5FitF5*$F[uF`qF5*$FftF`qF5F5Fit>&FctFht,&F[uF
+5*&FftF5F\\uF5FitFcqF%F%F%FitFcqFcqFcqFcq\"#6X,FPF%F%[gl'!%\"!!#3\"'!#
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+00000000\"#7F%\"#8F%\"#97$FcqFcqF=Q&rkf45F%\"#<Fgs\"#;7'FcqFcqFcqFcqFg
+oFapFgo>8)X*FPF%F%[gl!!%!!!\"$!#$FcqFcq$F=!\"#Fav>8'=F%6#;F5F`qE\\[l#F
+5F5F`qF`q>FD&&&FNFdt6#FfqF^w>8,&&F]w6#F\\pFdt>8-&Fbw6#Faq>8.&FbwFcw>8/
+&Fbw6#F\\v@$4-I%typeGFB6$Fdo.I(numericGFB@O-I'memberGFB6$Fdo7%Q&startF
+%Q%leftF%Q&rightF%C$@$5/I:_Env_smart_dsolve_numericGF%FA/&Fbw6#FfsF5@&
+/FdoF\\y@$-Fbx6$&FNFht.I&tableGFBO&&F[zF^wFdt/FdoF]y@$-Fbx6$&FNFgwF\\z
+O&&FezF^wFdtOF[w/FdoQ'methodF%O&F]w6#F=/FdoQ(storageF%O-I&evalbGFB6#Fc
+y/FdoQ)leftdataF%@%4-Fbx6$F[z.I&arrayGFBOI%NULLGFBO-I%evalGFB6#F[z/Fdo
+Q*rightdataF%@%4-Fbx6$FezF[\\lF]\\lO-Fa\\l6#Fez/FdoQ+enginedataF%O-Fa
+\\l6#F]w/FdoQ,engineresetF%C%>F[z-I&evalnGFBFb\\l>Fez-Ff]lF[]lF]\\l/Fd
+oQ(initialF%O-9!6#&F_v6#Fcq/FdoQ'laxtolF%O&&&FN6#-I#ifGFB6%-Fhx6$&FNFc
+w<$F`qFaqF]_lF5F^w6#Fap/FdoQ'numfunF%O-Fi^l6%F[_l&&&FN6#F]_lFcwF__lFcq
+/FdoQ+parametersF%O7#-I$seqGFB6$&F_v6#,&F`wF583F5/Fc`l;F5-I%nopsGFB6#F
+fo/FdoQ7initial_and_parametersF%O6$F\\^lF\\`l/FdoQ%lastF%@%530F]_lF`q0
+F]_lFaq/,&FDF5&&Fg_lF^wFdtFitFavYQSno~information~is~available~on~last
+~computed~pointF%>FdoFfal/FdoQ)functionF%@%/,&&Fbw6#\"#LF5$FcvFcqF5Fcq
+O-Fa\\l6$&F]wFeyF5O-Fa\\l6$&FgblFdtF5/FdoQ$mapF%O-I%copyG6$FBI(_syslib
+GF%6#Fev33-Fbx6$FJI\"=GFB-Fbx6$-I$rhsGFBFI.I%listGFB-Fhx6$-I$lhsGFBFI<
+%Fj]lFj_lFj`lC*>6$81826$FgoFgo@+/FadlFj]l>FgdlF[dl/FadlFj_l>FhdlF[dl0-
+I'selectGFB6%FbxF[dlFhclFgo>6$FhdlFgdl-I-selectremoveGFBFbel2-Fg`l6#F[
+dl,&Ff`lF5F5F5YQhninsufficient~data~for~specification~of~initial~and~p
+arametersF%C$>Fhdl&F[dl6#;,$Ff`lFitFit>Fgdl&F[dl6#;F5,&Ff`lFitFitF5>Fd
+o-Fbdl6#Fdo@$0FhdlFgo-IBdsolve/numeric/process_parametersGF%6&F`wFfoFh
+dlF_v@$0FgdlFgo-I?dsolve/numeric/process_initialGF%6',&F`wF5FewFitFgdl
+F_vFfoFev-I?dsolve/numeric/SC/reinitializeGF%6'FNF_vF`wF]^lFfo@$33Fay-
+Fbx6$F_^lFdx0FdyF5C$>-F]^l6#F]yF_^l>-F]^l6#F\\yF_^l@'Fi]lO7$F_^l-F^`l6
+$&F_v6#&Fev6#Fc`l/Fc`l;F5FeglFi_lF[`lO6$FhhlF\\`l/FJQ*eventstopF%C&@$/
+F\\xFcqYQ<this~solution~has~no~eventsF%>Fc`lF]_l@$30Fc`lF`q0Fc`lFaqOFc
+q@'333/&&&FNF^ilFcwFeyF5-I)assignedGFB6#&FN6#,&FfqF5Fc`lFit2&Ffjl6#Fgr
+Ffs1Ffs&&F[[mFcwF`[mC&>Fc`lF][m>F]_lFc`l>84-I&roundGF%6#&Ffjl6#F[vO-Fj
+[m6#&&&FgjlFgwFdt6$Fh[mF51FfsF_[mC$Fg[mF^\\mF_jl/FJQ,eventstatusF%C%Ff
+il>Fc`l7#-Ffel6$f*6#I\"aGF%F%6$I)operatorGF%I&arrowGF%F%/&&&&T#FdtFgwF
+dt6$FJFjqF5F%F%6$FUFN<#-F^`l6$Fh[m/Fh[m;F5-Fj[m6#&&&F]wFgwFdt6$,&F\\xF
+5F5F5F5O6$/._F%I(enabledGF%&Fc`lFdt/._F%I)disabledGF%&Fc`lFht/FJQ+even
+tclearF%C(FfilFjil@$F\\jlYQ3no~events~to~clearF%@$3Fbjl2FfsFb[mC$>F]_l
+F][mFe[m@%F^[mFh_mC)>Fh[m,&F_[mF5!#5F5@$/-I%iremGFB6$-Fj[m6#&Fb\\m6$Fh
+[mF\\pF`qF5YQGretriggerable~events~cannot~be~clearedF%>Fh[mF_\\m?(85F5
+F5F\\xFA@$/&Fb\\m6$FaamF5Fh[mC$@$/&Fb\\m6$FaamF`qFaqYQ?range~events~ca
+nnot~be~clearedF%>&Fb\\m6$FaamFip&Fb\\m6$Fg^mFip>F\\\\mFcq>F_[mFcq@$Fc
+y@%/Fc`lF`qZ%-F]^l6#FdhlF%F%Z%-F]^l6#FahlF%F%OF%3Ffcl-Fhx6$Fadl<$Q-eve
+ntdisableF%Q,eventenableF%C*Ffil@'-Fbx6$F[dl<$-F]dl6#.I'posintGFB-.I$s
+etGFBFjcm>Fc`l<#-I#opGFBFiel-Fbx6$F[dlF[dm>Fc`l<#F[dlY6$QVevent~identi
+fiers~must~be~integers~in~the~range~1..%1F%Fa^m@$0-Fael6$f*F_]mF%Fa]mF
+%2Fi]mFJF%F%6$FgnF\\xFc`l<\"Fhdm>FaamFbem?(Fh[mF5F5F\\xFA@$-Fhx6$-Fj[m
+6#&Fd^mFd\\mFc`l>Faam-I&unionGFB6$Faam<#Fh[m>Fc`lFaam@%/FadlFbcmC'>F]_
+lFcq>Fh[m7$-Fc[l6#3-FijlFb\\l-Fhx6$&&F[zFcwF]\\mFc`l-Fc[l6#3-FijlF[]l-
+Fhx6$&&FezFcwF]\\mFc`l?&FaamFc`lFAC%>&Fd^m6$FaamFjqFcq@$Fjfm>&&&F[zFgw
+FdtF[hmFcq@$Fbgm>&&&FezFgwFdtF[hmFcq@$&Fh[mFdtC&?(FaamF5F5Fg^mFA@'31Fa
+amF\\x4-Fbx6$&&F`hmFcwFeam.I*undefinedGFBC$-I)userinfoGFB6(Faq<$.I'eve
+ntsGF%.I+eventresetGF%I7reinit~#2,~event~code~GF%FaamI2~to~defined~ini
+t~GF%F`im>&F_hmF_bmF`im3/&F_hmFjamFcq/-Fg`m6$-I%iquoGFB6$-Fj[m6#&F_hm6
+$FaamF\\pF`qF`qFcqC$-Ffim6(FaqFhimF]jmFaamI2~to~initial~init~GF%FD>F`j
+mFDC$-Ffim6(FaqFhimF]jmFaamI6~to~fireinitial~init~GF%,&FDF5FitF5>F`jmF
+g[n>F]gmFcq>&F^gmF`[mFcq@$FcyFhbm@$&Fh[mFhtC&?(FaamF5F5Fg^mFA@'3F\\im4
+-Fbx6$&&FehmFcwFjamFbimC$-Ffim6(FaqFhimI7reinit~#3,~event~code~GF%Faam
+F^jmFf\\n>&FdhmF_bmFf\\n3/&FdhmFjamFcq/-Fg`m6$-Fhjm6$-Fj[m6#&FdhmF][nF
+`qF`qFcqC$-Ffim6(FaqFhimF[]nFaamFa[nFD>F]]nFDC$-Ffim6(FaqFhimF[]nFaamF
+f[n,&FDF5F5F5>F]]nF`^n>FegmFcq>&FfgmF`[mFcq@$FcyF[cmC'?&FaamFc`lFA>Fjg
+mF5Fd]lFg]lFdfm@$FcyC$@$1FDFahlFjbm@$1FdhlFDFgbmF]cm3Ffcl/FadlQ+eventf
+iredF%C*@$4FiclYQI'eventfired'~must~be~specified~as~a~listF%Ffil@$Faal
+YQhn'direction'~must~be~set~prior~to~calling/setting~'eventfired'F%Fji
+l>8*F^\\l@$4-Fijl6#I9_EnvEventRetriggerWarnedGF%>F``nFao?&FaamF[dlFAC*
+@'-Fbx6$Faam.I(integerGFB>86Faam3-Fbx6$Faam/Fg`n.FP-Fbx6$-FG6#-F\\dl6#
+FaamFdxC$>Faam/-FbdlFean-&FG6#-I$maxGFB6$F;FapFcan>Fj`nFianY6$QD'event
+fired'~entry~is~not~valid:~%1F%Faam@$52Fj`nF52Fa^mFj`nFhdm>Fj`n<#-F^`l
+6$-Fi^l6%/,&FjemF5Fj`nFitFavFh[mF^\\l/Fh[m;F5F\\x@$0-Fg`l6#Fj`nF5YQ`p'
+eventfired'~can~only~be~set/queried~for~root-finding~events~and~time/i
+nterval~eventsF%>Fj`n&Fj`nFdt@&30&Fd^m6$Fj`nF`qFav0,&F]dnF5FcblF5FavFf
+cn/-Fg`m6$-Fj[m6#&Fd^m6$Fj`nF\\pF`qF5C$@$/F``nFao-I(WARNINGGF%6#IT'eve
+ntfired'~has~no~effect~on~events~that~retriggerGF%>F``nFA@%55-Fbx6$&&F
+c\\mFcw6$Fj`n,&Fc`lF5FitF5Fbim3Ffbm2&F_hm6$Fj`nFip&Faim6$Fj`nF53/Fc`lF
+aq2&Fg\\nF^dn&FdhmF\\fn>F[`n6$F[`n&Fb\\mF\\fn>F[`n6$F[`nFeen@$-Fbx6$Fa
+amFhclC%-Ffim6(FaqFhimI7manual~set~event~code~GF%Fj`nI+~to~value~GF%Fd
+an>FffnFdan>FeenFdanO7#F[`n3Ffcl/FadlQ*directionF%C)@$4-Fhx6$F[dl<&Fit
+F5._F%I%leftGF%._F%I&rightGF%YQip'direction'~must~be~specified~as~eith
+er~'1'~or~'right'~(positive)~or~'-1'~or~'left'~(negative)F%>Fj`n-Fi^l6
+%/F]_lF`qFit-Fi^l6%/F]_lFaqF5Fcim>Fc`l-Fi^l6%-Fhx6$F[dl<$F5FahnFaqF`qF
+f[m>Fgjl-I;dsolve/numeric/SC/IVPdcopyGF%6$F]w-Fi^l6%-Fijl6#FgjlFgjlF^
+\\l@$2FcqF\\x?(Fh[mF5F5Fg^mFA@'31Fh[mF\\x4-Fbx6$&Ffen6$Fh[mFhenFbimC$-
+Ffim6(FaqFhimI7reinit~#4,~event~code~GF%Fh[mF^jmFdjn>&Fb\\m6$Fh[mFipFd
+jn3/&Fb\\m6$Fh[mF`qFcq/-Fg`m6$-FhjmFh`mF`qFcqC$-Ffim6(FaqFhimFijnFh[mF
+a[nFD>F[[oFDC$-Ffim6(FaqFhimFijnFh[mFf[n,(FDF5Fc`lFcv$\"#]FitF5>F[[oF
+\\\\oOFj`nOQ)procnameF%@$/FdoFDO7$FD-F^`l6$-FG6#&&F]w6#FhqF\\ilF_il>Fc
+`l-Fi^l6%1FDFdoFaqF`q@$33/FJF^al2FcqF_[mF^[mC%>8&-Fa\\l6$FgjlF`q>Fh[m&
+&Fi]oFcw6#\"#?O7%&&Fi]o6#Fdu6$Fh[mFcq-F^`l6$&Fd^o6$Fh[mF]il/Fc`l;F5,(F
+`wF5FewFitFiwFit-F^`l6$&&&Fi]oFhpFdtF\\il/Fc`l;,*F`wF5FewFitFiwFitF5F5
+Fegl@$4-Fbx6$FgjlF[\\lC$Fcin@$F\\jn?(Fh[mF5F5Fg^mFA@'F_jnC$-Ffim6(FaqF
+himI7reinit~#5,~event~code~GF%Fh[mF^jmFdjnFjjnF][oC$-Ffim6(FaqFhimFa`o
+Fh[mFa[nFDFh[oC$-Ffim6(FaqFhimFa`oFh[mFf[nF\\\\oF_\\o@$0FJF^alC$@$2Fcq
+Fcq@$-I<dsolve/numeric/checkglobalsGF%6&-Fcdm6#&F]w6#FhuFfoF`wF_v-Fggl
+6(FNF_vF`wF]^lFfoFc`l@$/&Fbw6#FjqFcqYQinparameters~must~be~initialized
+~before~solution~can~be~computedF%Fh]oFf[mZ%>Fj`n-I9dsolve/numeric/SC/
+IVPrunGF%6$Fi]oFdoF%C$-Ffim6%F`qI-dsolve/debugGF%-I&printGFB6$I7Except
+ion~in~solnproc:GF%&7#I.lastexceptionGF%6#;F`qFitYF%@%3/Fj`nFcq2Ffs&F^
+^oF`[m>F[`n&&&Fi]oFgwFdtFabm>F[`n&Fd^o6$F]^oFcq@%50Fj`nFcq1FdcoFcq>&F
+\\wFdtFdo>FadoF[`n@&3F`fn2F[`nFdoC$>I)RoundingGF%,$I)infinityGFBFit@//
+FdcoF5Y6$Qcocannot~evaluate~the~solution~further~right~of~%1,~probably
+~a~singularityF%-&FGFhp6#F[`n/FdcoF`qY6$Qcqcannot~evaluate~the~solutio
+n~further~right~of~%1,~maxfun~limit~exceeded~(see~?dsolve,maxfun~for~d
+etails)F%F`eo/FdcoFaq@%/&F^^o6#\"#DFaqYQfqcannot~evaluate~the~solution
+~past~the~initial~point,~problem~may~be~initially~singular~or~improper
+ly~set~upF%YQ_rcannot~evaluate~the~solution~past~the~initial~point,~pr
+oblem~may~be~complex,~initially~singular~or~improperly~set~upF%/FdcoF
+\\pY6$Qfqcannot~evaluate~the~solution~further~right~of~%1,~accuracy~go
+al~cannot~be~achieved~with~specified~'minstep'F%F`eo/FdcoFfqY6$Q\\rcan
+not~evaluate~the~solution~further~right~of~%1,~too~many~step~failures,
+~tolerances~may~be~too~loose~for~problemF%F`eoFccoC%@$0I7_Env_dsolve_n
+owarnstopGF%FA-I7dsolve/numeric/warningGF%6#-_I,StringToolsGF%I.Format
+MessageGF%6%Qgocannot~evaluate~the~solution~further~right~of~%1,~event
+~#%2~triggered~a~haltF%F`eo-Fj[m6#&Fgco6$,&FdcoF5Fc`mF5F5>Fhdo.I(neare
+stGF%>FdoF[`nY6$QQcannot~evaluate~the~solution~further~right~of~%1F%F`
+eo3Ffbm2FdoF[`nC$>FhdoFjdo@/F\\eoY6$Qbocannot~evaluate~the~solution~fu
+rther~left~of~%1,~probably~a~singularityF%F`eoFceoY6$Qbqcannot~evaluat
+e~the~solution~further~left~of~%1,~maxfun~limit~exceeded~(see~?dsolve,
+maxfun~for~details)F%F`eoFgeoFheoFafoY6$Qeqcannot~evaluate~the~solutio
+n~further~left~of~%1,~accuracy~goal~cannot~be~achieved~with~specified~
+'minstep'F%F`eoFefoY6$Q[rcannot~evaluate~the~solution~further~left~of~
+%1,~too~many~step~failures,~tolerances~may~be~too~loose~for~problemF%F
+`eoFccoC%@$F[go-F^go6#-Fago6%Qfocannot~evaluate~the~solution~further~l
+eft~of~%1,~event~#%2~triggered~a~haltF%F`eoFfgoF[hoF^hoY6$QPcannot~eva
+luate~the~solution~further~left~of~%1F%F`eo@%F?C*>8+&F^^o6#\"#E>FajoF:
+>I6_Env_dsolve_SC_nativeGF%FA@%/FjeoF5C$>Fc`lF5>FjeoF`q>Fc`lFjeo>F[`n-
+I9dsolve/numeric/SC/IVPvalGF%6%Fi]oFdoFj`n>FjeoFc`l>FajoF`jo7$Fdo-F^`l
+6$&F[`nF\\ilF_ilC%>F;Fajo>F[`n-F_[p6%-Fa\\l6$Fi]oF`qFdoFj`nFc[pF%F%F%X
+*FPF%F%[gl!!%!!!\"\"!!\"*'\\@;h7%I\"tGF%-I\"xGF%6#Fa\\p-I\"yGF%Fd\\pFg
+o>Fi]oFez>F[`n-I$mapGFB6$F\\dlF]_l>F`jo,&-Fg`l6#Fi]oF5FitF5>FevF]w@$4-
+Fbx6$FDFdxC$@.-Fhx6$FJ78F[y.I&startGF%F[[l.I'methodGF%F\\y.F`hnF]y.Fch
+nFf[lFd\\lF]]lFdil.I*eventstopGF%Fe_m.I+eventclearGF%Fh\\m.I,eventstat
+usGF%Fb^l.I'laxtolGF%Fa_l.I'numfunGF%F^\\lC$>Fdo-Fev6#-I(convertGFB6$F
+J.I'stringGFB@(2F5-Fg`l6#7#FdoOFdo-Fbx6$FdoF[\\lO-Fa\\l6$FdoF50FdoFb
+\\oFh_p-Fhx6$FJ7+F^al.I%lastGF%Fj]l.I(initialGF%Fj_l.I+parametersGF%Fj
+`l.I7initial_and_parametersGF%F^\\lC%>FDF^_p>Fdo-Fev6#FD@'/FDFj_lO7#-F
+^`l6$/&F[`n6#F`w&FdoFgap/F`w;F5-Fg`lFbeo/FDFj`lO7$-F^`l6$/&Fi]o6#,&F`w
+F5F5F5&&Fg_pFdtFcbp/F`w;FcqF`jo-F^`l6$/Ffap&&Fg_pFhtFgapFiapO7#-F^`l6$
+/Fbbp&FdoFcbpFgbp3-Fbx6$FDFhcl-Fhx6$-FbdlF^ap7)Fj]lFd`pFj_lFf`pFj`lFh`
+pF^\\lC%>FD/-F__p6$FadlFa_pF[dl@%-Fbx6$-F\\dlF^apF]dlF\\apYQfninitial~
+and/or~parameter~values~must~be~specified~in~a~listF%@'/FicpFj]lF^cp/F
+icpFj_lFaapF]bp3Fecp-Fhx6$Ficp7+Fbcm.I-eventdisableGF%Fccm.I,eventenab
+leGF%Fa_n.I+eventfiredGF%Fggn.I*directionGF%F^\\lO-Fev6#F]dp/FDQ.solnp
+rocedureF%O-Fa\\lFccl/FDQ(sysvarsF%OFi]o@%0F]^lI(unknownGF%O-.F]^lFIC%
+F_v>F_v-I(pointtoGFB6#&F[zF`^lO-.F_vFIZ%C$F\\apF_cpF%F_coF%F%F%" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 109 "plotsetup(ps, plotoutput = \+
+`cont2d_Hopf_time1.eps`, plotoptions = `portrait,noborder,width=384, h
+eight=128`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 128 "odeplot(so
+l, [[t, x(t), color = black]], tstart .. tend, numpoints = 1000, thick
+ness = 2, view = [tstart .. tend, -0.3 .. 0.3]);" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 19 "plotsetup(default);" }}}{EXCHG {PARA 0 "> " 0
+ "" {MPLTEXT 1 0 110 "plotsetup(ps, plotoutput = `cont2d_Hopf_phase1.e
+ps`, plotoptions = `portrait,noborder,width=256, height=256`);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 174 "phasep
+ortrait([DE], [x(t), y(t)], t = tstart .. tend, [[ic]], stepsize = .1,
+ x = -0.5 .. 0.5, y = -0.5 .. 0.5, color = black, linecolor = black, l
+inestyle=solid, axes=boxed);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> 
+" 0 "" {MPLTEXT 1 0 10 "mu := 0.1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+27 "ic := x(0) = .15, y(0) = 0;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "
+tstart := 0; tend := 100;" }}{PARA 11 "" 1 "" {XPPMATH 20 "$\"\"\"!\"
+\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$/-I\"xG6\"6#\"\"!$\"#:!\"#/-I\"y
+GF&F'F(" }}{PARA 11 "" 1 "" {XPPMATH 20 "\"\"!" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "\"$+\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 206 15 "Plot time
+series" }}{PARA 0 "" 0 "" {TEXT 206 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 67 "sol := dsolve(\{DE, ic\}, [x(t), y(t)], type = numeri
+c, maxfun = -1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "f*6#I(x_rkf45G6\"6+I
+%_resGF%I%_datGF%I&_varsGF%I*_solnprocGF%I&_xoutGF%I'_ndsolGF%I&_parsG
+F%I#_nGF%I#_iGF%6#IinCopyright~(c)~2000~by~Waterloo~Maple~Inc.~All~rig
+hts~reserved.GF%F%C-@$2\"\"\"9#YQBinvalid~input:~too~many~argumentsF%>
+I8_EnvDSNumericSaveDigitsGF%I'DigitsGF%>F;\"#:@%/I-_EnvInFsolveGF%I%tr
+ueG%*protectedG>8(-&I&evalfGFB6#F:6#9$>FD-FGFI>8%X*I)anythingGFBF%F%[g
+l!!%!!!\"%\"%f*6#I%_xinGF%65F+I&_dtblGF%F(I&_vmapGF%I$_x0GF%I$_y0GF%I%
+_valGF%I%_digGF%F.I$_neGF%I$_ndGF%I$_nvGF%F-I%_iniGF%I%_parGF%F/I#_jGF
+%I#_kGF%I%_srcGF%6#IinCopyright~(c)~2002~by~Waterloo~Maple~Inc.~All~ri
+ghts~reserved.GF%E\\s\"Q(complexF%I&falseGFBC9>8$FJ>807\">FN=F%6#;F5\"
+\"%E\\[l\"F5=F%6#;F5\"#=E\\[l3F56%/I)datatypeGF%&I&floatGFB6#\"\")/I&o
+rderGFBI(C_orderGF%/I(storageGF%I,rectangularGF%\"\"#Fcp\"\"$7&\"\"!Fc
+qFcqX,FPF%F%[gl'!%\"!!#!\"!\"#F\\pX*FPF%F%[gl&!%!!!\"C\"C##!!!!\"!!!!!
+!!!!!\"!!!\"%!\"0\"\"\"$$!\"!\"\"&X*FPF%F%[gl'!%\"!!\"5\"5000000000000
+00003EB0C6F7A0B5ED8D00000000000000003CF6849E7A354D2D00000000000000003F
+A13AB6265E932D00000000000000003EB0C6F7A0B5ED8D000000000000000000000000
+00000000000000000000000000000000000000003FF000000000000000000000000000
+003FE000000000000000000000000000003FF00000000000003FF00000000000000000
+0000000000000000000000000000\"\"'X*FPF%F%[gl'!%\"!!\"#\"#3FC3333333333
+3330000000000000000\"\"(7)X,FPF%F%[gl'!%\"!!#=\"%\"(00000000000000003F
+CA0000000000003FD38000000000003FE80000000000003FEA0000000000003FDA0000
+000000003FEA0000000000003FB054000000000000000000000000003FD1E000000000
+003FD16EA800000000BFB8CC60000000003F940A00000000003FE13898000000003FA0
+5400000000000000000000000000BFD6000000000000BFD57480000000003FCD640000
+0000003FDAB800000000004026F620000000003FB8DBE3000000000000000000000000
+3FD9D300000000003F94C8DC00000000BF78CC6000000000BFA86C30000000003FE8EA
+2C80000000X,FPF%F%[gl'!%\"!!#E\"'\"'0000000000000000000000000000000000
+00000000000000000000000000000000000000000000003FF00000000000003FD00000
+0000000000000000000000000000000000000000000000000000000000000000000000
+003FF00000000000003FC80000000000003FE200000000000000000000000000000000
+000000000000000000000000000040000000000000003FCE300000000000BFEC200000
+0000003FEC800000000000000000000000000000000000000000003FD12A0000000000
+3FC04A8000000000BFE00800000000003FDCC00000000000BF8A680000000000000000
+00000000003FB0080000000000BFB7C000000000003FE40A0000000000BFDBB0000000
+00003FC2278000000000BFB60B00000000003FD40A0000000000X*FPF%F%[gl'!%\"!!
+\"'\"'00000000000000003FD8B4395810624E3FCAE147AE147AE13FE428F5C28F5C29
+3FF00000000000003FF0000000000000X*FPF%F%[gl'!%\"!!\"'\"'3FD00000000000
+00BFBAB367A0F9096C3FBA7EF9DB22D0E5BFA288CE703AFB7F00000000000000000000
+000000000000X,FPF%F%[gl'!%\"!!#?\"'\"&00000000000000000000000000000000
+0000000000000000000000000000000000000000000000003FF8B4395810624E000000
+00000000000000000000000000000000000000000000000000000000003FEE4B30C4BD
+F12A3FD05D687090C3ED00000000000000000000000000000000000000000000000040
+0A84C31153547640072B43116E15673FEFF4DFE3212149000000000000000000000000
+000000003FF38A22B603354040181397FD4D6D62402912FC960D51E5BFE60329938E65
+8900000000000000003FF38A22B603354040181397FD4D6D62402912FC960D51E5BFE6
+0329938E65893FF0000000000000X,FPF%F%[gl'!%\"!!#?\"'\"&0000000000000000
+0000000000000000000000000000000000000000000000000000000000000000C016AC
+D9E83E425B000000000000000000000000000000000000000000000000000000000000
+0000C00370D4C92E9F70BFCA6A00709669810000000000000000000000000000000000
+00000000000000BFBB7B7AE39A9D03C023306A769F267FC0347864AC49D5B500000000
+000000000000000000000000401DFC5BA2D74093C0247E5D2297CA9DC040FFFCD6BC62
+8F40276AF61C8E17FB000000000000000040202A9F52F3F793C01FECAE20430693C03F
+858734B7BBC0403051BE003092EAC0183C3AD930CD64X,FPF%F%[gl'!%\"!!#0\"$\"&
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000402440A1E286064EC01DF3B530FBA163C0416684804E49D1C01FF8992581
+9B673FF066F6D037359CBFE5A416AA846D56401859D1DEA15BCC40306E4BBD9408F540
+38C468DD7616B2C01A60A78B0034D9Fip7%X*FPF%F%[gl'!%\"!!\"#\"#00000000000
+000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"#0000000000000000000000000
+0000000X*FPF%F%[gl'!%\"!!\"#\"#3F87CED916872B033FC3333333333333\"\"*7/
+X*FPF%F%[gl'!%\"!!\"#\"#3FB999999999999A3FB999999999999AX*FPF%F%[gl'!%
+\"!!\"#\"#00000000000000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"#0000
+0000000000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"#000000000000000000
+00000000000000X*FPF%F%[gl'!%\"!!\"#\"#00000000000000000000000000000000
+X,FPF%F%[gl'!%\"!!#%\"#\"#00000000000000000000000000000000000000000000
+00000000000000000000X,FPF%F%[gl'!%\"!!#%\"#\"#000000000000000000000000
+0000000000000000000000000000000000000000X,FPF%F%[gl'!%\"!!#-\"#\"'0000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000X*FPF%F%[gl&!%!!!\"#\"
+#!!X*FPF%F%[gl'!%\"!!\"#\"#3FC33333333333330000000000000000X*FPF%F%[gl
+'!%\"!!\"#\"#00000000000000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"#0
+0000000000000000000000000000000X*FPF%F%[gl'!%\"!!\"#\"#000000000000000
+00000000000000000\"#57(f*6&I\"NGF%I\"XGF%I\"YGF%I#YPGF%F%6#I;[Y[1]~=~x
+(t),~Y[2]~=~y(t)]GF%F%C%>&9'6#F5,&&9&6#F`q!\"\"*&&FgtFdtF5,($FitFitF5*
+$F[uF`qF5*$FftF`qF5F5Fit>&FctFht,&F[uF5*&FftF5F\\uF5FitFcqF%F%F%FitFcq
+FcqFcqFcq\"#6X,FPF%F%[gl'!%\"!!#3\"'!#00000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000\"#7F%\"#8F%\"#97$FcqFcq
+F=Q&rkf45F%\"#<Fgs\"#;7'FcqFcqFcqFcqFgoFapFgo>8)X*FPF%F%[gl!!%!!!\"$!#
+$FcqFcq$F=!\"#Fav>8'=F%6#;F5F`qE\\[l#F5F5F`qF`q>FD&&&FNFdt6#FfqF^w>8,&
+&F]w6#F\\pFdt>8-&Fbw6#Faq>8.&FbwFcw>8/&Fbw6#F\\v@$4-I%typeGFB6$Fdo.I(n
+umericGFB@O-I'memberGFB6$Fdo7%Q&startF%Q%leftF%Q&rightF%C$@$5/I:_Env_s
+mart_dsolve_numericGF%FA/&Fbw6#FfsF5@&/FdoF\\y@$-Fbx6$&FNFht.I&tableGF
+BO&&F[zF^wFdt/FdoF]y@$-Fbx6$&FNFgwF\\zO&&FezF^wFdtOF[w/FdoQ'methodF%O&
+F]w6#F=/FdoQ(storageF%O-I&evalbGFB6#Fcy/FdoQ)leftdataF%@%4-Fbx6$F[z.I&
+arrayGFBOI%NULLGFBO-I%evalGFB6#F[z/FdoQ*rightdataF%@%4-Fbx6$FezF[\\lF]
+\\lO-Fa\\l6#Fez/FdoQ+enginedataF%O-Fa\\l6#F]w/FdoQ,engineresetF%C%>F[z
+-I&evalnGFBFb\\l>Fez-Ff]lF[]lF]\\l/FdoQ(initialF%O-9!6#&F_v6#Fcq/FdoQ'
+laxtolF%O&&&FN6#-I#ifGFB6%-Fhx6$&FNFcw<$F`qFaqF]_lF5F^w6#Fap/FdoQ'numf
+unF%O-Fi^l6%F[_l&&&FN6#F]_lFcwF__lFcq/FdoQ+parametersF%O7#-I$seqGFB6$&
+F_v6#,&F`wF583F5/Fc`l;F5-I%nopsGFB6#Ffo/FdoQ7initial_and_parametersF%O
+6$F\\^lF\\`l/FdoQ%lastF%@%530F]_lF`q0F]_lFaq/,&FDF5&&Fg_lF^wFdtFitFavY
+QSno~information~is~available~on~last~computed~pointF%>FdoFfal/FdoQ)fu
+nctionF%@%/,&&Fbw6#\"#LF5$FcvFcqF5FcqO-Fa\\l6$&F]wFeyF5O-Fa\\l6$&FgblF
+dtF5/FdoQ$mapF%O-I%copyG6$FBI(_syslibGF%6#Fev33-Fbx6$FJI\"=GFB-Fbx6$-I
+$rhsGFBFI.I%listGFB-Fhx6$-I$lhsGFBFI<%Fj]lFj_lFj`lC*>6$81826$FgoFgo@+/
+FadlFj]l>FgdlF[dl/FadlFj_l>FhdlF[dl0-I'selectGFB6%FbxF[dlFhclFgo>6$Fhd
+lFgdl-I-selectremoveGFBFbel2-Fg`l6#F[dl,&Ff`lF5F5F5YQhninsufficient~da
+ta~for~specification~of~initial~and~parametersF%C$>Fhdl&F[dl6#;,$Ff`lF
+itFit>Fgdl&F[dl6#;F5,&Ff`lFitFitF5>Fdo-Fbdl6#Fdo@$0FhdlFgo-IBdsolve/nu
+meric/process_parametersGF%6&F`wFfoFhdlF_v@$0FgdlFgo-I?dsolve/numeric/
+process_initialGF%6',&F`wF5FewFitFgdlF_vFfoFev-I?dsolve/numeric/SC/rei
+nitializeGF%6'FNF_vF`wF]^lFfo@$33Fay-Fbx6$F_^lFdx0FdyF5C$>-F]^l6#F]yF_
+^l>-F]^l6#F\\yF_^l@'Fi]lO7$F_^l-F^`l6$&F_v6#&Fev6#Fc`l/Fc`l;F5FeglFi_l
+F[`lO6$FhhlF\\`l/FJQ*eventstopF%C&@$/F\\xFcqYQ<this~solution~has~no~ev
+entsF%>Fc`lF]_l@$30Fc`lF`q0Fc`lFaqOFcq@'333/&&&FNF^ilFcwFeyF5-I)assign
+edGFB6#&FN6#,&FfqF5Fc`lFit2&Ffjl6#FgrFfs1Ffs&&F[[mFcwF`[mC&>Fc`lF][m>F
+]_lFc`l>84-I&roundGFacl6#&Ffjl6#F[vO-Fj[m6#&&&FgjlFgwFdt6$Fh[mF51FfsF_
+[mC$Fg[mF^\\mF_jl/FJQ,eventstatusF%C%Ffil>Fc`l7#-Ffel6$f*6#I\"aGF%F%6$
+I)operatorGF%I&arrowGF%F%/&&&&T#FdtFgwFdt6$FJFjqF5F%F%6$FUFN<#-F^`l6$F
+h[m/Fh[m;F5-Fj[m6#&&&F]wFgwFdt6$,&F\\xF5F5F5F5O6$/._F%I(enabledGF%&Fc`
+lFdt/._F%I)disabledGF%&Fc`lFht/FJQ+eventclearF%C(FfilFjil@$F\\jlYQ3no~
+events~to~clearF%@$3Fbjl2FfsFb[mC$>F]_lF][mFe[m@%F^[mFh_mC)>Fh[m,&F_[m
+F5!#5F5@$/-I%iremGFB6$-Fj[m6#&Fb\\m6$Fh[mF\\pF`qF5YQGretriggerable~eve
+nts~cannot~be~clearedF%>Fh[mF_\\m?(85F5F5F\\xFA@$/&Fb\\m6$FaamF5Fh[mC$
+@$/&Fb\\m6$FaamF`qFaqYQ?range~events~cannot~be~clearedF%>&Fb\\m6$FaamF
+ip&Fb\\m6$Fg^mFip>F\\\\mFcq>F_[mFcq@$Fcy@%/Fc`lF`qZ%-F]^l6#FdhlF%F%Z%-
+F]^l6#FahlF%F%OF%3Ffcl-Fhx6$Fadl<$Q-eventdisableF%Q,eventenableF%C*Ffi
+l@'-Fbx6$F[dl<$-F]dl6#.I'posintGFB-.I$setGFBFjcm>Fc`l<#-I#opGFBFiel-Fb
+x6$F[dlF[dm>Fc`l<#F[dlY6$QVevent~identifiers~must~be~integers~in~the~r
+ange~1..%1F%Fa^m@$0-Fael6$f*F_]mF%Fa]mF%2Fi]mFJF%F%6$FgnF\\xFc`l<\"Fhd
+m>FaamFbem?(Fh[mF5F5F\\xFA@$-Fhx6$-Fj[m6#&Fd^mFd\\mFc`l>Faam-I&unionGF
+B6$Faam<#Fh[m>Fc`lFaam@%/FadlFbcmC'>F]_lFcq>Fh[m7$-Fc[l6#3-FijlFb\\l-F
+hx6$&&F[zFcwF]\\mFc`l-Fc[l6#3-FijlF[]l-Fhx6$&&FezFcwF]\\mFc`l?&FaamFc`
+lFAC%>&Fd^m6$FaamFjqFcq@$Fjfm>&&&F[zFgwFdtF[hmFcq@$Fbgm>&&&FezFgwFdtF[
+hmFcq@$&Fh[mFdtC&?(FaamF5F5Fg^mFA@'31FaamF\\x4-Fbx6$&&F`hmFcwFeam.I*un
+definedGFBC$-I)userinfoGFB6(Faq<$.I'eventsGF%.I+eventresetGF%I7reinit~
+#2,~event~code~GF%FaamI2~to~defined~init~GF%F`im>&F_hmF_bmF`im3/&F_hmF
+jamFcq/-Fg`m6$-I%iquoGFB6$-Fj[m6#&F_hm6$FaamF\\pF`qF`qFcqC$-Ffim6(FaqF
+himF]jmFaamI2~to~initial~init~GF%FD>F`jmFDC$-Ffim6(FaqFhimF]jmFaamI6~t
+o~fireinitial~init~GF%,&FDF5FitF5>F`jmFg[n>F]gmFcq>&F^gmF`[mFcq@$FcyFh
+bm@$&Fh[mFhtC&?(FaamF5F5Fg^mFA@'3F\\im4-Fbx6$&&FehmFcwFjamFbimC$-Ffim6
+(FaqFhimI7reinit~#3,~event~code~GF%FaamF^jmFf\\n>&FdhmF_bmFf\\n3/&Fdhm
+FjamFcq/-Fg`m6$-Fhjm6$-Fj[m6#&FdhmF][nF`qF`qFcqC$-Ffim6(FaqFhimF[]nFaa
+mFa[nFD>F]]nFDC$-Ffim6(FaqFhimF[]nFaamFf[n,&FDF5F5F5>F]]nF`^n>FegmFcq>
+&FfgmF`[mFcq@$FcyF[cmC'?&FaamFc`lFA>FjgmF5Fd]lFg]lFdfm@$FcyC$@$1FDFahl
+Fjbm@$1FdhlFDFgbmF]cm3Ffcl/FadlQ+eventfiredF%C*@$4FiclYQI'eventfired'~
+must~be~specified~as~a~listF%Ffil@$FaalYQhn'direction'~must~be~set~pri
+or~to~calling/setting~'eventfired'F%Fjil>8*F^\\l@$4-Fijl6#I9_EnvEventR
+etriggerWarnedGF%>F``nFao?&FaamF[dlFAC*@'-Fbx6$Faam.I(integerGFB>86Faa
+m3-Fbx6$Faam/Fg`n.FP-Fbx6$-FG6#-F\\dl6#FaamFdxC$>Faam/-FbdlFean-&FG6#-
+I$maxGFB6$F;FapFcan>Fj`nFianY6$QD'eventfired'~entry~is~not~valid:~%1F%
+Faam@$52Fj`nF52Fa^mFj`nFhdm>Fj`n<#-F^`l6$-Fi^l6%/,&FjemF5Fj`nFitFavFh[
+mF^\\l/Fh[m;F5F\\x@$0-Fg`l6#Fj`nF5YQ`p'eventfired'~can~only~be~set/que
+ried~for~root-finding~events~and~time/interval~eventsF%>Fj`n&Fj`nFdt@&
+30&Fd^m6$Fj`nF`qFav0,&F]dnF5FcblF5FavFfcn/-Fg`m6$-Fj[m6#&Fd^m6$Fj`nF
+\\pF`qF5C$@$/F``nFao-I(WARNINGGF%6#IT'eventfired'~has~no~effect~on~eve
+nts~that~retriggerGF%>F``nFA@%55-Fbx6$&&Fc\\mFcw6$Fj`n,&Fc`lF5FitF5Fbi
+m3Ffbm2&F_hm6$Fj`nFip&Faim6$Fj`nF53/Fc`lFaq2&Fg\\nF^dn&FdhmF\\fn>F[`n6
+$F[`n&Fb\\mF\\fn>F[`n6$F[`nFeen@$-Fbx6$FaamFhclC%-Ffim6(FaqFhimI7manua
+l~set~event~code~GF%Fj`nI+~to~value~GF%Fdan>FffnFdan>FeenFdanO7#F[`n3F
+fcl/FadlQ*directionF%C)@$4-Fhx6$F[dl<&FitF5._F%I%leftGF%._F%I&rightGF%
+YQip'direction'~must~be~specified~as~either~'1'~or~'right'~(positive)~
+or~'-1'~or~'left'~(negative)F%>Fj`n-Fi^l6%/F]_lF`qFit-Fi^l6%/F]_lFaqF5
+Fcim>Fc`l-Fi^l6%-Fhx6$F[dl<$F5FahnFaqF`qFf[m>Fgjl-I;dsolve/numeric/SC/
+IVPdcopyGFbcl6$F]w-Fi^l6%-Fijl6#FgjlFgjlF^\\l@$2FcqF\\x?(Fh[mF5F5Fg^mF
+A@'31Fh[mF\\x4-Fbx6$&Ffen6$Fh[mFhenFbimC$-Ffim6(FaqFhimI7reinit~#4,~ev
+ent~code~GF%Fh[mF^jmFdjn>&Fb\\m6$Fh[mFipFdjn3/&Fb\\m6$Fh[mF`qFcq/-Fg`m
+6$-FhjmFh`mF`qFcqC$-Ffim6(FaqFhimFijnFh[mFa[nFD>F[[oFDC$-Ffim6(FaqFhim
+FijnFh[mFf[n,(FDF5Fc`lFcv$\"#]FitF5>F[[oF\\\\oOFj`nOQ)procnameF%@$/Fdo
+FDO7$FD-F^`l6$-FG6#&&F]w6#FhqF\\ilF_il>Fc`l-Fi^l6%1FDFdoFaqF`q@$33/FJF
+^al2FcqF_[mF^[mC%>8&-Fa\\l6$FgjlF`q>Fh[m&&Fi]oFcw6#\"#?O7%&&Fi]o6#Fdu6
+$Fh[mFcq-F^`l6$&Fd^o6$Fh[mF]il/Fc`l;F5,(F`wF5FewFitFiwFit-F^`l6$&&&Fi]
+oFhpFdtF\\il/Fc`l;,*F`wF5FewFitFiwFitF5F5Fegl@$4-Fbx6$FgjlF[\\lC$Fcin@
+$F\\jn?(Fh[mF5F5Fg^mFA@'F_jnC$-Ffim6(FaqFhimI7reinit~#5,~event~code~GF
+%Fh[mF^jmFdjnFjjnF][oC$-Ffim6(FaqFhimFa`oFh[mFa[nFDFh[oC$-Ffim6(FaqFhi
+mFa`oFh[mFf[nF\\\\oF_\\o@$0FJF^alC$@$2FcqFcq@$-I<dsolve/numeric/checkg
+lobalsGF%6&-Fcdm6#&F]w6#FhuFfoF`wF_v-Fggl6(FNF_vF`wF]^lFfoFc`l@$/&Fbw6
+#FjqFcqYQinparameters~must~be~initialized~before~solution~can~be~compu
+tedF%Fh]oFf[mZ%>Fj`n-I9dsolve/numeric/SC/IVPrunGFbcl6$Fi]oFdoF%C$-Ffim
+6%F`qI-dsolve/debugGF%-I&printGFB6$I7Exception~in~solnproc:GF%&7#I.las
+texceptionGF%6#;F`qFitYF%@%3/Fj`nFcq2Ffs&F^^oF`[m>F[`n&&&Fi]oFgwFdtFab
+m>F[`n&Fd^o6$F]^oFcq@%50Fj`nFcq1FdcoFcq>&F\\wFdtFdo>FadoF[`n@&3F`fn2F[
+`nFdoC$>I)RoundingGF%,$I)infinityGFBFit@//FdcoF5Y6$Qcocannot~evaluate~
+the~solution~further~right~of~%1,~probably~a~singularityF%-&FGFhp6#F[`
+n/FdcoF`qY6$Qcqcannot~evaluate~the~solution~further~right~of~%1,~maxfu
+n~limit~exceeded~(see~?dsolve,maxfun~for~details)F%F`eo/FdcoFaq@%/&F^^
+o6#\"#DFaqYQfqcannot~evaluate~the~solution~past~the~initial~point,~pro
+blem~may~be~initially~singular~or~improperly~set~upF%YQ_rcannot~evalua
+te~the~solution~past~the~initial~point,~problem~may~be~complex,~initia
+lly~singular~or~improperly~set~upF%/FdcoF\\pY6$Qfqcannot~evaluate~the~
+solution~further~right~of~%1,~accuracy~goal~cannot~be~achieved~with~sp
+ecified~'minstep'F%F`eo/FdcoFfqY6$Q\\rcannot~evaluate~the~solution~fur
+ther~right~of~%1,~too~many~step~failures,~tolerances~may~be~too~loose~
+for~problemF%F`eoFccoC%@$0I7_Env_dsolve_nowarnstopGF%FA-I7dsolve/numer
+ic/warningGF%6#-_I,StringToolsGFaclI.FormatMessageGF%6%Qgocannot~evalu
+ate~the~solution~further~right~of~%1,~event~#%2~triggered~a~haltF%F`eo
+-Fj[m6#&Fgco6$,&FdcoF5Fc`mF5F5>Fhdo.I(nearestGF%>FdoF[`nY6$QQcannot~ev
+aluate~the~solution~further~right~of~%1F%F`eo3Ffbm2FdoF[`nC$>FhdoFjdo@
+/F\\eoY6$Qbocannot~evaluate~the~solution~further~left~of~%1,~probably~
+a~singularityF%F`eoFceoY6$Qbqcannot~evaluate~the~solution~further~left
+~of~%1,~maxfun~limit~exceeded~(see~?dsolve,maxfun~for~details)F%F`eoFg
+eoFheoFafoY6$Qeqcannot~evaluate~the~solution~further~left~of~%1,~accur
+acy~goal~cannot~be~achieved~with~specified~'minstep'F%F`eoFefoY6$Q[rca
+nnot~evaluate~the~solution~further~left~of~%1,~too~many~step~failures,
+~tolerances~may~be~too~loose~for~problemF%F`eoFccoC%@$F[go-F^go6#-Fago
+6%Qfocannot~evaluate~the~solution~further~left~of~%1,~event~#%2~trigge
+red~a~haltF%F`eoFfgoF[hoF^hoY6$QPcannot~evaluate~the~solution~further~
+left~of~%1F%F`eo@%F?C*>8+&F^^o6#\"#E>FajoF:>I6_Env_dsolve_SC_nativeGF%
+FA@%/FjeoF5C$>Fc`lF5>FjeoF`q>Fc`lFjeo>F[`n-I9dsolve/numeric/SC/IVPvalG
+Fbcl6%Fi]oFdoFj`n>FjeoFc`l>FajoF`jo7$Fdo-F^`l6$&F[`nF\\ilF_ilC%>F;Fajo
+>F[`n-F_[p6%-Fa\\l6$Fi]oF`qFdoFj`nFc[pF%F%F%X*FPF%F%[gl!!%!!!\"\"!!\"*
+;I'3j7%I\"tGF%-I\"xGF%6#Fa\\p-I\"yGF%Fd\\pFgo>Fi]oFez>F[`n-I$mapGFB6$F
+\\dlF]_l>F`jo,&-Fg`l6#Fi]oF5FitF5>FevF]w@$4-Fbx6$FDFdxC$@.-Fhx6$FJ78F[
+y.I&startGF%F[[l.I'methodGF%F\\y.F`hnF]y.FchnFf[lFd\\lF]]lFdil.I*event
+stopGF%Fe_m.I+eventclearGF%Fh\\m.I,eventstatusGF%Fb^l.I'laxtolGF%Fa_l.
+I'numfunGF%F^\\lC$>Fdo-Fev6#-I(convertGFB6$FJ.I'stringGFB@(2F5-Fg`l6#7
+#FdoOFdo-Fbx6$FdoF[\\lO-Fa\\l6$FdoF50FdoFb\\oFh_p-Fhx6$FJ7+F^al.I%last
+GF%Fj]l.I(initialGF%Fj_l.I+parametersGF%Fj`l.I7initial_and_parametersG
+F%F^\\lC%>FDF^_p>Fdo-Fev6#FD@'/FDFj_lO7#-F^`l6$/&F[`n6#F`w&FdoFgap/F`w
+;F5-Fg`lFbeo/FDFj`lO7$-F^`l6$/&Fi]o6#,&F`wF5F5F5&&Fg_pFdtFcbp/F`w;FcqF
+`jo-F^`l6$/Ffap&&Fg_pFhtFgapFiapO7#-F^`l6$/Fbbp&FdoFcbpFgbp3-Fbx6$FDFh
+cl-Fhx6$-FbdlF^ap7)Fj]lFd`pFj_lFf`pFj`lFh`pF^\\lC%>FD/-F__p6$FadlFa_pF
+[dl@%-Fbx6$-F\\dlF^apF]dlF\\apYQfninitial~and/or~parameter~values~must
+~be~specified~in~a~listF%@'/FicpFj]lF^cp/FicpFj_lFaapF]bp3Fecp-Fhx6$Fi
+cp7+Fbcm.I-eventdisableGF%Fccm.I,eventenableGF%Fa_n.I+eventfiredGF%Fgg
+n.I*directionGF%F^\\lO-Fev6#F]dp/FDQ.solnprocedureF%O-Fa\\lFccl/FDQ(sy
+svarsF%OFi]o@%0F]^lI(unknownGF%O-.F]^lFIC%F_v>F_v-I(pointtoGFB6#&F[zF`
+^lO-.F_vFIZ%C$F\\apF_cpF%F_coF%F%F%" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "plotsetup(ps, plotoutput = " }{MPLTEXT 1 0 81 "`cont2
+d_Hopf_time2.eps`, plotoptions = `portrait,noborder,width=384, height=
+128`)" }{MPLTEXT 1 0 1 ";" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+88 "odeplot(sol, [[t, x(t), color = black]], tstart .. tend, numpoints
+ = 1000, thickness = 2" }{MPLTEXT 1 0 38 ", view = [tstart .. tend, -0
+.3 .. 0.3]" }{MPLTEXT 1 0 2 ");" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 110 "plotsetup(ps, p
+lotoutput = `cont2d_Hopf_phase2.eps`, plotoptions = `portrait,noborder
+,width=256, height=256`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+174 "phaseportrait([DE], [x(t), y(t)], t = tstart .. tend, [[ic]], ste
+psize = .1, x = -0.5 .. 0.5, y = -0.5 .. 0.5, color = black, linecolor
+ = black, linestyle=solid, axes=boxed);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2
+ 33 1 1 }

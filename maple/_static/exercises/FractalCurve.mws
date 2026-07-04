@@ -1,0 +1,286 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Left Justified Maple Output" -1 12 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "D
+ash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Heading 4" -1 20 1 
+{CSTYLE "" -1 -1 "Times" 1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "Times
+" 1 12 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 255 1 0 
+0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Author" 
+-1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 
+1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 
+-1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 2 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 255 1 
+0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Text Ou
+tput" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 
+0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 
+4 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed
+ Output" -1 6 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 
+0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 1 }3 1 0 0 12 
+12 2 0 2 0 2 2 -1 1 }{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Cou
+rier" 1 10 64 128 64 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 
+2 -1 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Li
+st Item" -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 5 }{PSTYLE "Bullet Item" -1 15 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 
+3 2 0 2 0 2 2 -1 2 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE "" -1 -1 "Co
+urier" 1 10 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 
+}{CSTYLE "LaTeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Ma
+ple Comment" -1 21 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE 
+"2D Math Bold" -1 5 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "
+Help Underlined" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }
+{CSTYLE "Output Labels" -1 29 "Times" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 
+}{CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }{CSTYLE "Page Number" -1 33 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 
+1 }{CSTYLE "Maple Input Placeholder" -1 200 "Courier" 1 12 200 0 200 
+1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 
+2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic Small" -1 202 "Times" 0 1 0 
+0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 
+0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 
+0 0 0 0 1 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Normal" -1 30 "Times" 1 12 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Nonterminal" -1 24 "Courier
+" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times
+" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" 
+-1 43 "Times" 1 12 0 0 0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 
+2 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "
+Times" 1 10 0 0 0 0 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Hyperlink" -1 17 "" 
+0 1 0 128 128 1 2 0 1 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 
+10 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 0 1 
+255 0 0 1 0 0 2 2 1 2 0 0 0 1 }{CSTYLE "Help Maple Name" -1 35 "" 0 1 
+104 64 92 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Italic" -1 42 "Times" 
+1 12 0 0 0 0 1 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 
+41 "Times" 1 12 0 0 0 0 0 1 1 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "
+" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier
+" 1 10 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 
+45 "" 0 1 147 0 15 1 2 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "T
+imes" 0 1 0 0 255 1 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 
+3 "Times" 0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 
+1 0 128 128 1 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "T
+imes" 0 1 0 0 0 0 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 
+8 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 
+0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 
+0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 
+0 2 2 2 0 0 0 1 }{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 
+2 2 2 0 0 0 1 }{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 
+2 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 
+0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Emphasized" -1 203 "" 0 1 0 0 
+0 0 1 2 0 2 2 2 0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 
+0 0 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle1" -1 200 1 {CSTYLE "" -1 -1 "Cou
+rier" 0 1 255 0 0 1 0 1 0 2 1 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 
+}{CSTYLE "_cstyle1" -1 204 "Courier" 1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 
+1 }{PSTYLE "_pstyle2" -1 201 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle2" 
+-1 205 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{PSTYLE "_pstyle3" 
+-1 202 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 21 "restart: with(pl
+ots):" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 61 "
+The number of segments scales with the recursion depth n as: " }{TEXT 
+205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 7 "N = 3^n" }{TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 50 "The size l of the \"yardstick\" (or bo
+x) scales as: " }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 7 "l = a
+^n" }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 40 "Expressed in a the fractal dimension is " }{TEXT 
+205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 
+205 19 "d = -log(3)/log(a) " }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 20 "d := -log(3)/log(a);" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 201 "" 0 "" {TEXT 205 46 "The locations of the points of \+
+the curves are " }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 
+35 "x1 := a*cos(phi); y1 := a*sin(phi);" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 38 "x2 := 1-a*cos(phi); y2 :
+= -a*sin(phi);" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" 
+{TEXT 205 60 "Since the segments are equally sized, we obtain the equa
+tion" }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 34 "eq := a
+^2 = (x2-x1)^2 + (y2-y1)^2;" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 
+"> " 0 "" {MPLTEXT 1 204 20 "sols := solve(eq,a);" }{MPLTEXT 1 204 0 "
+" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 51 "The first does not comply \+
+with a cos(phi) <= 1/2 so" }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 45 "a := 2/3*cos(phi)-1/3*(4*cos(phi)^2-3)^(1/2);" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 5 "Hence" }
+{TEXT 205 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 2 "d;" }{MPLTEXT 
+1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 86 "plot(d,phi
+=0..Pi/6,labels=[\"phi\",\"d\"],title=\"fractal dimension as a functio
+n of phi\");" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 
+205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 49 "The total length L of the c
+urve scales with n as " }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 
+11 "L = (3a)^n " }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 1 " " }
+{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 23 "so we must solve n fr
+om" }{TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 24 "n
+ := log(1000)/log(3*a);" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> "
+ 0 "" {MPLTEXT 1 204 12 "phi := Pi/7;" }{MPLTEXT 1 204 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 204 9 "evalf(n);" }{MPLTEXT 1 204 0 "" 
+}}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 51 "After 26 recursions, the len
+gth is larger then 1 km" }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 
+205 41 "(but still confined within the 1m range!)" }{TEXT 205 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 21 "restart: with(plots):" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 25 "r
+ead \"FractalCurve.data\":" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "
+> " 0 "" {MPLTEXT 1 204 14 "N:=nops(data);" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 18 "xl := Array(1..N):" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 18 "y
+l := Array(1..N):" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 20 "for i from 1 to N do" }{MPLTEXT 1 204 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 204 20 "xl[i] := data[i][1];" }{MPLTEXT 1 
+204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 20 "yl[i] := data[i][2];
+" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 3 "od:" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 33 "p
+ts := seq([xl[i],yl[i]],i=1..N):" }{MPLTEXT 1 204 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 204 30 "pointplot([pts],symbolsize=1);"
+ }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 32 
+"pmin := 2; pmax := 9; dp := 0.5;" }{MPLTEXT 1 204 0 "" }}}{EXCHG 
+{PARA 201 "" 0 "" {TEXT 205 32 "Determine the extrema of the map" }
+{TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 22 "op(con
+vert(xl, list)):" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 15 "xmin := min(%);" }{MPLTEXT 1 204 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 204 16 "xmax := max(%%);" }{MPLTEXT 1 
+204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 22 "op(convert(y
+l, list)):" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 16 "ymin := min(%); " }{MPLTEXT 1 204 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 204 16 "ymax := max(%%);" }{MPLTEXT 1 
+204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "
+" {TEXT 205 25 "Loop over all resolutions" }{TEXT 205 0 "" }}{PARA 
+201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 
+204 11 "li := NULL:" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "
+" {MPLTEXT 1 204 32 "for p from pmin to pmax by dp do" }{MPLTEXT 1 
+204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 
+205 34 "       Calculate extents of boxes " }{TEXT 205 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 204 27 "  delta := (xmax-xmin)/2^p;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 35 "  ni := t
+runc((xmax-xmin)/delta)+1;" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 ""
+ {MPLTEXT 1 204 35 "  nj := trunc((ymax-ymin)/delta)+1;" }{MPLTEXT 1 
+204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 23 "  print(p,ni,nj,delt
+a);" }{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 
+201 "" 0 "" {TEXT 205 66 "       Construct a boxes matrix and set the \+
+initial values to zero" }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 31 "  nr := Array(1..ni, 1..nj, 0);" }{MPLTEXT 1 204 0 
+"" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 
+37 "       Check which boxes are occupied" }{TEXT 205 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 204 22 "  for n from 1 to N do" }{MPLTEXT 1 
+204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 37 "    i := trunc((xl[n
+]-xmin)/delta)+1;" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 37 "    j := trunc((yl[n]-ymin)/delta)+1;" }{MPLTEXT 1 
+204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 17 "    nr[i,j] := 1;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 5 "  od:" }
+{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 37 "       Count number of occupied boxes" }{TEXT 205 
+0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 13 "  boxes := 0;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 23 "  for i f
+rom 1 to ni do" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+204 25 "    for j from 1 to nj do" }{MPLTEXT 1 204 0 "" }}{PARA 200 ">
+ " 0 "" {MPLTEXT 1 204 32 "       boxes := boxes + nr[i,j];" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 7 "    od;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 5 "  od;" }
+{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 25 "       Add result to list" }{TEXT 205 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 204 26 "  li := li, [delta,boxes];" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 3 "od:" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 39 "Plot the results in log-log fashion ..
+." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 200 "> "
+ 0 "" {MPLTEXT 1 204 58 "loglogplot([[li], [li]],style=[point, line],s
+ymbolsize=15," }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+204 46 "color=black,symbol=circle, labels=[\"p\", \"n\"]);" }{MPLTEXT 
+1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0
+ "" {TEXT 205 45 "The last points do not lie well on the line. " }
+{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 65 "We adapt the scaling \+
+range to get a better estimate of the slope." }{TEXT 205 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 34 "pmin := 4.5; pmax := 9; \+
+dp := 0.5;" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 
+205 32 "Determine the extrema of the map" }{TEXT 205 0 "" }}{PARA 201 
+"" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 
+22 "op(convert(xl, list)):" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "
+> " 0 "" {MPLTEXT 1 204 15 "xmin := min(%);" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 16 "xmax := max(%%);" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 22 "o
+p(convert(yl, list)):" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0
+ "" {MPLTEXT 1 204 16 "ymin := min(%); " }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 16 "ymax := max(%%);" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 25 "Loop over all resolutions" }{TEXT 205 
+0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 11 "li := NULL:" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 204 32 "for p from pmin to pmax by dp do" }
+{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 34 "       Calculate extents of boxes " }{TEXT 205 0 ""
+ }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 27 "  delta := (xmax-xmin)/2^p;"
+ }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 35 "  ni :=
+ trunc((xmax-xmin)/delta)+1;" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 
+"" {MPLTEXT 1 204 35 "  nj := trunc((ymax-ymin)/delta)+1;" }{MPLTEXT 
+1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 23 "  print(p,ni,nj,de
+lta);" }{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 66 "       Construct a boxes matrix and se
+t the initial values to zero" }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 31 "  nr := Array(1..ni, 1..nj, 0);" }{MPLTEXT 1 204 0 
+"" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 
+37 "       Check which boxes are occupied" }{TEXT 205 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 204 22 "  for n from 1 to N do" }{MPLTEXT 1 
+204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 37 "    i := trunc((xl[n
+]-xmin)/delta)+1;" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 204 37 "    j := trunc((yl[n]-ymin)/delta)+1;" }{MPLTEXT 1 
+204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 17 "    nr[i,j] := 1;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 5 "  od:" }
+{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 37 "       Count number of occupied boxes" }{TEXT 205 
+0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 13 "  boxes := 0;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 23 "  for i f
+rom 1 to ni do" }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+204 25 "    for j from 1 to nj do" }{MPLTEXT 1 204 0 "" }}{PARA 200 ">
+ " 0 "" {MPLTEXT 1 204 32 "       boxes := boxes + nr[i,j];" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 7 "    od;" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 5 "  od;" }
+{MPLTEXT 1 204 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 25 "       Add result to list" }{TEXT 205 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 204 26 "  li := li, [delta,boxes];" }
+{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 204 3 "od:" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 39 "Plot the results in log-log fashion ..
+." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 200 "> "
+ 0 "" {MPLTEXT 1 204 58 "loglogplot([[li], [li]],style=[point, line],s
+ymbolsize=15," }{MPLTEXT 1 204 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+204 46 "color=black,symbol=circle, labels=[\"p\", \"n\"]);" }{MPLTEXT 
+1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0
+ "" {TEXT 205 21 "Now we can do the fit" }{TEXT 205 0 "" }}{PARA 201 "
+" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 47 "Firstly, fit n
+eeds lists of x and y separately." }{TEXT 205 0 "" }}{PARA 200 "> " 0 
+"" {MPLTEXT 1 204 43 "xli := seq(log(li[i][1]), i=1..nops([li]));" }
+{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 43 "y
+li := seq(log(li[i][2]), i=1..nops([li]));" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 
+69 "Feeding this into the fit command, we get the least-squared soluti
+on." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 200 ">
+ " 0 "" {MPLTEXT 1 204 12 "with(stats):" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 48 "fit[leastsquare[[x,y], y
+=c*x+d]]([[xli],[yli]]);" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 "> \+
+" 0 "" {MPLTEXT 1 204 26 "lseq := unapply(rhs(%),x);" }{MPLTEXT 1 204 
+0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" 
+{TEXT 205 41 "Plot the fit together with box-dimensions" }{TEXT 205 0 
+"" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 
+1 204 48 "loli := seq([xli[i], yli[i]], i=1..nops([xli])):" }{MPLTEXT 
+1 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 57 "plot([lseq
+(xx), [loli]], xx=-7..-2, style=[line, point], " }{MPLTEXT 1 204 0 "" 
+}}{PARA 200 "> " 0 "" {MPLTEXT 1 204 75 "color=[red,black], symbolsize
+=15,symbol=circle, labels=[\"log p\", \"log n\"]);" }{MPLTEXT 1 204 0 
+"" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 39 "So we measure a box-dimen
+sion of about " }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 6 "d=1.1
+4" }{TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 42 "Let us co
+mpare with the theoretical value." }{TEXT 205 0 "" }}{PARA 201 "" 0 ""
+ {TEXT 205 40 "The curve was made with using phi = pi/9" }{TEXT 205 0 
+"" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 45 "a := 2/3*cos(phi)-
+1/3*(4*cos(phi)^2-3)^(1/2);" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 200 
+"> " 0 "" {MPLTEXT 1 204 12 "phi := Pi/9;" }{MPLTEXT 1 204 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 204 31 "dfr := -evalf(log(3.0)/l
+og(a));" }{MPLTEXT 1 204 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 
+"" }}{PARA 201 "" 0 "" {TEXT 205 34 "The box-dimension was pretty clos
+e" }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 204 0 "" }}}{PARA 202 "" 0 "" {TEXT -1 0 "" }
+}}{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 
+2 33 1 1 }

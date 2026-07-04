@@ -1,0 +1,240 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Dash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Wa
+rning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 
+0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Bullet Item" -1 15 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 
+3 2 0 2 0 2 2 -1 2 }{PSTYLE "_pstyle3" -1 200 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle2" -1 201 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle1" -1 202 
+1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed Output" -1 6 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 4" -1 20 1 {CSTYLE "" -1 
+-1 "Times" 1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading \+
+2" -1 4 1 {CSTYLE "" -1 -1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+1 1 0 0 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "
+" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 3 0 0 0 0 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 -1 "Times" 1 18 0 
+0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 4 2 0 2 0 2 2 -1 1 }{PSTYLE "Auth
+or" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 
+}3 1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE ""
+ -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "L
+eft Justified Maple Output" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Fixed \+
+Width" -1 17 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Text Output" -1 2 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "List Item" -1 14 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 
+-1 5 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "D
+iagnostic" -1 9 1 {CSTYLE "" -1 -1 "Courier" 1 10 64 128 64 1 0 0 0 2 
+2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 1 }3 1 0 0 12 
+12 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{CSTYLE 
+"LaTeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple Comme
+nt" -1 21 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math \+
+Bold" -1 5 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Unde
+rlined" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Outpu
+t Labels" -1 29 "Times" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Mapl
+e Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Pa
+ge Number" -1 33 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Map
+le Input Placeholder" -1 200 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 
+0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 
+}{CSTYLE "2D Math Italic Small" -1 202 "Times" 0 1 0 0 0 0 1 0 2 2 2 
+2 0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 0 0 0 0 1 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "Help Normal" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "Help Nonterminal" -1 24 "Courier" 0 1 0 0 0 1 0 
+1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 
+0 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" -1 43 "Times" 1 
+12 0 0 0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 
+0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 
+0 0 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Hyperlink" -1 17 "" 0 1 0 128 128 1 
+2 0 1 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 10 0 0 0 0 0 1 0 
+2 2 2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 0 1 255 0 0 1 0 0 2 2 
+1 2 0 0 0 1 }{CSTYLE "Help Maple Name" -1 35 "" 0 1 104 64 92 1 0 1 0 
+2 2 2 0 0 0 1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 
+2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 
+0 0 0 1 1 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "" 0 1 0 0 0 0 0 0 0 
+2 2 2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 0 0 
+0 2 2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "" 0 1 147 0 15 
+1 2 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "Times" 0 1 0 0 255 
+1 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times" 0 1 0 0 
+0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 
+1 2 2 2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 
+2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }
+{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 
+1 }{CSTYLE "_cstyle2" -1 203 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle1" -1 204 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 
+0 0 1 }{CSTYLE "Help Emphasized" -1 205 "" 0 1 0 0 0 0 1 2 0 2 2 2 0 
+0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 
+1 }{PSTYLE "_pstyle4" -1 203 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_psty
+le5" -1 204 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle6" -1 205 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 
+-1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 206 1 {CSTYLE "" -1 -1 "" 
+0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{CSTYLE "_cstyle3" -1 206 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+{PSTYLE "_pstyle8" -1 207 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 22 "restart; with(plot
+s): " }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 
+38 "f := x -> lambda * x * (1-x^2/lambda);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }}{PARA 205 "" 0 "" {TEXT 203 
+30 "a) Fixed points and stability:" }{TEXT 203 0 "" }}{PARA 204 "" 0 "
+" {TEXT 204 0 "" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 24 "fp1 :=
+ solve(f(x)=x, x);" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 
+1 0 21 "df := simplify(D(f));" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "
+" {MPLTEXT 1 0 30 "for s from 1 to nops([fp1]) do" }{MPLTEXT 1 0 0 "" 
+}}{PARA 203 "> " 0 "" {MPLTEXT 1 0 43 "  st := solve(abs(df(fp1[s])) <
+ 1, lambda);" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 
+54 "  print(\"sol x=\", fp1[s], \"stable for lambda in\", st);" }
+{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }}{PARA 
+204 "" 0 "" {TEXT 204 66 "Three fixed points: x = \{0, (lambda-1)^(1/2
+), -(lambda-1)^(1/2)\}; " }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 
+204 67 "lambda < 1: 1 FP; 1<lambda<2: 3 FP; daarboven periodeverdubbel
+ingen" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG 
+{PARA 205 "" 0 "" {TEXT 203 0 "" }}{PARA 205 "" 0 "" {TEXT 203 46 "b) \+
+maximum x0 for which the series is finite: " }{TEXT 203 0 "" }}{PARA 
+204 "" 0 "" {TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 113 "The mapp
+ing is anti-symmetric. For the largest x0 to be finite this means that
+ x(n+1) = -x(n) and thus f(x) = -x." }{TEXT 204 0 "" }}}{EXCHG {PARA 
+203 "> " 0 "" {MPLTEXT 1 0 18 "solve(f(x)=-x, x);" }{MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 
+204 37 "So the maximum x0 is (lambda+1)^(1/2)" }{TEXT 204 0 "" }}
+{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 205 "" 0 "" {TEXT 
+203 0 "" }}{PARA 205 "" 0 "" {TEXT 203 33 "c) Discuss stability for la
+mbda=1" }{TEXT 203 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG 
+{PARA 203 "> " 0 "" {MPLTEXT 1 0 12 "lambda := 1;" }{MPLTEXT 1 0 0 "" 
+}}{PARA 204 "" 0 "" {TEXT 204 15 "Generate cobweb" }{TEXT 204 0 "" }}
+{PARA 203 "> " 0 "" {MPLTEXT 1 0 22 "xn[0] := 1.41: N:=500:" }
+{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 52 "pp := [xn[0],
+ 0]:    # point sequence for the 'web' " }{MPLTEXT 1 0 0 "" }}{PARA 
+203 "> " 0 "" {MPLTEXT 1 0 20 "for n from 0 to N do" }{MPLTEXT 1 0 0 "
+" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 22 "  xn[n+1] := f(xn[n]);" }
+{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 48 "  pp := pp, [
+xn[n],xn[n+1]], [xn[n+1], xn[n+1]];" }{MPLTEXT 1 0 0 "" }}{PARA 203 ">
+ " 0 "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0
+ "" {MPLTEXT 1 0 18 "web := plot([pp]):" }{MPLTEXT 1 0 0 "" }}{PARA 
+203 "> " 0 "" {MPLTEXT 1 0 68 "mapplot := plot([f(x), x], x=-2..2, y=-
+2..2, color = [black, blue]):" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "
+" {MPLTEXT 1 0 24 "display(\{mapplot, web\});" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 
+119 "This analysis shows that the the fixed point x=0 is stable and th
+at the region of attraction of  is [-sqrt(2)..sqrt(2)]" }{TEXT 204 0 "
+" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 204 "" 0 "" 
+{TEXT 204 0 "" }}{PARA 205 "" 0 "" {TEXT 203 35 "d) Discuss stability \+
+for lambda=1.5" }{TEXT 203 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 14 "lambda := 1.5;" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 26 "fixedpoints :=
+ evalf(fp1);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 
+204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 15 "Generate cobweb" }{TEXT 
+204 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 22 "xn[0] := 1e-3: N:=500:
+" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 52 "pp := [xn[
+0], 0]:    # point sequence for the 'web' " }{MPLTEXT 1 0 0 "" }}
+{PARA 203 "> " 0 "" {MPLTEXT 1 0 20 "for n from 0 to N do" }{MPLTEXT 
+1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 22 "  xn[n+1] := f(xn[n]);
+" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 48 "  pp := pp
+, [xn[n],xn[n+1]], [xn[n+1], xn[n+1]];" }{MPLTEXT 1 0 0 "" }}{PARA 
+203 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}{PARA 203 
+"> " 0 "" {MPLTEXT 1 0 18 "web := plot([pp]):" }{MPLTEXT 1 0 0 "" }}
+{PARA 203 "> " 0 "" {MPLTEXT 1 0 68 "mapplot := plot([f(x), x], x=-2..
+2, y=-2..2, color = [black, blue]):" }{MPLTEXT 1 0 0 "" }}{PARA 203 ">
+ " 0 "" {MPLTEXT 1 0 26 "# display(\{mapplot, web\});" }{MPLTEXT 1 0 
+0 "" }}{PARA 204 "" 0 "" {TEXT 204 111 "Plot the region of attraction,
+ red regions are attracted to (lambda-1)^(1/2), blue regions to -(lamb
+da-1)^(1/2)" }{TEXT 204 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 236 "p
+a := plot([[[0,0], [sqrt(lambda),0]], [[-sqrt(lambda+1),0],[-sqrt(lamb
+da),0]], [[0,0],[-sqrt(lambda),0]], [[sqrt(lambda),0],[sqrt(lambda+1),
+0]]], x=-2..2, y=-2..2, color=[red,red,blue,blue], thickness=10, title
+=\"region of attraction\"):" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" 
+{MPLTEXT 1 0 107 "fp := plot([ [[fp1[2], f(fp1[2])]], [[fp1[3], f(fp1[
+3])]] ], style=point, color=[red,blue], symbolsize=30):" }{MPLTEXT 1 
+0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 27 "display(\{mapplot, pa, f
+p\});" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }
+}{PARA 204 "" 0 "" {TEXT 204 111 "The regions of attraction: red regio
+ns are attracted to the  fixed point  sqrt(1/2), blue regions to -sqrt
+(1/2)" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 100 "fixed point \+
+  sqrt(1/2): attraction region = 0..sqrt(3/2) united with -sqrt(5/2)..
+-sqrt(3/2)   (red)" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 101 
+"fixed point  sqrt(1/2): attraction region = -sqrt(3/2) ..0 united wit
+h sqrt(3/2)..sqrt(5/2)    (blue)" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" 
+{TEXT 204 67 "fixed point 0 has no attraction \"region\", although x0 \+
+= 0 remains 0" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 205 "" 0 "" {TEXT 203 0 "" }}{PARA 205 "" 0 "" {TEXT 203 
+50 "e)  Determine period 2 solutions and stability ..." }{TEXT 203 0 "
+" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 203 "> " 0 "" 
+{MPLTEXT 1 0 14 "lambda := 1.5;" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0
+ "" {MPLTEXT 1 0 18 "g := x -> f(f(x));" }{MPLTEXT 1 0 0 "" }}{PARA 
+203 "> " 0 "" {MPLTEXT 1 0 25 "fp1_2 := solve(g(x)=x,x):" }{MPLTEXT 1 
+0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 23 "fp1 := solve(f(x)=x,x):"
+ }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 74 "fp2 := remo
+ve(has, \{fp1_2\} minus \{fp1\}, I); # remove p1 and imaginary sols" }
+{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 21 "dg := simplif
+y(D(g));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 
+0 28 "for s from 1 to nops(fp2) do" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> \+
+" 0 "" {MPLTEXT 1 0 51 "  stab:= `if`( (abs(dg(fp2[s])) < 1), true, fa
+lse);" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 78 "  pri
+nt(\"period 2 sol x=\", fp2[s], \": stable is\", stab, \"; dg= \",dg(f
+p2[s]) );" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 7 "en
+d do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }
+}{PARA 204 "" 0 "" {TEXT 204 47 "so: P2 solutions are possible, but ar
+e unstable" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" }}{PARA 205 "" 0 "" {TEXT 203 
+63 "f)  Determine period 2 solutions and stability for lambda = 2.2" }
+{TEXT 203 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 203 
+"> " 0 "" {MPLTEXT 1 0 14 "lambda := 2.2;" }{MPLTEXT 1 0 0 "" }}{PARA 
+203 "> " 0 "" {MPLTEXT 1 0 18 "g := x -> f(f(x));" }{MPLTEXT 1 0 0 "" 
+}}{PARA 203 "> " 0 "" {MPLTEXT 1 -1 23 "fp1 := solve(f(x)=x,x):" }
+{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 25 "fp1_2 := solv
+e(g(x)=x,x):" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 
+74 "fp2 := remove(has, \{fp1_2\} minus \{fp1\}, I); # remove p1 and im
+aginary sols" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 
+21 "dg := simplify(D(g));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 203 "> "
+ 0 "" {MPLTEXT 1 0 28 "for s from 1 to nops(fp2) do" }{MPLTEXT 1 0 0 "
+" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 50 "  stab:= `if`((abs(dg(fp2[s])
+) < 1), true, false);" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" 
+{MPLTEXT 1 0 78 "  print(\"period 2 sol x=\", fp2[s], \": stable is\",
+ stab, \"; dg= \",dg(fp2[s]) );" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0
+ "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 ""
+ 0 "" {TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 56 "so: many P2 sol
+utions are possible; two pairs are stable" }{TEXT 204 0 "" }}{PARA 
+204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 204 0 "" 
+}}{PARA 205 "" 0 "" {TEXT 203 65 "g) Discuss the possibility for a per
+iod 3 solution for lambda=2.5" }{TEXT 203 0 "" }}{PARA 204 "" 0 "" 
+{TEXT 204 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 14 "lambda := 2.5;" 
+}{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 21 "h := x -> f(
+f(f(x)));" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 -1 23 "
+fp1 := solve(f(x)=x,x):" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" 
+{MPLTEXT 1 0 25 "fp1_3 := solve(h(x)=x,x):" }{MPLTEXT 1 0 0 "" }}
+{PARA 203 "> " 0 "" {MPLTEXT 1 0 74 "fp3 := remove(has, \{fp1_3\} minu
+s \{fp1\}, I): # remove p1 and imaginary sols" }{MPLTEXT 1 0 0 "" }}
+{PARA 203 "> " 0 "" {MPLTEXT 1 0 21 "dh := simplify(D(h));" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 28 "for s from 1 t
+o nops(fp3) do" }{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 
+50 "  stab:= `if`((abs(dh(fp3[s])) < 1), true, false);" }{MPLTEXT 1 0 
+0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 78 "  print(\"period 3 sol x=
+\", fp3[s], \": stable is\", stab, \"; dh= \",dh(fp3[s]) );" }
+{MPLTEXT 1 0 0 "" }}{PARA 203 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }
+{MPLTEXT 1 0 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 
+203 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 204 
+0 "" }}{PARA 204 "" 0 "" {TEXT 204 51 "many P3 solutions are possible,
+ but none are stable" }{TEXT 204 0 "" }}{PARA 204 "" 0 "" {TEXT 204 0 
+"" }}}{PARA 206 "" 0 "" {TEXT 206 0 "" }}{PARA 207 "" 0 "" {TEXT -1 0 
+"" }}}{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 
+0 1 2 33 1 1 }

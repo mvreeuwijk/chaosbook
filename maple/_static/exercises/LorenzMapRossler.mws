@@ -1,0 +1,89 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle1" -1 204 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle3" -1 206 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 
+0 0 1 }{CSTYLE "_cstyle4" -1 207 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle5" -1 208 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 
+2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle5" -1 
+205 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 
+0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 206 1 {CSTYLE "" 
+-1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 
+2 2 -1 1 }{PSTYLE "_pstyle8" -1 207 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle9" -1 208 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 
+2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle10" -1 209 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle11" -1 210 1 {CSTYLE "" -1 -1 "" 
+0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle12" -1 211 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 20 "restart:with(plots
+):" }}}{EXCHG {PARA 206 "" 0 "" {TEXT 204 0 "" }}{PARA 206 "" 0 "" 
+{TEXT 204 43 "usual stuff ...define Rossler system etc .." }}{PARA 
+206 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 
+22 "f1 := (x,y,z) -> -y-z;" }}{PARA 205 "> " 0 "" {MPLTEXT 1 0 23 "f2 \+
+:= (x,y,z) -> x+a*y;" }}{PARA 205 "> " 0 "" {MPLTEXT 1 0 30 "f3 := (x,
+y,z) ->  b + z*(x-c);" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 41 "
+eq1 := diff(x(t),t) = f1(x(t),y(t),z(t)):" }}{PARA 205 "> " 0 "" 
+{MPLTEXT 1 0 41 "eq2 := diff(y(t),t) = f2(x(t),y(t),z(t)):" }}{PARA 
+205 "> " 0 "" {MPLTEXT 1 0 41 "eq3 := diff(z(t),t) = f3(x(t),y(t),z(t)
+):" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 28 "a := 0.2; b := 0.2;
+ c:= 5.0;" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 17 "sys:=eq1,eq2
+,eq3;" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 27 "ic:=(x(0)=1,y(0)
+=0,z(0)=0);" }}}{EXCHG {PARA 207 "" 0 "" {TEXT 201 0 "" }}{PARA 207 "
+" 0 "" {TEXT 201 39 "* Define number of samples and timestep" }}{PARA 
+207 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 
+21 "N:=10000; dt := 0.02;" }}}{EXCHG {PARA 207 "" 0 "" {TEXT 201 73 "*
+ Here you describe at which points in time you want to know the soluti
+on" }}}{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 40 "timesteps := Array(
+1..N, i -> (i-1)*dt):" }}}{EXCHG {PARA 207 "" 0 "" {TEXT 201 0 "" }}
+{PARA 207 "" 0 "" {TEXT 201 34 "* Calculate the numerical solution" }}
+{PARA 207 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 205 "> " 0 "" 
+{MPLTEXT 1 0 85 "sol_arr := dsolve(\{sys,ic\},[x(t),y(t),z(t)],type=nu
+meric,maxfun=-1,output=timesteps):" }}{PARA 205 "> " 0 "" {MPLTEXT 1 
+0 20 "soldd:=sol_arr[2,1];" }}}{EXCHG {PARA 207 "" 0 "" {TEXT 201 0 "
+" }}{PARA 207 "" 0 "" {TEXT 201 44 "* Put the solution in the Arrays t
+t,xx,yy,zz" }}{PARA 207 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 205 "> \+
+" 0 "" {MPLTEXT 1 0 21 "tt := soldd[1..N, 1]:" }}{PARA 205 "> " 0 "" 
+{MPLTEXT 1 0 21 "xx := soldd[1..N, 2]:" }}{PARA 205 "> " 0 "" 
+{MPLTEXT 1 0 21 "yy := soldd[1..N, 3]:" }}{PARA 205 "> " 0 "" 
+{MPLTEXT 1 0 21 "zz := soldd[1..N, 4]:" }}}{EXCHG {PARA 208 "> " 0 "" 
+{MPLTEXT 1 206 39 "ic:=(x(0)=xx[N],y(0)=yy[N],z(0)=zz[N]);" }}}{EXCHG 
+{PARA 205 "> " 0 "" {MPLTEXT 1 0 85 "sol_arr := dsolve(\{sys,ic\},[x(t
+),y(t),z(t)],type=numeric,maxfun=-1,output=timesteps):" }}{PARA 205 ">
+ " 0 "" {MPLTEXT 1 0 20 "soldd:=sol_arr[2,1];" }}}{EXCHG {PARA 207 "" 
+0 "" {TEXT 201 0 "" }}{PARA 207 "" 0 "" {TEXT 201 44 "* Put the soluti
+on in the Arrays tt,xx,yy,zz" }}{PARA 207 "" 0 "" {TEXT 201 0 "" }}}
+{EXCHG {PARA 205 "> " 0 "" {MPLTEXT 1 0 21 "tt := soldd[1..N, 1]:" }}
+{PARA 205 "> " 0 "" {MPLTEXT 1 0 21 "xx := soldd[1..N, 2]:" }}{PARA 
+205 "> " 0 "" {MPLTEXT 1 0 21 "yy := soldd[1..N, 3]:" }}{PARA 205 "> \+
+" 0 "" {MPLTEXT 1 0 21 "zz := soldd[1..N, 4]:" }}}{EXCHG }{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 42 "Lorenz-ma
+p based on the maxima of x(t) ..." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "n := 0;" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 22 "for j from 2 to N-1 do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 68 "  if( xx[j-1] < xx[j] and xx[j] >= xx[j+1] ) then # f
+ound a maximum " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "    n := n + 1; \+
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "    mx[n] := xx[j]; " }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 9 "  end if;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 3 "od:" }}}{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "rpl := \+
+[ seq( [mx[m],mx[m+1]] , m = 1..n-1) ]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 65 "pointplot(rpl,labels=[\"xmax[n]\",\"xmax[n+1]\"],titl
+e=\"Lorenz-map\");" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 
+"" 0 "" {TEXT -1 42 "Lorenz-map based on the maxima of z(t) ..." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 7 "n := 0;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "for j from \+
+2 to N-1 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "  if( zz[j-1] < zz[j
+] and zz[j] >= zz[j+1] ) then # found a maximum " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "    n := n + 1; " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+20 "    mx[n] := zz[j]; " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "  end if
+;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 46 "rpl := [ seq( [mx[m],mx[m+1]] , m = 1..n-1) ]:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "pointplot(rpl,labels=[\"zmax
+[n]\",\"zmax[n+1]\"],title=\"Lorenz-map\");" }}}{EXCHG {PARA 209 "" 0 
+"" {TEXT 207 50 "one can try other values of c and rerun the sheet." }
+}}{EXCHG {PARA 208 "> " 0 "" {MPLTEXT 1 206 0 "" }}}{PARA 210 "" 0 "" 
+{TEXT 208 0 "" }}{PARA 211 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 20 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

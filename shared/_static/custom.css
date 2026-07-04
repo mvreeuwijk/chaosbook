@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------------ *
+ * Custom styles for "From Stability to Chaos".
+ * ------------------------------------------------------------------ */
+
+/* --- Landing-page hero ------------------------------------------------ */
+
+/* Subtitle directly under the book title on the front page. */
+p.sfc-subtitle {
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--pst-color-text-muted, #646464);
+    margin: -0.4rem 0 0.6rem 0;
+}
+
+/* Author line. */
+p.sfc-authors {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0 0 1.4rem 0;
+}
+
+/* Give the front-page chapter/appendix card grid a little breathing room. */
+.bd-article h2 {
+    margin-top: 2rem;
+}
+
+/* Make the chapter cards feel clickable and consistent in height. */
+.bd-article .sd-card {
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    height: 100%;
+}
+.bd-article .sd-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,89 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "" -1 256 "" 1 24 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 257 "" 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }{PSTYLE "Normal
+" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }0 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart: with(plots)
+:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 257 0 "" }{TEXT 256 23 "subcritical
+ bifurcation" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 42 "Analysis f(x), de
+termine fixed points, ..." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+26 "f := x -> r*x + x^3 - x^5;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "
+" }}{PARA 0 "" 0 "" {TEXT -1 33 "find expression for fixed points\030
+" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 
+"sols := solve(f(x)=0,x);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 41 "Plot
+ the branches in different colors ..." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "pl[1]:=plot( sols[1],r=-0.26..0.5,color=red):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "pl[2]:=plot( sols[2],r=-0.26..0.5,c
+olor=blue):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "pl[3]:=plot( sols[3]
+,r=-0.26..0.5,color=green):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "pl[4
+]:=plot( sols[4],r=-0.26..0.5,color=cyan):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "pl[5]:=plot( sols[5],r=-0.26..0.5,color=magenta):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "display(\{pl[1],pl[2],pl[3],pl[4],p
+l[5]\},thickness=5);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 
+0 "" 0 "" {TEXT -1 22 "Determine stability..." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "dfx := D(f);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "stab[1] := dfx(sols[1]);" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 54 "so the red branch is stable for r
+ < 0 , unstable r > 0" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "st
+ab[2] := dfx(sols[2]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "plot(stab
+[2],r=-1..0.5);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 40 "so the blue br
+anch is stable for r> -1/4" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+24 "stab[4] := dfx(sols[4]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "plo
+t(stab[4],r=-1..0.5);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "so the c
+yan branch is unstable in the region -1/4 < r < 0  \030" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 18 "Numerical
+ solution" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 42 "Define the system & initial conditions ..." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "eq := diff(x(t),t)=f(x(t));" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "ic1:= x(0) =  0.1;" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 18 "ic2:= x(0) = -0.1;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "r := 0.3;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "sol1 := dsolve(\{eq,ic1\}, x(t), type=numeric);" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "odeplot(sol1, [t, x(t)], 0..20);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "r := -0.1;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 45 "sol1 := dsolve(\{eq,ic1\}, x(t), type=num
+eric);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "odeplot(sol1, [t,
+ x(t)], 0..50);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 36 "Bifurcation di
+agram & hysteresis ..." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "i
+c1:= x(0) =  0.1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "ic2:= x(0) = -
+0.1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "rmin := -0.5;" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 12 "rmax := 0.5;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 8 "n := 50;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 77 "tinf := 1000; #imp
+ortant to take tinf large, note what happens for tinf = 100" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 16 "first 2 branches" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 13 "plta := NULL;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "for i from 0 to n do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 30 "  r := rmin + i*(rmax-rmin)/n:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 43 "  sol1:=dsolve(\{eq,ic1\},x(t),type=numeric):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 43 "  sol2:=dsolve(\{eq,ic2\},x(t),type=numeric):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "  x1 := subs(sol1(tinf),x(t));" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "  x2 := subs(sol2(tinf),x(t));" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  plta := plta, [r, x1], [r, x2];" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "  ic1 := x(0) = x1;" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 19 "  ic2 := x(0) = x2;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "ppa:
+=plot([plta],style=point,labels=[\"Temp\",\"x\"],color=blue):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "display(ppa);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 32 "Second 2 \+
+branches: now backwards" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "pltb := NULL;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "for i from 0 to n do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 30 "  r := rmax - i*(rmax-rmin)/n:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 43 "  sol1:=dsolve(\{eq,ic1\},x(t),type=numeric):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 43 "  sol2:=dsolve(\{eq,ic2\},x(t),type=numeric):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "  x1 := subs(sol1(tinf),x(t));" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "  x2 := subs(sol2(tinf),x(t));" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  pltb := pltb, [r, x1], [r, x2];" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "  ic1 := x(0) = x1;" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 19 "  ic2 := x(0) = x2;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "ppb:
+=plot([pltb],style=point,labels=[\"Temp\",\"x\"],color=red):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "display(ppb);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 27 "Plot two lists together ..." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "display(\{ppa,ppb\});" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 19 "plot everything ..." }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 43 "display(\{ppa,ppb,pl[2],pl[3],pl[4],pl[5]\});
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "37 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 
+1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

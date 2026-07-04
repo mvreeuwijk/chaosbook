@@ -1,0 +1,94 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle21" -1 203 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle20" -1 204 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle3" -1 205 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle1" -1 206 "Courier" 1 12 255 0 0 1 2 1 2 2 1 2 0 
+0 0 1 }{CSTYLE "_cstyle2" -1 208 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle10
+" -1 216 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle11" -1 217 1 {CSTYLE 
+"" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle12" -1 218 1 {CSTYLE "" -1 -1 "Courier" 
+1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle15" -1 219 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 
+0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+16" -1 220 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle17" -1 221 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle18" -1 222 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle19" -1 223 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle20
+" -1 224 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 216 "" 0 "" {TEXT 205 0 "" }}{PARA 217 "" 0 "" 
+{TEXT 204 26 " Logistic Map: time series" }{TEXT 204 0 "" }}{PARA 216 
+"" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 
+21 "restart; with(plots):" }{MPLTEXT 1 206 0 "" }}}{EXCHG {PARA 219 ">
+ " 0 "" {MPLTEXT 1 0 26 "f := x -> r * x * (1 - x);" }{MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 216 "" 0 "" {TEXT 205 0 "" }}{PARA 220 "" 0 "" 
+{TEXT 203 20 "generate time series" }{TEXT 203 0 "" }}{PARA 221 "" 0 "
+" {TEXT -1 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 9 "N := 2
+00;" }{MPLTEXT 1 206 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 
+206 18 "xs := Array(0..N):" }{MPLTEXT 1 206 0 "" }}}{EXCHG {PARA 222 "
+" 0 "" {TEXT 201 2 "p1" }{TEXT 201 0 "" }}}{EXCHG {PARA 218 "> " 0 "" 
+{MPLTEXT 1 206 9 "r := 1.5;" }{MPLTEXT 1 206 0 "" }}{PARA 218 "> " 0 "
+" {MPLTEXT 1 206 13 "xs[0] := 0.1;" }{MPLTEXT 1 206 0 "" }}{PARA 219 "
+> " 0 "" {MPLTEXT 1 0 22 "for n from 0 to N-1 do" }{MPLTEXT 1 0 0 "" }
+}{PARA 219 "> " 0 "" {MPLTEXT 1 0 31 "  xs[n+1] := evalf( f(xs[n]) );
+" }{MPLTEXT 1 0 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 27 "l :
+= seq([n,xs[n]],n=0..N):" }{MPLTEXT 1 206 0 "" }}}{EXCHG {PARA 218 "> \+
+" 0 "" {MPLTEXT 1 206 113 "plotsetup(ps,plotoutput=`disc1d_logist_seri
+es_r1_5.ps`,plotoptions=`portrait,noborder,width=8.0cm,height=5.0cm`);
+" }{MPLTEXT 1 206 0 "" }}}{EXCHG {PARA 219 "> " 0 "" {MPLTEXT 1 0 120 
+"plot([[l],[l]],x=0..20,0..1,labels=[\"n\",\"x[n]\"],style=[point,line
+],symbolsize=20,symbol=CIRCLE,thickness=1,color=black);" }{MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 222 "" 0 "" {TEXT 201 2 "p2" }{TEXT 201 0 "" }}
+}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 9 "r := 3.2;" }{MPLTEXT 1 
+206 0 "" }}{PARA 218 "> " 0 "" {MPLTEXT 1 206 13 "xs[0] := 0.1;" }
+{MPLTEXT 1 206 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 22 "for n from \+
+0 to N-1 do" }{MPLTEXT 1 0 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 31 
+"  xs[n+1] := evalf( f(xs[n]) );" }{MPLTEXT 1 0 0 "" }}{PARA 219 "> " 
+0 "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 218 "
+> " 0 "" {MPLTEXT 1 206 27 "l := seq([n,xs[n]],n=0..N):" }{MPLTEXT 1 
+206 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 113 "plotsetup(p
+s,plotoutput=`disc1d_logist_series_r3_2.ps`,plotoptions=`portrait,nobo
+rder,width=8.0cm,height=5.0cm`);" }{MPLTEXT 1 206 0 "" }}{PARA 219 "> \+
+" 0 "" {MPLTEXT 1 0 120 "plot([[l],[l]],x=0..40,0..1,labels=[\"n\",\"x
+[n]\"],style=[point,line],symbolsize=20,symbol=CIRCLE,thickness=1,colo
+r=black);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 222 "" 0 "" {TEXT 201 2 
+"p4" }{TEXT 201 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 9 "r
+ := 3.5;" }{MPLTEXT 1 206 0 "" }}{PARA 218 "> " 0 "" {MPLTEXT 1 206 
+13 "xs[0] := 0.1;" }{MPLTEXT 1 206 0 "" }}{PARA 219 "> " 0 "" 
+{MPLTEXT 1 0 22 "for n from 0 to N-1 do" }{MPLTEXT 1 0 0 "" }}{PARA 
+219 "> " 0 "" {MPLTEXT 1 0 31 "  xs[n+1] := evalf( f(xs[n]) );" }
+{MPLTEXT 1 0 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 27 "l :
+= seq([n,xs[n]],n=0..N):" }{MPLTEXT 1 206 0 "" }}}{EXCHG {PARA 218 "> \+
+" 0 "" {MPLTEXT 1 206 113 "plotsetup(ps,plotoutput=`disc1d_logist_seri
+es_r3_5.ps`,plotoptions=`portrait,noborder,width=8.0cm,height=5.0cm`);
+" }{MPLTEXT 1 206 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 120 "plot([[
+l],[l]],x=0..40,0..1,labels=[\"n\",\"x[n]\"],style=[point,line],symbol
+size=20,symbol=CIRCLE,thickness=1,color=black);" }{MPLTEXT 1 0 0 "" }}
+}{EXCHG {PARA 222 "" 0 "" {TEXT 201 5 "chaos" }{TEXT 201 0 "" }}}
+{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 9 "r := 3.9;" }{MPLTEXT 1 
+206 0 "" }}{PARA 218 "> " 0 "" {MPLTEXT 1 206 13 "xs[0] := 0.1;" }
+{MPLTEXT 1 206 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 22 "for n from \+
+0 to N-1 do" }{MPLTEXT 1 0 0 "" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 31 
+"  xs[n+1] := evalf( f(xs[n]) );" }{MPLTEXT 1 0 0 "" }}{PARA 219 "> " 
+0 "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 218 "
+> " 0 "" {MPLTEXT 1 206 27 "l := seq([n,xs[n]],n=0..N):" }{MPLTEXT 1 
+206 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 113 "plotsetup(p
+s,plotoutput=`disc1d_logist_series_r3_9.ps`,plotoptions=`portrait,nobo
+rder,width=8.0cm,height=5.0cm`);" }{MPLTEXT 1 206 0 "" }}{PARA 219 "> \+
+" 0 "" {MPLTEXT 1 0 122 "plot([[l],[l]],x=0..100,0..1,labels=[\"n\",\"
+x[n]\"],style=[point,point],symbolsize=20,symbol=CIRCLE,thickness=1,co
+lor=black);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 219 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 223 "" 0 "" {TEXT 
+208 0 "" }}{PARA 224 "" 0 "" {TEXT -1 0 "" }}}{MARK "28" 0 }{VIEWOPTS 
+1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

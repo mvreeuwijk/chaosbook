@@ -1,0 +1,73 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle1" -1 204 "Times" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle3
+" -1 202 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle4" -1 203 1 
+{CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle5" -1 204 1 {CSTYLE "" -1 
+-1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle6" -1 205 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 
+2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 38 "restart; with(plot
+s): with(plottools):" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 18 "f := x->r
+*x*(1-x);" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 18 "g := x->(f@@
+3)(x);" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 25 "fp1 := \{solve(
+x=f(x),x)\};" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 8 "fp3 := \{
+" }{MPLTEXT 1 -1 17 "solve(x=g(x),x)\};" }}}{EXCHG {PARA 202 "> " 0 "
+" {MPLTEXT 1 0 25 "truefp3 := fp3 minus fp1;" }}}{EXCHG {PARA 202 "> \+
+" 0 "" {MPLTEXT 1 0 10 "r := 3.84;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "tfp3 := allvalues(op(truefp3));" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 11 "dg := D(g):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "seq(dg(tfp3[i]),i=1..6);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 22 "#dg(tfp3[i]) $ i=1..6;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 12 "dg(tfp3[2]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 45 "x3a := tfp3[1]; x3b := f(x3a); x3c := f(x3b);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "df := D(f);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 32 "stab := df(x3a)*df(x3b)*df(x3c);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "x3a := tfp3[2]; x3b := f(x3a); x3c \+
+:= f(x3b);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "stab := df(x3
+a)*df(x3b)*df(x3c);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "#op(
+tfp3[1]);" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 66 "pl := plot([
+x,f(x),g(x)],x=0..1,thickness=3,view=0..1,color=black," }{MPLTEXT 1 
+-1 66 "labels=[\"x\", \"y\"],thickness=[3,3,3],linestyle=[DASH,SOLID,S
+OLID]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "display(pl);" }}
+}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 48 "disk1a := disk([fp1[1],fp
+1[1]],0.02,color=gray):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "
+disk1b := disk([fp1[2],fp1[2]],0.02,color=gray):" }}}{EXCHG {PARA 203 
+"> " 0 "" {MPLTEXT 1 0 14 "disk3a := disk" }{MPLTEXT 1 -1 38 "([tfp3[1
+],tfp3[1]],0.012,color=black):" }}}{EXCHG {PARA 203 "> " 0 "" 
+{MPLTEXT 1 -1 51 "disk3b := disk([tfp3[2],tfp3[2]],0.012,color=gray):
+" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 52 "disk3c := disk([tfp3[
+3],tfp3[3]],0.012,color=black):" }}}{EXCHG {PARA 203 "> " 0 "" 
+{MPLTEXT 1 -1 51 "disk3d := disk([tfp3[4],tfp3[4]],0.012,color=gray):
+" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 52 "disk3e := disk([tfp3[
+5],tfp3[5]],0.012,color=black):" }}}{EXCHG {PARA 203 "> " 0 "" 
+{MPLTEXT 1 -1 51 "disk3f := disk([tfp3[6],tfp3[6]],0.012,color=gray):
+" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 68 "display(pl,disk1a,dis
+k1b,disk3a,disk3b,disk3c,disk3d,disk3e,disk3f);" }}}{EXCHG {PARA 202 "
+> " 0 "" {MPLTEXT 1 0 114 "plotsetup(ps,plotoutput=`disc1d_logist_p3gr
+aph_r384.ps`,plotoptions=`portrait,noborder,width=8.0cm,height=8.0cm`)
+;" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 -1 68 "display(pl,disk1a,d
+isk1b,disk3a,disk3b,disk3c,disk3d,disk3e,disk3f);" }}}{EXCHG {PARA 
+202 "> " 0 "" {MPLTEXT 1 0 19 "plotsetup(default);" }}}{EXCHG {PARA 
+202 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 10 "r := 3.80;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "tfp3 \+
+:= allvalues(op(truefp3));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+13 "#op(tfp3[1]);" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 0 66 "pl :
+= plot([x,f(x),g(x)],x=0..1,thickness=3,view=0..1,color=black," }
+{MPLTEXT 1 -1 66 "labels=[\"x\", \"y\"],thickness=[3,3,3],linestyle=[D
+ASH,SOLID,SOLID]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "displ
+ay(pl);" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 48 "disk1a := disk
+([fp1[1],fp1[1]],0.02,color=gray):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 48 "disk1b := disk([fp1[2],fp1[2]],0.02,color=gray):" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 26 "display(pl,disk1a,disk1b);
+" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 114 "plotsetup(ps,plotout
+put=`disc1d_logist_p3graph_r380.ps`,plotoptions=`portrait,noborder,wid
+th=8.0cm,height=8.0cm`);" }}}{EXCHG {PARA 203 "> " 0 "" {MPLTEXT 1 -1 
+26 "display(pl,disk1a,disk1b);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 204 "" 0 "" {TEXT 204 0 "
+" }}{PARA 205 "" 0 "" {TEXT -1 0 "" }}}{MARK "40 0 0" 32 }{VIEWOPTS 1 
+1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

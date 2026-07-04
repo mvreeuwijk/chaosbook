@@ -1,0 +1,578 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "_pstyle10" -1 200 1 {CSTYLE "" -1 -1 "Times" 0 1 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE 
+"Dash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }1 1 0 -1 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Warning" -1 7 1 
+{CSTYLE "" -1 -1 "Courier" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle9" -1 201 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 -1 3 3 2 0 2 0 2 2 -1 2 }{PSTYLE "_psty
+le8" -1 202 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 
+1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 203 1 {CSTYLE "
+" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle6" -1 204 1 {CSTYLE "" -1 -1 "Courier" 
+1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle5" -1 205 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle4" -1 206 
+1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 
+2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle3" -1 207 1 {CSTYLE "" -1 -1 "Times"
+ 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle2" -1 208 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 
+0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle1" 
+-1 209 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed Output" -1 
+6 1 {CSTYLE "" -1 -1 "Courier" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 
+0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 4" -1 20 1 {CSTYLE "" 
+-1 -1 "MS Serif" 1 12 0 0 0 0 1 0 0 2 2 2 0 0 0 1 }1 1 0 -1 0 0 2 0 2 
+0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "MS Serif" 1 
+14 0 0 0 0 1 1 0 2 2 2 0 0 0 1 }1 1 0 -1 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 -1 "MS Serif" 1 16 0 0 0 0 0 
+1 0 2 2 2 0 0 0 1 }1 1 0 -1 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Outpu
+t" -1 11 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }3 3 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 
+-1 "MS Serif" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }1 1 0 -1 8 4 2 0 2 0 
+2 2 -1 1 }{PSTYLE "_pstyle25" -1 210 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 
+0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_psty
+le24" -1 211 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 
+0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle23" -1 212 1 {CSTYLE ""
+ -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 
+0 2 2 -1 1 }{PSTYLE "_pstyle22" -1 213 1 {CSTYLE "" -1 -1 "Courier" 1 
+12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle21" -1 214 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle20" 
+-1 215 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Author" -1 19 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }3 1 0 -1 8 8 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 
+0 0 0 0 2 2 2 0 0 0 1 }3 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Help"
+ -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 255 1 0 0 0 2 2 1 0 0 0 1 
+}1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Left Justified Maple Output
+" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+1 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE ""
+ -1 -1 "Courier" 1 10 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 
+0 2 2 -1 1 }{PSTYLE "Text Output" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 
+12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "List Item" -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 
+2 2 2 2 0 0 0 1 }1 1 0 -1 3 3 2 0 2 0 2 2 -1 5 }{PSTYLE "Error" -1 8 1
+ {CSTYLE "" -1 -1 "Courier" 1 12 255 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 
+0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" 
+-1 -1 "Courier" 1 10 64 128 64 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 
+2 0 2 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 {CSTYLE "" -1 -1 "Times" 1 
+18 0 0 0 0 0 1 1 2 2 2 0 0 0 1 }3 1 0 -1 12 12 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle19" -1 216 
+1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle18" -1 217 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle17" -1 218 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle16"
+ -1 219 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle15" -1 220 1 {CSTYLE 
+"" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 
+2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle14" -1 221 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle13" -1 222 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle12" -1 
+223 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 
+0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle11" -1 224 1 {CSTYLE "" -1 
+-1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 
+2 2 -1 1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 1 
+2 2 2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "MS Serif" 1 12 
+147 0 15 1 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Output Labels" -1 29 "Times" 
+1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 1 12 
+0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 0 
+1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "LaTeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 
+0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "Page Number" -1 33 "Times" 1 10 0 0 0 0 0 0 2 2 2 2 0 0 
+0 1 }{CSTYLE "Maple Input" -1 0 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 
+0 0 0 1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 0 0 0 1 
+1 2 2 2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 0 0 2 2 
+2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 0 
+2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 1 2 2 2 
+0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 2 2 2 2 
+2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "Hyperlink" -1 17 "MS Serif" 1 12 0 128 128 1 0 0 1 2 2 
+2 0 0 0 1 }{CSTYLE "Help Underlined Italic" -1 43 "Times" 1 12 0 0 0 
+0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic Small" -1 200 "Times" 
+0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times"
+ 0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Maple Comment" -1 21 "Couri
+er" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bold" -1 5 "Time
+s" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle9" -1 201 "Courier
+" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle8" -1 202 "Times
+" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle7" -1 203 "Times" 
+1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 10 
+0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle6" -1 204 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle5" -1 205 "Courier" 1 12 
+255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle4" -1 206 "Times" 0 1 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 207 "Times" 1 12 0 0 0 
+1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle2" -1 208 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle1" -1 209 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 
+0 0 0 0 1 1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 1 12 
+255 0 0 1 0 0 0 2 1 2 0 0 0 1 }{CSTYLE "Maple Input Placeholder" -1 
+210 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Help Norm
+al" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Output
+" -1 20 "Times" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }{CSTYLE "Help Menu
+s" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined"
+ -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Text" -1 
+211 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle12" -1 
+212 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle11" -1 
+213 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle10" -1 
+214 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 
+"" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Variable" -1 25 "Cou
+rier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 1 }{CSTYLE "Help Emphasized" -1 
+215 "" 0 1 0 0 0 0 1 2 0 2 2 2 0 0 0 1 }{CSTYLE "Help Maple Name" -1 
+35 "" 0 1 104 64 92 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Nonterminal" 
+-1 24 "Courier" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle26" 
+-1 225 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle27" -1 226 1 
+{CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 1 0 0 1 }1 1 0 
+0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle13" -1 216 "Courier" 1 12 255 
+0 0 1 0 1 0 2 1 2 0 0 0 1 }{PSTYLE "_pstyle28" -1 227 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{CSTYLE "_cstyle14" -1 217 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle29" -1 228 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 1 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle1
+5" -1 218 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{PSTYLE "_pstyle30
+" -1 229 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle31" -1 230 1 {CSTYLE 
+"" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 
+0 2 0 2 2 -1 1 }{PSTYLE "_pstyle32" -1 231 1 {CSTYLE "" -1 -1 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle33" -1 232 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle1
+6" -1 219 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{PSTYLE "_pstyle34
+" -1 233 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle35" -1 234 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle36" -1 235 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle37" -1 236 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 1 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+38" -1 237 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle39" -1 238 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 
+-1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle40" -1 239 1 {CSTYLE "" -1 -1 "Ti
+mes" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 
+}{PSTYLE "_pstyle41" -1 240 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle17" -1 
+220 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle42" -1 
+241 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 225 "> " 0 "" {MPLTEXT 1 0 36 "restart; with(plot
+s): with(DEtools):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 24 "xdot := (x,y,u, v) -> u:" }{MPLTEXT 1 0 0 "" }}{PARA 
+225 "> " 0 "" {MPLTEXT 1 0 24 "ydot := (x,y,u, v) -> v:" }{MPLTEXT 1 
+0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 83 "udot := (x,y,u, v) -> \+
+G * m1 * (x1(t)-x)/d1(x,y)^3  + G * m2 * (x2(t)-x)/d2(x,y)^3:" }
+{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 83 "vdot := (x,
+y,u, v) -> G * m1 * (y1(t)-y)/d1(x,y)^3  + G * m2 * (y2(t)-y)/d2(x,y)^
+3:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 225 "> " 0 "" {MPLTEXT 1 0 49 "
+DE1 := diff(x(t),t) = xdot(x(t),y(t),u(t), v(t));" }{MPLTEXT 1 0 0 "" 
+}}{PARA 225 "> " 0 "" {MPLTEXT 1 0 49 "DE2 := diff(y(t),t) = ydot(x(t)
+,y(t),u(t), v(t));" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 
+1 0 49 "DE3 := diff(u(t),t) = udot(x(t),y(t),u(t), v(t));" }{MPLTEXT 
+1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 49 "DE4 := diff(v(t),t) \+
+= vdot(x(t),y(t),u(t), v(t));" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0
+ "" {MPLTEXT 1 0 25 "DE := DE1, DE2, DE3, DE4:" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 227 "" 0 "" {TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 
+64 "Distance from the satellite to the earth and moon, respectively." 
+}{TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 0 "" }}}{EXCHG {PARA 
+226 "> " 0 "" {MPLTEXT 1 216 50 "d1 := (x, y) -> sqrt((x - x1(t))^2 + \+
+(y-y1(t))^2);" }{MPLTEXT 1 216 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 50 "d2 := (x, y) -> sqrt((x - x2(t))^2 + (y-y2(t))^2);" }{MPLTEXT 
+1 216 0 "" }}}{EXCHG {PARA 227 "" 0 "" {TEXT 217 0 "" }}{PARA 227 "" 0
+ "" {TEXT 217 86 "The orbits of the earth and the moon are assumed cir
+cular, so their paths are given as" }{TEXT 217 0 "" }}{PARA 227 "" 0 "
+" {TEXT 217 0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x1 :
+= t -> - r1 * cos(omega * t);" }{MPLTEXT 1 216 0 "" }}{PARA 226 "> " 0
+ "" {MPLTEXT 1 216 33 "y1 := t -> - r1 * sin(omega * t);" }{MPLTEXT 1 
+216 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x2 := t ->   r2 * co
+s(omega * t);" }{MPLTEXT 1 216 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 33 "y2 := t ->   r2 * sin(omega * t);" }{MPLTEXT 1 216 0 "" }}
+{PARA 226 "> " 0 "" {MPLTEXT 1 216 25 "r1 := R * m2 / (m1 + m2);" }
+{MPLTEXT 1 216 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 25 "r2 := R *
+ m1 / (m1 + m2);" }{MPLTEXT 1 216 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 
+1 216 31 "omega := sqrt(G*(m1 + m2)/R^3);" }{MPLTEXT 1 216 0 "" }}}
+{EXCHG {PARA 227 "" 0 "" {TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 
+44 "Set the value of the gravitational constant." }{TEXT 217 0 "" }}
+{PARA 227 "" 0 "" {TEXT 217 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 14 "G := 6.67e-11;" }{MPLTEXT 1 216 0 "" }}}{EXCHG 
+{PARA 227 "" 0 "" {TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 123 "Se
+t the mass of the earth and moon and their distance R. Note that in re
+ality the mass of the moon is a factor 81 smaller. " }{TEXT 217 0 "" }
+}{PARA 227 "" 0 "" {TEXT 217 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 43 "m1 := 5.96e24; m2 := m1 / 4.0; R := 3.84e8;" }
+{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 227 "" 0 "" {TEXT 217 0 "" }}
+{PARA 228 "" 0 "" {TEXT 218 90 "Vary the initial position x0 and deter
+mine for which interval the system behaves chaotic. " }{TEXT 218 0 "" 
+}}{PARA 227 "" 0 "" {TEXT 217 0 "" }}}{EXCHG {PARA 227 "" 0 "" {TEXT 
+217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 43 "The initial conditions for \+
+the satellite..." }{TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 0 "" }
+}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x0 := 1e8; v0 := 40; p
+si := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 
+71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0) = v0 * sin(
+psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 229 "" 0 "" {TEXT 206 0 "" }
+}{PARA 229 "" 0 "" {TEXT 206 139 "Solve system with dsolve and plot th
+e trajectory of the satellite. The orbits of the earth and the moon co
+lored blue and red, respectively." }{TEXT 206 0 "" }}{PARA 229 "" 0 ""
+ {TEXT 206 0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 12 "Tsim \+
+:= 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "s
+ol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), v(t)], type=numeric, max
+fun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 141 "p
+1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omeg
+a]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue, red], thickness=[2,2]):
+" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 133 "p2 := ode
+plot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x\",\"y\"], numpoints=3000,co
+lor=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 
+1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 18 "display([p1, p2]);" 
+}{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 227 "" 0 "" {TEXT 217 0 "" }}
+{PARA 228 "" 0 "" {TEXT 218 53 "View the trajectroy in a co-rotating r
+eference frame." }{TEXT 218 0 "" }}{PARA 227 "" 0 "" {TEXT 217 0 "" }}
+}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 49 "xx := (x, y, t) -> x*cos(
+omega*t)+y*sin(omega*t);" }{MPLTEXT 1 0 0 "" }}{PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 50 "yy := (x, y, t) -> -x*sin(omega*t)+y*cos(omega*t);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 231 "" 0 "" {TEXT 211 12 "let us check" }{TEXT 211 0 "" }
+}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 0 27 "plot([xx(x1(t),y1(t),t),
+xx(" }{MPLTEXT 1 -1 15 "x2(t),y2(t),t)]" }{MPLTEXT 1 0 11 ",t=0..Tsim,
+" }{MPLTEXT 1 -1 57 "labels=[\"t\",\"x\"],legend=[\"Earth\",\"Moon\"],
+color=[red,blue]" }{MPLTEXT 1 0 2 ");" }{MPLTEXT 1 -1 0 "" }}}{EXCHG 
+{PARA 232 "> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=poin
+t,thickness=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 
+1 -1 0 "" }}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([
+[ r2, 0]],style=point,thickness=2,symbol=circle,color=blue): # moon lo
+cation" }{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 
+0 156 "p3 := odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim
+,labels=[\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.
+2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 ">
+ " 0 "" {MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 227 "" 0 
+"" {TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 219 29 "Some other initial
+ positions " }{TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 0 "" }}}
+{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 34 "x0 := -5e8; v0 := 40; ps
+i := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 
+71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0) = v0 * sin(
+psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 
+216 12 "Tsim := 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), v(t)],
+ type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 141 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y
+2(t),t=0..2*Pi/omega]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue, red]
+, thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x
+\",\"y\"], numpoints=3000,color=black,axes=normal,view=[-1.2*R..1.2*R,
+-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 18 "display([p1, p2]);" }{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "
+> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=point,thickness
+=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 1 -1 0 "" }}
+}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],st
+yle=point,thickness=2,symbol=circle,color=blue): # moon location" }
+{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 \+
+:= odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim,labels=[
+\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.2*R..1.2*
+R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 34 "x0 := -4e8; v0 := 40; psi := Pi/3;" }{MPLTEXT 1 
+216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0)
+ = 0, u(0) = v0 * cos(psi), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 12 "Tsim := 5e6;" }
+{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "sol1 := dso
+lve(\{DE, ic1\}, [x(t), y(t), u(t), v(t)], type=numeric, maxfun=-1):" 
+}{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 141 "p1 := plot(
+[[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omega]],-1.2*R
+..1.2*R, -1.2*R..1.2*R, color=[blue, red], thickness=[2,2]):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 133 "p2 := odeplo
+t(sol1,[x(t), y(t)],0..Tsim,labels=[\"x\",\"y\"], numpoints=3000,color
+=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 1 
+0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 18 "display([p1, p2]);" }
+{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 89 "p1
+ := plot([[-r1, 0]],style=point,thickness=5,symbol=circle,color=red): \+
+ # earth location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 232 "> " 0 "" 
+{MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],style=point,thickness=2,symbol
+=circle,color=blue): # moon location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 := odeplot(sol1,[xx(x(t), y(t
+),t), yy(x(t), y(t),t)],0..Tsim,labels=[\"x\",\"y\"],numpoints=8000,co
+lor=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 20 "display([p3,p2
+,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 34 "x0 := -3e8; v0 :
+= 40; psi := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0
+) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> "
+ 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), \+
+v(t)], type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 
+0 "" {MPLTEXT 1 0 141 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(
+t), y2(t),t=0..2*Pi/omega]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue,
+ red], thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x
+\",\"y\"], numpoints=3000,color=black,axes=normal,view=[-1.2*R..1.2*R,
+-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 18 "display([p1, p2]);" }{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "
+> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=point,thickness
+=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 1 -1 0 "" }}
+}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],st
+yle=point,thickness=2,symbol=circle,color=blue): # moon location" }
+{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 \+
+:= odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim,labels=[
+\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.2*R..1.2*
+R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 34 "x0 := -2e8; v0 := 40; psi := Pi/3;" }{MPLTEXT 1 
+216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0)
+ = 0, u(0) = v0 * cos(psi), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 12 "Tsim := 5e6;" }
+{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "sol1 := dso
+lve(\{DE, ic1\}, [x(t), y(t), u(t), v(t)], type=numeric, maxfun=-1):" 
+}{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 141 "p1 := plot(
+[[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omega]],-1.2*R
+..1.2*R, -1.2*R..1.2*R, color=[blue, red], thickness=[2,2]):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 133 "p2 := odeplo
+t(sol1,[x(t), y(t)],0..Tsim,labels=[\"x\",\"y\"], numpoints=3000,color
+=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 1 
+0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 18 "display([p1, p2]);" }
+{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 89 "p1
+ := plot([[-r1, 0]],style=point,thickness=5,symbol=circle,color=red): \+
+ # earth location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 232 "> " 0 "" 
+{MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],style=point,thickness=2,symbol
+=circle,color=blue): # moon location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 := odeplot(sol1,[xx(x(t), y(t
+),t), yy(x(t), y(t),t)],0..Tsim,labels=[\"x\",\"y\"],numpoints=8000,co
+lor=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 20 "display([p3,p2
+,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 34 "x0 := -1e8; v0 :
+= 40; psi := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0
+) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> "
+ 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), \+
+v(t)], type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 
+0 "" {MPLTEXT 1 0 141 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(
+t), y2(t),t=0..2*Pi/omega]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue,
+ red], thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x
+\",\"y\"], numpoints=3000,color=black,axes=normal,view=[-1.2*R..1.2*R,
+-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 18 "display([p1, p2]);" }{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "
+> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=point,thickness
+=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 1 -1 0 "" }}
+}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],st
+yle=point,thickness=2,symbol=circle,color=blue): # moon location" }
+{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 \+
+:= odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim,labels=[
+\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.2*R..1.2*
+R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 33 "x0 := 0e8; v0 := 40; psi := Pi/3;" }{MPLTEXT 1 216 
+0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0
+, u(0) = v0 * cos(psi), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 
+1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE,
+ ic1\}, [x(t), y(t), u(t), v(t)], type=numeric, maxfun=-1):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 141 "p1 := plot([
+[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omega]],-1.2*R.
+.1.2*R, -1.2*R..1.2*R, color=[blue, red], thickness=[2,2]):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 133 "p2 := odeplo
+t(sol1,[x(t), y(t)],0..Tsim,labels=[\"x\",\"y\"], numpoints=3000,color
+=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 1 
+0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 18 "display([p1, p2]);" }
+{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 89 "p1
+ := plot([[-r1, 0]],style=point,thickness=5,symbol=circle,color=red): \+
+ # earth location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 232 "> " 0 "" 
+{MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],style=point,thickness=2,symbol
+=circle,color=blue): # moon location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 := odeplot(sol1,[xx(x(t), y(t
+),t), yy(x(t), y(t),t)],0..Tsim,labels=[\"x\",\"y\"],numpoints=8000,co
+lor=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 20 "display([p3,p2
+,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x0 := 1e8; v0 :=
+ 40; psi := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0
+) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> "
+ 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), \+
+v(t)], type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 
+0 "" {MPLTEXT 1 0 141 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(
+t), y2(t),t=0..2*Pi/omega]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue,
+ red], thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x
+\",\"y\"], numpoints=3000,color=black,axes=normal,view=[-1.2*R..1.2*R,
+-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 18 "display([p1, p2]);" }{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "
+> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=point,thickness
+=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 1 -1 0 "" }}
+}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],st
+yle=point,thickness=2,symbol=circle,color=blue): # moon location" }
+{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 \+
+:= odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim,labels=[
+\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.2*R..1.2*
+R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 33 "x0 := 2e8; v0 := 40; psi := Pi/3;" }{MPLTEXT 1 216 
+0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0
+, u(0) = v0 * cos(psi), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 
+1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE,
+ ic1\}, [x(t), y(t), u(t), v(t)], type=numeric, maxfun=-1):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 141 "p1 := plot([
+[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omega]],-1.2*R.
+.1.2*R, -1.2*R..1.2*R, color=[blue, red], thickness=[2,2]):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 133 "p2 := odeplo
+t(sol1,[x(t), y(t)],0..Tsim,labels=[\"x\",\"y\"], numpoints=3000,color
+=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 1 
+0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 18 "display([p1, p2]);" }
+{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 89 "p1
+ := plot([[-r1, 0]],style=point,thickness=5,symbol=circle,color=red): \+
+ # earth location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 232 "> " 0 "" 
+{MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],style=point,thickness=2,symbol
+=circle,color=blue): # moon location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 := odeplot(sol1,[xx(x(t), y(t
+),t), yy(x(t), y(t),t)],0..Tsim,labels=[\"x\",\"y\"],numpoints=8000,co
+lor=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 20 "display([p3,p2
+,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x0 := 3e8; v0 :=
+ 40; psi := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0
+) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> "
+ 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), \+
+v(t)], type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 
+0 "" {MPLTEXT 1 0 141 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(
+t), y2(t),t=0..2*Pi/omega]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue,
+ red], thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x
+\",\"y\"], numpoints=3000,color=black,axes=normal,view=[-1.2*R..1.2*R,
+-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 18 "display([p1, p2]);" }{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "
+> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=point,thickness
+=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 1 -1 0 "" }}
+}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],st
+yle=point,thickness=2,symbol=circle,color=blue): # moon location" }
+{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 \+
+:= odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim,labels=[
+\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.2*R..1.2*
+R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 33 "x0 := 4e8; v0 := 40; psi := Pi/3;" }{MPLTEXT 1 216 
+0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0
+, u(0) = v0 * cos(psi), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 
+1 216 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE,
+ ic1\}, [x(t), y(t), u(t), v(t)], type=numeric, maxfun=-1):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 141 "p1 := plot([
+[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omega]],-1.2*R.
+.1.2*R, -1.2*R..1.2*R, color=[blue, red], thickness=[2,2]):" }
+{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 133 "p2 := odeplo
+t(sol1,[x(t), y(t)],0..Tsim,labels=[\"x\",\"y\"], numpoints=3000,color
+=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 1 
+0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 216 18 "display([p1, p2]);" }
+{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 89 "p1
+ := plot([[-r1, 0]],style=point,thickness=5,symbol=circle,color=red): \+
+ # earth location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 232 "> " 0 "" 
+{MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],style=point,thickness=2,symbol
+=circle,color=blue): # moon location" }{MPLTEXT 1 -1 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 := odeplot(sol1,[xx(x(t), y(t
+),t), yy(x(t), y(t),t)],0..Tsim,labels=[\"x\",\"y\"],numpoints=8000,co
+lor=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 20 "display([p3,p2
+,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x0 := 5e8; v0 :=
+ 40; psi := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0
+) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 226 "> " 0 "" 
+{MPLTEXT 1 216 12 "Tsim := 5e6;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> "
+ 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), \+
+v(t)], type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 
+0 "" {MPLTEXT 1 0 141 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(
+t), y2(t),t=0..2*Pi/omega]],-1.2*R..1.2*R, -1.2*R..1.2*R, color=[blue,
+ red], thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"x
+\",\"y\"], numpoints=3000,color=black,axes=normal,view=[-1.2*R..1.2*R,
+-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 226 "> " 0 "" {MPLTEXT 1 
+216 18 "display([p1, p2]);" }{MPLTEXT 1 216 0 "" }}}{EXCHG {PARA 232 "
+> " 0 "" {MPLTEXT 1 -1 89 "p1 := plot([[-r1, 0]],style=point,thickness
+=5,symbol=circle,color=red):  # earth location" }{MPLTEXT 1 -1 0 "" }}
+}{EXCHG {PARA 232 "> " 0 "" {MPLTEXT 1 -1 88 "p2 := plot([[ r2, 0]],st
+yle=point,thickness=2,symbol=circle,color=blue): # moon location" }
+{MPLTEXT 1 -1 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 156 "p3 \+
+:= odeplot(sol1,[xx(x(t), y(t),t), yy(x(t), y(t),t)],0..Tsim,labels=[
+\"x\",\"y\"],numpoints=8000,color=black,axes=normal,view=[-1.2*R..1.2*
+R,-1.2*R..1.2*R]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" 
+{MPLTEXT 1 0 20 "display([p3,p2,p1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 227 "" 0 "" {TEXT 217 0 "" }}{PARA 228 "" 0 "" {TEXT 218 77 "Com
+pare the trajectories when they are separated by a small distance epsi
+lon." }{TEXT 218 0 "" }}{PARA 227 "" 0 "" {TEXT 217 0 "" }}}{EXCHG 
+{PARA 227 "" 0 "" {TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 79 "Ini
+tial conditions for the satellite and for a perturbed initial conditio
+n ic2." }{TEXT 217 0 "" }}{PARA 227 "" 0 "" {TEXT 217 0 "" }}}{EXCHG 
+{PARA 226 "> " 0 "" {MPLTEXT 1 216 13 "epsilon := 1;" }{MPLTEXT 1 216 
+0 "" }}}{EXCHG {PARA 226 "> " 0 "" {MPLTEXT 1 216 33 "x0 := 2e8; v0 :=
+ 40; psi := Pi/3;" }{MPLTEXT 1 216 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 79 "ic1 := x(0) = x0,         y(0) = 0, u(0) = v0 * cos(p
+si), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 79 "ic2 := x(0) = x0+epsilon, y(0) = 0, u(0) = v0 * cos(p
+si), v(0) = v0 * sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 229 "" 
+0 "" {TEXT 206 0 "" }}{PARA 229 "" 0 "" {TEXT 206 123 "Solve system wi
+th dsolve and plot the original and perturbed trajectories, which are \+
+colored black and green, respectively." }{TEXT 206 0 "" }}{PARA 229 ""
+ 0 "" {TEXT 206 0 "" }}}{EXCHG {PARA 233 "> " 0 "" {MPLTEXT 1 209 14 "
+Tsim := 3.5e7;" }{MPLTEXT 1 209 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 
+0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t), y(t), u(t), v(t)], type=numer
+ic, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}{PARA 233 "> " 0 "" {MPLTEXT 1 
+209 77 "sol2 := dsolve(\{DE, ic2\}, [x(t), y(t), u(t), v(t)], type=num
+eric, maxfun=-1):" }{MPLTEXT 1 209 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 133 "p1 := plot([[x1(t), y1(t),t=0..2*Pi/omega],[x2(t), y
+2(t),t=0..2*Pi/omega]],-1.2..1.2, -1.2..1.2, color=[blue, red], thickn
+ess=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 1 0 
+134 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"t\",\"x\"], num
+points=10000,color=black,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R
+]):" }{MPLTEXT 1 0 0 "" }}{PARA 233 "> " 0 "" {MPLTEXT 1 209 134 "p3 :
+= odeplot(sol2,[x(t), y(t)],0..Tsim,labels=[\"t\",\"x\"], numpoints=10
+000,color=green,axes=normal,view=[-1.2*R..1.2*R,-1.2*R..1.2*R]):" }
+{MPLTEXT 1 209 0 "" }}{PARA 233 "> " 0 "" {MPLTEXT 1 209 22 "display([
+p1, p2, p3]);" }{MPLTEXT 1 209 0 "" }}}{EXCHG {PARA 233 "> " 0 "" 
+{MPLTEXT 1 209 13 "Tsim/3600/24;" }{MPLTEXT 1 209 0 "" }}}{EXCHG 
+{PARA 234 "" 0 "" {TEXT 211 0 "" }}{PARA 234 "" 0 "" {TEXT 211 63 "So \+
+a perturbation of 1 m manifests itself after about one year." }{TEXT 
+211 0 "" }}{PARA 234 "" 0 "" {TEXT 211 0 "" }}}{EXCHG {PARA 235 "" 0 "
+" {TEXT 208 0 "" }}{PARA 236 "" 0 "" {TEXT 207 24 "Use the moon's real
+ mass" }{TEXT 207 0 "" }}{PARA 235 "" 0 "" {TEXT 208 0 "" }}}{EXCHG 
+{PARA 230 "> " 0 "" {MPLTEXT 1 0 14 "m2 := m1 / 81;" }{MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 233 "> " 0 "" {MPLTEXT 1 209 35 "x0 := 3.6e8; v0 := \+
+40; psi := Pi/3;" }{MPLTEXT 1 209 0 "" }}{PARA 225 "> " 0 "" {MPLTEXT 
+1 0 71 "ic1 := x(0) = x0, y(0) = 0, u(0) = v0 * cos(psi), v(0) = v0 * \+
+sin(psi);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 204 0 
+"" }}{PARA 237 "" 0 "" {TEXT 204 45 "Solve system with dsolve and plot
+ the result." }}{PARA 237 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 233 "
+> " 0 "" {MPLTEXT 1 209 12 "Tsim := 2e7;" }{MPLTEXT 1 209 0 "" }}
+{PARA 225 "> " 0 "" {MPLTEXT 1 0 77 "sol1 := dsolve(\{DE, ic1\}, [x(t)
+, y(t), u(t), v(t)], type=numeric, maxfun=-1):" }{MPLTEXT 1 0 0 "" }}
+{PARA 225 "> " 0 "" {MPLTEXT 1 0 125 "p1 := plot([[x1(t), y1(t),t=0..2
+*Pi/omega],[x2(t), y2(t),t=0..2*Pi/omega]],-2..2, -2..2, color=[blue, \+
+red], thickness=[2,2]):" }{MPLTEXT 1 0 0 "" }}{PARA 225 "> " 0 "" 
+{MPLTEXT 1 0 126 "p2 := odeplot(sol1,[x(t), y(t)],0..Tsim,labels=[\"t
+\",\"x\"], numpoints=15000,color=black,axes=normal,view=[-2*R..2*R,-2*
+R..2*R]):" }{MPLTEXT 1 0 0 "" }}{PARA 233 "> " 0 "" {MPLTEXT 1 209 18 
+"display([p1, p2]);" }{MPLTEXT 1 209 0 "" }}}{EXCHG {PARA 230 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 230 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}{PARA 229 "" 0 "" {TEXT 206 0 "" }}{PARA 229 "" 0 "" {TEXT 206 0 "" }
+}{PARA 229 "" 0 "" {TEXT 206 0 "" }}{PARA 229 "" 0 "" {TEXT 206 0 "" }
+}{PARA 229 "" 0 "" {TEXT 206 0 "" }}{PARA 238 "" 0 "" {TEXT 202 0 "" }
+}{PARA 239 "" 0 "" {TEXT 212 0 "" }}{PARA 240 "" 0 "" {TEXT 220 0 "" }
+}{PARA 241 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 
+1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

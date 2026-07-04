@@ -1,0 +1,111 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 21 "Dripping Faucet Model" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart: with(plots):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "Digits := 20;" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 11 "Definitions" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 98 "y:= (t,y0,v0) -> exp(-delta*t)/omega*(y0*(omega*cos(o
+mega*t)+delta*sin(omega*t))+sin(omega*t)*v0);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 121 "v := (t,y0,v0) -> exp(-delta*t)/omega*(y0*(-sin
+(omega*t)*(delta^2+omega^2))+ v0*(omega*cos(omega*t)-delta*sin(omega*t
+)));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "Some checks" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "y(0,y0,v0);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 11 "v(0,y0,v0);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "diff(y(t,y0,v0),t)-v(t,y0,v0);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 10 "expand(%);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 17 "system parameters" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 57 
+"delta := 7; omega := 60*Pi; y0 := 1; mav := 0.5; mc := 1;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "delta := 7;" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 10 "mu := 3.0;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 22 "Calculate time series " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 9 "N := 200;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "mass := A
+rray(1..N): va := Array(1..N): Ta := Array(1..N):" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 40 "mass[1] := mav; va[1] := 0.0; y0 := 1.0;" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "  Ta[n] := evalf((mc-mass[n])/mu);
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "  yend := y(Ta[n],y0,va[n]);" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "  vend := v(Ta[n],y0,va[n]);" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "  m
+ass[n+1] := evalf(mav - yend/9);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 
+"  va[n+1] := evalf(vend);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end do
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "Ta[N] := evalf((mc-mas
+s[N])/mu):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "la := seq([i,
+Ta[i]],i=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "pointplo
+t([la],labels=[\"n\",\"Tn\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 41 "rplta := seq([Ta[i],Ta[i+1]],i=N/2..N-1):" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 40 "pointplot([rplta],labels=[\"Tn\",\"Tn+1\"]);
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 48 "effective Lyapunov exponent; \+
+create a second set" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "vb :
+= Array(1..N): Tb := Array(1..N): " }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "vb[1] := epsilon;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "epsilon := 1E-9;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 34 "  Tb[n] := evalf((mc-mass[n])/mu);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "  yend := y(Tb[n],y0,vb[n]);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "  vend := v(Tb[n],y0,vb[n]);" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "  mass[n+1] := eval
+f(mav - yend/9);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "  vb[n+1] := ev
+alf(vend);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "Tb[N] := evalf((mc-mass[N])/mu):" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "lb := seq([i,Tb[i]],i=1..N
+):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "pb := pointplot([lb],
+labels=[\"n\",\"Tn\"],color=red):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 52 "pa := pointplot([la],labels=[\"n\",\"Tn\"],color=gree
+n):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "display(pa,pb);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 16 "Differences in v" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 43 "deltav := seq([n,abs(va[n]-vb[n])],n=1..N
+):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "lambda := 0.27;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 109 "logplot([[deltav],epsilon*e
+xp(lambda*(i-1))],i=1..N/2,labels=[\"n\",\"delta\"],legend=[\"delta\",
+\"exp(lambda*n)\"]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 28 "Stability
+ period 1 at mu = 1" }}{PARA 0 "" 0 "" {TEXT -1 23 "First create a dat
+a set" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "mu := 1;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "mass := Array(1..N): va := A
+rray(1..N): Ta := Array(1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 40 "mass[1] := mav; va[1] := 0.0; y0 := 1.0;" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 34 "  Ta[n] := evalf((mc-mass[n])/mu);" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 28 "  yend := y(Ta[n],y0,va[n]);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "  vend := v(Ta[n],y0,va[n]);" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "  mass[n+1] := eval
+f(mav - yend/9);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "  va[n+1] := ev
+alf(vend);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "Ta[N] := evalf((mc-mass[N])/mu):" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "la := seq([i,Ta[i]],i=1..N
+):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "pointplot([la],labels
+=[\"n\",\"Tn\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 9 "Stability" }}
+{PARA 0 "" 0 "" {TEXT -1 48 "first the reduced system, y0[n] = 1 for a
+ll n so" }}{PARA 0 "" 0 "" {TEXT -1 39 "T[n+1]  = [mc/2 + y(T[n],v0[n]
+)/9 ] /mu" }}{PARA 0 "" 0 "" {TEXT -1 23 "v0[n+1] = v(T[n],v0[n])" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "f := (t,u) -> (mc/2 + 1/9*y(
+t,1,u))/mu;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "g := (t,u) -
+> v(t,1,u);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 27 "last points of the
+ data set" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "va[N]; Ta[N];
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "with(LinearAlgebra):" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 55 "rough estimates of fixed points \+
+are necessaryfor fsolve" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "
+sols := fsolve(\{f(t,u)=t,g(t,u)=u\},\{t=Ta[N],u=va[N]\});" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "Tfp := subs(sols,t);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "vfp := subs(sols,u);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 18 "check fixed points" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "evalf( f(Tfp,vfp)-Tfp );" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 24 "evalf( g(Tfp,vfp)-vfp );" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 12 "derivatives " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+38 "dfdt := unapply(diff(f(t,u),t),[t,u]);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 38 "dfdu := unapply(diff(f(t,u),u),[t,u]);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "dgdt := unapply(diff(g(t,u),t),[t,u
+]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "dgdu := unapply(diff
+(g(t,u),u),[t,u]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 16 "stability m
+atrix" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "a := evalf( dfdt(T
+fp,vfp) );" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "b := evalf( d
+fdu(Tfp,vfp) );" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "c := eva
+lf( dgdt(Tfp,vfp) );" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "d :
+= evalf( dgdu(Tfp,vfp) );" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+33 "jacf := Matrix([[a, b], [c, d]]);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "Eigenvalues(jacf);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 56 "abs value of all eigenvalues is smaller than 1 -> stable" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "38 1 0" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

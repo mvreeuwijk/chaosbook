@@ -1,0 +1,248 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Left Justified Maple Output" -1 12 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "D
+ash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "_pstyle257" -1 200 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 
+0 1 0 2 2 -1 1 }{PSTYLE "Heading 4" -1 20 1 {CSTYLE "" -1 -1 "Times" 
+1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle256" -1 201 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 
+5 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 
+0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Couri
+er" 1 10 255 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 
+-1 1 }{PSTYLE "Author" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }3 1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 2"
+ -1 4 1 {CSTYLE "" -1 -1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 
+1 0 0 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "C
+ourier" 1 9 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 
+-1 1 }{PSTYLE "Text Output" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 
+0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE 
+"Heading 1" -1 3 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 
+0 0 0 1 }1 1 0 0 8 4 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 
+0 1 0 2 2 -1 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Line Printed Output" -1 6 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }
+{PSTYLE "Title" -1 18 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 
+2 2 0 0 0 1 }3 1 0 0 12 12 2 0 2 0 2 2 -1 1 }{PSTYLE "Diagnostic" -1 
+9 1 {CSTYLE "" -1 -1 "Courier" 1 10 64 128 64 1 0 0 0 2 2 1 0 0 0 1 }
+1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Maple Output" -1 11 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 3 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "List Item" -1 14 1 {CSTYLE "" -1 -1 "Time
+s" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 5 }
+{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 2 }{PSTYLE "Fixed Width"
+ -1 17 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "LaTeX" -1 32 "" 0 1 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple Comment" -1 21 "Courier" 0 1 0 0 0 
+1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bold" -1 5 "Times" 0 1 0 0 0 
+0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined" -1 44 "Times" 1 12 0 
+0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Output Labels" -1 29 "Times" 1 8 
+0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple Input" -1 0 "Courier" 0 1 
+255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Page Number" -1 33 "Times" 0 
+1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Maple Input Placeholder" -1 
+200 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Text" -1 
+201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic \+
+Small" -1 202 "Times" 0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Help H
+eading" -1 26 "" 1 14 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Itali
+c Bold" -1 40 "Times" 1 12 0 0 0 0 1 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help \+
+Normal" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help \+
+Nonterminal" -1 24 "Courier" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE 
+"2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE 
+"Help Underlined Italic" -1 43 "Times" 1 12 0 0 0 0 1 0 1 2 2 2 0 0 0 
+1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }
+{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 0 0 2 2 2 2 2 2 0 0 0 1 }
+{CSTYLE "Hyperlink" -1 17 "" 0 1 0 128 128 1 2 0 1 2 2 2 0 0 0 1 }
+{CSTYLE "Plot Title" -1 27 "" 1 10 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Input" -1 19 "Times" 0 1 255 0 0 1 0 0 2 2 1 2 0 0 0 1 }
+{CSTYLE "Help Maple Name" -1 35 "" 0 1 104 64 92 1 0 1 0 2 2 2 0 0 0 
+1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 2 2 2 0 0 0 
+1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 0 0 0 1 1 2 
+2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "" 0 1 147 0 15 1 2 0 1 2 2 
+2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "Times" 0 1 0 0 255 1 0 0 2 2 2 
+2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times" 0 1 0 0 0 0 1 0 2 2 
+2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 1 2 2 2 0 0 
+0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 2 2 2 2 2 2 
+0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 2 2 0 0 0 1 
+}{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle258" -1 203 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle257" -1 204 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle256" -1 205 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }
+{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 
+1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Emphasized" -1 206 "" 0 1 0 0 0 0 1 2 0 2 2 2 
+0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle1" -1 202 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "_ps
+tyle2" -1 203 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{CSTYLE "_cstyle1" -1 207 "Times" 0 
+1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle3" -1 204 1 {CSTYLE "" 
+-1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 
+-1 1 }{CSTYLE "_cstyle2" -1 208 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }{PSTYLE "_pstyle4" -1 205 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 
+2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{CSTYLE "_cstyle3" -1 
+209 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle4" -1 
+210 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle5" -1 
+206 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 1 0 1 0 2 2 -1 1 }{CSTYLE "_cstyle5" -1 211 "Times" 0 1 0 0 0 0 
+0 1 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle6" -1 207 1 {CSTYLE "" -1 -1 "" 
+0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }
+{CSTYLE "_cstyle6" -1 212 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{PSTYLE "_pstyle7" -1 208 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 34 "restart; with(plot
+s): with(stats):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 203 "" 0 "" 
+{TEXT 207 0 "" }}{PARA 203 "" 0 "" {TEXT 207 38 "a) generation of the \+
+multifractal set " }}{PARA 203 "" 0 "" {TEXT 207 0 "" }}}{EXCHG {PARA 
+202 "> " 0 "" {MPLTEXT 1 0 10 "li := [1];" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 7 "K := 6;" }{MPLTEXT 1 0 0 ""
+ }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 21 "for k from 1 to K do "
+ }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 14 "  li2 := NU
+LL:" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 29 "  for n
+ from 1 to nops(li) do" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 46 "    li2 := li2, li[n]*p1 , li[n]*p2, li[n]*p3;" }
+{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 5 "  od:" }
+{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 14 "  li := [li2]
+;" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 3 "od:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 15 "here it is
+ ...." }{TEXT 208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 36 "
+pli := seq([n,li[n]],n=1..nops(li));" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 205 "" 0 "" {TEXT 209 14 "b) p3 := 1-p1;" }{TEXT 209 0 "" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 11 "p3 := 1-p1;" }{MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 8 "p2 := 0;" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 10 "p1 :=
+ 1/2;" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 
+12 "plot([pli]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" 
+{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 21 "This is a Cantor set.
+" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 55 "at level n the num
+ber of occupied boxes is: N_n  ~ 2^n " }{TEXT 208 0 "" }}{PARA 204 "" 
+0 "" {TEXT 208 51 "at level n the size of the boxes is:  l_n  ~ 3^(-n)
+" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 66 "The fractal dimens
+ion D follows from N_n ~(l_n)^(-D) yielding:    " }{TEXT 210 17 "D = l
+og(2)/log(3)" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}}
+{EXCHG {PARA 206 "" 0 "" {TEXT 211 0 "" }}{PARA 206 "" 0 "" {TEXT 211 
+34 "c) calculate generalized dimension" }}{PARA 206 "" 0 "" {TEXT 211 
+0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 31 "p1 := 4/5; p2 := 0
+; p3 := 1-p1;" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 12 "plot([pli]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 29 "
+The generalised dimension is:" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" 
+{TEXT 208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 35 "p1 := 'p
+1'; p2 := 'p2'; p3 := 'p3';" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 ">
+ " 0 "" {MPLTEXT 1 0 45 "Dq := -(q-1)^(-1)*log(p1^q+p2^q+p3^q)/log(3);
+" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 39 "with p1
+ = 4/5 , p2 = 0, p3 = 1/5 we get" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" 
+{TEXT 208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 62 "Dq := su
+bs(\{p1=4/5,p3=1/5\},-(q-1)^(-1)*log(p1^q+p3^q)/log(3));" }{MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 71 "Note that the fractal
+ dimension (=D(0)) does not depend on the p-values" }{TEXT 208 0 "" }}
+}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 13 "subs(q=0,Dq);" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 48 "which is identical \+
+to the value determined in b)" }{TEXT 208 0 "" }}}{EXCHG {PARA 207 "" 
+0 "" {TEXT 212 0 "" }}{PARA 207 "" 0 "" {TEXT 212 15 "d) box-counting"
+ }}{PARA 207 "" 0 "" {TEXT 212 0 "" }}}{EXCHG {PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 31 "p1 := 4/5; p2 := 0; p3 := 1-p1;" }{MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 17 "dat := evalf(li):" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 14 "N:= n
+ops(dat);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 
+"" }}{PARA 204 "" 0 "" {TEXT 208 48 " create positions for the data-se
+t: x in [ 0..1]" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}
+}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 29 "x:=vector([seq(n/N,n=1..N
+)]):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 "" }}
+{PARA 204 "" 0 "" {TEXT 208 36 "plot the data set to be analysed ..." 
+}{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}}{EXCHG {PARA 
+202 "> " 0 "" {MPLTEXT 1 0 62 "plot([seq([x[n],dat[n]],n=1..N)],labels
+=[\"position\",\"value\"]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 ""
+ 0 "" {TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 28 "determine extre
+ma of the set" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 30 "xmax := max(seq(x[n],n=1..
+N));" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 30 "xmin :
+= min(seq(x[n],n=1..N));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 
+"" {TEXT 208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 45 "i := \+
+'i'; p := 'p'; li := NULL; loli := NULL:" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 30 "pmin := 1; pmax := 5; dp :
+= 1;" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 "" }}
+{PARA 204 "" 0 "" {TEXT 208 50 "here is the main part of the boxcounti
+ng procedure" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 32 "for p from pmin to pmax by
+ dp do" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 202 "> " 0 "" {MPLTEXT 1 0 18 "  delta := 3^(-p);" }{MPLTEXT 1 
+0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 35 "  ni := trunc((xmax-xmin
+)/delta)+1;" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 20 
+"  print(p,ni,delta);" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 24 "  nr := Vector(1..ni,0);" }{MPLTEXT 1 0 0 "" }}{PARA 
+202 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 22 
+"  for n from 1 to N do" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 36 "    i := trunc((x[n]-xmin)/delta)+1;" }{MPLTEXT 1 0 
+0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 26 "    nr[i] := nr[i]+dat[n];
+" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 5 "  od:" }
+{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 202 
+"> " 0 "" {MPLTEXT 1 0 11 "  i := 'i';" }{MPLTEXT 1 0 0 "" }}{PARA 
+202 "> " 0 "" {MPLTEXT 1 0 13 "  boxes := 0;" }{MPLTEXT 1 0 0 "" }}
+{PARA 202 "> " 0 "" {MPLTEXT 1 0 23 "  for i from 1 to ni do" }
+{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 61 "       if( nr
+[i] > 0 ) then boxes := boxes + nr[i]^q; end if;" }{MPLTEXT 1 0 0 "" }
+}{PARA 202 "> " 0 "" {MPLTEXT 1 0 5 "  od;" }{MPLTEXT 1 0 0 "" }}
+{PARA 202 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 
+1 0 25 "  li := li,[delta,boxes];" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> "
+ 0 "" {MPLTEXT 1 0 40 "  loli := loli, [log(delta),log(boxes)];" }
+{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 3 "od:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 "" }}{PARA 
+204 "" 0 "" {TEXT 208 39 "plot the results in log-log fashion ..." }
+{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 4 "and " }{TEXT 208 0 "" 
+}}{PARA 204 "" 0 "" {TEXT 208 42 "analysis of the slope -> fractal dim
+ension" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}}{EXCHG 
+{PARA 202 "> " 0 "" {MPLTEXT 1 0 42 "xli := [seq(loli[n,1],n=1..nops([
+loli]))]:" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 42 "y
+li := [seq(loli[n,2],n=1..nops([loli]))]:" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 204 "" 0 "" {TEXT 208 20 " the plot ranges ..." }{TEXT 
+208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 64 "lmax := evalf(
+xli[1])+0.1; lmin := evalf(xli[nops([loli])])-0.1;" }{MPLTEXT 1 0 0 ""
+ }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 
+208 11 "set q-range" }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "
+" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 62 "qmin := -10.3; qmax :
+= 10; dq := 1; listDq := NULL: z := NULL;" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 
+31 "the main loop to determine D(q)" }{TEXT 208 0 "" }}{PARA 204 "" 0 
+"" {TEXT 208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 32 "for q
+ from qmin to qmax by dq do" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 67 " eq:=fit[leastsquare[[x,y],y=a*x+b]]([xli,yli]); # fi
+t data to line" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 
+67 " Dq := coeff(rhs(eq),x)/(q-1); #determine dimension from the slope
+ " }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 26 " listDq :
+= listDq, [q,Dq];" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 
+1 0 72 " pl4 := plot([loli],style=point,symbolsize=15,color=blue,symbo
+l=circle):" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 72 "
+ pl5 := plot(rhs(eq),x=lmin..lmax+0.1,style=line,thickness=1,color=red
+):" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 22 " z := z,
+ [pl4], [pl5];" }{MPLTEXT 1 0 0 "" }}{PARA 202 "> " 0 "" {MPLTEXT 1 0 
+3 "od:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 0 "" 
+}}{PARA 204 "" 0 "" {TEXT 208 111 " plot the partition function as a f
+unction of box-size in a log-log plot to assess the \"scaling behaviou
+r\" ... " }{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 0 "" }}}
+{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 42 "display(z,labels=[\"log(l)
+\",\"log Z(q,l)\"]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 204 "" 0 "" 
+{TEXT 208 0 "" }}{PARA 204 "" 0 "" {TEXT 208 64 "plot the determined D
+(q) values versus the analytical result ..." }{TEXT 208 0 "" }}{PARA 
+204 "" 0 "" {TEXT 208 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 
+48 "pp1:=pointplot([listDq],view=[qmin..qmax,0..2]):" }{MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 58 "q:= 'q'; Dq := q -> \+
+-log(p1^q+p2^q+p3^q)/(log(3.0)*(q-1));" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 202 "> " 0 "" {MPLTEXT 1 0 36 "pp2:=plot( Dq(q),q=qmin..qmax,0..
+2):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 6 "
+Dq(q);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 0 
+39 "display(\{pp1,pp2\},labels=[\"q\",\"D(q)\"]);" }{MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 204 "" 0 "" {TEXT 208 62 "The theoretical line from c)
+ matches the data points very well" }{TEXT 208 0 "" }}}{EXCHG {PARA 
+202 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 202 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{PARA 208 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 
+0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

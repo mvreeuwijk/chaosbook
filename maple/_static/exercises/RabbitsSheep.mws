@@ -1,0 +1,203 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Left Justified Maple Output" -1 12 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "D
+ash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Heading 4" -1 20 1 
+{CSTYLE "" -1 -1 "Times" 1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "Times
+" 1 12 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 255 1 0 
+0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Author" 
+-1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 
+1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 
+-1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 2 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 255 1 
+0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Text Ou
+tput" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 
+0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 
+4 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "M
+aple Plot" -1 13 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed Output" 
+-1 6 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }
+1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 {CSTYLE "" 
+-1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 1 }3 1 0 0 12 12 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+64 128 64 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }
+{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }3 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "List Item"
+ -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 
+1 0 0 3 3 2 0 2 0 2 2 -1 5 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 
+2 -1 2 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "La
+TeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple Comment"
+ -1 21 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bol
+d" -1 5 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underli
+ned" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Output L
+abels" -1 29 "Times" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple I
+nput" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Page \+
+Number" -1 33 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Maple \+
+Input Placeholder" -1 200 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 0 
+0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+{CSTYLE "2D Math Italic Small" -1 202 "Times" 0 1 0 0 0 0 1 0 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 0 0 0 0 1 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Normal" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Nonterminal" -1 24 "Courier" 0 1 0 0 0 1 0 1 
+0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 0 
+2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" -1 43 "Times" 1 12 
+0 0 0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 
+0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 0 0 
+2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Hyperlink" -1 17 "" 0 1 0 128 128 1 2 0 
+1 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 10 0 0 0 0 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 0 1 255 0 0 1 0 0 2 2 1 2 
+0 0 0 1 }{CSTYLE "Help Maple Name" -1 35 "" 0 1 104 64 92 1 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 0 0 
+0 1 1 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "" 0 1 147 0 15 1 2 
+0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "Times" 0 1 0 0 255 1 0 
+0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times" 0 1 0 0 0 0 
+1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 1 2 
+2 2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 2 2 
+2 2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 2 2 
+0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 
+1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 0 0 0 1 
+}{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle259" -1 203 "" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }
+{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 
+1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Emphasized" -1 204 "" 0 1 0 0 0 0 1 2 0 2 2 2 
+0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle1" -1 200 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "_ps
+tyle2" -1 201 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{CSTYLE "_cstyle1" -1 205 "Times" 0 
+1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle2" -1 206 "Times" 0 1 
+0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle3" -1 202 1 {CSTYLE "" 
+-1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 
+-1 1 }}
+{SECT 0 {EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 57 "restart; with(plot
+s): with(LinearAlgebra): with(DEtools):" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 73 "Wit
+h x1 = N1/K1, x2 := N2/K2, b1 =a1K2,  b2=a2 K1, the system becomes ...
+" }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 0 50 "f1 := (x1, x2) -> r1 * x1 * (1-x1) - b1
+ * x1 * x2;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 50 
+"f2 := (x1, x2) -> r2 * x2 * (1-x2) - b2 * x1 * x2;" }{MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" 
+{TEXT 205 36 "Determination of the fixed points..." }{TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 49 "fp :=solve(\{f1(x1, x2)=0, f2(x1, x2)=0\},\{x1,x2\});
+" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 93 "4 possi
+bilities: all species extinct, species 2 extinct, species 1 extinct, a
+nd co-existence " }{TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 
+205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 40 "Phase-plane plots, define t
+he system ..." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 41 "eq1 := diff(x1(t), t) = f1
+(x1(t), x2(t));" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+0 41 "eq2 := diff(x2(t), t) = f2(x1(t), x2(t));" }{MPLTEXT 1 0 0 "" }}
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 15 "sys := eq1,eq2;" }{MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" 
+{TEXT 205 4 "Use " }{TEXT 206 13 "phaseportrait" }{TEXT 205 26 " to sh
+ow the behaviour ..." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 
+"" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 35 "r1 := 3; r2 := 2; b1
+ := 0; b2 := 0;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 
+0 44 "phaseportrait([sys], [x1(t),x2(t)], t=0..30," }{MPLTEXT 1 0 0 ""
+ }{MPLTEXT 1 0 91 "\n[[x1(0)=0.1,x2(0)=1.3],[x1(0)=0.1,x2(0)=0.2],[x1(
+0)=1.2,x2(0)=0.2],[x1(0)=1.2,x2(0)=1.3]]," }{MPLTEXT 1 0 0 "" }
+{MPLTEXT 1 0 46 "\nx1=0..3/2,x2=0..3/2,stepsize=0.05,color=red);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 51 "No compete
+tion, so co-existence is the solution ..." }{TEXT 205 0 "" }}}{EXCHG 
+{PARA 201 "" 0 "" {TEXT 205 1 " " }{TEXT 205 0 "" }}{PARA 200 "> " 0 "
+" {MPLTEXT 1 0 35 "r1 := 3; r2 := 2; b1 := 1; b2 := 2;" }{MPLTEXT 1 0 
+0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 44 "phaseportrait([sys], [x1(t
+),x2(t)], t=0..30," }{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 91 "\n[[x1(0)=0.1
+,x2(0)=1.3],[x1(0)=0.1,x2(0)=0.2],[x1(0)=1.2,x2(0)=0.2],[x1(0)=1.2,x2(
+0)=1.3]]," }{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 46 "\nx1=0..3/2,x2=0..3/2,
+stepsize=0.05,color=red);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0
+ "" {TEXT 205 46 "with this competition the sheep go extinct ..." }
+{TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 1 " " }{TEXT 205 
+0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 35 "r1 := 3; r2 := 2; b1 := 3;
+ b2 := 1;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 44 "p
+haseportrait([sys], [x1(t),x2(t)], t=0..30," }{MPLTEXT 1 0 0 "" }
+{MPLTEXT 1 0 91 "\n[[x1(0)=0.1,x2(0)=1.3],[x1(0)=0.1,x2(0)=0.2],[x1(0)
+=1.2,x2(0)=0.2],[x1(0)=1.2,x2(0)=1.3]]," }{MPLTEXT 1 0 0 "" }{MPLTEXT 
+1 0 46 "\nx1=0..3/2,x2=0..3/2,stepsize=0.05,color=red);" }{MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 31 "now the rabbits went \+
+extint ..." }{TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 1 " \+
+" }{TEXT 205 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 35 "r1 := 3; r2 :
+= 2; b1 := 4; b2 := 3;" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 44 "phaseportrait([sys], [x1(t),x2(t)], t=0..30," }
+{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 91 "\n[[x1(0)=0.1,x2(0)=1.3],[x1(0)=0.
+1,x2(0)=0.2],[x1(0)=1.2,x2(0)=0.2],[x1(0)=1.2,x2(0)=1.3]]," }{MPLTEXT 
+1 0 0 "" }{MPLTEXT 1 0 46 "\nx1=0..3/2,x2=0..3/2,stepsize=0.05,color=r
+ed);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 59 "Wit
+h these competition rules, co-existence was possible ..." }{TEXT 205 
+0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" 
+{TEXT 205 28 "Linear stability analysis..." }{TEXT 205 0 "" }}{PARA 
+201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" 
+}}{PARA 201 "" 0 "" {TEXT 205 41 "Jacobian matrix, calculate derivativ
+es..." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 39 "r1:='r1'; r2:='r2'; b1:='b1'; b2:
+='b2';" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 
+-1 68 "jacmat := VectorCalculus:-Jacobian([f1(x1,x2), f2(x1,x2)], [x1,
+x2]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }
+}{PARA 201 "" 0 "" {TEXT 205 72 "substitute the 4 fixed points (calcul
+ated under 4.1.b) into the Jacobian" }{TEXT 205 0 "" }}{PARA 201 "" 0 
+"" {TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 29 "jacfp
+1 := subs(fp[1],jacmat);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 
+0 "" {MPLTEXT 1 0 29 "jacfp2 := subs(fp[2],jacmat);" }{MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 29 "jacfp3 := subs(fp[3],
+jacmat);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 
+0 29 "jacfp4 := subs(fp[4],jacmat);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 46 "cal
+culate eigenvalues for each fixed point ..." }{TEXT 205 0 "" }}{PARA 
+201 "" 0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 
+6 "fp[1];" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 
+1 -1 57 "evalf(Eigenvalues( subs(\{r1=3,r2=2,b1=0,b2=0\},jacfp1) ));" 
+}{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 20 "this fp  \+
+is unstable" }{TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 
+0 6 "fp[2];" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 55 "evalf(Eigenvalues(subs(\{r1=3,r2=2,b1=0,b2=0\},jacfp2
+)));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 18 "sad
+dle: ->unstable" }{TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 6 "fp[3];" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 
+"" {MPLTEXT 1 0 55 "evalf(Eigenvalues(subs(\{r1=3,r2=2,b1=0,b2=0\},jac
+fp3)));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 18 "
+saddle: ->unstable" }{TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 6 "fp[4];" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 
+"" {MPLTEXT 1 0 55 "evalf(Eigenvalues(subs(\{r1=3,r2=2,b1=0,b2=0\},jac
+fp4)));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 43 "
+two negative eigenvalues, so it is stable. " }{TEXT 205 0 "" }}{PARA 
+201 "" 0 "" {TEXT 205 81 "Interpretation: for the case of no competiti
+on (b=0), coexistence is no problem. " }{TEXT 205 0 "" }}{PARA 201 "" 
+0 "" {TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}
+{PARA 201 "" 0 "" {TEXT 205 66 "the same procedure can be used for the
+ other values of r1,r2,b1,b2" }{TEXT 205 0 "" }}{PARA 201 "" 0 "" 
+{TEXT 205 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 46 "Find critical
+ b2 for the species to coexist..." }{TEXT 205 0 "" }}{PARA 201 "" 0 ""
+ {TEXT 205 42 "coexistence is repesented by fixed point 4" }{TEXT 205 
+0 "" }}{PARA 201 "" 0 "" {TEXT 205 80 "1) calculate eigenvalues of Jac
+obian matrix in fixed point 4, for arbitrary b2=b" }{TEXT 205 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 55 "lam := Eigenvalues(subs(\{
+r1=3,r2=2,b1=1,b2=b\},jacfp4));" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 0 18 "solve(lam[1]=0,b);" }{MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 16 "no solution ...." }{TEXT 
+205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 18 "solve(lam[2]=0
+,b);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 15 "yie
+lds b = 2 .." }{TEXT 205 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 
+1 0 38 "plot(\{Re(lam[1]),Re(lam[2])\},b=-1..5);" }{MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 205 0 "" }}{PARA 201 "" 0 "" 
+{TEXT 205 61 "b=2 is critical (for b > 2 the fixed point becomes unsta
+ble)." }{TEXT 205 0 "" }}{PARA 201 "" 0 "" {TEXT 205 0 "" }}}{PARA 
+202 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 1 
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

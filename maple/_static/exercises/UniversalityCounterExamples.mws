@@ -1,0 +1,211 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Dash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Wa
+rning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 
+0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Bullet Item" -1 15 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 
+3 2 0 2 0 2 2 -1 2 }{PSTYLE "_pstyle7" -1 200 1 {CSTYLE "" -1 -1 "Cour
+ier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle3" -1 201 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Prin
+ted Output" -1 6 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 
+2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 4" -1 
+20 1 {CSTYLE "" -1 -1 "Times" 1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 
+0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "T
+imes" 1 12 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 -1 "Times" 1 14 0 0 0 1 2 1 
+2 2 2 2 0 0 0 1 }1 1 0 0 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Output" 
+-1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 
+3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 
+-1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 4 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Author" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }3 1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Plot
+" -1 13 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 
+"Courier" 1 9 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 
+2 -1 1 }{PSTYLE "Left Justified Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Text
+ Output" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 
+0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "List Item" -1 14 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 
+3 2 0 2 0 2 2 -1 5 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 
+1 10 255 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 
+}{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Courier" 1 10 64 128 
+64 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Ti
+tle" -1 18 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 
+1 }3 1 0 0 12 12 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 
+0 2 2 -1 1 }{PSTYLE "_pstyle58" -1 202 1 {CSTYLE "" -1 -1 "" 0 1 0 0 
+0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle57" -1 203 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle15" -1 204 1 {CSTYLE 
+"" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle13" -1 205 1 {CSTYLE "" -1 -1 "Times" 1 
+24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{CSTYLE "LaTeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Map
+le Comment" -1 21 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "
+2D Math Bold" -1 5 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "H
+elp Underlined" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }
+{CSTYLE "Output Labels" -1 29 "Times" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 
+}{CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }{CSTYLE "Page Number" -1 33 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 
+1 }{CSTYLE "Maple Input Placeholder" -1 200 "Courier" 1 12 200 0 200 
+1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 
+2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic Small" -1 202 "Times" 0 1 0 
+0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 
+0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 
+0 0 0 0 1 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Normal" -1 30 "Times" 1 12 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Nonterminal" -1 24 "Courier
+" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times
+" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" 
+-1 43 "Times" 1 12 0 0 0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 
+2 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "
+Times" 1 10 0 0 0 0 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Hyperlink" -1 17 "" 
+0 1 0 128 128 1 2 0 1 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 
+10 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle22" -1 203 "Times" 1 
+18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 0 1 
+255 0 0 1 0 0 2 2 1 2 0 0 0 1 }{CSTYLE "_cstyle20" -1 204 "Times" 1 
+24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Maple Name" -1 35 "" 0 
+1 104 64 92 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Italic" -1 42 "Times"
+ 1 12 0 0 0 0 1 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 
+41 "Times" 1 12 0 0 0 0 0 1 1 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "
+" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier
+" 1 10 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 
+45 "" 0 1 147 0 15 1 2 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "T
+imes" 0 1 0 0 255 1 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 
+3 "Times" 0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 
+1 0 128 128 1 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "T
+imes" 0 1 0 0 0 0 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 
+8 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 
+0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 
+0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 
+0 2 2 2 0 0 0 1 }{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 
+2 2 2 0 0 0 1 }{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 
+2 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 205 "Times" 0 1 0 0 0 0 0 0 
+0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 
+0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Emphasized" -1 206 "" 0 1 0 0 0 
+0 1 2 0 2 2 2 0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 
+0 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle1" -1 206 1 {CSTYLE "" -1 -1 "Times
+" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle2" -1 207 1 {CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 
+0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle4" 
+-1 208 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 
+0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle5" -1 209 1 {CSTYLE "" 
+-1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{CSTYLE "_cstyle1" -1 207 "Courier" 1 12 255 0 0 1 2 1 
+2 2 1 2 0 0 0 1 }{PSTYLE "_pstyle6" -1 210 1 {CSTYLE "" -1 -1 "Times" 
+1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle8" -1 211 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle2" -1 208 "Co
+urier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{PSTYLE "_pstyle9" -1 212 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 
+0 2 0 2 2 -1 1 }{CSTYLE "_cstyle4" -1 209 "Times" 0 1 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle5" -1 210 "Times" 0 1 0 0 0 0 0 2 0 2 2 
+2 0 0 0 1 }{PSTYLE "_pstyle10" -1 213 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{CSTYLE 
+"_cstyle6" -1 211 "Courier" 1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 1 }
+{CSTYLE "_cstyle7" -1 212 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+{PSTYLE "_pstyle11" -1 214 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 206 "" 0 "" {TEXT 205 0 "" }}{PARA 207 "" 0 "" 
+{TEXT 204 37 " Universality study: counter examples" }{TEXT 204 0 "" }
+}{PARA 208 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 209 "> " 0 "" 
+{MPLTEXT 1 207 21 "restart; with(plots):" }{MPLTEXT 1 207 0 "" }}}
+{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 13 "Digits := 20;" }
+{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 35 "f
+ := x -> r * (1-abs(2*x-1)^(eta));" }{MPLTEXT 1 207 0 "" }}}{EXCHG 
+{PARA 209 "> " 0 "" {MPLTEXT 1 207 12 "eta := 0.65;" }{MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 9 "r := 0.8;" }
+{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 27 "p
+lot([f(x),x],x=0..1,0..1);" }{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "
+> " 0 "" {MPLTEXT 1 207 7 "N:=500;" }{MPLTEXT 1 207 0 "" }}}{EXCHG 
+{PARA 209 "> " 0 "" {MPLTEXT 1 0 18 "xs := Array(1..N):" }{MPLTEXT 1 
+0 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 13 "xs[1] := 0.1:" }
+{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 \+
+to N-1 do" }{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 31 " \+
+ xs[n+1] := evalf( f(xs[n]) );" }{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 
+"" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 209 "> \+
+" 0 "" {MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 
+207 27 "l := seq([n,xs[n]],n=1..N):" }{MPLTEXT 1 207 0 "" }}}{EXCHG 
+{PARA 209 "> " 0 "" {MPLTEXT 1 207 58 "pointplot([l],labels=[\"n\",\"x
+n\"],color=blue,symbolsize=10);" }{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 
+209 "> " 0 "" {MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" 
+{MPLTEXT 1 207 40 "xr := seq([xs[i], xs[i+1]], i=N/2..N-1):" }
+{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 55 "plo
+t([[xr], f(x)], x=0..1, y=0..1, style=[point, line]," }{MPLTEXT 1 0 
+42 "color=[red,black], labels=[\"xn\", \"xn+1\"]);" }{MPLTEXT 1 0 0 ""
+ }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 
+209 "> " 0 "" {MPLTEXT 1 207 9 "r := 'r';" }{MPLTEXT 1 207 0 "" }}}
+{EXCHG {PARA 206 "" 0 "" {TEXT 205 0 "" }}{PARA 210 "" 0 "" {TEXT 203 
+19 "Bifurcation diagram" }{TEXT 203 0 "" }}{PARA 206 "" 0 "" {TEXT 
+205 0 "" }}}{EXCHG {PARA 211 "> " 0 "" {MPLTEXT 1 208 46 "N := 200; Nr
+ := 200; rmin := 0.0; rmax := 1.0;" }{MPLTEXT 1 208 0 "" }}}{EXCHG 
+{PARA 209 "> " 0 "" {MPLTEXT 1 0 20 "Nmin := ceil(0.5*N);" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 18 "xs := Array(1.
+.N):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 
+14 "xs[1] := 0.57:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 209 "> " 0 "" 
+{MPLTEXT 1 0 21 "for i from 0 to Nr do" }{MPLTEXT 1 0 0 "" }}{PARA 
+209 "> " 0 "" {MPLTEXT 1 0 40 "  r := evalf(rmin + (rmax - rmin)*i/Nr)
+;" }{MPLTEXT 1 0 0 "" }}{PARA 212 "" 0 "" {TEXT 209 7 "       " }
+{TEXT 210 25 "Calculate the x[n] series" }{TEXT 209 0 "" }}{PARA 209 "
+> " 0 "" {MPLTEXT 1 0 62 "  for n from 1 to N-1 do xs[n+1] := evalf( f
+(xs[n]) ); end do:" }{MPLTEXT 1 0 0 "" }}{PARA 213 "" 0 "" {TEXT 201 
+69 "      Store the converged last part as a series for plotting purpo
+ses" }{TEXT 201 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 36 "  pl[i] :=
+ seq([r,xs[n]],n=Nmin..N);" }{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 "" 
+{MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 213 "" 0 "
+" {TEXT 201 28 "plot the bifurcation diagram" }{TEXT 201 0 "" }}}
+{EXCHG {PARA 211 "> " 0 "" {MPLTEXT 1 211 77 "pointplot([seq(pl[i],i=1
+..Nr)],symbolsize=1,labels=[\"r\", \"x(r)\"],color=blue);" }{MPLTEXT 
+1 211 0 "" }}}{EXCHG {PARA 208 "" 0 "" {TEXT -1 0 "" }}{PARA 207 "" 0 
+"" {TEXT 204 40 " Universality study: 2nd counter example" }{TEXT 204 
+0 "" }}{PARA 208 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 209 "> " 0 "" 
+{MPLTEXT 1 207 21 "restart; with(plots):" }{MPLTEXT 1 207 0 "" }}}
+{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 30 "f := x->3.5*r*(1-r)*sin(
+Pi*x);" }{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 
+207 9 "r := 0.6;" }{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" 
+{MPLTEXT 1 207 27 "plot([f(x),x],x=0..1,0..1);" }{MPLTEXT 1 207 0 "" }
+}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 7 "N:=500;" }{MPLTEXT 1 
+207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 18 "xs := Array(1.
+.N):" }{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 13 "xs[1] \+
+:= 0.1:" }{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 22 "for
+ n from 1 to N-1 do" }{MPLTEXT 1 0 0 "" }}{PARA 209 "> " 0 "" 
+{MPLTEXT 1 0 31 "  xs[n+1] := evalf( f(xs[n]) );" }{MPLTEXT 1 0 0 "" }
+}{PARA 209 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> \+
+" 0 "" {MPLTEXT 1 207 27 "l := seq([n,xs[n]],n=1..N):" }{MPLTEXT 1 
+207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 58 "pointplot([l
+],labels=[\"n\",\"xn\"],color=blue,symbolsize=10);" }{MPLTEXT 1 207 0 
+"" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 
+209 "> " 0 "" {MPLTEXT 1 207 40 "xr := seq([xs[i], xs[i+1]], i=N/2..N-
+1):" }{MPLTEXT 1 207 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 
+55 "plot([[xr], f(x)], x=0..1, y=0..1, style=[point, line]," }
+{MPLTEXT 1 0 42 "color=[red,black], labels=[\"xn\", \"xn+1\"]);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 0 "" }}
+}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 207 9 "r := 'r';" }{MPLTEXT 1 
+207 0 "" }}}{EXCHG {PARA 206 "" 0 "" {TEXT 205 0 "" }}{PARA 210 "" 0 "
+" {TEXT 203 19 "Bifurcation diagram" }{TEXT 203 0 "" }}{PARA 206 "" 0 
+"" {TEXT 205 0 "" }}}{EXCHG {PARA 211 "> " 0 "" {MPLTEXT 1 208 46 "N :
+= 200; Nr := 200; rmin := 0.0; rmax := 1.0;" }{TEXT 212 0 "" }}}
+{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 20 "Nmin := ceil(0.5*N);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 18 "xs :=
+ Array(1..N):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 209 "> " 0 "" 
+{MPLTEXT 1 0 14 "xs[1] := 0.57:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+209 "> " 0 "" {MPLTEXT 1 0 21 "for i from 0 to Nr do" }{MPLTEXT 1 0 0 
+"" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 40 "  r := evalf(rmin + (rmax - \+
+rmin)*i/Nr);" }{MPLTEXT 1 0 0 "" }}{PARA 212 "" 0 "" {TEXT 209 7 "    \+
+   " }{TEXT 210 25 "Calculate the x[n] series" }{TEXT 212 0 "" }}
+{PARA 209 "> " 0 "" {MPLTEXT 1 0 62 "  for n from 1 to N-1 do xs[n+1] \+
+:= evalf( f(xs[n]) ); end do:" }{MPLTEXT 1 0 0 "" }}{PARA 213 "" 0 "" 
+{TEXT 201 69 "      Store the converged last part as a series for plot
+ting purposes" }{TEXT 201 0 "" }}{PARA 209 "> " 0 "" {MPLTEXT 1 0 36 "
+  pl[i] := seq([r,xs[n]],n=Nmin..N);" }{MPLTEXT 1 0 0 "" }}{PARA 209 "
+> " 0 "" {MPLTEXT 1 0 7 "end do:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+213 "" 0 "" {TEXT 201 28 "plot the bifurcation diagram" }{TEXT 201 0 "
+" }}}{EXCHG {PARA 211 "> " 0 "" {MPLTEXT 1 211 77 "pointplot([seq(pl[i
+],i=1..Nr)],symbolsize=2,labels=[\"r\", \"x(r)\"],color=blue);" }
+{TEXT 212 0 "" }}}{EXCHG {PARA 209 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{PARA 214 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 
+1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

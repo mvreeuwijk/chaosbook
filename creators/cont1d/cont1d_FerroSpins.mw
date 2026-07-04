@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="15" minor="0"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false"></View-Properties>
+<MapleNet-Properties elisiondigitsbefore="100" labelling="true" indentamount="4" elisiontermsthreshold="10000" ansi="false" errorbreak="1" useclientjvm="true" echo="1" imaginaryunit="I" labelwidth="20" contextmenusize="automatic" plotdriver="opengl" elisiondigitsafter="100" plotoutput="terminal" helpbrowser="standard" rtablesize="10" elisiontermsbefore="100" elisiondigitsthreshold="10000" typesetting="standard" plotdevice="inline" verboseproc="1" showassumed="1" errorcursor="false" longdelim="true" plotoptions="" quiet="false" elisiontermsafter="100" screenwidth="79" preplot="[]" prettyprint="3" displayprecision="-1" screenpixelheight="768" warnlevel="3" screenheight="25" latexwidth="6.0" postplot="[]" prompt="&gt; " ShowLabels="true"/>
+<Styles><Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Maple Name" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[104,64,92]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Bold" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Menus" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Italic" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Fixed Width" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Plot Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="8" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Nonterminal" background="[255,255,255]" bold="true" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Heading" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Italic" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Variable" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Italic Bold" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Default" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Underlined Italic" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Monospaced" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math Bold Small" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="1" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Small" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="1" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Page Number" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Output Labels" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="8" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Plot Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Emphasized" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Symbol 2" background="[255,255,255]" bold="false" executable="false" family="SymbolPi" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Comment" background="[255,255,255]" bold="true" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="9" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[64,128,64]" italic="false" opaque="false" readonly="true" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Italic Small" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="1" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Comment" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Underlined Bold" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Copyright" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Help Underlined" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Prompt" background="[255,255,255]" bold="true" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Notes" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Bold" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="LaTeX" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Popup" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Left Justified Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Fixed" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Fixed Width" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Help" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.5" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Left Justified Maple Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.5" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+</Styles>
+<Task-table>
+    <Task-category name="&lt;default&gt;">
+    </Task-category>
+</Task-table>
+<Task>
+</Task>
+<Group labelreference="L3" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart; with(plots):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6215" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L76" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">K := 20; </Text-field>
+</Input>
+</Group>
+<Group labelreference="L4" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">N := K*K;                   # number of spins</Text-field>
+</Input>
+</Group>
+<Group labelreference="L549" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state := proc(s)       # show the current state 
+local i,j;
+global K;
+  listdensityplot([seq([seq(s[j+K*(i-1)],i=1..K)],j=1..K)],range=-1..1,axes=none);
+end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L900" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">choose_spin := 1 + rand(N): # choose spin at random</Text-field>
+</Input>
+</Group>
+<Group labelreference="L598" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">R := 10000: 
+random := evalf(rand(R)/R): # draw rnd nr from (0..1]</Text-field>
+</Input>
+</Group>
+<Group labelreference="L949" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L635" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">s  := Array(1..N,1):        # define spins and set to +1</Text-field>
+</Input>
+</Group>
+<Group labelreference="L711" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">P := 0.3;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L710" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to N do 
+  if( random() &lt; P ) then   # flip or not
+     s[i] := -s[i]; 
+  end if;
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L601" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state(s);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L953" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L951" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">T := 0.5;                   # set Temperature</Text-field>
+</Input>
+</Group>
+<Group labelreference="L16" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter := 10000;              # set number of iterations</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7710" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">m := 0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L50" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots := 0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6232" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter/5;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L631" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to iter do
+
+  # dynamics
+
+  i := choose_spin();
+  h_i := evalf(add(s[j],j=1..N)/N);         # calc local field
+  P := evalf((1 + tanh(s[i]*h_i/T))/2.0);   # calc transition prob
+  if( random() &gt; P ) then                   # flip spin or not
+     s[i] := -s[i]; 
+  end if; 
+
+  # store some plots
+
+  if( n mod 1000 = 0 ) then 
+    nrplots := nrplots + 1; 
+    pl[nrplots] := show_state(s);
+  end if;
+
+  # store mean state
+  x[n] := evalf(add(s[j],j=1..N)/N); 
+
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L954" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># animate evolution of spins ...</Text-field>
+</Input>
+</Group>
+<Group labelreference="L57" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(seq(pl[k],k=1..nrplots),insequence=true);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L957" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># show mean state in time</Text-field>
+</Input>
+</Group>
+<Group labelreference="L62" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">M_T_0_50a :=plot([seq([n/N,x[n]],n=0..iter,10)],view=[0..iter/N,-1..1],labels=[&quot;t&quot;,&quot;x(t)&quot;],thickness=3,color=black,title=&quot;T=0.5&quot;,labeldirections=[horizontal,vertical],labelfont = [&quot;HELVETICA&quot;, 20],titlefont = [&quot;HELVETICA&quot;, 20], axesfont = [&quot;HELVETICA&quot;, &quot;HELVETICA&quot;, 20],axes=boxed):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7709" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pzero := plot(0,t=0..25,thickness=1,color=black):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6889" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6890" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_0_50a,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6888" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6891" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_0_50a,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6887" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6886" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6668" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">x[0];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6297" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_a0.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6305" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[1]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6299" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_a1.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6306" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[2]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6301" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_a2.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6307" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[3]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6303" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_a3.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6314" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[4]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6312" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_a4.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6317" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[5]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6318" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_a5.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6323" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[6]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6388" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6389" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6390" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6381" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#restart; with(plots):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6385" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6380" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">K := 20; </Text-field>
+</Input>
+</Group>
+<Group labelreference="L6387" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">N := K*K;                   # number of spins</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6382" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state := proc(s)       # show the current state 
+local i,j;
+global K;
+  listdensityplot([seq([seq(s[j+K*(i-1)],i=1..K)],j=1..K)],range=-1..1,axes=none);
+end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6386" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">choose_spin := 1 + rand(N): # choose spin at random</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6383" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">R := 10000: 
+random := evalf(rand(R)/R): # draw rnd nr from (0..1]</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6384" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6352" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6376" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">s  := Array(1..N,-1):        # define spins and set to +1</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6367" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">P := 0.3;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6366" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to N do 
+  if( random() &lt; P ) then   # flip or not
+     s[i] := -s[i]; 
+  end if;
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6362" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state(s);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6359" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6361" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">T := 0.5;                   # set Temperature</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6364" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter := 10000;              # set number of iterations</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6363" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots := 0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6377" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter/5;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6378" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to iter do
+
+  # dynamics
+
+  i := choose_spin();
+  h_i := evalf(add(s[j],j=1..N)/N);         # calc local field
+  P := evalf((1 + tanh(s[i]*h_i/T))/2.0);   # calc transition prob
+  if( random() &gt; P ) then                   # flip spin or not
+     s[i] := -s[i]; 
+  end if; 
+
+  # store some plots
+
+  if( n mod 1000 = 0 ) then 
+    nrplots := nrplots + 1; 
+    pl[nrplots] := show_state(s);
+  end if;
+
+  # store mean state
+  x[n] := evalf(add(s[j],j=1..N)/N); 
+
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6356" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># animate evolution of spins ...</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6358" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(seq(pl[k],k=1..nrplots),insequence=true);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6355" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># show mean state in time</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6365" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([seq([n,x[n]],n=0..iter)],view=[0..iter/N,-1..1],labels=[&quot;t&quot;,&quot;x(t)&quot;],thickness=3,color=black);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6907" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">M_T_0_50b :=plot([seq([n/N,x[n]],n=0..iter,10)],view=[0..iter/N,-1..1],labels=[&quot;t&quot;,&quot;x(t)&quot;],thickness=3,color=black,title=&quot;T=0.5&quot;,labeldirections=[horizontal,vertical],labelfont = [&quot;HELVETICA&quot;, 20],titlefont = [&quot;HELVETICA&quot;, 20], axesfont = [&quot;HELVETICA&quot;, &quot;HELVETICA&quot;, 20],axes=boxed):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6910" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6908" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_0_50a,M_T_0_50b,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6911" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6909" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_0_50a,M_T_0_50b,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6906" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6669" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">x[0];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6373" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_b0.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6370" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[1]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6375" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_b1.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6371" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[2]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6374" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_b2.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6379" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[3]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6372" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_b3.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6354" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[4]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6360" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_b4.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6357" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[5]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6369" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_0_50_b5.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6368" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[6]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6353" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6319" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6281" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6231" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#display(pl[nrplots]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L65" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L66" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6501" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#restart; with(plots):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6507" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6500" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">K := 20; </Text-field>
+</Input>
+</Group>
+<Group labelreference="L6512" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">N := K*K;                   # number of spins</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6503" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state := proc(s)       # show the current state 
+local i,j;
+global K;
+  listdensityplot([seq([seq(s[j+K*(i-1)],i=1..K)],j=1..K)],range=-1..1,axes=none);
+end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6510" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">choose_spin := 1 + rand(N): # choose spin at random</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6505" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">R := 10000: 
+random := evalf(rand(R)/R): # draw rnd nr from (0..1]</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6506" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6534" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6535" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">s  := Array(1..N,1):        # define spins and set to +1</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6516" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">P := 0.1;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6515" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to N do 
+  if( random() &lt; P ) then   # flip or not
+     s[i] := -s[i]; 
+  end if;
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6499" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state(s);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6529" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6498" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">T := 1.5;                   # set Temperature</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6504" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter := 10000;              # set number of iterations</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6502" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots := 0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6536" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter/5;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6532" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to iter do
+
+  # dynamics
+
+  i := choose_spin();
+  h_i := evalf(add(s[j],j=1..N)/N);         # calc local field
+  P := evalf((1 + tanh(s[i]*h_i/T))/2.0);   # calc transition prob
+  if( random() &gt; P ) then                   # flip spin or not
+     s[i] := -s[i]; 
+  end if; 
+
+  # store some plots
+
+  if( n mod 1000 = 0 ) then 
+    nrplots := nrplots + 1; 
+    pl[nrplots] := show_state(s);
+  end if;
+
+  # store mean state
+  x[n] := evalf(add(s[j],j=1..N)/N); 
+
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6521" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># animate evolution of spins ...</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6530" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(seq(pl[k],k=1..nrplots),insequence=true);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6523" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># show mean state in time</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6514" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([seq([n,x[n]],n=0..iter)],view=[0..iter/N,-1..1],labels=[&quot;t&quot;,&quot;x(t)&quot;],thickness=3,color=black);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6975" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">M_T_1_50a :=plot([seq([n/N,x[n]],n=0..iter,10)],view=[0..iter/N,-1..1],labels=[&quot;t&quot;,&quot;x(t)&quot;],thickness=3,color=black,title=&quot;T=1.5&quot;,labeldirections=[horizontal,vertical],labelfont = [&quot;HELVETICA&quot;, 20],titlefont = [&quot;HELVETICA&quot;, 20], axesfont = [&quot;HELVETICA&quot;, &quot;HELVETICA&quot;, 20],axes=boxed):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6978" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6976" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_1_50a,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6979" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6977" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_1_50a,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6974" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6670" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">x[0];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6525" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_a0.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6526" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[1]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6520" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_a1.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6528" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[2]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6519" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_a2.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6533" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[3]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6522" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_a3.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6524" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[4]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6509" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_a4.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6518" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[5]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6511" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_a5.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6517" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[6]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6531" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6513" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6496" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6527" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#display(pl[nrplots]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6497" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6508" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6495" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">x[0];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6731" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6732" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6756" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#restart; with(plots):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6737" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6758" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">K := 20; </Text-field>
+</Input>
+</Group>
+<Group labelreference="L6771" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">N := K*K;                   # number of spins</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6754" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state := proc(s)       # show the current state 
+local i,j;
+global K;
+  listdensityplot([seq([seq(s[j+K*(i-1)],i=1..K)],j=1..K)],range=-1..1,axes=none);
+end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6775" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">choose_spin := 1 + rand(N): # choose spin at random</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6741" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">R := 10000: 
+random := evalf(rand(R)/R): # draw rnd nr from (0..1]</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6738" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6769" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6768" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">s  := Array(1..N,-1):        # define spins and set to +1</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6760" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">P := 0.1;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6774" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to N do 
+  if( random() &lt; P ) then   # flip or not
+     s[i] := -s[i]; 
+  end if;
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6736" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">show_state(s);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6743" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6739" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">T := 1.5;                   # set Temperature</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6755" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter := 10000;              # set number of iterations</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6757" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots := 0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6770" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">iter/5;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6767" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to iter do
+
+  # dynamics
+
+  i := choose_spin();
+  h_i := evalf(add(s[j],j=1..N)/N);         # calc local field
+  P := evalf((1 + tanh(s[i]*h_i/T))/2.0);   # calc transition prob
+  if( random() &gt; P ) then                   # flip spin or not
+     s[i] := -s[i]; 
+  end if; 
+
+  # store some plots
+
+  if( n mod 1000 = 0 ) then 
+    nrplots := nrplots + 1; 
+    pl[nrplots] := show_state(s);
+  end if;
+
+  # store mean state
+  x[n] := evalf(add(s[j],j=1..N)/N); 
+
+end do:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6748" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># animate evolution of spins ...</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6765" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(seq(pl[k],k=1..nrplots),insequence=true);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6753" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># show mean state in time</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7233" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6981" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">M_T_1_50b :=plot([seq([n/N,x[n]],n=0..iter,10)],view=[0..iter/N,-1..1],labels=[&quot;t&quot;,&quot;x(t)&quot;],thickness=3,color=black,title=&quot;T=1.5&quot;,labeldirections=[horizontal,vertical],labelfont = [&quot;HELVETICA&quot;, 20],titlefont = [&quot;HELVETICA&quot;, 20], axesfont = [&quot;HELVETICA&quot;, &quot;HELVETICA&quot;, 20],axes=boxed):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6984" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7630" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6982" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#display(M_T_1_50a,M_T_1_50b,axis = [gridlines=[subticks=false,majorlines=5,linestyle=solid,color=red,thickness=3],tickmarks = [5, subticks = 3,color=red,thickness=3]]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7579" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#display(M_T_1_50a,M_T_1_50b,axis[2]=[tickmarks=5,gridlines=[subticks=false,majorlines=2,color=black]]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7468" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#?gridlines</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6983" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6985" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(M_T_1_50a,M_T_1_50b,pzero);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6980" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6764" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">x[0];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6751" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_b0.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6750" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[1]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6749" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_b1.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6746" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[2]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6761" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_b2.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6766" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[3]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6747" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_b3.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6752" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[4]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6734" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_b4.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6762" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[5]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6776" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps,plotoutput=&quot;cont1d_ferro_spin_T_1_50_b5.eps&quot;,plotoptions=`portrait,noborder,width=400,height=400`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6759" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(pl[6]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6763" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6772" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6742" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6745" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#display(pl[nrplots]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6740" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nrplots;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6735" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6744" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">x[0];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6733" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6667" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L6805" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Worksheet>

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="7" minor="0"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false"></View-Properties>
+<MapleNet-Properties warnlevel="3" longdelim="true" plotoptions="" echo="1" errorcursor="false" elisiontermsthreshold="10000" elisiontermsbefore="100" errorbreak="1" prettyprint="3" prompt="&gt; " latexwidth="6.0" useclientjvm="true" ansi="false" screenheight="25" labelwidth="20" plotdevice="inline" typesetting="standard" displayprecision="-1" indentamount="4" elisiondigitsthreshold="10000" quiet="false" plotoutput="terminal" rtablesize="10" preplot="[]" showassumed="1" plotdriver="openviz" elisiontermsafter="100" labelling="true" postplot="[]" screenwidth="79" elisiondigitsbefore="100" elisiondigitsafter="100" verboseproc="1" imaginaryunit="I" ShowLabels="true"/>
+<Styles><Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Serif" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Text" background="[0,0,0]" bold="false" executable="false" family="Lucida Bright" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Serif" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false"/>
+<Font name="Page Number" background="[0,0,0]" bold="false" executable="false" family="Lucida Bright" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Normal" background="[0,0,0]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Maple Input" background="[0,0,0]" bold="true" executable="true" family="Monospaced" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Serif" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Serif" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Monospaced" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Serif" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Serif" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true"/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1"/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0"/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1"/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0"/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1"/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0"/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1"/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0"/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1"/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+</Styles>
+<Page-Numbers enabled="false" first-number="1" first-numbered-page="1" horizontal-location="right" style="Page Number" vertical-location="bottom"/>
+<Task-table>
+    <Task-category name="&lt;default&gt;">
+    </Task-category>
+</Task-table>
+<Group labelreference="L2" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart: with(plots):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L3" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font family="Lucida Bright">Define Rossler system</Font></Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L4" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">f1 := (x,y,z) -&gt; -y-z;</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">f2 := (x,y,z) -&gt; x+a*y;</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">f3 := (x,y,z) -&gt;  b + z*(x-c);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">eq1 := diff(x(t),t) = f1(x(t),y(t),z(t)):</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">eq2 := diff(y(t),t) = f2(x(t),y(t),z(t)):</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">eq3 := diff(z(t),t) = f3(x(t),y(t),z(t)):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L6" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">sys:=eq1,eq2,eq3;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">ic:=(x(0)=1,y(0)=0,z(0)=0);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L8" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal"><Font family="Lucida Bright">c=3 (period 1)</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L9" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">a := 0.432; b := 2; c:= 3;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L10" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0 := 0; t1 := 100; N := 1000;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">tt := Array(1..N, i-&gt; evalf(i/N) * (t1 - t0));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L11" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">sol_arr := dsolve({sys,ic},[x(t),y(t),z(t)],type=numeric,maxfun=-1,output=tt):</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">soldd:=sol_arr[2,1];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">tt := soldd[1..N, 1]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">xx := soldd[1..N, 2]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">yy := soldd[1..N, 3]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">zz := soldd[1..N, 4]:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L12" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([tt[i], xx[i]], i=1..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([pp], labels=[&quot;t&quot;, &quot;x&quot;], color='blue');</Text-field>
+</Input>
+</Group>
+<Group labelreference="L13" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([xx[i], yy[i], zz[i]], i=1..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">spacecurve([pp], labels=[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;], axes=normal, color=blue);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L14" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal"><Font family="Lucida Bright">c=2, without transient ...</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L15" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([tt[i], xx[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([pp], labels=[&quot;t&quot;, &quot;x&quot;], color='blue');</Text-field>
+</Input>
+</Group>
+<Group labelreference="L16" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([xx[i], yy[i], zz[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod1a.eps`, plotoptions=`portrait,noborder,width=7cm,height=7cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">spacecurve([pp], labels=[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;], axes=normal, color=blue, orientation=[-72,55], view=[-6..6,-6..6, 0..10]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L17" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pcx1 := NULL;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from N/2 to N-1 do</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  if(xx[i] &gt; xx[i-1] and xx[i] &gt; xx[i+1]) then</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">    pcx1 := pcx1, xx[i];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  end if;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">end do;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L18" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod1b.eps`, plotoptions=`portrait,noborder,width=7cm,height=3cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">listplot([pcx1], style=point, view=[1..nops([pcx1]), 0..8], labels=[&quot;n&quot;, &quot;x[n]&quot;], labeldirections=[horizontal, vertical], symbol=diamond, symbolsize=30);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L19" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal"><Font family="Lucida Bright">c=3.4 (period 2)</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L20" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">c:=3.4;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L21" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0 := 0; t1 := 200; N := 2000;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">tt := Array(1..N, i-&gt; evalf(i/N) * (t1 - t0));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L22" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">sol_arr := dsolve({sys,ic},[x(t),y(t),z(t)],type=numeric,maxfun=-1,output=tt):</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">soldd:=sol_arr[2,1];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">tt := soldd[1..N, 1]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">xx := soldd[1..N, 2]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">yy := soldd[1..N, 3]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">zz := soldd[1..N, 4]:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L23" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#pp := seq([tt[i], xx[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#plot([pp], labels=[&quot;t&quot;, &quot;x&quot;], color='blue');</Text-field>
+</Input>
+</Group>
+<Group labelreference="L24" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([xx[i], yy[i], zz[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod2a.eps`, plotoptions=`portrait,noborder,width=7cm,height=7cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">spacecurve([pp], labels=[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;], axes=normal, color=blue, orientation=[-72,55], view=[-6..6,-6..6, 0..10]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L25" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pcx2 := NULL;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from N/2 to N-1 do</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  if(xx[i] &gt; xx[i-1] and xx[i] &gt; xx[i+1]) then</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">    pcx2 := pcx2, xx[i];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  end if;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">end do;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L26" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod2b.eps`, plotoptions=`portrait,noborder,width=7cm,height=3cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">listplot([pcx2], style=point, view=[1..nops([pcx2]), 0..8], labels=[&quot;n&quot;, &quot;x[n]&quot;], labeldirections=[horizontal, vertical],symbol=diamond, symbolsize=30);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L27" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal"><Font family="Lucida Bright">c= 3.55 (period 4)</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L28" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">c:=3.55;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L29" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0 := 0; t1 := 200; N := 2000;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">tt := Array(1..N, i-&gt; evalf(i/N) * (t1 - t0));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L30" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">sol_arr := dsolve({sys,ic},[x(t),y(t),z(t)],type=numeric,maxfun=-1,output=tt):</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">soldd:=sol_arr[2,1];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">tt := soldd[1..N, 1]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">xx := soldd[1..N, 2]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">yy := soldd[1..N, 3]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">zz := soldd[1..N, 4]:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L31" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#pp := seq([tt[i], xx[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">#plot([pp], labels=[&quot;t&quot;, &quot;x&quot;], color='blue');</Text-field>
+</Input>
+</Group>
+<Group labelreference="L32" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([xx[i], yy[i], zz[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod3a.eps`, plotoptions=`portrait,noborder,width=7cm,height=7cm`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L33" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">spacecurve([pp], labels=[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;], axes=normal, color=blue, orientation=[-72,55], view=[-6..6,-6..6, 0..10]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L34" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pcx3 := NULL;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from N/2 to N-1 do</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  if(xx[i] &gt; xx[i-1] and xx[i] &gt; xx[i+1]) then</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">    pcx3 := pcx3, xx[i];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  end if;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">end do;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L35" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod3b.eps`, plotoptions=`portrait,noborder,width=7cm,height=3cm`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L36" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">listplot([pcx3], style=point, view=[1..nops([pcx3]), 0..8], labels=[&quot;n&quot;, &quot;x[n]&quot;], labeldirections=[horizontal, vertical], symbol=diamond, symbolsize=30);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L37" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal"><Font family="Lucida Bright">c=4 (chaos)</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L38" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">c:=4;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L39" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0 := 0; t1 := 750; N := 10000;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">tt := Array(1..N, i-&gt; evalf(i/N) * (t1 - t0));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L40" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">sol_arr := dsolve({sys,ic},[x(t),y(t),z(t)],type=numeric,maxfun=-1,output=tt):</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">soldd:=sol_arr[2,1];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">tt := soldd[1..N, 1]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">xx := soldd[1..N, 2]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">yy := soldd[1..N, 3]:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">zz := soldd[1..N, 4]:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L41" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># pp := seq([tt[i], xx[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"># plot([pp], labels=[&quot;t&quot;, &quot;x&quot;], color='blue');</Text-field>
+</Input>
+</Group>
+<Group labelreference="L42" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([xx[i], yy[i], zz[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod4a.eps`, plotoptions=`portrait,noborder,width=7cm,height=7cm`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L43" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">spacecurve([pp], labels=[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;], axes=normal, color=blue, orientation=[-72,55], view=[-6..6,-6..6, 0..10]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L44" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pcx4 := NULL;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from N/2 to N-1 do</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  if(xx[i] &gt; xx[i-1] and xx[i] &gt; xx[i+1]) then</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">    pcx4 := pcx4, xx[i];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  end if;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">end do;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L45" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerperiod4b.eps`, plotoptions=`portrait,noborder,width=7cm,height=3.0cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">listplot([pcx4], style=point, view=[1..nops([pcx4]), 0..8], labels=[&quot;n&quot;, &quot;x[n]&quot;], labeldirections=[horizontal, vertical],  symbol=diamond, symbolsize=30);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L46" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L47" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Text" layout="Normal">Create pretty picture of the attractor</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L48" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerattractor.eps`, plotoptions=`portrait,noborder,width=7cm,height=7cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pp := seq([xx[i], yy[i], zz[i]], i=N/2..N):</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">spacecurve([pp], labels=[&quot;x&quot;, &quot;y&quot;, &quot;z&quot;], color=green, axes=framed, color=blue, orientation=[-169,55], view=[-6..6,-6..6, 0..10]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L49" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Text" layout="Normal">Create return plots</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L50" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">rp1 := seq([pcx1[j], pcx1[j+1]], j=1..nops([pcx1])-1):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L51" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">rp2 := seq([pcx2[j], pcx2[j+1]], j=1..nops([pcx2])-1):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L52" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">rp3 := seq([pcx3[j], pcx3[j+1]], j=1..nops([pcx3])-1):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L53" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">rp4 := seq([pcx4[j], pcx4[j+1]], j=1..nops([pcx4])-1):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L54" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L55" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Text" layout="Normal">Not one unique map for all periods...</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L56" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([[rp1], [rp2], [rp3], [rp4]], style=[point, point,point,point], color=[green, red, blue, black]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L57" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerreturn.eps`, plotoptions=`portrait,noborder,width=5cm,height=5cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([rp4], style=point, symbol=diamond, symbolsize=15, labels=[&quot;x[n]&quot;, &quot;x[n+1]&quot;], labeldirections=[horizontal, vertical],view=[0..6, 0..6]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L58" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Text" layout="Normal">The universal period doubling route to chaos</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L59" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">c := 'c';</Text-field>
+</Input>
+</Group>
+<Group labelreference="L60" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">fp := solve({f1(x,y,z)=0, f2(x,y,z)=0, f3(x,y,z) = 0}, {x,y,z});</Text-field>
+</Input>
+</Group>
+<Group labelreference="L61" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">fp2 := allvalues(fp);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L62" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">bif := ImportMatrix(&quot;cont3d_bif_rossler.txt&quot;, source=delimited, delimiter=&quot;,&quot;);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L63" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerbifurcation.eps`, plotoptions=`portrait,noborder,width=8cm,height=6cm`);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L64" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([convert(bif, listlist)],  style=point, color=black, symbol=diamond, symbolsize=10, labels=[&quot;c&quot;, &quot;x&quot;], labeldirections=[horizontal, vertical], view=[3..4, 0..6]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L65" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Text" layout="Normal">Poincare section</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L66" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pcx := NULL: pcz := NULL:</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from N/4 to N-1 do</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  if(yy[i] &lt; 0 and yy[i+1] &gt; 0 or yy[i] &gt; 0 and yy[i+1] &lt; 0 ) then</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">    pcx := pcx, xx[i]; pcz := pcz, zz[i];</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">  end if;</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0">end do;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L67" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(ps, plotoutput=`cont3d_rosslerpoincare.eps`, plotoptions=`portrait,noborder,width=7cm,height=7cm`);</Text-field>
+</Input>
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([seq([pcx[i], pcz[i]], i=1..nops([pcx]))], style=point, symbol=diamond, symbolsize=15, view=[-6..6,0..5], labels=[&quot;x&quot;, &quot;z&quot;],labeldirections=[horizontal, vertical]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L68" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">plotsetup(default);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L69" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">listplot([pcx], style=point, view=[0..nops([pcx]), -10..12], labels=[&quot;n&quot;, &quot;x_max&quot;]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L70" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Text-field executable="false" family="Times New Roman" opaque="false" foreground="[0,0,0]" superscript="false" placeholder="false" readonly="false" subscript="false" bold="false" italic="false" underline="false" background="[255,255,255]" size="12" linebreak="space" spaceabove="0" rightmargin="0" bullet="none" firstindent="0" linespacing="0.0" pagebreak-before="false" leftmargin="0" alignment="left" initial="0" spacebelow="0"></Text-field>
+</Worksheet>

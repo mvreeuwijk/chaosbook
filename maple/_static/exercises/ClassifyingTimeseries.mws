@@ -1,0 +1,136 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "Left Justified Maple Output" -1 12 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "D
+ash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "Heading 4" -1 20 1 
+{CSTYLE "" -1 -1 "Times" 1 10 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "Times
+" 1 12 0 0 0 1 1 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 10 255 0 255 1 0 
+0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Author" 
+-1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 
+1 0 0 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 
+-1 "Times" 1 14 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 2 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 255 1 
+0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Text Ou
+tput" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 
+0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 8 
+4 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "M
+aple Plot" -1 13 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed Output" 
+-1 6 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }
+1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 {CSTYLE "" 
+-1 -1 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 1 }3 1 0 0 12 12 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+64 128 64 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }
+{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }3 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "List Item"
+ -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 
+1 0 0 3 3 2 0 2 0 2 2 -1 5 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 
+2 -1 2 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE "" -1 -1 "Courier" 1 10 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "La
+TeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple Comment"
+ -1 21 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bol
+d" -1 5 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "Help Underli
+ned" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Output L
+abels" -1 29 "Times" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Maple I
+nput" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Page \+
+Number" -1 33 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Maple \+
+Input Placeholder" -1 200 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 0 
+0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+{CSTYLE "2D Math Italic Small" -1 202 "Times" 0 1 0 0 0 0 1 0 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times" 1 12 0 0 0 0 1 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Normal" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Nonterminal" -1 24 "Courier" 0 1 0 0 0 1 0 1 
+0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 0 
+2 2 2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" -1 43 "Times" 1 12 
+0 0 0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 
+0 0 0 2 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 0 0 
+2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Hyperlink" -1 17 "" 0 1 0 128 128 1 2 0 
+1 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 10 0 0 0 0 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 0 1 255 0 0 1 0 0 2 2 1 2 
+0 0 0 1 }{CSTYLE "Help Maple Name" -1 35 "" 0 1 104 64 92 1 0 1 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 0 0 
+0 1 1 2 2 2 0 0 0 1 }{CSTYLE "Default" -1 38 "" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "" 0 1 147 0 15 1 2 
+0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Output" -1 20 "Times" 0 1 0 0 255 1 0 
+0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times" 0 1 0 0 0 0 
+1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 1 2 
+2 2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 2 2 
+2 2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 2 2 
+0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 
+1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 0 0 0 1 
+}{CSTYLE "Help Menus" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 2 0 0 0 1 }
+{CSTYLE "Help Variable" -1 25 "Courier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 
+1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 1 2 2 2 2 
+0 0 0 1 }{CSTYLE "Help Emphasized" -1 203 "" 0 1 0 0 0 0 1 2 0 2 2 2 
+0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle1" -1 200 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "_ps
+tyle2" -1 201 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{CSTYLE "_cstyle1" -1 204 "Times" 0 
+1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle3" -1 202 1 {CSTYLE "" 
+-1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 
+-1 1 }}
+{SECT 0 {EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plot
+s):" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 522 "set1 := [200, 30,
+ 356, -282, 36, 209, 106, 310, -117, 330, -242, 126, 153, 228, 103, 31
+9, -143, 301, -165, 263, -73, 354, -307, -34, 202, 99, 315, -134, 310,
+ -190, 225, 8, 367, -327, -88, 166, 145, 251, 48, 364, -305, -26, 205,
+ 96, 319, -146, 296, -153, 280, -112, 326, -229, 153, 123, 276, -18, 3
+81, -383, -272, -160, 99, 207, 131, 282, -33, 380, -383, -269, -152, 1
+11, 197, 152, 251, 53, 362, -296, -1, 211, 92, 324, -163, 274, -99, 33
+7, -258, 89, 185, 167, 226, 112, 310, -114, 333, -250, 107, 171, 195, \+
+173, 219, 129]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 499 "set2 := [236, 710, 360, 442, 218, 576, 785, 281, 69,
+ 327, 203, 818, 594, 803, 446, 986, 288, 979, 834, 971, 252, 981, 831,
+ 489, 84, 690, 647, 815, 408, 344, 425, 149, 840, 309, 30, 485, 421, 9
+03, 344, 737, 168, 626, 33, 954, 112, 932, 323, 57, 817, 900, 517, 409
+, 252, 153, 690, 281, 12, 452, 178, 822, 335, 36, 625, 476, 609, 260, \+
+51, 882, 590, 861, 95, 63, 535, 219, 822, 171, 413, 413, 429, 919, 744
+, 821, 427, 880, 408, 946, 509, 410, 527, 290, 224, 762, 607, 866, 440
+, 371, 699, 804, 120, 624]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 ">
+ " 0 "" {MPLTEXT 1 0 474 "set3 := [400, 960, 154, 520, 998, 6, 25, 99,
+ 358, 919, 298, 837, 547, 991, 35, 135, 466, 995, 18, 71, 263, 774, 69
+9, 842, 532, 996, 17, 66, 247, 743, 764, 721, 804, 631, 931, 255, 760,
+ 729, 791, 662, 895, 377, 939, 228, 704, 833, 556, 987, 50, 191, 619, \+
+944, 213, 670, 884, 409, 967, 128, 448, 989, 43, 164, 549, 990, 38, 14
+6, 500, 1000, 0, 0, 0, 0, 1, 4, 15, 59, 222, 691, 854, 497, 1000, 0, 0
+, 2, 6, 26, 100, 361, 923, 285, 816, 602, 959, 159, 534, 995, 18, 73, \+
+269, 787]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 
+1 0 14 "N:=nops(set3);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 
+"" {MPLTEXT 1 0 39 "plotlist1 := [seq([n,set1[n]],n=1..N)]:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 39 "plotl
+ist2 := [seq([n,set2[n]],n=1..N)]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 39 "plotlist3 := [seq([n,set3[n]],n=1
+..N)]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 
+21 "pointplot(plotlist1);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> "
+ 0 "" {MPLTEXT 1 0 21 "pointplot(plotlist2);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 21 "pointplot(plotlist3);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 204 42 "create ret
+urnplots to analyse the data ..." }{TEXT 204 0 "" }}}{EXCHG {PARA 200 
+"> " 0 "" {MPLTEXT 1 0 42 "rpl1 := [seq([set1[n-1],set1[n]],n=2..N)]:"
+ }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 42 "rpl
+2 := [seq([set2[n-1],set2[n]],n=2..N)]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 200 "> " 0 "" {MPLTEXT 1 0 42 "rpl3 := [seq([set3[n-1],set3[n]],
+n=2..N)]:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 
+1 0 16 "pointplot(rpl1);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 
+"" {TEXT 204 85 "set1 represents clearly a higher order  mapping (grap
+h does not represent a function)" }{TEXT 204 0 "" }}}{EXCHG {PARA 200 
+"> " 0 "" {MPLTEXT 1 0 16 "pointplot(rpl2);" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 201 "" 0 "" {TEXT 204 23 "set2 is really noise..." }
+{TEXT 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 16 "pointplo
+t(rpl3);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 204 77 
+"set3 represents a one-dimensional mapping; x[n+1] = f(x[n]) appears p
+ossible." }{TEXT 204 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{PARA 202 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 0 }{VIEWOPTS 
+1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

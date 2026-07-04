@@ -1,0 +1,716 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle26" -1 202 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle25" -1 203 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle24" -1 204 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle23" -1 205 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle22" -1 206 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle21" -1 207 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle20" -1 208 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle19" -1 209 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle18" -1 210 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle17" -1 211 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle16" -1 212 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle15" -1 213 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle14" -1 214 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle13" -1 215 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle12" -1 216 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle11" -1 217 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle10" -1 218 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle9" -1 219 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 
+1 }{CSTYLE "_cstyle8" -1 220 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 
+}{CSTYLE "_cstyle7" -1 221 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle6" -1 222 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle5" -1 223 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle4" -1 224 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle3" -1 225 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle2" -1 226 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle1" -1 227 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle27" -1 228 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle28" -1 229 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle29" -1 230 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle30" -1 231 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+{CSTYLE "_cstyle31" -1 232 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle1" -1 
+228 1 {CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 
+0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle2" -1 229 1 {CSTYLE "" 
+-1 -1 "Times" 0 1 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 
+2 2 -1 1 }{PSTYLE "_pstyle3" -1 230 1 {CSTYLE "" -1 -1 "Times" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle4" -1 231 1 {CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle5" -1 232 1 
+{CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle6" -1 233 1 {CSTYLE "" -1 -1 "
+Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle7" -1 234 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 
+0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle8" -1 235 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle9" -1 236 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle10" -1 237 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle11" -1 238 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle12" -1 239 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle13" -1 240 1 
+{CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle14" -1 241 1 {CSTYLE "" -1 -1 
+"Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle15" -1 242 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle16" -1 243 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle17" -1 244 1 
+{CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle18" -1 245 1 {CSTYLE "" -1 -1 
+"Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle19" -1 246 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle20" -1 247 1 {CSTYLE "" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle21" -1 248 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle22" -1 249 1 {CSTYLE "" -1 -1 
+"Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle23" -1 250 1 {CSTYLE "" -1 -1 "Times" 1 24 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle24" -1 251 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle25" -1 252 1 
+{CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle26" -1 253 1 {CSTYLE "" -1 -1 
+"Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle27" -1 254 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle56" -1 255 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle57" -1 256 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 
+0 2 0 2 2 -1 1 }{PSTYLE "_pstyle58" -1 257 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 228 "" 0 "" {TEXT 227 26 "Chaotic Processes Cookb
+ook" }}{PARA 229 "" 0 "" {TEXT 226 46 "Maarten van Reeuwijk - Harm Jon
+ker - Rob Mudde" }}{PARA 230 "" 0 "" {TEXT 225 8 "2-2-2006" }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 582 "This Map
+le cookbook contains various routines or 'recipes' for the analysis of
+ chaotic systems. It is developed for Chaotic Processes (ap3011), an e
+lective course in the Masters education of the faculty of Applied Scie
+nces at Delft, University of Technology. The aim of this document is t
+o provide you with a set of recipes that will enable you to analyze ph
+ysical systems quickly and effectively.  By no means is this document \+
+intended to be an sufficient introduction into Maple, although it shou
+ld give a reasonable impression of how Maple works and what it can do \+
+in this field." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 231 "" 0 "" {TEXT 224 44 "General M
+aple characteristics - introduction" }}{PARA 232 "" 0 "" {TEXT 223 0 "
+" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 233 "" 0 "" 
+{TEXT 222 4 "Help" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 
+0 "" {TEXT 225 181 "Maybe the most important command  is the ? command
+, which is to get  help about a certain command. Unlike other programs
+, Maple's help is actually quite good, with lots of examples," }}
+{PARA 230 "" 0 "" {TEXT 225 17 "so give it a try." }}{PARA 230 "" 0 "
+" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "? solve
+" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 235 "" 0 "" 
+{TEXT 221 7 "General" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "
+" 0 "" {TEXT 225 178 "A session normally starts with a restart command
+, clearing all data from memory and with including some packages, such
+ as plots for figures and DEtools for differential equations" }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 
+36 "restart; with(plots): with(DEtools):" }}{PARA 230 "" 0 "" {TEXT 
+225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 5 "     " }}}{EXCHG {PARA 230 "
+" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 228 23 "Some important
+ details:" }{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 40 "-  All co
+mmands need to end with ; or : " }}{PARA 230 "" 0 "" {TEXT 225 40 "- :
+ suppresses output from that command." }}{PARA 230 "" 0 "" {TEXT 225 
+57 "- You can put more than one command on an execution line." }}
+{PARA 230 "" 0 "" {TEXT 225 1 " " }}}{EXCHG {PARA 230 "" 0 "" {TEXT 
+225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 146 "Assigning a value to a var
+iable is done with ':='. A common mistake is to use '=' instead of ':=
+', but '=' is used for equations, not assignments." }}{PARA 230 "" 0 "
+" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 65 "a := 1
+/sqrt(2); # do not type a = 1/sqrt(2) to assign a value!!!;" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+184 "Maple is a mathematical language and will allways try to give an \+
+exact answer. So 1/2 and 0.5 are not the same, we will need to specifi
+cally ask Maple to convert the result to a float:" }}{PARA 230 "" 0 "
+" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "a := 1
+ / sqrt(2);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 9 "evalf(a);" 
+}}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 236 "" 0 "" {TEXT 
+219 24 "Functions vs expressions" }}{PARA 236 "" 0 "" {TEXT 219 0 "" }
+}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 
+225 58 "A function and an expression, respectively, are defined as" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 14 "f := x -> x^2;" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 13 "exp_f := x^2;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 
+0 "" }}{PARA 230 "" 0 "" {TEXT 225 88 "Asking for the value of a funct
+ion is easier (and more elegant!) than for an expression " }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 
+2 "f;" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 5 "f(1);" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 17 "subs(x=1, exp_f);" }}}{EXCHG {PARA 237 
+"" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 62 "Note that f d
+oes not evaluate, and that f(x) is an expression." }}{PARA 237 "" 0 "
+" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 8 "f; f(x)
+;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" 
+{TEXT 225 51 "diff is used to differentiate functions/expressions" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 44 "df := diff(f(x),x); dexp_f := diff(exp_f,x);" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+115 "Unfortunately, diff does not return a function. We have to make i
+t into a function again with the command unapply: " }}{PARA 230 "" 0 "
+" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 20 "df := \+
+unapply(df,x);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+230 "" 0 "" {TEXT 225 54 "...however, the command D returns a function
+ directly." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 11 "df := D(f);" }}}{EXCHG {PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 78 "We prefer to use func
+tions above expressions in the recipes that follow below." }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" 
+}}{PARA 237 "" 0 "" {TEXT 201 58 "Plotting functions and expressions c
+an be done as follows:" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 73 "plot([f(x), 2*exp_f], x=-2..2, la
+bels=['x', 'y'], legend=['f', 'exp_f']);" }}}{EXCHG {PARA 237 "" 0 "" 
+{TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 56 "Functions of more var
+iables are defined very similar, as" }}{PARA 237 "" 0 "" {TEXT 201 0 "
+" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 31 "r := (x, y) -> sqrt(x
+^2 + y^2);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "r(1,1);" }}}
+{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 
+118 "The D command can now not be used anymore, as there is more then \+
+one variable. Differentiating with respect to x gives" }}{PARA 237 "" 
+0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 15 "dif
+f(r(x,y),x);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 1 " " }}{PARA 238 
+"" 0 "" {TEXT 220 52 "Lists, sets, sequences, Arrays, Matrices and Vec
+tors" }}{PARA 230 "" 0 "" {TEXT 225 1 " " }}{PARA 230 "" 0 "" {TEXT 
+225 175 "A mathematical as well as a programming  language, Maple has \+
+quite a number of native data types, which can be confusing when start
+ing with Maple.  The sequence is one of the " }}{PARA 230 "" 0 "" 
+{TEXT 225 22 "most basic data types:" }}{PARA 230 "" 0 "" {TEXT 225 0 
+"" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 37 "a := 1,2,3,1,2; b :=
+ 1,2,3,4,5; a[3];" }}{PARA 230 "" 0 "" {TEXT 225 1 " " }}}{EXCHG 
+{PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 107 "An
+ important feature that we will use occasionally is that it is very ea
+sy to append elements to sequences." }}{PARA 237 "" 0 "" {TEXT 201 0 "
+" }}{PARA 237 "" 0 "" {TEXT 201 43 "pp := NULL defines pp as an empty \+
+sequence " }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 41 "c := NULL; #
+ start with an empty sequence" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 
+1 0 10 "c := c, 1;" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 10 "c :
+= c, 2;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "
+" {TEXT 225 193 "However, the capabilities of sequences are quite limi
+ted. For more features, there are the list [] and set \{\} types. List
+s can have doubles and preserve order, whereas sets don't. The essenti
+al" }}{PARA 230 "" 0 "" {TEXT 225 117 "difference between set / lists \+
+and sequences is that sets/lists are regarded as one object, whereas s
+equences aren't." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 
+234 "> " 0 "" {MPLTEXT 1 0 32 "set_a := \{ a \}; list_a := [ a ];" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+94 "The seq command can generate new sequences. It is very powerful an
+d we will need it regularly." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "seq(i^2, i=1..5);" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+141 "Below we will demonstrate the use of seq to combine the sequences
+ a and b into a sequence of list pairs, which can be used to plot the \+
+data. " }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 
+225 74 "Note the detail that plot requires a list (one object) and not
+ a sequence." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "
+> " 0 "" {MPLTEXT 1 0 31 "p := seq([a[i], b[i]], i=1..5);" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 10 "plot([p]);" }}}{EXCHG {PARA 230 "" 0 "
+" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 94 "To convert a list i
+nto a sequence use op, for the number of elements in the list/set use \+
+nops." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "
+" {MPLTEXT 1 0 19 "list_a; op(list_a);" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 13 "nops(list_a);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 
+0 "" }}{PARA 237 "" 0 "" {TEXT 201 227 "Many a time you will want to s
+tore data while running through a loop, for example. If you know up fr
+ont how many elements your data will contain, Arrays are the way to go
+. Arrays can be declared in various ways, as shown below." }}{PARA 
+237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 
+18 "t := Array(1..10);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 20 
+"t := Array(1..5, 1);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 24 "
+t := Array([5,3,4,1,2]);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 
+25 "t := Array(1..5, i -> i);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 
+1 0 27 "t := Array(1..5, i -> i^2);" }}}{EXCHG {PARA 237 "" 0 "" 
+{TEXT 201 126 "In the last two examples, an initialization function is
+ used, which uses the index of an Array-element to calculate its value
+." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 229 
+62 "Important: Always type Array, Matrix and Vector with a capital" }
+{TEXT 201 2 ". " }}{PARA 237 "" 0 "" {TEXT 201 114 "The types array, m
+atrix and vector exist as well, but are old, not very user-friendly an
+d work slightly different." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}
+{PARA 237 "" 0 "" {TEXT 201 56 "Higher dimensional Arrays are easily c
+reated as follows." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 23 "t := Array(1..5, 1..5);" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 44 "t := Array(1..5, 1..5, (i,
+ j) -> i^2 + j^2);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}
+{PARA 230 "" 0 "" {TEXT 225 73 "Matrices and Vectors are basic objects
+ in Maple, and are used as follows:" }}{PARA 230 "" 0 "" {TEXT 225 0 "
+" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 27 "A := Matrix([[1,2],[3
+,4]]);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 19 "b := Vector([1,2]);" }}
+}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 
+229 62 "Important: Always type Array, Matrix and Vector with a capital
+" }{TEXT 201 2 ". " }}{PARA 237 "" 0 "" {TEXT 201 114 "The types array
+, matrix and vector exist as well, but are old, not very user-friendly
+ and work slightly different." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}
+{PARA 237 "" 0 "" {TEXT 201 124 "Alternatively, you can use a shorthan
+d notation with <, > and | symbols. Pay attention that | indicates a c
+olumn seperation!" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 
+234 "> " 0 "" {MPLTEXT 1 0 20 "Aa := <<1,2>|<3,4>>;" }}{PARA 234 "> " 
+0 "" {MPLTEXT 1 0 12 "ba := <1,2>;" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 
+201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 82 "Note that Aa is NOT A, due \+
+to the different ordering of the assignment statements!" }}{PARA 237 "
+" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "A \+
+- Aa;" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 6 "A . b;" }}}
+{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 
+112 "The functionality of linear algebra is contained in the LinearAlg
+ebra package, which can be included as follows:" }}{PARA 237 "" 0 "" 
+{TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 20 "with(Lin
+earAlgebra);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "
+" 0 "" {TEXT 201 44 "The inverse of A can now simply be found by:" }}
+{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 25 "Ainv := MatrixInverse(A);" }}}{EXCHG {PARA 237 "" 0 "
+" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 52 "Say we want to solv
+e A y = b. y can now be found as:" }}{PARA 237 "" 0 "" {TEXT 201 0 "" 
+}}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 14 "y := Ainv . b;" }}}
+{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 
+47 "Which is indeed the solution as verified below." }}{PARA 237 "" 0 
+"" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 10 "b - A
+ . y;" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" 
+{TEXT 229 62 "Important: Always type Array, Matrix and Vector with a c
+apital" }{TEXT 201 2 ". " }}{PARA 237 "" 0 "" {TEXT 201 114 "The types
+ array, matrix and vector exist as well, but are old, not very user-fr
+iendly and work slightly different." }}{PARA 237 "" 0 "" {TEXT 201 0 "
+" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 239 "" 0 "" 
+{TEXT 218 9 "For-loops" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG 
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 162 "Fr
+equently we will want to study the behavior of the equations over comp
+lete parameter spaces, which can be done with for-loops. These loops a
+re relatively slow, " }}{PARA 230 "" 0 "" {TEXT 225 44 "so care needs \+
+to taken when applying them. \n" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 17 "f := x -> sin(x);" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 8 "N := 25:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "x := \+
+Array(1..N):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "y := Array(1..N):
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 20 "for i from 1 to N do" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 29 "  x[i] := (i-1)*(2*Pi)/(N-1):" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 18 "  y[i] := f(x[i]):" }}{PARA 234 "
+> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 19 "x
+[1..10]; y[1..10];" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}
+{PARA 237 "" 0 "" {TEXT 201 130 "Create a list of x,y pairs and plot t
+he discrete sine function. The syntax of the plot command for data poi
+nts is explained below." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 32 "pp := seq([x[i], y[i]], i=1..N):
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 41 "plot([pp], style=point,labels
+=[\"x\",\"y\"]);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 
+237 "" 0 "" {TEXT 201 97 "Occasionally, it may be more convenient to u
+se a list to store our data. This is done as follows:" }}{PARA 237 "" 
+0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 8 "N :=
+ 25:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 11 "pp := NULL:" }}{PARA 234 
+"> " 0 "" {MPLTEXT 1 0 20 "for i from 1 to N do" }}{PARA 234 "> " 0 "
+" {MPLTEXT 1 0 26 "  x := (i-1)*(2*Pi)/(N-1):" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 22 "  pp := pp, [x, f(x)]:" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 3 "pp;" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 239 "" 0 "" {TEXT 218 
+21 "Converting datatypes." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+237 "" 0 "" {TEXT 201 103 "We will regularly need to convert data type
+s, as different Maple commands require different data types." }}{PARA 
+237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 50 "We can ch
+eck the datatype by the command whattype." }}{PARA 237 "" 0 "" {TEXT 
+201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 112 "x := 1; l := \+
+[1,2,3,4]; s := 1,2,3,4; A := Array([1,2,3,4]); M := Matrix([[1,2],[3,
+4]]); V := Vector([1,2,3,4]);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 
+1 0 77 "whattype(x); whattype(l); whattype(s); whattype(A); whattype(M
+); whattype(V);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 
+237 "" 0 "" {TEXT 201 16 "list -> sequence" }}{PARA 237 "" 0 "" {TEXT 
+201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 6 "op(l);" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 12 "whattype(%);" }}}{EXCHG {PARA 
+237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 16 "sequence \+
+-> list" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 
+0 "" {MPLTEXT 1 0 6 "[ s ];" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 12 "wh
+attype(%);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 
+0 "" {TEXT 201 13 "list -> Array" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }
+}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 9 "Array(l);" }}{PARA 234 ">
+ " 0 "" {MPLTEXT 1 0 12 "whattype(%);" }}}{EXCHG {PARA 237 "" 0 "" 
+{TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 13 "Array -> list" }}
+{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 17 "convert(A, list);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 
+0 12 "whattype(%);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}
+{PARA 237 "" 0 "" {TEXT 201 17 "Array -> sequence" }}{PARA 237 "" 0 "
+" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 18 "seq(A[
+i], i=1..4);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 12 "whattype(%);" }}}
+{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 
+72 "Matrix (or double Array) -> list of lists (sometimes handy for plo
+tting)" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 
+"" {MPLTEXT 1 0 21 "convert(M, listlist);" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 12 "whattype(%);" }}}{EXCHG {PARA 239 "" 0 "" {TEXT 218 
+0 "" }}{PARA 239 "" 0 "" {TEXT 218 20 "Plotting data points" }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 237 "" 0 "" {TEXT 201 170 "The data
+type used for plotting separate datapoints is a list of x-y pairs: [ [
+x1, y1], [x2, y2] ... ]. If you specifically want to plot points, use \+
+the pointplot command." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 48 "pts := [ [0, 0], [1,1], [2,4], [3
+, 9], [4,16] ];" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 15 "pointplot(pts)
+;" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" 
+{TEXT 201 70 "If you also need to plot other functions, plot is the co
+mmand to use. " }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "
+" {TEXT 201 117 "Note that the variable x has already been declared, s
+o we will need to use a different parameter in the plot command." }}
+{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 69 "plot([xx**2, pts], xx=0..4, style=[line, point], colo
+r=[red, black]);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 
+237 "" 0 "" {TEXT 201 75 "Alternatively, the pts set could have also b
+een created by the seq command." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}
+}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 30 "pts2 := seq([i, i^2], i=0
+..4);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" 
+{TEXT 201 90 "As the outer brackets are missing, we have to add these \+
+before we can use the plot command" }}{PARA 237 "" 0 "" {TEXT 201 0 "
+" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 18 "pointplot([pts2]);" }
+}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 
+230 48 "Plotting more than one function at the same time" }{TEXT 201 
+0 "" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 21 "restart; with(plots):" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 24 "f := (x, a) -> sin(a*x);" }}}{EXCHG {PARA 237 "" 0 "
+" {TEXT 201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 82 "Most of the time, y
+ou can simply make a list of expressions that you want to plot:" }}
+{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 139 "plot([f(x,1), f(x,2), f(x,3), f(x,4)], x=-Pi..Pi, la
+bels=['x', 'y'],\nlegend=[\"a=1\", \"a=2\", \"a=3\", \"a=4\"], color=[
+green, blue, red, black]);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "
+" }}{PARA 237 "" 0 "" {TEXT 201 199 "However, sometimes you may want t
+o create the plots separately, and display them on a later moment in o
+ne graph. This can be done by making a list of plots, and using the di
+splay command, as follows:" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 228 "P := [ plot(f(x,1), x=-Pi
+..Pi, color=green, legend=[\"a=1\"]), plot(f(x,2), x=-Pi..Pi, color=bl
+ue, legend=[\"a=2\"]), \n       plot(f(x,3), x=-Pi..Pi,color=red, lege
+nd=[\"a=3\"]), plot(f(x,4), x=-Pi..Pi, color=black, legend=[\"a=4\"]) \+
+]:" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 11 "display(P);" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 240 "" 0 "" {TEXT 208 
+14 "Iterative maps" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 21 "restart; with(plots):" }}}{EXCHG {PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 26 "f := x -> r * x * (1 - x);" }}}{EXCHG {PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 241 "" 0 "" {TEXT 207 15 "Generate \+
+cobweb" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 27 "r := 3.5; x1 := 0.1; N:=50;" }}}{EXCHG {PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 17 "x := Array(1..N):" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 11 "x[1] := x1:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "f
+or n from 1 to N-1 do" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 29 "  x[n+1]
+ := evalf( f(x[n]) );" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:" 
+}}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 
+225 26 "Create and plot the cobweb" }}{PARA 230 "" 0 "" {TEXT 225 0 "
+" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 14 "pp := [x1, 0]:" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 41 "  pp := pp, [x[n], x[n]], [x[n], x[n+1]
+];" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}{PARA 234 "> " 0 
+"" {MPLTEXT 1 0 94 "plot([f(xx), xx, [pp] ], xx=0..1, y=0..1, color = \+
+[black, blue, red], \nlabels=[\"xn\", \"xn+1\"]);" }}}{EXCHG {PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 242 "" 0 "" {TEXT 206 19 "Bifurcati
+on diagram" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 55 "N := 100; Nr := 200; x1 := 0.5; rmin := 0.1; rmax := \+
+4;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 23 "Nmin := N/2; Nmax := N;" }}
+}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 
+225 58 "Define Arrays to store the bifurcation points and r-values" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 20 "Npts := Nmax-Nmin+1;" }}{PARA 234 "> " 0 "" {MPLTEXT 
+1 0 32 "points := Array(1..Nr, 1..Npts);" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 19 "ri := Array(1..Nr);" }}}{EXCHG {PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 28 "Calculate x[n] for va
+rious r" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 
+0 "" {MPLTEXT 1 0 30 "x := Array(1..N): x[1] := 0.5:" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 22 "for ir from 1 to Nr do" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 53 "  r := evalf(rmin + (ir-1) / (Nr-1) * (rmax - rmin));
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 14 "  ri[ir] := r;" }}{PARA 230 "
+" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 32 "       Calcula
+te the x[n] series" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 24 "  for n fro
+m 1 to N-1 do" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 31 "    x[n+1] := ev
+alf( f(x[n]) );" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 9 "  end do:" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 75 "   \+
+    Add the converged last section of the series to the bifurcation li
+st" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 39 "  points[ir, 1..Npts] := x[
+Nmin..Nmax]:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}
+{EXCHG {PARA 242 "" 0 "" {TEXT -1 0 "" }}{PARA 242 "" 0 "" {TEXT 206 
+24 "plot bifurcation diagram" }}{PARA 0 "" 0 "" {TEXT -1 97 "Make the \+
+data suitable for plotting with pointplot, i.e. create a long sequence
+ with point pairs." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 17 "plotlist := NULL:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 22 "for ir from 1 to Nr do" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 60 "  plotlist := plotlist,seq([ri[ir],points[ir,n]],n=1.
+.Npts);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "pointplot([plotlist],symbolsize=1,l
+abels=[\"r\", \"x\"]);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}
+{PARA 243 "" 0 "" {TEXT 205 11 "Return plot" }}{PARA 243 "" 0 "" 
+{TEXT 205 0 "" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 
+"" 0 "" {TEXT 225 41 "First we need to create a data series...." }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 9 "N := 200:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "x :=
+ Array(1..N):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "x[1] := 0.4: r :
+= 3.8:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 27 "  x[n+1] := evalf(f(x[n]));" 
+}}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 9 "x[1..10];" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" 
+}}{PARA 230 "" 0 "" {TEXT 225 107 "Timeseries x is given. Now create a
+ returnplot by creating [x[n], x[n+1] ] pairs and removing the transie
+nt" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 38 "xr := seq([x[i], x[i+1]], i=N/2..N-1):" }}{PARA 234 "
+> " 0 "" {MPLTEXT 1 0 100 "plot([[xr], f(xx)], xx=0..1, y=0..1, style=
+[point, line],\ncolor=[red,black], labels=[\"xn\", \"xn+1\"]);" }}}
+{EXCHG {PARA 244 "" 0 "" {TEXT 217 0 "" }}{PARA 244 "" 0 "" {TEXT 217 
+51 "Non-linear differential equations with one variable" }}{PARA 230 "
+" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 36 "restart; \+
+with(plots): with(DEtools):" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "
+" }}{PARA 230 "" 0 "" {TEXT 225 79 "We will use a function that featur
+es a pitchfork bifurcation (Strogatz par 3.4)" }}{PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "f := x -
+> r * x - x^3;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 29 "DE := diff(x(t)
+,t) = f(x(t));" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+245 "" 0 "" {TEXT 216 21 "Numerical integration" }}{PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 63 "Maple's DEtools packa
+ge is for solving differential equations. " }}{PARA 230 "" 0 "" {TEXT 
+225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 20 "r := 1.2; x0 :
+= 0.1;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "
+" {TEXT 225 87 "First define the differential equation and create a ro
+utine sol to solve it numerically" }}{PARA 230 "" 0 "" {TEXT 225 0 "" 
+}}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 51 "sol := dsolve(\{DE, x(0
+) = x0\}, x(t), type=numeric);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 
+0 "" }}{PARA 230 "" 0 "" {TEXT 225 32 "Plot the numerical approximatio
+n" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 31 "odeplot(sol, [t, x(t)], 0..30);" }}}{EXCHG {PARA 230 
+"" 0 "" {TEXT 225 0 "" }}{PARA 246 "" 0 "" {TEXT 215 19 "Bifurcation d
+iagram" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 46 "rmin := -1; rmax := 1; nr := 250; tinf := 200;" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 24 "ic1 := -0.5; ic2 := 0.5;" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+41 "Calculate the fixed points for various r." }}{PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 23 "points :
+= Array(1..nr):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 27 "xinf := Array(
+1..nr, 1..3):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 21 "for i from 1 to \+
+nr do" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 47 "  r := evalf (rmin + (i-
+1)*(rmax-rmin)/(nr-1));" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+230 "" 0 "" {TEXT 225 48 "       'Solve' the DE and evaluate value at \+
+tinf" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 50 "  sol1:=dsolve(\{DE,x(0) \+
+= ic1\},x(t),type=numeric):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 50 "  \+
+sol2:=dsolve(\{DE,x(0) = ic2\},x(t),type=numeric):" }}{PARA 234 "> " 
+0 "" {MPLTEXT 1 0 18 "  xinf[i, 1] := r;" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 38 "  xinf[i, 2] := subs(sol1(tinf),x(t));" }}{PARA 234 "
+> " 0 "" {MPLTEXT 1 0 38 "  xinf[i, 3] := subs(sol2(tinf),x(t));" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 234 "> " 0 "
+" {MPLTEXT 1 0 12 "xinf[1..10];" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 
+201 0 "" }}{PARA 237 "" 0 "" {TEXT 201 98 "Create a plotlist pp by cre
+ating [r, xinf] pairs for both initial conditions and plot the results
+." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 82 "pp := seq([xinf[i,1], xinf[i,2]], i=1..nr), seq([xinf
+[i, 1], xinf[i,3]], i=1..nr):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 67 "
+pointplot([pp], symbol=circle, symbolsize=5, labels=[\"r\",\"x_inf\"])
+;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 247 "" 0 "" 
+{TEXT 214 53 "Non-linear differential equations with two dimensions" }
+}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 
+57 "restart; with(plots): with(DEtools): with(LinearAlgebra):" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+86 "We will use an example of the Lotke-Volterra equations of competio
+n (Strogatz par 6.4)" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 36 "f1 := (x, y) -> x * (3 - x- 2 * y
+); " }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 32 "f2 := (x, y) -> y * (2 - x
+ - y);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 72 "DE := [ diff(x(t), t) =
+ f1(x(t), y(t)), diff(y(t), t) = f2(x(t), y(t))];" }}}{EXCHG {PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 248 "" 0 "" {TEXT 213 26 "Fixed poi
+nts and stability" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 26 "Calculate
+ the fixed points" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 
+234 "> " 0 "" {MPLTEXT 1 0 44 "sol := solve(\{f1(x,y)=0, f2(x,y)=0\}, \+
+\{x,y\});" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 
+0 "" {TEXT 225 22 "Calculate the Jacobian" }}{PARA 230 "" 0 "" {TEXT 
+225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 26 "jac11 := diff(
+f1(x,y), x):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 26 "jac12 := diff(f1(
+x,y), y):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 27 "jac21 := diff(f2(x, \+
+y), x):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 27 "jac22 := diff(f2(x, y)
+, y):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 49 "jacf := Matrix([[jac11, \+
+jac12], [jac21, jac22]]);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" 
+}}{PARA 230 "" 0 "" {TEXT 225 65 ".... or use the Jacobian function fr
+om the VectorCalculus package" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 21 "with(VectorCalculus):" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 44 "jacf := Jacobian([f1(x,y), f2(x,y
+)], [x,y]);" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }}{PARA 237 "
+" 0 "" {TEXT 201 123 "If you do not want to include the whole VectorCa
+lculus package only to calculate a Jacobian, it can also be done like \+
+this:" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 234 "> " 0 "
+" {MPLTEXT 1 0 60 "jacf := VectorCalculus:-Jacobian([f1(x,y), f2(x,y)]
+, [x,y]);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 
+0 "" {TEXT 225 44 "Jacobian for fixed point 4 and its stability" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 27 "jac4 := subs(sol[4], jacf);" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 18 "Eigenvalues(jac4);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 
+0 9 "evalf(%);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+230 "" 0 "" {TEXT 225 65 " So the fixed point is a saddle node as lamb
+da1>0 and lambda2 < 0" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG 
+{PARA 249 "" 0 "" {TEXT 212 0 "" }}{PARA 249 "" 0 "" {TEXT 212 14 "Pha
+se portrait" }}{PARA 230 "" 0 "" {TEXT 225 1 " " }}{PARA 234 "> " 0 "
+" {MPLTEXT 1 0 123 "phaseportrait(DE, [x(t),y(t)], t=0..50, [[x(0)=0.1
+,y(0)=0.15], \n[x(0)=0.1,y(0)=0.3], [x(0)=4,y(0)=2.5], [x(0)=4, y(0)=3
+]], " }{MPLTEXT 1 0 79 "\nstepsize=0.05, x=0..4, y=0..4, color=black, \+
+\nlinecolor=[blue,red, blue, red]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 250 "" 0 "" {TEXT 211 62 "Non
+-linear differential equations with three dimensions: chaos" }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 36 "rest
+art; with(plots): with(DEtools):" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 
+225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 67 "We will use the Lorenz equa
+tions as an example (Strogatz chapter 9)" }}{PARA 230 "" 0 "" {TEXT 
+225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 33 "f1 := (x,y,z) \+
+-> sigma * (y - x);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 36 "f2 := (x,y
+,z) -> -x * z + r * x - y;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 32 "f3 \+
+:= (x,y,z) ->  x * y - b * z;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 41 "
+DE1 := diff(x(t),t) = f1(x(t),y(t),z(t)):" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 41 "DE2 := diff(y(t),t) = f2(x(t),y(t),z(t)):" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 41 "DE3 := diff(z(t),t) = f3(x(t),y(t),z(t)
+);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 20 "DE := DE1, DE2, DE3;" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 251 "" 0 "" {TEXT 210 
+21 "Numerical integration" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 25 "r:=28; b:=8/3; sigma:=10;" }}{PARA 234 
+"> " 0 "" {MPLTEXT 1 0 36 "ic1 := x(0)=2,y(0)=5,z(0)=5; tt:=50;" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 33 "ic2 := x(0)=2.0001,y(0)=5,z(0)=5;
+" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" 
+{TEXT 225 157 "Solve system with dsolve. The option maxfun=-1 allows M
+aple to perform calculations above the 30,000 normal limit.  To see mo
+re options we refer to the help." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }
+}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 65 "sol1 := dsolve(\{DE,ic1
+\},[x(t),y(t),z(t)],type=numeric,maxfun=-1);" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 65 "sol2 := dsolve(\{DE,ic2\},[x(t),y(t),z(t)],type=numer
+ic,maxfun=-1);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+230 "" 0 "" {TEXT 225 25 "And plot the timeseries. " }}{PARA 230 "" 0 
+"" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 92 "p1 :=
+ odeplot(sol1,[t,x(t)],0..40,labels=[\"t\",\"x\"], \nnumpoints=1000,co
+lor=blue,axes=normal):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 91 "p2 := o
+deplot(sol2,[t,x(t)],0..40,labels=[\"t\",\"x\"], \nnumpoints=1000,colo
+r=red,axes=normal):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "display([p
+1,p2]);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 252 "" 0 "
+" {TEXT 209 34 "Manipulating solutions from dsolve" }}{PARA 230 "" 0 "
+" {TEXT 225 0 "" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 20 "N:=2500; dt :=
+ 0.01;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "
+" {TEXT 225 136 "Another way to use dsolve is by using an Array with t
+ime data as input. This is more efficient when you want to process the
+ time-series." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 
+"> " 0 "" {MPLTEXT 1 0 40 "timesteps := Array(1..N, i -> (i-1)*dt):" }
+}{PARA 234 "> " 0 "" {MPLTEXT 1 0 86 "sol_arr := dsolve(\{DE,ic1\},[x(
+t),y(t),z(t)],\ntype=numeric,maxfun=-1,output=timesteps):" }}}{EXCHG 
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 42 "The
+ returned data is an array of arrays. \n" }}}{EXCHG {PARA 234 "> " 0 "
+" {MPLTEXT 1 0 8 "sol_arr;" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "
+" }}{PARA 230 "" 0 "" {TEXT 225 77 "As can be seen, the data is in the
+ second column, with t,x,y,z respectively. " }}{PARA 230 "" 0 "" 
+{TEXT 225 69 "Type \"? dsolve/numeric\" for more information on dsolve
+'s array format" }}{PARA 237 "" 0 "" {TEXT 201 0 "" }}}{EXCHG {PARA 
+234 "> " 0 "" {MPLTEXT 1 0 20 "soldd:=sol_arr[2,1];" }}}{EXCHG {PARA 
+234 "> " 0 "" {MPLTEXT 1 0 21 "tt := soldd[1..N, 1]:" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 21 "xx := soldd[1..N, 2]:" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 21 "yy := soldd[1..N, 3]:" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 21 "zz := soldd[1..N, 4]:" }}}{EXCHG {PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" 
+{TEXT 225 94 "Make a 3D-plot of the lorenz attractor. Click on the ima
+ge and move the mouse to rotate.      " }}{PARA 230 "" 0 "" {TEXT 225 
+0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 42 "l3d := seq([xx[i],
+ yy[i], zz[i]], i=1..N):" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 
+71 "pointplot3d([l3d], axes=boxed, connect = true, labels=[\"x\", \"y
+\", \"z\"]);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 253 "
+" 0 "" {TEXT 204 8 "Fractals" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+162 "First we have to generate a fractal. We'll do this by using a dic
+rete mapping whose attractor is the so-called Sierpinsky carpet (see a
+lso exam AP3011 June 2004)." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plots):" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 9 "N:=10000;" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 16 "x1:= 1; y1 := 0;" }}}{EXCHG {PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 57 "Define a random integ
+er generator r for numbers [0,1,2]  " }}{PARA 230 "" 0 "" {TEXT 225 0 
+"" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 13 "r := rand(3):" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+25 "Create a x[n] y[n] series" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 18 "xl := Array(1..N):" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 18 "yl := Array(1..N):" }}{PARA 234 "
+> " 0 "" {MPLTEXT 1 0 19 "xn := x1: yn := y1:" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 20 "for i from 1 to N do" }}{PARA 234 "> " 0 "" {MPLTEXT 
+1 0 14 "  xl[i] := xn:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 14 "  yl[i]
+ := yn:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 234 "> " 0 "
+" {MPLTEXT 1 0 14 "  dice := r();" }}{PARA 230 "" 0 "" {TEXT 225 0 "" 
+}}{PARA 230 "" 0 "" {TEXT 225 72 "       Depending on the result of th
+e dice [0, 1, 2] jump to a new point" }}{PARA 234 "> " 0 "" {MPLTEXT 
+1 0 21 "  if( dice = 0) then " }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 19 "
+    xn := 0.5 * xn;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 19 "    yn := \+
+0.5 * yn;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "  else " }}{PARA 234 
+"> " 0 "" {MPLTEXT 1 0 24 "    if( dice = 1 ) then " }}{PARA 234 "> " 
+0 "" {MPLTEXT 1 0 29 "       xn := 0.5 * xn + 0.25;" }}{PARA 234 "> " 
+0 "" {MPLTEXT 1 0 29 "       yn := 0.5 * yn + 0.50;" }}{PARA 234 "> " 
+0 "" {MPLTEXT 1 0 8 "    else" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 28 "
+       xn := 0.5 * xn + 0.5;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 " \+
+      yn := 0.5 * yn;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 11 "    end \+
+if;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 9 "  end if;" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "
+" }}{PARA 230 "" 0 "" {TEXT 225 25 "Create x,y pairs for plot" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 34 "pp := seq([xl[i], yl[i]], i=1..N):" }}{PARA 234 "> " 
+0 "" {MPLTEXT 1 0 42 "pointplot([pp], symbolsize=1, color=blue);" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 254 "" 0 "" {TEXT 203 
+25 "Calculation box-dimension" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}
+{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 32 "pmin := 2; pmax := 7; dp :
+= 0.5;" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "
+" {TEXT 225 32 "Determine the extrema of the map" }}{PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "op(conve
+rt(xl, list)):" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 15 "xmin := min(%);
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 16 "xmax := max(%%);" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 22 "op(convert(yl, list)):" }}{PARA 234 "> \+
+" 0 "" {MPLTEXT 1 0 16 "ymin := min(%); " }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 16 "ymax := max(%%);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 
+225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 25 "Loop over all resolutions" 
+}}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 11 "li := NULL:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 32 "f
+or p from pmin to pmax by dp do" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}
+{PARA 230 "" 0 "" {TEXT 225 34 "       Calculate extents of boxes " }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 27 "  delta := (xmax-xmin)/2^p;" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 35 "  ni := trunc((xmax-xmin)/delta)+
+1;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 35 "  nj := trunc((ymax-ymin)/d
+elta)+1;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 23 "  print(p,ni,nj,delta
+);" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+66 "       Construct a boxes matrix and set the initial values to zero
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 31 "  nr := Array(1..ni, 1..nj, 0
+);" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+37 "       Check which boxes are occupied" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 22 "  for n from 1 to N do" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 37 "    i := trunc((xl[n]-xmin)/delta)+1;" }}{PARA 234 ">
+ " 0 "" {MPLTEXT 1 0 37 "    j := trunc((yl[n]-ymin)/delta)+1;" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "    nr[i,j] := 1;" }}{PARA 234 ">
+ " 0 "" {MPLTEXT 1 0 5 "  od:" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}
+{PARA 230 "" 0 "" {TEXT 225 37 "       Count number of occupied boxes
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 13 "  boxes := 0;" }}{PARA 234 ">
+ " 0 "" {MPLTEXT 1 0 23 "  for i from 1 to ni do" }}{PARA 234 "> " 0 "
+" {MPLTEXT 1 0 25 "    for j from 1 to nj do" }}{PARA 234 "> " 0 "" 
+{MPLTEXT 1 0 32 "       boxes := boxes + nr[i,j];" }}{PARA 234 "> " 0 
+"" {MPLTEXT 1 0 7 "    od;" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 5 "  od
+;" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+25 "       Add result to list" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 26 "
+  li := li, [delta,boxes];" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 3 "od:
+" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" 
+{TEXT 225 39 "Plot the results in log-log fashion ..." }}{PARA 230 "" 
+0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 105 "lo
+glogplot([[li], [li]],style=[point, line],symbolsize=15,\ncolor=black,
+symbol=circle, labels=[\"p\", \"n\"]);" }}}{EXCHG {PARA 230 "" 0 "" 
+{TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 165 "Calculate box dimens
+ion. We could do this by fitting a function by trial and error, but we
+ use the function fit from the stats package to achieve this automatic
+ally." }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 
+225 47 "Firstly, fit needs lists of x and y separately." }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 43 "xli := seq(log(li[i][1]), i=1..no
+ps([li]));" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 43 "yli := seq(log(li[i
+][2]), i=1..nops([li]));" }}}{EXCHG {PARA 237 "" 0 "" {TEXT 201 0 "" }
+}{PARA 237 "" 0 "" {TEXT 201 69 "Feeding this into the fit command, we
+ get the least-squared solution." }}{PARA 237 "" 0 "" {TEXT 201 0 "" }
+}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 12 "with(stats):" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 48 "fit[leastsquare[[x,y], y=a*x+b]]([[xli]
+,[yli]]);" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 26 "lseq := unapply(rhs(
+%),x);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "
+" {TEXT 225 41 "Plot the fit together with box-dimensions" }}{PARA 
+230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 
+48 "loli := seq([xli[i], yli[i]], i=1..nops([xli])):" }}}{EXCHG {PARA 
+234 "> " 0 "" {MPLTEXT 1 0 132 "plot([lseq(xx), [loli]], xx=-7..3, sty
+le=[line, point], \ncolor=[red,black], symbolsize=15,symbol=circle, la
+bels=[\"log p\", \"log n\"]);" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 255 "
+" 0 "" {TEXT 202 0 "" }}{PARA 256 "" 0 "" {TEXT 231 0 "" }}{PARA 257 "
+" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "
+" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "
+" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "
+" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "
+" 0 "" {TEXT 232 0 "" }}{PARA 257 "" 0 "" {TEXT 232 0 "" }}{PARA 257 "
+" 0 "" {TEXT -1 0 "" }}}{MARK "223" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 
+1 }{PAGENUMBERS 0 1 2 33 1 1 }

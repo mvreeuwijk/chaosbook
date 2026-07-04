@@ -1,0 +1,88 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "Text" -1 201 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle21" -1 203 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle20" -1 204 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle3" -1 205 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{CSTYLE "_cstyle1" -1 206 "Courier" 1 12 255 0 0 1 2 1 2 2 1 2 0 
+0 0 1 }{CSTYLE "_cstyle2" -1 208 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle10
+" -1 216 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle11" -1 217 1 {CSTYLE 
+"" -1 -1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle12" -1 218 1 {CSTYLE "" -1 -1 "Courier" 
+1 12 255 0 0 1 2 1 2 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle15" -1 219 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 
+0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+16" -1 220 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle17" -1 221 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 
+-1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle18" -1 222 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle19" -1 223 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle20
+" -1 224 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 216 "" 0 "" {TEXT 205 0 "" }}{PARA 217 "" 0 "" 
+{TEXT 204 26 " Logistic Map: time series" }}{PARA 216 "" 0 "" {TEXT 
+205 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 21 "restart; wit
+h(plots):" }}}{EXCHG {PARA 219 "> " 0 "" {MPLTEXT 1 0 26 "f := x -> r \+
+* x * (1 - x);" }}}{EXCHG {PARA 216 "" 0 "" {TEXT 205 0 "" }}{PARA 
+220 "" 0 "" {TEXT 203 20 "generate time series" }}{PARA 221 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 9 "N := 200
+;" }}}{EXCHG {PARA 218 "> " 0 "" {MPLTEXT 1 206 19 "xs1 := Array(1..N)
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs2 := Array(1..N):" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs3 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs4 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs5 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs6 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs7 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "xs8 := Array(1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "nmin := -0.5; nmax := 25;" }
+}}{EXCHG {PARA 222 "" 0 "" {TEXT 201 2 "p1" }}}{EXCHG {PARA 218 "> " 
+0 "" {MPLTEXT 1 206 9 "r := 3/2;" }}{PARA 218 "> " 0 "" {MPLTEXT 1 
+206 15 "xs1[1] := 0.00;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "
+xs2[1] := 0.01;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "xs3[1] :
+= 0.12;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "xs4[1] := 0.2;" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "xs5[1] := 0.3;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "xs6[1] := 0.4;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "xs7[1] := 0.48;" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 15 "xs8[1] := 0.05;" }}}{EXCHG {PARA 219 "> " 
+0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}{PARA 219 "> " 0 "" 
+{MPLTEXT 1 0 33 "  xs1[n+1] := evalf( f(xs1[n]) );" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 33 "  xs2[n+1] := evalf( f(xs2[n]) );" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 33 "  xs3[n+1] := evalf( f(xs3[n]) );" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 33 "  xs4[n+1] := evalf( f(xs4[n]) );" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 33 "  xs5[n+1] := evalf( f(xs5[n]) );" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 33 "  xs6[n+1] := evalf( f(xs6[n]) );" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs7[n+1] := evalf( f(xs7[n]) );" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  xs8[n+1] := evalf( f(xs8[n]) );
+" }}{PARA 219 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG {PARA 218 "
+> " 0 "" {MPLTEXT 1 206 31 "l1 := seq([n-1,xs1[n]],n=1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l2 := seq([n-1,xs2[n]],n=1..
+N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l3 := seq([n-1,xs3[n
+]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l4 := seq([n
+-1,xs4[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "l5 :
+= seq([n-1,xs5[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "l6 := seq([n-1,xs6[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "l7 := seq([n-1,xs7[n]],n=1..N):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 31 "l8 := seq([n-1,xs8[n]],n=1..N):" }}}{EXCHG 
+{PARA 218 "> " 0 "" {MPLTEXT 1 206 116 "plotsetup(ps,plotoutput=`disc1
+d_logist_attractor_r1_5.ps`,plotoptions=`portrait,noborder,width=8.0cm
+,height=5.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 151 "pl1 :=
+ plot([[l1],[l2],[l3],[l4],[l5],[l6],[l7],[l8]],x=0..25,0..1,labels=[
+\"n\",\"x[n]\"],style=line,symbolsize=20,symbol=CIRCLE,thickness=1,col
+or=black):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 152 "pl2 := plot(
+[[l1],[l2],[l3],[l4],[l5],[l6],[l7],[l8]],x=0..25,0..1,labels=[\"n\",
+\"x[n]\"],style=point,symbolsize=20,symbol=CIRCLE,thickness=1,color=bl
+ack):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "display(pl1,pl2,vi
+ew=[nmin..nmax,0..0.6],axes=framed);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{PARA 223 "" 0 "" {TEXT 208 0 "" }}{PARA 224 "" 0 "" {TEXT -1 0 "" }}}
+{MARK "32 0 0" 32 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 
+2 33 1 1 }

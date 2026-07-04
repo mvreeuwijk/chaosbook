@@ -1,0 +1,63 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "_cstyle23" -1 205 "Times" 1 18 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle21" -1 207 "Times" 1 18 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle20" -1 208 "Times" 1 24 0 0 0 0 0 1 0 2 
+2 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 225 "Times" 0 1 0 0 0 0 0 0 0 2 2 
+2 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle3" -1 230 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 234 1 
+{CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle13" -1 240 1 {CSTYLE "" -1 
+-1 "Times" 1 24 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 
+2 -1 1 }{PSTYLE "_pstyle14" -1 241 1 {CSTYLE "" -1 -1 "Times" 1 18 0 
+0 0 0 0 1 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle16" -1 243 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 0 2 2 2 
+0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle57" -1 256 
+1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 
+2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle58" -1 257 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }
+{PSTYLE "" 241 262 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 2 0 0 0 0 0 0 
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 241 263 1 {CSTYLE "" 
+-1 -1 "" 0 1 0 0 0 0 0 2 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 
+-1 0 }{PSTYLE "" 241 264 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 2 0 0 0 
+0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 230 265 1 
+{CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 
+0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 240 "" 0 "" 
+{TEXT 208 51 " Logistic Map: time series, return-plot, and cobweb" }}
+{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 21 "restart; with(plots):" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 
+1 0 26 "f := x -> r * x * (1 - x);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 
+225 0 "" }}{PARA 262 "" 0 "" {TEXT 207 20 "generate time series" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 9 "N := 200;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "xs := Arr
+ay(1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "r := 3.9;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "xs[1] := 0.1;" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to N-1 do" }}{PARA 
+234 "> " 0 "" {MPLTEXT 1 0 31 "  xs[n+1] := evalf( f(xs[n]) );" }}
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}}{EXCHG {PARA 264 "" 0 
+"" {TEXT -1 0 "" }}{PARA 263 "" 0 "" {TEXT 207 16 "plot time series" }
+}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 27 "l := seq([n,xs[n]],n=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 58 "pointplot([l],labels=[\"n\",\"xn\"],color=blue,symbol
+size=10);" }}}{EXCHG {PARA 243 "" 0 "" {TEXT -1 0 "" }}{PARA 243 "" 0 
+"" {TEXT 205 11 "Return plot" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 230 "" 0 "" {TEXT 225 
+84 "Now create a returnplot by creating [x[n], x[n+1] ] pairs and remo
+ving the transient" }}{PARA 230 "" 0 "" {TEXT 225 0 "" }}}{EXCHG 
+{PARA 234 "> " 0 "" {MPLTEXT 1 0 38 "xr := seq([xs[i], xs[i+1]], i=1..
+N-1):" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 97 "plot([[xr], f(x)
+], x=0..1, y=0..1, style=[point, line],color=[red,black], labels=[\"xn
+\", \"xn+1\"]);" }}}{EXCHG {PARA 230 "" 0 "" {TEXT 225 0 "" }}{PARA 
+265 "" 0 "" {TEXT 225 26 "Create and plot the cobweb" }}{PARA 230 "" 
+0 "" {TEXT 225 0 "" }}}{EXCHG {PARA 234 "> " 0 "" {MPLTEXT 1 0 17 "pp \+
+:= [xs[1], 0]:" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 22 "for n from 1 to
+ N-1 do" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 45 "  pp := pp, [xs[n], xs
+[n]], [xs[n], xs[n+1]];" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 7 "end do:
+" }}{PARA 234 "> " 0 "" {MPLTEXT 1 0 89 "plot([f(x), x, [pp] ], x=0..1
+, y=0..1, color = [black, blue, red],labels=[\"xn\", \"xn+1\"]);" }}}
+{EXCHG }{EXCHG }{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+}{MARK "22" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

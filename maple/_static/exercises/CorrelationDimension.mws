@@ -1,0 +1,78 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "restart; with(plots)
+: with(stats):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "dat := readdata(\"D1.drip\",[float]
+):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 9 "N := 200;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "#N:=
+ nops(dat)-1; #taking the entire set may take a while!" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 20 " create x
+,y data-set" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 34 "x:=vector([seq(dat[n  ],n=1..N)]):" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 34 "y:=vector([seq(dat[n+1],n=1..N)]):" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 36 "plot the \+
+data set to be analysed ..." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "pointplot([seq([x[n],y[n]],n
+=1..N)],symbolsize=1);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "" 0 "" {TEXT -1 28 "determine extrema of the set" }}{PARA 0 "
+" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "ymax
+ := max(seq(y[n],n=1..N));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "ymin \+
+:= min(seq(y[n],n=1..N));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "xmax :
+= max(seq(x[n],n=1..N));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "xmin :=
+ min(seq(x[n],n=1..N));" }}}{EXCHG }{EXCHG }{EXCHG }{EXCHG }{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "rmax := sqrt((xmax-xmin)^2+(ymax-ym
+in)^2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 78 "set the scale range over which the correlation dimension \+
+will be determined..." }}{PARA 0 "" 0 "" {TEXT -1 46 "this region will
+ be important for the result! " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "rmax := 5.0;   " }}}{EXCHG }
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "rmin := 40e-3;" }}}{EXCHG }
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "mumax := log(rmax);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "mumin := log(rmin);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "M := 20;" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 23 "dmu := (mumax-mumin)/M;" }}}{EXCHG }{EXCHG }
+{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "for m from 0 to M do
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 " cor[m] := 0;" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 27 " mu := mumin + dmu*(m+0.5);" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 21 " scale[m] := exp(mu);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG }{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "for i from 2
+ to N do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "#print(i);" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 25 " for j from 1 to i-1 do  " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 48 "  distance := sqrt((x[i]-x[j])^2+(y[i]-y[j])^2);
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "  mu := (log(distance+1e-10)-mu
+min)/dmu;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "  m := trunc(mu);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "  if( m >= 0 and m <= M ) then cor[
+m] := cor[m]+1; end if;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 " od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 41 " Integrate the get the pr
+oper numbers ..." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 20 "for m from 1 to M do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 29 " cor[m] := cor[m] + cor[m-1];" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}}{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+36 "li := seq([scale[m],cor[m]],m=1..M):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 53 "loli := seq([log(scale[m]),log(cor[m]+1e-3)],m=1..M):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "loglogplot([li]);" }}}
+{EXCHG }{EXCHG }{EXCHG }{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 
+0 "" 0 "" {TEXT -1 39 "plot the results in log-log fashion ..." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 47 "pl1 := loglogplot([li],style=line,thickness=3):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 75 "pl2 := loglogplot([li],style=point,symbolsize=15
+,color=blue,symbol=circle):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+19 "display(\{pl1,pl2\});" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "" 0 "" {TEXT -1 42 "analysis of the slope -> fractal dimensio
+n" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "xli := [seq(loli[n,1],n=1..nops([loli]))]:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 42 "yli := [seq(loli[n,2],n=1..nops([loli]))]
+:" }}}{EXCHG }{EXCHG }{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+47 "eq:=fit[leastsquare[[x,y],y=a*x+b]]([xli,yli]);" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 71 "pl4 := plot([loli],style=point,symbolsize
+=15,color=blue,symbol=circle):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 62 "pl5 := plot(rhs(eq),x=-4..3,style=line,thickness=3,color=red):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "display(\{pl4,pl5\});" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}}{MARK "57" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

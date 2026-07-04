@@ -1,0 +1,20 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plots)
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "read \"dataset1.txt\":
+ #reads xx[1]..xx[5000]" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "
+N := nops([xx]);     # number of points in the set" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 34 "plotlist := seq([n,xx[n]],n=1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "pointplot([plotlist]);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 46 "Us
+e \"spacecurve\" to visualize the points in 3D" }}{PARA 0 "" 0 "" 
+{TEXT -1 60 " note: this is just an example unrelated to the exercise \+
+..." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "list3d := seq([sin(j
+/10),cos(j/5),sin((j+10)/20)],j=1..200):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "spacecurve([list3d],axes=framed,color=blue);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "5 2 0" 7 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

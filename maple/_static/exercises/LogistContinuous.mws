@@ -1,0 +1,88 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 2 
+1 2 0 0 0 1 }{CSTYLE "Text" -1 200 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle1" -1 202 "Times" 1 18 255 0 255 1 2 1 2 2 2 2 
+0 0 0 1 }{CSTYLE "_cstyle2" -1 203 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 
+0 0 1 }{CSTYLE "_cstyle3" -1 204 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle1" -1 200 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "_ps
+tyle2" -1 201 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 
+0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "_pstyle3" -1 202 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 
+0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plot
+s):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 202 17 "Logi
+stic Equation" }{TEXT 200 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 
+0 "" }}{PARA 201 "" 0 "" {TEXT 200 70 "Introduce x = N/V and rescale t
+ime via t -> t*r to give dx/dt = x(1-x)" }{TEXT 200 0 "" }}{PARA 201 "
+" 0 "" {TEXT 200 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 203 19 "Geomet
+ric approach." }{TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 200 39 "defin
+e the function and make a plot ..." }{TEXT 200 0 "" }}}{EXCHG {PARA 
+200 "> " 0 "" {MPLTEXT 1 0 17 "f:= x -> x*(1-x);" }{MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 23 "plot(f(x),x=-0.1..1.2);
+" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 61 "The plo
+t shows that there are two fixed points: x=0 and x=1. " }{TEXT 200 0 "
+" }}{PARA 201 "" 0 "" {TEXT 200 74 "The geometric approach shows that \+
+x=0 is unsatble, whereas x=1 is stable. " }{TEXT 200 0 "" }}{PARA 201 
+"" 0 "" {TEXT 200 96 "The domain of attraction of x=1 is: (0,infinity)
+, i.e. the entire positive x-axis except for x=0" }{TEXT 200 0 "" }}}
+{EXCHG {PARA 201 "" 0 "" {TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 203 
+17 "Local stability. " }{TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 200 
+21 "1) find fixed points " }{TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 
+200 37 "2) calculate df/dx in these points..." }{TEXT 200 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 43 "fps := solve(f(x)=0,x); # \+
+find fixed points" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 52 "dfdx := D(f); # differentiate for stability analysis
+" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 60 "Note th
+at dfdx(x) is a function, i.e. you can address it via" }{TEXT 200 0 "
+" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 8 "dfdx(x);" }{MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 25 "determine local stabi
+lity" }{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 61 "s
+tab[1] := dfdx(fps[1]); # determine local stability of fp[1]" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 37 "positive ,
+ so fixed point is unstable" }{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 
+0 "" {MPLTEXT 1 0 57 "stab[2] := dfdx(fps[2]); # determine local stabi
+lity fp 2" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 
+33 "negative so fixed point is stable" }{TEXT 200 0 "" }}}{EXCHG 
+{PARA 201 "" 0 "" {TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 203 23 "Pot
+ential function V(x)" }{TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 200 0 
+"" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 18 "integrate f(x) ..." }
+{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 20 "Vx := -i
+nt(f(x), x);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 
+200 5 " Use " }{TEXT 203 7 "unapply" }{TEXT 200 15 " to create the " }
+{TEXT 203 8 "function" }{TEXT 200 6 " V(x) " }{TEXT 200 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 20 "V := unapply(Vx, x);" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 57 "Note that \+
+V(x) is a function, i.e. you can address it via" }{TEXT 200 0 "" }}}
+{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 5 "V(x);" }{MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 68 "plot(V(x), x=-1..2);  #n
+ote   plot(Vx,x=-1..2);   would work as well" }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 201 "" 0 "" {TEXT 200 57 "This plot shows that x=1 is a l
+ocally stable fixed point " }{TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 
+200 51 "(in this landscape a ball would \"roll down\" to x=1)" }{TEXT 
+200 0 "" }}{PARA 201 "" 0 "" {TEXT 200 69 "The plot also shows that (0
+,infinity) is the attraction domain of x=1" }{TEXT 200 0 "" }}}{EXCHG 
+{PARA 201 "" 0 "" {TEXT 200 0 "" }}{PARA 201 "" 0 "" {TEXT 203 43 "Num
+erical solution (use dsolve and odeplot)" }{TEXT 200 0 "" }}{PARA 201 
+"" 0 "" {TEXT 200 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 32 "1) de
+fine the governing equation" }{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 
+0 "" {MPLTEXT 1 0 29 "eq := diff(x(t),t) = f(x(t));" }{MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 28 "2) define initial conditio
+ns" }{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 17 "ic1
+ := x(0) = 2; " }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 
+19 "ic2 := x(0) = 0.01;" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "
+" {TEXT 200 48 "3) tell maple to use a numerical solution method" }
+{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 45 "sol1 := \+
+dsolve(\{eq,ic1\}, x(t), type=numeric);" }{MPLTEXT 1 0 0 "" }}{PARA 
+200 "> " 0 "" {MPLTEXT 1 0 45 "sol2 := dsolve(\{eq,ic2\}, x(t), type=n
+umeric);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 17 
+"4) prepare graphs" }{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 59 "gr1 := odeplot(sol1, [t, x(t)], 0..10, view=[0..10, 0
+..2]):" }{MPLTEXT 1 0 0 "" }}{PARA 200 "> " 0 "" {MPLTEXT 1 0 59 "gr2 \+
+:= odeplot(sol2, [t, x(t)], 0..10, view=[0..10, 0..2]):" }{MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 201 "" 0 "" {TEXT 200 21 "5) Plot them together
+" }{TEXT 200 0 "" }}}{EXCHG {PARA 200 "> " 0 "" {MPLTEXT 1 0 19 "displ
+ay(\{gr1,gr2\});" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 200 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{PARA 202 "" 0 "" {TEXT 204 0 "" }}{PARA 202 "" 
+0 "" {TEXT 204 0 "" }}{PARA 202 "" 0 "" {TEXT -1 0 "" }}}{MARK "26 1 0
+" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

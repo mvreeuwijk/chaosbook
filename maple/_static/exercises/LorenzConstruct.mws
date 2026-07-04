@@ -1,0 +1,54 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "restart:with(plots):
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 15 "usual stuff ..." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "eq1 := diff(x(t),t)=sigma*(y(t)-x(t
+));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "eq2 := diff(y(t),t)=
+-x(t)*z(t)+r*x(t)-y(t);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "
+eq3 := diff(z(t),t)=x(t)*y(t)-b*z(t);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "r:=28;b:=8/3;sigma:=10;tt:=100;" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 17 "sys:=eq1,eq2,eq3;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 27 "ic:=(x(0)=2,y(0)=5,z(0)=5);" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 23 "create output array ..." }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "N:=5000;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+18 "oa := array(1..N);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "d
+t := 0.005;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "for i from 1
+ to N do oa[i] := (i-1)*dt; od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+49 "solve system according to specifaction via oa ..." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "sold:=dsolve(\{sys,ic\},\{x(t),y(t)
+,z(t)\},type=numeric,output=oa):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+31 "extract the computed points ..." }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "soldd:=evalm(sold[2,1]):" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 29 "tt := seq(soldd[j,1],j=1..N):" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 29 "xx := seq(soldd[j,2],j=1..N):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "yy := seq(soldd[j,3],j=1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "zz := seq(soldd[j,4],j=1..N)
+:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 42 "create a plotlist for visual
+ checking ... " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "plotlist \+
+:= seq([tt[j],xx[j]],j=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 28 "p1 := pointplot([plotlist]):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 33 "p2 := plot([plotlist],t=0..N*dt):" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 17 "display(\{p1,p2\});" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 13 "add noise ..." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 29 "r:=evalf(rand(0..1000)/1000):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "xr := seq(xx[j]+3*r(),j=1..N):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 38 "plotlist := seq([tt[j],xr[j]],j=1..N):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "pointplot([plotlist]);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 18 "reconstruction ..." }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "tau := 2*dt;" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 8 "dj := 1;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 12 "dj2 := 2*dj;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "rec
+on3d := seq([xx[j],xx[j+dj],xx[j+dj2]],j=1..N-dj2):" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 45 "spacecurve([recon3d],axes=framed,color=bl
+ue);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "recon3dr := seq([xr
+[j],xr[j+dj],xr[j+dj2]],j=1..N-dj2):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 46 "spacecurve([recon3dr],axes=framed,color=blue);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "save \+
+xx,\"dataset1.txt\":" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "xx :
+= xr:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "save xx,\"dataset2
+.txt\":" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "46" 0 }{VIEWOPTS 1 1 0 
+1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

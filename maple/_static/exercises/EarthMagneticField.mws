@@ -1,0 +1,77 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "_pstyle
+7" -1 256 1 {CSTYLE "" -1 -1 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 
+0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "restart: with(plots)
+:with(LinearAlgebra):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "f1
+ := (x,y,z) -> -3/4*x+z*y;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+30 "f2 := (x,y,z) -> -b*y+(z-1)*x;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "f3 := (x,y,z) ->  1-x*y;" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 41 "DE1 := diff(x(t),t) = f1(x(t),y(t),z(t)):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "DE2 := diff(y(t),t) = f2(x(t
+),y(t),z(t)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "DE3 := dif
+f(z(t),t) = f3(x(t),y(t),z(t)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 20 "DE := DE1, DE2, DE3;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 61 "div := diff(f1(x,y,z),x)+diff(f2(x,y,z),y)+diff(f3(x,y,z),z);" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 72 "Since b>0 the divergence is alwa
+ys < 0, hence the system is dissipative." }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 28 "we try the follwoing points:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 40 "xs1 := 1/k; ys1 := k; zs1 := 3/(4*k^2); " }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "xs2 := -1/k; ys2 := -k; zs2 \+
+:= 3/(4*k^2); " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "b := -1/3
++1/12*(-3+2*k^2)^2/k^4;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "
+expand(f1(xs1,ys1,zs1));expand(f2(xs1,ys1,zs1));expand(f3(xs1,ys1,zs1)
+);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 134 "Since f1 = f2 = f3 = 0, th
+e proposed points are indeed fixed points. Note that since this holds \+
+for arbitrary k, it also holds for -k." }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 10 "Stability:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "
+jacf := VectorCalculus:-Jacobian([f1(x,y,z), f2(x,y,z),f3(x,y,z)], [x,
+y,z]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "jacffp1 := subs(
+\{x=xs1,y=ys1,z=zs1\},jacf);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 42 "jacffp2 := subs(\{x=xs2,y=ys2,z=zs2\},jacf);" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 10 "k := 0.72;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "Eigenvalues(jacffp1);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 89 "the real values of the eigenvalues are all smaller than z
+ero. the fixed point is stable. " }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "Eigenvalues(jacffp2);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 52 "Same eigenvalues, so the same stability (fp2=stable)" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "k := 0.75;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 21 "Eigenvalues(jacffp1);" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 77 "real parts of some eigenvalues are positive; the \+
+fixed point is not stable.  " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 11 "k := -0.75;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Eigenv
+alues(jacffp2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 92 "there are  rea
+l parts of the eigenvalues that are positive; the fixed point is not s
+table.  " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 117 "Bifurcation? Yes, the re
+al part of the two complex eigenvalues changed sign This is indicative
+ of a Hopf-bifurcation." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "k := 0.72;" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 11 "eps := 0.5;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 46 "ic1 := x(0)=xs2+eps,y(0)=ys2+eps,z(0)=zs2+eps;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "sol1 := dsolve(\{DE,ic1\},[x
+(t),y(t),z(t)],type=numeric,maxfun=-1);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 115 "pl1 :=  odeplot(sol1,[x(t),y(t),z(t)],0..500,labels=
+[\"x\",\"y\",\"z\"],numpoints=9000,color=blue,axes=normal,color=red):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "display(pl1);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 105 "Indeed, the fixed point is stable
+, and the initial condition was apparently within the attraction domai
+n." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "eps := 1.0;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "ic1 := x(0)=xs1+eps,y(0)=ys1
++eps,z(0)=zs1+eps;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "sol1 \+
+:= dsolve(\{DE,ic1\},[x(t),y(t),z(t)],type=numeric,maxfun=-1);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 115 "pl2 := odeplot(sol1,[x(t),y
+(t),z(t)],0..500,labels=[\"x\",\"y\",\"z\"],numpoints=9000,color=blue,
+axes=normal,color=blue):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 
+"display(pl2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 131 "Clearly we are
+ out of the attraction domain of the fixed point. Apparently we entere
+d the attraction domain of a strange attractor." }}{PARA 0 "" 0 "" 
+{TEXT -1 129 "The fixed point is still stable; linear stability only t
+ell us something in the region infinitesimally close to the fixed poin
+t. " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "display(pl1,pl2);" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+}{MARK "49" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

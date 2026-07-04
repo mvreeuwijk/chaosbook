@@ -1,0 +1,542 @@
+{VERSION 6 1 "Linux" "6.1" }
+{USTYLETAB {PSTYLE "List Item" -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 -1 3 3 2 0 2 0 2 2 -1 5 }{PSTYLE "L
+ine Printed Output" -1 6 1 {CSTYLE "" -1 -1 "Courier" 1 12 0 0 255 1 
+0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+19" -1 200 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 
+0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle18" -1 201 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle17" -1 202 1 {CSTYLE "" -1 -1 "Cou
+rier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 
+1 }{PSTYLE "Help" -1 10 1 {CSTYLE "" -1 -1 "Courier" 1 9 0 0 255 1 0 
+0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle16
+" -1 203 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle59" -1 204 1 {CSTYLE "" 
+-1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 
+0 2 2 -1 1 }{PSTYLE "_pstyle15" -1 205 1 {CSTYLE "" -1 -1 "Courier" 1 
+12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle58" -1 206 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading \+
+4" -1 20 1 {CSTYLE "" -1 -1 "MS Serif" 1 12 0 0 0 0 1 0 0 2 2 2 0 0 0 
+1 }1 1 0 -1 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle14" -1 207 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 
+0 2 0 2 2 -1 1 }{PSTYLE "_pstyle57" -1 208 1 {CSTYLE "" -1 -1 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "MS Serif" 1 14 0 0 0 0 1 
+1 0 2 2 2 0 0 0 1 }1 1 0 -1 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle13" 
+-1 209 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle56" -1 210 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 -1 "MS Serif" 1 16 0 0 
+0 0 0 1 0 2 2 2 0 0 0 1 }1 1 0 -1 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "_psty
+le12" -1 211 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle55" -1 212 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 
+2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 -1 "MS Seri
+f" 1 18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }1 1 0 -1 8 4 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle11" -1 213 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle54" 
+-1 214 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle10" -1 215 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 
+2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle53" -1 216 1 {CSTYLE "" -1 -1 "Couri
+er" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle52" -1 217 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle51" 
+-1 218 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 
+1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle50" -1 219 1 {CSTYLE "" 
+-1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 
+0 2 2 -1 1 }{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }3 3 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "N
+ormal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 
+1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 
+-1 "Courier" 1 12 255 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle49" -1 220 1 {CSTYLE "" -1 -1 "Times" 1 
+12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE 
+"Left Justified Maple Output" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }1 3 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pst
+yle48" -1 221 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle47" -1 222 1 
+{CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 
+0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle46" -1 223 1 {CSTYLE "" -1 -1 
+"" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle45" -1 224 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle44" -1 
+225 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle43" -1 226 1 {CSTYLE "" -1 
+-1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 
+2 -1 1 }{PSTYLE "_pstyle42" -1 227 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 
+0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Map
+le Plot" -1 13 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+3 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle41" -1 228 1 {CSTYLE 
+"" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 
+0 2 0 2 2 -1 1 }{PSTYLE "_pstyle40" -1 229 1 {CSTYLE "" -1 -1 "Courier
+" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Courier" 1 10 64 128 64 
+1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Autho
+r" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }
+3 1 0 -1 8 8 2 0 2 0 2 2 -1 1 }{PSTYLE "Text Output" -1 2 1 {CSTYLE ""
+ -1 -1 "Courier" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 
+0 2 0 2 2 -1 1 }{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 
+12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle39" -1 230 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle38" 
+-1 231 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 
+1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle37" -1 232 1 {CSTYLE "" 
+-1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{PSTYLE "_pstyle36" -1 233 1 {CSTYLE "" -1 -1 "Courier" 1 12 
+255 0 0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle35" -1 234 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle3
+4" -1 235 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 
+}1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle33" -1 236 1 {CSTYLE ""
+ -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Dash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 -1 3 3 2 0 2 0 2 2 -1 3 }{PSTYLE "_ps
+tyle32" -1 237 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 
+2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle31" -1 238 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle30" -1 239 1 {CSTYLE "" -1 -1 "Tim
+es" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle9" -1 240 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 
+0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle
+8" -1 241 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle7" -1 242 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle6" -1 243 1 {CSTYLE "" -1 -1 "Cour
+ier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 
+}{PSTYLE "_pstyle5" -1 244 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle4" -1 
+245 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }
+0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle3" -1 246 1 {CSTYLE "
+" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{PSTYLE "_pstyle2" -1 247 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle1
+" -1 248 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Bullet Item" -1 15 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 -1 3 
+3 2 0 2 0 2 2 -1 2 }{PSTYLE "_pstyle29" -1 249 1 {CSTYLE "" -1 -1 "Cou
+rier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle28" -1 250 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 
+2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle27" 
+-1 251 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 
+-1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle26" -1 252 1 {CSTYLE "" -1 
+-1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 
+2 -1 1 }{PSTYLE "_pstyle25" -1 253 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 
+0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle24" -1 254 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 
+2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle23" -1 255 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle65" -1 256 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_
+pstyle22" -1 257 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle21" -1 258 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 
+2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle64" -1 259 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle20" -1 260 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_psty
+le63" -1 261 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 
+1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle62" -1 262 1 
+{CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 
+-1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle61" -1 263 1 {CSTYLE "" -1 -1 "Ti
+mes" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 
+}{PSTYLE "Title" -1 18 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 0 0 1 1 
+2 2 2 0 0 0 1 }3 1 0 -1 12 12 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle60" 
+-1 264 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 
+0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "Fixed Width" -1 17 1 {CSTYLE "
+" -1 -1 "Courier" 1 10 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }3 1 0 0 0 0 2 0 2 
+0 2 2 -1 1 }{CSTYLE "2D Math Bold Small" -1 10 "Times" 0 1 0 0 0 0 0 
+1 2 2 2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "MS Serif" 1 
+12 147 0 15 1 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "Output Labels" -1 29 "Time
+s" 1 8 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 1 
+12 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Notes" -1 37 "" 0 1 0 0 
+0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "LaTeX" -1 32 "" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{CSTYLE "2D Comment" -1 18 "Times" 0 1 0 0 0 0 0 0 2 2 2 
+2 0 0 0 1 }{CSTYLE "Prompt" -1 1 "Courier" 0 1 0 0 0 1 0 0 0 2 2 2 0 
+0 0 1 }{CSTYLE "Help Italic" -1 42 "Times" 1 12 0 0 0 0 1 0 0 2 2 2 0 
+0 0 1 }{CSTYLE "Page Number" -1 33 "Times" 1 10 0 0 0 0 0 0 2 2 2 2 0 
+0 0 1 }{CSTYLE "Maple Input" -1 0 "Courier" 1 12 255 0 0 1 0 1 0 2 1 
+2 0 0 0 1 }{CSTYLE "Help Bold" -1 39 "Times" 1 12 0 0 0 0 0 1 0 2 2 2 
+0 0 0 1 }{CSTYLE "Help Underlined Bold" -1 41 "Times" 1 12 0 0 0 0 0 
+1 1 2 2 2 0 0 0 1 }{CSTYLE "Help Fixed" -1 23 "Courier" 1 10 0 0 0 0 
+0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Copyright" -1 34 "Times" 1 10 0 0 0 0 2 
+2 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Small" -1 7 "Times" 0 1 0 0 0 0 0 
+0 2 2 2 2 0 0 0 1 }{CSTYLE "Popup" -1 31 "" 0 1 0 128 128 1 1 0 1 2 2 
+2 0 0 0 1 }{CSTYLE "2D Math Symbol 2" -1 16 "Times" 0 1 0 0 0 0 2 2 2 
+2 2 2 0 0 0 1 }{CSTYLE "Plot Text" -1 28 "" 1 8 0 0 0 0 0 0 0 2 2 2 0 
+0 0 1 }{CSTYLE "Hyperlink" -1 17 "MS Serif" 1 12 0 128 128 1 0 0 1 2 
+2 2 0 0 0 1 }{CSTYLE "Help Underlined Italic" -1 43 "Times" 1 12 0 0 
+0 0 1 0 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic Small" -1 200 "Times"
+ 0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "2D Math Italic" -1 3 "Times
+" 0 1 0 0 0 0 1 0 2 2 2 2 0 0 0 1 }{CSTYLE "Maple Comment" -1 21 "Cour
+ier" 0 1 0 0 0 1 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Math Bold" -1 5 "Tim
+es" 0 1 0 0 0 0 0 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle9" -1 201 "Times"
+ 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle8" -1 202 "Courier" 
+1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle7" -1 203 "Times" 
+1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Plot Title" -1 27 "" 1 10 
+0 0 0 0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle6" -1 204 "Courier" 1 12 
+255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle5" -1 205 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle4" -1 206 "Times" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Heading" -1 26 "" 1 14 0 0 0 
+0 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle3" -1 207 "Courier" 1 12 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle36" -1 208 "Times" 0 1 0 0 0 
+0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle2" -1 209 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle35" -1 210 "Times" 1 12 0 0 0 1 
+2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle1" -1 211 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle34" -1 212 "Times" 0 1 0 0 0 0 
+0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle33" -1 213 "Courier" 1 12 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle32" -1 214 "Times" 1 12 0 0 
+0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle31" -1 215 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle30" -1 216 "Courier" 1 12 
+255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Help Italic Bold" -1 40 "Times
+" 1 12 0 0 0 0 1 1 0 2 2 2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 
+1 12 255 0 0 1 0 0 0 2 1 2 0 0 0 1 }{CSTYLE "Maple Input Placeholder" 
+-1 217 "Courier" 1 12 200 0 200 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Help N
+ormal" -1 30 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "2D Out
+put" -1 20 "Times" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }{CSTYLE "Help M
+enus" -1 36 "" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle29" 
+-1 218 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle28" 
+-1 219 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle27" 
+-1 220 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle26" 
+-1 221 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle2
+5" -1 222 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle24
+" -1 223 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle23"
+ -1 224 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle
+22" -1 225 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle21
+" -1 226 "Courier" 0 1 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle
+20" -1 227 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Help
+ Underlined" -1 44 "Times" 1 12 0 0 0 0 0 0 1 2 2 2 0 0 0 1 }{CSTYLE "
+_cstyle19" -1 228 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_
+cstyle18" -1 229 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_c
+style17" -1 230 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cst
+yle16" -1 231 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_csty
+le15" -1 232 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "Te
+xt" -1 233 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle1
+4" -1 234 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle13
+" -1 235 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "_cstyle12"
+ -1 236 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{CSTYLE "_cstyle
+11" -1 237 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "_cstyle10
+" -1 238 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Default" 
+-1 38 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{CSTYLE "Help Variable" -1 
+25 "Courier" 0 1 0 0 0 1 2 2 0 2 2 2 0 0 0 1 }{CSTYLE "Help Emphasized
+" -1 239 "" 0 1 0 0 0 0 1 2 0 2 2 2 0 0 0 1 }{CSTYLE "Help Maple Name"
+ -1 35 "" 0 1 104 64 92 1 0 1 0 2 2 2 0 0 0 1 }{CSTYLE "Help Nontermin
+al" -1 24 "Courier" 0 1 0 0 0 1 0 1 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle6
+6" -1 265 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 1 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle37" -1 240 "Courier
+" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{PSTYLE "_pstyle67" -1 266 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle38" -1 241 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 0 0 0 1 }{PSTYLE "_pstyle68" -1 267 1 {CSTYLE "" -1 -1 "Time
+s" 1 12 0 0 0 1 2 1 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{CSTYLE "_cstyle39" -1 242 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+{PSTYLE "_pstyle69" -1 268 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 
+1 0 1 0 2 1 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle4
+0" -1 243 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{PSTYLE "_psty
+le70" -1 269 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle71" -1 270 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }1 1 0 0 0 
+0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle72" -1 271 1 {CSTYLE "" -1 -1 "Cou
+rier" 1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 
+1 }{PSTYLE "_pstyle73" -1 272 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 
+0 1 0 1 0 2 1 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_ps
+tyle74" -1 273 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 1 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle41" -1 244 "Times" 
+0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle75" -1 274 1 {CSTYLE 
+"" -1 -1 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 
+0 2 2 -1 1 }{CSTYLE "_cstyle42" -1 245 "Times" 1 12 0 0 0 1 2 1 2 2 2 
+2 0 0 0 1 }{PSTYLE "_pstyle76" -1 275 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_p
+style77" -1 276 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 1 0 0 1 
+}1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle43" -1 246 "Courier" 1 
+12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }{PSTYLE "_pstyle78" -1 277 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 
+2 0 2 2 -1 1 }{PSTYLE "_pstyle79" -1 278 1 {CSTYLE "" -1 -1 "Courier" 
+1 12 255 0 0 1 0 1 0 2 1 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }
+{PSTYLE "_pstyle80" -1 279 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 
+0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle81" 
+-1 280 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 
+0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle82" -1 281 1 {CSTYLE ""
+ -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 
+0 2 2 -1 1 }{PSTYLE "_pstyle83" -1 282 1 {CSTYLE "" -1 -1 "Times" 0 1 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE 
+"_pstyle84" -1 283 1 {CSTYLE "" -1 -1 "Times" 0 1 0 0 0 0 0 0 0 2 2 2 
+0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle85" -1 284 1
+ {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 
+2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle44" -1 247 "Times" 0 1 0 0 0 0 0 0 
+0 2 2 2 0 0 0 1 }{PSTYLE "_pstyle86" -1 285 1 {CSTYLE "" -1 -1 "" 0 1 
+0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 240 42 "restart; with(pl
+ots): with(LinearAlgebra):" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 265 "
+> " 0 "" {MPLTEXT 1 240 64 "a := t -> exp(-mu*t)*(mu*sin(omega*t)+cos(
+omega*t)*omega)/omega;" }{MPLTEXT 1 240 0 "" }}{PARA 265 "> " 0 "" 
+{MPLTEXT 1 240 41 "b := t ->  exp(-mu*t)*sin(omega*t)/omega;" }
+{MPLTEXT 1 240 0 "" }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 65 "c := t ->
+ -exp(-mu*t)*(mu*sin(omega*t)-cos(omega*t)*omega)/omega;" }{MPLTEXT 1 
+240 0 "" }}}{EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 240 22 "omega := sqr
+t(1-mu^2);" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 265 "> " 0 "" 
+{MPLTEXT 1 240 39 "delta := t -> a(t) * d0 + b(t) * ddot0;" }{MPLTEXT 
+1 240 0 "" }}}{EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 240 43 "deltadot :
+= t -> -b(t) * d0 + c(t) * ddot0;" }{MPLTEXT 1 240 0 "" }}}{EXCHG 
+{PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 267 "" 0 "" {TEXT 242 74 "Ver
+ify if this is a correct solution to the given differential equation..
+." }{TEXT 242 0 "" }}{PARA 266 "" 0 "" {TEXT 241 0 "" }}}{EXCHG {PARA 
+265 "> " 0 "" {MPLTEXT 1 240 34 "simplify(D(delta)(t)-deltadot(t));" }
+{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 240 71 "s
+implify(diff(delta(t), t, t) + 2 * mu * diff(delta(t), t) + delta(t));
+" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 266 "" 0 "" {TEXT 241 0 "" }}
+{PARA 267 "" 0 "" {TEXT 242 19 "Set up the mapping " }{TEXT 242 0 "" }
+}{PARA 266 "" 0 "" {TEXT 241 0 "" }}}{EXCHG {PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 39 "signum(-1.3); signum(1e-10);signum(0); " }{MPLTEXT 
+1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 17 "_Envsignum0 := 1;"
+ }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 10 "signum(
+0);" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 
+243 66 "f := unapply(delta(tau) - K * signum(deltadot(tau)), [d0, ddot
+0]);" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 41 "g \+
+:= unapply(deltadot(tau), [d0, ddot0]);" }{MPLTEXT 1 243 0 "" }}}
+{EXCHG {PARA 269 "" 0 "" {TEXT 233 0 "" }}{PARA 270 "" 0 "" {TEXT 231 
+22 "Plot \{delta, deltadot\}" }{TEXT 231 0 "" }}{PARA 269 "" 0 "" 
+{TEXT 233 0 "" }}}{EXCHG {PARA 271 "> " 0 "" {MPLTEXT 1 0 25 "tau := e
+valf(2*Pi) * phi;" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 10 "N := 2000;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0
+ "" {MPLTEXT 1 243 18 "dd := Array(1..N):" }{MPLTEXT 1 243 0 "" }
+{MPLTEXT 1 243 21 "\nddot := Array(1..N):" }{MPLTEXT 1 243 0 "" }}
+{PARA 265 "> " 0 "" {MPLTEXT 1 240 17 "s := Array(1..N):" }{MPLTEXT 1 
+240 0 "" }}}{EXCHG {PARA 271 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 268 "> " 0 "" {MPLTEXT 1 243 11 "dd[1] := 0;" }{MPLTEXT 1 243 0 
+"" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 15 "ddot[1] := 0.5;" }
+{MPLTEXT 1 243 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 24 "s[1] := sig
+num(ddot[1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 11 "mu := 0.01;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 
+0 "" {MPLTEXT 1 243 9 "K := 0.1;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> \+
+" 0 "" {MPLTEXT 1 243 12 "phi := 0.76;" }{MPLTEXT 1 243 0 "" }}}
+{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 22 "for i from 1 to N-1 do" 
+}{MPLTEXT 1 243 0 "" }}{PARA 272 "> " 0 "" {MPLTEXT 1 0 31 "  dd[i+1] \+
+:= f(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 "" }}{PARA 272 "> " 0 "" 
+{MPLTEXT 1 0 33 "  ddot[i+1] := g(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 ""
+ }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 30 "  s[i+1] := signum(ddot[i+1]
+);" }{MPLTEXT 1 240 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 7 "end d
+o:" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 
+41 "pp := seq([dd[i], ddot[i]], i=N-1000..N):" }{MPLTEXT 1 243 0 "" }}
+{PARA 268 "> " 0 "" {MPLTEXT 1 243 16 "pointplot([pp]);" }{MPLTEXT 1 
+243 0 "" }}}{EXCHG {PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "
+" {TEXT 241 152 "Just for fun, let's calculate the number of revolutio
+ns the oscillator makes. p is the periodicity of the sequence and rev \+
+is the number of revelations." }{TEXT 241 0 "" }}{PARA 266 "" 0 "" 
+{TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 99 "The expression for de
+ltaphi can be derived from elementary trigoniometric relations in phas
+e space." }{TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 0 "" }}}
+{EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 240 8 "p := 10;" }{MPLTEXT 1 
+240 0 "" }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 9 "rev := 0:" }{MPLTEXT 
+1 240 0 "" }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 24 "for i from N-p+1 t
+o N do" }{MPLTEXT 1 240 0 "" }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 131 
+"  deltaphi := -arccos((dd[i] * (dd[i] + s[i] * K) + ddot[i]^2) / sqrt
+(dd[i]^2+ddot[i]^2) / sqrt((dd[i] + s[i] * K)^2 + ddot[i]^2));" }
+{MPLTEXT 1 240 0 "" }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 46 "  rev := \+
+rev + (tau + deltaphi) / evalf(2*Pi);" }{MPLTEXT 1 240 0 "" }}{PARA 
+265 "> " 0 "" {MPLTEXT 1 240 7 "end do:" }{MPLTEXT 1 240 0 "" }}{PARA 
+265 "> " 0 "" {MPLTEXT 1 240 4 "rev;" }{MPLTEXT 1 240 0 "" }}}{EXCHG 
+{PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 52 "So \+
+this state =  7 revolutions in 10 kicks -> W=7/10" }{TEXT 241 0 "" }}
+{PARA 266 "" 0 "" {TEXT 241 0 "" }}}{EXCHG {PARA 273 "" 0 "" {TEXT 
+244 0 "" }}{PARA 274 "" 0 "" {TEXT 245 28 "Create a bifurcation diagra
+m" }{TEXT 245 0 "" }}{PARA 273 "" 0 "" {TEXT 244 0 "" }}}{EXCHG {PARA 
+268 "> " 0 "" {MPLTEXT 1 243 10 "N := 2000;" }{MPLTEXT 1 243 0 "" }}
+{PARA 268 "> " 0 "" {MPLTEXT 1 243 18 "dd := Array(1..N):" }{MPLTEXT 
+1 243 0 "" }{MPLTEXT 1 243 21 "\nddot := Array(1..N):" }{MPLTEXT 1 
+243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 11 "dd[1] := 0;"
+ }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 15 "ddot[1]
+ := 0.0;" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 
+1 243 11 "mu := 0.01;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 9 "K := 0.1;" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 
+"> " 0 "" {MPLTEXT 1 243 38 "nphi := 50; phi_b := 0.01; phi_e := 1;" }
+{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 13 "nsamp := \+
+250;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 78 "ph
+iarr := Array(1..nphi, i -> phi_b + (i - 1) / (nphi - 1) * (phi_e - ph
+i_b));" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 
+243 35 "bifpp := Array(1..nphi*nsamp,1..3):" }{MPLTEXT 1 243 0 "" }}
+{PARA 268 "> " 0 "" {MPLTEXT 1 243 12 "curbif := 0;" }{MPLTEXT 1 243 
+0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 26 "for iphi from 1 to nphi \+
+do" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 22 "  ph
+i := phiarr[iphi];" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 13 "  print(phi);" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> \+
+" 0 "" {MPLTEXT 1 243 24 "  for i from 1 to N-1 do" }{MPLTEXT 1 243 0 
+"" }}{PARA 272 "> " 0 "" {MPLTEXT 1 0 33 "    dd[i+1] := f(dd[i], ddot
+[i]);" }{MPLTEXT 1 0 0 "" }}{PARA 272 "> " 0 "" {MPLTEXT 1 0 35 "    d
+dot[i+1] := g(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 "" }}{PARA 272 "> " 0 
+"" {MPLTEXT 1 0 9 "  end do:" }{MPLTEXT 1 0 0 "" }}{PARA 268 "> " 0 ""
+ {MPLTEXT 1 243 41 "  bifpp[curbif+1..curbif+nsamp,1] := phi;" }
+{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 54 "  bifpp[c
+urbif+1..curbif+nsamp,2] := dd[N-nsamp+1..N]:" }{MPLTEXT 1 243 0 "" }}
+{PARA 265 "> " 0 "" {MPLTEXT 1 240 56 "  bifpp[curbif+1..curbif+nsamp,
+3] := ddot[N-nsamp+1..N]:" }{MPLTEXT 1 240 0 "" }}{PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 27 "  curbif := curbif + nsamp;" }{MPLTEXT 1 243 0 "" }
+}{PARA 268 "> " 0 "" {MPLTEXT 1 243 7 "end do:" }{MPLTEXT 1 243 0 "" }
+}{PARA 273 "> " 0 "" {TEXT 244 0 "" }}}{EXCHG {PARA 265 "> " 0 "" 
+{MPLTEXT 1 240 55 "pp := seq([bifpp[i, 1], bifpp[i, 2]], i=1..nsamp*np
+hi):" }{MPLTEXT 1 240 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 36 "poin
+tplot([pp], view=[0..1, -1..1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+265 "> " 0 "" {MPLTEXT 1 240 38 "ppp := seq([bifpp[i, 1], bifpp[i, 2],
+ " }{MPLTEXT 1 240 11 "bifpp[i, 3]" }{MPLTEXT 1 240 20 "], i=1..nsamp*
+nphi):" }{MPLTEXT 1 240 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 81 "po
+intplot3d([ppp], axes=boxed, labels=[\"phi\", \"delta\", \"deltadot\"]
+, color=black);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 269 "" 0 "" {TEXT 
+233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 122 "Although there is clearly \+
+a lot going on, there is no sign of period doubling and thus of Feigen
+baum's universal behavior." }{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 
+233 0 "" }}}{EXCHG {PARA 269 "" 0 "" {TEXT 233 0 "" }}{PARA 270 "" 0 "
+" {TEXT 231 23 "Vary initial conditions" }{TEXT 231 0 "" }}{PARA 269 "
+" 0 "" {TEXT 233 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 10 
+"N := 2000;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 
+243 18 "dd := Array(1..N):" }{MPLTEXT 1 243 0 "" }{MPLTEXT 1 243 21 "
+\nddot := Array(1..N):" }{MPLTEXT 1 243 0 "" }}{PARA 265 "> " 0 "" 
+{MPLTEXT 1 240 17 "s := Array(1..N):" }{MPLTEXT 1 240 0 "" }}}{EXCHG 
+{PARA 268 "> " 0 "" {MPLTEXT 1 243 11 "dd[1] := 0;" }{MPLTEXT 1 243 0 
+"" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 15 "ddot[1] := 0.5;" }
+{MPLTEXT 1 243 0 "" }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 24 "s[1] := s
+ignum(ddot[1]);" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 268 "> " 0 "" 
+{MPLTEXT 1 243 11 "mu := 0.01;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> " 
+0 "" {MPLTEXT 1 243 9 "K := 0.1;" }{MPLTEXT 1 243 0 "" }}{PARA 268 "> \+
+" 0 "" {MPLTEXT 1 243 12 "phi := 0.76;" }{MPLTEXT 1 243 0 "" }}}
+{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 22 "for i from 1 to N-1 do" 
+}{MPLTEXT 1 243 0 "" }}{PARA 272 "> " 0 "" {MPLTEXT 1 0 31 "  dd[i+1] \+
+:= f(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 "" }}{PARA 272 "> " 0 "" 
+{MPLTEXT 1 0 33 "  ddot[i+1] := g(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 ""
+ }}{PARA 265 "> " 0 "" {MPLTEXT 1 240 30 "  s[i+1] := signum(ddot[i+1]
+);" }{MPLTEXT 1 240 0 "" }}{PARA 268 "> " 0 "" {MPLTEXT 1 243 7 "end d
+o:" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 
+41 "pp := seq([dd[i], ddot[i]], i=N-1000..N):" }{MPLTEXT 1 243 0 "" }}
+}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 16 "pointplot([pp]);" }
+{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 271 "> " 0 "" {MPLTEXT 1 0 37 "pp \+
+:= seq([i, ddot[i]], i=N-1000..N):" }{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 
+17 "\npointplot([pp]);" }{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 2 "\n " }
+{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 1 "\n" }}}{EXCHG {PARA 269 "" 0 "" 
+{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 29 "d0 = 0; ddot0 = 0 -> \+
+period 3" }{TEXT 233 0 "" }}{PARA 275 "" 0 "" {TEXT -1 31 "d0 = 0; ddo
+t0 = 0.1 -> period 2" }{TEXT -1 0 "" }}{PARA 275 "" 0 "" {TEXT -1 31 "
+d0 = 0; ddot0 = 0.3 -> period 3" }{TEXT -1 0 "" }}{PARA 269 "" 0 "" 
+{TEXT 233 32 "d0 = 0; ddot0 = 0.5 -> period 10" }{TEXT 233 0 "" }}
+{PARA 269 "" 0 "" {TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 8 "... \+
+etc." }{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "" }}{PARA 269 "
+" 0 "" {TEXT 233 121 "From the definition of chaos as 'sensitive depen
+dence to initial conditions' it would seem that this is chaotic behavi
+or." }{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 148 "However, the L
+yapunov exponents are negative during the oscillation and zero during \+
+kicks. Only near deltadot=0 will nearby trajectories be strongly" }
+{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 122 "divergent, but that \+
+will only happen when the system is seeking an equilibrium. All and al
+l, it seems most appropriate to " }{TEXT 233 12 "call this a " }{TEXT 
+233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 91 "non-linear system with frac
+tal basins of attraction, as shown in Figure 2 of the exercises." }
+{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "" }}}{EXCHG {PARA 269 
+"" 0 "" {TEXT 233 0 "" }}{PARA 270 "" 0 "" {TEXT 231 77 "Calculate the
+ winding number graphically from the trajectories in phase space" }
+{TEXT 231 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "" }}}{EXCHG {PARA 276 
+"> " 0 "" {MPLTEXT 1 246 10 "N := 2000;" }{MPLTEXT 1 246 0 "" }}{PARA 
+276 "> " 0 "" {MPLTEXT 1 246 18 "dd := Array(1..N):" }{MPLTEXT 1 246 
+0 "" }{MPLTEXT 1 246 21 "\nddot := Array(1..N):" }{MPLTEXT 1 246 0 "" 
+}}{PARA 276 "> " 0 "" {MPLTEXT 1 246 17 "s := Array(1..N):" }{MPLTEXT 
+1 246 0 "" }}}{EXCHG {PARA 276 "> " 0 "" {MPLTEXT 1 246 11 "dd[1] := 0
+;" }{MPLTEXT 1 246 0 "" }}{PARA 276 "> " 0 "" {MPLTEXT 1 246 15 "ddot[
+1] := 0.5;" }{MPLTEXT 1 246 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 
+24 "s[1] := signum(ddot[1]);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 276 "
+> " 0 "" {MPLTEXT 1 246 11 "mu := 0.01;" }{MPLTEXT 1 246 0 "" }}{PARA 
+276 "> " 0 "" {MPLTEXT 1 246 9 "K := 0.1;" }{MPLTEXT 1 246 0 "" }}
+{PARA 276 "> " 0 "" {MPLTEXT 1 246 12 "phi := 0.76;" }{MPLTEXT 1 246 
+0 "" }}}{EXCHG {PARA 276 "> " 0 "" {MPLTEXT 1 246 22 "for i from 1 to \+
+N-1 do" }{MPLTEXT 1 246 0 "" }}{PARA 272 "> " 0 "" {MPLTEXT 1 0 31 "  \+
+dd[i+1] := f(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 "" }}{PARA 272 "> " 0 "
+" {MPLTEXT 1 0 33 "  ddot[i+1] := g(dd[i], ddot[i]);" }{MPLTEXT 1 0 0 
+"" }}{PARA 276 "> " 0 "" {MPLTEXT 1 246 30 "  s[i+1] := signum(ddot[i+
+1]);" }{MPLTEXT 1 246 0 "" }}{PARA 276 "> " 0 "" {MPLTEXT 1 246 7 "end
+ do:" }{MPLTEXT 1 246 0 "" }}}{EXCHG {PARA 269 "" 0 "" {TEXT 233 0 "" 
+}}{PARA 269 "" 0 "" {TEXT 233 94 "Use the last Nplot iterations to cal
+culate the trajectory between the kicks for visualization." }{TEXT 
+233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "" }}}{EXCHG {PARA 271 "> " 0
+ "" {MPLTEXT 1 0 25 "Nplot := 20: Ntsmp := 50:" }{MPLTEXT 1 0 0 "" }}
+{PARA 271 "> " 0 "" {MPLTEXT 1 0 31 "trajd := Array(1..Ntsmp*Nplot):" 
+}{MPLTEXT 1 0 0 "" }}{PARA 277 "> " 0 "" {MPLTEXT 1 246 34 "trajddot :
+= Array(1..Ntsmp*Nplot):" }{MPLTEXT 1 246 0 "" }}{PARA 271 "> " 0 "" 
+{MPLTEXT 1 0 56 "tsmp := Array(1..Ntsmp, i -> (i-1) / (Ntsmp - 1) * ta
+u):" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 271 "> " 0 "" {MPLTEXT 1 0 7 "
+i := 0:" }{MPLTEXT 1 0 0 "" }}{PARA 278 "> " 0 "" {MPLTEXT 1 211 32 "f
+or j from N - Nplot + 1 to N do" }{MPLTEXT 1 211 0 "" }}{PARA 271 "> "
+ 0 "" {MPLTEXT 1 0 32 "  d0 := dd[j]; ddot0 := ddot[j];" }{MPLTEXT 1 
+0 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 50 "  trajd[i+1..i+Ntsmp] :=
+ map(t -> delta(t), tsmp);" }{MPLTEXT 1 0 0 "" }}{PARA 271 "> " 0 "" 
+{MPLTEXT 1 0 56 "  trajddot[i+1..i+Ntsmp] := map(t -> deltadot(t), tsm
+p);" }{MPLTEXT 1 0 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 17 "  i := \+
+i + Ntsmp;" }{MPLTEXT 1 0 0 "" }}{PARA 278 "> " 0 "" {MPLTEXT 1 211 3 
+"od:" }{MPLTEXT 1 211 0 "" }}}{EXCHG {PARA 269 "" 0 "" {TEXT 233 0 "" 
+}}{PARA 269 "" 0 "" {TEXT 233 123 "Display the plot. The trajectory is
+ clockwise, the circles and squares denote the position just before an
+d after the kicks." }{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 ""
+ }}}{EXCHG {PARA 278 "> " 0 "" {MPLTEXT 1 211 56 "ptraj := seq([trajd[
+i], trajddot[i]], i=1..Ntsmp*Nplot):" }{MPLTEXT 1 211 0 "" }}{PARA 
+271 "> " 0 "" {MPLTEXT 1 0 48 "pnew := seq([dd[i], ddot[i]], i=N - Npl
+ot+1..N):" }{MPLTEXT 1 0 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 56 "p
+old := seq([dd[i] + K *s[i], ddot[i]], i=N-Nplot+1..N):" }{MPLTEXT 1 
+0 0 "" }}{PARA 271 "> " 0 "" {MPLTEXT 1 0 60 "plot([[ptraj], [pnew], [
+pold]], style=[line, point, point], " }{MPLTEXT 1 0 0 "" }{MPLTEXT 1 
+0 80 "\n     symbol=[circle, box, circle], color=[red, blue, black], s
+ymbolsize = 100);" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 269 "" 0 "" 
+{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 99 "The winding numbers c
+an be calculated from counting the number of revolutions the system un
+dergoes." }{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "" }}{PARA 
+269 "" 0 "" {TEXT 233 41 "d0 = 0; ddot0 = 0 -> period 3   -> W= 2/3" }
+{TEXT 233 0 "" }{TEXT 233 42 "\nd0 = 0; ddot0 = 0.1 -> period 2 -> W= \+
+1/2" }{TEXT 233 0 "" }{TEXT 233 43 "\nd0 = 0; ddot0 = 0.3 -> period 3 \+
+-> W = 2/3" }{TEXT 233 0 "" }{TEXT 233 45 "\nd0 = 0; ddot0 = 0.5 -> pe
+riod 10 -> W = 7/10" }{TEXT 233 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "
+" }}}{EXCHG {PARA 273 "" 0 "" {TEXT 244 0 "" }}{PARA 274 "" 0 "" 
+{TEXT 245 59 "Calculate the period-1 solution for sgn(y_n+1) > 0 and <
+ 0." }{TEXT 245 0 "" }}{PARA 273 "" 0 "" {TEXT 244 0 "" }}}{EXCHG 
+{PARA 265 "> " 0 "" {MPLTEXT 1 240 79 "mu := 'mu'; K:= 'K'; tau:= 'tau
+'; ddot := 'ddot'; d0 := 'd0'; ddot0 := 'ddot0';" }}}{EXCHG {PARA 268 
+"> " 0 "" {MPLTEXT 1 243 45 "fpos := unapply(delta(tau) - K, [d0, ddot
+0]);" }{MPLTEXT 1 243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 
+243 45 "fneg := unapply(delta(tau) + K, [d0, ddot0]);" }{MPLTEXT 1 
+243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 62 "simplify(sol
+ve(\{fneg(d,ddot)=d, g(d,ddot) = ddot\}, \{d,ddot\}));" }{MPLTEXT 1 
+243 0 "" }}}{EXCHG {PARA 268 "> " 0 "" {MPLTEXT 1 243 62 "simplify(sol
+ve(\{fpos(d,ddot)=d, g(d,ddot) = ddot\}, \{d,ddot\}));" }{MPLTEXT 1 
+243 0 "" }}}{EXCHG {PARA 269 "" 0 "" {TEXT 233 0 "" }}{PARA 270 "" 0 "
+" {TEXT 231 48 "Calculate the stability of the period-1 solution" }
+{TEXT 231 0 "" }}{PARA 269 "" 0 "" {TEXT 233 0 "" }}}{EXCHG {PARA 265 
+"> " 0 "" {MPLTEXT 1 240 62 "Jneg := VectorCalculus:-Jacobian([fneg(x,
+y), g(x,y)], [x, y]);" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 266 "" 0 "
+" {TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 85 "Note that there is \+
+no need to substitute the fixed points as this is a linear system!" }
+{TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 0 "" }}}{EXCHG {PARA 265 
+"> " 0 "" {MPLTEXT 1 240 27 "evneg := Eigenvalues(Jneg);" }{MPLTEXT 1 
+240 0 "" }}}{EXCHG {PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "
+" {TEXT 241 102 "Here Maple is a bit silly as it does not use the iden
+tity cos^2 x + sin^2 x = 1. Doing this gives that" }{TEXT 241 0 "" }}
+{PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 54 "ev1
+ = exp(-mu tau) (cos(omega tau) + i sin(omega tau))" }{TEXT 241 0 "" }
+}{PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 54 "ev
+2 = exp(-mu tau) (cos(omega tau) - i sin(omega tau))" }{TEXT 241 0 "" 
+}}{PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 55 "t
+his means that: abs(ev1) = abs(ev2) = exp(-mu tau) < 1" }{TEXT 241 0 "
+" }}{PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 32 
+"Let's plot this just to be sure." }{TEXT 241 0 "" }}{PARA 266 "" 0 ""
+ {TEXT 241 0 "" }}}{EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 240 10 "mu :=
+ 0.1;" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 265 "> " 0 "" {MPLTEXT 1 
+240 74 "plot([abs(evneg[1]), abs(evneg[2])], tau=0..20*Pi, legend=[\"e
+v1\", \"ev2\"]);" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 265 "> " 0 "" 
+{MPLTEXT 1 240 11 "mu := 'mu';" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 
+265 "> " 0 "" {MPLTEXT 1 240 62 "Jpos := VectorCalculus:-Jacobian([fpo
+s(x,y), g(x,y)], [x, y]);" }{MPLTEXT 1 240 0 "" }}}{EXCHG {PARA 265 ">
+ " 0 "" {MPLTEXT 1 240 27 "evpos := Eigenvalues(Jpos);" }{MPLTEXT 1 
+240 0 "" }}}{EXCHG {PARA 266 "" 0 "" {TEXT 241 0 "" }}{PARA 266 "" 0 "
+" {TEXT 241 51 "So the eigenvalues are identical to the other case." }
+{TEXT 241 0 "" }}{PARA 266 "" 0 "" {TEXT 241 0 "" }}}{EXCHG {PARA 271 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 279 "" 0 "" {TEXT 206 0 "" }}
+{PARA 279 "" 0 "" {TEXT 206 0 "" }}{PARA 279 "" 0 "" {TEXT 206 0 "" }}
+{PARA 279 "" 0 "" {TEXT 206 0 "" }}{PARA 279 "" 0 "" {TEXT 206 0 "" }}
+{PARA 279 "" 0 "" {TEXT 206 0 "" }}{PARA 280 "" 0 "" {TEXT 237 0 "" }}
+{PARA 281 "" 0 "" {TEXT 225 0 "" }}{PARA 282 "" 0 "" {TEXT 218 0 "" }}
+{PARA 283 "" 0 "" {TEXT 208 0 "" }}{PARA 284 "" 0 "" {TEXT 247 0 "" }}
+{PARA 285 "" 0 "" {TEXT -1 0 "" }}}{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 
+1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

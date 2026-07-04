@@ -1,0 +1,116 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "restart: with(plots)
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "a := 2/3*cos(phi)-1/3*
+(4*cos(phi)^2-3)^(1/2);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "
+phi := Pi/9;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 167 "relative:=
+(p1,p2,longfrac,tangfrac)->[evalf(p1[1]*(1-longfrac)+p2[1]*longfrac-(p
+2[2]-p1[2])*tangfrac),evalf(p1[2]*(1-longfrac)+p2[2]*longfrac+(p2[1]-p
+1[1])*tangfrac)]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "linepart:=proc
+(p1,p2,dd) local points,i,res:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 " \+
+  if ( dd < 1 ) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "      p1;" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "   else" }}{PARA 0 "" 0 "" {TEXT 
+-1 55 " Dit is de plek om een andere basisvorm neer te zetten:" }
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 103 "      points :
+= [p1,relative(p1,p2,a*cos(phi),a*sin(phi)),relative(p1,p2,1-a*cos(phi
+),-a*sin(phi)),p2];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "      res:=N
+ULL;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "      for i from 1 to nops(
+points)-1 do:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "         res := re
+s,linepart(points[i],points[i+1],dd-1);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 13 "      end do:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "      res;
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "   fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "end proc:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "makeli
+ne:=(p1,p2,dd)->[linepart(p1,p2,dd),p2]:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "makeline([0,1],[1,1],1);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 68 "pointplot(makeline([0,1],[1,1],5),connect=true,scal
+ing=constrained);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "p0 := \+
+plot(0,x=0..1,color=green):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+82 "p1:=pointplot(makeline([0,0],[1,0],1),connect=true,scaling=constra
+ined,color=red):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 83 "p2:=poi
+ntplot(makeline([0,0],[1,0],2),connect=true,scaling=constrained,color=
+blue):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "display(p0,p1,p2)
+;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "makeline([0,1],[1,1],3
+);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "pointplot(makeline([1
+,1],[2,2],7),scaling=constrained,symbolsize=1);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 32 "data := makeline([1,1],[2,2],8):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "N:=nops(data);" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 18 "xl := Array(1..N):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 18 "yl := Array(1..N):" }}}{EXCHG }{EXCHG }{EXCHG }
+{EXCHG }{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "for i from 1 to N do
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "xl[i] := data[i][1];" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 20 "yl[i] := data[i][2];" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "pt
+s := seq([xl[i],yl[i]],i=1..N):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 17 "pointplot([pts]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+34 "pmin := 4.5; pmax := 9; dp := 0.5;" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 32 "Determine the extrema of the map" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "op(convert(xl, list
+)):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "xmin := min(%);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "xmax := max(%%);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "op(convert(yl, list)):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "ymin := min(%); " }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 16 "ymax := max(%%);" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 25 "Loop over all resoluti
+ons" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+11 "li := NULL:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "for p fr
+om pmin to pmax by dp do" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "
+" 0 "" {TEXT -1 34 "       Calculate extents of boxes " }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 27 "  delta := (xmax-xmin)/2^p;" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 35 "  ni := trunc((xmax-xmin)/delta)+1;" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 35 "  nj := trunc((ymax-ymin)/delta)+1;" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 23 "  print(p,ni,nj,delta);" }}{PARA 0 "" 0 "
+" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 66 "       Construct a boxe
+s matrix and set the initial values to zero" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "  nr := Array(1..ni, 1..nj, 0);" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 37 "       Check which boxes \+
+are occupied" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "  for n from 1 to N
+ do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "    i := trunc((xl[n]-xmin)/
+delta)+1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "    j := trunc((yl[n]-
+ymin)/delta)+1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "    nr[i,j] := 1
+;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "  od:" }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 37 "       Count number of occupied
+ boxes" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "  boxes := 0;" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 23 "  for i from 1 to ni do" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 25 "    for j from 1 to nj do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "       boxes := boxes + nr[i,j];" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 7 "    od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "  od;" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 25 "       \+
+Add result to list" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "  li := li, [
+delta,boxes];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 39 "Plot the \+
+results in log-log fashion ..." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "loglogplot([[li], [li]],style=[poin
+t, line],symbolsize=15," }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "color=bl
+ack,symbol=circle, labels=[\"p\", \"n\"]);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 66 "Calculate box dimension. \+
+We could do this by fitting a function by" }}{PARA 0 "" 0 "" {TEXT -1 
+70 "trial and error, but we use the function fit from the stats packag
+e to" }}{PARA 0 "" 0 "" {TEXT -1 27 "achieve this automatically." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 47 "Firstly, \+
+fit needs lists of x and y separately." }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 43 "xli := seq(log(li[i][1]), i=1..nops([li]));" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 43 "yli := seq(log(li[i][2]), i=1..nops([li])
+);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+-1 69 "Feeding this into the fit command, we get the least-squared sol
+ution." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 12 "with(stats):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "fit
+[leastsquare[[x,y], y=c*x+d]]([[xli],[yli]]);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 26 "lseq := unapply(rhs(%),x);" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 41 "Plot the fit toget
+her with box-dimensions" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 48 "loli := seq([xli[i], yli[i]], i=1..nops([xli])
+):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "plot([lseq(xx), [loli
+]], xx=-7..3, style=[line, point], " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+75 "color=[red,black], symbolsize=15,symbol=circle, labels=[\"log p\",
+ \"log n\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "a;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "dfr := -evalf(log(3.0)/log(a
+));" }}}{EXCHG }{EXCHG }{EXCHG }{EXCHG }{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 11 "evalf(3*a);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 28 "evalf(log(1000)/log(3.0*a));" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "2 0 0" 12 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

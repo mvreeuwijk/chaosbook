@@ -1,0 +1,22 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 1 12 255 0 0 1 0 1 0 
+2 1 2 0 0 0 1 }{CSTYLE "_cstyle5" -1 209 "Times" 0 1 0 0 0 0 0 0 0 2 
+2 2 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 0 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "_pst
+yle5" -1 204 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 
+0 0 0 1 }0 0 0 -1 -1 -1 2 0 2 0 2 2 -1 1 }{PSTYLE "_pstyle8" -1 207 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 2 
+0 2 0 2 2 -1 1 }{PSTYLE "_pstyle9" -1 208 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 204 "> " 0 "" {MPLTEXT 1 0 21 "restart; with(plot
+s):" }}}{EXCHG {PARA 204 "> " 0 "" {MPLTEXT 1 0 20 "f := x->r*sin(Pi*x
+);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "plotsetup(default);" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 119 "plotsetup(ps,plotoutput=
+`disc1d_bifurcation_implicit_sin.ps`,plotoptions=`portrait,noborder,wi
+dth=7.0cm,height=6.0cm`);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+123 "implicitplot([x=(f@@4)(x)],r=0.0..1,x=0..1,grid=[150,150],view=[0
+..1,-0.1..1],labels=[\"r\",\"x(r)\"],thickness=2,axes=framed);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{PARA 207 "" 0 "" {TEXT 209 0 "" }}{PARA 208 "
+" 0 "" {TEXT -1 0 "" }}}{MARK "8 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 
+1 }{PAGENUMBERS 0 1 2 33 1 1 }

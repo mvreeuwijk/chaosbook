@@ -1,0 +1,206 @@
+\usepackage[scale=0.9]{sourcecodepro}
+\usepackage[T1]{fontenc}
+\usepackage{sphinx}
+\usepackage{tcolorbox}
+\usepackage{manfnt}
+\usepackage{tikz}
+\usepackage[labelfont=bf]{caption}
+\definecolor{lightgrey}{HTML}{EEEEEE}
+\definecolor{mapleyellow}{HTML}{FAF3E8}
+
+\sphinxsetup{
+  verbatimwithframe=false,
+  VerbatimColor={HTML}{FAF3E8},
+  VerbatimBorderColor={HTML}{FAF3E8},
+  hintborder=0pt,
+  hintBgColor=lightgrey,
+  hintBorderColor=lightgrey,
+  tipborder=0pt,
+  pre_border-radius=0pt
+}
+
+\makeatletter
+\renewenvironment{sphinxadmonition}[2]{%
+    \def\admonitionbg{lightgrey}%
+    \def\admontitle{#2}%
+    \def\MapleTitle{Maple}%
+    \def\MapleCodeTitle{Maple code}%
+    \def\admonitionfontsize{}%
+    \ifx\admontitle\MapleTitle
+      \def\admonitionbg{mapleyellow}%
+      \def\admonitionfontsize{\small}%
+    \fi
+    \ifx\admontitle\MapleCodeTitle
+      \def\admonitionbg{mapleyellow}%
+      \def\admonitionfontsize{\small}%
+    \fi
+    \begin{tcolorbox}[
+        colframe=white,              % No border
+        colback=\admonitionbg,       % Per-title background
+        sharp corners,               % Square corners
+        boxrule=0pt,                 % No border width
+        left=10pt, right=10pt,       % Internal padding
+        top=5pt, bottom=5pt          % Internal padding
+    ]
+    \dbend\ \textbf{#2}\par % Display the title (e.g., "Hint:") in bold
+    \begingroup
+    \admonitionfontsize
+    \setlength{\parindent}{2em}%
+    \everypar{%
+      \ifnum\prevgraf=0\relax
+        \setlength{\parindent}{2em}%
+      \else
+        \setlength{\parindent}{0pt}%
+      \fi
+    }% Indent first paragraph only (content)
+}{%
+    \endgroup
+    \end{tcolorbox}
+}
+\makeatother
+
+\newgeometry{vmargin={3cm}, hmargin={2.4cm,2.4cm}}
+\setlength{\headheight}{14pt}  % Fix header height warning
+\makeatletter
+\renewcommand{\@chapapp}{}
+\makeatother
+\titleformat{\chapter}{\Huge\bf\rmfamily\color{TitleColor}}%
+{\thechapter}{0.5em}{}
+\titleformat{\section}{\Large\bf\rmfamily\color{TitleColor}}%
+{\thesection}{0.5em}{}
+\titleformat{\subsection}
+{\rmfamily\color{TitleColor}\bf\selectfont\large}
+{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\rmfamily\bf}
+{\thesection}{1em}{}
+\makeatletter
+\fancypagestyle{normal}{
+\fancyhf{}
+\fancyfoot[LE,RO]{{\rmfamily\thepage}}
+\fancyfoot[LO]{{\rmfamily\nouppercase{\rightmark}}}
+\fancyfoot[RE]{{\rmfamily\nouppercase{\leftmark}}}
+\fancyhead[LE,RO]{{\rmfamily\@title}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[LE,RO]{{\rmfamily\thepage}}
+\fancyfoot[LO]{{\rmfamily\nouppercase{\rightmark}}}
+\fancyfoot[RE]{{\rmfamily\nouppercase{\leftmark}}}
+\fancyhead[LE,RO]{{\rmfamily\@title}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+\makeatother
+%
+
+% Moved from latest conf.py
+\setcounter{MaxMatrixCols}{20}
+\definecolor{imperialblue}{cmyk}{1,.61,0,.45}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{newunicodechar}
+\usepackage{array}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{2061}{}
+\DeclareUnicodeCharacter{1D434}{A}
+\makeatletter
+\AtBeginDocument{%
+    \renewcommand{\py@release}{}%
+    \renewcommand{\releasename}{}%
+    \renewcommand{\sphinxheadercomma}{}%
+    \setreleaseinfo{\today}%
+    \date{}%
+}
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE \@title\par}
+  \vspace{1.5cm}
+  {\Large \today\par}
+  \vspace{2cm}
+  {\large \@author\par}
+  \vfill
+  \end{titlepage}
+}
+\renewcommand{\d}{\textnormal{d}}
+\makeatother
+
+
+% --- Custom theorem counters for proof environments ---
+
+% Separate counters per type, reset per chapter
+\newtheorem{definitioncounter}{Definition}[chapter]
+\newtheorem{exercisecounter}{Exercise}[chapter]
+\newtheorem{tutorialcounter}{Tutorial}[chapter]
+
+% Redefine the environments created by sphinxcontrib-proof to use these
+% NOTE: defer until after Sphinx defines the environments
+\AtBeginDocument{%
+  \ifdefined\definition
+    \let\olddefinition\definition
+    \let\oldenddefinition\enddefinition
+    \renewenvironment{definition}{%
+      \begin{definitioncounter}%
+    }{%
+      \end{definitioncounter}%
+    }
+  \fi
+
+  \ifdefined\exercise
+    \let\oldexercise\exercise
+    \let\oldendexercise\endexercise
+    \renewenvironment{exercise}{%
+      \begin{exercisecounter}%
+    }{%
+      \end{exercisecounter}%
+    }
+  \fi
+
+  \ifdefined\tutorial
+    \let\oldtutorial\tutorial
+    \let\oldendtutorial\endtutorial
+    \renewenvironment{tutorial}{%
+      \par\noindent\hrulefill\par
+      \begin{tutorialcounter}%
+    }{%
+      \end{tutorialcounter}%
+    }
+  \fi
+}
+\usepackage{caption}
+\captionsetup[figure]{position=bottom}
+
+\makeatletter
+\renewenvironment{sphinxlegend}{%
+  \par\small
+  \centering
+  \let\sphinx@orig@sphinxtoprule\sphinxtoprule
+  \let\sphinx@orig@sphinxmidrule\sphinxmidrule
+  \let\sphinx@orig@sphinxbottomrule\sphinxbottomrule
+  \let\sphinx@orig@sphinxthistablewithglobalstyle\sphinxthistablewithglobalstyle
+  \let\sphinx@orig@sphinxtableatstartofbodyhook\sphinxtableatstartofbodyhook
+  \let\sphinx@orig@rowcolor\rowcolor
+  \let\sphinx@orig@rowcolors\rowcolors
+  \def\sphinxtoprule{}%
+  \def\sphinxmidrule{}%
+  \def\sphinxbottomrule{}%
+  \def\sphinxthistablewithglobalstyle{\sphinxthistablewithborderlessstyle}%
+  \def\sphinxtableatstartofbodyhook{}%
+  \def\rowcolor##1{}%
+  \def\rowcolors##1##2##3{}%
+  \sphinxrowcolorOFF
+}{%
+  \par
+  \let\sphinxtoprule\sphinx@orig@sphinxtoprule
+  \let\sphinxmidrule\sphinx@orig@sphinxmidrule
+  \let\sphinxbottomrule\sphinx@orig@sphinxbottomrule
+  \let\sphinxthistablewithglobalstyle\sphinx@orig@sphinxthistablewithglobalstyle
+  \let\sphinxtableatstartofbodyhook\sphinx@orig@sphinxtableatstartofbodyhook
+  \let\rowcolor\sphinx@orig@rowcolor
+  \let\rowcolors\sphinx@orig@rowcolors
+}
+\makeatother
