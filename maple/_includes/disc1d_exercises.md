@@ -1,6 +1,4 @@
-## Exercises
-
-### Newton-Raphson method
+## Newton-Raphson method
 
 **Downloads:** {download}`NewtonRaphson.mw <_static/exercises/NewtonRaphson.mw>`, {download}`ex0093r00.eps <_static/exercises/ex0093r00.eps>`, {download}`NewtonRaphson.fig <_static/exercises/NewtonRaphson.fig>`
 
@@ -48,7 +46,7 @@ f) Show a bifurcation diagram for $a=2\ldots 6$. At which value of $a$ is the fi
 g) Study the bifurcation diagram and look for a value of $a$ for which a period-2 solution occurs. Prove its stability for this particular value of $a$.
 
 
-### Cubic map
+## Cubic map
 
 **Downloads:** {download}`CubicMap.mws <_static/exercises/CubicMap.mws>`
 
@@ -75,7 +73,7 @@ f) Consider the case $\lambda = 2.2$. Is a period 2 solution of the mapping poss
 g) Discuss the possibility of a period 3 solution, $x_n \rightarrow x_{n+1} \rightarrow x_{n+2} \rightarrow x_{n+3} = x_n$, with $x_n \neq x_{n+1}$ and $x_n \neq x_{n+2}$ for $\lambda = 2.5$.
 
 
-### Universality revisited
+## Universality revisited
 
 **Downloads:** {download}`UniversalityCounterExamples.mws <_static/exercises/UniversalityCounterExamples.mws>`
 
@@ -96,7 +94,7 @@ $$
 Discuss your results.
 
 
-### Discrete Cubic Map
+## Discrete Cubic Map
 
 **Downloads:** {download}`DiscreteCubicMap.mws <_static/exercises/DiscreteCubicMap.mws>`
 

@@ -820,5 +820,8 @@ fsolve({f(T)=0,df(T)=0},{T=250,epsilon=0.4});
 | $\Delta T$ | 20 | K |
 ```
 
-```{include} _includes/cont1d_exercises.md
+```{toctree}
+:hidden:
+
+exercises_cont1d
 ```

@@ -1,6 +1,4 @@
-## Exercises
-
-### Correlation dimension
+## Correlation dimension
 
 **Downloads:** {download}`CorrelationDimension.mws <_static/exercises/CorrelationDimension.mws>`
 
@@ -9,7 +7,7 @@ a) Write a maple program to calculate the *correlation dimension* of a set consi
 b) Calculate the correlation dimension of the dripping faucet attractors and compare the values with the box-dimension.
 
 
-### Fractal Properties of the Forced Double Well Oscillator
+## Fractal Properties of the Forced Double Well Oscillator
 
 **Downloads:** {download}`DoubleWellFractal.mws <_static/exercises/DoubleWellFractal.mws>`, {download}`DoubleWellFractal_start.mws <_static/exercises/DoubleWellFractal_start.mws>`, {download}`ex0121r00_fig1.eps <_static/exercises/ex0121r00_fig1.eps>`, {download}`ex0121r00_fig2.eps <_static/exercises/ex0121r00_fig2.eps>`
 
@@ -45,7 +43,7 @@ Result from executing `DoubleWellFractal\_start.mws` with $N=10000$.
 ```
 
 
-### Fractal Curve
+## Fractal Curve
 
 **Downloads:** {download}`FractalCurve.mws <_static/exercises/FractalCurve.mws>`, {download}`FractalCurve.data <_static/exercises/FractalCurve.data>`, {download}`FractalCurve_start.mws <_static/exercises/FractalCurve_start.mws>`, {download}`FractalCurve_creator.mws <_static/exercises/FractalCurve_creator.mws>`, {download}`FractalCurve.eps <_static/exercises/FractalCurve.eps>`
 
@@ -64,7 +62,7 @@ b) Take $\phi = \pi/7$. After how many recursive steps is the length of the curv
 c) The file `FractalCurve.data` contains the points of a certain curve generated along the way outline above. Open the maple file `FractalCurve_start.mws` which reads this data set, and calculate the curve's fractal dimension using the box-counting method.
 
 
-### Multi-fractals in threes
+## Multi-fractals in threes
 
 **Downloads:** {download}`MultifractalThree.mws <_static/exercises/MultifractalThree.mws>`
 
