@@ -10,3 +10,18 @@
 # Exclude build-support / data files that were skewing the stats.
 shared/refs.bib   linguist-detectable=false
 shared/custom.sty linguist-detectable=false
+
+# --- Line-ending normalization ---
+# Store text files with LF in the repo; check out native per platform.
+# This makes behaviour explicit and stops the "LF will be replaced by CRLF"
+# warnings on Windows.
+* text=auto
+
+# Binary assets: never normalize (prevents corruption and CRLF churn).
+*.png   binary
+*.pdf   binary
+*.eps   binary
+*.pstex binary
+*.xlsx  binary
+*.mw    binary
+*.mws   binary
