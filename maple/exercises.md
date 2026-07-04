@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Exercises
 
 Each chapter closes with a set of exercises — the heart of the learning-by-doing

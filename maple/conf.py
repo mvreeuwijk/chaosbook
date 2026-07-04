@@ -182,7 +182,7 @@ html_theme_options = {
     "use_download_button": False,
     "home_page_in_toc": False,
     "collapse_navigation": True,
-    "navigation_depth": 1,
+    "navigation_depth": 2,
     "show_nav_level": 1,
     # Top header: book title (left), curated part menu (centre), GitHub (right).
     # The centre menu is a custom template (maple/_templates/navbar-center.html).
@@ -252,6 +252,15 @@ smartquotes = False
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
     "index": [],
+    # The cookbook is a long reference page: show its sections in the LEFT
+    # navigation (its in-page table of contents) rather than the right panel.
+    "app_cookbook": [
+        "navbar-logo.html",
+        "icon-links.html",
+        "search-button-field.html",
+        "sbt-sidebar-nav.html",
+        "page-toc.html",
+    ],
 }
 
 # Additional templates that should be rendered to pages, maps page names to

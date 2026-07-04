@@ -101,13 +101,6 @@ fractals
 ````{only} html
 ```{toctree}
 :hidden:
-:caption: Exercises
-
-exercises
-```
-
-```{toctree}
-:hidden:
 :numbered:
 :caption: Cookbook
 
