@@ -2,6 +2,8 @@ sphinx
 myst-parser[linkify]
 sphinx-book-theme
 sphinxcontrib-bibtex
+pybtex-apa-style
+six
 sphinx-subfigure
 sphinx-design
 sphinx-math-dollar
