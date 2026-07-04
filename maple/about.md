@@ -1,5 +1,6 @@
 # About
 
+:::{div} sfc-justify
 *From Stability to Chaos* began as the lecture notes for *Chaotic Processes*
 (AP 3011 G), a course at Delft University of Technology. Harmen J. Jonker led
 the course, and the two authors developed it together while Maarten van
@@ -15,6 +16,7 @@ are how the subject is meant to be learned.
 We had long intended to turn the notes into a book. It has taken us nearly
 twenty years to reach this point, and we are delighted that it is finally
 available.
+:::
 
 ````{list-table}
 :widths: 12 88

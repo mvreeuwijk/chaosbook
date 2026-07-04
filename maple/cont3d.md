@@ -794,10 +794,5 @@ display(P4, view=[-1..1, -3..3]);
 [^fn2]: for an elaborate and quantitative treatment of the Lorenz equations, see {cite}`Sparrow1982`
 [^fn3]: http://www.newtonproject.sussex.ac.uk/catalogue/record/THEM00169
 
-:::{only} latex
-```{toctree}
-:hidden:
-
-exercises_cont3d
+```{include} _includes/cont3d_exercises.md
 ```
-:::

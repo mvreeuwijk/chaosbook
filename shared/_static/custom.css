@@ -73,6 +73,11 @@ img.sfc-cover {
 /* --- About page ------------------------------------------------------- */
 
 /* Author portrait: a circular thumbnail floated beside the bio. */
+/* Justified body text (e.g. the About intro). */
+.sfc-justify {
+    text-align: justify;
+}
+
 /* Small circular author thumbnail in the About table. */
 img.sfc-portrait-sm {
     width: 84px;

@@ -1368,10 +1368,5 @@ Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find
 Feigenbaum number $\delta$ as a function of $\eta$ for the map $f_{\eta}(x) = r (1-|2x-1|^{\eta})$. The mapping $f_\eta$ represents the logistic map for $\eta = 2$, in which case the 'universal' value of $\delta=4.669\ldots$ is retrieved. For $\eta\rightarrow1$ the map becomes equal to the tent-map {eq}`eq:disc1d:tent_map`, which has no period-doubling route. This explains the bend near $\eta\rightarrow1$.
 ```
 
-:::{only} latex
-```{toctree}
-:hidden:
-
-exercises_disc1d
+```{include} _includes/disc1d_exercises.md
 ```
-:::

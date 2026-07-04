@@ -104,13 +104,6 @@ fractals
 :caption: Exercises
 
 exercises
-A start at the end <exercises_phenomenon>
-Chaos in Iterative Maps <exercises_disc1d>
-Discrete mappings of higher order <exercises_disc2d>
-Continuous Systems <exercises_cont1d>
-Two-dimensional continuous systems <exercises_cont2d>
-Chaos in continuous systems <exercises_cont3d>
-Fractal geometries <exercises_fractals>
 ```
 
 ```{toctree}
