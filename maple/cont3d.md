@@ -389,6 +389,15 @@ $$
 
 Here $r_0=r(0)$ and $\theta_0=\theta(0)$ are the initial conditions.
 
+The surface of section $x>0$. $y=0$ transforms to $\theta = 0 \mod 2 \pi$, so that the Poincaré map $r_{n+1} = P(r_n)$ becomes
+
+$$
+P(r) = \left(1- \frac{r^2 - 1}{r^2} e^{-4 a \pi} \right)^{-1/2},
+$$
+
+where we used that $\theta_0=0$. This mapping is shown in {numref}`fig:cont3d:poincare_ex`b for $a=0.2$. Clearly, $r^*=1$ is a stable fixed point of this mapping, which confirms the convergence to a limit cycle.
+````
+
 ```{subfigure} 2
 :name: fig:cont3d:poincare_ex
 :align: center
@@ -400,15 +409,6 @@ Here $r_0=r(0)$ and $\theta_0=\theta(0)$ are the initial conditions.
 
 Phaseportrait and the mapping for the Poincaré section. (a) Phase portrait with surface of section (red line) and the intersections (solid circles). (b) The Poincaré map. (c) Some iterations of the Poincaré map, showing the approach towards the fixed point in $r$.
 ```
-
-The surface of section $x>0$. $y=0$ transforms to $\theta = 0 \mod 2 \pi$, so that the Poincaré map $r_{n+1} = P(r_n)$ becomes
-
-$$
-P(r) = \left(1- \frac{r^2 - 1}{r^2} e^{-4 a \pi} \right)^{-1/2},
-$$
-
-where we used that $\theta_0=0$. This mapping is shown in {numref}`fig:cont3d:poincare_ex`b for $a=0.2$. Clearly, $r^*=1$ is a stable fixed point of this mapping, which confirms the convergence to a limit cycle.
-````
 
 ````{admonition} Example
 :class: example

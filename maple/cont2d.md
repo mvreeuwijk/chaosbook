@@ -1044,6 +1044,7 @@ plot([Re(ev[1]), Re(ev[2])], mu = -1..2, thickness=2,
      labeldirections=[horizontal, vertical]);
 
 ```
+````
 
 ```{subfigure} 2
 :name: fig:cont2d:pitchfork
@@ -1057,7 +1058,6 @@ plot([Re(ev[1]), Re(ev[2])], mu = -1..2, thickness=2,
 
 Supercritical pitchfork bifurcation for the system ({eq}`eq:cont2d:pitchfork:x`). (a, b) phase portraits for $\mu=-0.1$ and $\mu=0.1$; c) $x^*$ as a function of $\mu$; d) the eigenvalues (which are purely real in this case) for the fixed point $(0,0)$. (a) $\mu=-0.1$. (b) $\mu=0.1$.
 ```
-````
 
 (sec:cont2d:bif_hopf)=
 ### Hopf bifurcations
