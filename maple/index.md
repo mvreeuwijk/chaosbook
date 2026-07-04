@@ -2,17 +2,83 @@
 
 :::::{only} html
 
+::::{grid} 1 1 2 2
+:gutter: 4
+:class-container: sfc-hero
+
+:::{grid-item}
+:columns: 12 12 7 7
+
 <p class="sfc-subtitle">A Hands-On Introduction to Nonlinear Dynamics</p>
 
 <p class="sfc-authors">Harmen Jonker and Maarten van Reeuwijk</p>
 
-This is a hands-on introduction to nonlinear dynamics and chaos. Starting from simple one-dimensional maps and flows, it builds up through bifurcations and stability analysis to strange attractors and fractal geometry. Throughout, the theory is developed alongside concrete computations in Maple, so that every concept can be explored, visualised and experimented with directly. Each chapter closes with a set of exercises.
+A hands-on tour from simple one-dimensional maps to strange attractors and
+fractal geometry. Throughout, the theory is developed alongside concrete
+computations in Maple, so that every concept can be explored, visualised and
+experimented with directly.
+
+```{button-ref} phenomenon
+:ref-type: doc
+:color: primary
+:class: sfc-cta
+
+Start reading →
+```
+:::
+
+:::{grid-item}
+:columns: 12 12 5 5
+
+```{image} _static/cont3d/cont3d_lorenz_attractor.png
+:alt: The Lorenz attractor
+:class: sfc-cover
+```
+:::
+
+::::
+
+<h2 class="sfc-cards-heading">Explore</h2>
+
+::::{grid} 1 2 2 4
+:gutter: 3
+
+:::{grid-item-card} Text
+:link: phenomenon
+:link-type: doc
+
+The seven chapters, from first phenomena to fractal geometry.
+:::
+
+:::{grid-item-card} Exercises
+:link: exercises
+:link-type: doc
+
+Hands-on problems for each chapter, with Maple worksheets.
+:::
+
+:::{grid-item-card} Cookbook
+:link: app_cookbook
+:link-type: doc
+
+A practical Maple reference for the techniques used throughout.
+:::
+
+:::{grid-item-card} Appendices
+:link: appendices
+:link-type: doc
+
+Derivations and background supporting the main text.
+:::
+
+::::
 
 :::::
 
 ```{toctree}
 :hidden:
 :numbered:
+:caption: Text
 
 phenomenon
 disc1d
@@ -23,96 +89,44 @@ cont3d
 fractals
 ```
 
-:::::{only} html
+```{toctree}
+:hidden:
+:caption: Exercises
 
-<h2 class="sfc-cards-heading">Chapters</h2>
-
-::::{grid} 1 2 2 3
-:gutter: 3
-
-:::{grid-item-card} A start at the end
-:link: phenomenon
-:link-type: doc
-:::
-
-:::{grid-item-card} Chaos in Iterative Maps
-:link: disc1d
-:link-type: doc
-:::
-
-:::{grid-item-card} Discrete mappings of higher order
-:link: disc2d
-:link-type: doc
-:::
-
-:::{grid-item-card} Continuous Systems
-:link: cont1d
-:link-type: doc
-:::
-
-:::{grid-item-card} Two-dimensional continuous systems
-:link: cont2d
-:link-type: doc
-:::
-
-:::{grid-item-card} Chaos in continuous systems
-:link: cont3d
-:link-type: doc
-:::
-
-:::{grid-item-card} Fractal geometries
-:link: fractals
-:link-type: doc
-:::
-
-::::
-
-:::::
+exercises
+exercises_phenomenon
+exercises_disc1d
+exercises_disc2d
+exercises_cont1d
+exercises_cont2d
+exercises_cont3d
+exercises_fractals
+```
 
 ````{only} html
 ```{toctree}
 :hidden:
 :numbered:
-:caption: Appendices
+:caption: Cookbook
 
 app_cookbook
+```
+
+```{toctree}
+:hidden:
+:numbered:
+:caption: Appendices
+
+appendices
 app_twobody
 app_lorenz
 app_polar
 ```
 ````
 
-:::::{only} html
+```{toctree}
+:hidden:
+:caption: References
 
-<h2 class="sfc-cards-heading">Appendices</h2>
-
-::::{grid} 1 2 2 3
-:gutter: 3
-
-:::{grid-item-card} The Maple cookbook
-:link: app_cookbook
-:link-type: doc
-:::
-
-:::{grid-item-card} From the three-body problem to the planar restricted system
-:link: app_twobody
-:link-type: doc
-:::
-
-:::{grid-item-card} The physics behind the Lorenz equations
-:link: app_lorenz
-:link-type: doc
-:::
-
-:::{grid-item-card} Transformation rules for polar coordinates
-:link: app_polar
-:link-type: doc
-:::
-
-::::
-
-:::::
-
-```{bibliography}
-:cited:
+references
 ```

@@ -35,3 +35,37 @@ p.sfc-authors {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
+
+/* Hero row: vertically centre the text column against the cover figure. */
+.sfc-hero {
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+/* Cover figure on the front page. */
+img.sfc-cover {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* "Start reading" call-to-action button. */
+.sfc-cta {
+    margin-top: 0.6rem;
+    font-size: 1.05rem;
+    padding: 0.5rem 1.4rem;
+}
+
+/* --- Top header menu -------------------------------------------------- */
+
+/* Curated part menu in the header centre (Text / Exercises / ...). */
+#sfc-topmenu {
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-bottom: 0;
+}
+#sfc-topmenu .nav-link {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+}
