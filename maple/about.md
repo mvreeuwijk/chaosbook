@@ -12,7 +12,7 @@ hands-on intuition for this rich and often surprising field. The exercises
 gathered in this book are therefore central to it, not an afterthought — they
 are how the subject is meant to be learned.
 
-We had long intended to turn the notes into a book. It has taken us ten years
+We had long intended to turn the notes into a book. It has taken us nearly twenty years
 to reach this point, and we are delighted that it is finally available.
 
 ## [Harmen J. Jonker](https://www.tudelft.nl/en/staff/h.j.j.jonker/)
