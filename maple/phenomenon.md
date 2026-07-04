@@ -225,6 +225,5 @@ In the exercise  you can manipulate a `maple` -worksheet that contains an implem
 Sensitivity on initial conditions: two trajectories initiated from slightly different positions with a relative difference in $x(0)$ of $10^{-4}$. Integration time is two months. Diamond: initial locations. Circles: end position of satellites after two months. Top: trajectories in reference frame that moves with the center of mass. Bottom: the trajectories in the reference frame that additionally co-rotates with the earth and moon.
 ```
 
-## Exercises
-
-The exercises for this chapter are collected on the {doc}`exercises page <exercises_phenomenon>`.
+```{include} _includes/phenomenon_exercises.md
+```

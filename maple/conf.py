@@ -442,6 +442,10 @@ numfig = True
 numfig_format={'figure': 'Figure %s', 'table': 'Table %s', 'section': '%s'}
 
 bibtex_bibfiles = ['../shared/refs.bib']
+# The bibliography is rendered in two mutually-exclusive places (an HTML
+# References page and a LaTeX-only end-of-book bibliography), so silence the
+# expected "duplicate citation" notices from having both directives.
+suppress_warnings = ['bibtex.duplicate_citation']
 bibtex_encoding = "iso-8859-1"
 bibtex_default_style = "apa"
 bibtex_reference_style = "author_year"

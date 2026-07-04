@@ -75,6 +75,7 @@ img.sfc-cover {
 /* Author portrait: a circular thumbnail floated beside the bio. */
 img.sfc-portrait {
     float: right;
+    clear: both;
     width: 150px;
     height: 150px;
     object-fit: cover;

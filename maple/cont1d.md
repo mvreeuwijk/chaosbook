@@ -820,6 +820,5 @@ fsolve({f(T)=0,df(T)=0},{T=250,epsilon=0.4});
 | $\Delta T$ | 20 | K |
 ```
 
-## Exercises
-
-The exercises for this chapter are collected on the {doc}`exercises page <exercises_cont1d>`.
+```{include} _includes/cont1d_exercises.md
+```

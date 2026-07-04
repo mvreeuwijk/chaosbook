@@ -49,7 +49,7 @@ Download PDF
 
 <h2 class="sfc-cards-heading">Explore</h2>
 
-::::{grid} 1 2 2 4
+::::{grid} 1 3 3 3
 :gutter: 3
 
 :::{grid-item-card} Text
@@ -57,13 +57,6 @@ Download PDF
 :link-type: doc
 
 The seven chapters, from first phenomena to fractal geometry.
-:::
-
-:::{grid-item-card} Exercises
-:link: exercises
-:link-type: doc
-
-Hands-on problems for each chapter, with Maple worksheets.
 :::
 
 :::{grid-item-card} Cookbook
@@ -98,20 +91,6 @@ cont3d
 fractals
 ```
 
-```{toctree}
-:hidden:
-:caption: Exercises
-
-exercises
-exercises_phenomenon
-exercises_disc1d
-exercises_disc2d
-exercises_cont1d
-exercises_cont2d
-exercises_cont3d
-exercises_fractals
-```
-
 ````{only} html
 ```{toctree}
 :hidden:
@@ -130,7 +109,6 @@ app_twobody
 app_lorenz
 app_polar
 ```
-````
 
 ```{toctree}
 :hidden:
@@ -138,6 +116,7 @@ app_polar
 
 references
 ```
+````
 
 ```{toctree}
 :hidden:
@@ -145,3 +124,11 @@ references
 
 about
 ```
+
+% In HTML the bibliography lives on its own References page; in the PDF it is
+% rendered here as an end-of-book "Bibliography" (avoids an empty chapter).
+:::{only} latex
+```{bibliography}
+:cited:
+```
+:::

@@ -401,6 +401,5 @@ The value $7/3$ is no accident. It is precisely the surface dimension for which 
 Surface area $A$ against linear size $L=V^{1/3}$ for a population of simulated cumulus clouds (schematic, after Siebesma \& Jonker, 2000). The clouds obey $A\sim L^{D_s}$ with $D_s\simeq 7/3$ (solid line), well above the $D_s=2$ of smooth, Euclidean shapes (dashed line).
 ```
 
-## Exercises
-
-The exercises for this chapter are collected on the {doc}`exercises page <exercises_fractals>`.
+```{include} _includes/fractals_exercises.md
+```
