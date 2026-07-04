@@ -1,7 +1,3 @@
----
-html_theme.sidebar_secondary.remove: true
----
-
 (app:cookbook)=
 # The Maple cookbook
 
