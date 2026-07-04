@@ -73,6 +73,11 @@ img.sfc-cover {
 /* --- About page ------------------------------------------------------- */
 
 /* Author portrait: a circular thumbnail floated beside the bio. */
+/* Custom "Exercises" sidebar section: match native nav links (no underline). */
+.sfc-exercises-nav a.reference {
+    text-decoration: none;
+}
+
 /* Justified body text (e.g. the About intro). */
 .sfc-justify {
     text-align: justify;

@@ -251,19 +251,16 @@ smartquotes = False
 
 # Custom sidebar templates, maps document names to template names.
 # Left sidebar. All pages get a dedicated "Exercises" section (custom template)
-# that links to each chapter's inline exercises. The cookbook additionally shows
-# its own section list (page-toc) in the left sidebar.
-_sidebar_base = [
-    "navbar-logo.html",
-    "icon-links.html",
-    "search-button-field.html",
-    "sbt-sidebar-nav.html",
-    "exercises-nav.html",
-]
+# that links to each chapter's inline exercises.
 html_sidebars = {
     "index": [],
-    "**": _sidebar_base,
-    "app_cookbook": _sidebar_base + ["page-toc.html"],
+    "**": [
+        "navbar-logo.html",
+        "icon-links.html",
+        "search-button-field.html",
+        "sbt-sidebar-nav.html",
+        "exercises-nav.html",
+    ],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
