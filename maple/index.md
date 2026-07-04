@@ -11,12 +11,13 @@
 
 <p class="sfc-subtitle">A Hands-On Introduction to Nonlinear Dynamics</p>
 
-<p class="sfc-authors">Harmen J. Jonker and Maarten van Reeuwijk</p>
+<p class="sfc-authors"><a href="about.html">Harmen J. Jonker</a> and <a href="about.html">Maarten van Reeuwijk</a></p>
 
 A hands-on tour from simple one-dimensional maps to strange attractors and
-fractal geometry. Throughout, the theory is developed alongside concrete
-computations in Maple, so that every concept can be explored, visualised and
-experimented with directly.
+fractal geometry. Built around the idea of learning by doing, it develops the
+theory alongside concrete computations in Maple — with a weekly exercise for
+every topic — so that each idea can be explored, visualised and experimented
+with directly.
 
 ```{button-ref} phenomenon
 :ref-type: doc
@@ -38,8 +39,8 @@ Download PDF
 :::{grid-item}
 :columns: 12 12 5 5
 
-```{image} _static/cont3d/cont3d_lorenz_attractor.png
-:alt: The Lorenz attractor
+```{image} _static/cont3d/cont3d_doublewell_poincare.png
+:alt: Poincaré section of the forced double-well oscillator
 :class: sfc-cover
 ```
 :::
