@@ -11,7 +11,7 @@
 
 <p class="sfc-subtitle">A Hands-On Introduction to Nonlinear Dynamics</p>
 
-<p class="sfc-authors">Harmen Jonker and Maarten van Reeuwijk</p>
+<p class="sfc-authors">Harmen J. Jonker and Maarten van Reeuwijk</p>
 
 A hands-on tour from simple one-dimensional maps to strange attractors and
 fractal geometry. Throughout, the theory is developed alongside concrete
@@ -72,11 +72,11 @@ Hands-on problems for each chapter, with Maple worksheets.
 A practical Maple reference for the techniques used throughout.
 :::
 
-:::{grid-item-card} Appendices
-:link: appendices
+:::{grid-item-card} About
+:link: about
 :link-type: doc
 
-Derivations and background supporting the main text.
+The authors, and how the book came to be.
 :::
 
 ::::
@@ -125,7 +125,6 @@ app_cookbook
 :numbered:
 :caption: Appendices
 
-appendices
 app_twobody
 app_lorenz
 app_polar
@@ -137,4 +136,11 @@ app_polar
 :caption: References
 
 references
+```
+
+```{toctree}
+:hidden:
+:caption: About
+
+about
 ```

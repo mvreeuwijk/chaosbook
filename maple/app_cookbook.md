@@ -1,6 +1,15 @@
 (app:cookbook)=
 # The Maple cookbook
 
+:::{only} html
+```{button-link} cookbook.pdf
+:color: primary
+:outline:
+
+Download the cookbook (PDF)
+```
+:::
+
 This Maple cookbook contains various routines or 'recipes' for the analysis of non-linear and chaotic dynamical systems. The aim of this document is to provide you with a set of recipes that will enable you to analyze physical systems quickly and effectively.  By no means is this document intended to be a sufficient introduction into Maple, although it should give a reasonable impression of how Maple works and what it can do in this field.
 
 ## Settings & tips

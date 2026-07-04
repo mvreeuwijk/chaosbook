@@ -46,12 +46,15 @@ jobs:
             texlive-science \
             tex-gyre
 
-      - name: Build the Maple edition (PDF)
+      - name: Build the Maple edition (PDFs)
         run: |
           sphinx-build -b latex maple build/maple/latex
+          # The book, and the cookbook as a separate document.
           latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/main.tex
-          # Publish the PDF at the site root so it is downloadable.
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/cookbook.tex
+          # Publish both at the site root so they are downloadable.
           cp build/maple/latex/main.pdf build/maple/html/chaosbook.pdf
+          cp build/maple/latex/cookbook.pdf build/maple/html/cookbook.pdf
 
       # GitHub Pages serves the artifact as-is (no Jekyll), but a .nojekyll
       # keeps underscore-prefixed dirs (_static, _images) safe on any path.

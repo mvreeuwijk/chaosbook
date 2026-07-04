@@ -1,7 +1,7 @@
 # From Stability to Chaos
 
 MyST/Sphinx sources for the book *From Stability to Chaos: A Hands-On
-Introduction to Nonlinear Dynamics* (Harmen Jonker and Maarten van Reeuwijk).
+Introduction to Nonlinear Dynamics* (Harmen J. Jonker and Maarten van Reeuwijk).
 
 This repository contains only the generated documentation (Markdown + assets)
 that builds the HTML and PDF. The LaTeX sources, Maple worksheets and the
