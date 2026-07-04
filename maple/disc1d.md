@@ -366,7 +366,7 @@ where the superscript $^{(2)}$ reminds us that we are dealing with a period-2 so
 
 $$
 \begin{aligned}
-\sigma_{1}^{(2)} &= \frac{d}{dx} \left[ f\left( f(x) \right) \right]_{x=x^{*}_{1}}
+\sigma_{1}^{(2)} &= \frac{\mathrm{d}}{\mathrm{d}x} \left[ f\left( f(x) \right) \right]_{x=x^{*}_{1}}
 = \left[ f'\left( f(x) \right) f'(x)\right]_{x=x^{*}_{1}} \\
  &= f'\left( f(x^{*}_{1}) \right) f'(x^{*}_{1}) = f'(x^{*}_{2}) f'(x^{*}_{1})
 \end{aligned}
@@ -1268,7 +1268,7 @@ If $r$ is such that $x_m(r) = x_0$ we have found a superstable period $m$ soluti
 
 ```{math}
 :label: eq:feigennewtonraphson
-r_{i+1} = r_{i} - \frac{g(r_i)}{\dfrac{dg}{dr}(r_i)}
+r_{i+1} = r_{i} - \frac{g(r_i)}{\dfrac{\mathrm{d}g}{\mathrm{d}r}(r_i)}
 ```
 
 with
@@ -1277,15 +1277,15 @@ $$
 g(r) = x_m(r) - x_0
 $$
 
-Findig the derivative $dg(r)/dr = d x_{m}(r)/dr$ needs some extra effort. One can express $x_{m}(r)$ as $f[x_{m-1}(r)]$, which is equal to $r q[x_{m-1}(r)]$, and use the prodcut rule and the chain rule of differentiation to find a recursive relation:
+Findig the derivative $\mathrm{d}g(r)/\mathrm{d}r = \mathrm{d} x_{m}(r)/\mathrm{d}r$ needs some extra effort. One can express $x_{m}(r)$ as $f[x_{m-1}(r)]$, which is equal to $r q[x_{m-1}(r)]$, and use the prodcut rule and the chain rule of differentiation to find a recursive relation:
 
 $$
 \begin{aligned}
-\frac{d}{dr} x_m(r)
- &= \frac{d}{dr} \{f[x_{m-1}(r)]\} = \frac{d}{dr} \{r q[x_{m-1}(r)]\} \\
- &= q[x_{m-1}(r)] + r \frac{d}{dr} \{q[x_{m-1}(r)]\} \\
- &= \frac{1}{r} f[x_{m-1}(r)] + r \frac{\partial q}{\partial x} [x_{m-1}(r)] \frac{d}{dr} x_{m-1}(r)\\
- &= \frac{1}{r} x_{m}(r) + f'[x_{m-1}(r)] \frac{d}{dr} x_{m-1}(r)
+\frac{\mathrm{d}}{\mathrm{d}r} x_m(r)
+ &= \frac{\mathrm{d}}{\mathrm{d}r} \{f[x_{m-1}(r)]\} = \frac{\mathrm{d}}{\mathrm{d}r} \{r q[x_{m-1}(r)]\} \\
+ &= q[x_{m-1}(r)] + r \frac{\mathrm{d}}{\mathrm{d}r} \{q[x_{m-1}(r)]\} \\
+ &= \frac{1}{r} f[x_{m-1}(r)] + r \frac{\partial q}{\partial x} [x_{m-1}(r)] \frac{\mathrm{d}}{\mathrm{d}r} x_{m-1}(r)\\
+ &= \frac{1}{r} x_{m}(r) + f'[x_{m-1}(r)] \frac{\mathrm{d}}{\mathrm{d}r} x_{m-1}(r)
 \end{aligned}
 $$
 
@@ -1368,5 +1368,10 @@ Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find
 Feigenbaum number $\delta$ as a function of $\eta$ for the map $f_{\eta}(x) = r (1-|2x-1|^{\eta})$. The mapping $f_\eta$ represents the logistic map for $\eta = 2$, in which case the 'universal' value of $\delta=4.669\ldots$ is retrieved. For $\eta\rightarrow1$ the map becomes equal to the tent-map {eq}`eq:disc1d:tent_map`, which has no period-doubling route. This explains the bend near $\eta\rightarrow1$.
 ```
 
-```{include} _includes/disc1d_exercises.md
+:::{only} latex
+```{toctree}
+:hidden:
+
+exercises_disc1d
 ```
+:::

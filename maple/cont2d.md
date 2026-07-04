@@ -412,11 +412,11 @@ Isocontours of the constant of motion $H$ for the Lotka-Volterra system.
 (sec:cont2d:conservative)=
 ### Conservative systems
 
-Conservative systems are systems which have at least one constant of motion or *conserved quantity*. Let us see what the requirements are for the ODE function $\mathbf{f}$ to have a constant of motion $H$. Because $H$ needs to remain constant as the dynamical system traverses the phase space, we have $dH/dt=0$ along trajectories and therefore
+Conservative systems are systems which have at least one constant of motion or *conserved quantity*. Let us see what the requirements are for the ODE function $\mathbf{f}$ to have a constant of motion $H$. Because $H$ needs to remain constant as the dynamical system traverses the phase space, we have $\mathrm{d}H/\mathrm{d}t=0$ along trajectories and therefore
 
 ```{math}
 :label: eq:cont2d:constant
-\dot{H} = \frac{d}{d t} H(x(t), y(t)) = \frac{\partial H}{\partial x} \dot{x} + \frac{\partial H}{\partial y} \dot{y} = \mathbf{f} \cdot \nabla H = 0
+\dot{H} = \frac{\mathrm{d}}{\mathrm{d} t} H(x(t), y(t)) = \frac{\partial H}{\partial x} \dot{x} + \frac{\partial H}{\partial y} \dot{y} = \mathbf{f} \cdot \nabla H = 0
 ```
 
 Using {eq}`eq:cont2d:constant`, it is straightforward to establish that {eq}`eq:cont2d:lv_constant` is indeed a constant of motion for the Lotka-Volterra system ({eq}`eq:cont2d:lv_x`):
@@ -528,12 +528,12 @@ and by using {eq}`eq:cont2d:constantham` we confirm that this is a Hamiltonian s
 
 $$
 \begin{aligned}
-H &= \int f(x,y) dy = \frac{1}{2} y^2 + c_1(x) \\
- H &= - \int g(x,y) dx = V(x) + c_2(y)
+H &= \int f(x,y) \mathrm{d}y = \frac{1}{2} y^2 + c_1(x) \\
+ H &= - \int g(x,y) \mathrm{d}x = V(x) + c_2(y)
 \end{aligned}
 $$
 
-where we have introduced $F(x) = - m dV/dx$, $V(x)$ is a *potential*, and $c_1(x)$ and $c_2(y)$ are unknown functions. Combining the two equations, the Hamiltonian of this system is
+where we have introduced $F(x) = - m \mathrm{d}V/\mathrm{d}x$, $V(x)$ is a *potential*, and $c_1(x)$ and $c_2(y)$ are unknown functions. Combining the two equations, the Hamiltonian of this system is
 
 $$
 H = V(x) + \frac{1}{2} y^2 + c
@@ -595,7 +595,7 @@ By definition, the gradient of a function points in the direction of steepest as
 Now, we ask ourselves the question: how does $V$ change as a function of time for a specific trajectory $\mathbf{x}(t)$ governed by {eq}`eq:cont2d:gradientsystem`?
 
 $$
-\frac{d}{dt} V(\mathbf{x}(t)) = \nabla V \cdot \dot{\mathbf{x}} = - | \nabla V |^2
+\frac{\mathrm{d}}{\mathrm{d}t} V(\mathbf{x}(t)) = \nabla V \cdot \dot{\mathbf{x}} = - | \nabla V |^2
 $$
 
 This is a powerful result: $| \nabla V |^2$ is negative by definition and therefore $\dot{V} \le 0$ for *all* $\mathbf{x}$. Furthermore, $\dot{V} = 0$ implies that $| \nabla V | = 0$ and therefore indicates that $\dot{V} = 0$ occurs only at a fixed point $\mathbf{x} = \mathbf{x}^*$. If we further constrain ourselves to potential functions $V$ that are single-valued, the only possible long-time behavior (assuming that the solution remains bounded) is that the solution is attracted to a fixed point[^fn3].
@@ -766,14 +766,14 @@ Because limit cycles are not confined to a single point in the phase space, loca
 
 Conservative systems cannot have limit cycles. All point within a limit cycle's basin of attraction will end up on the limit cycle eventually. For a conservative system this means that $H$ is constant within the basin of attraction. However, because the motion is dependent on gradients in $H$, cf. ({eq}`eq:cont2d:constant_f`) we conclude that the basin of attraction cannot occupy any area and needs to be constrained to a line or point[^fn4].
 
-Gradient systems cannot have limit cycles because $dV/dt\le0$ for all initial conditions. Hence, after a sufficiently long time, the system is either in a fixed point (if $V$ is single-valued) or may be on a non-attracting closed orbit (if $V$ is multi-valued).
+Gradient systems cannot have limit cycles because $\mathrm{d}V/\mathrm{d}t\le0$ for all initial conditions. Hence, after a sufficiently long time, the system is either in a fixed point (if $V$ is single-valued) or may be on a non-attracting closed orbit (if $V$ is multi-valued).
 
 A *Lyapunov function* is similar to a potential functions of gradient systems, but are more widely applicable because the restrictions on $V$ are much weaker. They are particularly useful to rule out the existence of limit cycles, but can also be used to demonstrate the stability of fixed points.
 
 A Lyapunov function $V$ for a dynamical system is each function that satisfies the properties
 
 - $V(\mathbf{x}^*) = 0$ and $V(\mathbf{x}) > 0$ for almost all other $\mathbf{x}$;
-- $dV/dt<0$ for almost all $\mathbf{x}$.
+- $\mathrm{d}V/\mathrm{d}t<0$ for almost all $\mathbf{x}$.
 
 Gradient system satisfies these requirements (see section {numref}`sec:cont2d:gradient`), as long as he potential function $V$ is single-valued and $V(\mathbf{x})>0$ for all values of $\mathbf{x}$ except the fixed point (i.e. the trajectories cannot escape to infinity). However, Lyapunov functions are applicable to a much wider range of problems because it does not have the constraint that the dynamics are governed by $V$, unlike gradient systems,
 
@@ -794,7 +794,7 @@ $$
 where $x$ is the displacement, $y$ the velocity, $k$ is the spring coefficient and $m$ is the mass. The total energy per unit mass in this system is $\frac{1}{2} \frac{k}{m} x^2 + \frac{1}{2} y^2$. Let us consider whether $V=\frac{1}{2} \frac{k}{m} x^2 + \frac{1}{2} y^2$ is a suitable Lyapunov function. First, $V(\mathbf{x}^*)=0$ which is easily shown since the only stable fixed point is $(0,0)$. Furthermore $V(\mathbf{x}) > 0$ for all $\mathbf{x} \ne \mathbf{x}^*$. Lastly,
 
 $$
-\frac{dV}{dt} = \mathbf{f} \cdot \nabla V = y \frac{k}{m} x + \left(-\frac{k}{m} x - \frac{\mu}{m} |y| y \right) y = -\frac{\mu}{m} |y| y^2
+\frac{\mathrm{d}V}{\mathrm{d}t} = \mathbf{f} \cdot \nabla V = y \frac{k}{m} x + \left(-\frac{k}{m} x - \frac{\mu}{m} |y| y \right) y = -\frac{\mu}{m} |y| y^2
 $$
 
 which is $\le 0$ everywhere and therefore, $V$ is a Lyapunov function.
@@ -1147,15 +1147,20 @@ The fixed points are plotted as a function $\mu$ with the help of the function `
 ![ ](_static/cont2d/cont2d_global_r.png)
 ![ ](_static/cont2d/cont2d_global_fixed.png)
 
-A blue sky limit cycle. (a, b) The phase portraits just before and after the bifurcation. (c) $dr/dt$ as a function of $r$. (d) stability diagram of the fixed points. (a) $\mu=-0.26$. (b) $\mu=-0.24$.
+A blue sky limit cycle. (a, b) The phase portraits just before and after the bifurcation. (c) $\mathrm{d}r/\mathrm{d}t$ as a function of $r$. (d) stability diagram of the fixed points. (a) $\mu=-0.26$. (b) $\mu=-0.24$.
 ```
 
-When comparing the phase portraits just before the bifurcation ({numref}`fig:cont2d:global`(a)) and after ({numref}`fig:cont2d:global`(b)), it is very clear that even though the bifurcation has not occured yet at $\mu=-0.26$, the signature of a limit cycle is clearly visible. Indeed, the system nearly gets trapped and takes a long time to escape the vicinity of the limit cycle-to-be. This behaviour is typical for bifurcations. By necessity $f'(r)=0$ at bifurcation, and $dr/dt$ will therefore become extremely small when $\mu$ is close to the bifurcation value.
+When comparing the phase portraits just before the bifurcation ({numref}`fig:cont2d:global`(a)) and after ({numref}`fig:cont2d:global`(b)), it is very clear that even though the bifurcation has not occured yet at $\mu=-0.26$, the signature of a limit cycle is clearly visible. Indeed, the system nearly gets trapped and takes a long time to escape the vicinity of the limit cycle-to-be. This behaviour is typical for bifurcations. By necessity $f'(r)=0$ at bifurcation, and $\mathrm{d}r/\mathrm{d}t$ will therefore become extremely small when $\mu$ is close to the bifurcation value.
 
 [^fn1]: Note that for a linear system, $J(x,y) = A = \textnormal{constant}$.
 [^fn2]: {eq}`eq:cont2d:constant2` has exactly the same form the equation for mass conservation in a compressible fluid, where $\rho$ represents the fluid density of the fluid and $\mathbf{f}$ the velocity.
-[^fn3]: Assume that a closed orbit exists for which $\mathbf{x}(t+T) = \mathbf{x}(t)$ (periodic motion). If $V$ is single-valued, this implies that $\int_0^T \frac{dV}{dt} dt = 0$. Substituting $ds = | \dot{\mathbf{x}} | dt$ and $\frac{dV}{d t} = \nabla V \cdot \dot{\mathbf{x}} = - \dot{\mathbf{x}} \cdot \dot{\mathbf{x}}$, we obtain that $\oint | \dot{\mathbf{x}} | ds = 0$. This can only occur when $|\dot{\mathbf{x}}|=0$ for each point on the orbit. In this case, the entire “orbit” is a fixed “point” (e.g. $V(r) = 1 - r^2+ r^3$). We therefore conclude that closed orbits cannot exist when $V$ is single-valued.
+[^fn3]: Assume that a closed orbit exists for which $\mathbf{x}(t+T) = \mathbf{x}(t)$ (periodic motion). If $V$ is single-valued, this implies that $\int_0^T \frac{\mathrm{d}V}{\mathrm{d}t} \mathrm{d}t = 0$. Substituting $\mathrm{d}s = | \dot{\mathbf{x}} | \mathrm{d}t$ and $\frac{\mathrm{d}V}{\mathrm{d} t} = \nabla V \cdot \dot{\mathbf{x}} = - \dot{\mathbf{x}} \cdot \dot{\mathbf{x}}$, we obtain that $\oint | \dot{\mathbf{x}} | \mathrm{d}s = 0$. This can only occur when $|\dot{\mathbf{x}}|=0$ for each point on the orbit. In this case, the entire “orbit” is a fixed “point” (e.g. $V(r) = 1 - r^2+ r^3$). We therefore conclude that closed orbits cannot exist when $V$ is single-valued.
 [^fn4]: A more rigorous argument can be made using the property $\nabla \cdot \rho \mathbf{f} = 0$.
 
-```{include} _includes/cont2d_exercises.md
+:::{only} latex
+```{toctree}
+:hidden:
+
+exercises_cont2d
 ```
+:::

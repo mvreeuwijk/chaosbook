@@ -12,7 +12,7 @@ Around 1960 Edward Lorenz made an odd discovery. Working at MIT Lorenz worked on
 \dot{z} &= xy-bz
 ```
 
-where $r, b$ and $\sigma$ are parameters and $\dot{x}$ denotes $dx/dt$. Making use of an early supercomputer he could numerically integrate the equations in time to obtain long-term predictions. In order to be able to calculate the system's behaviour over very long periods, Lorenz sometimes started a new simulation from the 'halfway' result of a calculation that was still running. But when he plotted such a continued calculation together with the original calculation in one graph, he noted to his utter surprise that after a brief period the two curves started to diverge rapidly, ultimately displaying entirely different behaviour. Lorenz figured out that the "stored" values that he used as initial conditions for the second calculations differed slightly from the original values due to round-off effects. This led him to conclude that a minute perturbation of the initial conditions can lead to enormous differences over time. The perspective of weather prediction provided an excellent metaphor to express the effect that small causes can have big impacts: *Does the flap of a butterfly's wings in Brazil set off a tornado in Texas?*
+where $r, b$ and $\sigma$ are parameters and $\dot{x}$ denotes $\mathrm{d}x/\mathrm{d}t$. Making use of an early supercomputer he could numerically integrate the equations in time to obtain long-term predictions. In order to be able to calculate the system's behaviour over very long periods, Lorenz sometimes started a new simulation from the 'halfway' result of a calculation that was still running. But when he plotted such a continued calculation together with the original calculation in one graph, he noted to his utter surprise that after a brief period the two curves started to diverge rapidly, ultimately displaying entirely different behaviour. Lorenz figured out that the "stored" values that he used as initial conditions for the second calculations differed slightly from the original values due to round-off effects. This led him to conclude that a minute perturbation of the initial conditions can lead to enormous differences over time. The perspective of weather prediction provided an excellent metaphor to express the effect that small causes can have big impacts: *Does the flap of a butterfly's wings in Brazil set off a tornado in Texas?*
 
 With a modern PC we can today easily retrace Lorenz' footsteps and experience ourselves the remarkably rich behaviour of his simple system as well as the sensitive dependence on initial conditions. To this end, we start `maple` and load the file `LorenzSensitiveDependence_start.mws`, which contains an implementation of the system {eq}`eq:phenomenon_lorenz`, listed below (text comments are preceded by an '[')
 
@@ -225,5 +225,10 @@ In the exercise  you can manipulate a `maple` -worksheet that contains an implem
 Sensitivity on initial conditions: two trajectories initiated from slightly different positions with a relative difference in $x(0)$ of $10^{-4}$. Integration time is two months. Diamond: initial locations. Circles: end position of satellites after two months. Top: trajectories in reference frame that moves with the center of mass. Bottom: the trajectories in the reference frame that additionally co-rotates with the earth and moon.
 ```
 
-```{include} _includes/phenomenon_exercises.md
+:::{only} latex
+```{toctree}
+:hidden:
+
+exercises_phenomenon
 ```
+:::

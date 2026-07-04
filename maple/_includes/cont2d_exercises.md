@@ -1,6 +1,4 @@
-## Exercises
-
-### Fixed Points and linearization
+## Fixed Points and linearization
 
 **Downloads:** {download}`FixedPointsLinearization.mws <_static/exercises/FixedPointsLinearization.mws>`
 
@@ -15,7 +13,7 @@ $$
 $$
 
 
-### Rabbits versus Sheep
+## Rabbits versus Sheep
 
 **Downloads:** {download}`RabbitsSheep.mws <_static/exercises/RabbitsSheep.mws>`
 
@@ -54,7 +52,7 @@ d) Calculate with `maple` the linear stability of the fixed points for the case 
 e) Take $b_1 = 1$. Find the critical value of $b_2$ such that the species can still co-exist.
 
 
-### Predator-Prey with Alee effect
+## Predator-Prey with Alee effect
 
 **Downloads:** {download}`PredatorPreyAlee.mws <_static/exercises/PredatorPreyAlee.mws>`
 
@@ -63,9 +61,9 @@ Consider the following *Predator-Prey* system
 ```{math}
 :label: eq0055:2dc_n
 \begin{aligned}
-\frac{d N}{dt} &= r_1 N \left( \frac{N}{N+B} \right) -
+\frac{\mathrm{d} N}{\mathrm{d}t} &= r_1 N \left( \frac{N}{N+B} \right) -
 \theta_{1} N P\\
-\frac{d P}{dt} &= r_2 NP - \theta_{2} P^2
+\frac{\mathrm{d} P}{\mathrm{d}t} &= r_2 NP - \theta_{2} P^2
 \end{aligned}
 ```
 
@@ -98,7 +96,7 @@ f) Take $a = 0.75$. Show the phaseportrait of the system, together with the traj
 g) Again take $a = 0.75$ and $x(0) =0.4$. Since the prey population at $t=0$ is larger than the equilibrium population, biologists have decided to intervene and increase the predator population to $y(0) = 0.25 + \delta$. However, to their utter disbelief they find both species to go rapidly extinct. Study the phaseportrait and trajectories for different $\delta$ and find an estimate for the minimal value of $\delta$ they must have used.
 
 
-### Nuclear Reactor Cooling
+## Nuclear Reactor Cooling
 
 **Downloads:** {download}`NuclearReactorCooling.mws <_static/exercises/NuclearReactorCooling.mws>`, {download}`NuclearReactorCooling.eps <_static/exercises/NuclearReactorCooling.eps>`
 
@@ -141,5 +139,5 @@ d) Can you find a gradient system to rule out closed orbits? If so, which, and i
 e) Look at the sign of  $\nabla \cdot \dot{\mathbf{x}}$ in the positive quadrant. Can you explain in words why this makes closed orbits in this region impossible? (hint: use Green's theorem):
 
 $$
-\iint_A \nabla \cdot \dot{\mathbf{x}}\ \text{dA} = \oint_S \dot{\mathbf{x}} \cdot \mathbf{n} \ \text{ds}
+\iint_A \nabla \cdot \dot{\mathbf{x}}\ \mathrm{d}A = \oint_S \dot{\mathbf{x}} \cdot \mathbf{n} \ \mathrm{d}s
 $$

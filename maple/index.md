@@ -49,7 +49,7 @@ Download PDF
 
 <h2 class="sfc-cards-heading">Explore</h2>
 
-::::{grid} 1 3 3 3
+::::{grid} 1 2 2 4
 :gutter: 3
 
 :::{grid-item-card} Text
@@ -57,6 +57,13 @@ Download PDF
 :link-type: doc
 
 The seven chapters, from first phenomena to fractal geometry.
+:::
+
+:::{grid-item-card} Exercises
+:link: exercises
+:link-type: doc
+
+Hands-on problems for each chapter, with Maple worksheets.
 :::
 
 :::{grid-item-card} Cookbook
@@ -92,6 +99,20 @@ fractals
 ```
 
 ````{only} html
+```{toctree}
+:hidden:
+:caption: Exercises
+
+exercises
+A start at the end <exercises_phenomenon>
+Chaos in Iterative Maps <exercises_disc1d>
+Discrete mappings of higher order <exercises_disc2d>
+Continuous Systems <exercises_cont1d>
+Two-dimensional continuous systems <exercises_cont2d>
+Chaos in continuous systems <exercises_cont3d>
+Fractal geometries <exercises_fractals>
+```
+
 ```{toctree}
 :hidden:
 :numbered:

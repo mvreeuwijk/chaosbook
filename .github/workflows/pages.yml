@@ -11,10 +11,11 @@ permissions:
   pages: write
   id-token: write
 
-# One deploy at a time; don't cancel an in-progress deploy.
+# One deploy at a time. Cancel superseded runs so rapid pushes don't pile up
+# in the Pages deploy queue (the cause of "Deployment failed, try again later").
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
