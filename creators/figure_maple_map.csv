@@ -263,3 +263,11 @@ cont3d,cont4d_3body_traj2,cont4d_3body.mw,Figs_cont3d/creators/cont4d_3body.mw,m
 cont3d,cont4d_3body_traj3,cont4d_3body.mw,Figs_cont3d/creators/cont4d_3body.mw,medium,prefix
 cont3d,cont4d_3body_traj4,cont4d_3body.mw,Figs_cont3d/creators/cont4d_3body.mw,medium,prefix
 cont3d,cont4d_3body_Poincare,cont4d_3body.mw,Figs_cont3d/creators/cont4d_3body.mw,medium,prefix
+practice,practice_weathermodel,make_figures.py,practice/make_figures.py,high,python
+practice,practice_ensemble,make_figures.py,practice/make_figures.py,high,python
+practice,practice_horizon,make_figures.py,practice/make_figures.py,high,python
+practice,practice_assimilation,make_figures.py,practice/make_figures.py,high,python
+practice,practice_pod,make_figures.py,practice/make_figures.py,high,python
+practice,practice_manifold,make_figures.py,practice/make_figures.py,high,python
+practice,practice_koopman,make_figures.py,practice/make_figures.py,high,python
+practice,practice_digitaltwin,make_figures.py,practice/make_figures.py,high,python

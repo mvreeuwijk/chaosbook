@@ -96,6 +96,7 @@ cont1d
 cont2d
 cont3d
 fractals
+practice
 ```
 
 ````{only} html
