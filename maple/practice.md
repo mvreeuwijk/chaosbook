@@ -209,7 +209,17 @@ The same idea underlies the more recent, and more fashionable, use of machine le
 
 The chapter so far has treated chaos as an adversary – something to be predicted around, corrected for, or compressed away. Yet the very properties that make a chaotic system hard to predict can also be put to use. Sensitive dependence stretches and folds, which is exactly what is needed to *mix*; the dense set of unstable orbits buried in an attractor makes it exquisitely *controllable*; and the way a single variable carries the imprint of the whole attractor lets us *reconstruct* the dynamics from one measured signal. We take these three in turn.
 
-Stirring milk into coffee mixes it in seconds, but at the small scales of a microfluidic channel the flow is smooth and slow, and molecular diffusion alone would take an age. The way out is that a fluid element's *position* can behave chaotically even when the flow itself is simple and laminar – this is *chaotic advection* {cite:p}`Aref1984,Aref1986`. A time-periodic two-dimensional flow, with no turbulence whatever, stretches and folds a blob of dye into ever finer filaments – the same stretching-and-folding that acted on the phase space of a map in chapter {numref}`sec:disc2d` – until diffusion across the thin lamellae finishes the job ({numref}`fig:practice:mixing`). Shaping a channel so that its flow is chaotic is now a standard way to build efficient micromixers for drug delivery and diagnostics, and the same mechanism stirs the mantle, the oceans and the atmosphere.
+Stirring milk into coffee mixes it in seconds, but at the small scales of a microfluidic channel the flow is smooth and slow, and molecular diffusion alone would take an age. The way out is that a fluid element's *position* can behave chaotically even when the flow itself is simple and laminar – this is *chaotic advection* {cite:p}`Aref1984,Aref1986`. A convenient model advects each element $(x_n,y_n)$ on the unit square through one period of a time-periodic flow by two successive shears,
+
+```{math}
+:label: eq:practice:mixing
+\begin{aligned}
+x_{n+1} &= x_n + A\sin(2\pi y_n), \\
+y_{n+1} &= y_n + A\sin(2\pi x_{n+1}),
+\end{aligned}
+```
+
+with both coordinates taken modulo one so that the fluid stays on the square. This is a close relative of the standard map of chapter {numref}`sec:disc2d`: each shear merely slides fluid along one direction and so preserves area, as an incompressible flow must, yet for an amplitude $A$ of order one the map stretches and folds a blob of dye into ever finer filaments ({numref}`fig:practice:mixing`), until diffusion across the thin lamellae finishes the job. Shaping a real channel so that its flow is chaotic in this way is now a standard route to efficient micromixers for drug delivery and diagnostics, and the same mechanism stirs the mantle, the oceans and the atmosphere.
 
 ```{figure} _static/practice/practice_mixing.png
 :name: fig:practice:mixing
@@ -221,7 +231,7 @@ Chaotic mixing. Two blobs of dye advected by a simple time-periodic flow are str
 ````{admonition} Maple
 :class: maple
 
-The flow is just two shears applied in turn; `wrap` keeps the dye on the unit square. Iterating the map on a thin streak of points reproduces the filaments of {numref}`fig:practice:mixing`.
+The map {eq}`eq:practice:mixing` is just the two shears applied in turn; `wrap` keeps the dye on the unit square by taking each coordinate modulo one. Iterating it on a thin streak of points reproduces the filaments of {numref}`fig:practice:mixing`.
 
 ```{code-block} maple
 restart: with(plots):
@@ -242,7 +252,14 @@ pointplot(blob, symbol=point, view=[0..1, 0..1]);
 The same template scales up to the planet. In the ocean and atmosphere the stretching and folding organise themselves around hidden curves and surfaces – the *Lagrangian coherent structures* – that act as the transport barriers and conduits of the flow, the moving skeleton along which tracers are funnelled {cite:p}`Haller2015`. Computed from satellite-derived surface currents, they predict where an oil slick will spread or where a person lost at sea will drift; attracting structures were found to coincide with the observed extent of the *Deepwater Horizon* spill, and the same calculation now guides search-and-rescue operations and the tracking of drifting plastic. The fractal, folded interfaces of chapter {numref}`chap:fractals` and these coherent structures are two views of the one stirred, chaotic flow.
 ````
 
-The second use turns sensitivity into control. A chaotic attractor is far from structureless: threaded through it is a dense set of *unstable periodic orbits*, each a perfectly regular motion that the system shadows briefly before sensitive dependence throws it off. Because the trajectory passes close to any chosen orbit sooner or later, and because sensitive dependence means a *tiny* nudge has a large effect, one can stabilise that orbit with vanishingly small, well-timed adjustments of a parameter – the method of {cite:t}`Ott1990`. {numref}`fig:practice:control` demonstrates it on the logistic map of chapter {numref}`sec:disc1d`: a controller that changes the growth rate $r$ by at most a per cent, and only while the state lingers near the target, captures the once-chaotic iteration onto an unstable fixed point and holds it there indefinitely. A regular system would need a large control to be moved so far; it is precisely the chaos that makes such delicate steering possible. The same idea has been used to suppress the arrhythmic beating of cardiac tissue {cite:p}`Garfinkel1992` and to tame the flickering output of lasers.
+The second use turns sensitivity into control. A chaotic attractor is far from structureless: threaded through it is a dense set of *unstable periodic orbits*, each a perfectly regular motion that the system shadows briefly before sensitive dependence throws it off. Because the trajectory passes close to any chosen orbit sooner or later, and because sensitive dependence means a *tiny* nudge has a large effect, one can stabilise that orbit with vanishingly small, well-timed adjustments of a parameter – the method of {cite:t}`Ott1990`. {numref}`fig:practice:control` demonstrates it on the logistic map $x_{n+1} = r\,x_n(1-x_n)$ of chapter {numref}`sec:disc1d`. The target is its unstable fixed point $x^{*} = 1 - 1/r$, and the control at step $n$ is the change in growth rate that would send the current state exactly there; solving $(r+\delta r_n)\,x_n(1-x_n) = x^{*}$ gives
+
+```{math}
+:label: eq:practice:ogy
+\delta r_n = \frac{x^{*}}{x_n(1-x_n)} - r,
+```
+
+applied only while it stays small, $|\delta r_n| \le \delta r_{\max}$. Because the orbit repeatedly strays near $x^{*}$, and a per-cent-level nudge is then enough to catch it, the once-chaotic iteration is captured onto the fixed point and held there indefinitely. A regular system would need a large control to be moved so far; it is precisely the chaos that makes such delicate steering possible. The same idea has been used to suppress the arrhythmic beating of cardiac tissue {cite:p}`Garfinkel1992` and to tame the flickering output of lasers.
 
 ```{figure} _static/practice/practice_control.png
 :name: fig:practice:control
@@ -254,7 +271,7 @@ Controlling chaos. Left of the marker the logistic map ($r=3.9$) iterates chaoti
 ````{admonition} Maple
 :class: maple
 
-Controlling the logistic map costs only a few lines: at each step, if the state is near the target $x^{*}$, nudge $r$ by the small amount that would map the state exactly onto it.
+Controlling the logistic map costs only a few lines: at each step, if the state is near the target $x^{*}$, nudge $r$ by the small amount {eq}`eq:practice:ogy` that would map it exactly onto the fixed point.
 
 ```{code-block} maple
 restart: with(plots):
