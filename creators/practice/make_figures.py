@@ -620,6 +620,57 @@ def fig_reconstruction():
     print("wrote practice_reconstruction.png")
 
 
+# Figure -- the Takens route in industry: a single measured signal is turned by
+# delay embedding into a reconstructed "attractor fingerprint" of the process.
+# (An original illustration; the chaotic signal is a Rossler model standing in
+# for a measured reactor pressure -- not reproduced experimental data.)
+def fig_reactor():
+    a, b, c = 0.2, 0.2, 5.7
+
+    def rossler(s):
+        x, y, z = s
+        return np.array([-y - z, x + a * y, b + z * (x - c)])
+
+    dt, n = 0.03, 7000
+    s = np.array([1.0, 1.0, 1.0])
+    xs = np.empty(n)
+    for i in range(n):
+        k1 = rossler(s)
+        k2 = rossler(s + 0.5 * dt * k1)
+        k3 = rossler(s + 0.5 * dt * k2)
+        k4 = rossler(s + dt * k3)
+        s = s + dt / 6.0 * (k1 + 2 * k2 + 2 * k3 + k4)
+        xs[i] = s[0]
+    xs = xs[1500:]                                  # discard transient
+    rng = np.random.default_rng(9)
+    p = xs + 0.20 * rng.standard_normal(len(xs))    # measurement noise
+
+    tau = 12
+    emb = np.column_stack([p[:-2 * tau], p[tau:-tau], p[2 * tau:]])
+
+    fig = plt.figure(figsize=(9.0, 3.4))
+    ax1 = fig.add_subplot(121)
+    tt = np.arange(700) * dt
+    ax1.plot(tt, p[:700], color=C_TRUTH, lw=0.7)
+    ax1.set_title(r"measured signal $p(t)$", fontsize=11)
+    ax1.set_xlabel("time")
+    ax1.set_ylabel(r"$p$")
+    ax1.set_yticks([])
+
+    ax2 = fig.add_subplot(122, projection="3d")
+    ax2.plot(emb[:, 0], emb[:, 1], emb[:, 2], color=C_ANA, lw=0.3)
+    ax2.set_title(r"reconstructed attractor (fingerprint)", fontsize=11)
+    ax2.set_xticks([])
+    ax2.set_yticks([])
+    ax2.set_zticks([])
+    ax2.grid(False)
+    ax2.view_init(elev=26, azim=-60)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "practice_reactor.png"))
+    plt.close(fig)
+    print("wrote practice_reactor.png")
+
+
 if __name__ == "__main__":
     fig_ensemble()
     fig_horizon()
@@ -631,4 +682,5 @@ if __name__ == "__main__":
     fig_mixing()
     fig_control()
     fig_reconstruction()
+    fig_reactor()
     print("all figures written to", OUT)

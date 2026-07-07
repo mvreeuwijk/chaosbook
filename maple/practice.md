@@ -242,6 +242,19 @@ The third use reads chaos from data. In an experiment one seldom measures the fu
 Attractor reconstruction. From the single recorded coordinate $x(t)$ of the Lorenz system (left), the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ trace out a reconstruction (right) with the same two-lobed topology as the original – the content of Takens' theorem.
 ```
 
+````{admonition} Fingerprinting a chemical reactor
+:class: infobox
+
+The delay-embedding idea is not confined to the laboratory. Industrial *fluidized beds* and *bubble columns* – workhorses of the chemical industry – are strongly nonlinear and, in many operating regimes, chaotic. A single, cheaply measured pressure signal is enough to reconstruct their attractor, and the shape of that attractor, together with a measure of its unpredictability (the Kolmogorov entropy), serves as a *fingerprint* of the hydrodynamic state ({numref}`fig:practice:reactor`) {cite:p}`vandenBleek2002`. The chaotic-processes group at Delft – the very setting from which this book grew, with Floris Takens himself involved – turned this fingerprint into a suite of industrial tools: characterising flow regimes and their transitions, guiding the scale-up of reactors by matching attractors, and even *controlling* the bubbling. A small, energy-neutral feedback adjustment of the gas supply forces the bed onto a chosen unstable periodic orbit – the control idea of this section applied to a reactor – and was shown to raise the yield of a catalytic reaction by more than ten per cent. The same fingerprint drives an early-warning system: by continuously comparing the live attractor with a healthy reference one, the onset of particle *agglomeration* is caught long before a conventional pressure-drop alarm would trip, in time to keep the reactor from clogging solid.
+````
+
+```{figure} _static/practice/practice_reactor.png
+:name: fig:practice:reactor
+:width: 100%
+
+The Takens route in industry (illustrative). A single measured signal – here a noisy chaotic time series standing in for the pressure in a fluidized-bed reactor (left) – is turned by delay embedding into a reconstructed attractor (right). The shape of this "fingerprint" characterises the operating regime, and changes in it give early warning of malfunction.
+```
+
 (sec:practice:outlook)=
 ## Why nonlinear dynamics matters
 

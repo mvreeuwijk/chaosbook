@@ -35,6 +35,7 @@ Requires `numpy`, `scipy` and `matplotlib`. All eight PNGs are written to
 | `practice_mixing`       | computed  | chaotic advection: two dye blobs stretched and folded into fine filaments |
 | `practice_control`      | computed  | OGY control capturing the chaotic logistic map onto its unstable fixed point |
 | `practice_reconstruction` | computed | Lorenz attractor rebuilt from one coordinate by delay embedding (Takens) |
+| `practice_reactor`      | computed  | Takens route in industry: a measured signal → reconstructed attractor fingerprint (Rössler stand-in) |
 
 ## Notes on the computed figures
 
