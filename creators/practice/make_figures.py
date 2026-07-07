@@ -501,30 +501,123 @@ def fig_koopman():
     print("wrote practice_koopman.png")
 
 
-def fig_digitaltwin():
-    fig, ax = plt.subplots(figsize=(6.6, 4.4))
-    ax.set_xlim(0, 10)
-    ax.set_ylim(0, 10)
-    ax.axis("off")
+# ==========================================================================
+# Harnessing chaos.
+# ==========================================================================
 
-    _box(ax, (3.4, 8.0), 3.2, 1.3, "model\n" + r"$\dot{\mathbf{x}}=\mathbf{f}(\mathbf{x})$")
-    _box(ax, (7.0, 4.4), 2.7, 1.3, "prediction")
-    _box(ax, (3.4, 0.6), 3.2, 1.3, "assimilation\n(Kalman gain $K$)", fc="#fdf1e3", ec=C_OBS)
-    _box(ax, (0.3, 4.4), 2.7, 1.3, "corrected\nstate", fc="#eaf3ec", ec="#3c8c5a")
+# Figure -- chaotic mixing: an alternating shear (a "sine flow") stretches and
+# folds two blobs of dye until they are interleaved into fine filaments.
+def fig_mixing():
+    A = 0.9
 
-    # observations feeding in
-    _box(ax, (7.0, 0.6), 2.7, 1.3, "observations", fc="#f6eef6", ec="#8a4f8a")
+    def step(pts):
+        x = (pts[:, 0] + A * np.sin(2 * np.pi * pts[:, 1])) % 1.0
+        y = (pts[:, 1] + A * np.sin(2 * np.pi * x)) % 1.0
+        return np.column_stack([x, y])
 
-    _arrow(ax, (6.4, 8.5), (8.0, 5.7))          # model -> prediction
-    _arrow(ax, (8.0, 4.4), (6.4, 1.9))          # prediction -> assimilation
-    _arrow(ax, (8.3, 1.9), (8.3, 1.9))
-    _arrow(ax, (7.0, 1.25), (6.6, 1.25))        # observations -> assimilation
-    _arrow(ax, (3.4, 1.25), (1.7, 4.4))         # assimilation -> corrected state
-    _arrow(ax, (1.7, 5.7), (3.4, 8.4))          # corrected state -> model
+    rng = np.random.default_rng(5)
+    n = 6000
+    blob1 = np.column_stack([0.25 + 0.05 * rng.standard_normal(n),
+                             0.5 + 0.05 * rng.standard_normal(n)])
+    blob2 = np.column_stack([0.75 + 0.05 * rng.standard_normal(n),
+                             0.5 + 0.05 * rng.standard_normal(n)])
 
-    fig.savefig(os.path.join(OUT, "practice_digitaltwin.png"))
+    times = [0, 2, 5]
+    a1, a2 = blob1.copy(), blob2.copy()
+    snaps = {0: (a1.copy(), a2.copy())}
+    for i in range(1, max(times) + 1):
+        a1, a2 = step(a1), step(a2)
+        if i in times:
+            snaps[i] = (a1.copy(), a2.copy())
+
+    fig, axes = plt.subplots(1, 3, figsize=(9.2, 3.2))
+    for ax, s in zip(axes, times):
+        p1, p2 = snaps[s]
+        ax.scatter(p1[:, 0], p1[:, 1], s=1.5, color=C_FREE, edgecolors="none")
+        ax.scatter(p2[:, 0], p2[:, 1], s=1.5, color=C_ANA, edgecolors="none")
+        ax.set_title(fr"$n = {s}$", fontsize=11)
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
+        ax.set_xticks([0, 0.5, 1])
+        ax.set_yticks([0, 0.5, 1])
+        ax.set_aspect("equal")
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "practice_mixing.png"))
     plt.close(fig)
-    print("wrote practice_digitaltwin.png")
+    print("wrote practice_mixing.png")
+
+
+# Figure -- controlling chaos: OGY-style stabilisation of the unstable fixed
+# point of the logistic map by tiny adjustments of the growth rate r.
+def fig_control():
+    r0 = 3.9
+    xstar = 1.0 - 1.0 / r0            # the unstable fixed point (a period-1 orbit)
+    drmax = 0.05                      # largest admissible parameter nudge
+    N, Ncon = 240, 100
+    x = 0.2
+    xs = np.empty(N)
+    dr = np.zeros(N)
+    for n in range(N):
+        xs[n] = x
+        rr = r0
+        if n >= Ncon:                 # switch the controller on
+            denom = x * (1.0 - x)
+            d = xstar / denom - r0 if denom > 1e-9 else 1e9
+            if abs(d) <= drmax:       # only nudge when already near x*
+                rr = r0 + d
+                dr[n] = d
+        x = rr * x * (1.0 - x)
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(7.4, 4.6), sharex=True,
+                                   gridspec_kw={"height_ratios": [3, 1]})
+    ax1.plot(xs, color=C_TRUTH, lw=0.8, marker="o", ms=2.2, markerfacecolor=C_TRUTH)
+    ax1.axhline(xstar, color=C_ANA, ls="--", lw=1.1, label=r"target orbit $x^{*}$")
+    ax1.axvline(Ncon, color=C_OBS, lw=1.0)
+    ax1.text(Ncon + 4, 0.06, "control on", color=C_OBS, fontsize=9)
+    ax1.set_ylabel(r"$x_n$")
+    ax1.set_ylim(0, 1)
+    ax1.legend(frameon=False, fontsize=9, loc="upper right")
+
+    ax2.axhline(0, color="#999999", lw=0.6)
+    ax2.plot(dr, color=C_FREE, lw=1.0)
+    ax2.set_ylabel(r"$\delta r_n$")
+    ax2.set_xlabel(r"$n$")
+    ax2.set_xlim(0, N)
+    ax2.set_ylim(-drmax, drmax)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "practice_control.png"))
+    plt.close(fig)
+    print("wrote practice_control.png")
+
+
+# Figure -- attractor reconstruction: rebuild the Lorenz attractor from a single
+# recorded coordinate x(t) using delay coordinates (Takens' theorem).
+def fig_reconstruction():
+    dt = 0.01
+    x0 = on_attractor()
+    traj = integrate(x0, dt, 8000)
+    xt = traj[:, 0]
+    tau = 18                                    # delay in steps (~0.18 time units)
+    M = len(xt) - 2 * tau
+    emb = np.column_stack([xt[:M], xt[tau:M + tau], xt[2 * tau:M + 2 * tau]])
+
+    fig = plt.figure(figsize=(9.0, 4.2))
+    ax1 = fig.add_subplot(121, projection="3d")
+    ax1.plot(traj[:, 0], traj[:, 1], traj[:, 2], color=C_TRUTH, lw=0.3)
+    ax1.set_title(r"true attractor $(x,y,z)$", fontsize=11)
+    ax2 = fig.add_subplot(122, projection="3d")
+    ax2.plot(emb[:, 0], emb[:, 1], emb[:, 2], color=C_ANA, lw=0.3)
+    ax2.set_title(r"reconstruction $(x_t,\,x_{t+\tau},\,x_{t+2\tau})$", fontsize=11)
+    for ax in (ax1, ax2):
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.set_zticks([])
+        ax.grid(False)
+        ax.view_init(elev=22, azim=-125)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "practice_reconstruction.png"))
+    plt.close(fig)
+    print("wrote practice_reconstruction.png")
 
 
 if __name__ == "__main__":
@@ -535,5 +628,7 @@ if __name__ == "__main__":
     fig_weathermodel()
     fig_manifold()
     fig_koopman()
-    fig_digitaltwin()
+    fig_mixing()
+    fig_control()
+    fig_reconstruction()
     print("all figures written to", OUT)

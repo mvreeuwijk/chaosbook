@@ -29,3 +29,21 @@ a) Build a synthetic field $u(x,t) = \sum_{k=1}^{3} a_k(t)\,\phi_k(x)$ from thre
 b) Plot the singular values. How many modes are needed to capture $99\%$ of the energy, and how does this relate to the number of patterns you put in?
 
 c) Reconstruct a single snapshot using one, two and three modes and compare with the full field, as in {numref}`fig:practice:pod`. What does the part that the leading modes fail to capture correspond to?
+
+
+### Controlling the logistic map
+
+Consider the logistic map $x_{n+1} = r\,x_n(1-x_n)$ at $r=3.9$, where the dynamics are chaotic.
+
+a) Locate the unstable fixed point $x^{*} = 1 - 1/r$ and confirm, from the derivative of the map, that it is unstable.
+
+b) Implement the OGY idea of section {numref}`sec:practice:harness`: at each step, if the state is close enough to $x^{*}$, choose the small parameter change $\delta r_n$ that would map $x_n$ exactly onto $x^{*}$, applying it only when $|\delta r_n|$ is below a chosen bound. Show that the orbit is captured onto $x^{*}$ and held there, as in {numref}`fig:practice:control`.
+
+c) How does the time taken to capture the orbit depend on the size of the allowed perturbation? What happens if the bound is made very small?
+
+
+### Reconstructing an attractor from one signal
+
+a) Integrate the Lorenz system and keep only the $x(t)$ time series. Form the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ and plot the reconstructed attractor for a few values of the delay $\tau$, as in {numref}`fig:practice:reconstruction`.
+
+b) Estimate the correlation dimension (section {numref}`sec:fractals:correlation`) of the reconstructed attractor and compare it with the value obtained from the full three-dimensional trajectory. Are they consistent, as Takens' theorem requires?

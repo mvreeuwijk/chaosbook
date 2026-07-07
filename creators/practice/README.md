@@ -32,7 +32,9 @@ Requires `numpy`, `scipy` and `matplotlib`. All eight PNGs are written to
 | `practice_pod`          | computed  | POD spectrum and few-mode reconstruction of a low-rank field |
 | `practice_manifold`     | schematic | high-dimensional trajectories collapsing onto a low-dimensional manifold |
 | `practice_koopman`      | schematic | nonlinear flow lifted to a linear evolution of observables |
-| `practice_digitaltwin`  | schematic | the predict–observe–assimilate–correct cycle |
+| `practice_mixing`       | computed  | chaotic advection: two dye blobs stretched and folded into fine filaments |
+| `practice_control`      | computed  | OGY control capturing the chaotic logistic map onto its unstable fixed point |
+| `practice_reconstruction` | computed | Lorenz attractor rebuilt from one coordinate by delay embedding (Takens) |
 
 ## Notes on the computed figures
 

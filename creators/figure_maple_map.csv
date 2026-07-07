@@ -270,4 +270,6 @@ practice,practice_assimilation,make_figures.py,practice/make_figures.py,high,pyt
 practice,practice_pod,make_figures.py,practice/make_figures.py,high,python
 practice,practice_manifold,make_figures.py,practice/make_figures.py,high,python
 practice,practice_koopman,make_figures.py,practice/make_figures.py,high,python
-practice,practice_digitaltwin,make_figures.py,practice/make_figures.py,high,python
+practice,practice_mixing,make_figures.py,practice/make_figures.py,high,python
+practice,practice_control,make_figures.py,practice/make_figures.py,high,python
+practice,practice_reconstruction,make_figures.py,practice/make_figures.py,high,python
