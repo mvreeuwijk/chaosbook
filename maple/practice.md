@@ -5,8 +5,8 @@ The book began with a paradox – that simple, entirely deterministic equations 
 
 The purpose of this final chapter is to look outward. The same handful of concepts – a finite horizon of predictability, a cloud of trajectories in place of a single one, an attractor of far lower dimension than the space it lives in – are not merely of historical interest. They are the working machinery of modern computational science: of weather forecasting and climate reanalysis, of reduced-order models for turbulence, and of the "digital twins" now appearing throughout engineering. We shall introduce no new mathematics. Instead we show that the reader has acquired a *way of thinking* about nonlinear systems, and follow a single thread through its modern applications: because prediction has a finite horizon, we must **predict with ensembles, correct with data, and reduce with structure**. Throughout, the Lorenz equations of chapter {numref}`chap:cont3d` serve as a concrete laboratory in which each idea can still be run on a desktop.
 
-(sec:practice:model)=
-## A forecast is a dynamical system
+(sec:practice:horizon)=
+## Prediction in an uncertain world
 
 It is worth pausing to see why a weather forecast belongs in this book at all. A numerical weather model solves the equations of motion of the atmosphere – conservation of mass, momentum and energy for a rotating, stratified, moist fluid – on a grid covering the globe. Collecting every field value (three velocity components, temperature, pressure, humidity, …) at every grid point into a single enormous column vector $\mathbf{x}$, the model is nothing other than a system of ordinary differential equations
 
@@ -26,10 +26,7 @@ A weather model is a dynamical system. The discretised atmospheric fields are st
 
 This is more than an analogy. As shown in appendix {numref}`app:lorenz`, the Lorenz equations were themselves obtained by Galerkin-truncating a convection model until only three modes remained. The tiny system the reader now knows intimately and the billion-dimensional weather model are therefore *the same construction* seen at two extremes of dimension. Everything the book has established about {eq}`eq:practice:system` carries over: the forced–dissipative atmosphere is drawn onto an attractor – the *climate* – on which the ever-changing *weather* is nothing but the trajectory itself; the motion on that attractor has a positive Lyapunov exponent, and hence a sensitive dependence on initial conditions. It was in contemplating exactly this that Lorenz was led to his three equations, and it is this that makes weather prediction hard. The rest of the chapter simply pushes the familiar ideas up in dimension.
 
-(sec:practice:horizon)=
-## Prediction in an uncertain world
-
-The central lesson of chaos is not that prediction is impossible, but that every prediction has a *finite horizon*. Two trajectories that start a distance $\delta_0$ apart separate, on average, as $\delta(t) \sim \delta_0\, \mathrm{e}^{\Lambda_e t}$, where $\Lambda_e$ is the effective Lyapunov exponent of chapter {numref}`chap:cont3d`. A forecast remains useful only until this error grows to the size of the attractor itself. For the Lorenz system, with $\Lambda_e \approx 0.9$ (section {numref}`sec:cont3d:strangeattractor`), an initial uncertainty of $\delta_0 = 10^{-3}$ grows to order ten in a time
+The first of these ideas concerns the limits of prediction. The central lesson of chaos is not that prediction is impossible, but that every prediction has a *finite horizon*. Two trajectories that start a distance $\delta_0$ apart separate, on average, as $\delta(t) \sim \delta_0\, \mathrm{e}^{\Lambda_e t}$, where $\Lambda_e$ is the effective Lyapunov exponent of chapter {numref}`chap:cont3d`. A forecast remains useful only until this error grows to the size of the attractor itself. For the Lorenz system, with $\Lambda_e \approx 0.9$ (section {numref}`sec:cont3d:strangeattractor`), an initial uncertainty of $\delta_0 = 10^{-3}$ grows to order ten in a time
 
 $$
 t_{\text{h}} \approx \frac{1}{\Lambda_e}\, \log\frac{\delta_{\text{att}}}{\delta_0} \approx \frac{1}{0.9}\log\frac{10}{10^{-3}} \approx 10,
@@ -203,15 +200,12 @@ The Koopman viewpoint. The flow is nonlinear in the state $\mathbf{x}$, but by l
 
 POD, DMD and the Koopman operator are best seen not as competing techniques but as three expressions of a single idea: **finding low-dimensional structure in a high-dimensional system**. It is this idea, rather than any particular algorithm, that endures – and it is a direct descendant of the observation, made throughout this book, that dissipative chaotic systems live on attractors far smaller than their phase space.
 
-(sec:practice:datadriven)=
-## Data-driven dynamical systems
-
 The same idea underlies the more recent, and more fashionable, use of machine learning in dynamical systems. It is best regarded not as a replacement for the theory of this book but as one more way to do two familiar things: to *approximate* the nonlinear operator $\mathbf{f}$ of {eq}`eq:practice:system` when it is unknown or too expensive to evaluate, and to *discover* low-dimensional coordinates for a complex system when the linear modes of POD are not flexible enough. A neural-network surrogate that emulates an expensive model is doing the former; an autoencoder that compresses a high-dimensional field to a few latent variables is doing the latter, and its latent space is simply a nonlinear version of the attracting manifold of {numref}`fig:practice:manifold`. Presented this way, the methods are variations on the themes of the previous sections rather than a new subject, and we do not dwell on them here; the monograph of {cite:t}`Brunton2019` develops the connection between machine learning, dynamical systems and control at length.
 
 (sec:practice:digitaltwins)=
 ## Digital twins
 
-The three threads of this chapter come together in the idea of a *digital twin*: a computational model of a specific physical system – an aircraft engine, a river catchment, a patient's circulation – that is kept continuously synchronised with its real counterpart by a stream of sensor data. Stated in the language of this book, a digital twin is a nonlinear dynamical system {eq}`eq:practice:system`, corrected in real time by data assimilation (section {numref}`sec:practice:assimilation`) and, where the full model is too slow, accelerated by a reduced-order or data-driven surrogate (sections {numref}`sec:practice:structure`–{numref}`sec:practice:datadriven`). The term is still evolving and its usage varies, and not every digital twin contains all three ingredients; but at its most complete it draws on each, which is why it makes a fitting synthesis of the predict–correct–reduce cycle of this chapter ({numref}`fig:practice:digitaltwin`).
+The three threads of this chapter come together in the idea of a *digital twin*: a computational model of a specific physical system – an aircraft engine, a river catchment, a patient's circulation – that is kept continuously synchronised with its real counterpart by a stream of sensor data. Stated in the language of this book, a digital twin is a nonlinear dynamical system {eq}`eq:practice:system`, corrected in real time by data assimilation (section {numref}`sec:practice:assimilation`) and, where the full model is too slow, accelerated by a reduced-order or data-driven surrogate (section {numref}`sec:practice:structure`). The term is still evolving and its usage varies, and not every digital twin contains all three ingredients; but at its most complete it draws on each, which is why it makes a fitting synthesis of the predict–correct–reduce cycle of this chapter ({numref}`fig:practice:digitaltwin`).
 
 ```{figure} _static/practice/practice_digitaltwin.png
 :name: fig:practice:digitaltwin
