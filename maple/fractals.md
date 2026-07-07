@@ -17,6 +17,25 @@ A geometrical object is called *self-similar* when it is built up out of smaller
 Construction of the von Koch curve. At each step every segment is replaced by four segments of one third of its length.
 ```
 
+````{admonition} Maple
+:class: maple
+
+The recursion is short to code. Representing the points of the curve as complex numbers, the generator replaces each segment by four, the extra vertex being the first third rotated by $\pi/3$ to raise the bump.
+
+```{code-block} maple
+restart: with(plots):
+gen := proc(p, q) local d:                   # Koch generator for one segment
+  d := (q - p)/3:
+  p, p+d, p + d + d*exp(I*Pi/3), p + 2*d:     # its four leading vertices
+end proc:
+pts := [0, 1]:                               # unit segment (points as complex)
+for k to 4 do                                # replace every segment, four times
+  pts := [seq(gen(pts[i], pts[i+1]), i=1..nops(pts)-1), pts[-1]]:
+end do:
+plot([seq([Re(z), Im(z)], z in pts)], scaling=constrained);
+```
+````
+
 To assign a dimension to such an object, we recall how the ordinary dimension of a simple geometrical shape can be characterized. Consider covering the shape with smaller copies of itself, each scaled down by a factor $s<1$. A line segment of unit length is covered by $N=1/s$ copies of length $s$; a square by $N=(1/s)^2$ copies of side $s$; a cube by $N=(1/s)^3$ copies of side $s$. In each case the number of copies scales as
 
 ```{math}
@@ -115,6 +134,18 @@ D_0 = \lim_{\varepsilon\rightarrow 0} \frac{\log N(\varepsilon)}{\log (1/\vareps
 For the exactly self-similar objects of the previous section the box-counting dimension coincides with the similarity dimension: choosing $\varepsilon = s^{k}$ at the $k$-th generation, one needs exactly $N=N_{\text{copies}}^{k}$ boxes, and {eq}`eq:fractals:boxcount_dimension` reproduces {eq}`eq:fractals:similarity_dimension`. The subscript $0$ in $D_0$ anticipates the family of generalized dimensions introduced in section {numref}`sec:fractals:multifractal`; the box-counting dimension is the member $q=0$ of that family.
 
 In practice one cannot take the limit $\varepsilon\rightarrow 0$, both because a data set contains a finite number of points and because a numerically generated fractal is only self-similar down to some smallest scale. Instead one evaluates $N(\varepsilon)$ for a range of box sizes and estimates $D_0$ from the slope of $\log N(\varepsilon)$ versus $\log(1/\varepsilon)$. According to {eq}`eq:fractals:boxcount_scaling`, a plot of $\log N$ against $\log\varepsilon$ should be a straight line of slope $-D_0$ over the range of scales where the object is fractal.
+
+````{admonition} Example
+:class: example
+
+Box-counting the von Koch curve makes the yardstick idea precise. Covering the curve with boxes of size $\varepsilon = 3^{-k}$, each of the $4^{k}$ segments of the $k$-th generation lands in a single box, so that $N(\varepsilon) = 4^{k}$ and
+
+$$
+D_0 = \frac{\log 4^{k}}{\log 3^{k}} = \frac{\log 4}{\log 3} \approx 1.26,
+$$
+
+exactly the similarity dimension {eq}`eq:fractals:koch_dimension`. Equivalently, measuring the curve with a ruler of length $\varepsilon$ returns an apparent length $L(\varepsilon) = N(\varepsilon)\,\varepsilon \propto \varepsilon^{\,1-D_0}$, which diverges as $\varepsilon\rightarrow 0$: the finer the yardstick, the longer the coastline. Running the box-counting program below on a set of points sampled along the curve recovers the same slope numerically.
+````
 
 The `maple` program below implements the box-counting procedure for a set of $N$ points $(x_n,y_n)$ in the plane, as would be obtained from the return plot of an experimental time series (here the dripping-faucet data of chapter {numref}`sec:disc2d`). The box size is halved repeatedly by increasing the integer exponent $p$, so that $\varepsilon = (x_{\max}-x_{\min})/2^{p}$.
 
