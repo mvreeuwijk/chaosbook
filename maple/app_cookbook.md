@@ -1424,7 +1424,7 @@ pointplot3d([l3d], axes=boxed, connect = true, labels=["x", "y", "z"]);
 
 ## Fractals
 
-First we have to generate a fractal object. We'll do this by using a dicrete mapping whose attractor is the so-called Sierpinsky carpet.
+First we have to generate a fractal object. We will do this with a discrete mapping (a *chaos game*) whose attractor is the Sierpinski gasket, the triangular fractal of dimension $\log 3/\log 2$ met in the fractals chapter.
 
 ````{admonition} Maple
 :class: maple
@@ -1580,7 +1580,7 @@ $$
 ```{code-block} maple
 plot([fit(x), [li]], x=log(lmin/2)..log(lmax*2), style=[line, point],
      color=[red,blue], symbolsize=15,symbol=circle,
-     labels=["log(boxsize)",log(boxcount)"],legend=["fit","data"]);
+     labels=["log(boxsize)","log(boxcount)"],legend=["fit","data"]);
 ```
 ````
 

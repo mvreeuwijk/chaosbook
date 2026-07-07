@@ -77,20 +77,20 @@ The Cantor set is an example of a *dust*: its dimension lies between zero (a poi
 The middle-third Cantor set. At each stage the central third of every segment is removed.
 ```
 
-The two-dimensional analogue is the *Sierpinski carpet* ({numref}`fig:fractals:sierpinski`). A unit square is divided into a $3\times 3$ grid of nine equal sub-squares, of which the central one is removed. Each of the remaining eight squares is treated in the same manner recursively. Here $N=8$ and $s=1/3$, so that
+The two-dimensional analogue is the *Sierpinski gasket* ({numref}`fig:fractals:sierpinski`). An equilateral triangle is divided by the midpoints of its sides into four congruent sub-triangles, and the central, inverted one is removed. Each of the three remaining triangles is treated in the same manner recursively. Here $N=3$ and $s=1/2$, so that
 
 ```{math}
 :label: eq:fractals:sierpinski_dimension
-D_{\text{Sierpinski}} = \frac{\log 8}{\log 3} \approx 1.8928.
+D_{\text{Sierpinski}} = \frac{\log 3}{\log 2} \approx 1.5850.
 ```
 
-As expected the dimension lies between one and two. If, at each step, two of the nine squares were removed instead of one, we would have $N=7$ and the dimension would drop to $\log 7/\log 3 \approx 1.7712$: removing more material at each stage gives a sparser object of lower dimension, as intuition demands.
+As expected the dimension lies between one and two: the gasket is pierced by holes on every scale, yet its remaining filaments still branch too densely for it to be a mere curve.
 
 ```{figure} _static/fractals/fractals_sierpinski.png
 :name: fig:fractals:sierpinski
 :width: 105mm
 
-The first iterations of the Sierpinski carpet.
+The first iterations of the Sierpinski gasket.
 ```
 
 ````{admonition} Example
@@ -181,7 +181,7 @@ eq  := fit[leastsquare[[x,y], y=a*x+b]]([xli, yli]);   # slope = -D0
 ```
 ````
 
-The final least-squares fit returns a line $y = a\,x + b$ with $x=\log\delta$ and $y=\log(\text{boxes})$. By {eq}`eq:fractals:boxcount_scaling` the box-counting dimension is $D_0 = -a$, i.e. minus the slope. Applying this procedure to the Sierpinski carpet of {numref}`fig:fractals:sierpinski` recovers the analytical value $\log 8/\log 3$, provided that enough points are used. This last caveat is important: the box-counting method only works over the range of scales that is adequately sampled by the data. When the number of points $N$ is too small, the finest boxes each contain at most one point, $N(\varepsilon)$ saturates at $N$, and the estimated slope flattens out. As a result, too few data points always lead to an *underestimate* of the dimension at small $\varepsilon$ ({numref}`fig:fractals:boxcount_fit`). A complete, self-contained version of this pipeline – generating a self-similar point set, counting occupied boxes over a range of sizes, and extracting the slope by a least-squares fit – is worked through in the {doc}`cookbook <app_cookbook>`.
+The final least-squares fit returns a line $y = a\,x + b$ with $x=\log\delta$ and $y=\log(\text{boxes})$. By {eq}`eq:fractals:boxcount_scaling` the box-counting dimension is $D_0 = -a$, i.e. minus the slope. Applying this procedure to the Sierpinski gasket of {numref}`fig:fractals:sierpinski` recovers the analytical value $\log 3/\log 2$, provided that enough points are used. This last caveat is important: the box-counting method only works over the range of scales that is adequately sampled by the data. When the number of points $N$ is too small, the finest boxes each contain at most one point, $N(\varepsilon)$ saturates at $N$, and the estimated slope flattens out. As a result, too few data points always lead to an *underestimate* of the dimension at small $\varepsilon$ ({numref}`fig:fractals:boxcount_fit`). A complete, self-contained version of this pipeline – generating a self-similar point set, counting occupied boxes over a range of sizes, and extracting the slope by a least-squares fit – is worked through in the {doc}`cookbook <app_cookbook>`.
 
 ```{figure} _static/fractals/fractals_boxcount_fit.png
 :name: fig:fractals:boxcount_fit
