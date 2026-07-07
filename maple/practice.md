@@ -218,6 +218,24 @@ Stirring milk into coffee mixes it in seconds, but at the small scales of a micr
 Chaotic mixing. Two blobs of dye advected by a simple time-periodic flow are stretched and folded into ever finer filaments and, within a few periods, interleaved throughout the domain – efficient mixing produced by a smooth, laminar flow.
 ```
 
+````{admonition} Maple
+:class: maple
+
+The flow is just two shears applied in turn; `wrap` keeps the dye on the unit square. Iterating the map on a thin streak of points reproduces the filaments of {numref}`fig:practice:mixing`.
+
+```{code-block} maple
+restart: with(plots):
+A := 0.9:  wrap := t -> t - floor(t):          # stay on the unit torus
+step := proc(p) local xn:                      # one period of the flow
+  xn := wrap(p[1] + A*sin(2*Pi*p[2])):         # horizontal shear
+  [xn, wrap(p[2] + A*sin(2*Pi*xn))]:           # vertical shear
+end proc:
+blob := [seq([0.25, 0.40 + 0.2*k/100], k=0..100)]:   # a thin streak of dye
+for n to 5 do blob := map(step, blob): end do:
+pointplot(blob, symbol=point, view=[0..1, 0..1]);
+```
+````
+
 ````{admonition} Coherent structures and ocean transport
 :class: infobox
 
@@ -233,6 +251,28 @@ The second use turns sensitivity into control. A chaotic attractor is far from s
 Controlling chaos. Left of the marker the logistic map ($r=3.9$) iterates chaotically. Once control is enabled it waits until the orbit strays near the target fixed point $x^{*}$ and then, with the minuscule parameter nudges $\delta r_n$ shown below, locks the motion onto it.
 ```
 
+````{admonition} Maple
+:class: maple
+
+Controlling the logistic map costs only a few lines: at each step, if the state is near the target $x^{*}$, nudge $r$ by the small amount that would map the state exactly onto it.
+
+```{code-block} maple
+restart: with(plots):
+r := 3.9:  xstar := 1 - 1/r:  drmax := 0.05:   # target orbit and largest nudge
+x := 0.2:  orbit := NULL:
+for n to 240 do
+  rr := r:
+  if n > 100 then                              # switch the controller on
+    dr := xstar/(x*(1-x)) - r:                 # nudge that would hit x*
+    if abs(dr) <= drmax then rr := r + dr: end if:
+  end if:
+  x := rr*x*(1-x):
+  orbit := orbit, [n, x]:
+end do:
+plot([orbit], style=point, symbolsize=6);
+```
+````
+
 The third use reads chaos from data. In an experiment one seldom measures the full state; more often a single scalar is recorded – a voltage, a velocity at one point, the interval between drips of the faucet of chapter {numref}`sec:disc2d`. Remarkably, that lone time series is enough. *Takens' theorem* {cite:p}`Takens1981` guarantees that the vectors built from delayed copies of one coordinate, $(x_t,\, x_{t+\tau},\, x_{t+2\tau},\ldots)$, trace out a faithful copy of the original attractor, with the same dimension, Lyapunov exponents and topology. {numref}`fig:practice:reconstruction` rebuilds the Lorenz attractor from its $x$-coordinate alone. This *delay embedding* is what lets the box-counting and correlation dimensions of chapter {numref}`chap:fractals` be measured from a real signal, and it underpins the analysis of chaotic data across science – detecting the approach of an epileptic seizure from an EEG, diagnosing incipient faults in rotating machinery, and forecasting ecological and physiological records.
 
 ```{figure} _static/practice/practice_reconstruction.png
@@ -241,6 +281,20 @@ The third use reads chaos from data. In an experiment one seldom measures the fu
 
 Attractor reconstruction. From the single recorded coordinate $x(t)$ of the Lorenz system (left), the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ trace out a reconstruction (right) with the same two-lobed topology as the original – the content of Takens' theorem.
 ```
+
+````{admonition} Maple
+:class: maple
+
+Reconstruction needs only a single recorded coordinate. If the list `X` holds the sampled values $x(t_i)$ of a Lorenz run, the delay vectors are formed and plotted directly.
+
+```{code-block} maple
+restart: with(plots):
+tau := 18:                                     # delay, in samples
+N   := nops(X) - 2*tau:
+emb := [seq([X[i], X[i+tau], X[i+2*tau]], i=1..N)]:
+pointplot3d(emb, symbol=point, symbolsize=1, axes=boxed);
+```
+````
 
 ````{admonition} Fingerprinting a chemical reactor
 :class: infobox
