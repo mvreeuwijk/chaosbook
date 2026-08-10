@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaosbook"
+version = "0.1.0"
+description = "Computational toolkit for the book 'From Stability to Chaos'"
+authors = [
+  {name = "Harmen J. Jonker"},
+  {name = "Maarten van Reeuwijk"},
+]
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "matplotlib",
+]
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
