@@ -154,9 +154,12 @@ pyproject.toml    # pure-python wheel — installable locally, on PyPI (later),
 Each step is its own spec → plan → implementation cycle:
 
 1. **`chaosbook` package** + tests + cookbook integration (admonitions +
-   install section).
-2. **disc1d pilot chapter** — richest slider material; proves
-   plotly + static twins + package end-to-end.
+   install section). *(Done — 2026-08-11.)*
+2. **Pilot chapters: phenomenon + disc1d** — together they prove all four
+   serverless figure families end-to-end: phenomenon ("start at the end",
+   3D continuous problems) carries the rotatable 3D Lorenz/three-body
+   attractors and sensitivity animations; disc1d carries the
+   precomputed-frame sliders and bifurcation zooms.
 3. **JupyterLite wiring** + first companion notebook.
 4. **Rollout** to the remaining chapters.
 
