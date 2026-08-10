@@ -94,6 +94,12 @@ pyproject.toml    # pure-python wheel — installable locally, on PyPI (later),
                   # and in Pyodide/JupyterLite via piplite
 ```
 
+- **The core of the package is the analysis and visualisation machinery**
+  (orbit, cobweb, bifurcation, Lyapunov, Poincaré, box dimension): generic
+  tools that operate on any user-supplied map or flow `f`. The bundled
+  systems (`maps.py`, `flows.py` — logistic, Lorenz, …) are convenience
+  examples of the kind readers define themselves; they are secondary, and
+  the tools must never assume them.
 - APIs mirror the book's notation exactly: parameter names (r, sigma, b),
   defaults, and conventions match the chapters and `creators/MODELS.md`.
 - Dependencies: numpy and scipy only (matplotlib accepted in plotting

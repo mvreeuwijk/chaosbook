@@ -6,3 +6,4 @@ __pycache__/
 /tmp
 .playwright-mcp/
 *.egg-info/
+.pytest_cache/

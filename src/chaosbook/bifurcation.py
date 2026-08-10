@@ -13,6 +13,8 @@ def bifurcation_diagram(f, rmin, rmax, nr=200, n=500, x0=0.57, ax=None):
     iterated n times from x0, and the second half of every orbit (the
     part that has converged onto the attractor) is plotted against r.
     Returns the arrays (rs, xs) that make up the diagram.
+
+    Assumes the map's varying parameter is named r, i.e. f(x, r).
     """
     nmin = n // 2
     rs = []
