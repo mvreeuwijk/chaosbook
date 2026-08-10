@@ -96,8 +96,17 @@ in the conversion (coverage cross-check, §4).
   - drop the Maple lexer alias (`lexers["maple"]`) and the Maple-specific
     templates/sidebars (`navbar-center.html`, `exercises-nav.html`) — default
     book-theme navigation for now;
-  - LaTeX/PDF configuration reduced: HTML only for the Python edition at this
-    stage (no `cookbook.pdf` counterpart yet).
+  - LaTeX configuration kept for the cookbook PDF: a `latex_documents` entry
+    `('app_cookbook', 'cookbook.tex', 'The Python Cookbook', …, 'howto')`,
+    mirroring the Maple edition's standalone cookbook PDF (article-based
+    'howto' so top-level headings flow as sections). The book-level
+    `latex_documents` entry and `latex_appendices` are dropped until those
+    chapters exist.
+- **Cookbook PDF is a first-class deliverable**: built via
+  `sphinx-build -b latex python build/python/latex` + `latexmk -pdf
+  cookbook.tex`, exactly parallel to the Maple cookbook's pipeline. The HTML
+  cookbook page gets the same "Download the cookbook (PDF)" button as the
+  Maple one, pointing at the Python edition's own `cookbook.pdf`.
 - `python/index.md`: minimal landing page — book title, a line noting this is
   the Python edition (in progress), and a toctree containing the cookbook.
 - No CI changes in this step: the deployed site remains the Maple edition; the
@@ -108,6 +117,8 @@ in the conversion (coverage cross-check, §4).
 
 - The Sphinx build (`make python`) executes the notebook end-to-end; the build
   must be green with no new warnings.
+- The LaTeX build produces `cookbook.pdf` cleanly (figures render, no missing
+  characters or overfull disasters worth fixing).
 - Visual sanity-check of the key figures: cobweb plot, bifurcation diagram,
   chaotic ODE trajectories, Sierpinski gasket, box-count slope ≈ log 3 / log 2
   ≈ 1.585.
@@ -118,7 +129,7 @@ in the conversion (coverage cross-check, §4).
 
 - Converting the book chapters (`phenomenon.md` … `practice.md`) — later, one
   at a time.
-- A Python `cookbook.pdf` deliverable.
-- CI/deployment of the Python site.
+- CI/deployment of the Python site and its PDF (the PDF builds locally for
+  now; wiring it into the Pages workflow comes with deployment).
 - A reusable `src/chaosbook/` package (ROADMAP §3) — the cookbook stays
   self-contained.
