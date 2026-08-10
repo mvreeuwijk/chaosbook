@@ -8,6 +8,8 @@ from .maps import logistic
 from .iterate import orbit
 from .cobweb import cobweb
 from .bifurcation import bifurcation_diagram
+from .flows import lorenz
+from .fractal import chaos_game, box_dimension
 
 __version__ = "0.1.0"
 
@@ -16,4 +18,7 @@ __all__ = [
     "orbit",
     "cobweb",
     "bifurcation_diagram",
+    "lorenz",
+    "chaos_game",
+    "box_dimension",
 ]
