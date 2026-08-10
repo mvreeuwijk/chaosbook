@@ -331,7 +331,10 @@ def bifurcation_diagram(f, rmin, rmax, nr=200, n=500, x0=0.57, ax=None):
     rs = []
     xs = []
     for i in range(nr + 1):
-        r = rmin + (rmax - rmin) * i / nr
+        if nr == 0:
+            r = rmin
+        else:
+            r = rmin + (rmax - rmin) * i / nr
         X = orbit(f, x0, n, r=r)
         for x in X[nmin:]:
             rs.append(r)
