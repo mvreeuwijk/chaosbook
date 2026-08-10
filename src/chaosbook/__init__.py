@@ -6,10 +6,14 @@ implementation is shown as plain code before being packaged.
 
 from .maps import logistic
 from .iterate import orbit
+from .cobweb import cobweb
+from .bifurcation import bifurcation_diagram
 
 __version__ = "0.1.0"
 
 __all__ = [
     "logistic",
     "orbit",
+    "cobweb",
+    "bifurcation_diagram",
 ]

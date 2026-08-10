@@ -5,3 +5,4 @@ __pycache__/
 .doctrees/
 /tmp
 .playwright-mcp/
+*.egg-info/
