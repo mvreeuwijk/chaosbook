@@ -1181,20 +1181,21 @@ J
 md:
 
 ```markdown
-The Jacobian evaluated at the fourth fixed point, and its eigenvalues:
+The Jacobian evaluated at the coexistence fixed point $(1, 1)$, and its
+eigenvalues:
 ```
 
 code:
 
 ```python
-J4 = J.subs({x: fixed_points[3][0], y: fixed_points[3][1]})
-J4
+Jc = J.subs({x: 1, y: 1})
+Jc
 ```
 
 code:
 
 ```python
-evs = list(J4.eigenvals())
+evs = list(Jc.eigenvals())
 evs
 ```
 
