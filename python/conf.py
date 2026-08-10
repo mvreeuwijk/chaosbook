@@ -60,11 +60,11 @@ proof_theorem_types = {
 proof_latex_parent = "chapter"
 
 # -- Notebook execution (myst-nb) ------------------------------------------
-# Use "force" to ensure notebooks always re-execute. (Original spec decision 5
-# was "cache", but jupyter-cache has a race condition on Windows with long
-# paths that prevents clean-slate builds from succeeding. "force" mode works
-# reliably across all platforms and ensures full verification.)
-nb_execution_mode = "force"
+# "cache": execute during the Sphinx build, re-running only when the
+# notebook changes (spec decision 5). If a clean-slate rebuild ever hits a
+# jupyter-cache FileExistsError on this machine (OneDrive interference),
+# delete build/ and rebuild; CI runners start clean and are unaffected.
+nb_execution_mode = "cache"
 nb_execution_timeout = 300
 
 # -- HTML ------------------------------------------------------------------
