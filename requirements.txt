@@ -15,3 +15,5 @@ numpy
 scipy
 matplotlib
 sympy
+pytest
+-e .
