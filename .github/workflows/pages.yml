@@ -31,8 +31,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Test the chaosbook package
+        run: python -m pytest tests/ -v
+
       - name: Build the Maple edition (HTML)
         run: sphinx-build -b html maple build/maple/html
+
+      # The Python edition is published under /python/ so every Maple-edition
+      # URL stays stable. The notebook executes during this build (myst-nb
+      # cache mode; the runner starts clean).
+      - name: Build the Python edition (HTML)
+        run: sphinx-build -b html python build/maple/html/python
 
       - name: Install LaTeX toolchain
         run: |
@@ -56,6 +65,13 @@ jobs:
           # Publish both at the site root so they are downloadable.
           cp build/maple/latex/main.pdf build/maple/html/chaosbook.pdf
           cp build/maple/latex/cookbook.pdf build/maple/html/cookbook.pdf
+
+      - name: Build the Python edition (PDF)
+        run: |
+          sphinx-build -b latex python build/python/latex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/python/latex/cookbook.tex
+          # Beside the Python pages, where the cookbook's download button points.
+          cp build/python/latex/cookbook.pdf build/maple/html/python/cookbook.pdf
 
       # GitHub Pages serves the artifact as-is (no Jekyll), but a .nojekyll
       # keeps underscore-prefixed dirs (_static, _images) safe on any path.

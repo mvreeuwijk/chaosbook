@@ -23,11 +23,13 @@ the [About page](maple/about.md) for the full story.
 ## Status
 
 - **Maple edition — complete.** The current, canonical edition.
-- **Python edition — planned.** A parallel edition in the same repo; see [ROADMAP.md](ROADMAP.md).
+- **Python edition — in progress.** The [Python cookbook](https://mvreeuwijk.github.io/chaosbook/python/)
+  and the `chaosbook` package are published; the chapters follow. See [ROADMAP.md](ROADMAP.md).
 
-The Maple edition is what ships today. A Python edition is planned as a *parallel*
-implementation inside this same repository, sharing the mathematical exposition
-and exercises while swapping the code, figure-generation workflow and notebooks.
+The Maple edition is the canonical edition today. The Python edition is a
+*parallel* implementation inside this same repository, sharing the mathematical
+exposition and exercises while swapping the code, figure-generation workflow
+and notebooks. It is published under `/python/` alongside the Maple site.
 
 ## Layout
 
