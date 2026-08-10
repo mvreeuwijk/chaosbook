@@ -9,3 +9,9 @@ sphinx-design
 sphinx-math-dollar
 sphinxcontrib-youtube
 sphinxcontrib-proof
+myst-nb
+ipykernel
+numpy
+scipy
+matplotlib
+sympy
