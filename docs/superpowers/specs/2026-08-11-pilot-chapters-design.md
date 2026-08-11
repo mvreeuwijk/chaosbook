@@ -151,6 +151,21 @@ assume the bundled systems):
   directly after the figure/subfigure block (MyST captions don't support
   embedded links well), and **every** creators-script figure gets one —
   disc1d must apply the link exhaustively across its 23 figures.
+- **Evidence-based numeric checks (pilot retrospective, binding for the
+  rollout chapters):** every implementer task that produces or quotes
+  numbers (worked-example outputs, tables, figure anchors like slopes or
+  constants) must RUN the code and paste the actual output into its
+  report, diffed against the book's quoted values — asserting "matches"
+  without evidence is not acceptance. The pilot needed several correction
+  rounds (sympy digits vs the old engine's, δ(η) NaNs, the N=50 round-off
+  table that never diverged) precisely where first-pass reports asserted
+  correctness unchecked.
+- **Figure style (user direction, 2026-08-11):** axis/tick labels use
+  LaTeX mathtext symbols (`$x_n$`, `$\Lambda(r)$`, `$\delta$`, `$\eta$` —
+  never "xn", "Lambda(r)"), and the apparent font size must be uniform
+  across the book's figures: one shared matplotlib style, and figure
+  sizes standardised per display class so page scaling doesn't shrink or
+  blow up labels.
 
 ## Out of scope (deliberate)
 
