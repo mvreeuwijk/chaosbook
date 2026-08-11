@@ -1,0 +1,11 @@
+# Tooling for the JupyterLite lab layer (python/lite/build_lite.py).
+# Separate from requirements.txt: the Sphinx build does not need any of this.
+jupyterlite-core~=0.8
+jupyterlite-pyodide-kernel~=0.8
+# The contents addon requires jupyter-server to index custom notebooks.
+jupyter-server
+# ipywidgets in the *build* environment bundles the jupyterlab-widgets
+# frontend extension into the lite output (the kernel-side package is
+# installed in the browser by the notebooks' %pip setup cell).
+ipywidgets
+build

@@ -43,6 +43,13 @@ jobs:
       - name: Build the Python edition (HTML)
         run: sphinx-build -b html python build/maple/html/python
 
+      # The JupyterLite lab layer lives under /python/lite/: exercise-lab
+      # notebooks with the chaosbook wheel bundled for piplite.
+      - name: Build the JupyterLite lab layer
+        run: |
+          pip install -r requirements-lite.txt
+          python python/lite/build_lite.py build/maple/html/python/lite
+
       - name: Install LaTeX toolchain
         run: |
           sudo apt-get update

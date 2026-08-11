@@ -1,5 +1,14 @@
 ## Exercises
 
+::::{only} html
+:::{button-link} lite/lab/index.html?path=disc1d_lab.ipynb
+:color: primary
+:outline:
+
+🧪 Launch the exercise lab — runs in your browser, nothing to install
+:::
+::::
+
 ### Classification of timeseries
 
 **Downloads:** {download}`set1.txt <_static/exercises/set1.txt>`, {download}`set2.txt <_static/exercises/set2.txt>`, {download}`set3.txt <_static/exercises/set3.txt>`

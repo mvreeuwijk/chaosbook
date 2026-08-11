@@ -1,5 +1,14 @@
 ## Exercises
 
+::::{only} html
+:::{button-link} lite/lab/index.html?path=phenomenon_lab.ipynb
+:color: primary
+:outline:
+
+🧪 Launch the exercise lab — runs in your browser, nothing to install
+:::
+::::
+
 ### Sensitive dependence on initial conditions in the Lorenz System
 
 Study the Lorenz system

@@ -39,7 +39,10 @@ release = f'{_today:%B} {_today.day}, {_today.year}'
 version = release
 today = ''
 
-exclude_patterns = ["_includes/**"]
+# _includes are pulled in via {include}; lite/ is the JupyterLite lab layer,
+# built separately by python/lite/build_lite.py (its notebooks are contents
+# for the browser, not pages of this site).
+exclude_patterns = ["_includes/**", "lite/**"]
 
 pygments_style = 'sphinx'
 
