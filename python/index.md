@@ -20,3 +20,10 @@ disc1d
 
 app_cookbook
 ```
+
+```{toctree}
+:hidden:
+:caption: References
+
+references
+```
