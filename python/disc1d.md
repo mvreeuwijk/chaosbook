@@ -1417,7 +1417,7 @@ This map has a maximum that is not quadratic, except when $\eta = 2$ for which w
 
 Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find the dependence of $\delta$ on the value of $\eta$ by using the procedure outlined above. Adapting the code slightly gives the data-points plotted in {numref}`fig:disc1d:not_so_universal`, showing values of $\delta$ ranging from 3 to as much as 7 for an order-4 maximum $\eta=4$.
 
-```{table} $\delta_p = (r_{p}-r_{p-1})/(r_{p+1}-r_{p})$ for the logistic map and the sine-map produced by the maple code. As shown, the values of $\delta_p$ rapidly converge for both maps to the Feigenbaum constant $\delta = 4.6692\ldots$.
+```{table} $\delta_p = (r_{p}-r_{p-1})/(r_{p+1}-r_{p})$ for the logistic map and the sine-map produced by the code. As shown, the values of $\delta_p$ rapidly converge for both maps to the Feigenbaum constant $\delta = 4.6692\ldots$.
 :name: table:disc1d:feigenbaum_numbers
 
 | LOGISTIC MAP |  |  | SINE MAP |  |  |
