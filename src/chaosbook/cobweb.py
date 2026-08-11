@@ -24,6 +24,6 @@ def cobweb(f, x0, n, xmin=0.0, xmax=1.0, ax=None, **params):
     ax.plot(xs, f(xs, **params), "k")
     ax.plot(xs, xs, "b")
     ax.plot(px, py, "r")
-    ax.set_xlabel("x[n]")
-    ax.set_ylabel("x[n+1]")
+    ax.set_xlabel("$x_n$")
+    ax.set_ylabel("$x_{n+1}$")
     return ax

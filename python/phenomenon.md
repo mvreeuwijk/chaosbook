@@ -33,8 +33,8 @@ sol1 = solve_ivp(cb.lorenz, [tstart, tend], ic1,
                  t_eval=np.linspace(tstart, tend, 3000), rtol=1e-9)
 # and plot the timeseries
 plt.plot(sol1.t, sol1.y[0])
-plt.xlabel("t")
-plt.ylabel("x")
+plt.xlabel("$t$")
+plt.ylabel("$x$")
 ```
 ````
 
@@ -64,8 +64,8 @@ sol2 = solve_ivp(cb.lorenz, [tstart, tend], ic2,
 # plot 2 timeseries in one plot
 plt.plot(sol1.t, sol1.y[0], "b")
 plt.plot(sol2.t, sol2.y[0], "r")
-plt.xlabel("t")
-plt.ylabel("x")
+plt.xlabel("$t$")
+plt.ylabel("$x$")
 ```
 ````
 
@@ -99,9 +99,9 @@ Apart from analysing the time-series, much can be learned by studying the system
 ```{code-block} python
 ax = plt.figure().add_subplot(projection="3d")
 ax.plot(sol1.y[0], sol1.y[1], sol1.y[2], linewidth=0.5)
-ax.set_xlabel("x")
-ax.set_ylabel("y")
-ax.set_zlabel("z")
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+ax.set_zlabel("$z$")
 ```
 ````
 

@@ -56,8 +56,6 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6.2, 6),
                                sharex=True, height_ratios=[2, 1])
 cb.bifurcation_diagram(cb.logistic, 2.5, 4.0, nr=800, n=1000,
                        x0=0.57, discard=0.8, ax=ax1)
-ax1.set_xlabel("$r$")
-ax1.set_ylabel("$x(r)$")
 rs, lams = cb.lyapunov_sweep(cb.logistic, dlogistic, 2.5, 4.0, nr=800)
 ax2.plot(rs, lams, "k", linewidth=0.7)
 ax2.axhline(0, color="gray", linewidth=0.8)

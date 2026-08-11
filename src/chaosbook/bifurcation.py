@@ -33,6 +33,6 @@ def bifurcation_diagram(f, rmin, rmax, nr=200, n=500, x0=0.57, discard=0.5, ax=N
     if ax is None:
         ax = plt.gca()
     ax.plot(rs, xs, ",")
-    ax.set_xlabel("r")
-    ax.set_ylabel("x(r)")
+    ax.set_xlabel("$r$")
+    ax.set_ylabel("$x(r)$")
     return rs, xs

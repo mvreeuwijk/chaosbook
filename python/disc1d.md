@@ -48,8 +48,8 @@ import chaosbook as cb
 # generate and plot the time series
 X = cb.orbit(cb.logistic, x0=0.1, n=20, r=0.5)
 plt.plot(range(len(X)), X, "o")
-plt.xlabel("n")
-plt.ylabel("xn")
+plt.xlabel("$n$")
+plt.ylabel("$x_n$")
 ```
 ````
 
@@ -117,8 +117,8 @@ Another useful method to study the outcome of discrete maps is by making a so-ca
 X = cb.orbit(cb.logistic, x0=0.1, n=200, r=3.9)
 nmin = 50
 plt.plot(X[nmin:-1], X[nmin + 1:], "o")
-plt.xlabel("x[n]")
-plt.ylabel("x[n+1]")
+plt.xlabel("$x_n$")
+plt.ylabel("$x_{n+1}$")
 plt.axis([0, 1, 0, 1])
 ```
 ````
@@ -580,8 +580,8 @@ def f4(x, r):
 
 R, X = np.meshgrid(np.linspace(0, 1, 300), np.linspace(0, 1, 300))
 plt.contour(R, X, f4(X, R) - X, levels=[0], colors="black")
-plt.xlabel("r")
-plt.ylabel("x(r)")
+plt.xlabel("$r$")
+plt.ylabel("$x(r)$")
 ```
 ````
 
@@ -862,8 +862,8 @@ for n in range(N + 1):
     Y[n] = float(y)
     y = f(y)
 plt.plot(range(N + 1), Y, "o", markersize=2)
-plt.xlabel("n")
-plt.ylabel("y[n]")
+plt.xlabel("$n$")
+plt.ylabel("$y_n$")
 ```
 ````
 
@@ -1172,8 +1172,8 @@ plt.hist(X, bins=32, density=True, color="gray")
 xs = np.linspace(0.025, 0.975, 200)
 plt.plot(xs, 1 / (np.pi * np.sqrt(xs * (1 - xs))), "k", linewidth=3)
 plt.axis([0, 1, 0, 2])
-plt.xlabel("x")
-plt.ylabel("p(x)")
+plt.xlabel("$x$")
+plt.ylabel("$p(x)$")
 ```
 ````
 
@@ -1270,8 +1270,8 @@ for a in np.linspace(amin, amax, 501):
     X = cb.orbit(cb.sine, x0=0.57, n=1000, r=r)
     plt.plot([a] * 201, X[800:], ",", color="black")
 plt.axis([amin, amax, 0.33, 0.9])
-plt.xlabel("a")
-plt.ylabel("x(a)")
+plt.xlabel("$a$")
+plt.ylabel("$x(a)$")
 ```
 ````
 

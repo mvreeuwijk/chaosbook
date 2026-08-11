@@ -44,8 +44,6 @@ for r in [1.5, 3.2, 3.5, 3.9]:
 for r in [2.7, 3.2, 3.9]:
     fig, ax = plt.subplots(figsize=(4.2, 4.2))
     cb.cobweb(cb.logistic, x0=0.1, n=30, ax=ax, r=r)
-    ax.set_xlabel("$x_n$")
-    ax.set_ylabel("$x_{n+1}$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_cobweb_r{tag(r)}.png", dpi=150)
     plt.close()

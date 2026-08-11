@@ -33,8 +33,6 @@ for f, rmin, rmax, rc, name in [
                 arrowprops=dict(arrowstyle="->", color="black"))
     ax.set_xlim(rmin, rmax)
     ax.set_ylim(0, 1)
-    ax.set_xlabel("$r$")
-    ax.set_ylabel("$x(r)$")
     plt.tight_layout()
     plt.savefig(OUT / f"{name}.png", dpi=150)
     plt.close()
