@@ -19,3 +19,11 @@ def test_period_two_beyond_first_doubling():
     values = np.unique(np.round(xs, 6))
     assert len(values) == 2
     plt.close(fig)
+
+
+def test_bifurcation_discard_fraction():
+    fig, ax = plt.subplots()
+    rs, xs = bifurcation_diagram(logistic, 3.2, 3.2, nr=0, n=1000,
+                                 discard=0.8, ax=ax)
+    assert len(xs) == 1000 - 800 + 1
+    plt.close(fig)
