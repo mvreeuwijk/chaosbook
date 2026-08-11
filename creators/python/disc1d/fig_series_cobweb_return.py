@@ -17,6 +17,9 @@ from plotly.subplots import make_subplots
 
 import chaosbook as cb
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
@@ -28,10 +31,10 @@ def tag(r):
 # -- logistic time series ----------------------------------------------------
 for r in [1.5, 3.2, 3.5, 3.9]:
     X = cb.orbit(cb.logistic, x0=0.1, n=30, r=r)
-    plt.figure(figsize=(4.2, 3))
+    plt.figure(figsize=(4.2, 3.2))
     plt.plot(range(len(X)), X, "o", markersize=4)
-    plt.xlabel("n")
-    plt.ylabel("xn")
+    plt.xlabel("$n$")
+    plt.ylabel("$x_n$")
     plt.ylim(0, 1)
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_series_r{tag(r)}.png", dpi=150)
@@ -39,8 +42,10 @@ for r in [1.5, 3.2, 3.5, 3.9]:
 
 # -- cobwebs -----------------------------------------------------------------
 for r in [2.7, 3.2, 3.9]:
-    fig, ax = plt.subplots(figsize=(4, 4))
+    fig, ax = plt.subplots(figsize=(4.2, 4.2))
     cb.cobweb(cb.logistic, x0=0.1, n=30, ax=ax, r=r)
+    ax.set_xlabel("$x_n$")
+    ax.set_ylabel("$x_{n+1}$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_cobweb_r{tag(r)}.png", dpi=150)
     plt.close()
@@ -49,11 +54,11 @@ for r in [2.7, 3.2, 3.9]:
 for r in [1.5, 3.2, 3.5, 3.9]:
     X = cb.orbit(cb.logistic, x0=0.1, n=200, r=r)
     xs = np.linspace(0, 1, 200)
-    plt.figure(figsize=(4.2, 3.6))
+    plt.figure(figsize=(4.2, 4.2))
     plt.plot(xs, cb.logistic(xs, r), color="gray")
     plt.plot(X[50:-1], X[51:], "ko", markersize=4)
-    plt.xlabel("x[n]")
-    plt.ylabel("x[n+1]")
+    plt.xlabel("$x_n$")
+    plt.ylabel("$x_{n+1}$")
     plt.axis([0, 1, 0, 1])
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_return_r{tag(r)}.png", dpi=150)
@@ -77,18 +82,18 @@ for n in range(N):
     s3[n + 1] = -4 * s3[n] ** 3 + 3 * s3[n]
 
 for name, data in [("henon", hx), ("noise", noise), ("sin3map", s3)]:
-    plt.figure(figsize=(4.6, 2.6))
+    plt.figure(figsize=(4.2, 3.2))
     plt.plot(range(len(data)), data, "k", linewidth=0.7)
-    plt.xlabel("n")
-    plt.ylabel("x[n]")
+    plt.xlabel("$n$")
+    plt.ylabel("$x_n$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_unknownmapping_series_{name}.png", dpi=150)
     plt.close()
 
-    plt.figure(figsize=(3.4, 3.4))
+    plt.figure(figsize=(4.2, 4.2))
     plt.plot(data[:-1], data[1:], "ko", markersize=3)
-    plt.xlabel("x[n]")
-    plt.ylabel("x[n+1]")
+    plt.xlabel("$x_n$")
+    plt.ylabel("$x_{n+1}$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_unknownmapping_return_{name}.png", dpi=150)
     plt.close()

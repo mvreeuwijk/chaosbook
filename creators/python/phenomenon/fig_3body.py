@@ -16,6 +16,9 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "phenomenon"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
@@ -47,8 +50,8 @@ def draw(ax, xs, ys, xe, ye, xm, ym, rotating=False):
         ax.plot(xe, ye, "k", linewidth=2.5)           # earth: thick black
         ax.plot(xm, ym, color="gray", linewidth=1.5)  # moon: gray
     ax.plot(xs, ys, "k", linewidth=0.6)               # satellite: thin black
-    ax.set_xlabel("x [m]")
-    ax.set_ylabel("y [m]")
+    ax.set_xlabel("$x$ [m]")
+    ax.set_ylabel("$y$ [m]")
     ax.set_aspect("equal")
 
 
@@ -92,8 +95,8 @@ for ax, rotate in zip(axes, [False, True]):
     else:
         ax.plot(xe, ye, "k", linewidth=2.5)
         ax.plot(xm, ym, color="gray", linewidth=1.5)
-    ax.set_xlabel("x [m]")
-    ax.set_ylabel("y [m]")
+    ax.set_xlabel("$x$ [m]")
+    ax.set_ylabel("$y$ [m]")
     ax.set_aspect("equal")
 plt.tight_layout()
 plt.savefig(OUT / "phenomenon_3body_example_sensitivity.png", dpi=150)

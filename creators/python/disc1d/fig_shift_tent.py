@@ -16,6 +16,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from mpmath import mp, mpf
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 mp.dps = 150  # enough digits for 400 doublings
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
@@ -41,18 +44,18 @@ for name, f, y0, label in [
     ("tentmap", tent, 1 / mp.pi, "z"),
 ]:
     Y = run_map(f, y0)
-    plt.figure(figsize=(5.6, 2.8))
+    plt.figure(figsize=(4.2, 3.2))
     plt.plot(range(N + 1), Y, "o", markersize=2)
-    plt.xlabel("n")
-    plt.ylabel(f"{label}[n]")
+    plt.xlabel("$n$")
+    plt.ylabel(f"${label}_n$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_{name}_series.png", dpi=150)
     plt.close()
 
-    plt.figure(figsize=(3.6, 3.6))
+    plt.figure(figsize=(4.2, 4.2))
     plt.plot(Y[:-1], Y[1:], "o", markersize=2)
-    plt.xlabel(f"{label}[n]")
-    plt.ylabel(f"{label}[n+1]")
+    plt.xlabel(f"${label}_n$")
+    plt.ylabel(f"${label}_{{n+1}}$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_{name}_returnplot.png", dpi=150)
     plt.close()

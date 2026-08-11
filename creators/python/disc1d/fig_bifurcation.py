@@ -19,6 +19,9 @@ from scipy.optimize import brentq
 
 import chaosbook as cb
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
@@ -52,7 +55,7 @@ def sigma_at(p, r, m=3):
 
 
 # -- analytical branches: periods 1, 2 and 4 ---------------------------------
-plt.figure(figsize=(5.4, 3.8))
+plt.figure(figsize=(4.2, 3.2))
 rs = np.linspace(0.5, 3.6, 500)
 plt.plot(rs, np.where(rs < 1, 0, np.nan), "k")            # x*=0 stable
 plt.plot(rs, np.where(rs >= 1, 0, np.nan), "gray")         # x*=0 unstable
@@ -71,49 +74,62 @@ for r in np.linspace(1 + np.sqrt(6) + 1e-4, 3.56, 120):   # period-4, numeric
         [0, 1 - 1 / r] + periodic_points(2, r, exclude=(0, 1 - 1 / r))))
     for p in pts:
         plt.plot(r, p, "k.", markersize=2)
-plt.xlabel("r")
-plt.ylabel("x*(r)")
+plt.xlabel("$r$")
+plt.ylabel("$x^*(r)$")
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_logist_bifur_theo.png", dpi=150)
 plt.close()
 
 # -- period-3 stable and unstable branches -----------------------------------
-plt.figure(figsize=(5.0, 3.8))
+plt.figure(figsize=(4.2, 3.2))
 for r in np.linspace(3.8284, 3.856, 140):
     pts = periodic_points(3, r, exclude=(0, 1 - 1 / r))
     if len(pts) >= 6:
         for p in pts:
             color = "k" if abs(sigma_at(p, r)) < 1 else "gray"
             plt.plot(r, p, ".", color=color, markersize=2)
-plt.xlabel("r")
-plt.ylabel("x*(r)")
+plt.xlabel("$r$")
+plt.ylabel("$x^*(r)$")
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_logist_stability_p3both.png", dpi=150)
 plt.close()
 
 # -- implicit plot x = f^(4)(x) for the sine map -----------------------------
 R, Xg = np.meshgrid(np.linspace(0.0, 1, 400), np.linspace(0, 1, 400))
-plt.figure(figsize=(5.2, 3.8))
+plt.figure(figsize=(5.0, 3.5))
 plt.contour(R, Xg, compose(cb.sine, 4, Xg, R) - Xg, levels=[0],
             colors="black", linewidths=1.5)
 plt.axis([0, 1, -0.1, 1])
-plt.xlabel("r")
-plt.ylabel("x(r)")
+plt.xlabel("$r$")
+plt.ylabel("$x(r)$")
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_bifurcation_implicit_sin.png", dpi=150)
 plt.close()
 
-# -- numerical bifurcation diagram + zooms -----------------------------------
+# -- numerical bifurcation diagram --------------------------------------------
+fig, ax = plt.subplots(figsize=(5.0, 3.5))
+cb.bifurcation_diagram(cb.logistic, 3.3, 4.0, nr=500, n=1000,
+                       x0=0.57, discard=0.8, ax=ax)
+ax.set_xlim(3.3, 4.0)
+ax.set_ylim(0, 1)
+ax.set_xlabel("$r$")
+ax.set_ylabel("$x(r)$")
+plt.tight_layout()
+plt.savefig(OUT / "disc1d_logist_series_bifurcation.png", dpi=150)
+plt.close()
+
+# -- zooms on the bifurcation diagram -----------------------------------------
 for rmin, rmax, name in [
-    (3.3, 4.0, "disc1d_logist_series_bifurcation"),
     (2.8, 3.6, "disc1d_logist_series_bifurcation_zoom_doubling"),
     (3.82, 3.86, "disc1d_logist_series_bifurcation_zoom_p3"),
 ]:
-    fig, ax = plt.subplots(figsize=(5.6, 3.8))
+    fig, ax = plt.subplots(figsize=(4.2, 3.2))
     cb.bifurcation_diagram(cb.logistic, rmin, rmax, nr=500, n=1000,
                            x0=0.57, discard=0.8, ax=ax)
     ax.set_xlim(rmin, rmax)
     ax.set_ylim(0, 1)
+    ax.set_xlabel("$r$")
+    ax.set_ylabel("$x(r)$")
     plt.tight_layout()
     plt.savefig(OUT / f"{name}.png", dpi=150)
     plt.close()

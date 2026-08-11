@@ -19,6 +19,9 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "phenomenon"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
@@ -30,10 +33,10 @@ def run(ic, tend, n=6000):
 
 # -- time series ------------------------------------------------------------
 sol1 = run([2, 5, 5], 30)
-plt.figure(figsize=(8, 3))
+plt.figure(figsize=(6.2, 3.6))
 plt.plot(sol1.t, sol1.y[0], "b", linewidth=1)
-plt.xlabel("t")
-plt.ylabel("x")
+plt.xlabel("$t$")
+plt.ylabel("$x$")
 plt.tight_layout()
 plt.savefig(OUT / "phenomenon_lorenz_xt_series.png", dpi=150)
 plt.close()
@@ -41,33 +44,33 @@ plt.close()
 # -- sensitive dependence, epsilon = 1e-3 and 1e-5 --------------------------
 for eps, name in [(1e-3, "em3"), (1e-5, "em5")]:
     sol2 = run([2 + eps, 5, 5], 30)
-    plt.figure(figsize=(5, 3.2))
+    plt.figure(figsize=(4.2, 3.2))
     plt.plot(sol1.t, sol1.y[0], "b", linewidth=1)
     plt.plot(sol2.t, sol2.y[0], "r", linewidth=1)
-    plt.xlabel("t")
-    plt.ylabel("x")
+    plt.xlabel("$t$")
+    plt.ylabel("$x$")
     plt.tight_layout()
     plt.savefig(OUT / f"phenomenon_lorenz_xt_two_series_{name}.png", dpi=150)
     plt.close()
 
 # -- phase space: the butterfly, and convergence onto it --------------------
 solb = run([2, 5, 5], 40, n=12000)
-ax = plt.figure(figsize=(5, 4)).add_subplot(projection="3d")
+ax = plt.figure(figsize=(4.2, 3.2)).add_subplot(projection="3d")
 ax.plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
-ax.set_xlabel("x")
-ax.set_ylabel("y")
-ax.set_zlabel("z")
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+ax.set_zlabel("$z$")
 plt.tight_layout()
 plt.savefig(OUT / "phenomenon_lorenz_phasespace_close.png", dpi=150)
 plt.close()
 
 solf = run([100, 5, 5], 40, n=12000)
-ax = plt.figure(figsize=(5, 4)).add_subplot(projection="3d")
+ax = plt.figure(figsize=(4.2, 3.2)).add_subplot(projection="3d")
 ax.plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
 ax.plot(solf.y[0], solf.y[1], solf.y[2], "r", linewidth=0.6)
-ax.set_xlabel("x")
-ax.set_ylabel("y")
-ax.set_zlabel("z")
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+ax.set_zlabel("$z$")
 plt.tight_layout()
 plt.savefig(OUT / "phenomenon_lorenz_phasespace_far.png", dpi=150)
 plt.close()

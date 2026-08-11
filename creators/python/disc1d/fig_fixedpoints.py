@@ -17,17 +17,20 @@ from scipy.optimize import brentq
 
 import chaosbook as cb
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # -- global attraction: many initial conditions at r = 1.5 -------------------
-plt.figure(figsize=(5.2, 3.4))
+plt.figure(figsize=(5.0, 3.5))
 for x0 in [0.01, 0.1, 0.3, 0.5, 0.7, 0.9, 0.99]:
     X = cb.orbit(cb.logistic, x0=x0, n=20, r=1.5)
     plt.plot(range(len(X)), X, "-o", markersize=3)
 plt.axhline(1 / 3, color="gray", linewidth=0.8)
-plt.xlabel("n")
-plt.ylabel("xn")
+plt.xlabel("$n$")
+plt.ylabel("$x_n$")
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_logist_attractor_r1_5.png", dpi=150)
 plt.close()
@@ -38,8 +41,8 @@ for r, xstar in [(2.0, 0.5), (1.5, 1 / 3)]:
     X = cb.orbit(cb.logistic, x0=xstar + 0.2, n=12, r=r)
     plt.plot(range(len(X)), X, "-o", markersize=4)
     plt.axhline(xstar, color="gray", linewidth=0.8)
-    plt.xlabel("n")
-    plt.ylabel("xn")
+    plt.xlabel("$n$")
+    plt.ylabel("$x_n$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_attractor_local_r{str(r).replace('.', '_')}.png",
                 dpi=150)
@@ -78,7 +81,7 @@ def sigma_at(p, r, m=3):
 # -- f, g = f(f(x)), y = x at r = 3.2 with period-2 and fixed points ---------
 r = 3.2
 xs = np.linspace(0, 1, 400)
-plt.figure(figsize=(4.4, 4.4))
+plt.figure(figsize=(4.2, 4.2))
 plt.plot(xs, cb.logistic(xs, r), "k", label="f(x)")
 plt.plot(xs, compose(cb.logistic, 2, xs, r), "k--", label="g(x)=f(f(x))")
 plt.plot(xs, xs, color="gray", linewidth=0.8)
@@ -86,8 +89,8 @@ fixed = [0, 1 - 1 / r]
 p2 = periodic_points(2, r, exclude=tuple(fixed))
 plt.plot(p2, p2, "ko", markersize=7)
 plt.plot(fixed, fixed, "o", color="gray", markersize=9)
-plt.xlabel("x")
-plt.ylabel("y")
+plt.xlabel("$x$")
+plt.ylabel("$y$")
 plt.legend()
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_logist_p2graph.png", dpi=150)
@@ -95,7 +98,7 @@ plt.close()
 
 # -- f, f^(3), y = x at r = 3.80 and 3.84 ------------------------------------
 for r, name in [(3.80, "r380"), (3.84, "r384")]:
-    plt.figure(figsize=(4.4, 4.4))
+    plt.figure(figsize=(4.2, 4.2))
     plt.plot(xs, cb.logistic(xs, r), "k")
     plt.plot(xs, compose(cb.logistic, 3, xs, r), "k--")
     plt.plot(xs, xs, color="gray", linewidth=0.8)
@@ -106,8 +109,8 @@ for r, name in [(3.80, "r380"), (3.84, "r384")]:
         # classify each root by its own orbit's stability, not a shared one
         color = "k" if abs(sigma_at(p, r)) < 1 else "gray"
         plt.plot(p, p, "o", color=color, markersize=5)
-    plt.xlabel("x")
-    plt.ylabel("y")
+    plt.xlabel("$x$")
+    plt.ylabel("$y$")
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_p3graph_{name}.png", dpi=150)
     plt.close()

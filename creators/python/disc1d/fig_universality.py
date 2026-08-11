@@ -13,6 +13,9 @@ import numpy as np
 
 import chaosbook as cb
 
+STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
+plt.style.use(STYLE)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -23,13 +26,15 @@ for f, rmin, rmax, rc, name in [
     (cb.logistic, 2.8, 4.0, RC_LOGIST, "disc1d_doubling_logist"),
     (cb.sine, 0.6, 1.0, RC_SINE, "disc1d_doubling_sinmap"),
 ]:
-    fig, ax = plt.subplots(figsize=(5.4, 3.8))
+    fig, ax = plt.subplots(figsize=(4.2, 3.2))
     cb.bifurcation_diagram(f, rmin, rmax, nr=600, n=1000,
                            x0=0.57, discard=0.8, ax=ax)
     ax.annotate("", xy=(rc, 0.02), xytext=(rc, 0.14),
                 arrowprops=dict(arrowstyle="->", color="black"))
     ax.set_xlim(rmin, rmax)
     ax.set_ylim(0, 1)
+    ax.set_xlabel("$r$")
+    ax.set_ylabel("$x(r)$")
     plt.tight_layout()
     plt.savefig(OUT / f"{name}.png", dpi=150)
     plt.close()
@@ -40,15 +45,15 @@ for f, rc, rmin, amax, name in [
     (cb.sine, RC_SINE, 0.3, 10.2, "disc1d_universality_sinmap"),
 ]:
     amin = -np.log(rc - rmin)
-    plt.figure(figsize=(5.4, 3.8))
+    plt.figure(figsize=(4.2, 3.2))
     for a in np.linspace(amin, amax, 501):
         r = rc - np.exp(-a)
         X = cb.orbit(f, x0=0.57, n=1000, r=r)
         plt.plot([a] * 201, X[800:], ",", color="black")
     plt.xlim(amin, amax)
     plt.ylim(0.33, 0.9)
-    plt.xlabel("a")
-    plt.ylabel("x(a)")
+    plt.xlabel("$a$")
+    plt.ylabel("$x(a)$")
     plt.tight_layout()
     plt.savefig(OUT / f"{name}.png", dpi=150)
     plt.close()
@@ -152,11 +157,11 @@ for eta in np.arange(1.2, 4.01, 0.2):
         print(f"fig_universality: dropping eta={eta:.2f} "
               f"(superstable_r did not converge: {exc})")
 
-plt.figure(figsize=(5.2, 3.6))
+plt.figure(figsize=(5.0, 3.5))
 plt.plot(etas, deltas, "ko-", markersize=5)
 plt.axhline(4.6692, color="gray", linewidth=0.8)
-plt.xlabel("eta")
-plt.ylabel("delta")
+plt.xlabel("$\\eta$")
+plt.ylabel("$\\delta$")
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_not_so_universal.png", dpi=150)
 plt.close()
