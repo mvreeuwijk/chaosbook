@@ -1,5 +1,12 @@
 ## Exercises
 
+### Classification of timeseries
+
+**Downloads:** {download}`ClassifyingTimeseries.mws <_static/exercises/ClassifyingTimeseries.mws>`, {download}`SomeDatasets.mws <_static/exercises/SomeDatasets.mws>`
+
+Open the Maple file `SomeDatasets.mws` to view different data sets `set1, set2, set3`. Find out which one is a: pure random noise, b: a one dimensional mapping, c: a higher order mapping. Explain your answer.
+
+
 ### Newton-Raphson method
 
 **Downloads:** {download}`NewtonRaphson.mw <_static/exercises/NewtonRaphson.mw>`, {download}`ex0093r00.eps <_static/exercises/ex0093r00.eps>`, {download}`NewtonRaphson.fig <_static/exercises/NewtonRaphson.fig>`

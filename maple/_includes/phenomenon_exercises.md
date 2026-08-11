@@ -34,13 +34,6 @@ f) Make a plot of the 3d-*phase-space* by plotting $[x(t),y(t),z(t)]$ instead of
 g) If everything went well you saw a so-called “strange attractor”. Why it is called *strange* will be dealt with later, but to see that the object is really attracting, change the initial condition $x(0) = 2$ to $x(0) = 100$ and look at the trajectories in phase-space. Study other initial conditions and verify that the trajectories converge upon the *attractor*.
 
 
-### Classification of timeseries
-
-**Downloads:** {download}`ClassifyingTimeseries.mws <_static/exercises/ClassifyingTimeseries.mws>`, {download}`SomeDatasets.mws <_static/exercises/SomeDatasets.mws>`
-
-Open the Maple file `SomeDatasets.mws` to view different data sets `set1, set2, set3`. Find out which one is a: pure random noise, b: a one dimensional mapping, c: a higher order mapping. Explain your answer.
-
-
 ### Three body problem
 
 **Downloads:** {download}`ThreeBody.mws <_static/exercises/ThreeBody.mws>`, {download}`ThreeBody_start.mws <_static/exercises/ThreeBody_start.mws>`, {download}`ex0036r03_fig1.pstex <_static/exercises/ex0036r03_fig1.pstex>`
@@ -104,12 +97,3 @@ a) Vary the satellite's initial position $x_0$ in the range $[-5\cdot10^8,5\cdot
 b) Check the sensitive dependence on initial conditions. Take $x_0=2 \times 10^8$ m and set the perturbation $\epsilon=1$ m. How many days does it take before there is a visual difference between the satellite's original and perturbed trajectory?
 
 c) In reality the mass of the moon is a factor $81$ lower than the earth's. If you change this, are there still chaotic trajectories? You may need to increase the initial velocity a bit.
-
-
-### Attractor reconstruction
-
-**Downloads:** {download}`LorenzReconstruct.mws <_static/exercises/LorenzReconstruct.mws>`, {download}`LorenzReconstructStart.mws <_static/exercises/LorenzReconstructStart.mws>`, {download}`LorenzConstruct.mws <_static/exercises/LorenzConstruct.mws>`, {download}`dataset1.txt <_static/exercises/dataset1.txt>`, {download}`dataset2.txt <_static/exercises/dataset2.txt>`
-
-a) Study the data set `dataset1.txt`, which consists of a one-dimensional time series $xx[1]\ldots xx[N]$, “measured” with a constant sampling rate (i.e. with a constant time interval). Try to reconstruct the attractor by making a three-dimensional plot of the points $(xx[j], xx[j+\Delta j], xx[j + 2\Delta j])$, for all possible $j$. The maple command `spacecurve` may be useful in this respect. See also the file `LorenzReconstructStart.mws`. Change $\Delta j$ to get the best result.
-
-b) Do the same for `dataset2.txt`, which has some additional noise superimposed.

@@ -44,6 +44,12 @@ c) How does the time taken to capture the orbit depend on the size of the allowe
 
 ### Reconstructing an attractor from one signal
 
+**Downloads:** {download}`LorenzReconstruct.mws <_static/exercises/LorenzReconstruct.mws>`, {download}`LorenzReconstructStart.mws <_static/exercises/LorenzReconstructStart.mws>`, {download}`dataset1.txt <_static/exercises/dataset1.txt>`, {download}`dataset2.txt <_static/exercises/dataset2.txt>`
+
 a) Integrate the Lorenz system and keep only the $x(t)$ time series. Form the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ and plot the reconstructed attractor for a few values of the delay $\tau$, as in {numref}`fig:practice:reconstruction`.
 
 b) Estimate the correlation dimension (section {numref}`sec:fractals:correlation`) of the reconstructed attractor and compare it with the value obtained from the full three-dimensional trajectory. Are they consistent, as Takens' theorem requires?
+
+c) Now reconstruct from data you did not generate: the file `dataset1.txt` contains a one-dimensional time series $xx[1]\ldots xx[N]$, "measured" with a constant sampling rate. Reconstruct the attractor by plotting the points $(xx[j], xx[j+\Delta j], xx[j + 2\Delta j])$ for all possible $j$, and vary $\Delta j$ to get the best result. The `maple` command `spacecurve` may be useful; see also `LorenzReconstructStart.mws`.
+
+d) Do the same for `dataset2.txt`, which has some additional noise superimposed.

@@ -398,7 +398,7 @@ dg(x);
 This gives
 
 $$
-g'(x) = r^2(1 - 2 r x + 2 r x^2) (2x-1)
+g'(x) = r^2(1 - 2 r x + 2 r x^2) (1-2x)
 $$
 
 Next we determine the stability range by
