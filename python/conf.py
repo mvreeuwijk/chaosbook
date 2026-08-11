@@ -121,7 +121,14 @@ latex_elements = {
 # The cookbook is a standalone PDF built as a 'howto' (article-based)
 # document: its top-level headings become sections rather than chapters, so
 # they flow instead of each starting a new page.
+#
+# main.tex is the draft book PDF of the converted chapters (user direction
+# 2026-08-11: published by CI so figure quality in print can be judged as
+# chapters roll out; it becomes the edition's real book PDF once enough
+# chapters exist).
 latex_documents = [
+  ('index', 'main.tex', u'From Stability to Chaos',
+   u'Harmen J. Jonker and Maarten van Reeuwijk', 'manual'),
   ('app_cookbook', 'cookbook.tex', u'The Python Cookbook',
    u'Harmen J. Jonker and Maarten van Reeuwijk', 'howto'),
 ]

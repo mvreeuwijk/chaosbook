@@ -174,4 +174,8 @@ assume the bundled systems):
 - Chapters beyond phenomenon and disc1d.
 - Click-to-launch phase portraits and draggable Poincaré planes (need a
   live kernel; sub-project ③).
-- A Python-edition book PDF.
+- A Python-edition book PDF. *(Amended 2026-08-11, user direction: CI now
+  compiles the chapters into a draft book PDF, published at
+  `python/chaosbook-python.pdf`, so print figure quality can be judged as
+  chapters roll out. It is a review artifact — not linked from the site —
+  until enough chapters exist to make it the edition's real book PDF.)*
