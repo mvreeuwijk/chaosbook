@@ -138,6 +138,20 @@ assume the bundled systems):
   Python edition's PDF deliverable remains the cookbook until enough
   chapters exist to justify a book PDF.
 
+## Implementation notes (recorded after the phenomenon chapter shipped)
+
+- **Three-body frame:** `MODELS.md` describes the restricted three-body
+  problem "in the rotating frame", but the chapter's own equations are
+  inertial-frame with moving primaries. The shipped `flows.threebody`
+  correctly follows the chapter (inertial), with `flows.corotating` as the
+  view transform. When porting later chapters, cross-check `MODELS.md`
+  frame descriptions against the actual chapter equations rather than
+  trusting them verbatim.
+- **Code-link placement:** links are a standalone `{only} html` paragraph
+  directly after the figure/subfigure block (MyST captions don't support
+  embedded links well), and **every** creators-script figure gets one —
+  disc1d must apply the link exhaustively across its 23 figures.
+
 ## Out of scope (deliberate)
 
 - JupyterLite wiring and companion notebooks (sub-project ③) — the "· code"

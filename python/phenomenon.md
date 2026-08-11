@@ -47,6 +47,10 @@ Running the script produces the time series of $x(t)$ shown in {numref}`fig:phen
 Time series $x(t)$ of the Lorenz system {eq}`eq:phenomenon_lorenz`.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/phenomenon/fig_lorenz.py)*
+:::
+
 The time series of $x(t)$ seems to oscillate peacefully, yet no regular pattern has established itself in the range $t \in [0,30]$. One might suspect that this is merely the *transient* phase — the period before the system settles into an equilibrium behaviour — and extend the integration time by adjusting `tstart` and `tend` to, for example, $100 \ldots 130$ or $1000 \ldots 1030$; plotting $y(t)$ or $z(t)$ instead of $x(t)$ tells the same story. However long the integration time is chosen, no regular pattern emerges. This is not yet a proof of chaos, since the transient might simply be even longer. As will be elaborated in the chapters to follow, chaotic behaviour is defined in terms of how sensitively the system responds to a small change in the initial conditions. We can probe this by integrating the Lorenz system for two slightly differing initial conditions: adding the lines below produces plots like {numref}`fig:phenomenon_lorenz_xt_two_series`.
 
 ````{admonition} Python
