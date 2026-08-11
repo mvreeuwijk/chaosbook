@@ -655,23 +655,20 @@ Closer inspection of the graphs in {numref}`fig:disc1d:series_bifurcation_logist
 Logistic map at $r=3.9$. Two sets with slightly different initial conditions $y_0 = x_0 + 10^{-9}$. The difference becomes already obvious at $n=25$.
 ```
 
-If the essential aspect of chaos is the sensitive dependence on initial conditions, would it then be possible to quantify this sensitivity? Could we for example measure it? To this end, let us study two series $x_n$ and $y_n$ that are ruled by the same evolution equation but which are initiated by slightly different initial conditions, i.e. $y_0 = x_0 + \epsilon_0$; see the maple code below.
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_lyapunov.py)*
+:::
 
-````{admonition} Maple
-:class: maple
+If the essential aspect of chaos is the sensitive dependence on initial conditions, would it then be possible to quantify this sensitivity? Could we for example measure it? To this end, let us study two series $x_n$ and $y_n$ that are ruled by the same evolution equation but which are initiated by slightly different initial conditions, i.e. $y_0 = x_0 + \epsilon_0$; see the code below.
 
-```{code-block} maple
-restart; with(plots): Digits := 40;
-f := x -> r * x * (1 - x);
-r := 3.9;
-N := 100;
-X := Array(0..N): Y := Array(0..N):
-X[0] := 0.1: Y[0] := X[0] + epsilon;
-epsilon := 1e-9;
-for n from 0 to N-1 do
-  X[n+1] := evalf( f(X[n]) );
-  Y[n+1] := evalf( f(Y[n]) );
-end do:
+````{admonition} Python
+:class: python
+
+```{code-block} python
+r, N = 3.9, 100
+epsilon = 1e-9
+X = cb.orbit(cb.logistic, x0=0.1, n=N, r=r)
+Y = cb.orbit(cb.logistic, x0=0.1 + epsilon, n=N, r=r)
 ```
 ````
 
@@ -690,6 +687,10 @@ The exponent $\Lambda$ in {eq}`eq:disc1d:lyapunov_phenomenological` is called th
 
 Evolution of the deviations $|y_n - x_n|$ plotted on a log-scale.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_lyapunov.py)*
+:::
 
 To arrive at a more formal definition of $\Lambda$,  let us follow the evolution of the deviations between the series $x_n$ and $y_n$, i.e. $\epsilon_n = y_n - x_n$. We consider the situation where the deviations are still so small that a first order Taylor approximation is applicable. In the first step the difference between $y_1 = f(y_0)$ and $x_1 = f(x_0)$ to first order becomes
 
@@ -734,6 +735,15 @@ This brings us to an important issue: how can one distinguish a chaotic set from
 Bifurcation diagram $x(r)$ combined with Lyapunov exponents $\Lambda(r)$
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_lyapunov.py)*
+:::
+
+```{raw} html
+<p><em>Slide r and watch the diagram and Lambda(r) move together:</em></p>
+<iframe src="_static/disc1d/interactive/lyapunov_link.html" width="100%" height="520" style="border:none;"></iframe>
+```
+
 The combined plot nicely reveals the relation between the character of the solutions for different $r$ and the corresponding Lyapunov exponents. For $r<3$ the Lyapunov exponent is always smaller than zero consistent with the stationary behaviour of the solutions. At $r=3$, that is at the first bifurcation, $\Lambda=0$. In fact one sees that at every bifurcation $\Lambda=0$. Between two consecutive bifurcations the Lyapunov exponent is negative, reaching about halfway very negative values. At these points the solutions are superstable, and the corresponding Lyapunov exponent is minus infinity. The lack of sufficient resolution in $r$ used when plotting {numref}`fig:disc1d:lyapunovdiagram` prohibits $\Lambda$ from becoming really that small. Note that a value of $\Lambda=-\infty$ implies a convergence rate that is even faster than exponential.
 
 Another crucial point is where $\Lambda$ becomes positive the first time. This is at $r=r_c = 3.56\ldots$, where the subsequent period-doublings have culminated into a solution that can actually be referred to as chaotic. For $r>r_c$ the Lyapunov exponents are predominantly positive, in line with the well filled bands in the bifurcation diagram. Interestingly one can observe within the chaotic range small windows with stable periodic solutions, which comply well with the negative value Lyapunov exponents.
@@ -774,20 +784,20 @@ In the example of {numref}`fig:disc1d:logist_lyap_two_sets` and {numref}`fig:dis
 
 What can we do to move the prediction horizon forward? Since $\Lambda$ is a characteristic of the process, one cannot change it. So the only option is to decrease the error or uncertainty in the initial condition. But equation {eq}`eq:disc1d:lyap_prediction_horizon` conveys rather bad news owing to the logarithmic dependence: one wishes for instance to remain accurate for 400 steps, the inaccuracy in the initial condition should be smaller than $10^{-100}$, – a costly effort.
 
-But even if it were possible to know the initial conditions with extreme accuracy, then the accuracy of our computer would spoil matters. This process can be best illustrated by the following striking example obtained from {cite}`Broer1992`. The idea is to iterate two series with exactly the same initial condition. In principle this will yield two identical series, since, although the computer may be inaccurate, it will at least be reproducibly inaccurate. The essence of the example is, however, that the mapping is implemented in two different ways: $x_{n+1} = rx_n(1-x_n)$ and $y_{n+1} = r y_n - r y_{n}^{2}$. See the `maple` -code below:
+But even if it were possible to know the initial conditions with extreme accuracy, then the accuracy of our computer would spoil matters. This process can be best illustrated by the following striking example obtained from {cite}`Broer1992`. The idea is to iterate two series with exactly the same initial condition. In principle this will yield two identical series, since, although the computer may be inaccurate, it will at least be reproducibly inaccurate. The essence of the example is, however, that the mapping is implemented in two different ways: $x_{n+1} = rx_n(1-x_n)$ and $y_{n+1} = r y_n - r y_{n}^{2}$. See the code below:
 
-````{admonition} Maple
-:class: maple
+````{admonition} Python
+:class: python
 
-```{code-block} maple
-N := 50; r := 3.9;
-X := Array(0..N): Y := Array(0..N):
-Y[0] := X[0]; X[0] := 0.1:
-for n from 0 to N-1 do
-  X[n+1] := evalf( r*X[n]*(1-X[n]) );
-  Y[n+1] := evalf( r*Y[n]-r*Y[n]^2 );
-  printf("%2d  %12.10f  %12.10f\n",n,X[n],Y[n]);
-end do:
+```{code-block} python
+N, r = 50, 3.9
+X = np.zeros(N)
+Y = np.zeros(N)
+X[0] = Y[0] = 0.1
+for n in range(N - 1):
+    X[n + 1] = r * X[n] * (1 - X[n])
+    Y[n + 1] = r * Y[n] - r * Y[n] ** 2
+    print(f"{n:2d}  {X[n]:12.10f}  {Y[n]:12.10f}")
 ```
 ````
 
@@ -795,34 +805,34 @@ Mathematically speaking there should be no difference between the implementation
 
 ```{code-block} text
     n       X[n]          Y[n]        n      X[n]           Y[n]
-    0  0.1000000000  0.1000000000    25  0.9242090679  0.9242333454
-    1  0.3510000000  0.3510000000    26  0.2731820002  0.2731016680
-    2  0.8884161000  0.8884161000    27  0.7743590205  0.7742168729
-    3  0.3866184397  0.3866184400    28  0.6814357987  0.6817399150
-    4  0.9248640251  0.9248640254    29  0.8466160987  0.8461853520
-    5  0.2710131847  0.2710131840    30  0.5064433925  0.5076072380
-    6  0.7705036496  0.7705036490    31  0.9748380826  0.9747743060
-    7  0.6896283246  0.6896283260    32  0.0956623017  0.0958984970
-    8  0.8347602842  0.8347602820    33  0.3373930004  0.3381377036
-    9  0.5379486532  0.5379486590    34  0.8718799586  0.8728223283
-   10  0.9693836087  0.9693836070    35  0.4356506560  0.4329136940
-   11  0.1157482087  0.1157482150    36  0.9588507313  0.9574477676
-   12  0.3991671874  0.3991672063    37  0.1538784249  0.1588920060
-   13  0.9353477013  0.9353477165    38  0.5077794355  0.5212168121
-   14  0.2358422780  0.2358422260    39  0.9747639733  0.9732444030
-   15  0.7028607218  0.7028606147    40  0.0959367617  0.1015549670
-   16  0.8145053574  0.8145055270    41  0.3382583078  0.3558420672
-   17  0.5892368827  0.5892364660    42  0.8729745372  0.8939521125
-   18  0.9439434374  0.9439437270    43  0.4324709789  0.3697267590
-   19  0.2063654751  0.2063644720    44  0.9572153423  0.9088126424
-   20  0.6387371866  0.6387348891    45  0.1597211100  0.3232016710
-   21  0.8999327730  0.8999352580    46  0.5234200804  0.8530951686
-   22  0.3512097306  0.3512019780    47  0.9728608496  0.4887628280
-   23  0.8886596771  0.8886506793    48  0.1029702060  0.9745075312
-   24  0.3858802561  0.3859075330    49  0.3602326364  0.0968861510
+    0  0.1000000000  0.1000000000    25  0.9241758750  0.9241758751
+    1  0.3510000000  0.3510000000    26  0.2732918256  0.2732918252
+    2  0.8884161000  0.8884161000    27  0.7745532742  0.7745532736
+    3  0.3866184397  0.3866184397    28  0.6810199485  0.6810199499
+    4  0.9248640250  0.9248640250    29  0.8472039352  0.8472039332
+    5  0.2710131851  0.2710131851    30  0.5048527669  0.5048527723
+    6  0.7705036506  0.7705036506    31  0.9749081576  0.9749081573
+    7  0.6896283226  0.6896283226    32  0.0954027434  0.0954027441
+    8  0.8347602871  0.8347602871    33  0.3365741337  0.3365741362
+    9  0.5379486457  0.5379486457    34  0.8708387463  0.8708387494
+   10  0.9693836111  0.9693836111    35  0.4386666344  0.4386666255
+   11  0.1157481998  0.1157481998    36  0.9603290513  0.9603290470
+   12  0.3991671609  0.3991671609    37  0.1485789418  0.1485789571
+   13  0.9353476804  0.9353476804    38  0.4933626355  0.4933626774
+   14  0.2358423491  0.2358423491    39  0.9748281870  0.9748281892
+   15  0.7028608683  0.7028608683    40  0.0956989519  0.0956989439
+   16  0.8145051257  0.8145051257    41  0.3375085838  0.3375085585
+   17  0.5892374510  0.5892374510    42  0.8720265047  0.8720264726
+   18  0.9439430416  0.9439430416    43  0.4352254912  0.4352255843
+   19  0.2063668457  0.2063668457    44  0.9586366257  0.9586366728
+   20  0.6387403257  0.6387403256    45  0.1546445376  0.1546443692
+   21  0.8999293759  0.8999293760    46  0.5098454578  0.5098450043
+   22  0.3512203276  0.3512203276    47  0.9746219611  0.9746219960
+   23  0.8886719754  0.8886719754    48  0.0964625766  0.0964624477
+   24  0.3858429725  0.3858429726    49  0.3399144368  0.3399140311
 ```
 
-In this output one can see how the inaccuracies enter at the least significant digit, but steadily move to the more significant digits. At step $n=45$ the difference between the two series is as large as the values themselves. This teaches us an important lesson: round-off errors, which are always bound to happen, propagate in the same fashion as the uncertainty in the initial conditions does, i.e. with $\sim\exp(\Lambda n)$, where $\Lambda$ is the Lyapunov exponent of the system. Thus there is no point in knowing the initial conditions with a better accuracy than the accuracy with which your computer performs the calculations.
+In this output one can see how the inaccuracies enter at the least significant digit, but steadily move to the more significant digits. With modern IEEE 754 double precision, the accumulation of roundoff errors is minimal over 50 iterations, but the principle remains: round-off errors, which are always bound to happen, propagate in the same fashion as the uncertainty in the initial conditions does, i.e. with $\sim\exp(\Lambda n)$, where $\Lambda$ is the Lyapunov exponent of the system. Thus there is no point in knowing the initial conditions with a better accuracy than the accuracy with which your computer performs the calculations.
 
 But if the particular implementation as well as the particular computer does exert an influence, then why, one may wonder, would one plot the series for $N>50$, as we did in for example in {numref}`fig:disc1d:some_series_logist`? Indeed, it is pointless to the extent that no one can reproduce this plot in a *quantitative manner* if one uses a different computer and/or a different implementation of the mapping. However, in this situation one does obtain a plot that resembles {numref}`fig:disc1d:some_series_logist` in a *qualitative manner*, that is, the plots would be similar in a statistical sense. We will get get back to this issue in section {numref}`sec:disc1d:statistical`. First we will diagnose in more detail the process of error propagation in a numerical calculation.
 
@@ -836,25 +846,25 @@ The Bernouilli shift-map is an interesting map because it reveals in a simple wa
 y_{n+1} = 2y_{n}\,\text{mod}\,1
 ```
 
-The chaotic series resulting from {eq}`eq:disc1d:shift_map` with $y_0 = 1/\pi$ is shown in {numref}`fig:disc1d:shiftmapseriesreturnplot`, together with the return-plot. See the maple-code below. Note that we first define the modulo-function `modf`, since it is not a standard function of `maple` .
+The chaotic series resulting from {eq}`eq:disc1d:shift_map` with $y_0 = 1/\pi$ is shown in {numref}`fig:disc1d:shiftmapseriesreturnplot`, together with the return-plot. See the code below. A subtlety: an ordinary double-precision number stores $y$ in *binary*, and the shift map shifts one bit out per step — so a naive iteration collapses to exactly zero after about 52 steps, a perfect illustration of the round-off mechanism discussed above (and of {numref}`table:shiftmapconcept` below). To iterate meaningfully for 400 steps we therefore use extended-precision arithmetic.
 
-````{admonition} Maple
-:class: maple
+````{admonition} Python
+:class: python
 
-```{code-block} maple
-restart; with(plots):
-modf := x->x-floor(x);
-f := x->modf(2*x);
-N :=400;
-Y := Array(0..N):
-Y[0] := evalf(1/Pi);
-for n from 0 to N-1 do
-  Y[n+1] := f(Y[n]);
-od:
-l := seq([n,Y[n]],n=0..N):
-pointplot([l],x=0..N,0..1,labels=["n","y[n]"]);
-ret := seq([Y[i],Y[i+1]],i=0..N-1):
-pointplot([ret],labels=["y[n]","y[n+1]"]);
+```{code-block} python
+from mpmath import mp, mpf
+
+mp.dps = 150          # plenty of binary digits for 400 doublings
+f = lambda y: 2 * y - int(2 * y)
+N = 400
+Y = np.zeros(N + 1)
+y = 1 / mp.pi
+for n in range(N + 1):
+    Y[n] = float(y)
+    y = f(y)
+plt.plot(range(N + 1), Y, "o", markersize=2)
+plt.xlabel("n")
+plt.ylabel("y[n]")
 ```
 ````
 
@@ -870,6 +880,10 @@ We will make a close study of the evolution of the series $y_0,y_1,\ldots$ by lo
 
 Series and return-plot of the shift-map {eq}`eq:disc1d:shift_map` (a) Series. (b) Return-plot.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_shift_tent.py)*
+:::
 
 ```{table} Propagation of inaccuracies in the shift-map visualized as a flow in the binary representation of the numbers.
 :name: table:shiftmapconcept
@@ -928,6 +942,10 @@ Series and returnplot in {numref}`fig:disc1d:tentmapseriesreturnplot`.
 
 Series and return-plot of the tent-map {eq}`eq:disc1d:tent_map` (a) Series. (b) Return-plot.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_shift_tent.py)*
+:::
 
 Similar to the shift-map, a relation can be established with the $r=4$ logistic map. The transformation is
 
@@ -1011,6 +1029,10 @@ In {numref}`fig:disc1d:logist_analytical` we have plotted the analytical solutio
 The analytical solution $x_n=\sin^2(2^n \theta)$ from {eq}`eq:disc1d:closedlogist` for $x_0 = 0.36$ ($\theta = 0.64\ldots$) together with the first few iterations $x_1,\ldots,x_7$ of the logistic map for $r=4$.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_analytical_statistical.py)*
+:::
+
 Next we work out the doubling formula for $\tanh(z)$
 
 $$
@@ -1036,6 +1058,10 @@ The results are plotted in {numref}`fig:disc1d:tanh_analytical`. Apparently ther
 
 The analytical solution $x_n = \tanh(2^n \theta)$ from {eq}`eq:disc1d:closedtanh` for $x_0 = 0.05$ ($\theta = 0.05\ldots$) together with the first few iterations $x_1,\ldots,x_{14}$ of the map $x_{n+1} = 2x_n/(1+x_{n}^{2})$.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_analytical_statistical.py)*
+:::
 
 In our last example we elaborate the tripling formula for $\sin(z)$, which yields
 
@@ -1136,18 +1162,19 @@ $$
 ````{admonition} Example
 :class: example
 
-The `maple` code below determines the pdf based on $N=8192$ iterations of the logistic map and plots the result together with the expression derived in {eq}`eq:disc1d:pdflogist`, producing {numref}`fig:disc1d:pdfs`.
+The code below determines the pdf based on $N=8192$ iterations of the logistic map and plots the result together with the expression derived in {eq}`eq:disc1d:pdflogist`, producing {numref}`fig:disc1d:pdfs`.
 
-```{code-block} maple
-restart; with(plots): with(stats[statplots]):
-f := x -> 4 * x * (1 - x);
-N := 8192; X := Array(0..N):
-X[0] := 0.1:
-for n from 0 to N-1 do X[n+1] := evalf( f(X[n]) ); end do:
-pdf := x -> 1/(Pi*sqrt(x*(1-x)));
-p1 := histogram(convert(X[0..N], list), numbars=32,color=gray):
-p2 := plot(pdf(x),x=0.025..0.975,thickness=5,color=black):
-display([p1,p2],view=[0..1,0..2],labels=["x","p(x)"]);
+````{admonition} Python
+:class: python
+
+```{code-block} python
+X = cb.orbit(cb.logistic, x0=0.1, n=8192, r=4)
+plt.hist(X, bins=32, density=True, color="gray")
+xs = np.linspace(0.025, 0.975, 200)
+plt.plot(xs, 1 / (np.pi * np.sqrt(xs * (1 - xs))), "k", linewidth=3)
+plt.axis([0, 1, 0, 2])
+plt.xlabel("x")
+plt.ylabel("p(x)")
 ```
 ````
 
@@ -1161,6 +1188,10 @@ display([p1,p2],view=[0..1,0..2],labels=["x","p(x)"]);
 
 pdfs (a) Pdf for the logistic map at $r=4$; solid line represents {eq}`eq:disc1d:pdflogist`. (b) Pdf for the mapping $x_{n+1} = -4x_{n}^{3}+3x_n$; solid line represents {eq}`eq:disc1d:pdfsin3map`.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_analytical_statistical.py)*
+:::
 
 In a similar way we can find the pdf for mapping {eq}`eq:disc1d:closedsin3map` for which we know that
 
@@ -1191,6 +1222,10 @@ p(x) &= \lim_{N\rightarrow\infty} \frac{1}{N} \sum_{n=1}^{N} \delta(x-x_n)
 
 Period-doubling in two different mappings. (a) Period doubling in the logistic map until $r_{\infty}= 3.56994537$ (arrow). (b) Period doubling in the sine-map until $r_{\infty}= 0.86557928$ (arrow).
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_universality.py)*
+:::
 
 If one compares in {numref}`fig:disc1d:universality` the bifurcation diagram of the logistic map with that of the sine map, given by respectively,
 
@@ -1223,27 +1258,21 @@ a&=-\ln[r_{\infty} - r] & &\Rightarrow a_p &\simeq p \ln \delta - \ln c
 \end{aligned}
 ```
 
-Plotted as a function of $a$, bifurcations thus show up in an equidistant fashion with separation equal to $\ln \delta$. The resulting diagrams are plotted in {numref}`fig:disc1d:universality_regular`. The plots, which were generated with a `maple` -code similar to the one shown below, now nicely reveal the regular spacing between the subsequent bifurcations.
+Plotted as a function of $a$, bifurcations thus show up in an equidistant fashion with separation equal to $\ln \delta$. The resulting diagrams are plotted in {numref}`fig:disc1d:universality_regular`. The plots, generated with code like that shown below, now nicely reveal the regular spacing between the subsequent bifurcations.
 
-````{admonition} Maple
-:class: maple
+````{admonition} Python
+:class: python
 
-```{code-block} maple
-restart; with(plots):
-f := x -> r * sin(Pi*x);
-rc := 0.86557928;
-Na := 500; rmin := 0.3;
-amin := -log(rc - rmin); amax := 10.2;
-N := 1000; Nmin := ceil(0.8*N);
-X := Array(0..N): X[0] := 0.57:
-for i from 0 to Na do
-  a := evalf(amin + (amax - amin)*i/Na);
-  r := rc - exp(-a);
-  for n from 0 to N-1 do X[n+1] := evalf( f(X[n]) ); end do:
-  pl[i] := seq([a,X[n]],n=Nmin..N);
-end do:
-pointplot([seq(pl[i],i=1..Na)],view=[amin..amax,0.33..0.9],
-  labels=["a", "x(a)"],color=black,axes=BOXED);
+```{code-block} python
+rc = 0.86557928
+amin, amax = -np.log(rc - 0.3), 10.2
+for a in np.linspace(amin, amax, 501):
+    r = rc - np.exp(-a)
+    X = cb.orbit(cb.sine, x0=0.57, n=1000, r=r)
+    plt.plot([a] * 201, X[800:], ",", color="black")
+plt.axis([amin, amax, 0.33, 0.9])
+plt.xlabel("a")
+plt.ylabel("x(a)")
 ```
 ````
 
@@ -1257,6 +1286,10 @@ pointplot([seq(pl[i],i=1..Na)],view=[amin..amax,0.33..0.9],
 
 Graphs revealing the universal period-doubling for the logistic map and the sine map. (a) Bifurcation diagram of the logistic map $x_{n+1} = r x_n(1-x_n)$ as a function of $a = -\ln(r_{\infty}-r)$ with $r_{\infty}= 3.56994537$. (b) Bifurcation diagram of the sine map $x_{n+1} = r \sin(\pi x_n)$ as a function of $a = -\ln(r_{\infty}-r)$ with $r_{\infty}= 0.86557928$.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_universality.py)*
+:::
 
 Yet if you would wish to make a similar plot for a different mapping, you find that you need to know *a priori* the value of $r_c$ for that mapping and you might wonder how we derived those values for the two mappings. This is not so easy, but below we explain a way to do it. First it must be noted that in figure {numref}`fig:disc1d:universality_regular` the big dots do not indicate locations of bifurcations, but rather locations of 'superstability', i.e. where the stability $\sigma = 0$ (see section {numref}`sec:disc1:fixedstab`). For example a superstable period-$m$ solution $x^{*}_{k},\,(k=1,\ldots,m)$ then satisfies (see also section {numref}`sec:disc1d:period_m` for a discussion of stability of periodic solutions)
 
@@ -1272,14 +1305,24 @@ $$
 f_{r}^{(2^p)}\left(\frac{1}{2}\right) = \left(\frac{1}{2}\right)
 $$
 
-Execution of the simple maple commands below
+Execution of the simple commands below
 
-````{admonition} Maple
-:class: maple
+````{admonition} Python
+:class: python
 
-```{code-block} maple
-f := x-> r*x*(1-x):
-fsolve((f@@8)(1/2) = 1/2,r,2..3.6);
+```{code-block} python
+from scipy.optimize import brentq
+
+def F(r):
+    x = 0.5
+    for _ in range(8):
+        x = cb.logistic(x, r)
+    return x - 0.5
+
+rs = np.linspace(2, 3.56, 2000)
+vals = [F(r) for r in rs]
+[round(brentq(F, rs[i], rs[i + 1]), 9)
+ for i in range(len(rs) - 1) if vals[i] * vals[i + 1] < 0]
 ```
 ````
 
@@ -1322,43 +1365,43 @@ $$
 \end{aligned}
 $$
 
-where we also used $r \partial q/\partial x = f'(x)$. Below find the maple implementation. First we define $f(x,r)$, $f'(x,r)$ and $h(r)$, which the right-hand side of {eq}`eq:feigennewtonraphson`; next we loop over $p$ from zero to 11, thus addressing period-0 to period-2048, and perform the Newton-Raphson iteration until a stop-criterion (related to the numerical precision) has been reached. It turns out that a good initial guess for $r_p$ helps a lot in finding the correct value, in particular for larger $p$. We therefore calculate the Feigenbaum numbers $\delta_p$ of previous periods when possible and use it to guess what the next value of $r_p$ will be. The subsequent Newton-Raphson iteration  then refines this value. The `maple` code will give numbers such as given in table {numref}`table:disc1d:feigenbaum_numbers`; for the sine-map one should replace $r[0]$ by an appropriate number ($r[0] =  0.9$ works) to get the first 3 values of $r_p$ right.
+where we also used $r \partial q/\partial x = f'(x)$. Below find the Python implementation. First we define $f(x,r)$, $f'(x,r)$ and $h(r)$, which is the right-hand side of {eq}`eq:feigennewtonraphson`; next we loop over $p$ from zero to 11, thus addressing period-0 to period-2048, and perform the Newton-Raphson iteration until a stop-criterion (related to the numerical precision) has been reached. It turns out that a good initial guess for $r_p$ helps a lot in finding the correct value, in particular for larger $p$. We therefore calculate the Feigenbaum numbers $\delta_p$ of previous periods when possible and use it to guess what the next value of $r_p$ will be. The subsequent Newton-Raphson iteration  then refines this value. The code will give numbers such as given in table {numref}`table:disc1d:feigenbaum_numbers`; for the sine-map one should replace the start value 3.57 by an appropriate number (0.9 works) to get the first 3 values of $r_p$ right.
 
-````{admonition} Maple
-:class: maple
+````{admonition} Python
+:class: python
 
-```{code-block} maple
-restart: with(plots):
-Digits := 20; stopcrit := 10^(-Digits+2):
-f := (x,r)-> r*x*(1-x);
-df := unapply(diff(f(x,r),x),[x,r]);
-# define function for Newton-Raphson procedure
-  h := proc(r,m)
-  local n,X,dg,result;
-     X := Array(0..m); X[0] := 1/2;
-     for n from 0 to m-1 do X[n+1] := evalf(f(X[n],r)): end do:
-     dg := 0; for n from 1 to m do dg := evalf(X[n]/r + df(X[n-1],r)*dg); end do:
-     result := r - (X[m]-X[0])/dg;
-end proc:
-P := 11; # calculations until period 2^11 = 2048
-for p from 0 to P do
-     m := 2^p;
-  # use previous value of delta for a smart start value of r
-    if( p >= 3 ) then
-        delta[p-2] := (rc[p-2]-rc[p-3])/(rc[p-1]-rc[p-2]);
-        r[0] := rc[p-1]+(rc[p-1]-rc[p-2])/delta[p-2];
-    else r[0] := 3.57;
-    end if:
-  # Newton-Raphson iteration to find zero-crossing of h
-    eps := 1;
-    for i from 0 to 100 while eps > stopcrit do
-       r[i+1]  := evalf(h(r[i],m));
-       eps := abs(r[i+1]-r[i]);
-    end do:
-    rc[p] := r[i];
-  end do:
-# print results of r and delta
-  seq( print(p,rc[p],(rc[p]-rc[p-1])/(rc[p+1]-rc[p])),p=1..P-1);
+```{code-block} python
+f = lambda x, r: r * x * (1 - x)
+df = lambda x, r: r * (1 - 2 * x)
+
+def h(r, m):
+    X = np.zeros(m + 1)
+    X[0] = 0.5
+    for n in range(m):
+        X[n + 1] = f(X[n], r)
+    dg = 0.0
+    for n in range(1, m + 1):
+        dg = X[n] / r + df(X[n - 1], r) * dg
+    return r - (X[m] - X[0]) / dg
+
+P = 11                      # calculations until period 2^11 = 2048
+rc = {}
+for p in range(P + 1):
+    m = 2**p
+    if p >= 3:              # smart start value from the previous delta
+        delta = (rc[p - 2] - rc[p - 3]) / (rc[p - 1] - rc[p - 2])
+        r = rc[p - 1] + (rc[p - 1] - rc[p - 2]) / delta
+    else:
+        r = 3.57
+    for _ in range(100):    # Newton-Raphson iteration
+        rnew = h(r, m)
+        if abs(rnew - r) < 1e-13:
+            break
+        r = rnew
+    rc[p] = rnew
+
+for p in range(1, P):
+    print(p, round(rc[p], 8), round((rc[p] - rc[p - 1]) / (rc[p + 1] - rc[p]), 6))
 ```
 ````
 
@@ -1373,7 +1416,7 @@ f(x) &= r (1-|2x-1|^{\eta}) & &r \in[0,1]\,\,\,\eta \geq 1
 
 This map has a maximum that is not quadratic, except when $\eta = 2$ for which we recover the logistic map.
 
-Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find the dependence of $\delta$ on the value of $\eta$ by using the procedure outlined above. Adapting the `maple` code slightly gives the data-points plotted in {numref}`fig:disc1d:not_so_universal`, showing values of $\delta$ ranging from 3 to as much as 7 for an order-4 maximum $\eta=4$.
+Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find the dependence of $\delta$ on the value of $\eta$ by using the procedure outlined above. Adapting the code slightly gives the data-points plotted in {numref}`fig:disc1d:not_so_universal`, showing values of $\delta$ ranging from 3 to as much as 7 for an order-4 maximum $\eta=4$.
 
 ```{table} $\delta_p = (r_{p}-r_{p-1})/(r_{p+1}-r_{p})$ for the logistic map and the sine-map produced by the maple code. As shown, the values of $\delta_p$ rapidly converge for both maps to the Feigenbaum constant $\delta = 4.6692\ldots$.
 :name: table:disc1d:feigenbaum_numbers
@@ -1400,6 +1443,10 @@ Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find
 
 Feigenbaum number $\delta$ as a function of $\eta$ for the map $f_{\eta}(x) = r (1-|2x-1|^{\eta})$. The mapping $f_\eta$ represents the logistic map for $\eta = 2$, in which case the 'universal' value of $\delta=4.669\ldots$ is retrieved. For $\eta\rightarrow1$ the map becomes equal to the tent-map {eq}`eq:disc1d:tent_map`, which has no period-doubling route. This explains the bend near $\eta\rightarrow1$.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_universality.py)*
+:::
 
 ```{include} _includes/disc1d_exercises.md
 ```

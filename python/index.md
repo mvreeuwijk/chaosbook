@@ -2,7 +2,7 @@
 
 **A Hands-On Introduction to Nonlinear Dynamics** — Python edition.
 
-The Python edition is under construction. The first chapter and the cookbook are available; further chapters follow.
+The Python edition is under construction. The first two chapters and the cookbook are available; further chapters follow.
 
 ```{toctree}
 :hidden:
@@ -10,6 +10,7 @@ The Python edition is under construction. The first chapter and the cookbook are
 :caption: Text
 
 phenomenon
+disc1d
 ```
 
 ```{toctree}
