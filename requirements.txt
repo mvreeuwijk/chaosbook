@@ -16,4 +16,5 @@ scipy
 matplotlib
 sympy
 pytest
+plotly
 -e .
