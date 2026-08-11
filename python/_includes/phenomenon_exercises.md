@@ -29,12 +29,6 @@ f) Make a plot of the 3d-*phase-space* by plotting $(x(t),y(t),z(t))$ instead of
 
 g) If everything went well you saw a so-called "strange attractor". Why it is called *strange* will be dealt with later, but to see that the object is really attracting, change the initial condition $x(0) = 2$ to $x(0) = 100$ and look at the trajectories in phase-space. Study other initial conditions and verify that the trajectories converge upon the *attractor*.
 
-### Classification of timeseries
-
-**Downloads:** {download}`set1.txt <_static/exercises/set1.txt>`, {download}`set2.txt <_static/exercises/set2.txt>`, {download}`set3.txt <_static/exercises/set3.txt>`
-
-Load the three data sets with `np.loadtxt` and study them. Find out which one is a: pure random noise, b: a one dimensional mapping, c: a higher order mapping. Explain your answer. (Hint: a return plot — $x_{n+1}$ against $x_n$ — reveals more than the time series.)
-
 ### Three body problem
 
 Consider a satellite in space under influence of the gravitational pull of the earth and the moon.
@@ -96,11 +90,3 @@ a) Vary the satellite's initial position $x_0$ in the range $[-5\cdot10^8,5\cdot
 b) Check the sensitive dependence on initial conditions. Take $x_0=2 \times 10^8$ m and set the perturbation $\epsilon=1$ m. How many days does it take before there is a visual difference between the satellite's original and perturbed trajectory?
 
 c) In reality the mass of the moon is a factor $81$ lower than the earth's. If you change this (`m2=7.36e22`), are there still chaotic trajectories? You may need to increase the initial velocity a bit.
-
-### Attractor reconstruction
-
-**Downloads:** {download}`dataset1.txt <_static/exercises/dataset1.txt>`, {download}`dataset2.txt <_static/exercises/dataset2.txt>`
-
-a) Study the data set `dataset1.txt`, which consists of a one-dimensional time series $xx[1]\ldots xx[N]$, "measured" with a constant sampling rate (i.e. with a constant time interval). Try to reconstruct the attractor by making a three-dimensional plot of the points $(xx[j], xx[j+\Delta j], xx[j + 2\Delta j])$, for all possible $j$ (a 3d line plot, as used for the phase space in this chapter, works well). Change $\Delta j$ to get the best result.
-
-b) Do the same for `dataset2.txt`, which has some additional noise superimposed.

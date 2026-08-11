@@ -82,8 +82,8 @@ def sigma_at(p, r, m=3):
 r = 3.2
 xs = np.linspace(0, 1, 400)
 plt.figure(figsize=(4.2, 4.2))
-plt.plot(xs, cb.logistic(xs, r), "k", label="f(x)")
-plt.plot(xs, compose(cb.logistic, 2, xs, r), "k--", label="g(x)=f(f(x))")
+plt.plot(xs, cb.logistic(xs, r), "k", label="$f(x)$")
+plt.plot(xs, compose(cb.logistic, 2, xs, r), "k--", label="$g(x)=f(f(x))$")
 plt.plot(xs, xs, color="gray", linewidth=0.8)
 fixed = [0, 1 - 1 / r]
 p2 = periodic_points(2, r, exclude=tuple(fixed))

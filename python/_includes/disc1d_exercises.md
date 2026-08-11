@@ -1,5 +1,11 @@
 ## Exercises
 
+### Classification of timeseries
+
+**Downloads:** {download}`set1.txt <_static/exercises/set1.txt>`, {download}`set2.txt <_static/exercises/set2.txt>`, {download}`set3.txt <_static/exercises/set3.txt>`
+
+Load the three data sets with `np.loadtxt` and study them. Find out which one is a: pure random noise, b: a one dimensional mapping, c: a higher order mapping. Explain your answer. (Hint: a return plot — $x_{n+1}$ against $x_n$ — reveals more than the time series.)
+
 ### Newton-Raphson method
 
 The Newton-Raphson method provides a fast way to find solutions to equations like $3\tanh(x) = x^3$. More in general it will yield a zero-crossing $x^*$ of a function $g(x)$, i.e. a value of $x$ for which $g(x^*) = 0$. In the example above one would take $g(x) = 3\tanh(x) - x^3$. Starting with the initial value $x_0$ sufficiently close to $x^*$, the recipe for finding $x^*$ is to iterate the one-dimensional discrete map
