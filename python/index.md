@@ -2,9 +2,15 @@
 
 **A Hands-On Introduction to Nonlinear Dynamics** — Python edition.
 
-The Python edition is under construction. The cookbook — a practical Python
-reference for the techniques used throughout the book — is available now;
-the chapters will follow.
+The Python edition is under construction. The first chapter and the cookbook are available; further chapters follow.
+
+```{toctree}
+:hidden:
+:numbered:
+:caption: Text
+
+phenomenon
+```
 
 ```{toctree}
 :hidden:
