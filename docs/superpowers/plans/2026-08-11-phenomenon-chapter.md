@@ -321,10 +321,15 @@ def primaries(t):
     return x1, y1, x2, y2
 
 
-def draw(ax, xs, ys, xe, ye, xm, ym):
-    ax.plot(xe, ye, "k", linewidth=2.5)          # earth: thick black
-    ax.plot(xm, ym, color="gray", linewidth=1.5)  # moon: gray
-    ax.plot(xs, ys, "k", linewidth=0.6)           # satellite: thin black
+def draw(ax, xs, ys, xe, ye, xm, ym, rotating=False):
+    if rotating:
+        # the primaries are stationary in the co-rotating frame: draw points
+        ax.plot(xe[0], ye[0], "ko", markersize=8)               # earth
+        ax.plot(xm[0], ym[0], "o", color="gray", markersize=5)  # moon
+    else:
+        ax.plot(xe, ye, "k", linewidth=2.5)           # earth: thick black
+        ax.plot(xm, ym, color="gray", linewidth=1.5)  # moon: gray
+    ax.plot(xs, ys, "k", linewidth=0.6)               # satellite: thin black
     ax.set_xlabel("x [m]")
     ax.set_ylabel("y [m]")
     ax.set_aspect("equal")
@@ -344,7 +349,7 @@ for i, x0_over_R in enumerate([0.3, 0.5, 0.56], start=1):
     x1r, y1r = cb.corotating(x1, y1, sol.t, omega)
     x2r, y2r = cb.corotating(x2, y2, sol.t, omega)
     fig, ax = plt.subplots(figsize=(4.2, 4.2))
-    draw(ax, xs, ys, x1r, y1r, x2r, y2r)
+    draw(ax, xs, ys, x1r, y1r, x2r, y2r, rotating=True)
     plt.tight_layout()
     plt.savefig(OUT / f"phenomenon_3body_example{i}b.png", dpi=150)
     plt.close()
@@ -364,8 +369,12 @@ for ax, rotate in zip(axes, [False, True]):
         ax.plot(xs[-1], ys[-1], color + "o")  # circle: end position
     xe, ye = (cb.corotating(x1, y1, sola.t, omega) if rotate else (x1, y1))
     xm, ym = (cb.corotating(x2, y2, sola.t, omega) if rotate else (x2, y2))
-    ax.plot(xe, ye, "k", linewidth=2.5)
-    ax.plot(xm, ym, color="gray", linewidth=1.5)
+    if rotate:
+        ax.plot(xe[0], ye[0], "ko", markersize=8)
+        ax.plot(xm[0], ym[0], "o", color="gray", markersize=5)
+    else:
+        ax.plot(xe, ye, "k", linewidth=2.5)
+        ax.plot(xm, ym, color="gray", linewidth=1.5)
     ax.set_xlabel("x [m]")
     ax.set_ylabel("y [m]")
     ax.set_aspect("equal")
@@ -386,7 +395,7 @@ frames = [go.Frame(data=[
                marker=dict(color="red", size=8)),
 ]) for k in steps]
 fig = go.Figure(data=frames[0].data, frames=frames)
-fig.add_trace(go.Scatter(x=[xe], y=[xm * 0], mode="markers+text",
+fig.add_trace(go.Scatter(x=[xe], y=[0], mode="markers+text",
                          marker=dict(color="blue", size=14), text=["earth"],
                          textposition="bottom center"))
 fig.add_trace(go.Scatter(x=[xm], y=[0], mode="markers+text",
