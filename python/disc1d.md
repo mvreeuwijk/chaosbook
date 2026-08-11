@@ -790,49 +790,48 @@ But even if it were possible to know the initial conditions with extreme accurac
 :class: python
 
 ```{code-block} python
-N, r = 50, 3.9
+N, r = 100, 3.9
 X = np.zeros(N)
 Y = np.zeros(N)
 X[0] = Y[0] = 0.1
 for n in range(N - 1):
     X[n + 1] = r * X[n] * (1 - X[n])
     Y[n + 1] = r * Y[n] - r * Y[n] ** 2
-    print(f"{n:2d}  {X[n]:12.10f}  {Y[n]:12.10f}")
 ```
 ````
 
-Mathematically speaking there should be no difference between the implementations, because $rx(1-x)= rx-rx^2$. But look at the output
+Mathematically speaking there should be no difference between the implementations, because $rx(1-x)= rx-rx^2$. But look at the output (the first and the last 25 steps are shown)
 
 ```{code-block} text
     n       X[n]          Y[n]        n      X[n]           Y[n]
-    0  0.1000000000  0.1000000000    25  0.9241758750  0.9241758751
-    1  0.3510000000  0.3510000000    26  0.2732918256  0.2732918252
-    2  0.8884161000  0.8884161000    27  0.7745532742  0.7745532736
-    3  0.3866184397  0.3866184397    28  0.6810199485  0.6810199499
-    4  0.9248640250  0.9248640250    29  0.8472039352  0.8472039332
-    5  0.2710131851  0.2710131851    30  0.5048527669  0.5048527723
-    6  0.7705036506  0.7705036506    31  0.9749081576  0.9749081573
-    7  0.6896283226  0.6896283226    32  0.0954027434  0.0954027441
-    8  0.8347602871  0.8347602871    33  0.3365741337  0.3365741362
-    9  0.5379486457  0.5379486457    34  0.8708387463  0.8708387494
-   10  0.9693836111  0.9693836111    35  0.4386666344  0.4386666255
-   11  0.1157481998  0.1157481998    36  0.9603290513  0.9603290470
-   12  0.3991671609  0.3991671609    37  0.1485789418  0.1485789571
-   13  0.9353476804  0.9353476804    38  0.4933626355  0.4933626774
-   14  0.2358423491  0.2358423491    39  0.9748281870  0.9748281892
-   15  0.7028608683  0.7028608683    40  0.0956989519  0.0956989439
-   16  0.8145051257  0.8145051257    41  0.3375085838  0.3375085585
-   17  0.5892374510  0.5892374510    42  0.8720265047  0.8720264726
-   18  0.9439430416  0.9439430416    43  0.4352254912  0.4352255843
-   19  0.2063668457  0.2063668457    44  0.9586366257  0.9586366728
-   20  0.6387403257  0.6387403256    45  0.1546445376  0.1546443692
-   21  0.8999293759  0.8999293760    46  0.5098454578  0.5098450043
-   22  0.3512203276  0.3512203276    47  0.9746219611  0.9746219960
-   23  0.8886719754  0.8886719754    48  0.0964625766  0.0964624477
-   24  0.3858429725  0.3858429726    49  0.3399144368  0.3399140311
+    0  0.1000000000  0.1000000000    75  0.3348678382  0.1741776002
+    1  0.3510000000  0.3510000000    76  0.8686523396  0.5609750788
+    2  0.8884161000  0.8884161000    77  0.4449722647  0.9604999551
+    3  0.3866184397  0.3866184397    78  0.9631905986  0.1479651863
+    4  0.9248640250  0.9248640250    79  0.1382724306  0.4916788107
+    5  0.2710131851  0.2710131851    80  0.4646973456  0.9747299555
+    6  0.7705036506  0.7705036506    81  0.9701395181  0.0960627306
+    7  0.6896283226  0.6896283226    82  0.1129784507  0.3386552615
+    8  0.8347602871  0.8347602871    83  0.3908358493  0.8734747139
+    9  0.5379486457  0.5379486457    84  0.9285244340  0.4310148886
+   10  0.9693836111  0.9693836111    85  0.2588305569  0.9564401122
+   11  0.1157481998  0.1157481998    86  0.7481654688  0.1624834536
+   12  0.3991671609  0.3991671609    87  0.7348142103  0.5307220654
+   13  0.9353476804  0.9353476804    88  0.7599629179  0.9713190033
+   14  0.2358423491  0.2358423491    89  0.7114351971  0.1086477488
+   15  0.7028608683  0.7028608683    90  0.8006511139  0.3776893202
+   16  0.8145051257  0.8145051257    91  0.6224747400  0.9166563807
+   17  0.5892374510  0.5892374510    92  0.9164997585  0.2979500956
+   18  0.9439430416  0.9439430416    93  0.2984590097  0.8157857609
+   19  0.2063668457  0.2063668457    94  0.8165867939  0.5860894775
+   20  0.6387403257  0.6387403256    95  0.5841139274  0.9460955473
+   21  0.8999293759  0.8999293760    96  0.9474069041  0.1988951746
+   22  0.3512203276  0.3512203276    97  0.1943255424  0.6214099480
+   23  0.8886719754  0.8886719754    98  0.6105961912  0.9175125357
+   24  0.3858429725  0.3858429726    99  0.9272970817  0.2951648019
 ```
 
-In this output one can see how the inaccuracies enter at the least significant digit, but steadily move to the more significant digits. With modern IEEE 754 double precision, the accumulation of roundoff errors is minimal over 50 iterations, but the principle remains: round-off errors, which are always bound to happen, propagate in the same fashion as the uncertainty in the initial conditions does, i.e. with $\sim\exp(\Lambda n)$, where $\Lambda$ is the Lyapunov exponent of the system. Thus there is no point in knowing the initial conditions with a better accuracy than the accuracy with which your computer performs the calculations.
+In this output one can see how the inaccuracies enter at the least significant digit, but steadily move to the more significant digits. At step $n=75$ the difference between the two series is as large as the values themselves. This teaches us an important lesson: round-off errors, which are always bound to happen, propagate in the same fashion as the uncertainty in the initial conditions does, i.e. with $\sim\exp(\Lambda n)$, where $\Lambda$ is the Lyapunov exponent of the system. Thus there is no point in knowing the initial conditions with a better accuracy than the accuracy with which your computer performs the calculations.
 
 But if the particular implementation as well as the particular computer does exert an influence, then why, one may wonder, would one plot the series for $N>50$, as we did in for example in {numref}`fig:disc1d:some_series_logist`? Indeed, it is pointless to the extent that no one can reproduce this plot in a *quantitative manner* if one uses a different computer and/or a different implementation of the mapping. However, in this situation one does obtain a plot that resembles {numref}`fig:disc1d:some_series_logist` in a *qualitative manner*, that is, the plots would be similar in a statistical sense. We will get get back to this issue in section {numref}`sec:disc1d:statistical`. First we will diagnose in more detail the process of error propagation in a numerical calculation.
 

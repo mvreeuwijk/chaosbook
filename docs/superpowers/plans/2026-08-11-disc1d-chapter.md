@@ -1128,7 +1128,7 @@ r x (1 - x) versus r x - r x^2, iterated from the same x0."""
 
 import numpy as np
 
-N, r = 50, 3.9
+N, r = 100, 3.9
 X = np.zeros(N)
 Y = np.zeros(N)
 X[0] = Y[0] = 0.1
@@ -1139,12 +1139,12 @@ for n in range(N - 1):
 print("    n       X[n]          Y[n]        n      X[n]           Y[n]")
 for n in range(25):
     print(f"   {n:2d}  {X[n]:12.10f}  {Y[n]:12.10f}    "
-          f"{n + 25:2d}  {X[n + 25]:12.10f}  {Y[n + 25]:12.10f}")
+          f"{n + 75:2d}  {X[n + 75]:12.10f}  {Y[n + 75]:12.10f}")
 ```
 
 - [ ] **Step 6: Run everything and verify**
 
-Run all five scripts with `"C:/Users/mvr/cbenv2/Scripts/python"`. `fig_universality.py` takes several minutes (Newton-Raphson over an η grid). Verify against the Maple originals: the log-divergence points follow the dashed 0.6-slope line; Λ(r) is negative below r=3, zero at bifurcations, first positive near 3.57; the shift/tent series stay chaotic for all 400 points (no collapse — that's the mpmath working) and their return plots show the two-branch line and the tent; analytical figures show the continuous curve threading the iterates; pdfs match the U-shaped curves; δ(η) passes through ≈4.67 at η=2. Verify `roundoff_table.py` prints 25 rows and the two columns diverge visibly in the n=25–49 half. Open `lyapunov_link.html` as text: slider present, no CDN. Record adjustments.
+Run all five scripts with `"C:/Users/mvr/cbenv2/Scripts/python"`. `fig_universality.py` takes several minutes (Newton-Raphson over an η grid). Verify against the Maple originals: the log-divergence points follow the dashed 0.6-slope line; Λ(r) is negative below r=3, zero at bifurcations, first positive near 3.57; the shift/tent series stay chaotic for all 400 points (no collapse — that's the mpmath working) and their return plots show the two-branch line and the tent; analytical figures show the continuous curve threading the iterates; pdfs match the U-shaped curves; δ(η) passes through ≈4.67 at η=2. Verify `roundoff_table.py` prints 25 rows showing n=0–24 and n=75–99 of a 100-step run: with IEEE doubles, the ulp-scale difference between the two implementations needs ~65–75 steps (not the source edition's 45, which relied on 10-digit arithmetic) to grow to O(1), so N=50 would leave the table's divergence claim false — the left column must still look identical through n=24 while the right column (75–99) has visibly diverged by the first decimal. Open `lyapunov_link.html` as text: slider present, no CDN. Record adjustments.
 
 - [ ] **Step 7: Commit**
 
@@ -1374,17 +1374,18 @@ Insert code links after `fig:disc1d:logist_lyap_two_sets`, `fig:disc1d:logist_ly
 - [ ] **B2** — Replace "See the `maple` -code below:" (round-off example) with "See the code below:" and the Maple admonition with:
 
 ```python
-N, r = 50, 3.9
+N, r = 100, 3.9
 X = np.zeros(N)
 Y = np.zeros(N)
 X[0] = Y[0] = 0.1
 for n in range(N - 1):
     X[n + 1] = r * X[n] * (1 - X[n])
     Y[n + 1] = r * Y[n] - r * Y[n] ** 2
-    print(f"{n:2d}  {X[n]:12.10f}  {Y[n]:12.10f}")
 ```
 
-- [ ] **B3** — Replace the entire `{code-block} text` output table with the actual output of `"C:/Users/mvr/cbenv2/Scripts/python" creators/python/disc1d/roundoff_table.py` (run it, paste verbatim). Then, in the paragraph after the table, replace "At step $n=45$ the difference between the two series is as large as the values themselves." with the same sentence using the first $n$ at which $|X_n - Y_n| > 0.1$ in YOUR generated table (inspect the pasted output; e.g. "At step $n=38$ …"). Record the observed value in the task report.
+Also replace "But look at the output" with "But look at the output (the first and the last 25 steps are shown)". N=100 (not 50) because IEEE doubles start from ulp-scale (~1e-16) implementation differences rather than the source edition's 10-decimal-digit arithmetic; at the Lyapunov rate Λ≈0.6 that needs ~65–75 steps, not 45, to grow to O(1) — with only 50 steps the table's punchline sentence would be false.
+
+- [ ] **B3** — Replace the entire `{code-block} text` output table with the actual output of `"C:/Users/mvr/cbenv2/Scripts/python" creators/python/disc1d/roundoff_table.py` (run it, paste verbatim; 25 rows, left column n=0–24, right column n=75–99). Then, in the paragraph after the table, replace "At step $n=45$ the difference between the two series is as large as the values themselves." with the same sentence using the first $n$ at which $|X_n - Y_n| > 0.1$ in YOUR generated table (inspect the pasted output; e.g. "At step $n=75$ …"). Do not add any sentence explaining away a small or absent divergence — with N=100 the divergence is real and the original sentence structure (inaccuracies enter at the least significant digit and move up → at step n=NN the difference is as large as the values themselves → "This teaches us an important lesson: …") carries through unchanged from the source edition. Record the observed value in the task report.
 
 - [ ] **B4** — In the shift-map section, replace "See the maple-code below. Note that we first define the modulo-function `modf`, since it is not a standard function of `maple` ." with: "See the code below. A subtlety: an ordinary double-precision number stores $y$ in *binary*, and the shift map shifts one bit out per step — so a naive iteration collapses to exactly zero after about 52 steps, a perfect illustration of the round-off mechanism discussed above (and of {numref}`table:shiftmapconcept` below). To iterate meaningfully for 400 steps we therefore use extended-precision arithmetic." Replace the shift-map Maple admonition with:
 
