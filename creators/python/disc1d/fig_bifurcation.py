@@ -42,8 +42,13 @@ def periodic_points(m, r, exclude=()):
     return roots
 
 
-def sigma_of(points, r):
-    return np.prod([r * (1 - 2 * x) for x in points])
+def sigma_at(p, r, m=3):
+    """Stability of the m-cycle through p: product of f' along its own orbit."""
+    sig, x = 1.0, p
+    for _ in range(m):
+        sig *= r * (1 - 2 * x)
+        x = cb.logistic(x, r)
+    return sig
 
 
 # -- analytical branches: periods 1, 2 and 4 ---------------------------------
@@ -77,15 +82,9 @@ plt.figure(figsize=(5.0, 3.8))
 for r in np.linspace(3.8284, 3.856, 140):
     pts = periodic_points(3, r, exclude=(0, 1 - 1 / r))
     if len(pts) >= 6:
-        orbit_a = [pts[0]]
-        for _ in range(2):
-            orbit_a.append(cb.logistic(orbit_a[-1], r))
-        orbit_b = [p for p in pts
-                   if all(abs(p - q) > 1e-6 for q in orbit_a)]
-        for orb in [orbit_a, orbit_b]:
-            color = "k" if abs(sigma_of(orb, r)) < 1 else "gray"
-            for p in orb:
-                plt.plot(r, p, ".", color=color, markersize=2)
+        for p in pts:
+            color = "k" if abs(sigma_at(p, r)) < 1 else "gray"
+            plt.plot(r, p, ".", color=color, markersize=2)
 plt.xlabel("r")
 plt.ylabel("x*(r)")
 plt.tight_layout()

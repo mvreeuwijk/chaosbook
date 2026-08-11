@@ -66,9 +66,13 @@ def periodic_points(m, r, exclude=()):
     return roots
 
 
-def sigma(points, r):
-    """Stability of a periodic orbit: product of f' along the orbit."""
-    return np.prod([r * (1 - 2 * x) for x in points])
+def sigma_at(p, r, m=3):
+    """Stability of the m-cycle through p: product of f' along its own orbit."""
+    sig, x = 1.0, p
+    for _ in range(m):
+        sig *= r * (1 - 2 * x)
+        x = cb.logistic(x, r)
+    return sig
 
 
 # -- f, g = f(f(x)), y = x at r = 3.2 with period-2 and fixed points ---------
@@ -98,16 +102,10 @@ for r, name in [(3.80, "r380"), (3.84, "r384")]:
     fixed = [0, 1 - 1 / r]
     plt.plot(fixed, fixed, "o", color="gray", markersize=10)
     p3 = periodic_points(3, r, exclude=tuple(fixed))
-    if p3:
-        # split the six points into the stable and the unstable 3-cycle
-        orbit_a = [p3[0]]
-        for _ in range(2):
-            orbit_a.append(cb.logistic(orbit_a[-1], r))
-        orbit_b = [p for p in p3
-                   if all(abs(p - q) > 1e-6 for q in orbit_a)]
-        for orb in [orbit_a, orbit_b]:
-            color = "k" if abs(sigma(orb, r)) < 1 else "gray"
-            plt.plot(orb, orb, "o", color=color, markersize=5)
+    for p in p3:
+        # classify each root by its own orbit's stability, not a shared one
+        color = "k" if abs(sigma_at(p, r)) < 1 else "gray"
+        plt.plot(p, p, "o", color=color, markersize=5)
     plt.xlabel("x")
     plt.ylabel("y")
     plt.tight_layout()

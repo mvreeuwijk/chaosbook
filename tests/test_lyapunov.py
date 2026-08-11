@@ -21,3 +21,14 @@ def test_stable_fixed_point_has_negative_lyapunov():
 def test_sweep_is_negative_before_first_bifurcation():
     rs, lams = lyapunov_sweep(logistic, dlogistic, 2.5, 3.5, nr=100)
     assert lams[rs < 2.95].max() < 0
+
+
+def test_tent_and_shift_have_lyapunov_log2():
+    from chaosbook import shift, tent
+
+    lam_tent = lyapunov(tent, lambda x: np.where(x < 0.5, 2.0, -2.0),
+                        1 / np.pi, n=200, nskip=0)
+    lam_shift = lyapunov(shift, lambda x: 2.0 + 0 * x,
+                         1 / np.pi, n=200, nskip=0)
+    assert np.isclose(lam_tent, np.log(2))
+    assert np.isclose(lam_shift, np.log(2))
