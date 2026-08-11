@@ -411,7 +411,7 @@ sigma2 = sym.simplify(dg.subs(x, truefp2[0]))
 This gives
 
 $$
-g'(x) = r^2(1 - 2 r x + 2 r x^2) (2x-1)
+g'(x) = r^2(1 - 2 r x + 2 r x^2) (1-2x)
 $$
 
 Next we determine the stability range by
@@ -502,13 +502,13 @@ poly = sym.Poly(sym.expand(f3(x) - x).subs(r, 3.84), x)
 roots = sym.nroots(poly)
 tfp3 = sorted(ro for ro in roots
               if all(abs(ro - s.subs(r, 3.84)) > 1e-6 for s in fp1))
-tfp3
+[round(ro, 6) for ro in tfp3]
 ```
 
 The last line yields
 
 ```{code-block} text
-[0.149406, 0.169433, 0.488004, 0.540387, 0.953736, 0.959447]
+[0.149407, 0.169434, 0.488004, 0.540388, 0.953736, 0.959447]
 ```
 
 The stability can be calculated using {eq}`eq:disc1d:periodm_stability_general1`. We determine the derivative $g'$ with sympy and evaluate it at all six points
@@ -518,7 +518,9 @@ df3 = sym.lambdify(x, sym.diff(f3(x), x).subs(r, 3.84))
 [round(df3(ro), 6) for ro in tfp3]
 ```
 
-followed by a `text` code block `[-0.875276, 2.74407, -0.875276, 2.74407, 2.74407, -0.875276]`.
+```{code-block} text
+[-0.875277, 2.744077, -0.875277, 2.744077, 2.744077, -0.875277]
+```
 
 An alternative way to calculate the stability is by using {eq}`eq:disc1d:periodm_stability_general2`. We start with one solution and apply {eq}`eq:disc1d:pm_fixed_points_mutual` to find the other values that belong to the same periodic solution. This is necessary since the expression for `tfp3` does not tell which solutions belong to each other.
 
@@ -531,7 +533,10 @@ for k in [0, 1]:
     print(round(df(x3a) * df(x3b) * df(x3c), 6))
 ```
 
-followed by a `text` code block with the two printed values `-0.875276` and `2.74407`.
+```{code-block} text
+-0.875277
+2.744077
+```
 ````
 
 (sec:disc1d:bifurcation_diagrams)=

@@ -1266,7 +1266,7 @@ tfp3
 Replace "The latter command yields" and its `tfp3 := ...` code block with "The last line yields" and:
 
 ```{code-block} text
-[0.149406, 0.169433, 0.488004, 0.540387, 0.953736, 0.959447]
+[0.149407, 0.169434, 0.488004, 0.540388, 0.953736, 0.959447]
 ```
 
 Replace "We determine the derivative $g'$ by the `maple` command `D(g)`, which directly yields the derivative as a function. Next we use the `seq` command to enumerate all the values" with "We determine the derivative $g'$ with sympy and evaluate it at all six points" and its code block with:
@@ -1276,7 +1276,13 @@ df3 = sym.lambdify(x, sym.diff(f3(x), x).subs(r, 3.84))
 [round(df3(ro), 6) for ro in tfp3]
 ```
 
-followed by a `text` code block `[-0.875276, 2.74407, -0.875276, 2.74407, 2.74407, -0.875276]`. Replace the final code block (the `..` / `df := D(f)` chain method) with:
+followed by a `text` code block:
+
+```{code-block} text
+[-0.875277, 2.744077, -0.875277, 2.744077, 2.744077, -0.875277]
+```
+
+Replace the final code block (the `..` / `df := D(f)` chain method) with:
 
 ```python
 df = sym.lambdify(x, sym.diff(f(x), x).subs(r, 3.84))
@@ -1287,7 +1293,12 @@ for k in [0, 1]:
     print(round(df(x3a) * df(x3b) * df(x3c), 6))
 ```
 
-followed by a `text` code block with the two printed values `-0.875276` and `2.74407`.
+followed by a `text` code block:
+
+```{code-block} text
+-0.875277
+2.744077
+```
 
 - [ ] **F12** — In the Bifurcation-diagrams section, replace "With use of `maple` it is not impossible but surely it is rather cumbersome." with "It is not impossible to push this further, but surely it is rather cumbersome." Replace "We mention in passing that `maple` does provide a fast *numerical* way to get a quick glance of the bifurcations of a map." with "We mention in passing that there is a fast *numerical* way to get a quick glance of the bifurcations of a map." Replace "We do this by employing the `maple` command `implicitplot`." with "We do this with an implicit plot — a single zero contour." Replace the sine-map Maple admonition with:
 
