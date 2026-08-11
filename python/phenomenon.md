@@ -252,7 +252,7 @@ With these substantial simplifications the order of the system has been reduced 
 
 A characteristic feature of chaos is the sensitive dependence on initial conditions. This feature can be nicely observed in {numref}`fig:phenomenon_3body_example_sensitivity` in which two trajectories are plotted for slightly different initial conditions (relative difference 0.01%).
 
-In the exercise you can experiment with an implementation of the three-body problem {eq}`eq:phenomenon_3body_simple1_m3_full__phenomenon`.
+In the exercise you can experiment with an implementation of the three-body problem {eq}`eq:phenomenon_3body_simple1_m3_full__phenomenon`. You can change the initial position and velocity of the satellite and get a feeling for the sensitivity on the initial conditions.
 
 ```{figure} _static/phenomenon/phenomenon_3body_example_sensitivity.png
 :name: fig:phenomenon_3body_example_sensitivity

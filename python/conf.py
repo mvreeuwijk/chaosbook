@@ -39,7 +39,7 @@ release = f'{_today:%B} {_today.day}, {_today.year}'
 version = release
 today = ''
 
-exclude_patterns = []
+exclude_patterns = ["_includes/**"]
 
 pygments_style = 'sphinx'
 
