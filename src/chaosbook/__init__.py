@@ -11,6 +11,7 @@ from .bifurcation import bifurcation_diagram
 from .lyapunov import lyapunov, lyapunov_sweep
 from .flows import lorenz, threebody, corotating
 from .fractal import chaos_game, box_dimension
+from .fractal import correlation_dimension, generalized_dimensions
 
 __version__ = "0.1.0"
 
@@ -29,4 +30,6 @@ __all__ = [
     "corotating",
     "chaos_game",
     "box_dimension",
+    "correlation_dimension",
+    "generalized_dimensions",
 ]
