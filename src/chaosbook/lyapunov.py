@@ -28,3 +28,23 @@ def lyapunov_sweep(f, dfdx, rmin, rmax, nr=500, n=1000, x0=0.57, nskip=100):
     lams = np.array([lyapunov(f, dfdx, x0, n=n, nskip=nskip, r=r)
                      for r in rs])
     return rs, lams
+
+
+def lyapunov_spectrum(f, jac, x0, n=1000, nskip=100, **params):
+    """All Lyapunov exponents of a d-dimensional map x_{k+1} = f(x_k, **params).
+
+    jac(x, **params) returns the d x d Jacobian matrix of f at x. The
+    tangent vectors are re-orthonormalised by a QR decomposition at every
+    step, so the estimate does not overflow for long orbits. Returns the
+    exponents sorted from largest to smallest.
+    """
+    x = np.asarray(x0, dtype=float)
+    for _ in range(nskip):
+        x = f(x, **params)
+    Q = np.eye(len(x))
+    total = np.zeros(len(x))
+    for _ in range(n):
+        Q, R = np.linalg.qr(jac(x, **params) @ Q)
+        total += np.log(np.abs(np.diag(R)))
+        x = f(x, **params)
+    return np.sort(total / n)[::-1]
