@@ -20,7 +20,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import CubicSpline
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "cont2d"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -113,20 +116,19 @@ def portrait(ax, name, c=(0, 0), s=1.0, M=np.eye(2), ms=14, lw=1.5,
 
 # --- single-panel linear portraits ----------------------------------------
 for name in PORTRAITS:
-    fig = plt.figure(figsize=(4.2, 4.0))
+    fig = plt.figure(figsize=(2.5, 2.4))
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(-1.3, 1.4)
     ax.set_ylim(-1.28, 1.3)
     ax.axis("off")
-    portrait(ax, name, ms=16, dot=12)
-    ax.text(0.08, 1.14, "$y$", fontsize=17, ha="left", va="center")
-    ax.text(1.2, -0.13, "$x$", fontsize=17, ha="center", va="center")
-    fig.savefig(OUT / f"cont2d_phase_{name}.png", dpi=150)
-    plt.close(fig)
+    portrait(ax, name, ms=10, dot=7, lw=1.0, axes_lw=1.0)
+    ax.text(0.08, 1.14, "$y$", ha="left", va="center")
+    ax.text(1.2, -0.13, "$x$", ha="center", va="center")
+    bf.save(fig, OUT / f"cont2d_phase_{name}.png")
 
 
 # --- phase space with one trajectory --------------------------------------
-fig = plt.figure(figsize=(5.0, 2.7))
+fig = plt.figure(figsize=(3.8, 2.05))
 ax = fig.add_axes([0, 0, 1, 1])
 ax.axis("off")
 ax.set_xlim(-1.45, 2.8)
@@ -138,28 +140,27 @@ q = np.c_[(px[:, 0] - 470) / 400, (460 - px[:, 1]) / 400]
 u = np.r_[0, np.cumsum(np.hypot(*np.diff(q, axis=0).T))]
 cs = CubicSpline(u, q)
 uu = np.linspace(0, u[-1], 200)
-ax.plot(*cs(uu).T, "k-", lw=2.2)
-head(ax, cs(uu[-6]), cs(uu[-1]) - cs(uu[-6]), "k", 32)
-ax.plot(*q[0], "o", ms=14, mfc="C0", mec="k", mew=1)
+ax.plot(*cs(uu).T, "k-", lw=1.7)
+head(ax, cs(uu[-6]), cs(uu[-1]) - cs(uu[-6]), "k", 24)
+ax.plot(*q[0], "o", ms=10, mfc="C0", mec="k", mew=0.8)
 for a, b in (((-0.85, 0), (1.2, 0)), ((0, -0.9), (0, 1.05))):
-    ax.plot(*np.c_[a, b], "k-", lw=1.2)
+    ax.plot(*np.c_[a, b], "k-", lw=0.9)
     head(ax, np.array(b) - 0.001 * (np.array(b) - a) / np.hypot(*(np.array(b) - a)),
-         np.array(b) - a, "k", 18)
-ax.text(1.28, -0.2, "$x$", fontsize=17, ha="center")
-ax.text(0.1, 1.05, "$y$", fontsize=17, ha="center")
-ax.text(-1.4, 1.05, r"$\dot{\mathbf{x}}=\mathbf{f}(\mathbf{x})$", fontsize=17,
+         np.array(b) - a, "k", 14)
+ax.text(1.28, -0.2, "$x$", ha="center")
+ax.text(0.1, 1.05, "$y$", ha="center")
+ax.text(-1.4, 1.05, r"$\dot{\mathbf{x}}=\mathbf{f}(\mathbf{x})$", 
         ha="left", va="center")
 ax.text(2.8, 0.85, r"$\mathbf{x}=\binom{x}{y}$",
-        fontsize=17, ha="right", va="center")
+        ha="right", va="center")
 ax.annotate("", xy=(q[0, 0] + 0.12, q[0, 1] + 0.1), xytext=(1.85, 0.8), zorder=6,
-            arrowprops=dict(arrowstyle="->", color="k", lw=1.0, shrinkA=0,
-                            shrinkB=0, mutation_scale=14))
-fig.savefig(OUT / "cont2d_phasespace.png", dpi=150)
-plt.close(fig)
+            arrowprops=dict(arrowstyle="->", color="k", lw=0.8, shrinkA=0,
+                            shrinkB=0, mutation_scale=11))
+bf.save(fig, OUT / "cont2d_phasespace.png")
 
 
 # --- classification in the (T, D) plane ------------------------------------
-fig = plt.figure(figsize=(6.4, 4.1))
+fig = plt.figure(figsize=(bf.FULL_W, 3.9))
 ax = fig.add_axes([0, 0, 1, 1])
 ax.axis("off")
 ax.set_xlim(-5.0, 5.6)
@@ -171,9 +172,9 @@ ax.plot([-4.6, 4.6], [0, 0], "k-", lw=1.4)
 head(ax, (4.59, 0), (1, 0), "k", 16)
 ax.plot([0, 0], [0, 3.4], "k-", lw=1.4)
 head(ax, (0, 3.39), (0, 1), "k", 16)
-ax.text(4.55, -0.28, "$T$", ha="center", va="top", fontsize=15)
-ax.text(0.14, 3.3, "$D$", ha="left", va="center", fontsize=15)
-ax.text(3.95, 3.2, r"$D=T^2/4$", ha="left", va="center", fontsize=13)
+ax.text(4.55, -0.28, "$T$", ha="center", va="top")
+ax.text(0.14, 3.3, "$D$", ha="left", va="center")
+ax.text(3.95, 3.2, r"$D=T^2/4$", ha="left", va="center")
 small = dict(s=0.78, ms=8, lw=1.0, axes_lw=1.0, dot=6)
 portrait(ax, "r1", c=(-3.3, 0.92), **small)
 portrait(ax, "r3", c=(3.3, 0.92), **small)
@@ -183,9 +184,8 @@ portrait(ax, "r2", c=(0, -1.75), **small)
 for txt, pos in (("Stable\nnode", (-3.95, 2.3)), ("Unstable\nnode", (3.95, 2.3)),
                  ("Stable\nspiral", (-1.0, 1.0)), ("Unstable\nspiral", (1.0, 1.0)),
                  ("Saddle", (1.5, -1.5))):
-    ax.text(*pos, txt, ha="center", va="center", fontsize=13, linespacing=1.0)
-fig.savefig(OUT / "cont2d_classification.png", dpi=150)
-plt.close(fig)
+    ax.text(*pos, txt, ha="center", va="center", linespacing=1.0)
+bf.save(fig, OUT / "cont2d_classification.png")
 
 
 # --- zoo: a nonlinear phase plane -----------------------------------------
@@ -194,19 +194,19 @@ def rot(deg):
     return np.array([[np.cos(a), -np.sin(a)], [np.sin(a), np.cos(a)]])
 
 
-fig = plt.figure(figsize=(5.0, 4.5))
+fig = plt.figure(figsize=(bf.MEDIUM[0], 3.42))
 ax = fig.add_axes([0, 0, 1, 1])
 ax.axis("off")
 ax.set_xlim(-5.4, 5.4)
 ax.set_ylim(-4.85, 4.85)
 ax.set_aspect("equal")
-ax.plot([-5.2, 5.2], [0, 0], "k-", lw=1.5)
-head(ax, (5.19, 0), (1, 0), "k", 18)
-ax.plot([0, 0], [-4.6, 4.6], "k-", lw=1.5)
-head(ax, (0, 4.59), (0, 1), "k", 18)
-ax.text(5.25, -0.3, "$x$", ha="center", va="top", fontsize=15)
-ax.text(0.15, 4.6, "$y$", ha="left", va="center", fontsize=15)
-big = dict(ms=11, lw=1.2, axes_lw=1.3, dot=8)
+ax.plot([-5.2, 5.2], [0, 0], "k-", lw=1.1)
+head(ax, (5.19, 0), (1, 0), "k", 14)
+ax.plot([0, 0], [-4.6, 4.6], "k-", lw=1.1)
+head(ax, (0, 4.59), (0, 1), "k", 14)
+ax.text(5.25, -0.3, "$x$", ha="center", va="top")
+ax.text(0.15, 4.6, "$y$", ha="left", va="center")
+big = dict(ms=8, lw=0.9, axes_lw=1.0, dot=6)
 portrait(ax, "r3", c=(0, 0), s=1.6, **big)
 portrait(ax, "i1", c=(-3.1, 2.7), s=1.3, M=rot(15), **big)
 portrait(ax, "r2", c=(3.3, 2.7), s=1.3, M=rot(-20), **big)
@@ -217,18 +217,17 @@ portrait(ax, "r1", c=(3.3, -2.7), s=1.35, M=M, **big)
 # limit cycle: r' = r(1 - r^2), theta' = 2.0
 c0, R = np.array([-3.1, -2.7]), 0.95
 th = np.linspace(0, 2 * np.pi, 200)
-ax.plot(c0[0] + R * np.cos(th), c0[1] + R * np.sin(th), color=BLUE, lw=3.2)
+ax.plot(c0[0] + R * np.cos(th), c0[1] + R * np.sin(th), color=BLUE, lw=2.4)
 for r0, tm, th0 in ((0.15, 5.2, 0.8), (1.45, 4.0, 0.6)):
     t = np.linspace(0, tm, 400)
     r = 1 / np.sqrt(1 + (r0 ** -2 - 1) * np.exp(-2 * t))
     P = c0[:, None] + R * np.array([r * np.cos(th0 + 2.0 * t),
                                     r * np.sin(th0 + 2.0 * t)])
-    ax.plot(*P, color=BLUE, lw=1.2)
-    flow_arrow(ax, P, 0.6, BLUE, 11)
+    ax.plot(*P, color=BLUE, lw=0.9)
+    flow_arrow(ax, P, 0.6, BLUE, 8)
 for ang in (110, 330):
     a = np.radians(ang)
     head(ax, c0 + R * np.array([np.cos(a), np.sin(a)]),
-         [-np.sin(a), np.cos(a)], BLUE, 20)
-fig.savefig(OUT / "cont2d_zoo.png", dpi=150)
-plt.close(fig)
+         [-np.sin(a), np.cos(a)], BLUE, 15)
+bf.save(fig, OUT / "cont2d_zoo.png")
 print("fig_schematics: written to", OUT)

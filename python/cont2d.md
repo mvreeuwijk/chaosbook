@@ -91,7 +91,6 @@ The result of the Python fragment, which uses $\alpha=3/4$ and initial condition
 
 ```{figure} _static/cont2d/cont2d_LV_time.png
 :name: fig:cont2d:lv_time
-:width: 10cm
 
 Timeseries of Lotka-Volterra system for $\alpha=3/4$ and $x(0)=0.25$, $y(0)=0.25$.
 ```
@@ -121,7 +120,6 @@ The vector $\mathbf{x}$ is called the *state vector* of the system. The space sp
 
 ```{figure} _static/cont2d/cont2d_phasespace.png
 :name: fig:cont2d:phasespace
-:width: 65mm
 
 The system {eq}`eq:cont2d:vecx` causes the state vector $\mathbf{x}$ to change at a rate $\mathbf{f}$, thereby moving it through the phase space and tracing out a unique trajectory.
 ```
@@ -142,7 +140,6 @@ When the system has a fixed point and the initial conditions are within the doma
 
 ```{figure} _static/cont2d/cont2d_LV_phase.png
 :name: fig:cont2d:lv_phaseportrait
-:width: 60mm
 
 Phase portrait of a periodic solution of the Lotka-Volterra system.
 ```
@@ -255,7 +252,6 @@ When $T^2 - 4 D < 0$, the eigenvalues will be complex, in which case oscillatory
 
 ```{figure} _static/cont2d/cont2d_phase_r1.png
 :name: fig:cont2d:classification
-:height: 30mm
 
 Trajectories in the neighbourhood of a stable node with $\sigma_2 < \sigma_1 < 0$ (eigendirections along the axes): the fast $\tilde{y}$ component decays first, after which the trajectories approach the fixed point along the slow $\tilde{x}$ direction.
 ```
@@ -266,7 +262,6 @@ Trajectories in the neighbourhood of a stable node with $\sigma_2 < \sigma_1 < 0
 
 ```{figure} _static/cont2d/cont2d_classification.png
 :name: fig:cont2d:classification2
-:width: 12cm
 
 Classification of 2-D linear ODEs based on the trace $T$ and determinant $D$ of the matrix $A$.
 ```
@@ -292,7 +287,6 @@ Linear systems are “uninteresting” in the sense that no matter where you sta
 
 ```{figure} _static/cont2d/cont2d_zoo.png
 :name: fig:cont2d:zoo
-:width: 80mm
 
 Example of the rich behavior of phase space for a nonlinear ODE.
 ```
@@ -441,7 +435,6 @@ which remains constant under the action of the system for all time. This functio
 
 ```{figure} _static/cont2d/cont2d_LV_E.png
 :name: fig:cont2d:lv_e
-:width: 60mm
 
 Isocontours of the constant of motion $H$ for the Lotka-Volterra system.
 ```
@@ -540,15 +533,8 @@ $$
 
 i.e. where the energy surface $H$ is entirely flat. As discussed, the trajectories of conservative systems are constrained to isolevels in $H$. If $H$ has a local minimum (i.e. a fixed point), as plotted in {numref}`fig:cont2d:esurface`(a), the orbits will be closed and circle around the fixed point ({numref}`fig:cont2d:esurface`(b), black lines). When there is a local maximum in $H$, the contours of $H$ will look identical to {numref}`fig:cont2d:esurface`(b), and we also expect closed periodic orbits. Note that the fixed point is non-attracting. When the fixed point is a saddle ({numref}`fig:cont2d:esurface`(c, d), black lines), the trajectories will escape the neighborhood of the fixed point along one of the diagonals.
 
-```{subfigure} 2
+```{figure} _static/cont2d/cont2d_gradient.png
 :name: fig:cont2d:esurface
-:align: center
-:subcaptions: below
-
-![ ](_static/cont2d/cont2d_gradient_ell1.png)
-![ ](_static/cont2d/cont2d_gradient_ell2.png)
-![ ](_static/cont2d/cont2d_gradient_hyp1.png)
-![ ](_static/cont2d/cont2d_gradient_hyp2.png)
 
 Typical trajectories for conservative and gradient systems for a surface $S$ ($H$ and $V$ for conservative and gradient systems, respectively). Left column: 3-D plot of $S$. Right column: isolines of $S$ (black lines; trajectories for conservative systems) and $-\nabla S$ (red vectors; direction field for gradient systems). Top row: local minimum; conservative systems circle around the fixed point, whereas gradient systems find their way to the minimum. Bottom row: saddle; conservative systems escape to infinity across one of the diagonals, whereas gradient systems escape the neighborhood of the fixed point along one of the axes. (a) Local minimum, surface. (b) Local minimum, isolines. (c) Saddle, surface. (d) Saddle, isolines.
 ```
@@ -612,7 +598,6 @@ This system has three fixed points $(-1, 0)$, $(0, 0)$ and $(1, 0)$ which are de
 
 ```{figure} _static/cont2d/cont2d_conservative_E.png
 :name: fig:cont2d:conservative_e
-:width: 60mm
 
 Contours of $H$ for the double well system. As the system is conservative, these are also the trajectories in phase space. Open circles: fixed points of the system.
 ```
@@ -728,13 +713,8 @@ An example of a limit cycle is shown in {numref}`fig:cont2d:limit:phase`. Two ti
 \end{aligned}
 ```
 
-```{subfigure} 2
+```{figure} _static/cont2d/cont2d_Limit.png
 :name: fig:cont2d:limit:phase
-:align: center
-:subcaptions: below
-
-![ ](_static/cont2d/cont2d_Limit_time.png)
-![ ](_static/cont2d/cont2d_Limit_phase.png)
 
 Limit cycle of the system ({eq}`eq:cont2d:limit_x`), for the initial conditions $(x_0, y_0) = (0.01, 0)$ (red solid line) and $(2, 0)$ (blue dashed line). (a) Time series $x(t)$. (b) Phase portrait.
 ```
@@ -806,7 +786,6 @@ $$
 
 ```{figure} _static/cont2d/cont2d_vdPol_phase.png
 :name: fig:cont2d:vdpol
-:width: 60mm
 
 van der Pol equation, $\mu=1$.
 ```
@@ -1139,15 +1118,8 @@ print([float(e.subs(mu, 0.7)) for e in ev])
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/cont2d/cont2d_pitchfork.png
 :name: fig:cont2d:pitchfork
-:align: center
-:subcaptions: below
-
-![ ](_static/cont2d/cont2d_pitchfork_phase1.png)
-![ ](_static/cont2d/cont2d_pitchfork_phase2.png)
-![ ](_static/cont2d/cont2d_pitchfork_fixed.png)
-![ ](_static/cont2d/cont2d_pitchfork_stab.png)
 
 Supercritical pitchfork bifurcation for the system ({eq}`eq:cont2d:pitchfork:x`). (a) Phase portrait for $\mu=-0.1$. (b) Phase portrait for $\mu=0.1$. (c) $x^*$ as a function of $\mu$. (d) The eigenvalues (which are purely real in this case) for the fixed point $(0,0)$.
 ```
@@ -1179,17 +1151,8 @@ $$
 
 The eigenvalues of this matrix are $\sigma_{1,2} = \mu \pm i$. As the fixed point changes from a stable to an unstable spiral at $\mu = 0$, we conclude that a Hopf bifurcation is taking place at $\mu=0$. This is confirmed by numerical simulations for $\mu = -0.1$ and $\mu = 0.1$. The transition from a stable to an unstable spiral is clearly discernible from the time series ({numref}`fig:cont2d:hopf`(a, b)) and phase portraits ({numref}`fig:cont2d:hopf`(c, d)). The real and imaginary parts of the eigenvalues are plotted as a function of $\mu$ in {numref}`fig:cont2d:hopf`(e) and {numref}`fig:cont2d:hopf`(f), respectively.
 
-```{subfigure} 2
+```{figure} _static/cont2d/cont2d_Hopf.png
 :name: fig:cont2d:hopf
-:align: center
-:subcaptions: below
-
-![ ](_static/cont2d/cont2d_Hopf_time1.png)
-![ ](_static/cont2d/cont2d_Hopf_time2.png)
-![ ](_static/cont2d/cont2d_Hopf_phase1.png)
-![ ](_static/cont2d/cont2d_Hopf_phase2.png)
-![ ](_static/cont2d/cont2d_Hopf_ev1.png)
-![ ](_static/cont2d/cont2d_Hopf_ev2.png)
 
 A Hopf bifurcation involves the transition of a fixed point from a stable spiral $(\text{Re}{\sigma_{1,2}}<0)$ to an unstable spiral $(\text{Re}{\sigma_{1,2}}>0)$. (a, b) Time series and (c, d) phase portraits for $\mu=-0.1$ (left) and $\mu=0.1$ (right). (e) Real and (f) imaginary parts of the eigenvalues $\sigma_{1,2}$ as a function of $\mu$.
 ```
@@ -1245,15 +1208,8 @@ The equation for the phase angle $\theta$ has solution $\theta = \theta(0) + t$.
 
 The fixed points are plotted as a function of $\mu$ with the help of a contour plot ({numref}`fig:cont2d:global`(d)), using the code discussed in section {numref}`sec:cont1d:ferromagnet_example` to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0.25$ via a saddle-node bifurcation. As discussed in section {numref}`sec:cont1d:saddlenode`, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
 
-```{subfigure} 2
+```{figure} _static/cont2d/cont2d_global.png
 :name: fig:cont2d:global
-:align: center
-:subcaptions: below
-
-![ ](_static/cont2d/cont2d_global_phase1.png)
-![ ](_static/cont2d/cont2d_global_phase2.png)
-![ ](_static/cont2d/cont2d_global_r.png)
-![ ](_static/cont2d/cont2d_global_fixed.png)
 
 A blue sky limit cycle. (a) The phase portrait just before the bifurcation, $\mu=-0.26$. (b) The phase portrait just after the bifurcation, $\mu=-0.24$. (c) $\mathrm{d}r/\mathrm{d}t$ as a function of $r$. (d) Stability diagram of the fixed points.
 ```
