@@ -42,7 +42,6 @@ Running the script produces the time series of $x(t)$ shown in {numref}`fig:phen
 
 ```{figure} _static/phenomenon/phenomenon_lorenz_xt_series.png
 :name: fig:phenomenon_lorenz_xt_series
-:width: 100%
 
 Time series $x(t)$ of the Lorenz system {eq}`eq:phenomenon_lorenz`.
 ```
@@ -69,13 +68,8 @@ plt.ylabel("$x$")
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/phenomenon/phenomenon_lorenz_xt_two_series.png
 :name: fig:phenomenon_lorenz_xt_two_series
-:align: center
-:subcaptions: below
-
-![ ](_static/phenomenon/phenomenon_lorenz_xt_two_series_em3.png)
-![ ](_static/phenomenon/phenomenon_lorenz_xt_two_series_em5.png)
 
 Sensitive dependence on initial conditions in the Lorenz-system. Two time-series with slightly differing initial conditions in $x$: $x(0)=2$ and $x(0)=2+\epsilon$, respectively. In all cases $y(0)=5,z(0)=5$. (a) $\epsilon = 10^{-3}$. (b) $\epsilon = 10^{-5}$.
 ```
@@ -105,13 +99,8 @@ ax.set_zlabel("$z$")
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/phenomenon/phenomenon_lorenz_phasespace.png
 :name: fig:phenomenon_lorenz_phasespace
-:align: center
-:subcaptions: below
-
-![ ](_static/phenomenon/phenomenon_lorenz_phasespace_close.png)
-![ ](_static/phenomenon/phenomenon_lorenz_phasespace_far.png)
 
 Trajectories in phase-space. (a) 'butterfly'-shaped appearance of the system dynamics in phase space. (b) 'attractor'; as the trajectories converge on the butterfly, the object appears to attract the trajectories.
 ```
@@ -233,19 +222,10 @@ Here $R$ is the (constant) earth–moon distance and $\omega$ the angular freque
 | real mass of the moon |  | $7.36 \cdot 10^{22}$ | kg |
 ```
 
-```{subfigure} 2
+```{figure} _static/phenomenon/phenomenon_3body_examples.png
 :name: fig:phenomenon_3body_some_examples
-:align: center
-:subcaptions: below
 
-![ ](_static/phenomenon/phenomenon_3body_example1a.png)
-![ ](_static/phenomenon/phenomenon_3body_example1b.png)
-![ ](_static/phenomenon/phenomenon_3body_example2a.png)
-![ ](_static/phenomenon/phenomenon_3body_example2b.png)
-![ ](_static/phenomenon/phenomenon_3body_example3a.png)
-![ ](_static/phenomenon/phenomenon_3body_example3b.png)
-
-Some examples of possible trajectories in the three-body problem for different initial conditions. In all cases $y(0) = u(0) = v(0) = 0$; $x(0)$ is being varied. The integration time is two months. Left column: Trajectories of the earth (thick black line), moon (gray line) and satellite (thin black line), plotted in the reference frame that moves with the center of mass. Right column: Same situation as left but trajectories plotted in a reference frame that additionally co-rotates with the earth and moon. a,b] Satellite orbits around the earth. c,d] Satellite has a chaotic trajectory, orbiting both the earth and moon in a random fashion. e,f] Satellite orbits the moon. (a) $x(0)/R = 0.3$. (b) $x(0)/R = 0.3$. (c) $x(0)/R = 0.5$. (d) $x(0)/R = 0.5$. (e) $x(0)/R = 0.56$. (f) $x(0)/R = 0.56$.
+Some examples of possible trajectories in the three-body problem for different initial conditions. In all cases $y(0) = u(0) = v(0) = 0$; $x(0)$ is being varied. The integration time is two months. Top row: Trajectories of the earth (thick black line), moon (gray line) and satellite (thin black line), plotted in the reference frame that moves with the center of mass. Bottom row: Same situation as the top row but trajectories plotted in a reference frame that additionally co-rotates with the earth and moon. a,b] Satellite orbits around the earth. c,d] Satellite has a chaotic trajectory, orbiting both the earth and moon in a random fashion. e,f] Satellite orbits the moon. (a) $x(0)/R = 0.3$. (b) $x(0)/R = 0.3$. (c) $x(0)/R = 0.5$. (d) $x(0)/R = 0.5$. (e) $x(0)/R = 0.56$. (f) $x(0)/R = 0.56$.
 ```
 
 ```{raw} html
@@ -265,9 +245,8 @@ In the exercise you can experiment with an implementation of the three-body prob
 
 ```{figure} _static/phenomenon/phenomenon_3body_example_sensitivity.png
 :name: fig:phenomenon_3body_example_sensitivity
-:width: 100mm
 
-Sensitivity on initial conditions: two trajectories initiated from slightly different positions with a relative difference in $x(0)$ of $10^{-4}$. Integration time is two months. Diamond: initial locations. Circles: end position of satellites after two months. Top: trajectories in reference frame that moves with the center of mass. Bottom: the trajectories in the reference frame that additionally co-rotates with the earth and moon.
+Sensitivity on initial conditions: two trajectories initiated from slightly different positions with a relative difference in $x(0)$ of $10^{-4}$. Integration time is two months. Diamond: initial locations. Circles: end position of satellites after two months. (a) Trajectories in reference frame that moves with the center of mass. (b) The trajectories in the reference frame that additionally co-rotates with the earth and moon.
 ```
 
 :::{only} html
