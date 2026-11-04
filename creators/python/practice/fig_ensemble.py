@@ -77,7 +77,9 @@ t = np.linspace(0, T, 2201)
 delta = spread(ensemble(x0, 1e-3, 600, t, seed=2))
 Le = 0.9
 sat = delta[t >= 18].mean()
-th = t[np.argmax(delta > 0.4 * sat)]
+# predictability horizon, as defined in the text: the time at which the
+# exponential growth delta(0) exp(Le t) reaches the size of the attractor
+th = np.log(sat / delta[0]) / Le
 
 fig, ax = plt.subplots(figsize=(5.0, 3.5))
 ax.semilogy(t, delta, color=C_ANA, lw=1.6, label="ensemble spread")
@@ -97,7 +99,14 @@ ax.legend(loc="lower right", fontsize=10)
 fig.tight_layout()
 fig.savefig(OUT / "practice_horizon.png", dpi=150)
 plt.close(fig)
-print(f"horizon: spread saturates at {sat:.2f}, 40% reached at t = {th:.1f}")
+print(f"horizon: delta(0) = {delta[0]:.2e}, spread saturates at {sat:.2f}; "
+      f"t_h = ln(sat/delta0)/Le = {th:.2f}")
+print(f"  (text numbers: ln(10/1e-3)/0.9 = {np.log(10 / 1e-3) / 0.9:.2f}; "
+      f"spread reaches 40% of saturation at t = {t[np.argmax(delta > 0.4 * sat)]:.2f})")
+for t1, t2 in [(0, 2), (2, 4), (4, 6), (6, 8), (8, 10)]:
+    i1, i2 = np.searchsorted(t, [t1, t2])
+    print(f"  growth rate of the spread over t in [{t1}, {t2}]: "
+          f"{np.log(delta[i2] / delta[i1]) / (t2 - t1):.2f}")
 
 # -- interactive: ensemble animation with its spread ------------------------
 tt = np.round(np.arange(0, 14.01, 0.25), 2)
