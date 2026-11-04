@@ -1,12 +1,11 @@
 """Standard-map figures for "Discrete mappings of higher order".
 
 Produces (in python/_static/disc2d/):
-  disc2d_standardmap_quasi / _chaos                x_n series at K = 2
-  disc2d_standardmap_quasi_return / _chaos_return  return plots
-  disc2d_standardmap_quasi_deviations / _chaos_deviations  separation of two orbits
-  disc2d_standardmap_phase                         islands in a sea of chaos
-  disc2d_standardmap_phasetorus                    the same on a torus
-  disc2d_standardmap_saddlenode_n=<n>.png          a cloud near (0,0), forward/backward
+  disc2d_standardmap_series     2x3: quasi-periodic (top) and chaotic (bottom)
+                                x_n series, return plot, separation of two
+                                orbits, at K = 2
+  disc2d_standardmap_phase      (a) islands in a sea of chaos, (b) on a torus
+  disc2d_standardmap_saddlenode 3x3: a cloud near (0,0), n = -6..-3, 0, 3..6
   disc2d_standardmap_manifolds                     W^u and W^s together
   (disc2d_manifolds, the sketch, is drawn by fig_schematics.py)
   interactive/standardmap_slider.html              phase portrait with a K slider
@@ -21,7 +20,9 @@ import plotly.graph_objects as go
 import chaosbook as cb
 
 HERE = Path(__file__).resolve()
-plt.style.use(HERE.parents[1] / "book.mplstyle")
+import sys
+sys.path.insert(0, str(HERE.parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 ROOT = HERE.parents[3]
 OUT = ROOT / "python" / "_static" / "disc2d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -30,9 +31,7 @@ K = 2.0
 
 
 def save(name):
-    plt.tight_layout()
-    plt.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close()
+    bf.save(plt.gcf(), OUT / f"{name}.png")
 
 
 def jac(x, K):
@@ -46,41 +45,44 @@ def run(x0, n=2000, ntrans=1000):
     return cb.orbit(cb.standard_map, X[-1], n, K=K)
 
 
-# -- series, return plots and deviations -----------------------------------------------
+# -- series, return plots and deviations: rows quasi/chaos, columns series,
+#    return plot, deviations; letters run down the columns ------------------
 eps = 1e-8
-for name, x0, nmax in [("quasi", (0.4, 0.1), 750), ("chaos", (0.1, 0.1), 75)]:
+fig, axs = plt.subplots(2, 3, figsize=(bf.FULL_W, 4.2),
+                        gridspec_kw=dict(width_ratios=[1.3, 1, 1.3]))
+for row, (name, x0, nmax) in enumerate([("quasi", (0.4, 0.1), 750),
+                                        ("chaos", (0.1, 0.1), 75)]):
     X = run(x0)
     X2 = cb.orbit(cb.standard_map, X[0] + [eps, 0.0], 2000, K=K)
-    plt.figure(figsize=(4.2, 3.2))
-    plt.plot(np.arange(1000), X[:1000, 0], "k.", markersize=2)
-    plt.xlim(0, 1000)
-    plt.ylim(0, 1)
-    plt.xticks([0, 1000])
-    plt.yticks([0, 1])
-    plt.xlabel("$n$")
-    plt.ylabel("$x_n$")
-    save(f"disc2d_standardmap_{name}")
+    ax = axs[row, 0]
+    ax.plot(np.arange(1000), X[:1000, 0], "k.", markersize=2)
+    ax.set_xlim(0, 1000)
+    ax.set_ylim(0, 1)
+    ax.set_xticks([0, 1000])
+    ax.set_yticks([0, 1])
+    ax.set_xlabel("$n$")
+    ax.set_ylabel("$x_n$")
 
-    plt.figure(figsize=(4.2, 4.2))
-    plt.plot(X[:-1, 0], X[1:, 0], "k.", markersize=2)
-    plt.xlim(0, 1)
-    plt.ylim(0, 1)
-    plt.xticks([0, 1])
-    plt.yticks([0, 1])
-    plt.xlabel("$x_n$")
-    plt.ylabel("$x_{n+1}$")
-    save(f"disc2d_standardmap_{name}_return")
+    ax = axs[row, 1]
+    ax.plot(X[:-1, 0], X[1:, 0], "k.", markersize=2)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.set_xticks([0, 1])
+    ax.set_yticks([0, 1])
+    ax.set_xlabel("$x_n$")
+    ax.set_ylabel("$x_{n+1}$")
 
     d = np.log10(np.linalg.norm(X2 - X, axis=1) + 1e-300)
-    plt.figure(figsize=(4.2, 3.2))
-    plt.plot(np.arange(len(d)), d, "k", lw=1.5)
-    plt.xlim(0, nmax)
-    plt.ylim(-8, 0)
-    plt.xlabel("$n$")
-    plt.ylabel(r"$\Delta$")
-    plt.yticks([-8, -6, -4, -2, 0],
-               [rf"$10^{{{k}}}$" for k in [-8, -6, -4, -2, 0]])
-    save(f"disc2d_standardmap_{name}_deviations")
+    ax = axs[row, 2]
+    ax.plot(np.arange(len(d)), d, "k", lw=1.5)
+    ax.set_xlim(0, nmax)
+    ax.set_ylim(-8, 0)
+    ax.set_xlabel("$n$")
+    ax.set_ylabel(r"$\Delta$")
+    ax.set_yticks([-8, -6, -4, -2, 0],
+                  [rf"$10^{{{k}}}$" for k in [-8, -6, -4, -2, 0]])
+bf.panel_labels(axs, order="col")
+bf.save(fig, OUT / "disc2d_standardmap_series.png")
 
 # Lyapunov exponents (QR spectrum) for the initial conditions of the text
 print("Lyapunov spectra at K=2 (n=20000):")
@@ -94,16 +96,17 @@ y0s = [0.02, 0.08, 0.16, 0.22, 0.24, 0.32, 0.52]
 # the island around (1/2, 1/2) and (0, 1/2) is grey, as the text says
 cols = ["cyan", "brown", "green", "red", "blue", "black", "#8c8c8c"]
 runs = [run((0.5, y0), n=3000) for y0 in y0s]
-plt.figure(figsize=(4.2, 4.2))
+fig = plt.figure(figsize=(bf.FULL_W, 3.0))
+gs = fig.add_gridspec(1, 2, width_ratios=[1, 1.3])
+ax1 = fig.add_subplot(gs[0, 0])
 for X, c in zip(runs, cols):
-    plt.plot(X[:, 0], X[:, 1], "+", color=c, markersize=2.5, mew=0.6)
-plt.xlim(0, 1)
-plt.ylim(0, 1)
-plt.xticks([0, 1])
-plt.yticks([0, 1])
-plt.xlabel("$x$")
-plt.ylabel("$y$")
-save("disc2d_standardmap_phase")
+    ax1.plot(X[:, 0], X[:, 1], "+", color=c, markersize=2.5, mew=0.6)
+ax1.set_xlim(0, 1)
+ax1.set_ylim(0, 1)
+ax1.set_xticks([0, 1])
+ax1.set_yticks([0, 1])
+ax1.set_xlabel("$x$")
+ax1.set_ylabel("$y$")
 
 # on a torus (R = 5, r = 2.5 as in the original figure)
 Rt, rt = 5.0, 2.5
@@ -115,8 +118,7 @@ def torus(u, v):
             rt * np.sin(2 * np.pi * v))
 
 
-fig = plt.figure(figsize=(4.2, 3.2))
-ax = fig.add_subplot(projection="3d")
+ax = fig.add_subplot(gs[0, 1], projection="3d")
 uu, vv = np.meshgrid(np.linspace(0, 1, 40), np.linspace(0, 1, 20))
 ax.plot_wireframe(*torus(uu, vv), color="0.75", linewidth=0.3, rstride=1, cstride=1)
 for X, c in zip(runs, cols):
@@ -127,9 +129,10 @@ ax.set_axis_off()
 ax.set_xlim(-8, 8)
 ax.set_ylim(-8, 8)
 ax.set_zlim(-4, 4)
-plt.subplots_adjust(left=0, right=1, bottom=0, top=1)
-plt.savefig(OUT / "disc2d_standardmap_phasetorus.png", dpi=150)
-plt.close()
+bf.panel_labels([ax1])
+ax.text2D(0.0, 1.0, "(b)", transform=ax.transAxes, ha="right", va="bottom",
+          fontsize=plt.rcParams["axes.labelsize"])
+bf.save(fig, OUT / "disc2d_standardmap_phase.png")
 
 
 # -- saddle node (0,0): a cloud, forward and backward -----------------------------------
@@ -165,28 +168,34 @@ for n in range(10):
     cloud[-(n + 1)] = smap_inv(*cloud[-n])
 
 
-def frame(ax, size=4.2):
+def frame(ax):
     ax.set_xlim(-0.5, 0.5)
     ax.set_ylim(-0.5, 0.5)
     ax.set_xticks([-0.5, 0.5], ["$-1/2$", "$1/2$"])
     ax.set_yticks([-0.5, 0.5], ["$-1/2$", "$1/2$"])
-    ax.set_xlabel("$x$")
-    ax.set_ylabel("$y$")
     ax.set_aspect("equal")
 
 
-for n in [-6, -5, -4, -3, 0, 3, 4, 5, 6]:
-    fig, ax = plt.subplots(figsize=(4.2, 4.2))
+# 3 x 3 grid, shared axes, letters (a)-(i) row by row
+fig, axs = plt.subplots(3, 3, figsize=(5.8, bf.MAX_H), sharex=True, sharey=True)
+for ax, n in zip(axs.ravel(), [-6, -5, -4, -3, 0, 3, 4, 5, 6]):
     ax.plot(*cloud[n], "k.", markersize=1.6, markeredgewidth=0)
     frame(ax)
-    save(f"disc2d_standardmap_saddlenode_n={n}")
+for ax in axs[-1]:
+    ax.set_xlabel("$x$")
+for ax in axs[:, 0]:
+    ax.set_ylabel("$y$")
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc2d_standardmap_saddlenode.png")
 
-fig, ax = plt.subplots(figsize=(4.2, 4.2))
+fig, ax = plt.subplots(figsize=bf.SQUARE)
 ax.plot(*cloud[-6], ls="none", marker="D", color="0.55", markersize=1.5,
         markeredgewidth=0)
 ax.plot(*cloud[6], ls="none", marker="o", color="k", markersize=1.5,
         markeredgewidth=0)
 frame(ax)
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
 save("disc2d_standardmap_manifolds")
 
 # eigenvalues and eigenvectors of J* at (0,0) for K = 2
