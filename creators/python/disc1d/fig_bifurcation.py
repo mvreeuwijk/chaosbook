@@ -1,12 +1,11 @@
 """Bifurcation-diagram figures for "Chaos in Iterative Maps".
 
 Produces (in python/_static/disc1d/):
-  disc1d_logist_bifur_theo.png            analytical branches (period 1,2,4)
-  disc1d_logist_stability_p3both.png      period-3 stable/unstable branches
+  disc1d_logist_bifur_theo.png            1x2: analytical branches (period
+                                          1,2,4) and period-3 stable/unstable
   disc1d_bifurcation_implicit_sin.png     implicit x = f^(4)(x), sine map
   disc1d_logist_series_bifurcation.png    numerical bifurcation diagram
-  disc1d_logist_series_bifurcation_zoom_doubling.png
-  disc1d_logist_series_bifurcation_zoom_p3.png
+  disc1d_logist_series_bifurcation_zooms.png   1x2: doubling, period-3
   interactive/bifurcation_zoom.html       high-resolution pan/zoom diagram
 """
 
@@ -19,8 +18,9 @@ from scipy.optimize import brentq
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -54,8 +54,9 @@ def sigma_at(p, r, m=3):
     return sig
 
 
-# -- analytical branches: periods 1, 2 and 4 ---------------------------------
-plt.figure(figsize=(4.2, 3.2))
+# -- analytical branches (a) and period-3 branches (b): 1x2 ----------------
+fig, (axa, axb) = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4))
+plt.sca(axa)
 rs = np.linspace(0.5, 3.6, 500)
 plt.plot(rs, np.where(rs < 1, 0, np.nan), "k")            # x*=0 stable
 plt.plot(rs, np.where(rs >= 1, 0, np.nan), "gray")         # x*=0 unstable
@@ -74,62 +75,48 @@ for r in np.linspace(1 + np.sqrt(6) + 1e-4, 3.56, 120):   # period-4, numeric
         [0, 1 - 1 / r] + periodic_points(2, r, exclude=(0, 1 - 1 / r))))
     for p in pts:
         plt.plot(r, p, "k.", markersize=2)
-plt.xlabel("$r$")
-plt.ylabel("$x^*(r)$")
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_bifur_theo.png", dpi=150)
-plt.close()
+axa.set_xlabel("$r$")
+axa.set_ylabel("$x^*(r)$")
 
-# -- period-3 stable and unstable branches -----------------------------------
-plt.figure(figsize=(4.2, 3.2))
 for r in np.linspace(3.8284, 3.856, 140):
     pts = periodic_points(3, r, exclude=(0, 1 - 1 / r))
     if len(pts) >= 6:
         for p in pts:
             color = "k" if abs(sigma_at(p, r)) < 1 else "gray"
-            plt.plot(r, p, ".", color=color, markersize=2)
-plt.xlabel("$r$")
-plt.ylabel("$x^*(r)$")
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_stability_p3both.png", dpi=150)
-plt.close()
+            axb.plot(r, p, ".", color=color, markersize=2)
+axb.set_xlabel("$r$")
+axb.set_ylabel("$x^*(r)$")
+bf.panel_labels([axa, axb])
+bf.save(fig, OUT / "disc1d_logist_bifur_theo.png")
 
 # -- implicit plot x = f^(4)(x) for the sine map -----------------------------
 R, Xg = np.meshgrid(np.linspace(0.0, 1, 400), np.linspace(0, 1, 400))
-plt.figure(figsize=(5.0, 3.5))
-plt.contour(R, Xg, compose(cb.sine, 4, Xg, R) - Xg, levels=[0],
-            colors="black", linewidths=1.5)
-plt.axis([0, 1, -0.1, 1])
-plt.xlabel("$r$")
-plt.ylabel("$x(r)$")
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_bifurcation_implicit_sin.png", dpi=150)
-plt.close()
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
+ax.contour(R, Xg, compose(cb.sine, 4, Xg, R) - Xg, levels=[0],
+           colors="black", linewidths=1.0)
+ax.axis([0, 1, -0.1, 1])
+ax.set_xlabel("$r$")
+ax.set_ylabel("$x(r)$")
+bf.save(fig, OUT / "disc1d_bifurcation_implicit_sin.png")
 
 # -- numerical bifurcation diagram --------------------------------------------
-fig, ax = plt.subplots(figsize=(5.0, 3.5))
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
 # the full range 0 <= r <= 4, so that the zooms below are true close-ups
 cb.bifurcation_diagram(cb.logistic, 0.0, 4.0, nr=800, n=1000,
                        x0=0.57, discard=0.8, ax=ax)
 ax.set_xlim(0.0, 4.0)
 ax.set_ylim(0, 1)
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_series_bifurcation.png", dpi=150)
-plt.close()
+bf.save(fig, OUT / "disc1d_logist_series_bifurcation.png")
 
-# -- zooms on the bifurcation diagram -----------------------------------------
-for rmin, rmax, name in [
-    (2.8, 3.6, "disc1d_logist_series_bifurcation_zoom_doubling"),
-    (3.82, 3.86, "disc1d_logist_series_bifurcation_zoom_p3"),
-]:
-    fig, ax = plt.subplots(figsize=(4.2, 3.2))
+# -- zooms on the bifurcation diagram: 1x2 ------------------------------------
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4))
+for ax, (rmin, rmax) in zip(axs, [(2.8, 3.6), (3.82, 3.86)]):
     cb.bifurcation_diagram(cb.logistic, rmin, rmax, nr=500, n=1000,
                            x0=0.57, discard=0.8, ax=ax)
     ax.set_xlim(rmin, rmax)
     ax.set_ylim(0, 1)
-    plt.tight_layout()
-    plt.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close()
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc1d_logist_series_bifurcation_zooms.png")
 
 # -- interactive: high-resolution pan/zoom bifurcation diagram ---------------
 rs, xs = [], []

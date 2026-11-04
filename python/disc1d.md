@@ -53,15 +53,8 @@ plt.ylabel("$x_n$")
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_series.png
 :name: fig:disc1d:some_series_logist
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_series_r1_5.png)
-![ ](_static/disc1d/disc1d_logist_series_r3_2.png)
-![ ](_static/disc1d/disc1d_logist_series_r3_5.png)
-![ ](_static/disc1d/disc1d_logist_series_r3_9.png)
 
 The rich behaviour of the logistic map {eq}`eq:disc1d:def_logistic_map` for various values of the parameter $r$. (a) $r=1.5$ convergence to a fixed point. (b) $r=3.2$, convergence to a period-2 solution. (c) $r=3.5$, convergence to a period-4 solution. (d) $r=3.9$, chaos.
 ```
@@ -117,15 +110,8 @@ plt.axis([0, 1, 0, 1])
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_return.png
 :name: fig:disc1d:returnplots_logist
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_return_r1_5.png)
-![ ](_static/disc1d/disc1d_logist_return_r3_2.png)
-![ ](_static/disc1d/disc1d_logist_return_r3_5.png)
-![ ](_static/disc1d/disc1d_logist_return_r3_9.png)
 
 Return-plots of the logistic-map data corresponding to the time series plotted in {numref}`fig:disc1d:some_series_logist`. Solid gray line represents the mapping {eq}`eq:disc1d:def_logistic_map` (a) $r=1.5$, fixed point. (b) $r=3.2$, period-2 solution. (c) $r=3.5$, period-4 solution. (d) $r=3.9$, chaos.
 ```
@@ -139,21 +125,12 @@ Return-plots of the logistic-map data corresponding to the time series plotted i
 <iframe src="_static/disc1d/interactive/logistic_explorer.html" width="100%" height="420" style="border:none;"></iframe>
 ```
 
-The information conveyed by the return-plots may seem slightly trivial when one knows the expression of the mapping that was used to generate the data, as is the case for the example of {numref}`fig:disc1d:returnplots_logist` where it was easy to plot the gray line representing the mapping $f(x)$. But in a practical situation where one analyses the results of some experiment one usually does not know exactly which mapping describes the data-sets. In such a situation it is useful to make a return-plot since it gives an impression what kind of mapping lurks behind. Consider for example the three time-series plotted in the left column in {numref}`fig:disc1d:unknownmappings`. Judging from the time-series alone, one has a hard time figuring out which data-set is 1) uncorrelated noise, 2) chaotic data from a one-dimensional mapping, 3) chaotic data from a higher-dimensional mapping. The return-plots in the right column, on the other hand, are very instructive in this respect: clearly the first time-series originates from a higher dimensional mapping because the data-points in the return-plot cannot be described by a function of $x$ alone; the second time-series is the uncorrelated noise since the return-plot does not display any correlation between $x_{n}$ and $x_{n+1}$; the third time-series is well described by a first-order mapping (it is $x_{n+1} = -4x_{n}^{3} + 3x_{n}$).
+The information conveyed by the return-plots may seem slightly trivial when one knows the expression of the mapping that was used to generate the data, as is the case for the example of {numref}`fig:disc1d:returnplots_logist` where it was easy to plot the gray line representing the mapping $f(x)$. But in a practical situation where one analyses the results of some experiment one usually does not know exactly which mapping describes the data-sets. In such a situation it is useful to make a return-plot since it gives an impression what kind of mapping lurks behind. Consider for example the three time-series plotted in the top row, panels (a)-(c), of {numref}`fig:disc1d:unknownmappings`. Judging from the time-series alone, one has a hard time figuring out which data-set is 1) uncorrelated noise, 2) chaotic data from a one-dimensional mapping, 3) chaotic data from a higher-dimensional mapping. The return-plots in the bottom row, panels (d)-(f), on the other hand, are very instructive in this respect: clearly the first time-series originates from a higher dimensional mapping because the data-points in the return-plot cannot be described by a function of $x$ alone; the second time-series is the uncorrelated noise since the return-plot does not display any correlation between $x_{n}$ and $x_{n+1}$; the third time-series is well described by a first-order mapping (it is $x_{n+1} = -4x_{n}^{3} + 3x_{n}$).
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_unknownmappings.png
 :name: fig:disc1d:unknownmappings
-:align: center
-:subcaptions: below
 
-![ ](_static/disc1d/disc1d_unknownmapping_series_henon.png)
-![ ](_static/disc1d/disc1d_unknownmapping_return_henon.png)
-![ ](_static/disc1d/disc1d_unknownmapping_series_noise.png)
-![ ](_static/disc1d/disc1d_unknownmapping_return_noise.png)
-![ ](_static/disc1d/disc1d_unknownmapping_series_sin3map.png)
-![ ](_static/disc1d/disc1d_unknownmapping_return_sin3map.png)
-
-Three (unknown) data-sets: their time series and corresponding return-plots.
+Three (unknown) data-sets, one per column: their time series (top row, (a)-(c)) and corresponding return-plots (bottom row, (d)-(f)).
 ```
 
 :::{only} html
@@ -231,13 +208,8 @@ $$
 
 In this book we will generally not deal with these kinds of exceptions.
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_attractor_local.png
 :name: fig:disc1d:logist_attractor_local
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_attractor_local_r2_0.png)
-![ ](_static/disc1d/disc1d_logist_attractor_local_r1_5.png)
 
 The convergence to the fixed point in a superstable situation and an ordinary stable situation. (a) $r=2$ Superstable situation, i.e. $\sigma = 0$: the convergence to the fixed point is extremely fast. (b) $r=1.5$ local convergence to the fixed point $x^{*}=1/3$.
 ```
@@ -275,7 +247,6 @@ which shows that the fixed point $x^{*} = 1-1/r$ is stable when $|2-r| < 1$, i.e
 
 ```{figure} _static/disc1d/disc1d_logist_p2graph.png
 :name: fig:disc1d:plot_of_g
-:width: 60mm
 
 Plot of $f(x)$ and $g(x)=f(f(x))$ for $r=3.2$, together with $y = x$. The period-2 solution, which satisfies $x=g(x)$, is indicated with the solid black circles. The two (unstable) fixed points that correspond to period-1 solutions, i.e. $x=f(x)$, are indicated by gray circles. Note that these points also satisfy $x=g(x)$ and could be mistakenly interpreted as period-2 solutions.
 ```
@@ -425,13 +396,8 @@ Hence the stability range for the period-2 solution is $r \in \langle 3,3.4494\r
 (sec:disc1d:period_m)=
 ### Higher order periodic solutions and their stability
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_p3graph.png
 :name: fig:disc1d:plot_of_f3
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_p3graph_r380.png)
-![ ](_static/disc1d/disc1d_logist_p3graph_r384.png)
 
 Plots of $f(x)$ and $g(x)=f^{(3)}(x)$ together with $y = x$. True period-3 solutions are indicated with the solid small black circles (stable) and small gray circles (unstable). The (unstable) fixed points $x=f(x)$ are indicated by big gray circles. Note that these points also satisfy $x=g(x)$. (a) $r=3.80$, no true period-3 exists. (b) $r=3.84$, two sets of period-3 solutions are found.
 ```
@@ -537,13 +503,8 @@ for k in [0, 1]:
 
 The fixed point solutions and periodic solutions usually depend on the parameters of the system. It is therefore often very useful to make a graph of the solutions as a function of the parameter(s) of the system. In {numref}`fig:disc1d:theobifurcationdiagram` we have done this for the logistic map, plotting as a function of the parameter $r$ the fixed point solution {eq}`eq:disc1d:fixed_point_logist`, the period-2 solution {eq}`eq:disc1d:p2_logist`, the period-4 solution, and, in the right graph, the period-3 solution. The left graph nicely shows that the fixed-point loses its stability at the exact same point where the period-2 solution becomes stable. It seems as if the solution is split into two branches. This is called a bifurcation, after the Latin word *bifurcus*, two-pronged (from *furca*, fork). Then for larger $r$ the period-2 solution becomes unstable itself and bifurcates into a period-4 solution. Although not shown here, the period-4 solution soon bifurcates again into a period-8 solution, and so on. This process of subsequent bifurcations is called *period-doubling*. We will get back to this issue in section {numref}`sec:disc1d:universality`.
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_bifur_theo.png
 :name: fig:disc1d:theobifurcationdiagram
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_bifur_theo.png)
-![ ](_static/disc1d/disc1d_logist_stability_p3both.png)
 
 Bifurcation diagrams based on the analytical solutions to the logistic map (a) Period-doubling. (b) Period-3.
 ```
@@ -582,7 +543,6 @@ The method cannot distinguish between true period-4 solutions and double period-
 
 ```{figure} _static/disc1d/disc1d_bifurcation_implicit_sin.png
 :name: fig:disc1d:bifurcation_implicit_sin
-:width: 80mm
 
 Numerical solutions to $x=f^{(4)}(x)$ as a function of $r\in[0,1]$ for the sine map $x_{n+1} = f(x_n) = r \sin(\pi x_{n})$ calculated and plotted as a zero contour
 ```
@@ -607,7 +567,6 @@ This bifurcation diagram is very instructive to the extent that one can see in o
 
 ```{figure} _static/disc1d/disc1d_logist_series_bifurcation.png
 :name: fig:disc1d:series_bifurcation_logist
-:width: 100mm
 
 Bifurcation diagram of the logistic map obtained by plotting the entire series for different values of $r$
 ```
@@ -616,13 +575,8 @@ Bifurcation diagram of the logistic map obtained by plotting the entire series f
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc1d/fig_bifurcation.py)*
 :::
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_series_bifurcation_zooms.png
 :name: fig:disc1d:series_bifurcation_logist_zooms
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_series_bifurcation_zoom_doubling.png)
-![ ](_static/disc1d/disc1d_logist_series_bifurcation_zoom_p3.png)
 
 Various close-ups of {numref}`fig:disc1d:series_bifurcation_logist` (a) Period doubling route to chaos. (b) Region around the period-3 solution.
 ```
@@ -643,7 +597,6 @@ Closer inspection of the graphs in {numref}`fig:disc1d:series_bifurcation_logist
 
 ```{figure} _static/disc1d/disc1d_logist_lyap_r39_lin.png
 :name: fig:disc1d:logist_lyap_two_sets
-:width: 100mm
 
 Logistic map at $r=3.9$. Two sets with slightly different initial conditions $y_0 = x_0 + 10^{-9}$. The difference becomes obvious from about $n=27$.
 ```
@@ -676,7 +629,6 @@ The exponent $\Lambda$ in {eq}`eq:disc1d:lyapunov_phenomenological` is called th
 
 ```{figure} _static/disc1d/disc1d_logist_lyap_r39_log.png
 :name: fig:disc1d:logist_lyap_r39_log
-:width: 80mm
 
 Evolution of the deviations $|y_n - x_n|$ plotted on a log-scale.
 ```
@@ -723,7 +675,6 @@ This brings us to an important issue: how can one distinguish a chaotic set from
 
 ```{figure} _static/disc1d/disc1d_logist_lyap_bifurcation.png
 :name: fig:disc1d:lyapunovdiagram
-:width: 100mm
 
 Bifurcation diagram $x(r)$ combined with Lyapunov exponents $\Lambda(r)$
 ```
@@ -862,13 +813,8 @@ plt.ylabel("$y_n$")
 
 We will make a close study of the evolution of the series $y_0,y_1,\ldots$ by looking at the *binary* representation of the numbers. Since the numbers $y_n$ are confined to the range $[0,1]$, they can be represented by a bit-series $\{b\}$ via: $y = b_1 2^{-1} + b_2 2^{-2} + b_3 2^{-3} + \ldots$, where the 'bits' $b_i$ are either 0 or 1. For example, $y = 1/4$ is represented by $\{b\} = \{0100 \ldots 0\}$ and $y = 5/8$ by $\{b\} = \{1010 \ldots 0\}$. An irrational number like $y=1/\pi$ or $y=\sqrt{2}-1$ cannot be represented by a finite bit-series; the computer representation of such a number will therefore be inaccurate.
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_shiftmap_series_return.png
 :name: fig:disc1d:shiftmapseriesreturnplot
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_shiftmap_series.png)
-![ ](_static/disc1d/disc1d_shiftmap_returnplot.png)
 
 Series and return-plot of the shift-map {eq}`eq:disc1d:shift_map` (a) Series. (b) Return-plot.
 ```
@@ -924,13 +870,8 @@ z_{n+1} = 1 - 2\left|z_n -\frac{1}{2}\right|
 
 Series and returnplot in {numref}`fig:disc1d:tentmapseriesreturnplot`.
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_tentmap_series_return.png
 :name: fig:disc1d:tentmapseriesreturnplot
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_tentmap_series.png)
-![ ](_static/disc1d/disc1d_tentmap_returnplot.png)
 
 Series and return-plot of the tent-map {eq}`eq:disc1d:tent_map` (a) Series. (b) Return-plot.
 ```
@@ -1016,7 +957,6 @@ In {numref}`fig:disc1d:logist_analytical` we have plotted the analytical solutio
 
 ```{figure} _static/disc1d/disc1d_logist_analytical.png
 :name: fig:disc1d:logist_analytical
-:width: 100%
 
 The analytical solution $x_n=\sin^2(2^n \theta)$ from {eq}`eq:disc1d:closedlogist` for $x_0 = 0.36$ ($\theta = 0.64\ldots$) together with the first few iterations $x_1,\ldots,x_7$ of the logistic map for $r=4$.
 ```
@@ -1046,7 +986,6 @@ The results are plotted in {numref}`fig:disc1d:tanh_analytical`. Apparently ther
 
 ```{figure} _static/disc1d/disc1d_tanh_analytical.png
 :name: fig:disc1d:tanh_analytical
-:width: 100%
 
 The analytical solution $x_n = \tanh(2^n \theta)$ from {eq}`eq:disc1d:closedtanh` for $x_0 = 0.05$ ($\theta = 0.05\ldots$) together with the first few iterations $x_1,\ldots,x_{14}$ of the map $x_{n+1} = 2x_n/(1+x_{n}^{2})$.
 ```
@@ -1168,13 +1107,8 @@ plt.ylabel("$p(x)$")
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_pdfs.png
 :name: fig:disc1d:pdfs
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_pdf.png)
-![ ](_static/disc1d/disc1d_sin3map_pdf.png)
 
 pdfs (a) Pdf for the logistic map at $r=4$; solid line represents {eq}`eq:disc1d:pdflogist`. (b) Pdf for the mapping $x_{n+1} = -4x_{n}^{3}+3x_n$; solid line represents {eq}`eq:disc1d:pdfsin3map`.
 ```
@@ -1202,13 +1136,8 @@ p(x) &= \lim_{N\rightarrow\infty} \frac{1}{N} \sum_{n=1}^{N} \delta(x-x_n)
 (sec:disc1d:universality)=
 ## The universal period-doubling route to chaos
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_doubling.png
 :name: fig:disc1d:universality
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_doubling_logist.png)
-![ ](_static/disc1d/disc1d_doubling_sinmap.png)
 
 Period-doubling in two different mappings. (a) Period doubling in the logistic map until $r_{\infty}= 3.56994537$ (arrow). (b) Period doubling in the sine-map until $r_{\infty}= 0.86557928$ (arrow).
 ```
@@ -1266,13 +1195,8 @@ plt.ylabel("$x(a)$")
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_universality.png
 :name: fig:disc1d:universality_regular
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_universality_logist.png)
-![ ](_static/disc1d/disc1d_universality_sinmap.png)
 
 Graphs revealing the universal period-doubling for the logistic map and the sine map. (a) Bifurcation diagram of the logistic map $x_{n+1} = r x_n(1-x_n)$ as a function of $a = -\ln(r_{\infty}-r)$ with $r_{\infty}= 3.56994537$. (b) Bifurcation diagram of the sine map $x_{n+1} = r \sin(\pi x_n)$ as a function of $a = -\ln(r_{\infty}-r)$ with $r_{\infty}= 0.86557928$.
 ```
@@ -1429,7 +1353,6 @@ Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find
 
 ```{figure} _static/disc1d/disc1d_not_so_universal.png
 :name: fig:disc1d:not_so_universal
-:width: 80mm
 
 Feigenbaum number $\delta$ as a function of $\eta$ for the map $f_{\eta}(x) = r (1-|2x-1|^{\eta})$. The mapping $f_\eta$ represents the logistic map for $\eta = 2$, in which case the 'universal' value of $\delta=4.669\ldots$ is retrieved. For $\eta\rightarrow1$ the map becomes equal to the tent-map {eq}`eq:disc1d:tent_map`, which has no period-doubling route. This explains the bend near $\eta\rightarrow1$.
 ```
