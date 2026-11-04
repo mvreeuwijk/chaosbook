@@ -732,7 +732,7 @@ Sketch of a kicked rotor system
 ```
 
 :::{only} html
-*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_kickedrotor.py)*
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_schematics.py)*
 :::
 
 The conceptually most straightforward example of a system with periodic kicking is the kicked rotor. Imagine a mass $m$ attached to an arm of length $r$ rotating in a horizontal plane ({numref}`fig:disc2d_kickedrotor`). The system is not influenced by gravity, but is subject to linear friction. At fixed intervals $T$, the system is 'kicked': it receives a finite amount of angular momentum in a negligibly short time. The kicking strength $I$ depends on the angle $\theta$.
@@ -1349,7 +1349,7 @@ Sketch of the stable and unstable manifolds
 ```
 
 :::{only} html
-*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_standardmap.py)*
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_schematics.py)*
 :::
 
 The curve that is emerging in {numref}`fig:disc2d_standardmap_saddlenode_n=-6` is called the *unstable manifold*, and is denoted by $W^u$. The unstable manifold $W^u$ is defined as the set of points in the domain which originate from the fixed point. Denoting the map by $\mathbf{f}$, its inverse by $\mathbf{f}^{-1}$ and the fixed point by $\mathbf{x}^*$, the unstable manifold $W^u$ is the set of all $\mathbf{x}$ for which

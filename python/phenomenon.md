@@ -138,6 +138,10 @@ The scripts behind these figures are linked beneath each of them. The Lorenz sys
 Three-body problem.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/phenomenon/fig_schematics.py)*
+:::
+
 Imagine three celestial objects – like stars, planets, moons, meteorites and/or satellites – which influence each other by their gravitational pull. Would it be possible to fully predict the future trajectories of these three interacting objects?
 
 It may come as a surprise that the answer turns out to be 'no, not in general'. As discussed during the first lecture, this so-called 'three body problem' has a long history involving among others Euler, Laplace and Poincaré. In the end it was Henri Poincaré who managed to prove that the system cannot be solved analytically in general situations. Only in a few special cases can the solution be expressed in a closed form. To get a feeling for the enormous complexity of the three body problem, we will analyse the system below and calculate numerically some possible trajectories.

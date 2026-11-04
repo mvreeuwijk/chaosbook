@@ -8,11 +8,10 @@ Produces (in python/_static/disc2d/):
   disc2d_standardmap_phasetorus                    the same on a torus
   disc2d_standardmap_saddlenode_n=<n>.png          a cloud near (0,0), forward/backward
   disc2d_standardmap_manifolds                     W^u and W^s together
-  disc2d_manifolds                                 hand-drawn sketch, copied
+  (disc2d_manifolds, the sketch, is drawn by fig_schematics.py)
   interactive/standardmap_slider.html              phase portrait with a K slider
 """
 
-import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -202,10 +201,6 @@ print("  det J =", np.linalg.det(Jstar), "; angle of e1 to horizontal =",
       np.degrees(np.arctan2(vec[1, order[0]], vec[0, order[0]])))
 print("  closed form 1+K/2 +- sqrt(K(K+4))/2 =",
       1 + K / 2 + np.sqrt(K * (K + 4)) / 2, 1 + K / 2 - np.sqrt(K * (K + 4)) / 2)
-
-# hand-drawn sketch: copy
-shutil.copyfile(ROOT / "maple" / "_static" / "disc2d" / "disc2d_manifolds.png",
-                OUT / "disc2d_manifolds.png")
 
 # -- interactive: phase portrait with a K slider ---------------------------------------
 rng = np.random.default_rng(3)

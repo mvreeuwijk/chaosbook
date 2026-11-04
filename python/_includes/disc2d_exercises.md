@@ -118,7 +118,7 @@ with $\mu \in [0,1]$ a frictional parameter.
 
 ```{figure} _static/exercises/ex0082r00_1.png
 :name: fig:ex0082r00:ex0082r00_1
-:width: 25mm
+:width: 32mm
 ```
 
 a) Verify that the solution to this equation is given by
