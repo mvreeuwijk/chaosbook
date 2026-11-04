@@ -46,7 +46,7 @@ P = cb.stroboscopic_section(cb.forced_double_well, [0, 0, 0], 2 * np.pi / omega,
                             N, phase=0.0, discard=N // 2, **params)
 plt.figure(figsize=(4.2, 3.2))
 plt.plot(P[:, 0], P[:, 1], "k.", ms=2)
-plt.xlim(-2, 2); plt.ylim(-1, 1)
+plt.xlim(-2, 2); plt.ylim(-1.0, 1.4)   # the section reaches y = 1.13
 plt.xlabel("$x$"); plt.ylabel("$y$")
 plt.tight_layout(); plt.savefig(OUT / "cont3d_doublewell_poincare.png", dpi=150)
 plt.close()

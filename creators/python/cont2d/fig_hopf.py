@@ -50,8 +50,13 @@ for k, mu in [(1, -0.1), (2, 0.1)]:
 mus = np.linspace(-1, 1, 400)
 ev = np.array([np.linalg.eigvals(cb.jacobian(cb.hopf, [0, 0], mu=m)) for m in mus])
 ev = np.array([e[np.argsort(-e.imag)] for e in ev])  # sigma_1 has Im > 0
-for name, vals, lab, lim in [("ev1", ev.real, r"$\mathrm{Re}(\sigma)$", None),
-                             ("ev2", ev.imag, r"$\mathrm{Im}(\sigma)$", (-1.2, 1.2))]:
+# legend positions keep the entries off the curves (Im sigma_2 = -1 runs along
+# the bottom of the ev2 panel)
+for name, vals, lab, lim, leg in [
+        ("ev1", ev.real, r"$\mathrm{Re}(\sigma)$", None,
+         dict(loc="lower right")),
+        ("ev2", ev.imag, r"$\mathrm{Im}(\sigma)$", (-1.5, 1.5),
+         dict(loc="center right", bbox_to_anchor=(1.0, 0.33)))]:
     plt.figure(figsize=(4.2, 3.2))
     plt.plot(mus, vals[:, 0], "k-", lw=2, label=r"$\sigma_1$")
     plt.plot(mus, vals[:, 1], "k--", lw=2, label=r"$\sigma_2$")
@@ -62,7 +67,7 @@ for name, vals, lab, lim in [("ev1", ev.real, r"$\mathrm{Re}(\sigma)$", None),
         plt.ylim(*lim)
     plt.xlabel(r"$\mu$")
     plt.ylabel(lab)
-    plt.legend(loc="lower right")
+    plt.legend(**leg)
     plt.tight_layout()
     plt.savefig(OUT / f"cont2d_Hopf_{name}.png", dpi=150)
     plt.close()

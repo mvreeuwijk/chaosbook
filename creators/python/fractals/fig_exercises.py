@@ -36,7 +36,7 @@ ax.loglog(Ls, 0.008 * (Ls / 45) ** 2, "--", color=GRAY, lw=1.5,
           label=r"smooth objects, $D_s=2$")
 ax.set_xlabel(r"linear size $L=V^{1/3}$ [m]")
 ax.set_ylabel(r"surface area $A$ [km$^2$]")
-ax.legend(loc="lower right")
+ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=10)
 fig.tight_layout()
 fig.savefig(ROOT / "fractals" / "fractals_cloudscaling.png", dpi=150)
 plt.close(fig)
@@ -123,7 +123,7 @@ x, y = sol.y[0][N // 2:], sol.y[1][N // 2:]
 fig, ax = plt.subplots(figsize=(5.0, 3.0))
 ax.plot(x, y, "k.", ms=2)
 ax.set_xlim(-2, 2)
-ax.set_ylim(-1, 1)
+ax.set_ylim(-1.0, 1.4)   # the section reaches y > 1
 ax.set_xlabel("$x$")
 ax.set_ylabel("$y$")
 fig.tight_layout()
