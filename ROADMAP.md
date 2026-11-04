@@ -17,9 +17,26 @@ The repo supports three long-term identities:
 2. the Maple edition;
 3. the Python edition.
 
-**Current priority: stabilise the open-source Maple edition.** The Python
-edition comes later and must be added *without disrupting* the existing
-structure.
+**Status (November 2026): both editions are complete.** The Python edition
+(all chapters, cookbook, appendices, a browser lab per chapter, interactive
+figures and the `chaosbook` package) was rolled out in November 2026 and is
+expected to become the main edition. The plans and the referee review behind
+it are in `docs/superpowers/plans/` and `docs/superpowers/reviews/`.
+
+## Next
+
+- [x] Python edition: all chapters converted (PRs #1–#6).
+- [x] Critical referee review of the whole book
+      (`docs/superpowers/reviews/2026-11-04-book-review.md`).
+- [ ] Review fixes: conversion fixes (merged with the rollout), book content
+      fixes for both editions, copy-edit of chapters 1–6, chapter 7 in the
+      lecture voice (PRs #7–#9).
+- [ ] Figure-versus-caption fixes from the full figure audit.
+- [ ] Regenerate the Maple images listed in `creators/MAPLE_TODO.md` once
+      Maple is available.
+- [ ] Swap the editions: make the Python edition the main site, with the
+      Maple edition alongside.
+- [ ] Zenodo DOI and a first release (see §3 below).
 
 ---
 
@@ -76,7 +93,7 @@ The site does not need to be elaborate yet — the point is a stable public URL.
 
 ---
 
-## Later — add the Python edition as a parallel edition
+## Python edition as a parallel edition (done, November 2026; original plan kept for reference)
 
 Introduce Python as a *parallel implementation inside the same repo*, not a
 separate repository. A possible structure (names adjustable):

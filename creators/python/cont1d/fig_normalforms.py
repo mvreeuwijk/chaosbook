@@ -18,7 +18,7 @@ import chaosbook as cb
 from _common import (PANEL, SQUARE, cross_axes, mark_fixed_points,
                      plot_branches, save)
 
-R = 1.25  # |r| used in the panels (as in the Maple worksheets)
+R = 1.25  # |r| used in the panels (as in the original figures)
 
 SYSTEMS = {
     # name: (f, df/dx, xmax, ylim, rs shown as (r<0, r=0, r>0), diagram (rlim, xlim))

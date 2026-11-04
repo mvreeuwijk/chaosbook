@@ -46,4 +46,9 @@ through them. Jump to a chapter's exercises below.
 :link-type: ref
 :::
 
+:::{grid-item-card} Practice
+:link: practice:exercises
+:link-type: ref
+:::
+
 ::::
