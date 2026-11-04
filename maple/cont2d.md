@@ -61,7 +61,7 @@ the system simplifies to
 \end{aligned}
 ```
 
-To get a feeling for the behaviour of this nonlinear system we perform numerical simulation with `maple`. The key commands are `dsolve` and `odeplot`, and the solution method is exactly identical to that of a 1-D system (see section XXX).
+To get a feeling for the behaviour of this nonlinear system we perform numerical simulation with `maple`. The key commands are `dsolve` and `odeplot`, and the solution method is exactly identical to that of a 1-D system (see section {numref}`sec:cont1d:fixed_points_stability`).
 
 ````{admonition} Maple
 :class: maple
@@ -811,7 +811,7 @@ The short answer to this question is no. There are two types of long-term behavi
 
 The fact that no chaos can occur in 2-D systems follows from the *Poincaré-Bendixson* theorem, which can be used to prove the existence of limit cycles. The theorem considers at a part of the phase space $\Omega$ which does not contain fixed points but does contain at least one trajectory which is confined within $\Omega$. If this is the case, then this trajectory is a *closed* orbit, because it is impossible for trajectories to cross (this would indicate that the solutions were not unique, because one point in the phase space then has multiple values for $\mathbf{f}$).
 
-The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see section XXX).
+The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see section {numref}`sec:cont3d:strangeattractor`).
 
 We emphasize that this result is only valid for planar continuous 2-D systems. Indeed, chaos is possible in discrete systems with only one degree of freedom, and if the phase space is a torus, non-periodic motion is possible.
 
@@ -996,7 +996,7 @@ and the eigenvalues are $\sigma_1 = \mu + 3 x^2$ and $\sigma_2 = -1$. The charac
   - non-existent
 ```
 
-The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in section XXX. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
+The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in section {numref}`sec:cont1d:normalforms`. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
 
 We will avoid some of the mathematical complexity by making use of `maple`'s versatility. In particular, by plotting the behaviour of the fixed points and the the eigenvalues as a function of the control parameter $\mu$, it is possible to determine for which $\mu$ bifurcations occur and to identify their type.
 
@@ -1135,7 +1135,7 @@ $$
 
 The equation for the phase angle $\theta$ has solution $\theta = \theta(0) + t$. The right hand side of the equation for $\dot{r}$ is plotted in {numref}`fig:cont2d:global`(c) for three different values of $r$. Clearly, when $\mu<-1/4$, $\dot{r}>0$ for all nonzero $r$ and the trajectory will escape to infinity. At $\mu=-1/4$, the function attains a new root in the neigbourhood of $r=0.7$. This develops into two roots for $\mu>-1/4$.
 
-The fixed points are plotted as a function $\mu$ with the help of the function `implicitplot` ({numref}`fig:cont2d:global`(d)), using the code discussed in section XXX to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in section XXX, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
+The fixed points are plotted as a function $\mu$ with the help of the function `implicitplot` ({numref}`fig:cont2d:global`(d)), using the code discussed in section {numref}`sec:cont1d:ferromagnet_example` to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in section {numref}`sec:cont1d:saddlenode`, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
 
 ```{subfigure} 2
 :name: fig:cont2d:global

@@ -30,3 +30,19 @@ __all__ = [
     "chaos_game",
     "box_dimension",
 ]
+from .phaseplane import jacobian, classify_fixed_point, fixed_points_nd, phase_portrait
+from .flows2d import (lotka_volterra, lotka_volterra_invariant,
+                      lotka_volterra_allee, vanderpol, double_well, hopf)
+
+__all__ += [
+    "jacobian",
+    "classify_fixed_point",
+    "fixed_points_nd",
+    "phase_portrait",
+    "lotka_volterra",
+    "lotka_volterra_invariant",
+    "lotka_volterra_allee",
+    "vanderpol",
+    "double_well",
+    "hopf",
+]
