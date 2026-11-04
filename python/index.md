@@ -19,7 +19,7 @@ theory alongside concrete computations in Python — with a live exercise lab
 for every chapter, running right in your browser — so that each idea can be
 explored, visualised and experimented with directly.
 
-The Python edition is under construction: the first two chapters and the
+The Python edition is under construction: the first three chapters and the
 cookbook are available, and further chapters follow.
 
 ```{button-ref} phenomenon
@@ -94,6 +94,7 @@ The authors, and how the book came to be.
 
 phenomenon
 disc1d
+disc2d
 ```
 
 ```{toctree}
