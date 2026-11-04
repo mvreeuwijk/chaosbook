@@ -118,20 +118,61 @@ ax.set_xlim(-1.5, 11.5); ax.set_ylim(-1.5, 3.0); ax.set_aspect("equal"); ax.axis
 save(fig, "cont3d_lyap_formal")
 
 # -- Rossler band topology -------------------------------------------------------
-fig, ax = plt.subplots(figsize=(4.2, 3.8))
-th = np.linspace(0, 2 * np.pi, 400)
-ax.plot(np.cos(th), 0.55 * np.sin(th), "k", lw=1.2)                  # central hole
-for w in (1.55, 1.85):                                               # "normal band"
-    ax.plot(w * np.cos(th), 0.65 * w * np.sin(th) - 0.3, "k--", lw=1.0)
-th2 = np.linspace(np.pi * 0.62, -np.pi * 1.1, 300)                   # "Mobius band"
-for off in (0.0, 0.13):
-    R = 2.55 + off
-    ax.plot(R * np.cos(th2),
-            1.4 * np.sin(th2) - 0.9 + 1.9 * np.maximum(np.cos(th2 - 0.4), 0) ** 3,
-            "k", lw=1.2)
-arrow(ax, (1.9, -1.7), (2.35, -1.0))
-ax.text(0.0, 0.0, r'"normal band"', ha="center", va="center", fontsize=10)
-ax.text(0.6, -2.55, '"M\u00f6bius band"', ha="center")
-ax.set_xlim(-3.2, 3.4); ax.set_ylim(-3.0, 2.6); ax.set_aspect("equal"); ax.axis("off")
+# Digitised (in pixel units, y downwards) from the original drawing, then smoothed.
+W_, H_ = 1775.0, 1610.0
+
+
+def sp(pts, n=400):
+    pts = np.asarray(pts, float)
+    tck, _ = splprep(pts.T, s=0, k=min(3, len(pts) - 1))
+    x, y = splev(np.linspace(0, 1, n), tck)
+    return x, H_ - y
+
+
+fig, ax = plt.subplots(figsize=(5.0, 5.0 * H_ / W_))
+LW = 1.0
+outer = [(716, 845), (790, 700), (860, 520), (940, 340), (1030, 175), (1080, 95), (1130, 40), (1190, 15), (1260, 10), (1400, 60), (1550, 260), (1680, 550), (1750, 850),
+         (1768, 1010), (1745, 1160), (1650, 1345), (1450, 1480), (1200, 1565),
+         (900, 1597), (600, 1572), (300, 1482), (120, 1335), (35, 1170), (8, 1085)]
+inner = [(730, 882), (830, 720), (915, 540), (1000, 340), (1085, 175), (1125, 105), (1170, 68), (1225, 50), (1285, 48), (1385, 95), (1520, 290), (1650, 560), (1722, 850),
+         (1740, 1010), (1720, 1160), (1632, 1330), (1440, 1452), (1200, 1532),
+         (900, 1566), (600, 1542), (312, 1452), (150, 1312), (62, 1165), (22, 1100)]
+ax.plot(*sp(outer), "k", lw=LW)
+ax.plot(*sp(inner), "k", lw=LW)
+# left sheet edge rising from the outer rim to the top of the fold
+ax.plot(*sp([(8, 1085), (12, 1000), (90, 800), (300, 620), (500, 540), (700, 480),
+             (800, 425), (900, 330), (1030, 175)]), "k", lw=LW)
+# the strip folding down into the hole is the start of the two band lines above
+ax.plot(*sp([(716, 845), (655, 878), (600, 930), (570, 1020)]), "k", lw=LW)
+ax.plot(*sp([(730, 882), (660, 905), (605, 960), (572, 1022)]), "k", lw=LW)
+# central hole
+ax.plot(*sp([(565, 1022), (600, 1090), (680, 1135), (790, 1153), (900, 1132),
+             (1000, 1062), (1068, 990), (1085, 935)]), "k", lw=LW)
+ax.plot(*sp([(830, 753), (950, 770), (1040, 820), (1085, 900), (1085, 960)]), "k", lw=LW)
+ax.plot(*sp([(790, 783), (930, 800), (1030, 860), (1078, 940)]), "k", lw=LW)
+ax.plot(*sp([(745, 760), (800, 752), (830, 753)]), "k", lw=LW)
+# dashed band running underneath, encircling the hole
+dash = (0, (5, 3.2))
+ring = [(905, 535), (1100, 585), (1250, 680), (1330, 800), (1356, 930), (1338, 1060),
+        (1280, 1160), (1150, 1250), (950, 1305), (780, 1305), (600, 1262), (480, 1190),
+        (432, 1100), (430, 990), (468, 880), (560, 805), (680, 772), (745, 762)]
+rx, ry = sp(ring)
+cx, cy = 890.0, H_ - 930.0
+ax.plot(rx, ry, color="k", lw=LW, ls=dash)
+ax.plot(cx + 0.955 * (rx - cx), cy + 0.93 * (ry - cy), color="k", lw=LW, ls=dash)
+# dashed tongue joining the outer rim on the left
+for y in (990, 1030):
+    ax.plot([555, 430, 60], [H_ - y] * 3, color="k", lw=LW, ls=dash)
+for y in (1085, 1127):
+    ax.plot([430, 60], [H_ - y] * 2, color="k", lw=LW, ls=dash)
+ax.plot(*sp([(80, 998), (35, 1010), (20, 1060), (40, 1118), (80, 1130)]), "k", lw=LW, ls=dash)
+ax.plot(*sp([(75, 1038), (48, 1050), (48, 1075), (70, 1092)]), "k", lw=LW, ls=dash)
+# dotted segment where the band passes behind
+ax.plot(*sp([(490, 548), (600, 520), (720, 502), (880, 503)]), "k", lw=LW, ls=(0, (1, 2.5)))
+# labels and flow direction
+ax.text(865, H_ - 1220, '"normal band"', ha="center", va="center", fontsize=9)
+ax.text(1130, H_ - 1405, '"Mobius band"', ha="center", va="center", fontsize=9)
+arrow(ax, (1370, H_ - 1215), (1482, H_ - 1050), connectionstyle="arc3,rad=0.25")
+ax.set_xlim(-10, W_); ax.set_ylim(H_ - 1620, H_ + 10); ax.set_aspect("equal"); ax.axis("off")
 save(fig, "cont3d_rosslertopology")
 print("fig_schematics: done")
