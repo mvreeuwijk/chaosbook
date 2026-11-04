@@ -90,9 +90,9 @@ Take $m^c = 1$, $\delta = 7.0$, $\omega = 60\pi$ and a flow rate of $\mu = 3$.
 
 b) Program equations {eq}`eq0090:t` in Python and study the time series of $T_n$ for $\mu=3$. Take $m^{0}_{1} =\frac{1}{2} m^c$ $v^{0}_1 = 0$, $y^{0}_1 = 1$ to start the sequence. Take $N=200$. Show the time series and the return plot.
 
-c) Use 20-digit arithmetic (for example `mpmath` with `mp.mp.dps = 20`). Determine numerically an effective Lyapunov exponent $\Lambda$ for the system at these settings. To this end create a second series with $\tilde{v}^{0}_1 = v^{0}_1 + \epsilon$ with $\epsilon = 10^{-9}$ and find an for estimate $\Lambda$ from the differences between $\tilde{v}$ and $v$.
+c) Use 20-digit arithmetic (for example `mpmath` with `mp.mp.dps = 20`). Determine numerically an effective Lyapunov exponent $\Lambda$ for the system at these settings. To this end create a second series with $\tilde{v}^{0}_1 = v^{0}_1 + \epsilon$ with $\epsilon = 10^{-9}$ and find an estimate for $\Lambda$ from the differences between $\tilde{v}$ and $v$.
 
-d) What value of $\Lambda$ do you find when instead you base it on the
+d) What value of $\Lambda$ do you find when instead you base it on the differences between $\tilde{T}_n$ and $T_n$?
 
 e) Set $\mu=1$. Create a data set and show that a stationary situations is reached. Show that the system can be reduced to the second-order system
 
@@ -174,7 +174,7 @@ e) Take $\mu=0.01$, $K=0.1$ and $\phi=0.76$ and vary the initial conditions. Can
 :name: fig:ex0082r00:ex0082r00_2
 :width: 80mm
 
-Dependence of solution on initial conditions for $K=0.1$, $\mu=4.17 \times 10^{-3}$ and $\phi=0.76$.
+Dependence of solution on initial conditions for $K=0.1$, $\mu=4.17 \times 10^{-3}$ (a smaller friction than the $\mu=0.01$ of the exercise) and $\phi=0.76$.
 ```
 
 f) Use the phase-space starter cell in the lab to study the behavior of the system in the phase space. For $K=0.1$, $\mu=0.01$ and $\phi=0.76$,  calculate the rotation number $\#revolutions/\#kicks$ for various initial conditions.
