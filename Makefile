@@ -1,14 +1,16 @@
 # Minimal Makefile for Sphinx documentation
 #
-# The book ships as one Sphinx source tree per language edition (maple/, and
-# later python/). Each edition has its own conf.py and index.md but pulls the
-# shared resources (refs.bib, custom.sty, custom.css) from ../shared via config.
+# The book ships as one Sphinx source tree per language edition (python/, the
+# main edition, and maple/). Each edition has its own conf.py and index.md but
+# pulls the shared resources (refs.bib, custom.sty, custom.css) from ../shared
+# via config. The published site (Python at the root, Maple under /maple/) is
+# assembled by .github/workflows/pages.yml.
 #
+#   make python           -> build/python/html
 #   make maple            -> build/maple/html
-#   make python           -> build/python/html   (once the python/ tree exists)
-#   make html              -> alias for the default edition (maple)
-#   make python-figures    -> regenerate every creators/python/*/ figure script
-#   make python-lite       -> build/lite (the JupyterLite lab layer)
+#   make html             -> alias for the main edition (python)
+#   make python-figures   -> regenerate every creators/python/*/ figure script
+#   make python-lite      -> build/lite (the JupyterLite lab layer)
 
 SPHINXBUILD   = sphinx-build
 BUILDDIR      = build
@@ -17,19 +19,19 @@ PYTHON       ?= python
 .PHONY: help clean html maple python python-figures python-lite
 
 help:
-	@echo "targets: maple, python, html (=maple), python-figures, python-lite, clean"
+	@echo "targets: python, maple, html (=python), python-figures, python-lite, clean"
 
 clean:
 	rm -rf "$(BUILDDIR)"/*
 
-maple:
-	@$(SPHINXBUILD) -M html maple "$(BUILDDIR)/maple"
-
 python:
 	@$(SPHINXBUILD) -M html python "$(BUILDDIR)/python"
 
+maple:
+	@$(SPHINXBUILD) -M html maple "$(BUILDDIR)/maple"
+
 # Default edition for a bare `make html`.
-html: maple
+html: python
 
 python-figures:
 	@set -e; for f in creators/python/*/*.py; do echo "== $$f"; "$(PYTHON)" "$$f"; done

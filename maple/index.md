@@ -19,6 +19,10 @@ theory alongside concrete computations in Maple — with a weekly exercise for
 every topic — so that each idea can be explored, visualised and experimented
 with directly.
 
+This is the original Maple edition. The book is also available in a
+[Python edition](https://mvreeuwijk.github.io/chaosbook/), with a live
+exercise lab for every chapter that runs in your browser.
+
 ```{button-ref} phenomenon
 :ref-type: doc
 :color: primary

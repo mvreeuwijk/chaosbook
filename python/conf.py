@@ -79,7 +79,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "Download PDF",
-            "url": "https://mvreeuwijk.github.io/chaosbook/python/chaosbook-python.pdf",
+            "url": "https://mvreeuwijk.github.io/chaosbook/chaosbook.pdf",
             "icon": "fa-solid fa-file-pdf",
             "type": "fontawesome",
         },
@@ -110,7 +110,11 @@ html_sidebars = {
 html_use_smartypants = False
 smartquotes = False
 
-# -- LaTeX (the cookbook PDF) ----------------------------------------------
+# -- LaTeX (the book and cookbook PDFs) ------------------------------------
+# Identical to the other edition's LaTeX setup: the same title page
+# (custom.sty's serif \maketitle via the 'maketitle' element, not Sphinx's own
+# \sphinxmaketitle), the same book class, appendix handling and PDF-bookmark
+# fixes, so the two PDFs look the same.
 
 latex_additional_files = ['../shared/custom.sty']
 
@@ -118,6 +122,17 @@ latex_elements = {
     'papersize': 'a4paper',
     'fontpkg': '',
     'fncychap': '',
+    # Show the subtitle on the title page only (temporarily append it to \title
+    # for \maketitle, then restore the plain title so it does not leak into the
+    # running page header).
+    'maketitle': (
+        r'\makeatletter'
+        r'\let\sfc@title\@title'
+        r'\gdef\@title{\sfc@title\\[4mm]{\Large A Hands-On Introduction to Nonlinear Dynamics}}'
+        r'\maketitle'
+        r'\gdef\@title{\sfc@title}'
+        r'\makeatother'
+    ),
     'pointsize': '11pt',
     'releasename': "",
     'babel': '',
@@ -126,24 +141,75 @@ latex_elements = {
     'inputenc': '',
     'classoptions': '',
     'utf8extra': '',
-    'preamble': r'\usepackage{custom}\hypersetup{hypertexnames=false}',
+    'preamble': r'\usepackage{custom}\renewcommand{\contentsname}{Table of contents}\hypersetup{hypertexnames=false}'
+               r'\usepackage{etoolbox}'
+               r'\preto\appendix{\cleardoublepage\phantomsection\addcontentsline{toc}{part}{Appendices}'
+               r'\renewcommand{\thefigure}{\thechapter.\arabic{figure}}'
+               r'\renewcommand{\theequation}{\thechapter.\arabic{equation}}'
+               r'\renewcommand{\thetable}{\thechapter.\arabic{table}}}'
+               r'\pdfstringdefDisableCommands{'
+               r'\def\gg{}'
+               r'\def\rightarrow{}'
+               r'\def\infty{}'
+               r'\def\tau{}'
+               r'\def\mu{}'
+               r'\def\alpha{}'
+               r'\def\beta{}'
+               r'\def\gamma{}'
+               r'\def\delta{}'
+               r'\def\varepsilon{}'
+               r'\def\epsilon{}'
+               r'\def\omega{}'
+               r'\def\Omega{}'
+               r'\def\theta{}'
+               r'\def\pi{}'
+               r'\def\lambda{}'
+               r'\def\phi{}'
+               r'\def\varphi{}'
+               r'\def\psi{}'
+               r'\def\chi{}'
+               r'\def\rho{}'
+               r'\def\eta{}'
+               r'\def\sigma{}'
+               r'\def\zeta{}'
+               r'\def\kappa{}'
+               r'\def\cdot{}'
+               r'\def\cdots{}'
+               r'\def\ldots{}'
+               r'\def\pm{}'
+               r'\def\times{}'
+               r'\def\le{}'
+               r'\def\ge{}'
+               r'\def\neq{}'
+               r'\def\approx{}'
+               r'\def\sim{}'
+               r'\def\propto{}'
+               r'\def\equiv{}'
+               r'\def\quad{}'
+               r'\def\qquad{}'
+               r'}',
     'figure_align': 'tbp',
 }
 
-# The cookbook is a standalone PDF built as a 'howto' (article-based)
-# document: its top-level headings become sections rather than chapters, so
-# they flow instead of each starting a new page.
-#
-# main.tex is the draft book PDF of the converted chapters (user direction
-# 2026-08-11: published by CI so figure quality in print can be judged as
-# chapters roll out; it becomes the edition's real book PDF once enough
-# chapters exist).
+# The cookbook is a separate deliverable: its own standalone PDF. It is built
+# as a 'howto' (article-based) document, not a 'manual' (book): its top-level
+# headings then become sections rather than chapters (so they flow instead of
+# each starting a new page), and Sphinx does not append latex_appendices to
+# 'howto' documents (the appendices belong to the book only).
 latex_documents = [
   ('index', 'main.tex', u'From Stability to Chaos',
    u'Harmen J. Jonker and Maarten van Reeuwijk', 'manual'),
   ('app_cookbook', 'cookbook.tex', u'The Python Cookbook',
    u'Harmen J. Jonker and Maarten van Reeuwijk', 'howto'),
 ]
+
+latex_toplevel_sectioning = "chapter"
+latex_docclass = {"manual": "book"}
+
+# Appendices belong inside the book, rendered as Appendix A, B, ... (the
+# cookbook is a separate document, and the appendices landing page is
+# HTML-only, so neither is listed here).
+latex_appendices = ['app_twobody', 'app_lorenz', 'app_polar']
 
 numfig = True
 numfig_format = {'figure': 'Figure %s', 'table': 'Table %s', 'section': '%s'}
