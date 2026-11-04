@@ -44,6 +44,10 @@ today = ''
 # for the browser, not pages of this site).
 exclude_patterns = ["_includes/**", "lite/**"]
 
+# Edition templates: the curated top menu and the sidebar Exercises section
+# (same structure as the other edition).
+templates_path = ['_templates']
+
 pygments_style = 'sphinx'
 
 proof_theorem_types = {
@@ -83,7 +87,18 @@ html_theme_options = {
     "collapse_navigation": True,
     "navigation_depth": 2,
     "show_nav_level": 1,
+    # Top header: book title (left), curated part menu (centre), PDF and
+    # GitHub (right), as in the other edition.
+    "navbar_start": ["navbar-logo"],
+    "navbar_center": ["navbar-center.html"],
+    "navbar_end": ["navbar-icon-links"],
     "icon_links": [
+        {
+            "name": "Download PDF",
+            "url": "https://mvreeuwijk.github.io/chaosbook/python/chaosbook-python.pdf",
+            "icon": "fa-solid fa-file-pdf",
+            "type": "fontawesome",
+        },
         {
             "name": "GitHub",
             "url": "https://github.com/mvreeuwijk/chaosbook",
@@ -95,6 +110,19 @@ html_theme_options = {
 html_title = u'From Stability to Chaos'
 html_static_path = ['../shared/_static', '_static']
 html_css_files = ['custom.css']
+
+# Left sidebar: no sidebar on the frontpage; elsewhere the book navigation
+# plus a dedicated "Exercises" section linking to each chapter's exercises.
+html_sidebars = {
+    "index": [],
+    "**": [
+        "navbar-logo.html",
+        "icon-links.html",
+        "search-button-field.html",
+        "sbt-sidebar-nav.html",
+        "exercises-nav.html",
+    ],
+}
 html_use_smartypants = False
 smartquotes = False
 
