@@ -74,14 +74,8 @@ One could ask why $r$ has to be confined between $[0,4]$. The reason is that in 
 
 ## Graphical analysis of maps
 
-```{subfigure} 2
+```{figure} _static/disc1d/disc1d_logist_cobwebs.png
 :name: fig:disc1d:some_cobwebs_logist
-:align: center
-:subcaptions: below
-
-![ ](_static/disc1d/disc1d_logist_cobweb_r2_7.png)
-![ ](_static/disc1d/disc1d_logist_cobweb_r3_2.png)
-![ ](_static/disc1d/disc1d_logist_cobweb_r3_9.png)
 
 Cobweb graphs of the logistic map for various $r$. (a) $r=2.7$ convergence to a fixed point. (b) $r=3.2$, convergence to a period-2 solution. (c) $r=3.9$, chaos.
 ```
@@ -221,7 +215,6 @@ Clearly the value of $\sigma$ determines the stability of the system, since $\ep
 
 ```{figure} _static/disc1d/disc1d_logist_attractor_r1_5.png
 :name: fig:disc1d:logist_attractor
-:width: 70mm
 
 Series of the logistic map at $r=1.5$ for different initial values $x_0$. The fixed point $x^* = 1/3$ is clearly stable. The fixed point $x^* = 0$ is unstable since a small perturbation is sufficient to escape from it.
 ```

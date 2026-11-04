@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{sphinx}
 \usepackage{tcolorbox}
+\tcbuselibrary{breakable}  % long example/code boxes continue on the next page
 \usepackage{manfnt}
 \usepackage{tikz}
 \usepackage[labelfont=bf]{caption}
@@ -57,6 +58,7 @@
       \def\admonitionbg{mapleyellow}%
     \fi
     \begin{tcolorbox}[
+        breakable,                   % May continue on the next page
         colframe=white,              % No border
         colback=\admonitionbg,       % Per-title background
         sharp corners,               % Square corners

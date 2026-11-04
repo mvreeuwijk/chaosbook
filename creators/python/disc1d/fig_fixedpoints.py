@@ -17,23 +17,22 @@ from scipy.optimize import brentq
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # -- global attraction: many initial conditions at r = 1.5 -------------------
-plt.figure(figsize=(5.0, 3.5))
+plt.figure(figsize=bf.MEDIUM)
 for x0 in [0.01, 0.1, 0.3, 0.5, 0.7, 0.9, 0.99]:
     X = cb.orbit(cb.logistic, x0=x0, n=20, r=1.5)
     plt.plot(range(len(X)), X, "-o", markersize=3)
 plt.axhline(1 / 3, color="gray", linewidth=0.8)
 plt.xlabel("$n$")
 plt.ylabel("$x_n$")
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_attractor_r1_5.png", dpi=150)
-plt.close()
+bf.save(plt.gcf(), OUT / "disc1d_logist_attractor_r1_5.png")
 
 # -- local convergence: superstable (r=2) vs ordinary (r=1.5) ----------------
 for r, xstar in [(2.0, 0.5), (1.5, 1 / 3)]:

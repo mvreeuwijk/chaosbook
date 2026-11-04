@@ -2,7 +2,7 @@
 
 Produces (in python/_static/disc1d/):
   disc1d_logist_series_r{1_5,3_2,3_5,3_9}.png
-  disc1d_logist_cobweb_r{2_7,3_2,3_9}.png
+  disc1d_logist_cobwebs.png               cobwebs, r = 2.7, 3.2, 3.9 (a)-(c)
   disc1d_logist_return_r{1_5,3_2,3_5,3_9}.png
   disc1d_unknownmapping_{series,return}_{henon,noise,sin3map}.png
   interactive/logistic_explorer.html
@@ -17,8 +17,9 @@ from plotly.subplots import make_subplots
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -40,19 +41,19 @@ for r in [1.5, 3.2, 3.5, 3.9]:
     plt.savefig(OUT / f"disc1d_logist_series_r{tag(r)}.png", dpi=150)
     plt.close()
 
-# -- cobwebs -----------------------------------------------------------------
-for r in [2.7, 3.2, 3.9]:
-    fig, ax = plt.subplots(figsize=(4.2, 4.2))
+# -- cobwebs: one figure, (a) r = 2.7, (b) r = 3.2, (c) r = 3.9 -------------
+fig, axs = plt.subplots(1, 3, figsize=(bf.FULL_W, 2.25))
+for ax, r in zip(axs, [2.7, 3.2, 3.9]):
     cb.cobweb(cb.logistic, x0=0.1, n=30, ax=ax, r=r)
+    ax.set_aspect("equal")
     if r == 2.7:
         # the construction lines of the text: from every point on the diagonal
         # straight down to the x-axis, where the next iterate x_k is read off
         X = cb.orbit(cb.logistic, x0=0.1, n=30, r=r)
         for xk in X[1:6]:
-            ax.plot([xk, xk], [0, xk], ":", color="0.4", lw=1.0)
-    plt.tight_layout()
-    plt.savefig(OUT / f"disc1d_logist_cobweb_r{tag(r)}.png", dpi=150)
-    plt.close()
+            ax.plot([xk, xk], [0, xk], ":", color="0.4", lw=0.8)
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc1d_logist_cobwebs.png")
 
 # -- return plots (gray map line + points, transient dropped) ---------------
 for r in [1.5, 3.2, 3.5, 3.9]:
