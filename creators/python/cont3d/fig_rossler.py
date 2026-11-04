@@ -69,7 +69,7 @@ for k, c, tend in cases:
     print("c = %.2f: %d maxima in the second half, distinct values %s"
           % (c, len(xm), np.unique(np.round(xm, 2))[:6] if k < 4 else "(chaos)"))
 
-# -- the attractor itself (c = 4; Maple orientation [-169, 55]) ---------------
+# -- the attractor itself (c = 4; viewing angle as in the original figure) ---------------
 s = run(4.0, 750)
 h = len(s.t) // 2
 attractor3d(*s.y[:, h:], "cont3d_rosslerattractor", azim=-169 + 90 - 40 + 20, elev=30)

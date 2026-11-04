@@ -93,7 +93,7 @@ save("disc2d_circle")
 # -- linear map on the circle: period 3 --------------------------------------
 fig, ax = plt.subplots(figsize=(4.2, 4.2))
 X = cobweb_black(lin, 0.2, 40, ax, Omega=1 / 3)
-# the Maple figure labels x_1, x_2, x_0 (= x_3) on the axes
+# the original figure labels x_1, x_2, x_0 (= x_3) on the axes
 ax.set_xticks([X[1], X[2], X[3]], ["$x_1$", "$x_2$", "$x_0$"])
 ax.set_yticks([X[1], X[2], X[3]], ["$x_1$", "$x_2$", "$x_0$"])
 for a, b in [(1, 2), (2, 3), (3, 4)]:
