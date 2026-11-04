@@ -337,7 +337,7 @@ So how does the Lorenz map help in ruling out stable limit cycles? Sampling the 
 
 ```{math}
 :label: eq:cont3d:stability_lorenzmap
-\sigma^{(m)} = f'(z_1) (f'(z_2)) \ldots f'(z_m).
+\sigma^{(m)} = f'(z_1)\, f'(z_2) \ldots f'(z_m).
 ```
 
 As discussed in section {numref}`sec:disc1d:period_m`, the criterion for stability is given by $| \sigma^{(m)} | < 1$. Now the remarkable observation to be made in {numref}`fig:cont3d:lorenzmap` is that at each $z$, the slope $|f'(z)|$ is larger than one. By {eq}`eq:cont3d:stability_lorenzmap` it is therefore inevitable that $| \sigma^{(m)} | > 1$ for all possible sequences, and hence there are no stable limit cycles possible. In this way Lorenz showed that the Lorenz system indeed produces a deterministic *non-periodic* flow in phase space[^fn1]. In the early sixties, this concept was truly groundbreaking. Associated with the term deterministic were systems, whose long term behavior was either to settle in a fixed point or end up in a limit cycle. Nonperiodic solutions on the other hand, were associated with random forcings which prevented the system from settling in a limit cycle or fixed point. But here was a deterministic system of ordinary differential equations with only three degrees of freedom which produced a flow that *never* repeats itself!
