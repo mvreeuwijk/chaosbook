@@ -16,30 +16,40 @@ the [About page](maple/about.md) for the full story.
 
 ## Read it
 
-- **Online:** <https://mvreeuwijk.github.io/chaosbook/>
-- **PDF:** the book and the Maple cookbook are published alongside the site
-  (`chaosbook.pdf`, `cookbook.pdf`) and rebuilt on every push to `main`.
+- **Online:** Python edition <https://mvreeuwijk.github.io/chaosbook/python/>,
+  Maple edition <https://mvreeuwijk.github.io/chaosbook/>.
+- **PDF:** each edition's book and cookbook are published alongside the site
+  and rebuilt on every push to `main` (Python: `python/chaosbook-python.pdf`,
+  `python/cookbook.pdf`; Maple: `chaosbook.pdf`, `cookbook.pdf`).
+- **Exercise labs:** every chapter of the Python edition has a JupyterLite lab
+  that runs in the browser, with nothing to install
+  (<https://mvreeuwijk.github.io/chaosbook/python/lite/lab/index.html>).
 
 ## Status
 
-- **Maple edition — complete.** The current, canonical edition.
-- **Python edition — in progress.** The [Python cookbook](https://mvreeuwijk.github.io/chaosbook/python/)
-  and the `chaosbook` package are published; the chapters follow. See [ROADMAP.md](ROADMAP.md).
+- **Python edition — complete.** All chapters, the cookbook, the appendices,
+  an exercise lab per chapter, interactive figures, and the small `chaosbook`
+  package (`src/chaosbook/`, tested in `tests/`). It is expected to become the
+  main edition.
+- **Maple edition — complete.** The original edition.
 
-The Maple edition is the canonical edition today. The Python edition is a
-*parallel* implementation inside this same repository, sharing the mathematical
-exposition and exercises while swapping the code, figure-generation workflow
-and notebooks. It is published under `/python/` alongside the Maple site.
+The two editions share the mathematical exposition, figures' content and
+exercises, and differ in the code, the figure-generation workflow and the
+labs. The Python edition is currently published under `/python/` alongside the
+Maple site. See [ROADMAP.md](ROADMAP.md).
 
 ## Layout
 
 The book is a mono-repo: one Sphinx source tree per edition, plus shared
 resources and the figure-generation audit trail.
 
-    maple/     the Maple edition (complete)
-    python/    the Python edition (planned; not yet created)
+    python/    the Python edition (chapters, cookbook notebook, labs in python/lite/)
+    maple/     the Maple edition
     shared/    resources common to every edition (refs.bib, custom.sty, custom.css)
-    creators/  Maple worksheets + porting guide — the source of truth for figures
+    src/       the chaosbook Python package (tests in tests/)
+    creators/  figure sources: creators/python/<chapter>/ scripts for the Python
+               edition, Maple worksheets for the Maple edition, and the
+               porting manifest
     build/     generated HTML/PDF (git-ignored)
 
 Each edition has its own `conf.py` and `index.md` but pulls shared resources
@@ -51,7 +61,9 @@ figure → worksheet mapping.
 
     pip install -r requirements.txt
     make maple                             # HTML -> build/maple/html
-    make python                            # HTML -> build/python/html (once python/ exists)
+    make python                            # HTML -> build/python/html
+    make python-figures                    # regenerate every Python-edition figure
+    make python-lite LITEDIR=<short path>  # the JupyterLite lab layer
 
 PDF (per edition):
 

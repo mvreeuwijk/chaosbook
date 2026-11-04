@@ -43,7 +43,6 @@ extensions = [
     'sphinxcontrib.youtube',  # Note: Install with: pip install sphinxcontrib-youtube
     'sphinx.ext.viewcode',
     'sphinx_design',  # Note: Install with: pip install sphinx-design
-    'sphinxcontrib.proof',  # Note: Install with: pip install sphinxcontrib-proof
     'sphinxcontrib.bibtex',  # Note: Install with: pip install sphinxcontrib-bibtex
     'sphinx_subfigure',  # Note: Install with: pip install sphinx-subfigure
     'sphinx_math_dollar',  # Alternative to fluiddoc.mathmacro for math macros
@@ -147,22 +146,7 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-proof_theorem_types = {
-    "algorithm": "Algorithm",
-    "conjecture": "Conjecture",
-    "corollary": "Corollary",
-    "definition": "Definition",
-    "example": "Example",
-    "lemma": "Lemma",
-    "observation": "Observation",
-    "proof": "Proof",
-    "property": "Property",
-    "theorem": "Theorem",
-    "exercise": "Exercise",
-    "tutorial": "Tutorial"
-}
 
-proof_latex_parent = "chapter"
 
 # -- Options for HTML output ----------------------------------------------
 

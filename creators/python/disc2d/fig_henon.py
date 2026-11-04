@@ -48,11 +48,11 @@ plt.close()
 
 # -- Lyapunov exponents from blocks of N iterations -----------------------------
 def block_exponents(N, P, x0=(0.1, 0.3)):
-    """Per block: eigenvalues of the product of N Jacobians, as in the Maple code.
+    """Per block: eigenvalues of the product of N Jacobians, as in the chapter text.
 
     The larger eigenvalue is taken directly; the smaller one follows from
     det = (-b)^N, which avoids the cancellation a plain eigensolver would
-    suffer (the Maple code used 800 digits for this).
+    suffer (the chapter avoids this with 800-digit arithmetic).
     """
     x = np.array(x0, dtype=float)
     lam1, lam2 = np.zeros(P), np.zeros(P)

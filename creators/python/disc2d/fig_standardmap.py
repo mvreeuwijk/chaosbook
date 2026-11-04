@@ -82,9 +82,9 @@ for name, x0, nmax in [("quasi", (0.4, 0.1), 750), ("chaos", (0.1, 0.1), 75)]:
                [rf"$10^{{{k}}}$" for k in [-8, -6, -4, -2, 0]])
     save(f"disc2d_standardmap_{name}_deviations")
 
-# Lyapunov exponents (QR spectrum) for the initial conditions of the text/Maple
+# Lyapunov exponents (QR spectrum) for the initial conditions of the text
 print("Lyapunov spectra at K=2 (n=20000):")
-for lab, x0 in [("quasi (0.4,0.1)", (0.4, 0.1)), ("Maple chaos (0.05,0.4)", (0.05, 0.4)),
+for lab, x0 in [("quasi (0.4,0.1)", (0.4, 0.1)), ("chaos, alternative IC (0.05,0.4)", (0.05, 0.4)),
                 ("text chaos (0.1,0.1)", (0.1, 0.1))]:
     print("  ", lab, np.round(cb.lyapunov_spectrum(cb.standard_map, jac, x0, n=20000,
                                                    nskip=1000, K=K), 3))
@@ -104,7 +104,7 @@ plt.xlabel("$x$")
 plt.ylabel("$y$")
 save("disc2d_standardmap_phase")
 
-# on a torus (R = 5, r = 2.5 as in the Maple worksheet)
+# on a torus (R = 5, r = 2.5 as in the original figure)
 Rt, rt = 5.0, 2.5
 
 

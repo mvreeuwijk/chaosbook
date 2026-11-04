@@ -10,7 +10,6 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.mathjax',
     'sphinx_design',
-    'sphinxcontrib.proof',
     'sphinxcontrib.bibtex',
     'sphinx_subfigure',
     'sphinx_math_dollar',
@@ -50,21 +49,6 @@ templates_path = ['_templates']
 
 pygments_style = 'sphinx'
 
-proof_theorem_types = {
-    "algorithm": "Algorithm",
-    "conjecture": "Conjecture",
-    "corollary": "Corollary",
-    "definition": "Definition",
-    "example": "Example",
-    "lemma": "Lemma",
-    "observation": "Observation",
-    "proof": "Proof",
-    "property": "Property",
-    "theorem": "Theorem",
-    "exercise": "Exercise",
-    "tutorial": "Tutorial"
-}
-proof_latex_parent = "chapter"
 
 # -- Notebook execution (myst-nb) ------------------------------------------
 # "cache": execute during the Sphinx build, re-running only when the
