@@ -12,6 +12,7 @@ from .bifurcation import bifurcation_diagram
 from .lyapunov import lyapunov, lyapunov_sweep, lyapunov_spectrum
 from .flows import lorenz, threebody, corotating
 from .fractal import chaos_game, box_dimension
+from .fractal import correlation_dimension, generalized_dimensions
 
 __version__ = "0.1.0"
 
@@ -36,6 +37,8 @@ __all__ = [
     "corotating",
     "chaos_game",
     "box_dimension",
+    "correlation_dimension",
+    "generalized_dimensions",
 ]
 from .phaseplane import jacobian, classify_fixed_point, fixed_points_nd, phase_portrait
 from .flows2d import (lotka_volterra, lotka_volterra_invariant,
