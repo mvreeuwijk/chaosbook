@@ -137,7 +137,7 @@ Fortunately it is still possible to get a good understanding of the behaviour of
 
 Fixed points can be readily located by detecting where the graph of $f(x)$ crosses the $x$-axis. Looking at {numref}`fig:cont1d:simplecubic` one notices three fixed points $x_* = -1,\,x_* =0$ and $x_* =1$, respectively. The fixed point $x_* = 0$ differs from the other two because it is unstable. If one starts exactely at $x(0) = x_* = 0$ then also $x(t) = 0$ for all $t>0$. But a slight perturbation will cause $x$ to evolve towards one of the stable fixed points $x_* = \pm 1$.
 
-The set of initial conditions that lead to a certain fixed point is called the *domain of attraction* of that fixed point. In the example the attraction domain of $x_*=1$ is $\langle 0,\infty\rangle$, and that of $x_*=-1$ is $\langle -\infty,0\rangle$. The unstable fixed point $x_*=0$ has no attraction domain by definition.
+The set of initial conditions that lead to a certain fixed point is called the *domain of attraction* of that fixed point. In the example the attraction domain of $x_*=1$ is $\langle 0,\infty\rangle$, and that of $x_*=-1$ is $\langle -\infty,0\rangle$. The domain of attraction of the unstable fixed point $x_*=0$ is just the point $x=0$ itself.
 
 The graphs in {numref}`fig:cont1d:simplecubic`, which represent the numerical solution to {eq}`eq:cont1d:simplecubic` for different initial conditions, were made using the following `maple` commands
 
@@ -204,7 +204,21 @@ Requiring $\epsilon(t) \rightarrow 0$ yields the condition $\sigma < 0$. Hence w
 
 which is consistent with {numref}`fig:cont1d:generic_graphical`.
 
-Let us apply this to example {eq}`eq:cont1d:simplecubic`. The derivative is $f'(x) = 1 - 2x^2$, so for $x_* = \pm 1$ one has $\sigma = -1$, demonstrating that both fixed points are stable. For $x_* = 0$, one gets  $\sigma = 1$ hence it is unstable.
+When $\sigma = 0$ the linear analysis gives no answer, and the higher-order terms decide. For example, $x_*=0$ is stable for $\dot{x}=-x^3$ and unstable for $\dot{x}=x^3$, while for $\dot{x}=x^2$ it attracts from the left and repels to the right. Such a *marginal* fixed point occurs precisely at a bifurcation, as we will see below.
+
+Let us apply this to example {eq}`eq:cont1d:simplecubic`. The derivative is $f'(x) = 1 - 3x^2$, so for $x_* = \pm 1$ one has $\sigma = -2$, demonstrating that both fixed points are stable. For $x_* = 0$, one gets  $\sigma = 1$ hence it is unstable.
+
+(sec:cont1d:potential)=
+### The potential
+
+It is often helpful to write a one-dimensional system as
+
+```{math}
+:label: eq:cont1d:potential
+\dot{x} = f(x) = -\frac{\mathrm{d}V}{\mathrm{d}x}, \qquad V(x) = -\int f(x)\,\mathrm{d}x
+```
+
+where $V$ is called the *potential*. We can then picture $x$ as a particle without inertia that slides down the graph of $V$ and comes to rest at the bottom of a valley. Indeed, $V$ can only decrease in time, since $\dot{V} = V'(x)\,\dot{x} = -\dot{x}^2 \leq 0$. The fixed points are the extrema of $V$: a minimum of $V$ ($V''(x_*) = -\sigma > 0$) is a stable fixed point and a maximum is an unstable one. For the example {eq}`eq:cont1d:simplecubic` we get $V(x) = -\frac{1}{2}x^2 + \frac{1}{4}x^4$: two valleys at $x_*=\pm 1$, separated by a hill at $x_*=0$. When a parameter changes, the shape of $V$ changes too, and a valley can disappear. We will see below that this is what happens in a 'catastrophe'.
 
 ```{subfigure} 2
 :name: fig:cont1d_bifur_pitchfork
@@ -371,7 +385,7 @@ The governing equation for the mean magnetization $x$ of a ferromagnetic system 
 \dot{x} = f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)
 ```
 
-where $m$ represents an externally applied magnetic field. More information about this system can be found in the Infobox below. First we consider the case without external magnetic field $m=0$. In {numref}`fig:cont1d_ferro_pitchfork`(a)-(c) we have plotted $f(x,T)$ for various values of $T$ which reveal three fixed points at $0<T<1$ (two stable and one unstable), two of which are destroyed at $T=1$ leaving one stable fixed points $x_*(T)= 0$ for $T\geq 1$. Such simultaneous creation/annihilation of two fixed points is characteristic of a pitchfork bifurcation. A convenient way to study the parameter dependence graphically is by using the plot command `animate`, see below. {numref}`fig:cont1d_ferro_pitchfork` shows the bifurcation diagram. It is difficult to describe the branches by a simple analytical expression, since they are a solution to
+where $m$ represents an externally applied magnetic field. More information about this system can be found in section {numref}`sec:cont1d:ferromagneticspins` below. First we consider the case without external magnetic field $m=0$. In {numref}`fig:cont1d_ferro_pitchfork`(a)-(c) we have plotted $f(x,T)$ for various values of $T$ which reveal three fixed points at $0<T<1$ (two stable and one unstable), two of which are destroyed at $T=1$ leaving one stable fixed points $x_*(T)= 0$ for $T\geq 1$. Such simultaneous creation/annihilation of two fixed points is characteristic of a pitchfork bifurcation. A convenient way to study the parameter dependence graphically is by using the plot command `animate`, see below. {numref}`fig:cont1d_ferro_pitchfork` shows the bifurcation diagram. It is difficult to describe the branches by a simple analytical expression, since they are a solution to
 
 $$
 x_* = \tanh\left(\frac{x_*}{T}\right)
@@ -505,7 +519,7 @@ Upon substitution $z= x/\sqrt{3}$ and $r=q^2-q$ one obtains $\dot{z} = rz - z^3$
 
 The bifurcation characteristics change substantially when a non-zero external magnetic field is applied. Let us consider $m=0.1$. Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ are shown in {numref}`fig:cont1d_ferro_field_bifurcation`. The solutions to $f(x,T)=0$, i.e. the fixed point branches $x_*(T)$, are shown in {numref}`fig:cont1d_ferro_field_bifurcation`. It was again made with `implicitplot` together with the abovementioned trick to get information on the stability of the branches.
 
-It is interesting to note that the fixed point branches in this case no longer display a pitchfork bifurcation as was the case for $m=0$ (see Fig {numref}`fig:cont1d_ferro_pitchfork`). Rather, the upper branch, $x_*(T) >0$, is no longer involved in any bifurcation. The lower two branches, on the other hand, now display a saddle node bifurcation, compare {numref}`fig:cont1d_bifur_saddle`. Making a similar plot for $m=0.005$ in {numref}`fig:cont1d_ferro_field_bifurcation` shows that as $m\rightarrow0$ the saddle node bifurcation and the upper fixed point branch will 'melt' together, such that one will retrieve a pitchfork bifurcation at $m=0$,
+It is interesting to note that the fixed point branches in this case no longer display a pitchfork bifurcation as was the case for $m=0$ (see Fig {numref}`fig:cont1d_ferro_pitchfork`). Rather, the upper branch, $x_*(T) >0$, is no longer involved in any bifurcation. The lower two branches, on the other hand, now display a saddle node bifurcation, compare {numref}`fig:cont1d_bifur_saddle`. Making a similar plot for $m=0.005$ in {numref}`fig:cont1d_ferro_field_bifurcation` shows that as $m\rightarrow0$ the saddle node bifurcation and the upper fixed point branch will 'melt' together, such that one will retrieve a pitchfork bifurcation at $m=0$.
 
 To locate the critical value of $T_c$ at which the bifurcation takes place, we search the combination of $x_c$ and $T_c$ that satisfy
 
@@ -537,7 +551,7 @@ As a model of a ferromagnet we conceive of a collection of $N$ spins $s_i = -1,1
 h_i = \frac{1}{N} \sum_{j=1}^{N} J_{ij} s_j + m
 ```
 
-where the matrix coefficients $J_{ij}$ express the connection strength between spin $i$ and spin $j$; $m$ represents an externally applied magnetic field (if any). One could for example account for the distance between the spatial location $\mathbf{z}_i$ of the spins by taking $J_{ij} = f(|\mathbf{z}_i-\mathbf{z}_i|)$, but here we study the simplified situation where all connections are equal $J_{ij} =1$.
+where the matrix coefficients $J_{ij}$ express the connection strength between spin $i$ and spin $j$; $m$ represents an externally applied magnetic field (if any). One could for example account for the distance between the spatial location $\mathbf{z}_i$ of the spins by taking $J_{ij} = f(|\mathbf{z}_i-\mathbf{z}_j|)$, but here we study the simplified situation where all connections are equal $J_{ij} =1$.
 
 The state of the system at time instance $t$ is given by the vector $\mathbf{s}$. Given that each spins can attain one of two possible states, there are $2^N$ possibilities for $\mathbf{s}$. If the systems has temperature $T$, the probability of a particular state $\mathbf{s}$ is given by the Boltmann distribution
 
@@ -546,18 +560,18 @@ The state of the system at time instance $t$ is given by the vector $\mathbf{s}$
 P({\mathbf{s}} )\sim \mathrm{e}^{-H(\mathbf{s})/T}
 ```
 
-where $H(\mathbf{s})$ is the Hamiltonian $H(\mathbf{s}) = \frac{1}{2} \sum_{ij} s_i J_{ij} s_j$.
+where $H(\mathbf{s})$ is the Hamiltonian $H(\mathbf{s}) = -\frac{1}{2} \sum_{ij} s_i J_{ij} s_j$.
 
 One can simulate the ferromagnet by 1) randomly picking a spin from the ensemble, say number $i$, 2) calculating the local field $h_i$ by {eq}`eq:cont1d:local_field`, and 3) flipping its state $s_{i} \rightarrow -s_{i}$ with probability $p(s_{i} \rightarrow -s_{i}) \sim \exp(-s_i h_i/T)$. One can prove that the distribution of states given by {eq}`eq:cont1d:boltzmann` will be satisfied if the transition probability is chosen as
 
 ```{math}
 :label: eq:cont1d:flip_chance
-p(s_{i} \rightarrow -s_{i}) = \frac{1}{2} \left[ 1 + \tanh\left( \frac{s_i h_i}{T}\right)\right]
+p(s_{i} \rightarrow -s_{i}) = \frac{1}{2} \left[ 1 - \tanh\left( \frac{s_i h_i}{T}\right)\right]
 ```
 
 In the limit $T\rightarrow 0$ this implies that if $s_i$ is not aligned with its local field $h_i$, that is $h_i<0$ while $s_i = +1$ or $h_i > 0$ while $s_i = -1$, then the probability of flipping $s_i$ limits to 1, such that the spins will get aligned to the local field: $s_i \rightarrow \text{sign}(h_i)$. For $T>0$, however, there is a non-zero probability that $s_i$ and $h_i$ remain disaligned.
 
-The following maple program gives an implemtation that simulates a ferromagnetic system at predefined temperature $T$. In {numref}`fig:cont1d_ferro_spin_evolution` we give an example of the evolution of $N=400$ spins from two different initial states for $T=0.5$ and $T=1.5$. The external magnetic field was set to $m=0$. The initial state (see also the maple code) is created by setting all spins to $+1$ and flipping a preset fraction $F$ of them.
+The following maple program gives an implemtation that simulates a ferromagnetic system at predefined temperature $T$. In {numref}`fig:cont1d_ferro_spin_evolution` we give an example of the evolution of $N=400$ spins from two different initial states for $T=0.5$ and $T=1.5$. The external magnetic field was set to $m=0$. The initial state (see also the maple code) is created by setting all spins to $+1$ (or to $-1$, for the second initial state) and flipping a preset fraction $F$ of them.
 
 ````{admonition} Maple
 :class: maple
@@ -593,7 +607,7 @@ for n from 0 to iter do     # dynamics
 
   i := choose_spin();
   h_i := evalf(add(s[j],j=1..N)/N + m);          # calc local field
-  F := evalf((1 + tanh(s[i]*h_i/T))/2.0);        # calc transition prob
+  F := evalf((1 + tanh(s[i]*h_i/T))/2.0);        # 1 - flip prob
   if( random() > F ) then s[i] := -s[i]; end if; # flip spin or not
 
   if( n mod 200 = 0 ) then
@@ -611,11 +625,37 @@ plot([seq([n/N,x[n]],n=0..iter)],view=[0..iter/N,-1..1],labels=["t","x(t)"]);
 ```
 ````
 
-```{figure} _static/cont1d/cont1d_ferro_spin_T_0_50_a0.png
+```{subfigure} 6
 :name: fig:cont1d_ferro_spin_evolution
-:width: 20%
+:align: center
+:gap: 4px
 
-Evolution of the spin dynamics from two different initial states for two temperatures. The corresponding mean states are displayed in {numref}`fig:cont1d_ferro_spin_mean_state`.
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a0.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a1.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a2.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a3.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a4.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a5.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b0.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b1.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b2.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b3.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b4.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b5.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a0.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a1.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a2.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a3.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a4.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a5.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b0.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b1.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b2.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b3.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b4.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b5.png)
+
+Evolution of the spin dynamics from two different initial states for two temperatures ($N=20\times 20$ spins, $m=0$; white is $s_i=+1$, black is $s_i=-1$). From left to right the columns show the state at $t=n/N=0$, $2.5$, $5$, $7.5$, $10$ and $12.5$. From top to bottom the rows show: $T=0.5$ starting from mostly $+1$ spins; $T=0.5$ starting from mostly $-1$ spins; $T=1.5$ starting from mostly $+1$ spins; $T=1.5$ starting from mostly $-1$ spins. The corresponding mean states are displayed in {numref}`fig:cont1d_ferro_spin_mean_state`.
 ```
 
 To give a macroscopic description of the system, it is useful to calculate at each instance the mean magnetization of the spin system
@@ -633,11 +673,15 @@ which yields a value $\in [-1,1]$. In the limit $N\rightarrow \infty$ one can de
 
 In {numref}`fig:cont1d_ferro_spin_mean_state` we display the evolution of $x$ for the cases corresponding to {numref}`fig:cont1d_ferro_spin_evolution`. Apart from so-called finite size fluctuations (i.e. $N$ is not large enough), the evolution resembles that of {numref}`fig:cont1d:ferro_pitch_evolution` reasonably well. An even better match will be obtained when the number of spins $N$ is further increased.
 
-```{figure} _static/cont1d/cont1d_ferro_spin_T_0_50.png
+```{subfigure} 2
 :name: fig:cont1d_ferro_spin_mean_state
-:width: 47%
+:align: center
+:subcaptions: below
 
-Evolution of the mean state $x$ as a function of time $t=n/N$ for the cases shown in {numref}`fig:cont1d_ferro_spin_evolution`. Compare also with {numref}`fig:cont1d:ferro_pitch_evolution`.
+![ ](_static/cont1d/cont1d_ferro_spin_T_0_50.png)
+![ ](_static/cont1d/cont1d_ferro_spin_T_1_50.png)
+
+Evolution of the mean state $x$ as a function of time $t=n/N$ for the cases shown in {numref}`fig:cont1d_ferro_spin_evolution`. Compare also with {numref}`fig:cont1d:ferro_pitch_evolution`. (a) $T=0.5$. (b) $T=1.5$.
 ```
 
 (sec:cont1d:catastrophes)=
@@ -736,7 +780,7 @@ Setting $\mathrm{d} T/\mathrm{d} t$ to zero and solving for $T$ one obtains the 
 T_{*} = \left[ \frac{(1-a)S}{4\epsilon \sigma}\right]^{1/4}
 ```
 
-With an average albedo of $a=0.3$ and an emissivity of $\epsilon = 0.61$, one finds $T^*\simeq 289$ K, close to the current global average temperature. This simple model shows the effect of increased emissions of greenhouse gases as this lowers $\epsilon$ and hence increases the value of $T^*$; see figure {numref}`fig:cont1d:climate`. Note that the value of the parameters, i.e. $a,\epsilon$ and $S$ uniquely determine the stationary state $T^*$ (there is only one possible equilibrium). This is a stable equilibrium since the derivative in the fixed point $T_*$ is negative
+With an average albedo of $a=0.3$ and an emissivity of $\epsilon = 0.61$, one finds $T_*\simeq 289$ K, close to the current global average temperature. This simple model shows the effect of increased emissions of greenhouse gases as this lowers $\epsilon$ and hence increases the value of $T_*$; see figure {numref}`fig:cont1d:climate`. Note that the value of the parameters, i.e. $a,\epsilon$ and $S$ uniquely determine the stationary state $T_*$ (there is only one possible equilibrium). This is a stable equilibrium since the derivative in the fixed point $T_*$ is negative
 
 $$
 f'(T_{*}) = -4\epsilon \sigma T_{*}^{3}/\beta < 0
@@ -807,7 +851,7 @@ fsolve({f(T)=0,df(T)=0},{T=250,epsilon=0.4});
 ````
 
 ```{table} Parameter values in the simple climate model.
-:name: tab:cont1d:
+:name: tab:cont1d:climate
 
 | symbol | value | unit |
 | --- | --- | --- |

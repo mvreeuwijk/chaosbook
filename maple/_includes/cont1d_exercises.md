@@ -78,7 +78,7 @@ c) Specify the attraction domains of each these fixed points.
 
 d) Plot $f_{r}(x)$ for different values of $r$ and determine from the plots how many bifurcations the system undergoes within the range $r\in [-10,10]$? Give a qualitative characterisation the type of bifurcations (saddle-node, transcritical, etc).
 
-e) Prove analytically that the system undergoes a bifurcation when the stable fixed-points have the values $x_{1}^{*} =-1 - \sqrt{2}/2$, or $x_{2}^{*}=-1+\sqrt{2}/2$. Calculate the critical values $r_1$ and $r_2$ corresponding to the bifurcations at, respectively, $x_{1}^{*}$ and $x_{2}^{*}$.
+e) Prove analytically that the system undergoes a bifurcation when the (marginally stable) fixed points have the values $x_{1}^{*} =-1 - \sqrt{2}/2$, or $x_{2}^{*}=-1+\sqrt{2}/2$. Calculate the critical values $r_1$ and $r_2$ corresponding to the bifurcations at, respectively, $x_{1}^{*}$ and $x_{2}^{*}$.
 
 f) Can this system exhibit hysteresis? If so, give a detailed description of the hysteresis cycle, for example by drawing a sketch (pen and paper) or by a numerical method.
 
@@ -108,7 +108,7 @@ a) Calculate all fixed points and their stability for $\theta = 0^\circ$, $\thet
 
 b) Give a (concise) physical interpretation of the results of (a).
 
-c) Determine and plot a potential function $V(T)$ for $\theta = 45^\circ$.
+c) Determine and plot a potential function $V(T)$ (see {eq}`eq:cont1d:potential`) for $\theta = 45^\circ$.
 
 d) Plot the time evolution of the temperature at $\theta = 45^\circ$ for two initial conditions: $T(0) = -100^\circ\,C$ and $T(0)=+100^\circ\,C$. Take $t_\infty = 10^{-6}$ for the maximum time (recall that time was rescaled).
 
