@@ -1,9 +1,10 @@
 """Blue-sky (global) bifurcation of a limit cycle.
 
-The figures follow the book's polar form  r' = -mu r - r^3 + r^5,  theta' = -1
-(the Cartesian system of the chapter with time reversed; see the note in the
-chapter), with the radial equation as used for Fig. (c) and the
-fixed-point diagram of Fig. (d).
+The figures follow the book's polar form  r' = -mu r - r^3 + r^5,  theta' = 1,
+i.e. the Cartesian system as printed in the chapter,
+    x' = -y - x (mu + r^2 - r^4),   y' = x - y (mu + r^2 - r^4),
+with the radial equation as used for Fig. (c) and the fixed-point diagram of
+Fig. (d).
 
 Produces (in python/_static/cont2d/):
   cont2d_global_phase1.png / cont2d_global_phase2.png  mu = -0.26 / -0.24, from (0.15, 0)
@@ -25,10 +26,10 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 
 def bluesky(t, s, mu=-0.24):
-    """Cartesian form of the model, with the sign of time as drawn in the figures."""
+    """Cartesian form of the model as printed in the chapter: r' = -mu r - r^3 + r^5, theta' = 1."""
     x, y = s
     q = mu + x * x + y * y - (x * x + y * y) ** 2
-    return [-(-y + x * q), -(x + y * q)]
+    return [-y - x * q, x - y * q]
 
 
 def escaped(t, s, mu):

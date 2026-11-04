@@ -48,7 +48,7 @@ The prey and predator populations are $N$ and $P$, respectively. In absence of p
 There are four parameters in the problem above, which can be reduced to one when the equations are made dimensionless. Indeed, with the change of variables
 
 $$
-x = \frac{r_2}{r_1} N, \quad y=\frac{\theta_1}{r_1}, \quad t' = r_1 t, \quad \alpha = \frac{\theta_1}{r_1}
+x = \frac{r_2}{r_1} N, \quad y=\frac{\theta_1}{r_1} P, \quad t' = r_1 t, \quad \alpha = \frac{\theta_2}{r_1}
 $$
 
 the system simplifies to
@@ -116,7 +116,7 @@ The vector $\mathbf{x}$ is called the *state vector* of the system. The space sp
 :name: fig:cont2d:phasespace
 :width: 65mm
 
-The system {eq}`eq:cont2d:vecx` cases the state vector $\mathbf{x}$ to change at a rate $\mathbf{f}$, thereby moving it though the phase space and tracing out a unique trajectory.
+The system {eq}`eq:cont2d:vecx` causes the state vector $\mathbf{x}$ to change at a rate $\mathbf{f}$, thereby moving it though the phase space and tracing out a unique trajectory.
 ```
 
 The phase space is an important concept in the study of dynamical systems, because it allows for a geometrical perspective on the system. Indeed, by comparing equation {eq}`eq:cont2d:vecx` to that describing a weightless particle (tracer) in a flow field $\mathbf{u}(x,y)$
@@ -215,7 +215,7 @@ $$
 \sigma^2 - T \sigma + D = 0
 $$
 
-Where $T=a+c$ and $D=ac-bd$ are the trace and determinant of $A$, respectively. The roots of this second order polynomial are given by
+Where $T=a+d$ and $D=ad-bc$ are the trace and determinant of $A$, respectively. The roots of this second order polynomial are given by
 
 $$
 \sigma_{1,2} = \frac{1}{2} \left( T \pm \sqrt{T^2 - 4 D} \right)
@@ -223,21 +223,23 @@ $$
 
 When the eigenvalues are real ($T^2 - 4 D > 0$), three cases can be distinguished:
 
-- $\sigma_1 < 0$ and $\sigma_2 < 0$. The fixed point is a *stable node* which all trajectories converge to. If $\sigma_1 = \sigma_2$, the system will move to the fixed point in straight lines. If $\sigma_1>\sigma_2$, the trajectories will first move in the $y_1$ direction until $y_1$ is small enough;
-- $\sigma_1 > 0$ and $\sigma_2 < 0$. This is a *saddle*. The fixed point attracts in the $y_2$ direction, but repels in the $y_1$ direction.
+- $\sigma_1 < 0$ and $\sigma_2 < 0$. The fixed point is a *stable node* which all trajectories converge to. If $\sigma_1 = \sigma_2$ (and $A$ is diagonalizable), the system will move to the fixed point in straight lines. If $\sigma_2 < \sigma_1 < 0$, the $\tilde{y}$ component decays fastest and the trajectories approach the fixed point along the $\tilde{x}$ direction ({numref}`fig:cont2d:classification`);
+- $\sigma_1 > 0$ and $\sigma_2 < 0$. This is a *saddle*. The fixed point attracts in the $\tilde{y}$ direction, but repels in the $\tilde{x}$ direction.
 - $\sigma_1>0$ and $\sigma_2 >0$. The fixed point is an *unstable node*.
 
-When $T^2 - 4 D < 0$. the eigenvalues will be imaginary, in which case oscillatory motion is to be expected. As the coefficients $a$, $b$, $c$ and $d$ are real, the eigenvalues will be a conjugate pair: if $\sigma_1 = \alpha + \beta i$ then $\sigma_2 = \alpha - \beta i$, or simply $\sigma_1^* = \sigma_2$. The character of the system is then determined by $\text{Re}( \sigma_1 ) = \text{Re}( \sigma_2 )  = \alpha$; the imaginary part determines the oscillation frequency only. Three cases can be distinguished:
+When $T^2 - 4 D = 0$ the two eigenvalues coincide, $\sigma_1 = \sigma_2 = T/2$. In general $A$ is then not diagonalizable (the case we disregarded above) and the fixed point is called a *degenerate node*.
+
+When $T^2 - 4 D < 0$. the eigenvalues will be complex, in which case oscillatory motion is to be expected. As the coefficients $a$, $b$, $c$ and $d$ are real, the eigenvalues will be a conjugate pair: if $\sigma_1 = \alpha + \beta i$ then $\sigma_2 = \alpha - \beta i$, or simply $\sigma_1^* = \sigma_2$. The character of the system is then determined by $\text{Re}( \sigma_1 ) = \text{Re}( \sigma_2 )  = \alpha$; the imaginary part determines the oscillation frequency only. Three cases can be distinguished:
 
 - $\text{Re}( \sigma_1 ) = \text{Re}( \sigma_2 ) < 0$. The fixed point is an attractor, and trajectories describe a *stable spiral*;
-- $\text{Re}( \sigma_1 ) = \text{Re}( \sigma_2 ) = 0$. The system has two identical eigenvalues and the system is therefore not diagonalizable. In this case, the fixed point is a *center*;
+- $\text{Re}( \sigma_1 ) = \text{Re}( \sigma_2 ) = 0$. The eigenvalues are purely imaginary, $\sigma_{1,2} = \pm \beta i$, and the motion is a pure oscillation. In this case, the fixed point is a *center*;
 - $\text{Re}( \sigma_1 ) = \text{Re}( \sigma_2 ) > 0$. The system has an repellor, and trajectories describe a *unstable spiral*;
 
 ```{figure} _static/cont2d/cont2d_phase_r1.png
 :name: fig:cont2d:classification
 :height: 30mm
 
-The behaviour of a dynamic system in the neigbourhood of a fixed point.
+Trajectories in the neighbourhood of a stable node with $\sigma_2 < \sigma_1 < 0$ (eigendirections along the axes): the fast $\tilde{y}$ component decays first, after which the trajectories approach the fixed point along the slow $\tilde{x}$ direction.
 ```
 
 ```{figure} _static/cont2d/cont2d_classification.png
@@ -363,7 +365,7 @@ $$
 \tilde{\delta}(t) = \tilde{\delta}(0) \,\text{e}^{\textstyle \sigma_{1} t}\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\, \tilde{\epsilon}(t) = \tilde{\epsilon}(0)\,\text{e}^{\textstyle \sigma_{2} t}
 $$
 
-where $\tilde{\delta}$ and $\tilde{\epsilon}$ denote the coordinates in the the eigendirections and $\sigma_{1,2}$ are the eigenvalues of $J(x^*, y^*)$. The different types of fixed points are exactly those presented in {numref}`fig:cont2d:classification`, the only difference with linear systems being that the behaviour is limited to the local neighborhood of the fixed point.
+where $\tilde{\delta}$ and $\tilde{\epsilon}$ denote the coordinates in the the eigendirections and $\sigma_{1,2}$ are the eigenvalues of $J(x^*, y^*)$. The different types of fixed points are exactly those presented in {numref}`fig:cont2d:classification2`, the only difference with linear systems being that the behaviour is limited to the local neighborhood of the fixed point.
 
 The following `maple` fragment determines the stability of the two fixed points of the Lotka-Volterra equations {eq}`eq:cont2d:lv_x`,{eq}`eq:cont2d:lv_x`:
 
@@ -389,7 +391,7 @@ $$
 \end{aligned}
 $$
 
-As $\alpha>0$, the first fixed point is a *saddle* and the second a *center* (see {numref}`fig:cont2d:classification`).
+As $\alpha>0$, the first fixed point is a *saddle* and the second a *center* (see {numref}`fig:cont2d:classification2`).
 
 In non-linear systems, the stability of centers is fragile, as they are not attracting. Their behaviour can be easily destroyed by the nonlinearity. In the case of the Lotka-Volterra equations it is straightforward to show that the solutions are periodic because the system has a *constant of motion*
 
@@ -492,7 +494,7 @@ $$
 \frac{\partial H}{\partial x} = \frac{\partial H}{\partial y} = 0
 $$
 
-i.e. where the energy surface $H$ is entirely flat. As discussed, the trajectories of conservative systems are constrained to isolevels in $H$. If $H$ has a local minimum (i.e. a fixed point), as plotted in {numref}`fig:cont2d:esurface`(a), the orbits will be closed and circle around the fixed point ({numref}`fig:cont2d:esurface`(a), black lines). When there is a local maximum in $H$, the contours of $H$ will look identical to {numref}`fig:cont2d:esurface`(a), and we also expect closed periodic orbits. Note that the fixed point is non-attracting. When the fixed point is a saddle ({numref}`fig:cont2d:esurface`(b), black lines), the trajectories will escape the neigborhood of the fixed point along one of the diagonals.
+i.e. where the energy surface $H$ is entirely flat. As discussed, the trajectories of conservative systems are constrained to isolevels in $H$. If $H$ has a local minimum (i.e. a fixed point), as plotted in {numref}`fig:cont2d:esurface`(a), the orbits will be closed and circle around the fixed point ({numref}`fig:cont2d:esurface`(b), black lines). When there is a local maximum in $H$, the contours of $H$ will look identical to {numref}`fig:cont2d:esurface`(b), and we also expect closed periodic orbits. Note that the fixed point is non-attracting. When the fixed point is a saddle ({numref}`fig:cont2d:esurface`(c, d), black lines), the trajectories will escape the neigborhood of the fixed point along one of the diagonals.
 
 ```{subfigure} 2
 :name: fig:cont2d:esurface
@@ -500,9 +502,11 @@ i.e. where the energy surface $H$ is entirely flat. As discussed, the trajectori
 :subcaptions: below
 
 ![ ](_static/cont2d/cont2d_gradient_ell1.png)
+![ ](_static/cont2d/cont2d_gradient_ell2.png)
 ![ ](_static/cont2d/cont2d_gradient_hyp1.png)
+![ ](_static/cont2d/cont2d_gradient_hyp2.png)
 
-. Typical trajectories for conservative and gradient systems for a surface $S$ ($H$, $V$ for conservative and gradient systems, respectively).. Left figures: 3-D plot of $S$. Right figures: isolines of $S$ (black lines; trajectories for conservative systems) and $-\nabla S$ (red vectors; direction field for gradient systems). (a) Conservative systems will circle around the fixed point, whereas gradient systems will find their way to the minimum. (b) Conservative systems escape to infinity across one of the diagonals, whereas gradient systems escape the neigborhood of the fixed point along one of the axes. (a) Local minimum. (b) Saddle.
+Typical trajectories for conservative and gradient systems for a surface $S$ ($H$ and $V$ for conservative and gradient systems, respectively). Left column: 3-D plot of $S$. Right column: isolines of $S$ (black lines; trajectories for conservative systems) and $-\nabla S$ (red vectors; direction field for gradient systems). Top row: local minimum; conservative systems circle around the fixed point, whereas gradient systems find their way to the minimum. Bottom row: saddle; conservative systems escape to infinity across one of the diagonals, whereas gradient systems escape the neigborhood of the fixed point along one of the axes. (a) Local minimum, surface. (b) Local minimum, isolines. (c) Saddle, surface. (d) Saddle, isolines.
 ```
 
 ````{admonition} Example
@@ -590,7 +594,7 @@ $$
 \frac{\partial V}{\partial x} = \frac{\partial V}{\partial y} = 0
 $$
 
-By definition, the gradient of a function points in the direction of steepest ascent and is perpendicular to the isolines of $V$. Hence, if $V$ has a local minimum, the system {eq}`eq:cont2d:gradientsystem` will travel towards the fixed point following the steepest path down ({numref}`fig:cont2d:esurface`(a), red arrows). If the fixed point is a saddle, the system will escape the neigbourhood of the fixed point ({numref}`fig:cont2d:esurface`(b)).
+By definition, the gradient of a function points in the direction of steepest ascent and is perpendicular to the isolines of $V$. Hence, if $V$ has a local minimum, the system {eq}`eq:cont2d:gradientsystem` will travel towards the fixed point following the steepest path down ({numref}`fig:cont2d:esurface`(b), red arrows). If the fixed point is a saddle, the system will escape the neigbourhood of the fixed point ({numref}`fig:cont2d:esurface`(d), red arrows).
 
 Now, we ask ourselves the question: how does $V$ change as a function of time for a specific trajectory $\mathbf{x}(t)$ governed by {eq}`eq:cont2d:gradientsystem`?
 
@@ -598,7 +602,7 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}t} V(\mathbf{x}(t)) = \nabla V \cdot \dot{\mathbf{x}} = - | \nabla V |^2
 $$
 
-This is a powerful result: $| \nabla V |^2$ is negative by definition and therefore $\dot{V} \le 0$ for *all* $\mathbf{x}$. Furthermore, $\dot{V} = 0$ implies that $| \nabla V | = 0$ and therefore indicates that $\dot{V} = 0$ occurs only at a fixed point $\mathbf{x} = \mathbf{x}^*$. If we further constrain ourselves to potential functions $V$ that are single-valued, the only possible long-time behavior (assuming that the solution remains bounded) is that the solution is attracted to a fixed point[^fn3].
+This is a powerful result: $| \nabla V |^2$ is positive by definition and therefore $\dot{V} \le 0$ for *all* $\mathbf{x}$. Furthermore, $\dot{V} = 0$ implies that $| \nabla V | = 0$ and therefore indicates that $\dot{V} = 0$ occurs only at a fixed point $\mathbf{x} = \mathbf{x}^*$. If we further constrain ourselves to potential functions $V$ that are single-valued, the only possible long-time behavior (assuming that the solution remains bounded) is that the solution is attracted to a fixed point[^fn3].
 
 One can verify whether the functions $f(x,y)$ and $g(x, y)$ comprise a gradient system by checking if
 
@@ -627,28 +631,28 @@ $$
 J(x,y) = \left( \begin{array}{cc} -12 a x^2 & 0 \\ 0 & -12 b y^2 \end{array} \right)
 $$
 
-and the eigenvalues at the fixed point are $\sigma_1 = \sigma_2 = 0$. It is therefore not possible to decide the stability of the centers using the linearization technique. However, because the fixed point comprises a local minimum in the potential function $V$ because $a>0$ and $b>0$, we conclude that the fixed point is stable.
+and the eigenvalues at the fixed point are $\sigma_1 = \sigma_2 = 0$. It is therefore not possible to decide the stability of the fixed point using the linearization technique. However, because the fixed point comprises a local minimum in the potential function $V$ because $a>0$ and $b>0$, we conclude that the fixed point is stable.
 ````
 
 ````{admonition} Example
 :class: example
 
-Situations in which $V$ is multi-valued are not as exotic as it may seem at first sight. In fact one can find a classical example in the velocity field induced by a point vortex in an incompressible and irrotational fluid (i.e. a *potential flow*), in which case $V$ is given by {cite:p}`White1999,Batchelor2000`
+Situations in which $V$ is multi-valued are not as exotic as it may seem at first sight. In fact one can find a classical example in the velocity field induced by a point vortex in an incompressible and irrotational fluid (i.e. a *potential flow*) {cite:p}`White1999,Batchelor2000`. In a potential flow the velocity is the gradient of a velocity potential, $\mathbf{u} = \nabla \phi$, and for a point vortex $\phi$ is proportional to the polar angle. A weightless particle advected by the flow therefore obeys the gradient system {eq}`eq:cont2d:gradientsystem` with $V = -\phi$. Choosing the strength of the vortex such that
 
 $$
 V = \tan^{-1} \left( \frac{y}{x} \right)
 $$
 
-This is a fundamental building solution which is used e.g. to determine the lift on an airfoil {cite}`White1999` Assume that a weightless particle which is advected by the point vortex, in which case {eq}`eq:cont2d:gradientsystem` is given by
+we obtain a fundamental building solution which is used e.g. to determine the lift on an airfoil {cite}`White1999`. The particle paths follow from {eq}`eq:cont2d:gradientsystem` as
 
 $$
 \begin{aligned}
-\dot{x} &= -\frac{y}{\sqrt{x^2 + y^2}} \\
- \dot{y} &= \frac{x}{\sqrt{x^2 + y^2}}
+\dot{x} &= \frac{y}{x^2 + y^2} \\
+ \dot{y} &= -\frac{x}{x^2 + y^2}
 \end{aligned}
 $$
 
-If we were to simulate the system above using `maple`, we would see that the solutions describe closed orbits in phase space. This is a direct consequence of the multi=valued nature of $V$. Indeed note that one of the transformation rules for the polar coordinates is $\tan{\theta} = y/x$ and therefore $V = \theta$. This function is therefore similar to a spiral staircase, and the system will go round and round indefinitely. This can also be seen when expressing the equations of motion in polar coordinates which results in $\dot{r}=0$ and $\dot{\theta} = r^{-1}$. As the angular velocity $u_\theta=r \dot{\theta}=1$ is constant, we conclude that the vortex causes all the particles to move at the same velocity, or in our analogy all particles travel down the spiral staircase at the same velocity.
+If we were to simulate the system above using `maple`, we would see that the solutions describe closed orbits in phase space. This is a direct consequence of the multi=valued nature of $V$. Indeed note that one of the transformation rules for the polar coordinates is $\tan{\theta} = y/x$ and therefore $V = \theta$. This function is therefore similar to a spiral staircase, and the system will go round and round indefinitely. This can also be seen when expressing the equations of motion in polar coordinates which results in $\dot{r}=0$ and $\dot{\theta} = -r^{-2}$. The particle therefore circles the vortex with velocity $u_\theta=r \dot{\theta}=-1/r$, which is the familiar velocity field of a point vortex: all particles travel down the spiral staircase, and those close to the axis do so fastest.
 ````
 
 ## Limit cycles
@@ -658,9 +662,9 @@ A new animal in the “zoo” of possibilities in nonlinear ODES is the *limit c
 A limit cycle has two defining properties:
 
 - it is a closed orbit in the phase space;
-- it is an attractor (or both a repellor and an attractor in exceptional cases).
+- it is *isolated*: neighbouring trajectories are not closed, but spiral towards or away from it.
 
-Clearly, the closed orbits which occur for conservative systems such as the Lotka-Volterra equation are *not* limit cycles because they violate property 2.
+A limit cycle is *stable* when neighbouring trajectories spiral towards it (it is then an attractor), *unstable* when they spiral away from it (a repellor), and *half-stable* in the exceptional case that they approach on one side and recede on the other. Clearly, the closed orbits which occur for conservative systems such as the Lotka-Volterra equation are *not* limit cycles because they violate property 2: they come in continuous families, and the neighbouring orbits are closed as well.
 
 An example of a limit cycle is shown in {numref}`fig:cont2d:limit:phase`. Two timeseries $x(t)$ starting with different initial conditions are plotted which were generated by numerically integrating the system
 
@@ -668,7 +672,7 @@ An example of a limit cycle is shown in {numref}`fig:cont2d:limit:phase`. Two ti
 :label: eq:cont2d:limit_x
 \begin{aligned}
 \dot{x} &= -y + \frac{x}{4 \sqrt{x^2 + y^2}} (1-x^2-y^2) \\
- \dot{y} &= x + \frac{x}{4 \sqrt{x^2 + y^2}} (1-x^2-y^2)
+ \dot{y} &= x + \frac{y}{4 \sqrt{x^2 + y^2}} (1-x^2-y^2)
 \end{aligned}
 ```
 
@@ -691,7 +695,7 @@ The `maple` fragment used to create {numref}`fig:cont2d:limit:phase` is presente
 ```{code-block} maple
 restart; with(LinearAlgebra): with(DEtools):
 f := (x,y) -> -y + x/(4*sqrt(x^2+y^2)) * (1-x^2-y^2);
-g := (x,y) ->  x + x/(4*sqrt(x^2+y^2)) * (1-x^2-y^2);
+g := (x,y) ->  x + y/(4*sqrt(x^2+y^2)) * (1-x^2-y^2);
 DE1 := diff(x(t),t) = f(x(t), y(t)):
 DE2 := diff(y(t),t) = g(x(t), y(t)):
 DE := DE1, DE2;
@@ -700,7 +704,7 @@ ic2 := x(0) = 2, y(0) = 0;
 tstart:=0; tend:= 30;
 phaseportrait([DE], [x(t), y(t)], t = tstart .. tend, [[ic1],[ic2]],
               stepsize = .1, x = -2 .. 2, y = -2 .. 2,
-              color = black, linecolor = [red, green]);
+              color = black, linecolor = [red, blue]);
 
 ```
 ````
@@ -754,9 +758,9 @@ $$
 \sigma_{1,2} = \frac{1}{2} (\mu \pm \sqrt{\mu^2 - 4})
 $$
 
-which indicates that the fixed point is an unstable spiral for $0 < \mu < 2$. Hence, the origin is a repellor which an indication for the possible existence of a limit cycle (see also sections {numref}`sec:cont2d:nolimits` and {numref}`sec:cont2d:nochaos`). For $\mu > 2$ the fixed point becomes an unstable saddle.
+which indicates that the fixed point is an unstable spiral for $0 < \mu < 2$. Hence, the origin is a repellor which an indication for the possible existence of a limit cycle (see also sections {numref}`sec:cont2d:nolimits` and {numref}`sec:cont2d:nochaos`). For $\mu > 2$ both eigenvalues are real and positive, and the fixed point becomes an unstable node.
 
-The van der Pol equation is a *Liénard system*, which is a class of dynamical systems which have a stable limit cycle surrounding the origin of the phase space. See [Strogatz1994, Verhulst1996] for more information.
+The van der Pol equation is a *Liénard system*, which is a class of dynamical systems which have a stable limit cycle surrounding the origin of the phase space. See {cite:p}`Strogatz1994,Verhulst1996` for more information.
 ````
 
 (sec:cont2d:nolimits)=
@@ -770,10 +774,12 @@ Gradient systems cannot have limit cycles because $\mathrm{d}V/\mathrm{d}t\le0$ 
 
 A *Lyapunov function* is similar to a potential functions of gradient systems, but are more widely applicable because the restrictions on $V$ are much weaker. They are particularly useful to rule out the existence of limit cycles, but can also be used to demonstrate the stability of fixed points.
 
-A Lyapunov function $V$ for a dynamical system is each function that satisfies the properties
+A Lyapunov function $V$ for a fixed point $\mathbf{x}^*$ of a dynamical system is each function that satisfies the properties
 
-- $V(\mathbf{x}^*) = 0$ and $V(\mathbf{x}) > 0$ for almost all other $\mathbf{x}$;
-- $\mathrm{d}V/\mathrm{d}t<0$ for almost all $\mathbf{x}$.
+- $V(\mathbf{x}^*) = 0$ and $V(\mathbf{x}) > 0$ for all other $\mathbf{x}$;
+- $\mathrm{d}V/\mathrm{d}t \le 0$ for all $\mathbf{x}$.
+
+If the second property holds with a strict inequality for all $\mathbf{x} \ne \mathbf{x}^*$, every trajectory moves to ever lower values of $V$ and ends up in $\mathbf{x}^*$: the fixed point attracts all trajectories, and closed orbits are impossible. If $\mathrm{d}V/\mathrm{d}t = 0$ at other points as well, the same conclusions hold as long as no trajectory other than the fixed point itself remains within the set where $\mathrm{d}V/\mathrm{d}t = 0$. This extension is known as *LaSalle's invariance principle*. If a trajectory did remain in that set, we could only conclude that the fixed point is stable, i.e. that trajectories cannot move away from it.
 
 Gradient system satisfies these requirements (see section {numref}`sec:cont2d:gradient`), as long as he potential function $V$ is single-valued and $V(\mathbf{x})>0$ for all values of $\mathbf{x}$ except the fixed point (i.e. the trajectories cannot escape to infinity). However, Lyapunov functions are applicable to a much wider range of problems because it does not have the constraint that the dynamics are governed by $V$, unlike gradient systems,
 
@@ -791,15 +797,23 @@ $$
 \end{aligned}
 $$
 
-where $x$ is the displacement, $y$ the velocity, $k$ is the spring coefficient and $m$ is the mass. The total energy per unit mass in this system is $\frac{1}{2} \frac{k}{m} x^2 + \frac{1}{2} y^2$. Let us consider whether $V=\frac{1}{2} \frac{k}{m} x^2 + \frac{1}{2} y^2$ is a suitable Lyapunov function. First, $V(\mathbf{x}^*)=0$ which is easily shown since the only stable fixed point is $(0,0)$. Furthermore $V(\mathbf{x}) > 0$ for all $\mathbf{x} \ne \mathbf{x}^*$. Lastly,
+where $x$ is the displacement, $y$ the velocity, $k$ is the spring coefficient and $m$ is the mass. The total energy per unit mass in this system is $\frac{1}{2} \frac{k}{m} x^2 + \frac{1}{2} y^2$. Let us consider whether $V=\frac{1}{2} \frac{k}{m} x^2 + \frac{1}{2} y^2$ is a suitable Lyapunov function. First, $V(\mathbf{x}^*)=0$ which is easily shown since the only fixed point is $(0,0)$. Furthermore $V(\mathbf{x}) > 0$ for all $\mathbf{x} \ne \mathbf{x}^*$. Lastly,
 
 $$
 \frac{\mathrm{d}V}{\mathrm{d}t} = \mathbf{f} \cdot \nabla V = y \frac{k}{m} x + \left(-\frac{k}{m} x - \frac{\mu}{m} |y| y \right) y = -\frac{\mu}{m} |y| y^2
 $$
 
-which is $\le 0$ everywhere and therefore, $V$ is a Lyapunov function.
+which is $\le 0$ everywhere and therefore, $V$ is a Lyapunov function. Note that $\mathrm{d}V/\mathrm{d}t = 0$ on the entire $x$-axis and not only in the fixed point. On the $x$-axis we have $\dot{y} = -(k/m) x \ne 0$ for $x \ne 0$, so trajectories cross the axis and do not remain on it: the only trajectory that stays within the set $\mathrm{d}V/\mathrm{d}t = 0$ is the fixed point itself.
 
-Based on the fact that this system has a Lyapunov function, we conclude that no limit cycles exist. Furthermore, we conclude that $\mathbf{x}^*=0$ is a stable node.
+Based on the fact that this system has a Lyapunov function, we conclude that no limit cycles exist and that all trajectories end up in $\mathbf{x}^*=0$. Note that the linearization would not have told us this. The Jacobian at the origin has eigenvalues $\sigma_{1,2} = \pm i \sqrt{k/m}$ (the damping term $|y| y$ has no linear part), which suggests a center. The nonlinear damping makes the fixed point attracting, and this is exactly the kind of information that a Lyapunov function provides.
+
+There is one more way of ruling out closed orbits, which relies on neither a potential nor a Lyapunov function. Let $\mathbf{x}(t)$ be a closed orbit and $A$ the region of the phase space it encloses. Using Green's theorem
+
+$$
+\iint_A \nabla \cdot \mathbf{f} \, \mathrm{d}A = \oint \mathbf{f} \cdot \mathbf{n} \, \mathrm{d}s = 0
+$$
+
+because $\mathbf{f}$ is tangent to the orbit and therefore perpendicular to its normal $\mathbf{n}$ everywhere. Hence, if $\nabla \cdot \mathbf{f}$ has the same sign throughout a region of the phase space without holes (and is not identically zero), no closed orbit can lie in that region. This is *Bendixson's criterion*. The same argument applies to $\rho \mathbf{f}$ for any smooth function $\rho(x,y) > 0$ (*Dulac's criterion*): if $\nabla \cdot (\rho \mathbf{f})$ has one sign, closed orbits are ruled out. Note how this ties in with the conservative systems of section {numref}`sec:cont2d:conservative`, for which $\nabla \cdot (\rho \mathbf{f}) = 0$ exactly and closed orbits are the rule.
 
 (sec:cont2d:nochaos)=
 ### Is chaos possible in 2-D systems?
@@ -809,7 +823,7 @@ The short answer to this question is no. There are two types of long-term behavi
 - a fixed point;
 - a closed orbit (either limit cycle or non-attracting).
 
-The fact that no chaos can occur in 2-D systems follows from the *Poincaré-Bendixson* theorem, which can be used to prove the existence of limit cycles. The theorem considers at a part of the phase space $\Omega$ which does not contain fixed points but does contain at least one trajectory which is confined within $\Omega$. If this is the case, then this trajectory is a *closed* orbit, because it is impossible for trajectories to cross (this would indicate that the solutions were not unique, because one point in the phase space then has multiple values for $\mathbf{f}$).
+The fact that no chaos can occur in 2-D systems follows from the *Poincaré-Bendixson* theorem, which can be used to prove the existence of limit cycles. The theorem considers a closed and bounded part of the phase space $\Omega$ which does not contain fixed points but does contain at least one trajectory which is confined within $\Omega$. If this is the case, then this trajectory is either a *closed* orbit itself, or it spirals towards a closed orbit as $t \rightarrow \infty$; in both cases $\Omega$ contains a closed orbit. The reason is that it is impossible for trajectories to cross (this would indicate that the solutions were not unique, because one point in the phase space then has multiple values for $\mathbf{f}$), so that a trajectory confined to a planar region without fixed points has nowhere else to go.
 
 The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see section {numref}`sec:cont3d:strangeattractor`).
 
@@ -855,15 +869,15 @@ and since $J(x,y)$ is in diagonal form, the eigenvalues are $\sigma_1 = -2 x$ an
   - $\mu<0$
   - $\mu>0$
 * - $x^*=-\sqrt{\mu}, \, y^*=0$
-  - $-2 \sqrt{\mu}$
-  - -1
-  - non-existent
-  - stable node
-* - $x^*= \sqrt{\mu}, \, y^*=0$
   - $2 \sqrt{\mu}$
   - -1
   - non-existent
   - saddle
+* - $x^*= \sqrt{\mu}, \, y^*=0$
+  - $-2 \sqrt{\mu}$
+  - -1
+  - non-existent
+  - stable node
 ```
 
 ### Transcritical bifurcation
@@ -953,7 +967,7 @@ and the eigenvalues are $\sigma_1 = \mu - 3 x^2$ and $\sigma_2 = -1$. The charac
 
 ### Subcritical pitchfork bifurcation
 
-The normal form of the transcritical bifurcation is very similar to the supercritical version, except for the sign of the cubic:
+The normal form of the subcritical pitchfork bifurcation is very similar to the supercritical version, except for the sign of the cubic:
 
 $$
 \begin{aligned}
@@ -962,7 +976,7 @@ $$
 \end{aligned}
 $$
 
-The characteristic feature of this bifurcation that there are two stable and one unstable fixed point for $\mu<0$ and one unstable fixed point for $\mu>0$. As for the supercritical pitchfork bifurcation, the three fixed points are $x^*=0$, $x^*=i \sqrt{\mu}$ and $-i \sqrt{\mu}$ and the Jacobian is given by
+The characteristic feature of this bifurcation that there are two stable and one unstable fixed point for $\mu<0$ and one unstable fixed point for $\mu>0$. As for the supercritical pitchfork bifurcation, the three fixed points are $x^*=0$, $x^*=\sqrt{-\mu}$ and $-\sqrt{-\mu}$ (which exist for $\mu < 0$ only) and the Jacobian is given by
 
 $$
 J(x, y) = \left( \begin{array}{cc} \mu + 3 x^2 & 0 \\ 0 & -1 \end{array} \right)
@@ -984,19 +998,19 @@ and the eigenvalues are $\sigma_1 = \mu + 3 x^2$ and $\sigma_2 = -1$. The charac
   - -1
   - stable node
   - saddle
-* - $x^*=-i \sqrt{\mu}, \, y^*=0$
+* - $x^*=-\sqrt{-\mu}, \, y^*=0$
   - $- 2 \mu$
   - -1
   - saddle
   - non-existent
-* - $x^*= i \sqrt{\mu}, \, y^*=0$
+* - $x^*= \sqrt{-\mu}, \, y^*=0$
   - $- 2 \mu$
   - -1
   - saddle
   - non-existent
 ```
 
-The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in section {numref}`sec:cont1d:normalforms`. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
+The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in section {numref}`sec:cont1d:normalforms`. However, the mathematics become quite complex and are beyond the scope of this book. Please see {cite:p}`Crawford1991,Verhulst1996` for more information.
 
 We will avoid some of the mathematical complexity by making use of `maple`'s versatility. In particular, by plotting the behaviour of the fixed points and the the eigenvalues as a function of the control parameter $\mu$, it is possible to determine for which $\mu$ bifurcations occur and to identify their type.
 
@@ -1024,10 +1038,10 @@ $$
 This equation is not invertible, but can straightforwardly visualised using `implicitplot`. The fixed point $x^*=0$ is a solution for all $\mu$ and the eigenvalues of $J(0,0)$ are
 
 $$
-\sigma_{1, 2} := -1 + \frac{1}{2} \mu \pm \frac{1}{2} \left( 4 + \mu^2 \right)
+\sigma_{1, 2} = -1 + \frac{1}{2} \mu \pm \frac{1}{2} \sqrt{ 4 + \mu^2 }
 $$
 
-The single fixed point $(0,0)$ for $\mu<0$ can be seen to bifurcate into three fixed points at $\mu=0$ ({numref}`fig:cont2d:pitchfork`(c)). Judging from the eigenvalues of the Jacobian ({numref}`fig:cont2d:pitchfork`(d)), the fixed point changes from a stable node to a saddle node at $\mu=0$. Hence, a *supercritical pitchfork bifurcation* occurs at $\mu=0$. The `maple` code to generate these plots is given below.
+The single fixed point $(0,0)$ for $\mu<0$ can be seen to bifurcate into three fixed points at $\mu=0$ ({numref}`fig:cont2d:pitchfork`(c)). Judging from the eigenvalues of the Jacobian ({numref}`fig:cont2d:pitchfork`(d)), the fixed point changes from a stable node to a saddle at $\mu=0$. Hence, a *supercritical pitchfork bifurcation* occurs at $\mu=0$. The `maple` code to generate these plots is given below.
 
 ```{code-block} maple
 restart; with(plots): with(LinearAlgebra):
@@ -1077,7 +1091,7 @@ Consider the system:
 We would like to know whether or not the system has a limit cycle, and if so for which values of $\mu$. The only fixed point of this system is $(0, 0)$, and its Jacobian is given by
 
 $$
-J(0,0) = \left[ \begin{array}{cc} -\mu & -1 \\ 1 & \mu \end{array} \right]
+J(0,0) = \left[ \begin{array}{cc} \mu & -1 \\ 1 & \mu \end{array} \right]
 $$
 
 The eigenvalues of this matrix are $\sigma_{1,2} = \mu \pm i$. As the fixed point changes from a stable to an unstable spiral at $\mu = 0$, we conclude that a Hopf bifurcation is taking place at $\mu=0$. This is confirmed by numerical simulations for $\mu = -0.1$ and $\mu = 0.1$. The transition from a stable to an unstable spiral is clearly discernable from the time series and phase portraits ({numref}`fig:cont2d:hopf`(a, b)). The real and imaginary parts of the eigenvalues are plotted as a function of $\mu$ in Figs {numref}`fig:cont2d:hopf`(c) and {numref}`fig:cont2d:hopf`(d), respectively.
@@ -1106,7 +1120,7 @@ $$
 
 Hence, the phase angle increases linearly, and the equation for $\dot{r}$ has the normal form of a *supercritical pitchfork bifurcation*. Consequently, we know that the fixed point $r^*=0$ is stable for $\mu < 0$ and unstable for $\mu>0$. Furthermore, a stable fixed point $r^* = \sqrt{\mu}$ exists for $\mu > 0$, which shows that a limit cycle exists for this system.
 
-We conclude this section with some bifurcation jargon for Hopf bifurcations. When a bifurcation take place which involves  a transition from a stable spiral to a limit cycle, it is called a *supercritical* Hopf bifurcation. However, it is also possible that the spiral simply becomes unstable without the development of a limit cycle. In this case, the system *loses* a fixed point, and all trajectories within the basin of attraction will suddenly display entirely different behaviour. This is not dissimilar to the the catastrophe in the ferromagnetic system discussed in the previous chapter. If the Hopf bifurcation does not generate a limit cycle, the bifurcation is called *subcritical*. One also distinguishes a *degenerate* Hopf-bifurcation, which usually occurs when a nonconservative system becomes conservative at the bifurcation parameter.
+We conclude this section with some bifurcation jargon for Hopf bifurcations. When a bifurcation take place which involves  a transition from a stable spiral to a limit cycle, it is called a *supercritical* Hopf bifurcation. However, it is also possible that an *unstable* limit cycle surrounds the stable spiral for $\mu < 0$. As $\mu$ increases this cycle shrinks and at $\mu = 0$ it collapses onto the fixed point, which persists but is now an unstable spiral. The unstable cycle used to be the boundary of the basin of attraction of the fixed point, and all trajectories that were trapped inside it will suddenly display entirely different behaviour: typically they jump to a distant attractor. This is not dissimilar to the the catastrophe in the ferromagnetic system discussed in the previous chapter. Such a Hopf bifurcation is called *subcritical*; in polar coordinates its normal form is $\dot{r} = \mu r + r^3$, cf. the subcritical pitchfork bifurcation. One also distinguishes a *degenerate* Hopf-bifurcation, which usually occurs when a nonconservative system becomes conservative at the bifurcation parameter.
 
 (sec:cont2d:bif_global)=
 ### Global bifurcations
@@ -1117,8 +1131,8 @@ Consider the system
 
 $$
 \begin{gathered}
-\dot{x} = -y + x(\mu + x^2 + y^2 - (x^2+y^2)^2) \\
- \dot{y} = x + y(\mu + x^2 + y^2 - (x^2+y^2)^2)
+\dot{x} = -y - x(\mu + x^2 + y^2 - (x^2+y^2)^2) \\
+ \dot{y} = x - y(\mu + x^2 + y^2 - (x^2+y^2)^2)
 \end{gathered}
 $$
 
@@ -1133,9 +1147,9 @@ $$
 \end{aligned}
 $$
 
-The equation for the phase angle $\theta$ has solution $\theta = \theta(0) + t$. The right hand side of the equation for $\dot{r}$ is plotted in {numref}`fig:cont2d:global`(c) for three different values of $r$. Clearly, when $\mu<-1/4$, $\dot{r}>0$ for all nonzero $r$ and the trajectory will escape to infinity. At $\mu=-1/4$, the function attains a new root in the neigbourhood of $r=0.7$. This develops into two roots for $\mu>-1/4$.
+The equation for the phase angle $\theta$ has solution $\theta = \theta(0) + t$. The right hand side of the equation for $\dot{r}$ is plotted in {numref}`fig:cont2d:global`(c) for three different values of $\mu$. Clearly, when $\mu<-1/4$, $\dot{r}>0$ for all nonzero $r$ and the trajectory will escape to infinity. At $\mu=-1/4$, the function attains a new root in the neigbourhood of $r=0.7$. This develops into two roots for $\mu>-1/4$.
 
-The fixed points are plotted as a function $\mu$ with the help of the function `implicitplot` ({numref}`fig:cont2d:global`(d)), using the code discussed in section {numref}`sec:cont1d:ferromagnet_example` to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in section {numref}`sec:cont1d:saddlenode`, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
+The fixed points are plotted as a function $\mu$ with the help of the function `implicitplot` ({numref}`fig:cont2d:global`(d)), using the code discussed in section {numref}`sec:cont1d:ferromagnet_example` to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0.25$ via a saddle-node bifurcation. As discussed in section {numref}`sec:cont1d:saddlenode`, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
 
 ```{subfigure} 2
 :name: fig:cont2d:global
