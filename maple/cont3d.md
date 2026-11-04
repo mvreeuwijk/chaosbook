@@ -199,7 +199,7 @@ i.e. the effective Lyapunov exponent is always between the smallest and the larg
 :name: fig:cont3d:lorenzlyapcomprehensive
 :width: 70%
 
-The three local stretching rates $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ (the eigenvalues of $J_{\text{S}}$) along an orbit of the Lorenz system, together with the effective Lyapunov exponent $\Lambda_e$ (black line). The time averages of the stretching rates are not the Lyapunov exponents; only the average of $\Lambda_e$ converges to the largest Lyapunov exponent, $\Lambda_e \simeq 0.9$.
+Top: the three local stretching rates $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ (the eigenvalues of $J_{\text{S}}$) along an orbit of the Lorenz system, together with the effective Lyapunov exponent $\Lambda_e$ (black line). Bottom: cumulative time averages. The averages of the stretching rates are not the Lyapunov exponents; only $\Lambda_e$ converges to the largest Lyapunov exponent, $\Lambda_e \simeq 0.9$.
 ```
 
 {numref}`fig:cont3d:lorenzlyapcomprehensive` shows the stretching rates as a function of time. They fluctuate strongly. At any instant one rate is strongly negative, one is positive and one is small. One also notes that $\Lambda_e$ is always between the smallest and the largest rate, but that it is by no means equal to the average $(\Lambda_1+\Lambda_2+\Lambda_3)/3$.
