@@ -27,3 +27,11 @@ def test_bifurcation_discard_fraction():
                                  discard=0.8, ax=ax)
     assert len(xs) == 1000 - 800 + 1
     plt.close(fig)
+
+
+def test_parameter_name_is_configurable():
+    fig, ax = plt.subplots()
+    f = lambda x, a: logistic(x, r=a)
+    rs, xs = bifurcation_diagram(f, 2.0, 2.8, nr=4, n=400, ax=ax, pname="a")
+    assert np.allclose(xs, 1 - 1 / rs, atol=1e-3)
+    plt.close(fig)

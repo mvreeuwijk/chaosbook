@@ -5,6 +5,11 @@ All functions accept any right-hand side ``f(t, x, **params)`` in the
 system. Extra keyword arguments are passed on to ``f`` as parameters. The
 leading arguments are positional-only so that a parameter of the flow may be
 called ``f`` (the damping coefficient of the forced double well is).
+
+Calling convention of the package: maps and one-dimensional flows take
+``f(x, **params)``; flows in two or more dimensions take
+``f(t, x, **params)`` exactly as ``solve_ivp`` does, so any right-hand side
+that works with ``solve_ivp`` works here.
 """
 
 import numpy as np
@@ -88,17 +93,23 @@ def effective_lyapunov(f, t, X1, X2, /, **params):
     X1, X2 are (n, dim) arrays sampled at times t. Evaluates
     Lambda_e = eps . J_S eps / eps . eps with eps = X2 - X1 and J_S the
     symmetric part of the Jacobian along X1, and also returns the sorted
-    eigenvalues of J_S. Returns (Lambda_e (n,), eigenvalues (n, dim)).
+    eigenvalues of J_S. Returns (Lambda_e (n,), local_rates (n, dim)).
+
+    The second output, ``local_rates``, holds the *instantaneous* stretching
+    rates of the flow. Lambda_e(t) always lies between the smallest and the
+    largest of them, but their time averages are NOT the Lyapunov exponents
+    (use :func:`lyapunov_spectrum_flow` for those); only the time average of
+    Lambda_e tends to the largest Lyapunov exponent.
     """
     t = np.asarray(t, float)
     le = np.empty(len(t))
-    ev = np.empty((len(t), X1.shape[1]))
+    local_rates = np.empty((len(t), X1.shape[1]))
     for i in range(len(t)):
         J = _jac(f, t[i], X1[i], **params)
         e = X2[i] - X1[i]
         le[i] = e @ J @ e / (e @ e)
-        ev[i] = np.linalg.eigvalsh(0.5 * (J + J.T))
-    return le, ev
+        local_rates[i] = np.linalg.eigvalsh(0.5 * (J + J.T))
+    return le, local_rates
 
 
 def lyapunov_exponent(f, x0, tmax, /, dt=0.01, d0=1e-8, transient=0.0,
@@ -125,3 +136,49 @@ def lyapunov_exponent(f, x0, tmax, /, dt=0.01, d0=1e-8, transient=0.0,
         total += np.log(d / d0)
         y = x + (y - x) * (d0 / d)
     return total / (nsteps * dt)
+
+
+def lyapunov_spectrum_flow(f, jac, x0, tmax, /, dt=0.1, transient=0.0,
+                           rtol=1e-9, atol=1e-12, **params):
+    """All Lyapunov exponents of a flow dx/dt = f(t, x, **params).
+
+    Integrates the state together with the variational equations
+    dQ/dt = J(t, x) Q, and re-orthonormalises Q by a QR decomposition
+    every ``dt`` (the QR trick of the discrete case). The exponents are
+    the long-time averages of ln|R_ii| / dt, returned from largest to
+    smallest. ``jac(t, x, **params)`` returns the Jacobian matrix of f;
+    pass ``None`` for central differences. The first ``transient`` time
+    units are integrated but not averaged. For the Lorenz system
+    (sigma = 10, r = 28, b = 8/3) the exponents are about
+    (0.906, 0, -14.57): one exponent is zero (the direction of the flow)
+    and they add up to the mean divergence -(sigma + 1 + b).
+    """
+    x = np.asarray(x0, float)
+    d = len(x)
+    if jac is None:
+        jac = lambda t, x, **p: _jac(f, t, x, **p)
+
+    def rhs(t, s):
+        x, Q = s[:d], s[d:].reshape(d, d)
+        return np.concatenate([np.asarray(f(t, x, **params), float),
+                               (jac(t, x, **params) @ Q).ravel()])
+
+    Q = np.eye(d)
+    t = 0.0
+    if transient > 0:
+        nt = int(round(transient / dt))
+        for _ in range(nt):
+            s = solve_ivp(rhs, [t, t + dt], np.concatenate([x, Q.ravel()]),
+                          rtol=rtol, atol=atol, method="DOP853").y[:, -1]
+            x, Q = s[:d], np.linalg.qr(s[d:].reshape(d, d))[0]
+            t += dt
+    total = np.zeros(d)
+    nsteps = int(round(tmax / dt))
+    for _ in range(nsteps):
+        s = solve_ivp(rhs, [t, t + dt], np.concatenate([x, Q.ravel()]),
+                      rtol=rtol, atol=atol, method="DOP853").y[:, -1]
+        x = s[:d]
+        Q, R = np.linalg.qr(s[d:].reshape(d, d))
+        total += np.log(np.abs(np.diag(R)))
+        t += dt
+    return np.sort(total / (nsteps * dt))[::-1]

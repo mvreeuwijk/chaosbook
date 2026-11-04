@@ -124,7 +124,8 @@ def test_effective_lyapunov_between_symmetric_jacobian_eigenvalues():
                     rtol=1e-10, atol=1e-12)
     sol2 = solve_ivp(cb.lorenz, [0, 20], [2 + 1e-7, 5, 5],
                      t_eval=np.arange(0, 20, 0.01), rtol=1e-10, atol=1e-12)
-    le, ev = cb.effective_lyapunov(cb.lorenz, sol.t, sol.y.T, sol2.y.T)
+    le, local_rates = cb.effective_lyapunov(cb.lorenz, sol.t, sol.y.T, sol2.y.T)
+    ev = local_rates
     assert np.all(le >= ev[:, 0] - 1e-6) and np.all(le <= ev[:, -1] + 1e-6)
     assert abs(np.mean(le) - 0.9) < 0.4
     # the eigenvalues add up to the divergence -(sigma + 1 + b)
@@ -141,3 +142,36 @@ def test_flow_parameter_may_be_called_f():
     t, X = cb.poincare_section(cb.forced_double_well, [0, 0, 0], 10, (0, 0.5),
                                f=0.15, A=0.3)
     assert np.allclose(X[:, 0], 0.5, atol=1e-8)
+
+
+def _lorenz_jac(t, s, sigma=10.0, r=28.0, b=8 / 3):
+    x, y, z = s
+    return np.array([[-sigma, sigma, 0], [r - z, -1, -x], [y, x, -b]])
+
+
+def test_lorenz_lyapunov_spectrum_flow():
+    # literature: (0.906, 0, -14.57); the exponents sum to -(sigma + 1 + b)
+    lam = cb.lyapunov_spectrum_flow(cb.lorenz, _lorenz_jac, [2, 5, 5], 200,
+                                    dt=0.1, transient=20)
+    assert abs(lam[0] - 0.906) < 0.06
+    assert abs(lam[1]) < 0.05
+    assert abs(lam[2] + 14.57) < 0.1
+    assert abs(lam.sum() + (10 + 1 + 8 / 3)) < 1e-3
+
+
+def test_spectrum_flow_numerical_jacobian_and_simple_cases():
+    damped = lambda t, s: [-s[0], -2 * s[1]]
+    lam = cb.lyapunov_spectrum_flow(damped, None, [1, 1], 5, dt=0.1)
+    assert np.allclose(lam, [-1, -2], atol=1e-4)
+    lam = cb.lyapunov_spectrum_flow(oscillator, None, [1, 0], 100, dt=0.1)
+    assert np.allclose(lam, 0, atol=0.02)
+
+
+def test_averaged_local_rates_are_not_the_lyapunov_spectrum():
+    # the guard against the C3-1 misreading: averaging the eigenvalues of
+    # J_S along an orbit gives (4.2, -2.3, -15.6), not (0.9, 0, -14.6)
+    sol = solve_ivp(cb.lorenz, [0, 60], [2, 5, 5], t_eval=np.arange(0, 60, 0.01),
+                    rtol=1e-9, atol=1e-12)
+    _, local_rates = cb.effective_lyapunov(cb.lorenz, sol.t, sol.y.T,
+                                           sol.y.T + 1e-7)
+    assert local_rates.mean(axis=0)[-1] > 2.0

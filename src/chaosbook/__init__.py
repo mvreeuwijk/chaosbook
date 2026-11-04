@@ -1,7 +1,13 @@
 """chaosbook - computational toolkit for 'From Stability to Chaos'.
 
-Every function here is introduced in the book's cookbook, where the full
-implementation is shown as plain code before being packaged.
+The book's listings first show how to do each computation with numpy,
+scipy and sympy; the package wraps the recurring ones. Some of the
+functions are introduced as recipes in the cookbook; the rest are
+introduced where a chapter first needs them.
+
+Calling convention: maps and one-dimensional flows take ``f(x, **params)``;
+flows in two or more dimensions take ``f(t, x, **params)``, the
+``scipy.integrate.solve_ivp`` form. See the cookbook for details.
 """
 
 from .maps import (logistic, sine, tent, shift, henon, duffing_map,
@@ -69,7 +75,8 @@ __all__ += [
 ]
 
 from .poincare import (poincare_section, stroboscopic_section, maxima,
-                       effective_lyapunov, lyapunov_exponent)
+                       effective_lyapunov, lyapunov_exponent,
+                       lyapunov_spectrum_flow)
 from .flows3d import (rossler, forced_double_well, circle_limit_cycle,
                       rotating_threebody, threebody_potential,
                       lagrange_points)
@@ -80,6 +87,7 @@ __all__ += [
     "maxima",
     "effective_lyapunov",
     "lyapunov_exponent",
+    "lyapunov_spectrum_flow",
     "rossler",
     "forced_double_well",
     "circle_limit_cycle",

@@ -26,7 +26,7 @@ def chaos_game(n=10000, seed=1):
     return X, Y
 
 
-def box_dimension(X, Y, pmax=20):
+def box_dimension(X, Y, pmax=20, fit_range=None):
     """Estimate the box-counting dimension of the point set (X, Y).
 
     Covers the points with square boxes whose size shrinks from the
@@ -34,6 +34,12 @@ def box_dimension(X, Y, pmax=20):
     counts the occupied boxes at every size, and fits a straight line to
     log(count) against log(size). Returns (dimension, boxsize, boxcount),
     where dimension is minus the fitted slope.
+
+    By default the fit uses every box size. For a finite point set the
+    counts saturate at the number of points for the smallest boxes (and
+    equal 1 for the largest), which bends the curve; pass
+    ``fit_range=(smin, smax)`` to fit only the box sizes in that interval
+    (same units as the data). All sizes and counts are still returned.
     """
     xmin, ymin = X.min(), Y.min()
     lmax = max(X.max() - xmin, Y.max() - ymin)
@@ -51,7 +57,10 @@ def box_dimension(X, Y, pmax=20):
             j = int((y - ymin) / boxsize[p])
             grid[i, j] = 1
         boxcount[p] = grid.sum()
-    slope, _ = np.polyfit(np.log(boxsize), np.log(boxcount), 1)
+    sel = np.ones(pmax + 1, bool)
+    if fit_range is not None:
+        sel = (boxsize >= fit_range[0]) & (boxsize <= fit_range[1])
+    slope, _ = np.polyfit(np.log(boxsize[sel]), np.log(boxcount[sel]), 1)
     return -slope, boxsize, boxcount
 
 
