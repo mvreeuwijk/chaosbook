@@ -1,8 +1,9 @@
 """Monte-Carlo simulation of N = 20x20 mean-field spins (J_ij = 1, m = 0).
 
 Produces (in python/_static/cont1d/):
-  cont1d_ferro_spin_T_{0_50,1_50}_{a,b}{0..5}.png  snapshots at n = 0, 1000, ..., 5000
-  cont1d_ferro_spin_T_{0_50,1_50}.png              mean state x(t), t = n/N, both runs
+  cont1d_ferro_spin_evolution.png   4x6 grid of snapshots at n = 0, 1000, ..., 5000
+                                    (rows: T = 0.5 runs a, b; T = 1.5 runs a, b)
+  cont1d_ferro_spin_mean_state.png  mean state x(t), t = n/N: (a) T = 0.5, (b) T = 1.5
 Run 'a' starts from all spins +1, run 'b' from all spins -1, after flipping a
 fraction F of them (F = 0.3 at T = 0.5, F = 0.1 at T = 1.5).
 """
@@ -10,7 +11,7 @@ fraction F of them (F = 0.3 at T = 0.5, F = 0.1 at T = 1.5).
 import matplotlib.pyplot as plt
 import numpy as np
 
-from _common import SQUARE, save
+from _common import bf, save
 
 K = 20
 N = K * K
@@ -36,28 +37,30 @@ def simulate(T, s0, F, seed):
     return snaps, x
 
 
-for T, F, tag in ((0.5, 0.3, "0_50"), (1.5, 0.1, "1_50")):
-    fig_m, ax_m = plt.subplots(figsize=SQUARE)
+fig_s, axs_s = plt.subplots(4, 6, figsize=(bf.FULL_W, 4.3))
+fig_m, axs_m = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.6), sharey=True)
+row = 0
+for ax_m, (T, F) in zip(axs_m, ((0.5, 0.3), (1.5, 0.1))):
     for run, s0, seed in (("a", +1, 11), ("b", -1, 12)):
         snaps, x = simulate(T, s0, F, seed)
         print(f"T={T}: run {run}: x(0) = {x[0]:+.3f}, x(t=25) = {x[-1]:+.3f}, "
               f"mean over t in [15,25] = {x[6000:].mean():+.3f}")
-        for k, snap in enumerate(snaps):
-            fig, ax = plt.subplots(figsize=(3, 3))
+        for ax, snap in zip(axs_s[row], snaps):
             ax.pcolormesh(snap[::-1], cmap="gray", vmin=-1, vmax=1,
-                          edgecolors="k", linewidth=0.5)
+                          edgecolors="k", linewidth=0.3)
             ax.set_aspect("equal")
             ax.axis("off")
-            fig.subplots_adjust(0.01, 0.01, 0.99, 0.99)
-            save(fig, f"cont1d_ferro_spin_T_{tag}_{run}{k}")
-        ax_m.plot(np.arange(0, ITER + 1, 10) / N, x[::10], "k", lw=2)
+        row += 1
+        ax_m.plot(np.arange(0, ITER + 1, 10) / N, x[::10], "k", lw=1.0)
     ax_m.axhline(0, color="k", lw=0.8)
     ax_m.set_xlim(0, ITER / N)
     ax_m.set_ylim(-1, 1)
     ax_m.set_xlabel("$t$")
-    ax_m.set_ylabel("$x(t)$")
     ax_m.set_title(f"$T={T:g}$")
-    fig_m.tight_layout()
-    save(fig_m, f"cont1d_ferro_spin_T_{tag}")
+axs_m[0].set_ylabel("$x(t)$")
+bf.panel_labels(axs_m)
+save(fig_m, "cont1d_ferro_spin_mean_state")
+fig_s.get_layout_engine().set(w_pad=0.01, h_pad=0.01, wspace=0.01, hspace=0.01)
+save(fig_s, "cont1d_ferro_spin_evolution")
 
 print("fig_ferro_spins: written")

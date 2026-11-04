@@ -1,27 +1,24 @@
 """Shared plotting helpers for the cont1d figure scripts."""
 
+import sys
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402,F401  (house style: sizes, panel labels, save)
 
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "cont1d"
+OUT = bf.out("cont1d")
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
-PANEL = (4.2, 3.2)      # panel in a 2-column subfigure
-SQUARE = (4.2, 4.2)     # square panel (phase-plot style)
-SINGLE = (5.0, 3.5)     # single full-width figure
 GRAY = "0.7"            # unstable branches
 
 
 def save(fig, name):
-    fig.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close(fig)
+    """Save python/_static/cont1d/<name>.png at the figure's printed size."""
+    bf.save(fig, OUT / f"{name}.png")
 
 
 def cross_axes(ax, xlabel, ylabel, zero=False, ticked=False):
@@ -52,7 +49,7 @@ def cross_axes(ax, xlabel, ylabel, zero=False, ticked=False):
                 ha="left" if ticked else "right", va="top")
     if zero:
         ax.annotate("0", (0, 0), xytext=(-4, -4), textcoords="offset points",
-                    ha="right", va="top", fontsize=11)
+                    ha="right", va="top")
 
 
 def mark_fixed_points(ax, f, xlo, xhi, dfdx=None, size=8, marginal="half",

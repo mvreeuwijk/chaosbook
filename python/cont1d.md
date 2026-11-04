@@ -140,13 +140,8 @@ $$
 
 where $T$ is a parameter. This equation describes the evolution of the magnetization of a ferromagnetic system at temperature $T$. The problem here is that one cannot find an expression for the integral $\int [-x+\tanh(x/T)]^{-1} \mathrm{d} x$. We will deal with this system later in more detail.
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_simplecubic.png
 :name: fig:cont1d:simplecubic
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_simplecubic_graph.png)
-![ ](_static/cont1d/cont1d_simplecubic_evolution.png)
 
 Graphs for the system $\dot{x}=f(x)=x-x^3$. (a) Graph of $f(x)=x-x^3$. (b) Evolution of $x$ from four initial conditions.
 ```
@@ -189,13 +184,8 @@ There was of course no need to employ a numerical procedure since we already had
 
 Apart from the numerical/analytical solution, one could have made a sketch of the evolution oneself based solely on the graph of $f(x)$ in {numref}`fig:cont1d:simplecubic`: take for instance the evolution starting at $x_0=0.1$. Initially the rate of change is only moderately positive, but as $x(t)$ slowly increases to larger values also $f(x)$ becomes larger, thus speeding up the increase. As $x$ gets closer to $x_* = 1$, the rate of change decreases and the convergence to 1 slows down and ultimately comes to a halt at $x=1$. In this way one can qualitatively well understand the evolution trajectories of {numref}`fig:cont1d:simplecubic`.
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_generic_graphical.png
 :name: fig:cont1d:generic_graphical
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_generic_graphical_stable.png)
-![ ](_static/cont1d/cont1d_generic_graphical_unstable.png)
 
 Stable and unstable fixed points. (a) Stable fixed point: $f'(x_*)<0$. (b) Unstable fixed point: $f'(x_*)>0$.
 ```
@@ -256,15 +246,8 @@ It is often helpful to write a one-dimensional system as
 
 where $V$ is called the *potential*. We can then picture $x$ as a particle without inertia that slides down the graph of $V$ and comes to rest at the bottom of a valley. Indeed, $V$ can only decrease in time, since $\dot{V} = V'(x)\,\dot{x} = -\dot{x}^2 \leq 0$. The fixed points are the extrema of $V$: a minimum of $V$ ($V''(x_*) = -\sigma > 0$) is a stable fixed point and a maximum is an unstable one. For the example {eq}`eq:cont1d:simplecubic` we get $V(x) = -\frac{1}{2}x^2 + \frac{1}{4}x^4$: two valleys at $x_*=\pm 1$, separated by a hill at $x_*=0$. When a parameter changes, the shape of $V$ changes too, and a valley can disappear. We will see below that this is what happens in a 'catastrophe'.
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_normalform_pitchfork.png
 :name: fig:cont1d_bifur_pitchfork
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_bifur_pitchfork1.png)
-![ ](_static/cont1d/cont1d_bifur_pitchfork2.png)
-![ ](_static/cont1d/cont1d_bifur_pitchfork3.png)
-![ ](_static/cont1d/cont1d_bifur_pitchfork.png)
 
 Pitchfork bifurcation in $\dot{x} = rx- x^3$. The bifurcation diagram in (d) corresponds to graphs (a)-(c). A black color means that the fixed point branch $x_*(r)$ is stable, whereas gray means unstable. (d) Bifurcation diagram.
 ```
@@ -297,15 +280,8 @@ These three branches have been plotted in {numref}`fig:cont1d_bifur_pitchfork`. 
 (sec:cont1d:saddlenode)=
 ## Saddle-node bifurcation
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_normalform_saddle.png
 :name: fig:cont1d_bifur_saddle
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_bifur_saddle1.png)
-![ ](_static/cont1d/cont1d_bifur_saddle2.png)
-![ ](_static/cont1d/cont1d_bifur_saddle3.png)
-![ ](_static/cont1d/cont1d_bifur_saddle.png)
 
 Saddle node bifurcation in $\dot{x} = r - x^2$. The bifurcation diagram in (d) corresponds to graphs (a)-(c). A black color means that the fixed point branch $x_*(r)$ is stable, whereas gray means unstable. (d) Bifurcation diagram.
 ```
@@ -333,15 +309,8 @@ The branches have been plotted in {numref}`fig:cont1d_bifur_saddle`. Note the es
 
 ## Transcritical bifurcation
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_normalform_transcrit.png
 :name: fig:cont1d_bifur_transcrit
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_bifur_transcrit1.png)
-![ ](_static/cont1d/cont1d_bifur_transcrit2.png)
-![ ](_static/cont1d/cont1d_bifur_transcrit3.png)
-![ ](_static/cont1d/cont1d_bifur_transcrit.png)
 
 Transcritical bifurcation in $\dot{x} = rx - x^2$. The bifurcation diagram in (d) corresponds to graphs (a)-(c). A black color means that the fixed point $x_*(r)$ is stable, whereas gray means unstable. (d) Bifurcation diagram.
 ```
@@ -396,15 +365,8 @@ $\dot{z} = r z - z^2$, i.e. that of a transcritical bifurcation ({numref}`fig:co
 - If $a=0$, and $b\neq0$, but $c=0$, one must include the cubic term: $\dot{y} = by\nu +  d y^3$. After rescaling ($z = \sqrt{|d|}y$, $r = b\nu$) one acquires the normal form
 $\dot{z} = z r + \text{sign}(d) z^3$. So, if $d<0$, one retrieves the normal form $\dot{z} = rz  - z^3$ of the pitchfork bifurcation studied in {numref}`fig:cont1d_bifur_pitchfork`. But note that if $d>0$, one has $\dot{z} = r z + z^3$. By mere rescaling one cannot map this expression to $\dot{z} = z r - z^3$, so it represents a separate case. This situation is called *subcritical* pitchfork bifurcation. The graphs and corresponding diagram are depicted in {numref}`fig:cont1d_bifur_pitchfork_sub`. It bears a strong resemblance with {numref}`fig:cont1d_bifur_pitchfork`, but the stability of the respective branches is reversed.
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_normalform_pitchfork_sub.png
 :name: fig:cont1d_bifur_pitchfork_sub
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_bifur_pitchfork_sub1.png)
-![ ](_static/cont1d/cont1d_bifur_pitchfork_sub2.png)
-![ ](_static/cont1d/cont1d_bifur_pitchfork_sub3.png)
-![ ](_static/cont1d/cont1d_bifur_pitchfork_sub.png)
 
 Subcritical pitchfork bifurcation in $\dot{x} = rx+ x^3$. The bifurcation diagram in (d) corresponds to graphs (a)-(c). A black color means that the fixed point $x_*(r)$ is stable, whereas gray means unstable. (d) Bifurcation diagram.
 ```
@@ -421,16 +383,8 @@ Subcritical pitchfork bifurcation in $\dot{x} = rx+ x^3$. The bifurcation diagra
 (sec:cont1d:ferromagnet_example)=
 ## Example of bifurcations: Ferromagnetic system
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_ferro_pitchfork.png
 :name: fig:cont1d_ferro_pitchfork
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_ferro_pitchfork1.png)
-![ ](_static/cont1d/cont1d_ferro_pitchfork2.png)
-![ ](_static/cont1d/cont1d_ferro_pitchfork3.png)
-![ ](_static/cont1d/cont1d_ferro_pitchfork.png)
-![ ](_static/cont1d/cont1d_ferro_pitchfork_stability.png)
 
 Pitchfork bifurcation in $\dot{x} = f(x,T)=-x + \tanh\left(\frac{x}{T}\right)$. (a)-(c) Graphs of $f(x,T)$ for $T=0.5$, $1$ and $1.5$. (d) Bifurcation diagram obtained by straightforwardly plotting a zero contour (see text). (e) Bifurcation diagram with indication of the stability of the branches.
 ```
@@ -505,13 +459,8 @@ plt.ylabel("$x_*(T)$")
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_ferro_pitch_evolution.png
 :name: fig:cont1d:ferro_pitch_evolution
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_ferro_pitch_evolution1.png)
-![ ](_static/cont1d/cont1d_ferro_pitch_evolution2.png)
 
 Evolution of the magnetization $x$ for different values of the temperature $T$. In each panel the numerical solution is shown for 21 initial conditions $x_0 = -1, -0.9, \ldots, 1$. (a) $T=0.5$. (b) $T=1.5$.
 ```
@@ -610,16 +559,8 @@ Upon substitution $z= x/\sqrt{3}$ and $r=q^2-q$ one obtains $\dot{z} = rz - z^3$
 
 ### Non-zero external magnetic field
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_ferro_field_bifurcation.png
 :name: fig:cont1d_ferro_field_bifurcation
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_ferro_field_bifurcation1.png)
-![ ](_static/cont1d/cont1d_ferro_field_bifurcation2.png)
-![ ](_static/cont1d/cont1d_ferro_field_bifurcation3.png)
-![ ](_static/cont1d/cont1d_ferro_field_bifurcation_large_m.png)
-![ ](_static/cont1d/cont1d_ferro_field_bifurcation_small_m.png)
 
 (a)-(c) Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ for an external magnetic field of $m=0.1$ and $T=0.5$, $0.729$ and $1.5$. (d) Fixed point branches $x_*(T)$ for $m=0.1$ and (e) for $m=0.005$. Both cases display a saddle-node bifurcation, but as $m$ becomes smaller, the diagram starts to more closely resemble that of a pitchfork bifurcation for $m=0$.
 ```
@@ -743,35 +684,8 @@ plt.show()
 
 The program performs a single run. {numref}`fig:cont1d_ferro_spin_evolution` combines four such runs (two temperatures, two initial states), with $F=0.3$ for $T=0.5$ and $F=0.1$ for $T=1.5$, and shows the state every 1000 iterations.
 
-```{subfigure} 6
+```{figure} _static/cont1d/cont1d_ferro_spin_evolution.png
 :name: fig:cont1d_ferro_spin_evolution
-:align: center
-:gap: 4px
-
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a0.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a1.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a2.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a3.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a4.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_a5.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b0.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b1.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b2.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b3.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b4.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50_b5.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a0.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a1.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a2.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a3.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a4.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_a5.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b0.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b1.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b2.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b3.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b4.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50_b5.png)
 
 Evolution of the spin dynamics from two different initial states for two temperatures ($N=20\times 20$ spins, $m=0$; white is $s_i=+1$, black is $s_i=-1$). From left to right the columns show the state at $t=n/N=0$, $2.5$, $5$, $7.5$, $10$ and $12.5$. From top to bottom the rows show: $T=0.5$ starting from mostly $+1$ spins; $T=0.5$ starting from mostly $-1$ spins; $T=1.5$ starting from mostly $+1$ spins; $T=1.5$ starting from mostly $-1$ spins. The corresponding mean states are displayed in {numref}`fig:cont1d_ferro_spin_mean_state`.
 ```
@@ -795,13 +709,8 @@ which yields a value $\in [-1,1]$. In the limit $N\rightarrow \infty$ one can de
 
 In {numref}`fig:cont1d_ferro_spin_mean_state` we display the evolution of $x$ for the cases corresponding to {numref}`fig:cont1d_ferro_spin_evolution`. Apart from so-called finite size fluctuations (i.e. $N$ is not large enough), the evolution resembles that of {numref}`fig:cont1d:ferro_pitch_evolution` reasonably well. An even better match will be obtained when the number of spins $N$ is further increased.
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_ferro_spin_mean_state.png
 :name: fig:cont1d_ferro_spin_mean_state
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_ferro_spin_T_0_50.png)
-![ ](_static/cont1d/cont1d_ferro_spin_T_1_50.png)
 
 Evolution of the mean state $x$ as a function of time $t=n/N$ for the cases shown in {numref}`fig:cont1d_ferro_spin_evolution`. Compare also with {numref}`fig:cont1d:ferro_pitch_evolution`. (a) $T=0.5$. (b) $T=1.5$.
 ```
@@ -815,22 +724,10 @@ Evolution of the mean state $x$ as a function of time $t=n/N$ for the cases show
 
 A saddle node bifurcation is sometimes also called 'hard bifurcation', as opposed to transcritical and pitchfork bifurcations which are called 'soft bifurcation'. The reason for these terms can be understood by looking for instance at the saddle node bifurcation in {numref}`fig:cont1d_ferro_field_bifurcation`. If one starts at $T=0$ at the lower branch ($x_*\simeq-1$) and one increases $T$ in a slow manner such that the dynamical system has sufficient time to converge to the fixed point that belongs to the new temperature, one will move along the branch to the right. This can continue until $T_c = 0.7287\ldots$ has been reached. Here the fixed point value is $x_* = x_c = -0.520\ldots$. After a tiny increase of $T$ beyond $T_c$, there is no longer a fixed point in the vicinity, so the system will rapidly move to the upper fixed point branch. Usually this is a dramatic event for the system, sometimes referred to as 'catastrophe', which explains the name 'hard bifurcation'. In a pitchfork or transcritical bifurcation there is no need for a 'jump' to another branch because a smooth ('soft') transition to another branch is possible. Physicists tend to use the terms 'first order phase transition' and 'second order phase transition' for hard and soft bifurcations, respectively.
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_ferro_field_hysteresis.png
 :name: fig:cont1d_ferro_field_hysteresis
-:align: center
 
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_T_1_5.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysdata_T_1_5.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_T_1_25.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysdata_T_1_25.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_T_1_0.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysdata_T_1_0.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_T_0_75.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysdata_T_0_75.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_T_0_5.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysdata_T_0_5.png)
-
-Left column: Fixed point branches as a function of the external magnetic field $m$ for different values of the temperature $T$. The branches were determined as zero contours. Unstable branches are colored gray. Right column: Fixed points determined by numerical integration of the governing equation $\dot{x}=-x+\tanh[(x+m)/T]$ each step using the previously computed fixed point as initial condition. In each of these panels first a forward sweep $m=-1..+1$ is conducted, followed by a backward sweep $m=+1..-1$. The plots illustrate the hysteresis effect when $T<1$, together with the occurrence of 'hard' bifurcations as demonstrated by the sudden jumps to the other branch.
+Top row: Fixed point branches as a function of the external magnetic field $m$ for different values of the temperature $T$. The branches were determined as zero contours. Unstable branches are colored gray. Bottom row: Fixed points determined by numerical integration of the governing equation $\dot{x}=-x+\tanh[(x+m)/T]$ each step using the previously computed fixed point as initial condition. In each of these panels first a forward sweep $m=-1..+1$ is conducted, followed by a backward sweep $m=+1..-1$. The plots illustrate the hysteresis effect when $T<1$, together with the occurrence of 'hard' bifurcations as demonstrated by the sudden jumps to the other branch.
 ```
 
 :::{only} html
@@ -842,7 +739,7 @@ Left column: Fixed point branches as a function of the external magnetic field $
 <iframe src="_static/cont1d/interactive/hysteresis_sweep.html" width="100%" height="440" style="border:none;"></iframe>
 ```
 
-Let us reconsider the ferromagnetic system, but now use $m$ as the bifurcation parameter instead of $T$. Using zero contours we have plotted in the left column of  {numref}`fig:cont1d_ferro_field_hysteresis` the fixed-point branches as a function of $m$ for various values of $T$. The branches for $T\geq 1$ appear not to be involved in any bifurcation. But the branches for $T<1$ are much more interesting: as the  branches seem to get 'folded', they exhibit two  saddle node bifurcations. Apart from plotting these branches as zero contours, it is illustrative to show the actual behaviour of the system by numerically integrating the system and computing its steady state point. These graphs are plotted in the right column of {numref}`fig:cont1d_ferro_field_hysteresis`. We have used the following Python code to obtain these plots.
+Let us reconsider the ferromagnetic system, but now use $m$ as the bifurcation parameter instead of $T$. Using zero contours we have plotted in the top row of {numref}`fig:cont1d_ferro_field_hysteresis` the fixed-point branches as a function of $m$ for various values of $T$. The branches for $T\geq 1$ appear not to be involved in any bifurcation. But the branches for $T<1$ are much more interesting: as the  branches seem to get 'folded', they exhibit two  saddle node bifurcations. Apart from plotting these branches as zero contours, it is illustrative to show the actual behaviour of the system by numerically integrating the system and computing its steady state point. These graphs are plotted in the bottom row of {numref}`fig:cont1d_ferro_field_hysteresis`. We have used the following Python code to obtain these plots.
 
 ````{admonition} Python
 :class: python
@@ -873,7 +770,7 @@ print("backward jump at m =", ms[::-1][np.argmin(np.diff(X2)) + 1])
 ```
 ````
 
-Note that we perform two sweeps. First we increase $m$ from $-1$ to $1$ in small steps and calculate at every step the 'large time' solution ($t=100$ in this case). As initial condition we take the final value of $x$ calculated in the previous step. In the second sweep the direction of $m$ is reversed ($+1\rightarrow -1$). The plots in the right column of {numref}`fig:cont1d_ferro_field_hysteresis` nicely reveal two aspects of the system. Firstly, the sudden jumps, or 'catastrophes', that occur when $T<1$, demonstrating the 'hard bifurcations' in the system. Secondly, one can notice *hysteresis*: the forward sweep is different from the backward sweep. By integrating the system one cannot show the location of the unstable branches, such as in the left column. On the other hand, it provides a good view of how the system really responds. {numref}`fig:cont1d_ferro_field_hysteresis_3d_and_zoom` combines the plots of the left column and right column of {numref}`fig:cont1d_ferro_field_hysteresis` for the case of $T=0.5$, illustrating the stable and unstable parts of the branch, the jumping from one branch to the other (hard bifurcations), and the hysteresis in the system. The right panel shows a three-dimensional view, illustrating the 'folding' of the fixed-point manifold that causes the saddle node bifurcations. The shaded surface can be plotted directly: the equation $f=0$ can be solved for $m$ as a function of $(x,T)$, which gives the surface as a graph over the $(x,T)$ plane:
+Note that we perform two sweeps. First we increase $m$ from $-1$ to $1$ in small steps and calculate at every step the 'large time' solution ($t=100$ in this case). As initial condition we take the final value of $x$ calculated in the previous step. In the second sweep the direction of $m$ is reversed ($+1\rightarrow -1$). The plots in the bottom row of {numref}`fig:cont1d_ferro_field_hysteresis` nicely reveal two aspects of the system. Firstly, the sudden jumps, or 'catastrophes', that occur when $T<1$, demonstrating the 'hard bifurcations' in the system. Secondly, one can notice *hysteresis*: the forward sweep is different from the backward sweep. By integrating the system one cannot show the location of the unstable branches, such as in the top row. On the other hand, it provides a good view of how the system really responds. {numref}`fig:cont1d_ferro_field_hysteresis_3d_and_zoom` combines the plots of the top row and bottom row of {numref}`fig:cont1d_ferro_field_hysteresis` for the case of $T=0.5$, illustrating the stable and unstable parts of the branch, the jumping from one branch to the other (hard bifurcations), and the hysteresis in the system. The right panel shows a three-dimensional view, illustrating the 'folding' of the fixed-point manifold that causes the saddle node bifurcations. The shaded surface can be plotted directly: the equation $f=0$ can be solved for $m$ as a function of $(x,T)$, which gives the surface as a graph over the $(x,T)$ plane:
 
 ````{admonition} Python
 :class: python
@@ -904,13 +801,8 @@ plt.show()
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_ferro_field_hysteresis_3d_and_zoom.png
 :name: fig:cont1d_ferro_field_hysteresis_3d_and_zoom
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_zoom.png)
-![ ](_static/cont1d/cont1d_ferro_field_hysteresis_3d.png)
 
 (a) Hysteresis and hard bifurcations in the ferromagnetic system with external field $m$. (b) 'Folding' of the fixed point manifold.
 ```
@@ -982,13 +874,8 @@ plt.show()
 ```
 ````
 
-```{subfigure} 2
+```{figure} _static/cont1d/cont1d_climate.png
 :name: fig:cont1d:climate
-:align: center
-:subcaptions: below
-
-![ ](_static/cont1d/cont1d_climate_single_fp.png)
-![ ](_static/cont1d/cont1d_climate_multiple_fp.png)
 
 Average stationary temperature $T_*$ of the earth as a function of the emissivity $\epsilon$. Stable branches are black; unstable branches are gray. (a) Constant albedo $a=0.3$. (b) Temperature dependent albedo.
 ```
