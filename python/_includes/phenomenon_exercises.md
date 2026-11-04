@@ -44,6 +44,8 @@ Consider a satellite in space under influence of the gravitational pull of the e
 
 ```{figure} _static/exercises/ex0036r03_fig1.png
 :name: fig:ex0036r03:ex0036r03_fig1
+
+The earth, the moon and the satellite, moving in one plane.
 ```
 
 ```{list-table}

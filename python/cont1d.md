@@ -204,7 +204,7 @@ Stable and unstable fixed points. (a) Stable fixed point: $f'(x_*)<0$. (b) Unsta
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont1d/fig_flow_basics.py)*
 :::
 
-The graphical method outlined above works well for arbitrary systems $\dot{x} = f(x)$. First one makes a graph of $f(x)$ and locates the zero crossings to find the fixed points. If a zero-crossing looks  similar to {numref}`fig:cont1d:generic_graphical`, in the sense that if the derivative of $f$ with respect to $x$ evaluated in the fixed point is negative, one deals with a stable fixed point. If the derivative is positive $f'(x_*)$, such as depicted in {numref}`fig:cont1d:generic_graphical`, the fixed point is unstable. Below we will put this issue on a firmer footing.
+The graphical method outlined above works well for arbitrary systems $\dot{x} = f(x)$. First one makes a graph of $f(x)$ and locates the zero crossings to find the fixed points. If a zero-crossing looks  similar to {numref}`fig:cont1d:generic_graphical`(a), in the sense that if the derivative of $f$ with respect to $x$ evaluated in the fixed point is negative, one deals with a stable fixed point. If the derivative is positive $f'(x_*)$, such as depicted in {numref}`fig:cont1d:generic_graphical`(b), the fixed point is unstable. Below we will put this issue on a firmer footing.
 
 ### Local stability analysis of fixed points
 
@@ -432,7 +432,7 @@ Subcritical pitchfork bifurcation in $\dot{x} = rx+ x^3$. The bifurcation diagra
 ![ ](_static/cont1d/cont1d_ferro_pitchfork.png)
 ![ ](_static/cont1d/cont1d_ferro_pitchfork_stability.png)
 
-Pitchfork bifurcation in $\dot{x} = f(x,T)=-x + \tanh\left(\frac{x}{T}\right)$. (d) Bifurcation diagram obtained by straightforwardly plotting a zero contour (see text). (e) Bifurcation diagram with indication of the stability of the branches.
+Pitchfork bifurcation in $\dot{x} = f(x,T)=-x + \tanh\left(\frac{x}{T}\right)$. (a)-(c) Graphs of $f(x,T)$ for $T=0.5$, $1$ and $1.5$. (d) Bifurcation diagram obtained by straightforwardly plotting a zero contour (see text). (e) Bifurcation diagram with indication of the stability of the branches.
 ```
 
 :::{only} html
@@ -513,7 +513,7 @@ plt.ylabel("$x_*(T)$")
 ![ ](_static/cont1d/cont1d_ferro_pitch_evolution1.png)
 ![ ](_static/cont1d/cont1d_ferro_pitch_evolution2.png)
 
-Evolution of the magnetization $x$ for different values of the temperature $T$. In each panel the numerical solution is shown for 20 initial conditions.
+Evolution of the magnetization $x$ for different values of the temperature $T$. In each panel the numerical solution is shown for 21 initial conditions $x_0 = -1, -0.9, \ldots, 1$. (a) $T=0.5$. (b) $T=1.5$.
 ```
 
 :::{only} html
@@ -532,11 +532,11 @@ from scipy.integrate import solve_ivp
 
 f = lambda x: -x + np.tanh(x / T)           # define system
 N = 20                                      # nr of initial cond.
-T = 0.8                                     # set temperature
-t = np.linspace(0, 30, 600)
+T = 0.5                                     # set temperature
+t = np.linspace(0, 25, 500)
 for n in range(N + 1):
     x0 = -1 + 2.0 * n / N                   # set initial condition
-    sol = solve_ivp(lambda t, x: f(x), [0, 30], [x0], t_eval=t, rtol=1e-8)
+    sol = solve_ivp(lambda t, x: f(x), [0, 25], [x0], t_eval=t, rtol=1e-8)
     plt.plot(t, sol.y[0], "k", linewidth=0.8)
 plt.xlabel("$t$")
 plt.ylabel("$x(t)$")
@@ -621,7 +621,7 @@ Upon substitution $z= x/\sqrt{3}$ and $r=q^2-q$ one obtains $\dot{z} = rz - z^3$
 ![ ](_static/cont1d/cont1d_ferro_field_bifurcation_large_m.png)
 ![ ](_static/cont1d/cont1d_ferro_field_bifurcation_small_m.png)
 
-(a)-(c) Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ for an external magnetic field of $m=0.1$. (d) Fixed point branches $x_*(T)$ for $m=0.1$ and (e) for $m=0.005$. Both cases display a saddle-node bifurcation, but as $m$ becomes smaller, the diagram starts to more closely resemble that of a pitchfork bifurcation for $m=0$.
+(a)-(c) Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ for an external magnetic field of $m=0.1$ and $T=0.5$, $0.729$ and $1.5$. (d) Fixed point branches $x_*(T)$ for $m=0.1$ and (e) for $m=0.005$. Both cases display a saddle-node bifurcation, but as $m$ becomes smaller, the diagram starts to more closely resemble that of a pitchfork bifurcation for $m=0$.
 ```
 
 :::{only} html
@@ -633,7 +633,7 @@ Upon substitution $z= x/\sqrt{3}$ and $r=q^2-q$ one obtains $\dot{z} = rz - z^3$
 <iframe src="_static/cont1d/interactive/ferro_temperature.html" width="100%" height="440" style="border:none;"></iframe>
 ```
 
-The bifurcation characteristics change substantially when a non-zero external magnetic field is applied. Let us consider $m=0.1$. Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ are shown in {numref}`fig:cont1d_ferro_field_bifurcation`. The solutions to $f(x,T)=0$, i.e. the fixed point branches $x_*(T)$, are shown in {numref}`fig:cont1d_ferro_field_bifurcation`. It was again made with a zero contour, cut by stability as described above, to get information on the stability of the branches.
+The bifurcation characteristics change substantially when a non-zero external magnetic field is applied. Let us consider $m=0.1$. Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ are shown in {numref}`fig:cont1d_ferro_field_bifurcation`(a)-(c). The solutions to $f(x,T)=0$, i.e. the fixed point branches $x_*(T)$, are shown in {numref}`fig:cont1d_ferro_field_bifurcation`(d). It was again made with a zero contour, cut by stability as described above, to get information on the stability of the branches.
 
 It is interesting to note that the fixed point branches in this case no longer display a pitchfork bifurcation as was the case for $m=0$ (see {numref}`fig:cont1d_ferro_pitchfork`). Rather, the upper branch, $x_*(T) >0$, is no longer involved in any bifurcation. The lower two branches, on the other hand, now display a saddle node bifurcation, compare {numref}`fig:cont1d_bifur_saddle`. Making a similar plot for $m=0.005$ in {numref}`fig:cont1d_ferro_field_bifurcation` shows that as $m\rightarrow0$ the saddle node bifurcation and the upper fixed point branch will 'melt' together, such that one will retrieve a pitchfork bifurcation at $m=0$.
 
@@ -740,6 +740,8 @@ plt.ylabel("$x(t)$")
 plt.show()
 ```
 ````
+
+The program performs a single run. {numref}`fig:cont1d_ferro_spin_evolution` combines four such runs (two temperatures, two initial states), with $F=0.3$ for $T=0.5$ and $F=0.1$ for $T=1.5$, and shows the state every 1000 iterations.
 
 ```{subfigure} 6
 :name: fig:cont1d_ferro_spin_evolution

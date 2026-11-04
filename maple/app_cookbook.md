@@ -369,7 +369,7 @@ Plotting functions and expressions can be done as follows:
 :class: maple
 
 ```{code-block} maple
-plot([g(x), 2*q], x=-2..2, labels=["x", "y"], legend=["f","2 q"]);
+plot([g(x), 2*q], x=-2..3, labels=["x", "y"], legend=["f","2 q"]);
 ```
 ````
 
@@ -487,7 +487,7 @@ p := seq([a[i], b[i]], i=1..5);
 ````
 
 $$
-p := [1, 1], [2, 2], [3, 3], [1, 4], [2, 5]
+p := [1, 1], [2, 2], [3, 3], [2, 4], [1, 5]
 $$
 
 ````{admonition} Maple
@@ -998,7 +998,7 @@ restart; with(plots):
 f := x -> r * x * (1 - x);    # define function
 N := 50;                      # define nr of points
 X := Array(0..N):             # declare data array
-r := 0.5;                     # set parameter
+r := 3.5;                     # set parameter
 X[0] := 0.1;                  # set initial condition
 for n from 0 to N-1 do        # perform iterations
   X[n+1] := evalf( f(X[n]) );
@@ -1290,7 +1290,7 @@ A phase-portrait of the system can be made with the command `phaseportrait`. In 
 
 ```{code-block} maple
 phaseportrait([DE], [x(t),y(t)], t=0..50, [[x(0)=0.1,y(0)=0.15],
-# x(0)=0.1,y(0)=0.3], [x(0)=4,y(0)=2.5], [x(0)=4, y(0)=3]],
+[x(0)=0.1,y(0)=0.3], [x(0)=4,y(0)=2.5], [x(0)=4, y(0)=3]],
 stepsize=0.05, x=0..4, y=0..4, color=black,
 linecolor=[green, magenta, blue,red]);
 ```
@@ -1374,7 +1374,7 @@ Often one would like to be able to manipulate the data obtained from dsolve. Thi
 
 ```{code-block} maple
 N:=2500; dt := 0.01;
-samples := Array(1..N, i -(i-1)*dt):
+samples := Array(1..N, i -> (i-1)*dt):
 sol_arr := dsolve({DE,ic1},[x(t),y(t),z(t)],type=numeric,maxfun=-1,output=samples):
 
 # The returned data is an Array of Arrays.

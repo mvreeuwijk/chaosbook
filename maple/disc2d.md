@@ -642,18 +642,34 @@ The two Lyapunov exponents of the Hénon map determined in three different ways:
 
 The finding that one Lyapunov exponent is positive and one is negative is typical for chaotic systems. The positive Lyapunov exponent reveals the sensitive dependence on initial conditions and the precise value of $\Lambda_2$ thus quantifies this sensitivity. The negative exponent, on the other hand, demonstrates that the mapping also exerts significant *contraction*; this explains why different initial conditions are *attracted* to the object – the attractor – displayed in {numref}`fig:disc2d:henonattractor`. The action of attraction can be nicely observed in {numref}`fig:disc2d:henonfolding` where we have plotted the first 5 steps for a large number of random initial conditions (the 'holes' represent initial conditions that produce a divergent series and are omitted). The effect of *stretching* due to the positive Lyapunov exponent can be seen in {numref}`fig:disc2d:henonstretching` where we have shown the evolution of the same number of initial conditions, which are now very close to each other.
 
-```{figure} _static/disc2d/disc2d_HenonFold0.png
+```{subfigure} 3
 :name: fig:disc2d:henonfolding
-:width: 4cm
+:align: center
+:subcaptions: below
 
-The action of *contraction* due to the negative Lyapunov exponent: shown are the first 5 steps of the evolution of $10^4$ initial conditions which were randomly drawn from the interval $[-1.25,1.25]\times[-0.4,0.4]$.
+![ ](_static/disc2d/disc2d_HenonFold0.png)
+![ ](_static/disc2d/disc2d_HenonFold1.png)
+![ ](_static/disc2d/disc2d_HenonFold2.png)
+![ ](_static/disc2d/disc2d_HenonFold3.png)
+![ ](_static/disc2d/disc2d_HenonFold4.png)
+![ ](_static/disc2d/disc2d_HenonFold5.png)
+
+The action of *contraction* due to the negative Lyapunov exponent: shown are the first 5 steps of the evolution of $10^4$ initial conditions which were randomly drawn from the interval $[-1.25,1.25]\times[-0.4,0.4]$. (a) The initial conditions, $n=0$. (b)-(f) $n=1, \ldots, 5$.
 ```
 
-```{figure} _static/disc2d/disc2d_HenonStretch0.png
+```{subfigure} 3
 :name: fig:disc2d:henonstretching
-:width: 4cm
+:align: center
+:subcaptions: below
 
-The action of *stretching* due to the positive Lyapunov exponent: the evolution is shown of $10^4$ initial conditions very close to each other (max separation of $0.02$).
+![ ](_static/disc2d/disc2d_HenonStretch0.png)
+![ ](_static/disc2d/disc2d_HenonStretch4.png)
+![ ](_static/disc2d/disc2d_HenonStretch8.png)
+![ ](_static/disc2d/disc2d_HenonStretch12.png)
+![ ](_static/disc2d/disc2d_HenonStretch16.png)
+![ ](_static/disc2d/disc2d_HenonStretch20.png)
+
+The action of *stretching* due to the positive Lyapunov exponent: the evolution is shown of $10^4$ initial conditions very close to each other (max separation of $0.02$). (a)-(f) $n=0$, $4$, $8$, $12$, $16$ and $20$.
 ```
 
 ## Periodically kicked systems
@@ -669,11 +685,16 @@ Sketch of a kicked rotor system
 
 The conceptually most straightforward example of a system with periodic kicking is the kicked rotor. Imagine a mass $m$ attached to an arm of length $r$ rotating in a horizontal plane ({numref}`fig:disc2d_kickedrotor`). The system is not influenced by gravity, but is subject to linear friction. At fixed intervals $T$, the system is 'kicked': it receives a finite amount of angular momentum in a negligibly short time. The kicking strength $I$ depends on the angle $\theta$.
 
-```{figure} _static/disc2d/disc2d_kickedrotor_delta.png
+```{subfigure} 3
 :name: fig:disc2d_kickedrotor_cont
-:width: 60mm
+:align: center
+:subcaptions: below
 
-The dynamics of the undamped kicked rotor system
+![ ](_static/disc2d/disc2d_kickedrotor_delta.png)
+![ ](_static/disc2d/disc2d_kickedrotor_v.png)
+![ ](_static/disc2d/disc2d_kickedrotor_theta.png)
+
+The dynamics of the undamped kicked rotor system. (a) The impulsive forcing $F_t$. (b) The tangential velocity $v_\theta$. (c) The phase angle $\theta$.
 ```
 
 Before deriving the governing equations, let us analyse a typical timeseries of the kicked rotor system ({numref}`fig:disc2d_kickedrotor_cont`). The rotor is kicked at intervals $T=10$ and for simplicity friction has been neglected. {numref}`fig:disc2d_kickedrotor_cont` shows the impulsive forcing $F_t$ due to the kicks, the tangential velocity $v_\theta$ and the phase angle $\theta$ as a function of time. In between the kicks, no force acts on the rotor so the velocity stays constant. As a result, the angle $\theta$ changes linearly with time. At $t=10$, the system is kicked ($F_t$ shows the direction and relative magnitude of the forcing), by which the velocity changes instantaneously. The angle does not change in this short instant. As the kick at $t=10$ is large and positive, the rotor speeds up ($v_\theta$ increases), which translates to an increase in the slope of $\theta$. As the kicking strength $I$ depends on the angle $\theta$, each kick is generally of different strength. This property gives rise to some very complicated dynamics. But before we can explore this complexity, we need to develop the governing equations for the kicked rotor system.
@@ -1103,7 +1124,7 @@ Coexistence of chaotic and quasi-periodic solutions at $K=2$. Note the factor 10
 
 Unlike the maps we studied so far, the behavior of the standard map depends strongly on its initial conditions. Indeed, chaotic behavior was normally obtained by changing a system parameter, such as $r$ in the case of the logistic map. For the standard map, (quasi-) periodic solutions can coexist with chaotic solutions at fixed $K$. {numref}`fig:disc2d_standardmap:quasi_series`(a) shows a time-series with initial conditions $(x_0, y_0) = (0.4, 0.1)$ at $K=2$. Although there seems to be some order in the system judging from the hexagonal-like patterns, the series seems to traverse an entire interval of $x$.  The return plot ({numref}`fig:disc2d_standardmap:quasi_series`(c)) shows that all points fall on one curve, which suggests that the series is either quasi-periodic or chaotic. One can distinguish between the two by studying the sensitivity to initial conditions, and {numref}`fig:disc2d_standardmap:quasi_series`(e) shows that deviations seem to saturate at $10^{-5}$. The associated Lyapunov exponent $\Lambda \approx 0$, and we conclude that this series is quasi-periodic.
 
-On the other hand, using initial conditions $(x_0, y_0) = (0.1, 0.1)$, the standard map displays chaotic behavior. The series is shown in {numref}`fig:disc2d_standardmap:quasi_series`(b), and its return plot in {numref}`fig:disc2d_standardmap:quasi_series`(d). The return plot reveals very little order in the system: based on a current value $x_n$ practically all values can be expected for $x_{n+1}$, except when $x_n$ is near $0.5$. The chaotic nature of the series can be verified by the sensitive dependence on initial conditions ({numref}`fig:disc2d_standardmap:quasi_series`(f)), with an estimated (effective) Lyapunov exponent of $\Lambda \simeq 0.4$.
+On the other hand, using initial conditions $(x_0, y_0) = (0.05, 0.4)$, the standard map displays chaotic behavior. The series is shown in {numref}`fig:disc2d_standardmap:quasi_series`(b), and its return plot in {numref}`fig:disc2d_standardmap:quasi_series`(d). The return plot reveals very little order in the system: based on a current value $x_n$ practically all values can be expected for $x_{n+1}$, except when $x_n$ is near $0.5$. The chaotic nature of the series can be verified by the sensitive dependence on initial conditions ({numref}`fig:disc2d_standardmap:quasi_series`(f)), with an estimated (effective) Lyapunov exponent of $\Lambda \simeq 0.4$.
 
 The return plot for the chaotic series ({numref}`fig:disc2d_standardmap:quasi_series`(d)) shows no sign of an attractor. In this respect, the standard map is fundamentally different from other 2D discrete maps such as the Hénon map. This is because the standard map is *area preserving*. If one were to start out with a little square of initial conditions and apply ({eq}`eq:disc2d:standardmap_x`) its area will remain the same. This can be shown by calculating the determinant of the Jacobian:
 

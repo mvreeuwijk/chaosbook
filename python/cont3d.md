@@ -539,7 +539,7 @@ $$
 \end{aligned}
 $$
 
-with parameters $a$, $b$ and $c$. Note that only the $z$-equation contains a nonlinearity. In the absence of $z$, the first two equations are just those of a harmonic oscillator. As the parameter $a$ is positive there is negative damping, so that the typical behavior when $z \approx 0$ will be that of an unstable spiral. The attractor is shown in {numref}`fig:cont3d:rosslerperiod`(d) for $a=0.432$, $b=2$ and $c=4$. Following a trajectory starting at the center at $z=0$, the trajectory spirals outward. When $x$ becomes sufficiently large (after one or more cycles), the $z$ equation becomes active and the trajectory shoots up. Due to the negative feedback in the $x$-equation it is then reinjected near the center of the spiral. Trajectories are reinjected further to the inside of the spiral when they were further on the outside, generating a surface similar to a Möbius strip ({numref}`fig:cont3d:rosslertopology`). Note that the attractor is a topologically very complex object, as the outward spiralling trajectories are weaved through the reinjected trajectories.
+with parameters $a$, $b$ and $c$. Note that only the $z$-equation contains a nonlinearity. In the absence of $z$, the first two equations are just those of a harmonic oscillator. As the parameter $a$ is positive there is negative damping, so that the typical behavior when $z \approx 0$ will be that of an unstable spiral. The attractor is shown in {numref}`fig:cont3d:rosslerperiod`(g) for $a=0.432$, $b=2$ and $c=4$. Following a trajectory starting at the center at $z=0$, the trajectory spirals outward. When $x$ becomes sufficiently large (after one or more cycles), the $z$ equation becomes active and the trajectory shoots up. Due to the negative feedback in the $x$-equation it is then reinjected near the center of the spiral. Trajectories are reinjected further to the inside of the spiral when they were further on the outside, generating a surface similar to a Möbius strip ({numref}`fig:cont3d:rosslertopology`). Note that the attractor is a topologically very complex object, as the outward spiralling trajectories are weaved through the reinjected trajectories.
 
 ```{figure} _static/cont3d/cont3d_rosslertopology.png
 :name: fig:cont3d:rosslertopology
@@ -559,11 +559,15 @@ Schematic of the structure of the Rössler attractor. Trajectories spiral outwar
 :subcaptions: below
 
 ![ ](_static/cont3d/cont3d_rosslerperiod1a.png)
+![ ](_static/cont3d/cont3d_rosslerperiod1b.png)
 ![ ](_static/cont3d/cont3d_rosslerperiod2a.png)
+![ ](_static/cont3d/cont3d_rosslerperiod2b.png)
 ![ ](_static/cont3d/cont3d_rosslerperiod3a.png)
+![ ](_static/cont3d/cont3d_rosslerperiod3b.png)
 ![ ](_static/cont3d/cont3d_rosslerperiod4a.png)
+![ ](_static/cont3d/cont3d_rosslerperiod4b.png)
 
-The period doubling route to chaos of the Rössler system. (a) $c=3$: Period 1. (b) $c=3.4$: Period 2. (c) $c=3.55$: Period 4. (d) $c=4.0$: Chaos.
+The period doubling route to chaos of the Rössler system. Left: the attractor; right: the sequence of maxima $x_n$. (a, b) $c=3$: Period 1. (c, d) $c=3.4$: Period 2. (e, f) $c=3.55$: Period 4. (g, h) $c=4.0$: Chaos.
 ```
 
 :::{only} html
@@ -575,7 +579,7 @@ The period doubling route to chaos of the Rössler system. (a) $c=3$: Period 1. 
 <iframe src="_static/cont3d/interactive/rossler3d.html" width="100%" height="520" style="border:none;"></iframe>
 ```
 
-As for the Lorenz map, we sample the maxima of $x$ in order to reduce the complexity of the data. In {numref}`fig:cont3d:rosslerperiod`, the behavior of the system is shown for four different values of $c$. For $c=3$ ({numref}`fig:cont3d:rosslerperiod`a), the system settles into a limit cycle, and subsequent maxima in $x$ will be identical. This situation resembles that of a fixed point (period-1) solution for a one-dimensional map. For $c=3.4$ ({numref}`fig:cont3d:rosslerperiod`b), the system  settles into a limit cycle which has become more complex: the trajectory performs two cycles before returning to the same location. This is reflected in the sequence of the $x$-maxima, which shows a period-2 solution. A period-4 limit cycle is shown in {numref}`fig:cont3d:rosslerperiod`c and the chaotic timeseries in {numref}`fig:cont3d:rosslerperiod`d. In fact, the Rössler system has a full period doubling route to chaos, which is shown in {numref}`fig:cont3d:bifurcation`a. Clearly, there is a strong similarity with the bifurcation diagram of the logistic map, {numref}`fig:disc1d:series_bifurcation_logist`.
+As for the Lorenz map, we sample the maxima of $x$ in order to reduce the complexity of the data. In {numref}`fig:cont3d:rosslerperiod`, the behavior of the system is shown for four different values of $c$. For $c=3$ ({numref}`fig:cont3d:rosslerperiod`(a, b)), the system settles into a limit cycle, and subsequent maxima in $x$ will be identical. This situation resembles that of a fixed point (period-1) solution for a one-dimensional map. For $c=3.4$ ({numref}`fig:cont3d:rosslerperiod`(c, d)), the system  settles into a limit cycle which has become more complex: the trajectory performs two cycles before returning to the same location. This is reflected in the sequence of the $x$-maxima, which shows a period-2 solution. A period-4 limit cycle is shown in {numref}`fig:cont3d:rosslerperiod`(e, f) and the chaotic case in {numref}`fig:cont3d:rosslerperiod`(g, h). In fact, the Rössler system has a full period doubling route to chaos, which is shown in {numref}`fig:cont3d:bifurcation`a. Clearly, there is a strong similarity with the bifurcation diagram of the logistic map, {numref}`fig:disc1d:series_bifurcation_logist`.
 
 A clue for the period-doubling behavior could have been inferred from the return plot of $x_n$ in a fully chaotic state ($c=4$) ({numref}`fig:cont3d:rosslerreturn`). The return plot is very similar to the logistic map, and has both requirements for Feigenbaum's universality (section {numref}`sec:disc1d:universality`): 1) a unimodal map; and 2) a quadratic maximum. From the Lorenz map ({numref}`fig:cont3d:lorenzmap`) one might  anticipate that the Lorenz system will behave rather differently than the Rössler system, as the cusp implies that the map is not differentiable at its maximum. Shown in {numref}`fig:cont3d:bifurcation`b is the bifurcation diagram in terms of $r$ for the Lorenz equations. The other two parameters are $\sigma=10$ and $b=8/3$. As can be seen, the system is stable up to a certain value for $r$, after which it bursts into chaotic behaviour without a single trace of period doubling.
 

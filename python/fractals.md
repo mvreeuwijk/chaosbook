@@ -511,7 +511,7 @@ The anisotropy parameter $r$ – the height of the interface bulges relative to 
 :name: fig:fractals:tnti
 :width: 100%
 
-A self-similar model of the turbulent/non-turbulent interface [Krug2017]. (a) The generator: a segment of length $l_n$ is replaced by two segments meeting at a vertex displaced by $r\,l_n$ off the midpoint. (b) Curves after five iterations for $r=0.3$ and $r=0.2$; the smaller $r$ produces a smoother, lower-dimensional interface. (c) The fractal exponent $\beta = \log m/\log(2/m)$ as a function of the anisotropy $r$, with the neutral-turbulence value $\beta=1/3$ marked.
+A self-similar model of the turbulent/non-turbulent interface (after Krug et al., 2017). (a) The generator: a segment of length $l_n$ is replaced by two segments meeting at a vertex displaced by $r\,l_n$ off the midpoint. (b) Curves after five iterations for $r=0.3$ and $r=0.2$; the smaller $r$ produces a smoother, lower-dimensional interface. (c) The fractal exponent $\beta = \log m/\log(2/m)$ as a function of the anisotropy $r$, with the neutral-turbulence value $\beta=1/3$ marked.
 ```
 
 :::{only} html

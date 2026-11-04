@@ -700,11 +700,19 @@ The two Lyapunov exponents of the Hénon map determined in three different ways:
 
 The finding that one Lyapunov exponent is positive and one is negative is typical for chaotic systems. The positive Lyapunov exponent reveals the sensitive dependence on initial conditions and the precise value of $\Lambda_2$ thus quantifies this sensitivity. The negative exponent, on the other hand, demonstrates that the mapping also exerts significant *contraction*; this explains why different initial conditions are *attracted* to the object – the attractor – displayed in {numref}`fig:disc2d:henonattractor`. The action of attraction can be nicely observed in {numref}`fig:disc2d:henonfolding` where we have plotted the first 5 steps for a large number of random initial conditions (the 'holes' represent initial conditions that produce a divergent series and are omitted). The effect of *stretching* due to the positive Lyapunov exponent can be seen in {numref}`fig:disc2d:henonstretching` where we have shown the evolution of the same number of initial conditions, which are now very close to each other.
 
-```{figure} _static/disc2d/disc2d_HenonFold0.png
+```{subfigure} 3
 :name: fig:disc2d:henonfolding
-:width: 4cm
+:align: center
+:subcaptions: below
 
-The action of *contraction* due to the negative Lyapunov exponent: shown are the first 5 steps of the evolution of $10^4$ initial conditions which were randomly drawn from the interval $[-1.25,1.25]\times[-0.4,0.4]$.
+![ ](_static/disc2d/disc2d_HenonFold0.png)
+![ ](_static/disc2d/disc2d_HenonFold1.png)
+![ ](_static/disc2d/disc2d_HenonFold2.png)
+![ ](_static/disc2d/disc2d_HenonFold3.png)
+![ ](_static/disc2d/disc2d_HenonFold4.png)
+![ ](_static/disc2d/disc2d_HenonFold5.png)
+
+The action of *contraction* due to the negative Lyapunov exponent: shown are the first 5 steps of the evolution of $10^4$ initial conditions which were randomly drawn from the interval $[-1.25,1.25]\times[-0.4,0.4]$. (a) The initial conditions, $n=0$. (b)-(f) $n=1, \ldots, 5$.
 ```
 
 :::{only} html
@@ -716,11 +724,19 @@ The action of *contraction* due to the negative Lyapunov exponent: shown are the
 <iframe src="_static/disc2d/interactive/henon_fold.html" width="100%" height="500" style="border:none;"></iframe>
 ```
 
-```{figure} _static/disc2d/disc2d_HenonStretch0.png
+```{subfigure} 3
 :name: fig:disc2d:henonstretching
-:width: 4cm
+:align: center
+:subcaptions: below
 
-The action of *stretching* due to the positive Lyapunov exponent: the evolution is shown of $10^4$ initial conditions very close to each other (max separation of $0.02$).
+![ ](_static/disc2d/disc2d_HenonStretch0.png)
+![ ](_static/disc2d/disc2d_HenonStretch4.png)
+![ ](_static/disc2d/disc2d_HenonStretch8.png)
+![ ](_static/disc2d/disc2d_HenonStretch12.png)
+![ ](_static/disc2d/disc2d_HenonStretch16.png)
+![ ](_static/disc2d/disc2d_HenonStretch20.png)
+
+The action of *stretching* due to the positive Lyapunov exponent: the evolution is shown of $10^4$ initial conditions very close to each other (max separation of $0.02$). (a)-(f) $n=0$, $4$, $8$, $12$, $16$ and $20$.
 ```
 
 :::{only} html
@@ -744,11 +760,16 @@ Sketch of a kicked rotor system
 
 The conceptually most straightforward example of a system with periodic kicking is the kicked rotor. Imagine a mass $m$ attached to an arm of length $r$ rotating in a horizontal plane ({numref}`fig:disc2d_kickedrotor`). The system is not influenced by gravity, but is subject to linear friction. At fixed intervals $T$, the system is 'kicked': it receives a finite amount of angular momentum in a negligibly short time. The kicking strength $I$ depends on the angle $\theta$.
 
-```{figure} _static/disc2d/disc2d_kickedrotor_delta.png
+```{subfigure} 3
 :name: fig:disc2d_kickedrotor_cont
-:width: 60mm
+:align: center
+:subcaptions: below
 
-The dynamics of the undamped kicked rotor system
+![ ](_static/disc2d/disc2d_kickedrotor_delta.png)
+![ ](_static/disc2d/disc2d_kickedrotor_v.png)
+![ ](_static/disc2d/disc2d_kickedrotor_theta.png)
+
+The dynamics of the undamped kicked rotor system. (a) The impulsive forcing $F_t$. (b) The tangential velocity $v_\theta$. (c) The phase angle $\theta$.
 ```
 
 :::{only} html
@@ -1266,7 +1287,7 @@ $$
 
 Although the Jacobian $J$ has a functional dependence on $x$, its determinant does not. The mapping preserves its area because $\det J = 1$. Recall that the determinant of a matrix $J$ is related to its eigenvalues by $\det J = \sigma_1 \sigma_2$. In the eigenframe, an infinitesimal square of size $\delta_1 \times \delta_2$ would map to $\sigma_1 \delta_1 \times \sigma_2 \delta_2= \det J \delta_1 \times \delta_2$. Therefore, if $\det J = 1$, areas are preserved. The preservation of area means that this system cannot settle on an attractor, as this requires a convergence of initial conditions (i.e. $|\det J | < 1$) to a small region of space.
 
-The phase space $(x, y)$ of the standard map for $K=2$ is shown in {numref}`fig:disc2d_standardmap_phase`. The different colors in the diagram are series obtained with different initial conditions. A large part of the phasespace has chaotic behavior (black dots). However, there are islands of order in this 'sea of chaos' (other colors). In particular, there is a large region around $(x,y)=(1/2, 0)$ with quasi-periodic solutions. Note that the grey-coloured quasi-periodic solution around $(1/2, 1/2)$ actually consists of two regions (the other one around $(0, 1/2)$) between which it alternates.
+The phase space $(x, y)$ of the standard map for $K=2$ is shown in {numref}`fig:disc2d_standardmap_phase`. The different colors in the diagram are series obtained with different initial conditions. A large part of the phasespace has chaotic behavior (black dots). However, there are islands of order in this 'sea of chaos' (other colors). In particular, there is a large region around $(x,y)=(1/2, 0)$ with quasi-periodic solutions. Note that the violet-coloured quasi-periodic solution around $(1/2, 1/2)$ actually consists of two regions (the other one around $(0, 1/2)$) between which it alternates.
 
 The standard map is periodic (modulo 1) in both $x$ and $y$. Therefore, the phase space is topologically a *torus*. Imagine that the phase space of {numref}`fig:disc2d_standardmap_phase` is glued on a thin sheet of rubber. As $x=0$ and $x=1$ represent the same point, we bring them together, obtaining a cylinder. Now, $y=0$ and $y=1$ also represent identical points, and on bringing together the two ends of the cylinder, one ends up with a torus ({numref}`fig:disc2d_standardmap_phase`).
 

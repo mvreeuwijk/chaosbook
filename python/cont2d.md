@@ -736,7 +736,7 @@ An example of a limit cycle is shown in {numref}`fig:cont2d:limit:phase`. Two ti
 ![ ](_static/cont2d/cont2d_Limit_time.png)
 ![ ](_static/cont2d/cont2d_Limit_phase.png)
 
-Limit cycle
+Limit cycle of the system ({eq}`eq:cont2d:limit_x`), for the initial conditions $(x_0, y_0) = (0.01, 0)$ (red solid line) and $(2, 0)$ (blue dashed line). (a) Time series $x(t)$. (b) Phase portrait.
 ```
 
 :::{only} html
@@ -1149,7 +1149,7 @@ print([float(e.subs(mu, 0.7)) for e in ev])
 ![ ](_static/cont2d/cont2d_pitchfork_fixed.png)
 ![ ](_static/cont2d/cont2d_pitchfork_stab.png)
 
-Supercritical pitchfork bifurcation for the system ({eq}`eq:cont2d:pitchfork:x`). (a, b) phase portraits for $\mu=-0.1$ and $\mu=0.1$; c) $x^*$ as a function of $\mu$; d) the eigenvalues (which are purely real in this case) for the fixed point $(0,0)$. (a) $\mu=-0.1$. (b) $\mu=0.1$.
+Supercritical pitchfork bifurcation for the system ({eq}`eq:cont2d:pitchfork:x`). (a) Phase portrait for $\mu=-0.1$. (b) Phase portrait for $\mu=0.1$. (c) $x^*$ as a function of $\mu$. (d) The eigenvalues (which are purely real in this case) for the fixed point $(0,0)$.
 ```
 
 :::{only} html
@@ -1177,7 +1177,7 @@ $$
 J(0,0) = \left[ \begin{array}{cc} \mu & -1 \\ 1 & \mu \end{array} \right]
 $$
 
-The eigenvalues of this matrix are $\sigma_{1,2} = \mu \pm i$. As the fixed point changes from a stable to an unstable spiral at $\mu = 0$, we conclude that a Hopf bifurcation is taking place at $\mu=0$. This is confirmed by numerical simulations for $\mu = -0.1$ and $\mu = 0.1$. The transition from a stable to an unstable spiral is clearly discernible from the time series and phase portraits ({numref}`fig:cont2d:hopf`(a, b)). The real and imaginary parts of the eigenvalues are plotted as a function of $\mu$ in {numref}`fig:cont2d:hopf`(c) and {numref}`fig:cont2d:hopf`(d), respectively.
+The eigenvalues of this matrix are $\sigma_{1,2} = \mu \pm i$. As the fixed point changes from a stable to an unstable spiral at $\mu = 0$, we conclude that a Hopf bifurcation is taking place at $\mu=0$. This is confirmed by numerical simulations for $\mu = -0.1$ and $\mu = 0.1$. The transition from a stable to an unstable spiral is clearly discernible from the time series ({numref}`fig:cont2d:hopf`(a, b)) and phase portraits ({numref}`fig:cont2d:hopf`(c, d)). The real and imaginary parts of the eigenvalues are plotted as a function of $\mu$ in {numref}`fig:cont2d:hopf`(e) and {numref}`fig:cont2d:hopf`(f), respectively.
 
 ```{subfigure} 2
 :name: fig:cont2d:hopf
@@ -1186,10 +1186,12 @@ The eigenvalues of this matrix are $\sigma_{1,2} = \mu \pm i$. As the fixed poin
 
 ![ ](_static/cont2d/cont2d_Hopf_time1.png)
 ![ ](_static/cont2d/cont2d_Hopf_time2.png)
+![ ](_static/cont2d/cont2d_Hopf_phase1.png)
+![ ](_static/cont2d/cont2d_Hopf_phase2.png)
 ![ ](_static/cont2d/cont2d_Hopf_ev1.png)
 ![ ](_static/cont2d/cont2d_Hopf_ev2.png)
 
-A Hopf bifurcation involves the transition of a fixed point from a stable spiral $(\text{Re}{\sigma_{1,2}}<0)$ to an unstable spiral $(\text{Re}{\sigma_{1,2}}>0)$. (a) $\mu=-0.1$. (b) $\mu=0.1$.
+A Hopf bifurcation involves the transition of a fixed point from a stable spiral $(\text{Re}{\sigma_{1,2}}<0)$ to an unstable spiral $(\text{Re}{\sigma_{1,2}}>0)$. (a, b) Time series and (c, d) phase portraits for $\mu=-0.1$ (left) and $\mu=0.1$ (right). (e) Real and (f) imaginary parts of the eigenvalues $\sigma_{1,2}$ as a function of $\mu$.
 ```
 
 :::{only} html
@@ -1253,7 +1255,7 @@ The fixed points are plotted as a function of $\mu$ with the help of a contour p
 ![ ](_static/cont2d/cont2d_global_r.png)
 ![ ](_static/cont2d/cont2d_global_fixed.png)
 
-A blue sky limit cycle. (a, b) The phase portraits just before and after the bifurcation. (c) $\mathrm{d}r/\mathrm{d}t$ as a function of $r$. (d) stability diagram of the fixed points. (a) $\mu=-0.26$. (b) $\mu=-0.24$.
+A blue sky limit cycle. (a) The phase portrait just before the bifurcation, $\mu=-0.26$. (b) The phase portrait just after the bifurcation, $\mu=-0.24$. (c) $\mathrm{d}r/\mathrm{d}t$ as a function of $r$. (d) Stability diagram of the fixed points.
 ```
 
 :::{only} html

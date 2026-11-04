@@ -92,7 +92,7 @@ Cobweb graphs of the logistic map for various $r$. (a) $r=2.7$ convergence to a 
 
 ### The Cobweb method
 
-An interesting graphical way to see how discrete maps work is by making so-called cob-web plots. It works as follows: Plot the mapping function $y=f(x)$ together with the line $y=x$, as is done for $r=2.7$ in {numref}`fig:disc1d:some_cobwebs_logist`. Now starting at $x_0$ use the graph $y=f(x)$ to find the value of $x_1$ by following the solid line in {numref}`fig:disc1d:some_cobwebs_logist`. The trick to proceed is to use the line $y=x$, i.e. follow the horizontal line to the diagonal, then follow the vertical dotted line giving you the point $x_1$ on the $x$-axis. Repeating the previous steps you find graphically $x_2 = f(x_1)$, then $x_3 = f(x_2)$ and so on, until you find a fixed point as in {numref}`fig:disc1d:some_cobwebs_logist`, or for example a period-2 solution as in {numref}`fig:disc1d:some_cobwebs_logist` or chaos as shown in {numref}`fig:disc1d:some_cobwebs_logist`. Note that in the latter two plots we refrained from plotting the dotted lines, because, as one soon realizes, one does not need to really go back to the $x$- and $y$-axis for finding the next point. Instead, it suffices to move back and forth between the graphs of $y=f(x)$ and $y=x$.
+An interesting graphical way to see how discrete maps work is by making so-called cob-web plots. It works as follows: Plot the mapping function $y=f(x)$ together with the line $y=x$, as is done for $r=2.7$ in {numref}`fig:disc1d:some_cobwebs_logist`(a). Now starting at $x_0$ use the graph $y=f(x)$ to find the value of $x_1$ by following the solid line in {numref}`fig:disc1d:some_cobwebs_logist`(a). The trick to proceed is to use the line $y=x$, i.e. follow the horizontal line to the diagonal, then follow the vertical dotted line giving you the point $x_1$ on the $x$-axis. Repeating the previous steps you find graphically $x_2 = f(x_1)$, then $x_3 = f(x_2)$ and so on, until you find a fixed point as in {numref}`fig:disc1d:some_cobwebs_logist`(a), or for example a period-2 solution as in {numref}`fig:disc1d:some_cobwebs_logist`(b) or chaos as shown in {numref}`fig:disc1d:some_cobwebs_logist`(c). Note that in the latter two plots we refrained from plotting the dotted lines, because, as one soon realizes, one does not need to really go back to the $x$- and $y$-axis for finding the next point. Instead, it suffices to move back and forth between the graphs of $y=f(x)$ and $y=x$.
 
 One can study the cobweb method in more detail by running the Python program below and changing the value of $r$ and/or looking at other mappings like $f(x)=r\sin(\pi x)$ (`cb.sine`).
 
@@ -183,7 +183,7 @@ For the logistic map we find two possibilities
 x^{*} = r x^{*} (1-x^{*})\,\,\,\,\,\,\,\,\,\,\rightarrow\,\,\,\,\, x^{*} = 0,\,\,\,\,\text{or}\,\,\,\,x^{*} = 1-\frac{1}{r}
 ```
 
-Indeed, the series for $r=3/2$ depicted in {numref}`fig:disc1d:some_series_logist` converges to $x_{n} \rightarrow x^{*} = 1/3$ as predicted by {eq}`eq:disc1d:fixed_point_logist`. It will do that for any initial value $x \in \langle 0,1\rangle$ (we write $\langle a,b \rangle$ for the open interval $a < x < b$) as shown in {numref}`fig:disc1d:logist_attractor`. The other fixed point of {eq}`eq:disc1d:fixed_point_logist`, $x^{*} = 0$, is only attainable when you start at exactly $x_0 = 0$ or $x_0 =1$. Any deviation will inevitably lead to $x^{*} = 1/3$. So we can say that for $r=3/2$ there is a fixed point $x^{*} = 1/3$ which is *stable*, and a fixed point $x^{*} = 0$ which is *unstable*.
+Indeed, the series for $r=3/2$ depicted in {numref}`fig:disc1d:some_series_logist`(a) converges to $x_{n} \rightarrow x^{*} = 1/3$ as predicted by {eq}`eq:disc1d:fixed_point_logist`. It will do that for any initial value $x \in \langle 0,1\rangle$ (we write $\langle a,b \rangle$ for the open interval $a < x < b$) as shown in {numref}`fig:disc1d:logist_attractor`. The other fixed point of {eq}`eq:disc1d:fixed_point_logist`, $x^{*} = 0$, is only attainable when you start at exactly $x_0 = 0$ or $x_0 =1$. Any deviation will inevitably lead to $x^{*} = 1/3$. So we can say that for $r=3/2$ there is a fixed point $x^{*} = 1/3$ which is *stable*, and a fixed point $x^{*} = 0$ which is *unstable*.
 
 Let us try to make the notion of stability of fixed points more precise. If we start the sequence at a fixed point $x_0 = x^{*}$, the system will remain in the fixed point by definition, see {eq}`eq:disc1d:def_fixed_point`. But what if we slightly perturb the initial value, i.e. we start with $x_0 = x^{*} + \epsilon_0$, where the perturbation is really small: $\epsilon_0 \ll 1$. Will the series $x_n$ return to the fixed point? Or will it diverge? Put differently, if we write $x_n = x^{*} + \epsilon_n$, then will the deviations $\epsilon_n$ approach to zero for increasing $n$ or not?
 
@@ -294,9 +294,9 @@ Plot of $f(x)$ and $g(x)=f(f(x))$ for $r=3.2$, together with $y = x$. The period
 (sec:disc1d:periodicstability)=
 ## Periodic solutions and their stability
 
-In the time-series plots of the logistic map shown in {numref}`fig:disc1d:some_series_logist` we observe, apart from chaos and stationary solutions, sustained periodic behaviour (viz. {numref}`fig:disc1d:some_series_logist` and {numref}`fig:disc1d:some_series_logist`). Below we will show how one can find periodic solutions in discrete maps and how one can determine the stability of these solutions. We start with a period-2 solution and then generalize the method for periodic solutions of arbitrary order.
+In the time-series plots of the logistic map shown in {numref}`fig:disc1d:some_series_logist` we observe, apart from chaos and stationary solutions, sustained periodic behaviour (viz. {numref}`fig:disc1d:some_series_logist`(b) and {numref}`fig:disc1d:some_series_logist`(c)). Below we will show how one can find periodic solutions in discrete maps and how one can determine the stability of these solutions. We start with a period-2 solution and then generalize the method for periodic solutions of arbitrary order.
 
-A period-2 solution, as for example depicted in {numref}`fig:disc1d:some_series_logist`, is a solution that looks like
+A period-2 solution, as for example depicted in {numref}`fig:disc1d:some_series_logist`(b), is a solution that looks like
 
 $$
 x^{*}_{1},x^{*}_{2}, x^{*}_{1},x^{*}_{2}, x^{*}_{1},x^{*}_{2},\ldots
@@ -364,7 +364,7 @@ truefp2 = [s for s in fp2 if s not in fp1]
 \mathtt{truefp2} = \left\{\frac {r+1\pm\sqrt {{r}^{2}-2\,r-3}}{2r}\right\}
 ```
 
-Substituting $r=3.2$ we get $x^{*}_{1,2} \approx \{0.513,0.799\}$, consistent with {numref}`fig:disc1d:some_series_logist`.
+Substituting $r=3.2$ we get $x^{*}_{1,2} \approx \{0.513,0.799\}$, consistent with {numref}`fig:disc1d:some_series_logist`(b).
 ````
 
 ### Stability of period-2 solutions
@@ -652,7 +652,7 @@ Closer inspection of the graphs in {numref}`fig:disc1d:series_bifurcation_logist
 :name: fig:disc1d:logist_lyap_two_sets
 :width: 100mm
 
-Logistic map at $r=3.9$. Two sets with slightly different initial conditions $y_0 = x_0 + 10^{-9}$. The difference becomes already obvious at $n=25$.
+Logistic map at $r=3.9$. Two sets with slightly different initial conditions $y_0 = x_0 + 10^{-9}$. The difference becomes obvious from about $n=27$.
 ```
 
 :::{only} html
@@ -672,7 +672,7 @@ Y = cb.orbit(cb.logistic, x0=0.1 + epsilon, n=N, r=r)
 ```
 ````
 
-The two resulting series are plotted in {numref}`fig:disc1d:logist_lyap_two_sets`. It is interesting to see that the difference between the two sets becomes clear already around $n=25$. Furthermore one gets the impression that the sets diverge quite suddenly. This however is rather deceiving as becomes clear when we plot the logarithm of the absolute differences, $\ln|y_n-x_n|$, see {numref}`fig:disc1d:logist_lyap_r39_log`. The graph shows clearly that the deviations were growing steadily from the very beginning, and that the log-values were merely following a straight line. From this one can conclude that the error growth is exponential, i.e.
+The two resulting series are plotted in {numref}`fig:disc1d:logist_lyap_two_sets`. It is interesting to see that the difference between the two sets becomes clear already around $n=27$. Furthermore one gets the impression that the sets diverge quite suddenly. This however is rather deceiving as becomes clear when we plot the logarithm of the absolute differences, $\ln|y_n-x_n|$, see {numref}`fig:disc1d:logist_lyap_r39_log`. The graph shows clearly that the deviations were growing steadily from the very beginning, and that the log-values were merely following a straight line. From this one can conclude that the error growth is exponential, i.e.
 
 ```{math}
 :label: eq:disc1d:lyapunov_phenomenological

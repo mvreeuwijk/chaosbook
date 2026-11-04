@@ -41,7 +41,7 @@ b) Determine the box-dimension of this attractor.
 :name: fig0121:3dc_poincare
 :width: 100mm
 
-Result from executing `DoubleWellFractal\_start.mws` with $N=10000$.
+Result from executing `DoubleWellFractal_start.mws` with $N=10000$.
 ```
 
 
