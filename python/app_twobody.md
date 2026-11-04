@@ -39,7 +39,7 @@ Here the cube in the denominator arises because the $1/r^2$ magnitude is multipl
 (app:twobody:restricted)=
 ## Simplification 1: a negligible satellite mass
 
-We now specialise to the earth–moon–satellite setting. The satellite ($m_3$) is extraordinarily light compared with the earth ($m_1$) and the moon ($m_2$); for the values in {numref}`table:phenomenon_3bodyconstants` the earth is four times heavier than the 'moon' of the example (81 times heavier than the real moon), while even a satellite of 1000 kg has $m_3/m_1 pprox 2\cdot 10^{-22}$. Every term in {eq}`eq:app:twobody:full` that describes the pull of the satellite on a heavy body is proportional to $m_3$ and is therefore utterly negligible. Dropping those terms, the equations for the two heavy bodies (the *primaries*) decouple completely from the satellite:
+We now specialise to the earth–moon–satellite setting. The satellite ($m_3$) is extraordinarily light compared with the earth ($m_1$) and the moon ($m_2$); for the values in {numref}`table:phenomenon_3bodyconstants` the earth is four times heavier than the 'moon' of the example (81 times heavier than the real moon), while even a satellite of 1000 kg has $m_3/m_1 \approx 2\cdot 10^{-22}$. Every term in {eq}`eq:app:twobody:full` that describes the pull of the satellite on a heavy body is proportional to $m_3$ and is therefore utterly negligible. Dropping those terms, the equations for the two heavy bodies (the *primaries*) decouple completely from the satellite:
 
 ```{math}
 :label: eq:app:twobody:primaries1
