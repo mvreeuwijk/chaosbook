@@ -2,10 +2,10 @@
 
 Produces (in python/_static/phenomenon/):
   phenomenon_lorenz_xt_series.png          time series x(t)
-  phenomenon_lorenz_xt_two_series_em3.png  sensitivity, epsilon = 1e-3
-  phenomenon_lorenz_xt_two_series_em5.png  sensitivity, epsilon = 1e-5
-  phenomenon_lorenz_phasespace_close.png   the butterfly attractor
-  phenomenon_lorenz_phasespace_far.png     convergence onto the attractor
+  phenomenon_lorenz_xt_two_series.png      sensitivity, (a) epsilon = 1e-3,
+                                           (b) epsilon = 1e-5
+  phenomenon_lorenz_phasespace.png         (a) the butterfly attractor,
+                                           (b) convergence onto it
   interactive/lorenz3d.html                rotatable 3D attractor
   interactive/lorenz_sensitivity.html      divergence animation
 """
@@ -19,8 +19,9 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "phenomenon"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -33,47 +34,40 @@ def run(ic, tend, n=6000):
 
 # -- time series ------------------------------------------------------------
 sol1 = run([2, 5, 5], 30)
-plt.figure(figsize=(6.2, 3.6))
-plt.plot(sol1.t, sol1.y[0], "b", linewidth=1)
-plt.xlabel("$t$")
-plt.ylabel("$x$")
-plt.tight_layout()
-plt.savefig(OUT / "phenomenon_lorenz_xt_series.png", dpi=150)
-plt.close()
+fig, ax = plt.subplots(figsize=(bf.FULL_W, 2.4))
+ax.plot(sol1.t, sol1.y[0], "b")
+ax.set_xlabel("$t$")
+ax.set_ylabel("$x$")
+bf.save(fig, OUT / "phenomenon_lorenz_xt_series.png")
 
-# -- sensitive dependence, epsilon = 1e-3 and 1e-5 --------------------------
-for eps, name in [(1e-3, "em3"), (1e-5, "em5")]:
+# -- sensitive dependence, epsilon = 1e-3 (a) and 1e-5 (b), one figure ------
+fig, axs = plt.subplots(2, 1, figsize=(bf.FULL_W, 3.2), sharex=True)
+for ax, eps in zip(axs, [1e-3, 1e-5]):
     sol2 = run([2 + eps, 5, 5], 30)
-    plt.figure(figsize=(4.2, 3.2))
-    plt.plot(sol1.t, sol1.y[0], "b", linewidth=1)
-    plt.plot(sol2.t, sol2.y[0], "r", linewidth=1)
-    plt.xlabel("$t$")
-    plt.ylabel("$x$")
-    plt.tight_layout()
-    plt.savefig(OUT / f"phenomenon_lorenz_xt_two_series_{name}.png", dpi=150)
-    plt.close()
+    ax.plot(sol1.t, sol1.y[0], "b")
+    ax.plot(sol2.t, sol2.y[0], "r")
+    ax.set_ylabel("$x$")
+axs[-1].set_xlabel("$t$")
+bf.panel_labels(axs, ha="left", pad=(0.0, 0.03))
+bf.save(fig, OUT / "phenomenon_lorenz_xt_two_series.png")
 
-# -- phase space: the butterfly, and convergence onto it --------------------
+# -- phase space: the butterfly (a), and convergence onto it (b) -------------
 solb = run([2, 5, 5], 40, n=12000)
-ax = plt.figure(figsize=(4.2, 3.2)).add_subplot(projection="3d")
-ax.plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
-ax.set_xlabel("$x$")
-ax.set_ylabel("$y$")
-ax.set_zlabel("$z$")
-plt.tight_layout()
-plt.savefig(OUT / "phenomenon_lorenz_phasespace_close.png", dpi=150)
-plt.close()
-
 solf = run([100, 5, 5], 40, n=12000)
-ax = plt.figure(figsize=(4.2, 3.2)).add_subplot(projection="3d")
-ax.plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
-ax.plot(solf.y[0], solf.y[1], solf.y[2], "r", linewidth=0.6)
-ax.set_xlabel("$x$")
-ax.set_ylabel("$y$")
-ax.set_zlabel("$z$")
-plt.tight_layout()
-plt.savefig(OUT / "phenomenon_lorenz_phasespace_far.png", dpi=150)
-plt.close()
+fig = plt.figure(figsize=(bf.FULL_W, 3.0))
+axs = [fig.add_subplot(1, 2, k + 1, projection="3d") for k in range(2)]
+axs[0].plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
+axs[1].plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
+axs[1].plot(solf.y[0], solf.y[1], solf.y[2], "r", linewidth=0.6)
+for ax in axs:
+    ax.set_xlabel("$x$")
+    ax.set_ylabel("$y$")
+    ax.set_zlabel("$z$")
+    ax.set_box_aspect(None, zoom=0.78)   # keep the axis labels inside
+for ax, lab in zip(axs, "ab"):      # 3-D axes: text2D, not text
+    ax.text2D(0.02, 0.92, f"({lab})", transform=ax.transAxes,
+              fontsize=plt.rcParams["axes.labelsize"])
+bf.save(fig, OUT / "phenomenon_lorenz_phasespace.png")
 
 # -- interactive: rotatable attractor ---------------------------------------
 fig = go.Figure(go.Scatter3d(

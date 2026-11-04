@@ -28,7 +28,6 @@ Note that $x^*$ is a fixed point for the map $f$.
 
 ```{figure} _static/exercises/ex0093r00.png
 :name: fig:ex0093r00:ex0093r00
-:width: 70mm
 
 A sketch of how the Newton-Raphson method iteratively locates a zero-crossing of $g(x)$.
 ```

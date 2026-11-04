@@ -13,9 +13,11 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "practice"
-OUT.mkdir(parents=True, exist_ok=True)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, save)
+
+OUT = bf.out("practice")
 
 C_TRUTH, C_FREE, C_ANA, C_OBS = "#111111", "#c0392b", "#1f6aa5", "#e08a1e"
 sigma, r, b = 10.0, 28.0, 8.0 / 3.0
@@ -85,7 +87,7 @@ err_free = np.sqrt(np.mean((free - truth) ** 2, axis=1))
 print(f"RMS error: free forecast {err_free[-100:].mean():.2f} (last 1 time unit), "
       f"analysis {err_ana[-50:].mean():.2f}")
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5.8, 5.0), sharex=True,
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(bf.FULL_W, 4.0), sharex=True,
                                height_ratios=[2, 1])
 ax1.plot(t, truth[:, 0], color=C_TRUTH, lw=1.4, label="truth", zorder=3)
 ax1.plot(t, free[:, 0], color=C_FREE, lw=1.2, ls="--", label="free forecast", zorder=2)
@@ -94,15 +96,13 @@ ax1.scatter(tobs, y[:, 0], s=12, color=C_OBS, zorder=5, edgecolors="none",
             label="observations")
 ax1.set_ylabel("$x$")
 ax1.set_ylim(-28, 34)
-ax1.legend(ncol=2, loc="upper center", fontsize=10)
+ax1.legend(ncol=2, loc="upper center")
 ax2.semilogy(t, err_free, color=C_FREE, lw=1.2, ls="--", label="free forecast")
 ax2.semilogy(ta, err_ana, color=C_ANA, lw=1.2, label="Kalman filter")
 ax2.set_ylabel("RMS error")
 ax2.set_xlabel("$t$")
 ax2.set_xlim(0, T)
 ax2.set_ylim(1e-2, 3e2)
-ax2.legend(ncol=2, loc="upper center", fontsize=10)
-fig.tight_layout()
-fig.savefig(OUT / "practice_assimilation.png", dpi=150)
-plt.close(fig)
+ax2.legend(ncol=2, loc="upper center")
+bf.save(fig, OUT / "practice_assimilation.png")
 print("fig_assimilation: assets written to", OUT)

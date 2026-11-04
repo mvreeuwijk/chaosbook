@@ -11,9 +11,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Ellipse
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "exercises"
-OUT.mkdir(parents=True, exist_ok=True)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, save)
+
+OUT = bf.out("exercises")
 
 BODY, AXON, TERM = "#c9c4e6", "#f5d98a", "#d9a7a0"
 
@@ -27,12 +29,12 @@ def branch(ax, p, ang, length, depth, color, lw):
         branch(ax, q, ang - 0.45, 0.7 * length, depth - 1, color, 0.7 * lw)
 
 
-fig, ax = plt.subplots(figsize=(5.0, 2.7))
+fig, ax = plt.subplots(figsize=(3.8, 1.9))
 # dendrites (left) from the cell body
 body = (1.6, 1.4)
 for ang, ln in [(2.5, 0.6), (1.9, 0.75), (1.35, 0.65), (3.3, 0.6), (3.9, 0.65),
                 (4.5, 0.6), (5.1, 0.55)]:
-    branch(ax, body, ang, ln, 2, BODY, 3.0)
+    branch(ax, body, ang, ln, 2, BODY, 2.3)
 ax.add_patch(Ellipse(body, 1.0, 0.8, fc=BODY, ec="k", lw=0.8, zorder=3))
 ax.add_patch(Ellipse((1.5, 1.35), 0.35, 0.28, fc="#8fc79a", ec="k", lw=0.6, zorder=4))
 # axon: chain of Schwann cells following a shallow arc
@@ -43,9 +45,9 @@ for x, y, a_ in cells:
 # axon terminals (right)
 end = (6.3, 1.95)
 for ang in (0.3, 0.8, 1.3, -0.3):
-    branch(ax, end, ang, 0.45, 2, TERM, 2.2)
+    branch(ax, end, ang, 0.45, 2, TERM, 1.7)
 # labels
-kw = dict(fontsize=8, ha="center", va="center")
+kw = dict(fontsize=7, ha="center", va="center")
 arrow = dict(arrowstyle="-|>", color="k", lw=0.7, mutation_scale=7)
 for txt, xy, xt in [("Dendrite", (1.2, 2.2), (0.8, 3.0)),
                     ("Cell body", (1.85, 1.65), (2.7, 2.7)),
@@ -57,5 +59,5 @@ for txt, xy, xt in [("Dendrite", (1.2, 2.2), (0.8, 3.0)),
                     ("Axon terminal", (7.0, 2.35), (7.4, 3.2))]:
     ax.annotate(txt, xy=xy, xytext=xt, arrowprops=arrow, **kw)
 ax.set_xlim(-0.2, 8.4); ax.set_ylim(-0.8, 3.5); ax.set_aspect("equal"); ax.axis("off")
-fig.savefig(OUT / "ex0089r01_1.png", dpi=150, bbox_inches="tight", pad_inches=0.05)
+bf.save(fig, OUT / "ex0089r01_1.png")
 print("fig_cont3d_exercises: done")

@@ -1,9 +1,10 @@
 """Figures for the three-body section of "A start at the end".
 
 Produces (in python/_static/phenomenon/):
-  phenomenon_3body_example{1a,1b,2a,2b,3a,3b}.png   trajectories for
-      x0/R = 0.3, 0.5, 0.56 in the inertial (a) and co-rotating (b) frames
-  phenomenon_3body_example_sensitivity.png          two nearby trajectories
+  phenomenon_3body_examples.png   2 x 3: columns x0/R = 0.3, 0.5, 0.56; top
+      row the inertial frame, bottom row the co-rotating frame
+  phenomenon_3body_example_sensitivity.png   two nearby trajectories,
+      (a) inertial, (b) co-rotating frame
   interactive/threebody.html                        chaotic orbit animation
 """
 
@@ -16,8 +17,9 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "phenomenon"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -54,33 +56,29 @@ def draw(ax, xs, ys, xe, ye, xm, ym, rotating=False):
     ax.plot(xs, ys, "k", linewidth=0.6)               # satellite: thin black
     ax.set_xlabel("$x/R$")
     ax.set_ylabel("$y/R$")
-    ax.set_aspect("equal")
+    ax.set_aspect("equal", adjustable="datalim")
+    ax.set_box_aspect(1)   # square panels, so every row has equal heights
 
 
-for i, x0_over_R in enumerate([0.3, 0.5, 0.56], start=1):
+# 2 x 3 grid: columns = x(0)/R = 0.3, 0.5, 0.56; top row inertial frame,
+# bottom row co-rotating frame. Caption letters run down the columns.
+fig, axs = plt.subplots(2, 3, figsize=(bf.FULL_W, 4.3))
+for i, x0_over_R in enumerate([0.3, 0.5, 0.56]):
     sol = run(x0_over_R * R)
     x1, y1, x2, y2 = primaries(sol.t)
-    # (a) inertial frame
-    fig, ax = plt.subplots(figsize=(4.2, 4.2))
-    draw(ax, sol.y[0], sol.y[1], x1, y1, x2, y2)
-    plt.tight_layout()
-    plt.savefig(OUT / f"phenomenon_3body_example{i}a.png", dpi=150)
-    plt.close()
-    # (b) co-rotating frame
+    draw(axs[0, i], sol.y[0], sol.y[1], x1, y1, x2, y2)
     xs, ys = cb.corotating(sol.y[0], sol.y[1], sol.t, omega)
     x1r, y1r = cb.corotating(x1, y1, sol.t, omega)
     x2r, y2r = cb.corotating(x2, y2, sol.t, omega)
-    fig, ax = plt.subplots(figsize=(4.2, 4.2))
-    draw(ax, xs, ys, x1r, y1r, x2r, y2r, rotating=True)
-    plt.tight_layout()
-    plt.savefig(OUT / f"phenomenon_3body_example{i}b.png", dpi=150)
-    plt.close()
+    draw(axs[1, i], xs, ys, x1r, y1r, x2r, y2r, rotating=True)
+bf.panel_labels(axs, order="col")
+bf.save(fig, OUT / "phenomenon_3body_examples.png")
 
-# -- sensitivity: relative difference 1e-4 in x(0), two panels ---------------
+# -- sensitivity: relative difference 1e-4 in x(0), (a) inertial, (b) co-rotating
 sola = run(0.5 * R)
 solb = run(0.5 * R * (1 + 1e-4))
 x1, y1, x2, y2 = primaries(sola.t)
-fig, axes = plt.subplots(2, 1, figsize=(4.8, 8.6))
+fig, axes = plt.subplots(1, 2, figsize=(bf.FULL_W, 3.2))
 for ax, rotate in zip(axes, [False, True]):
     for sol, color in [(sola, "b"), (solb, "r")]:
         xs, ys = sol.y[0], sol.y[1]
@@ -101,10 +99,10 @@ for ax, rotate in zip(axes, [False, True]):
         ax.plot(xm, ym, color="gray", linewidth=1.5)
     ax.set_xlabel("$x/R$")
     ax.set_ylabel("$y/R$")
-    ax.set_aspect("equal")
-plt.tight_layout()
-plt.savefig(OUT / "phenomenon_3body_example_sensitivity.png", dpi=150)
-plt.close()
+    ax.set_aspect("equal", adjustable="datalim")
+    ax.set_box_aspect(1)   # square panels, so every row has equal heights
+bf.panel_labels(axes)
+bf.save(fig, OUT / "phenomenon_3body_example_sensitivity.png")
 
 # -- interactive: chaotic orbit in the co-rotating frame ---------------------
 sol = run(0.5 * R)

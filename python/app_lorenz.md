@@ -12,7 +12,6 @@ The model Lorenz considered was a layer of air confined between two flat plates,
 
 ```{figure} _static/app_lorenz/cont3d_RB_DNS.png
 :name: fig:app:lorenz:rb_dns
-:width: 120mm
 
 A snapshot of the temperature field of Rayleigh–Bénard convection obtained by direct numerical simulation, in which the turbulence is resolved down to the smallest scales.
 ```
@@ -56,7 +55,6 @@ The key point is that these expressions are *factorised*: all time dependence re
 
 ```{figure} _static/app_lorenz/cont3d_lorenzphysics.png
 :name: fig:app:lorenz:physics
-:width: 120mm
 
 The velocity and temperature field that the variables $x$, $y$ and $z$ describe, in the $(\xi, \zeta)$-plane.
 ```

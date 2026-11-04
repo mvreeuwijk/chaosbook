@@ -4,10 +4,11 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-HERE = Path(__file__).resolve().parent
-plt.style.use(HERE.parent / "book.mplstyle")
-OUT = HERE.parents[2] / "python" / "_static" / "app_lorenz"
-OUT.mkdir(parents=True, exist_ok=True)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, save)
+
+OUT = bf.out("app_lorenz")
 
 a = 1 / np.sqrt(2)
 r = 28.0
@@ -32,7 +33,7 @@ zq = np.linspace(0.07, 0.93, 8)
 XQ, ZQ = np.meshgrid(xq, zq)
 UQ, WQ, _ = fields(XQ, ZQ)
 
-fig, ax = plt.subplots(figsize=(5.0, 2.8), layout="constrained")
+fig, ax = plt.subplots(figsize=(bf.MEDIUM[0], 2.1))
 cf = ax.contourf(XX, ZZ, TH, levels=10, cmap="Greys_r")
 ax.contour(XX, ZZ, TH, levels=10, colors="k", linewidths=0.6)
 ax.quiver(XQ, ZQ, UQ, WQ, color="w", edgecolor="k", linewidth=0.5,
@@ -40,4 +41,4 @@ ax.quiver(XQ, ZQ, UQ, WQ, color="w", edgecolor="k", linewidth=0.5,
 ax.set_xlabel(r"$\xi$")
 ax.set_ylabel(r"$\zeta$")
 fig.colorbar(cf, ax=ax, label=r"$\Theta$", pad=0.02)
-fig.savefig(OUT / "cont3d_lorenzphysics.png", dpi=150)
+bf.save(fig, OUT / "cont3d_lorenzphysics.png")
