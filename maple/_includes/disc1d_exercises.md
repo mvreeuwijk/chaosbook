@@ -118,7 +118,7 @@ with $x_0 \in [-1,1]$ and $r \in [0,1]$.
 
 a) Take $r=0.97$. Generate a series of $N=1000$ points starting from $x_0= 0.2$. Show the series and the return-plot.
 
-b) Argue why $r$ must be within $[-1,1]$ to guarantee that all $x_n \in [-1,1]$ when $x_0 \in [-1,1]$.
+b) Argue why $r$ must not exceed 1 to guarantee that all $x_n \in [-1,1]$ when $x_0 \in [-1,1]$.
 
 c) Find the fixed-points of {eq}`eq0100:map` for $r\in[0,1]$, and determine their stability.
 

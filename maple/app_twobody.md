@@ -34,12 +34,12 @@ m_1 \ddot{\mathbf{x}}_1 &= G m_1 m_2 \frac{\mathbf{x}_2 - \mathbf{x}_1}
 \end{aligned}
 ```
 
-Here the cube in the denominator arises because the $1/r^2$ magnitude is multiplied by the unit vector $(\mathbf{x}_j - \mathbf{x}_i)/\left|\mathbf{x}_j - \mathbf{x}_i\right|$, which contributes one more power of the distance. It is this coupled, nonlinear system of second-order equations that Poincaré proved cannot be solved in closed form in general.
+Here the cube in the denominator arises because the $1/r^2$ magnitude is multiplied by the unit vector $(\mathbf{x}_j - \mathbf{x}_i)/\left|\mathbf{x}_j - \mathbf{x}_i\right|$, which contributes one more power of the distance. It is this coupled, nonlinear system of second-order equations that Poincaré proved to be non-integrable: in general it has no closed-form solution.
 
 (app:twobody:restricted)=
 ## Simplification 1: a negligible satellite mass
 
-We now specialise to the earth–moon–satellite setting. The satellite ($m_3$) is extraordinarily light compared with the earth ($m_1$) and the moon ($m_2$); for the values in {numref}`table:phenomenon_3bodyconstants` the mass ratio is $m_1 : m_2 : m_3 = 100 : 1 : 10^{-19}$. Every term in {eq}`eq:app:twobody:full` that describes the pull of the satellite on a heavy body is proportional to $m_3$ and is therefore utterly negligible. Dropping those terms, the equations for the two heavy bodies (the *primaries*) decouple completely from the satellite:
+We now specialise to the earth–moon–satellite setting. The satellite ($m_3$) is extraordinarily light compared with the earth ($m_1$) and the moon ($m_2$); for the values in {numref}`table:phenomenon_3bodyconstants` the earth is four times heavier than the 'moon' of the example (81 times heavier than the real moon), while even a satellite of 1000 kg has $m_3/m_1 pprox 2\cdot 10^{-22}$. Every term in {eq}`eq:app:twobody:full` that describes the pull of the satellite on a heavy body is proportional to $m_3$ and is therefore utterly negligible. Dropping those terms, the equations for the two heavy bodies (the *primaries*) decouple completely from the satellite:
 
 ```{math}
 :label: eq:app:twobody:primaries1
@@ -58,7 +58,7 @@ while the satellite still feels both of them,
 \ddot{\mathbf{x}}_3 = G m_1 \frac{\mathbf{x}_1 - \mathbf{x}_3} {\left|\mathbf{x}_1 - \mathbf{x}_3\right|^3} \,\,+\,\, G m_2 \frac{\mathbf{x}_2 - \mathbf{x}_3} {\left|\mathbf{x}_2 - \mathbf{x}_3\right|^3} .
 ```
 
-The problem has thus split into two parts: a self-contained two-body problem for the primaries, {eq}`eq:app:twobody:primaries1`–{eq}`eq:app:twobody:primaries1`, and the motion of the satellite, {eq}`eq:app:twobody:m3`, which is driven by the (now known) motion of the primaries. This is why the setting is called the *restricted* three-body problem.
+The problem has thus split into two parts: a self-contained two-body problem for the primaries, {eq}`eq:app:twobody:primaries1`, and the motion of the satellite, {eq}`eq:app:twobody:m3`, which is driven by the (now known) motion of the primaries. This is why the setting is called the *restricted* three-body problem.
 
 (app:twobody:reduction)=
 ## Simplification 2: solving the two-body problem
@@ -75,7 +75,7 @@ $$
 \mathbf{r}_c = \frac{m_1 \mathbf{x}_1 + m_2 \mathbf{x}_2}{m_1 + m_2} ,
 $$
 
-which is the mass-weighted average position of the two primaries. Adding {eq}`eq:app:twobody:primaries1` and {eq}`eq:app:twobody:primaries1` makes the right-hand sides cancel, while subtracting them (after dividing each by its mass) combines the two attractions into a single term. The result is a pair of decoupled equations,
+which is the mass-weighted average position of the two primaries. Adding the two equations of {eq}`eq:app:twobody:primaries1` makes the right-hand sides cancel, while subtracting them (after dividing each by its mass) combines the two attractions into a single term. The result is a pair of decoupled equations,
 
 ```{math}
 :label: eq:app:twobody:rceq

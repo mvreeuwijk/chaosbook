@@ -26,7 +26,7 @@ In this equation $x$ then represents the (normalised) number of bacteria at gene
 x_{n} = r^n x_0\,\,\,\,\,\,\,\,\,\,\,\,\,n=0,1,2,\ldots
 ```
 
-The long term behaviour depends critically on $r$; for $n\rightarrow \infty$, $x_n \rightarrow 0$ if $|r| < 1$, whereas $x_n/x_0 \rightarrow \infty $ for $|r| > 1$; only for $r=1$ nothing happens,$x_n = x_0$.
+The long term behaviour depends critically on $r$; for $n\rightarrow \infty$, $x_n \rightarrow 0$ if $|r| < 1$, whereas $x_n/x_0 \rightarrow \infty $ for $|r| > 1$; only for $r=1$ nothing happens,$x_n = x_0$, while for $r=-1$ the series merely alternates in sign, $|x_n| = |x_0|$.
 
 The behaviour of this *linear* mapping is clearly not very exciting. As a model for bacterial growth it is also rather unrealistic to the extent that unbounded growth cannot persist owing to an inevitable shortage of food and mutual competition. These effects can be taken into account by adding an extra factor $(1-x_{n})$ to the growth model. As soon as the (normalised) population $x$ nears 1, this factor then reduces the effective growth rate. Thus taking $f(x) = rx(1-x)$ in {eq}`eq:disc1d:def_iterative_map` one obtains the so-called Verhulst-model {cite:p}`May1976`, also referred to as the logistic map:
 
@@ -184,11 +184,11 @@ For the logistic map we find two possibilities
 x^{*} = r x^{*} (1-x^{*})\,\,\,\,\,\,\,\,\,\,\rightarrow\,\,\,\,\, x^{*} = 0,\,\,\,\,\text{or}\,\,\,\,x^{*} = 1-\frac{1}{r}
 ```
 
-Indeed, the series for $r=3/2$ depicted in {numref}`fig:disc1d:some_series_logist` converges to $x_{n} \rightarrow x^{*} = 1/3$ as predicted by {eq}`eq:disc1d:fixed_point_logist`. It will do that for any initial value $x \in \langle 0,1\rangle$ as shown in {numref}`fig:disc1d:logist_attractor`. The other fixed point of {eq}`eq:disc1d:fixed_point_logist`, $x^{*} = 0$, is only attainable when you start at exactly $x_0 = 0$ or $x_0 =1$. Any deviation will inevitably lead to $x^{*} = 1/3$. So we can say that for $r=3/2$ there is a fixed point $x^{*} = 1/3$ which is *stable*, and a fixed point $x^{*} = 0$ which is *unstable*.
+Indeed, the series for $r=3/2$ depicted in {numref}`fig:disc1d:some_series_logist` converges to $x_{n} \rightarrow x^{*} = 1/3$ as predicted by {eq}`eq:disc1d:fixed_point_logist`. It will do that for any initial value $x \in \langle 0,1\rangle$ (we write $\langle a,b \rangle$ for the open interval $a < x < b$) as shown in {numref}`fig:disc1d:logist_attractor`. The other fixed point of {eq}`eq:disc1d:fixed_point_logist`, $x^{*} = 0$, is only attainable when you start at exactly $x_0 = 0$ or $x_0 =1$. Any deviation will inevitably lead to $x^{*} = 1/3$. So we can say that for $r=3/2$ there is a fixed point $x^{*} = 1/3$ which is *stable*, and a fixed point $x^{*} = 0$ which is *unstable*.
 
 Let us try to make the notion of stability of fixed points more precise. If we start the sequence at a fixed point $x_0 = x^{*}$, the system will remain in the fixed point by definition, see {eq}`eq:disc1d:def_fixed_point`. But what if we slightly perturb the initial value, i.e. we start with $x_0 = x^{*} + \epsilon_0$, where the perturbation is really small: $\epsilon_0 \ll 1$. Will the series $x_n$ return to the fixed point? Or will it diverge? Put differently, if we write $x_n = x^{*} + \epsilon_n$, then will the deviations $\epsilon_n$ approach to zero for increasing $n$ or not?
 
-One can answer this question by substituting $x_n = x^{*} + \epsilon_n$ in {eq}`eq:disc1d:def_linear_map` and employing a Taylor expansion of $f$ around $x^{*}$
+One can answer this question by substituting $x_n = x^{*} + \epsilon_n$ in {eq}`eq:disc1d:def_iterative_map` and employing a Taylor expansion of $f$ around $x^{*}$
 
 ```{math}
 :label: eq:disc1d:fixed_point_epsilon_taylor
@@ -227,7 +227,7 @@ Clearly the value of $\sigma$ determines the stability of the system, since $\ep
 Series of the logistic map at $r=1.5$ for different initial values $x_0$. The fixed point $x^* = 1/3$ is clearly stable. The fixed point $x^* = 0$ is unstable since a small perturbation is sufficient to escape from it.
 ```
 
-If the derivative is positive and smaller than 0, i.e. $0 < \sigma < 1$, then the system will monotically approach the fixed point. If $-1 < \sigma < 0$, the system will converge to the fixed point $x^{*}$ in an alternating fashion. Note that when $|f'(x^{*})| = 1$ exactly, we cannot decide on the stability of the fixed point on the basis of the first derivative $f'$ alone. In such a situation (marginal stability) we must have a closer look at the higher order terms appearing in {eq}`eq:disc1d:fixed_point_epsilon_taylor`, as the governing equation for the deviations becomes
+If the derivative is positive and smaller than 1, i.e. $0 < \sigma < 1$, then the system will monotically approach the fixed point. If $-1 < \sigma < 0$, the system will converge to the fixed point $x^{*}$ in an alternating fashion. Note that when $|f'(x^{*})| = 1$ exactly, we cannot decide on the stability of the fixed point on the basis of the first derivative $f'$ alone. In such a situation (marginal stability) we must have a closer look at the higher order terms appearing in {eq}`eq:disc1d:fixed_point_epsilon_taylor`, as the governing equation for the deviations becomes
 
 $$
 \epsilon_{n+1} = \epsilon_n + \frac{1}{2}f''(x^{*})\epsilon_{n}^{2} + {\cal O}(\epsilon_{n}^{3})
@@ -298,7 +298,7 @@ Apparently these points map onto each other and satisfy the following relation
 x^{*}_{2} = f(x^{*}_1)\,\,\,\,\,\,\,x^{*}_{1} = f(x^{*}_2)
 ```
 
-One could also state that for $n$ large enough period-2 solutions satisfy $x_{n+2}=f(x_n)$. Both considerations lead to
+One could also state that for $n$ large enough period-2 solutions satisfy $x_{n+2}=x_n$. Both considerations lead to
 
 ```{math}
 :label: eq:disc1d:p2_fixed_points
@@ -443,7 +443,7 @@ which are related to each other by the following relations
 x^{*}_{1} = f(x^{*}_{m}),\,\,\,\, x^{*}_{2} = f(x^{*}_{1}),\,\,\,\, x^{*}_{3} = f(x^{*}_{2}),\,\,\,\, \ldots
 ```
 
-One can also state that for $n$ large enough, a period-$m$ solution satisfies $x_{n+m} = f(x_n)$. Hence we define $g(x)=f^{(m)}(x) = f(f(f(\ldots f(x))))$, i.e. $g$ is equal to $m$-times recursive application of $f$. The equation from which the periodic solutions can be derived is then
+One can also state that for $n$ large enough, a period-$m$ solution satisfies $x_{n+m} = x_n$. Hence we define $g(x)=f^{(m)}(x) = f(f(f(\ldots f(x))))$, i.e. $g$ is equal to $m$-times recursive application of $f$. Note that the superscript $(m)$ denotes this $m$-fold iterate, not the $m$-th derivative; derivatives are always written with primes, as in $f'$. The equation from which the periodic solutions can be derived is then
 
 ```{math}
 :label: eq:disc1d:pm_fixed_points
@@ -525,7 +525,7 @@ As expected, the stability values match exactly those of the previous method.
 (sec:disc1d:bifurcation_diagrams)=
 ## Bifurcation-diagrams
 
-The fixed points solutions and periodic solutions usually depend on the parameters of the system. It is therefore often very useful to make a graph of the solutions as a function of the parameter(s) of the system. In {numref}`fig:disc1d:theobifurcationdiagram` we have done this for the logistic map, plotting as a function of the parameter $r$ the fixed point solution {eq}`eq:disc1d:fixed_point_logist`, the period-2 solution {eq}`eq:disc1d:p2_logist`, the period-4 solution, and, in the right graph, the period-3 solution. The left graph nicely shows that the fixed-point loses its stability at the exact same point where the period-2 solution becomes stable. It seems as if the solution is split into two branches. This is called a bifurcation, after the Latin word *bifurc* meaning fork. Then for larger $r$ the period-2 solution becomes unstable itself and bifurcates into a period-4 solution. Although not shown here, the period-4 solution soon bifurcates again into a period-8 solution, and so on. This process of subsequent bifurcations is called *period-doubling*. We will get back to this issue in section {numref}`sec:disc1d:universality`.
+The fixed points solutions and periodic solutions usually depend on the parameters of the system. It is therefore often very useful to make a graph of the solutions as a function of the parameter(s) of the system. In {numref}`fig:disc1d:theobifurcationdiagram` we have done this for the logistic map, plotting as a function of the parameter $r$ the fixed point solution {eq}`eq:disc1d:fixed_point_logist`, the period-2 solution {eq}`eq:disc1d:p2_logist`, the period-4 solution, and, in the right graph, the period-3 solution. The left graph nicely shows that the fixed-point loses its stability at the exact same point where the period-2 solution becomes stable. It seems as if the solution is split into two branches. This is called a bifurcation, after the Latin word *bifurcus*, two-pronged (from *furca*, fork). Then for larger $r$ the period-2 solution becomes unstable itself and bifurcates into a period-4 solution. Although not shown here, the period-4 solution soon bifurcates again into a period-8 solution, and so on. This process of subsequent bifurcations is called *period-doubling*. We will get back to this issue in section {numref}`sec:disc1d:universality`.
 
 ```{subfigure} 2
 :name: fig:disc1d:theobifurcationdiagram
@@ -565,7 +565,7 @@ The method cannot distinguish between true period-4 solutions and double period-
 :name: fig:disc1d:bifurcation_implicit_sin
 :width: 80mm
 
-Numerical solutions to $x=f^{(4)}(x)$ as a function of $r\in[0.1]$ for the sine map $x_{n+1} = f(x_n) = r \sin(\pi x_{n})$ calculated and plotted by using the `maple` command `implicitplot`
+Numerical solutions to $x=f^{(4)}(x)$ as a function of $r\in[0,1]$ for the sine map $x_{n+1} = f(x_n) = r \sin(\pi x_{n})$ calculated and plotted by using the `maple` command `implicitplot`
 ```
 
 An alternative efficient method to study the equilibrium behaviour as a function of the system parameters is the following. The idea is to keep $r$ fixed and iterate the map under study for, say, 1000 steps and then plot only the *last* half of the series at that particular $r$-value. By throwing away the first part of the series one disregards on purpose the *transient* behaviour, allowing one to focus on the *equilibrium* behaviour of the system. If one repeats this procedure for different values of $r$ one obtains a plot like {numref}`fig:disc1d:series_bifurcation_logist`, usually referred to as the 'bifurcation diagram' of the map.
@@ -610,7 +610,7 @@ Bifurcation diagram of the logistic map obtained by plotting the entire series f
 Various close-ups of {numref}`fig:disc1d:series_bifurcation_logist` (a) Period doubling route to chaos. (b) Region around the period-3 solution.
 ```
 
-Closer inspection of the graphs in {numref}`fig:disc1d:series_bifurcation_logist_zooms` shows two 'routes to chaos'. In the left graph one observes the subsequent period-doubling for increasing $r$, which tend to happen sooner and sooner, until for $r=r_{\infty} \approx 3.56\ldots$ the behaviour is no longer periodic but becomes chaotic. In the next section we make this notion more precise, how one can distinguish chaos from periodic behaviour with a very high order. Another way to enter chaos becomes clear from {numref}`fig:disc1d:series_bifurcation_logist_zooms`: if one starts at $r=3.83$ in the stable period-3 solution and one gradually *lowers* $r$ then at $r=3.82\ldots$ the period-3 solution loses its stability and the behaviour suddenly jumps into the chaotic mode. In this case chaos comes 'out of the blue sky'. Interestingly though, when looking at the series for $r$ slightly below the critical value $3.82$, we can already see the period-3 solution lurking behind: the systems appears to be settling into the period-3 solution, but since it is not yet stable, it escapes from it at seemingly arbitrary instances. This behaviour is called *intermittent*. This is why the transition to chaos is often called *intermittency transition* to(/from) chaos. Note that for increasing $r$, a period-doubling route to chaos is followed. Indeed, the period-3 solution bifurcates into a period-6, which bifurcates into a period-12, until for some critical value ($r=\ldots$) the solution is chaotic again.
+Closer inspection of the graphs in {numref}`fig:disc1d:series_bifurcation_logist_zooms` shows two 'routes to chaos'. In the left graph one observes the subsequent period-doubling for increasing $r$, which tend to happen sooner and sooner, until for $r=r_{\infty} \approx 3.56\ldots$ the behaviour is no longer periodic but becomes chaotic. In the next section we make this notion more precise, how one can distinguish chaos from periodic behaviour with a very high order. Another way to enter chaos becomes clear from {numref}`fig:disc1d:series_bifurcation_logist_zooms`: if one starts at $r=3.83$ in the stable period-3 solution and one gradually *lowers* $r$ then at $r=1+\sqrt{8}=3.8284\ldots$ the stable period-3 solution merges with its unstable partner and disappears (a *tangent* bifurcation, see {numref}`fig:disc1d:theobifurcationdiagram`), and the behaviour suddenly jumps into the chaotic mode. In this case chaos comes 'out of the blue sky'. Interestingly though, when looking at the series for $r$ slightly below the critical value $1+\sqrt{8}$, we can already see the period-3 solution lurking behind: the systems appears to be settling into the period-3 solution, but since it does not exist yet, it escapes from it at seemingly arbitrary instances {cite:p}`Strogatz1994`. This behaviour is called *intermittent*. This is why the transition to chaos is often called *intermittency transition* to(/from) chaos. Note that for increasing $r$, a period-doubling route to chaos is followed. Indeed, the period-3 solution bifurcates into a period-6, which bifurcates into a period-12, until for some critical value ($r \approx 3.8494$) the solution is chaotic again.
 
 (sec:disc1d:lyapunov_theory)=
 ## Quantifying chaos: Lyapunov exponents
@@ -649,7 +649,7 @@ The two resulting series are plotted in {numref}`fig:disc1d:logist_lyap_two_sets
 |y_n-x_n| \simeq |\epsilon_0| \,\text{e}^{\Lambda n}
 ```
 
-The exponent $\Lambda$ in {eq}`eq:disc1d:lyapunov_phenomenological` is called the *Lyapunov-exponent*. The exponential growth of deviations turns out to be a generic feature of chaotic systems and by means of $\Lambda$ one can quantify the rate of growth. The Lyapunov-exponent thus provides a measure of how sensitive the system depends on the initial conditions. In the present example we find $\Lambda \approx 0.6$, based on the slope of the dashed line in {numref}`fig:disc1d:logist_lyap_r39_log`.
+The exponent $\Lambda$ in {eq}`eq:disc1d:lyapunov_phenomenological` is called the *Lyapunov-exponent*. The exponential growth of deviations turns out to be a generic feature of chaotic systems and by means of $\Lambda$ one can quantify the rate of growth. The Lyapunov-exponent thus provides a measure of how sensitive the system depends on the initial conditions. In the present example we find $\Lambda \approx 0.6$, based on the slope of the dashed line in {numref}`fig:disc1d:logist_lyap_r39_log`. Note that this is a *finite-time* estimate, read off from the first 30 or so steps of a single short orbit; we return to this point below.
 
 ```{figure} _static/disc1d/disc1d_logist_lyap_r39_log.png
 :name: fig:disc1d:logist_lyap_r39_log
@@ -677,18 +677,18 @@ Repeating these steps $N$ times, we arrive at
 \epsilon_N = \epsilon_0 f'(x_0) f'(x_1) f'(x_2) \ldots f'(x_{N-1})
 ```
 
-provided that all $\epsilon_n$ are still small enough to justify a Taylor expansion. The Lyapunov exponent introduced in {eq}`eq:disc1d:lyapunov_phenomenological` can now be determined through $\Lambda=\frac{1}{N}\ln(|\epsilon_N/\epsilon_0|)$, which, by virtue of {eq}`eq:disc1d:epsilon_evolution`, amounts to
+provided that all $\epsilon_n$ are still small enough to justify a Taylor expansion. The Lyapunov exponent introduced in {eq}`eq:disc1d:lyapunov_phenomenological` can now be defined as the limit $\Lambda=\lim_{N\rightarrow\infty}\frac{1}{N}\ln(|\epsilon_N/\epsilon_0|)$, with $\epsilon_0$ so small that the Taylor expansion stays valid, which, by virtue of {eq}`eq:disc1d:epsilon_evolution`, amounts to
 
 ```{math}
 :label: eq:disc1d:lyapdef
 \begin{aligned}
 \nonumber
- \Lambda &= \frac{1}{N} \ln\left(|f'(x_0)| |f'(x_1)| |f'(x_2)| \ldots |f'(x_{N-1})|\right)\\
- &= \frac{1}{N} \sum_{n=0}^{N-1} \ln\left(|f'(x_n)|\right)
+ \Lambda &= \lim_{N\rightarrow\infty} \frac{1}{N} \ln\left(|f'(x_0)| |f'(x_1)| |f'(x_2)| \ldots |f'(x_{N-1})|\right)\\
+ &= \lim_{N\rightarrow\infty} \frac{1}{N} \sum_{n=0}^{N-1} \ln\left(|f'(x_n)|\right)
 \end{aligned}
 ```
 
-This result implies that the rate of error-growth can be calculated *a priori* from the evolution of a single series $x_1,\ldots,x_N$ and the derivative of the mapping function. As a check we apply {eq}`eq:disc1d:lyapdef` to the first 25 values of the series $x_n$ plotted in {numref}`fig:disc1d:logist_lyap_two_sets`, from which we obtain $\Lambda = 0.61\ldots$, in good agreement with the slope of the dashed line in {numref}`fig:disc1d:logist_lyap_r39_log` with an estimated value of 0.6.
+This result implies that the rate of error-growth can be calculated *a priori* from the evolution of a single series $x_1,\ldots,x_N$ and the derivative of the mapping function. As a check we apply {eq}`eq:disc1d:lyapdef` to the first 25 values of the series $x_n$ plotted in {numref}`fig:disc1d:logist_lyap_two_sets`, from which we obtain $\Lambda = 0.58\ldots$, in good agreement with the slope of the dashed line in {numref}`fig:disc1d:logist_lyap_r39_log` with an estimated value of 0.6. Both are finite-time estimates. If we take $N$ much larger, the sum converges to $\Lambda = 0.50$ at $r=3.9$ (we find $0.497$ for $N=10^6$), the value also seen in {numref}`fig:disc1d:lyapunovdiagram`: the first 25 steps of this particular orbit happen to stretch more than the average.
 
 From a conceptual point of view, the Lyapunov exponent $\Lambda$ is very instructive. $\Lambda$ smaller than zero implies that the deviations become smaller as $n$ increases; consequently the two series converge to each other. Conversely, $\Lambda$ larger than zero implies that the two series diverge from each other. Again we stress that the rate of divergence is exponential.
 
@@ -726,7 +726,7 @@ where $\sigma^{(2)}$ is the stability of the period-2 solution as derived in {eq
 
 see also {eq}`eq:disc1d:periodm_stability_general2`.
 
-Since the condition for stability of any periodic solution requires $|\sigma^{(m)}| <1$, equation {eq}\mathtt{eq:disc1d:lyap_period-m} immediately implies that $\Lambda<0$, consistent with the interpretation of the Lyapunov exponent given above. In addition we can understand why $\Lambda=0$ exactly at bifurcations, since these points are characterized by $|\sigma^{(m)}|=1$, i.e. period-$m$ loses its stability, while the period-$2m$ comes into existence. {eq}`eq:disc1d:lyap_period-m` also clarifies why in the superstable situation, i.e. when $\sigma^{(m)}=0$, $\Lambda$ tends to $- \infty$. The interpretation is that the convergence rate is faster than exponential, in accord with {eq}`eq:disc1d:fixed_point_epsilon_solution_superstable`.
+Since the condition for stability of any periodic solution requires $|\sigma^{(m)}| <1$, equation {eq}`eq:disc1d:lyap_period-m` immediately implies that $\Lambda<0$, consistent with the interpretation of the Lyapunov exponent given above. In addition we can understand why $\Lambda=0$ exactly at bifurcations, since these points are characterized by $|\sigma^{(m)}|=1$, i.e. period-$m$ loses its stability, while the period-$2m$ comes into existence. {eq}`eq:disc1d:lyap_period-m` also clarifies why in the superstable situation, i.e. when $\sigma^{(m)}=0$, $\Lambda$ tends to $- \infty$. The interpretation is that the convergence rate is faster than exponential, in accord with {eq}`eq:disc1d:fixed_point_epsilon_solution_superstable`.
 
 ### Lyapunov exponents and prediction horizon
 
@@ -737,7 +737,7 @@ Knowledge of the value of the Lyapunov exponent for a certain process, together 
 N = \frac{1}{\Lambda} \ln|\epsilon_N/\epsilon_0|
 ```
 
-In the example of {numref}`fig:disc1d:logist_lyap_two_sets` and {numref}`fig:disc1d:logist_lyap_r39_log`, with $r=3.9$ and $\epsilon_0 = 10^{-9}$, we found $\Lambda = 0.6$, which gives $N \approx 27$. This then is the *prediction horizon*. Proceeding beyond the prediction horizon, in this case proceeding for $N>27$, makes limited sense, since the inaccuracies are of the same order as the predicted values themselves.
+In the example of {numref}`fig:disc1d:logist_lyap_two_sets` and {numref}`fig:disc1d:logist_lyap_r39_log`, with $r=3.9$ and $\epsilon_0 = 10^{-9}$, we found $\Lambda \approx 0.6$ from the short orbit, which gives $N \approx 27$; indeed $|y_n - x_n|$ first exceeds 1% at $n=27$. The converged value $\Lambda = 0.50$ gives $N \approx 32$ for a typical orbit. This then is the *prediction horizon*. Proceeding beyond the prediction horizon, in this case proceeding beyond about 30 steps, makes limited sense, since the inaccuracies are of the same order as the predicted values themselves.
 
 What can we do to move the prediction horizon forward? Since $\Lambda$ is a characteristic of the process, one cannot change it. So the only option is to decrease the error or uncertainty in the initial condition. But equation {eq}`eq:disc1d:lyap_prediction_horizon` conveys rather bad news owing to the logarithmic dependence: one wishes for instance to remain accurate for 400 steps, the inaccuracy in the initial condition should be smaller than $10^{-100}$, – a costly effort.
 
@@ -845,8 +845,8 @@ Series and return-plot of the shift-map {eq}`eq:disc1d:shift_map` (a) Series. (b
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | $y_0$ | 0 | 1 | 0 | 1 | $\ldots$ | 1 | 1 | 0 | ? |
 | $y_1$ | 1 | 0 | 1 |  | $\ldots$ | 1 | 0 | ? | ? |
-| $y_3$ | 0 | 1 |  |  | $\ldots$ | 0 | ? | ? | ? |
-| $y_4$ | 1 |  |  |  | $\ldots$ | ? | ? | ? | ? |
+| $y_2$ | 0 | 1 |  |  | $\ldots$ | 0 | ? | ? | ? |
+| $y_3$ | 1 |  |  |  | $\ldots$ | ? | ? | ? | ? |
 | $\vdots$ |  |  |  |  |  |  |  |  |  |
 | $y_{K-3}$ | 1 | 1 | 0 | ? | ? | ? | ? | ? | ? |
 | $y_{K-2}$ | 1 | 0 | ? | ? | ? | ? | ? | ? | ? |
@@ -956,7 +956,7 @@ So one has obtained a solution to {eq}`eq:disc1d:generalmap` if one is able to f
 $$
 \begin{aligned}
 \sin(2z) = 2 \sin(z) \cos(z) &\rightarrow \sin(2z)^2 = 4 \sin^2(z)
- (1-\sin(z))^2\\
+ (1-\sin^2(z))\\
  F[z] = \sin^2(z) &\rightarrow F[2z] = 4 F[z](1-F[z])\\
  &\rightarrow f(x) = 4 x(1-x)
 \end{aligned}
@@ -966,7 +966,7 @@ So the corresponding map and closed form solution are
 
 ```{math}
 :label: eq:disc1d:closedlogist
-x_{n+1} = 4rx_n(1-x_n) \,\,\,\,\,\,\,x_n = \sin^2(2^n \theta)
+x_{n+1} = 4x_n(1-x_n) \,\,\,\,\,\,\,x_n = \sin^2(2^n \theta)
 ```
 
 In {numref}`fig:disc1d:logist_analytical` we have plotted the analytical solution together with the first few iterations obtained from the mapping.
@@ -1048,7 +1048,7 @@ $$
 |1-\tanh^2(2^n \theta)|2^n \sim 4\exp(-2^{n+1} \theta) 2^n = 4\exp(-2^{n+1} \theta + n \ln2 ) \rightarrow 0
 $$
 
-i.e. $\Lambda  \rightarrow \infty$, consistent with the earlier remark above that the system is superstable.
+i.e. $\Lambda  \rightarrow -\infty$, consistent with the earlier remark above that the system is superstable.
 
 (sec:disc1d:statistical)=
 ## A statistical approach to deterministic chaos
@@ -1060,9 +1060,7 @@ The message of sections {numref}`sec:disc1d:lyapunov_theory` and {numref}`sec:di
 p(x) = \lim_{N\rightarrow\infty} \frac{1}{N} \sum_{n=1}^{N} \delta(x-x_n)
 ```
 
-with $\delta$ the Dirac delta-function. There is a variety of methods to elaborate {eq}`eq:disc1d:defpdf`
-
-, but they are beyond our scope. Here we show how one can find the pdf in some particular cases.
+with $\delta$ the Dirac delta-function. There is a variety of methods to elaborate {eq}`eq:disc1d:defpdf`, but they are beyond our scope. Here we show how one can find the pdf in some particular cases.
 
 The pdf of the logistic map for $r=4$ can for example be found by employing its relation to the shift-map {eq}`eq:disc1d:relation_shiftmap_logist`. Using the transformation rule for densities
 
@@ -1071,7 +1069,7 @@ The pdf of the logistic map for $r=4$ can for example be found by employing its 
 p(x) \mathrm{d}x = p(y) \mathrm{d}y
 ```
 
-and the fact that the shift-map data $y_n$ are uniformly distributed, $p(y)=1$ between $0$ and $1$, giving
+and the fact that the shift-map data $y_n$ are uniformly distributed, $p(y)=1$ between $0$ and $1$. Two values of $y$, namely $y$ and $1-y$, map onto the same $x$, so the contributions of both branches must be added, giving
 
 ```{math}
 :label: eq:disc1d:pdflogist
@@ -1172,7 +1170,7 @@ one might be struck by the qualitative similarity of the graphs. Both exhibit a 
 \delta_p = \frac{r_{p}-r_{p-1}}{r_{p+1}-r_{p}}
 ```
 
-then, for $p\rightarrow \infty$, $\delta_p$ approaches a *universal* number $\delta = 4.6692\ldots$, now called the Feigenbaum constant. Feigenbaum proved mathematically that this holds for *any* iterative map of the form $f_r(x) = r   q(x)$, where $q(x)$ is a differentiable function with only *one* quadratic maximum; the latter means that a Taylor expansion around the maximum has lowest order 2. Note that both $q(x) = x(1-x)$ and $q(x) = \sin(\pi x)$ satisfy these criteria, but also, say, $q(x) = \exp(-x^2)$.
+then, for $p\rightarrow \infty$, $\delta_p$ approaches a *universal* number $\delta = 4.6692\ldots$, now called the Feigenbaum constant. Feigenbaum discovered numerically, and explained with a so-called renormalisation argument, that this holds for *any* iterative map of the form $f_r(x) = r   q(x)$, where $q(x)$ is a differentiable function with only *one* quadratic maximum; the latter means that a Taylor expansion around the maximum has lowest order 2. A rigorous proof was given only later, by Lanford in 1982. Note that both $q(x) = x(1-x)$ and $q(x) = \sin(\pi x)$ satisfy these criteria, but also, say, $q(x) = \exp(-x^2)$.
 
 We will not go into the mathematical details of this complicated proof; for a very nice 'pedestrian' treatment one is referred to {cite}`Strogatz1994`. Rather, we show a simple way to get a better appreciation of the regularity of the period-doubling. It is not easy to see this in a normal bifurcation diagram because the succesive bifurcations densify really fast according to (approximately)
 
@@ -1225,7 +1223,7 @@ pointplot([seq(pl[i],i=1..Na)],view=[amin..amax,0.33..0.9],
 Graphs revealing the universal period-doubling for the logistic map and the sine map. (a) Bifurcation diagram of the logistic map $x_{n+1} = r x_n(1-x_n)$ as a function of $a = -\ln(r_{\infty}-r)$ with $r_{\infty}= 3.56994537$. (b) Bifurcation diagram of the sine map $x_{n+1} = r \sin(\pi x_n)$ as a function of $a = -\ln(r_{\infty}-r)$ with $r_{\infty}= 0.86557928$.
 ```
 
-Yet if you would wish to make a similar plot for a different mapping, you find that you need to know *a priori* the value of $r_c$ for that mapping and you might wonder how we derived those values for the two mappings. This is not so easy, but below we explain a way to do it. First it must be noted that in figure {numref}`fig:disc1d:universality_regular` the big dots do not indicate locations of bifurcations, but rather locations of 'superstability', i.e. where the stability $\sigma = 0$ (see section {numref}`sec:disc1:fixedstab`). For example a superstable period-$m$ solution $x^{*}_{k},\,(k=1,\ldots,m)$ then satisfies (see also section {numref}`sec:disc1d:period_m` for a discussion of stability of periodic solutions)
+Yet if you would wish to make a similar plot for a different mapping, you find that you need to know *a priori* the value of $r_{\infty}$ for that mapping and you might wonder how we derived those values for the two mappings. This is not so easy, but below we explain a way to do it. First it must be noted that in figure {numref}`fig:disc1d:universality_regular` the big dots do not indicate locations of bifurcations, but rather locations of 'superstability', i.e. where the stability $\sigma = 0$ (see section {numref}`sec:disc1:fixedstab`). For example a superstable period-$m$ solution $x^{*}_{k},\,(k=1,\ldots,m)$ then satisfies (see also section {numref}`sec:disc1d:period_m` for a discussion of stability of periodic solutions)
 
 $$
 \begin{aligned} \forall_{k \in \{ 1,\ldots,m\}}:\,\,f^{(m)}(x^{*}_{k}) & = x^{*}_{k} & \sigma^{(m)} &= \prod_{k=1}^{m} f'(x^{*}_{k}) = 0 \end{aligned}
@@ -1289,7 +1287,7 @@ $$
 \end{aligned}
 $$
 
-where we also used $r \partial q/\partial x = f'(x)$. Below find the maple implementation. First we define $f(x,r)$, $f'(x,r)$ and $h(r)$, which the right-hand side of {eq}`eq:feigennewtonraphson`; next we loop over $p$ from zero to 11, thus addressing period-0 to period-2048, and perform the Newton-Raphson iteration until a stop-criterion (related to the numerical precision) has been reached. It turns out that a good initial guess for $r_p$ helps a lot in finding the correct value, in particular for larger $p$. We therefore calculate the Feigenbaum numbers $\delta_p$ of previous periods when possible and use it to guess what the next value of $r_p$ will be. The subsequent Newton-Raphson iteration  then refines this value. The `maple` code will give numbers such as given in table {numref}`table:disc1d:feigenbaum_numbers`; for the sine-map one should replace $r[0]$ by an appropriate number ($r[0] =  0.9$ works) to get the first 3 values of $r_p$ right.
+where we also used $r \partial q/\partial x = f'(x)$. Below find the maple implementation. First we define $f(x,r)$, $f'(x,r)$ and $h(r)$, which the right-hand side of {eq}`eq:feigennewtonraphson`; next we loop over $p$ from zero to 11, thus addressing period-1 ($2^0$) to period-2048, and perform the Newton-Raphson iteration until a stop-criterion (related to the numerical precision) has been reached. It turns out that a good initial guess for $r_p$ helps a lot in finding the correct value, in particular for larger $p$. We therefore calculate the Feigenbaum numbers $\delta_p$ of previous periods when possible and use it to guess what the next value of $r_p$ will be. The subsequent Newton-Raphson iteration  then refines this value. The `maple` code will give numbers such as given in table {numref}`table:disc1d:feigenbaum_numbers`; for the sine-map one should replace $r[0]$ by an appropriate number ($r[0] =  0.9$ works) to get the first 3 values of $r_p$ right.
 
 ````{admonition} Maple
 :class: maple
@@ -1348,7 +1346,7 @@ Mapping {eq}`eq:disc1d:nonuniversal_nonquadratic` gives us a possibility to find
 | LOGISTIC MAP |  |  | SINE MAP |  |  |
 | --- | --- | --- | --- | --- | --- |
 | p | r[p] | delta[p] | p | r[p] | delta[p] |
-| 0 | 2.00000000 | 0 | 0.50000000 |  |  |
+| 0 | 2.00000000 |  | 0 | 0.50000000 |  |
 | 1 | 3.23606798 | 4.708943 | 1 | 0.77773377 | 4.045742 |
 | 2 | 3.49856170 | 4.680771 | 2 | 0.84638217 | 4.555853 |
 | 3 | 3.55464086 | 4.662960 | 3 | 0.86145035 | 4.645182 |
