@@ -243,3 +243,32 @@ PDF pages and the HTML page at 1440 px and 390 px before opening the PR.
 Not in scope, but found on the way: page overflows at 1.5, 3.21, 4.7, 4.9 and
 6.19; ragged subfigure rows in several chapters; the caption of Maple figure
 6.19 starts with ". The behaviour".
+
+## Measured printed font size (before the rework)
+
+`creators/python/fontsize_report.py` computes, for every image in a LaTeX
+build, the printed width and the scale against its natural size, and from
+that the printed tick-label size (11 pt x scale in the old style). On the
+book as published on 4 November 2026 (130 figures, About photos excluded):
+
+| tick labels on paper | figures |
+|---|---|
+| under 7.5 pt (too small) | 37 |
+| 7.5 to 9.5 pt (good) | 74 |
+| over 9.5 pt (too large) | 19 |
+
+Range: 3.2 pt (Figure 5.4) to 14.0 pt (Figure 6.4), against 11 pt body
+text.
+
+Checked against the author's comments on chapters 1 to 3: every figure
+called too small prints its tick labels at 4.1 to 7.4 pt (2.5, 2.7, 2.14,
+2.23, 2.24, 3.2, 3.5, 3.7, 3.8, 3.10, 3.11, 3.12, 3.14, 3.15, 3.16, 3.17),
+every figure called too big at 10.8 to 11.3 pt (1.1, 1.4, 2.18, 2.19, 3.4,
+3.9, the exercise 1.3.1 image), and the figures passed without comment at
+7.7 to 9.0 pt. Only three figures outside the band went uncommented (2.10
+at 6.9, 2.15 at 7.0, 3.22 at 6.5 pt). The cause is the one described above:
+`:width:` values copied from the Maple edition onto images of different
+size, and subfigures forcing every panel to half the text width.
+
+After the rework every image has scale 1.0, so every figure prints its
+tick labels at 9 pt and its axis labels at 10 pt.
