@@ -97,6 +97,7 @@ disc1d
 disc2d
 cont1d
 cont2d
+practice
 ```
 
 ```{toctree}
