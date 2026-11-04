@@ -3,15 +3,17 @@
 System: x' = -y - z, y' = x + a y, z' = b + z (x - c), a = 0.432, b = 2.
 
 Produces (in python/_static/cont3d/):
-  cont3d_rosslerperiod{1..4}a.png  attractor for c = 3, 3.4, 3.55, 4
-  cont3d_rosslerperiod{1..4}b.png  the sequence of x-maxima x_n
+  cont3d_rosslerperiod.png         2x4: attractor and x-maxima x_n for
+                                   c = 3, 3.4, 3.55, 4, panels (a)-(h)
   cont3d_rosslerattractor.png      the chaotic attractor, c = 4
   cont3d_rosslerreturn.png         return map x_{n+1} vs x_n at c = 4
-  cont3d_rosslerbifurcation.png    maxima of x against c in [3, 4]
+  cont3d_bifurcation.png           (a) maxima of x against c in [3, 4] for
+                                   Rossler, (b) maxima of z against r, Lorenz
   interactive/rossler3d.html       rotatable attractor at c = 4
   interactive/rossler_slider.html  c-slider linked to the bifurcation diagram
 """
 
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -22,7 +24,9 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "cont3d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
@@ -36,52 +40,57 @@ def run(c, tend, dt=0.02):
                      IC, t_eval=t, rtol=1e-10, atol=1e-12, method="DOP853")
 
 
-def save(name):
-    plt.tight_layout()
-    plt.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close()
+sigma, r_, b_ = 10.0, 28.0, 8.0 / 3.0       # Lorenz parameters (panel (b) of the
+                                            # bifurcation figure)
 
 
-def attractor3d(x, y, z, name, azim, elev=30, lw=0.5):
-    fig = plt.figure(figsize=(4.2, 4.2))
-    ax = fig.add_subplot(projection="3d")
+def attractor3d(ax, x, y, z, azim, elev=30, lw=0.5):
     ax.plot(x, y, z, "b", lw=lw)
     ax.set_xlim(-6, 6); ax.set_ylim(-6, 6); ax.set_zlim(0, 10)
     ax.set_xlabel("$x$"); ax.set_ylabel("$y$"); ax.set_zlabel("$z$")
     ax.view_init(elev=elev, azim=azim)
-    plt.savefig(OUT / f"{name}.png", dpi=150, bbox_inches="tight", pad_inches=0.15)
-    plt.close()
 
 
-# -- the four panels of the route to chaos (book windows: t = 100/200/200/750) --
+# -- the four cases of the route to chaos (book windows: t = 100/200/200/750) --
+# one 2x4 figure: attractor (top) and x-maxima (bottom) for each c, labels
+# (a)-(h) column by column
 cases = [(1, 3.0, 100), (2, 3.4, 200), (3, 3.55, 200), (4, 4.0, 750)]
+fig = plt.figure(figsize=(bf.FULL_W, 3.9))
+gs = fig.add_gridspec(2, 4, height_ratios=[1.25, 1])
+axes = []
 for k, c, tend in cases:
     s = run(c, tend)
     h = len(s.t) // 2
     x, y, z = s.y[:, h:]
-    attractor3d(x, y, z, f"cont3d_rosslerperiod{k}a", azim=-72 - 90 + 20)
+    ax3 = fig.add_subplot(gs[0, k - 1], projection="3d")
+    attractor3d(ax3, x, y, z, azim=-72 - 90 + 20)
     _, xm = cb.maxima(s.t[h:], x)
-    plt.figure(figsize=(4.2, 3.2))
-    plt.plot(np.arange(1, len(xm) + 1), xm, "kD", mfc="none", ms=4)
-    plt.xlim(1, len(xm)); plt.ylim(0, 8)
-    plt.xlabel("$n$"); plt.ylabel("$x_n$")
-    save(f"cont3d_rosslerperiod{k}b")
+    ax2 = fig.add_subplot(gs[1, k - 1])
+    ax2.plot(np.arange(1, len(xm) + 1), xm, "kD", mfc="none", ms=4)
+    ax2.set_xlim(1, len(xm)); ax2.set_ylim(0, 8)
+    ax2.set_xlabel("$n$"); ax2.set_ylabel("$x_n$")
+    axes.append([ax3, ax2])
     print("c = %.2f: %d maxima in the second half, distinct values %s"
           % (c, len(xm), np.unique(np.round(xm, 2))[:6] if k < 4 else "(chaos)"))
+bf.panel_labels(np.array(axes, dtype=object).T, order="col")
+bf.save(fig, OUT / "cont3d_rosslerperiod.png")
 
 # -- the attractor itself (c = 4; viewing angle as in the original figure) ---------------
 s = run(4.0, 750)
 h = len(s.t) // 2
-attractor3d(*s.y[:, h:], "cont3d_rosslerattractor", azim=-169 + 90 - 40 + 20, elev=30)
+fig = plt.figure(figsize=bf.SQUARE)
+ax = fig.add_subplot(projection="3d")
+attractor3d(ax, *s.y[:, h:], azim=-169 + 90 - 40 + 20, elev=30)
+bf.save(fig, OUT / "cont3d_rosslerattractor.png")
 
 # -- return map x_{n+1} vs x_n at c = 4 (long run for a clean curve) ----------
 s = run(4.0, 3000, dt=0.02)
 _, xm = cb.maxima(s.t[len(s.t) // 10:], s.y[0][len(s.t) // 10:])
-plt.figure(figsize=(4.2, 4.2))
+plt.figure(figsize=bf.SQUARE)
 plt.plot(xm[:-1], xm[1:], "kD", mfc="none", ms=2.5)
 plt.xlim(0, 6); plt.ylim(0, 6); plt.gca().set_aspect("equal")
 plt.xlabel("$x_n$"); plt.ylabel("$x_{n+1}$")
-save("cont3d_rosslerreturn")
+bf.save(plt.gcf(), OUT / "cont3d_rosslerreturn.png")
 print("return map: %d points, x_n in [%.2f, %.2f], map peak %.2f"
       % (len(xm) - 1, xm.min(), xm.max(), xm[1:].max()))
 
@@ -118,11 +127,54 @@ def bifurcation(cs, h=0.02, ttrans=300.0, trec=400.0):
 
 cs = np.linspace(3.0, 4.0, 700)
 pc, px = bifurcation(cs)
-plt.figure(figsize=(4.2, 3.2))
-plt.plot(pc, px, "k.", ms=1.2)
-plt.xlim(3, 4); plt.ylim(0, 6)
-plt.xlabel("$c$"); plt.ylabel("$x$")
-save("cont3d_rosslerbifurcation")
+
+# Lorenz: maxima of z against r (batch RK4 over all r)
+def lorenz_batch(X, rr):
+    x_, y_, z_ = X
+    return np.array([sigma * (y_ - x_), rr * x_ - y_ - x_ * z_, x_ * y_ - b_ * z_])
+
+
+def rk4_lorenz(X, rr, h):
+    k1 = lorenz_batch(X, rr)
+    k2 = lorenz_batch(X + h / 2 * k1, rr)
+    k3 = lorenz_batch(X + h / 2 * k2, rr)
+    k4 = lorenz_batch(X + h * k3, rr)
+    return X + h / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+
+
+rs = np.linspace(0.05, 30, 600)
+h = 0.01
+# start close to the non-zero fixed point (it exists for r > 1); the origin
+# otherwise. This avoids the long chaotic transients that exist below r_c.
+fp = np.sqrt(b_ * np.maximum(rs - 1, 0))
+X = np.array([fp + 0.1, fp + 0.1, np.maximum(rs - 1, 0) + 0.1])
+for _ in range(int(500 / h)):
+    X = rk4_lorenz(X, rs, h)
+Z = np.empty((int(100 / h), len(rs)))
+for i in range(Z.shape[0]):
+    X = rk4_lorenz(X, rs, h)
+    Z[i] = X[2]
+pts_r, pts_z = [], []
+for j, rr in enumerate(rs):
+    col = Z[:, j]
+    _, zmx = cb.maxima(np.arange(len(col)) * h, col)
+    if len(zmx) < 3:                       # settled on a fixed point
+        zmx = [col[-1]]
+    pts_r += [rr] * len(zmx)
+    pts_z += list(zmx)
+rc = sigma * (sigma + b_ + 3) / (sigma - b_ - 1)
+
+# one figure, (a) Rossler and (b) Lorenz
+fig, (axa, axb) = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4))
+axa.plot(pc, px, "k.", ms=1.2)
+axa.set_xlim(3, 4); axa.set_ylim(0, 6)
+axa.set_xlabel("$c$"); axa.set_ylabel("$x$")
+axb.plot(pts_r, pts_z, "k.", ms=1.2)
+axb.set_xlim(0, 30); axb.set_ylim(0, 52)
+axb.set_xlabel("$r$"); axb.set_ylabel("$z$")
+bf.panel_labels([axa, axb])
+bf.save(fig, OUT / "cont3d_bifurcation.png")
+print("Lorenz critical r_c = %.4f" % rc)
 
 # -- interactive 1: rotatable attractor at c = 4 --------------------------------
 s = run(4.0, 400, dt=0.02)
