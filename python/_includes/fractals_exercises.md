@@ -27,6 +27,10 @@ Consider a slender steel beam with a damping coefficient $f$ that is clamped in 
 Sketch of the mechanical system.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/fractals/fig_exercises.py)*
+:::
+
 Written as an autonomous system of first order nonlinear differential equations, the system's behavior is defined by
 
 ```{math}
@@ -49,6 +53,10 @@ b) Determine the box-dimension of this attractor.
 Result from executing the starter cell with $N=10000$.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/fractals/fig_exercises.py)*
+:::
+
 
 ### Fractal Curve
 
@@ -59,6 +67,10 @@ Result from executing the starter cell with $N=10000$.
 
 Fractal Curve generation: first four recursive steps
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/fractals/fig_exercises.py)*
+:::
 
 Consider the above sketched recursive generation of a family of fractal curves parameterized by $\phi$, with $0 \leq \phi \leq \pi/6$. Note that the three segments have equal size $a=a(\phi)$ and that $a\cos(\phi) \leq 1/2$.
 
