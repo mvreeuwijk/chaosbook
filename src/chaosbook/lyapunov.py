@@ -5,26 +5,72 @@ import numpy as np
 from .iterate import orbit
 
 
+def _central_difference(f, h=1e-6):
+    """Derivative of a scalar map by central differences (used when no
+    analytic derivative is supplied)."""
+    return lambda x, **params: (f(x + h, **params)
+                                - f(x - h, **params)) / (2 * h)
+
+
 def lyapunov(f, dfdx, x0, n=1000, nskip=100, **params):
     """Estimate the Lyapunov exponent of x_{k+1} = f(x_k, **params).
 
     Iterates the map from x0, discards the first nskip points as
     transient, and returns the mean of log|f'(x_k)| over the next n
     points. dfdx is the derivative of the map, with the same signature
-    as f.
+    as f; pass ``None`` to use a central difference of f instead.
     """
+    if dfdx is None:
+        dfdx = _central_difference(f)
     X = orbit(f, x0, nskip + n, **params)
     with np.errstate(divide="ignore"):
         return np.mean(np.log(np.abs(dfdx(X[nskip:-1], **params))))
 
 
-def lyapunov_sweep(f, dfdx, rmin, rmax, nr=500, n=1000, x0=0.57, nskip=100):
-    """The Lyapunov exponent as a function of the parameter r.
+def lyapunov_sweep(f, dfdx, rmin, rmax, nr=500, n=1000, x0=0.57, nskip=100,
+                   pname="r"):
+    """The Lyapunov exponent as a function of a parameter.
 
-    Assumes the map's varying parameter is named r, i.e. f(x, r).
-    Returns the arrays (rs, lams).
+    The varying parameter is the keyword called ``pname`` (default ``"r"``),
+    i.e. f(x, r=...). Returns the arrays (rs, lams).
     """
     rs = np.linspace(rmin, rmax, nr + 1)
-    lams = np.array([lyapunov(f, dfdx, x0, n=n, nskip=nskip, r=r)
+    lams = np.array([lyapunov(f, dfdx, x0, n=n, nskip=nskip, **{pname: r})
                      for r in rs])
     return rs, lams
+
+
+def lyapunov_spectrum(f, jac, x0, n=1000, nskip=100, **params):
+    """All Lyapunov exponents of a d-dimensional map x_{k+1} = f(x_k, **params).
+
+    jac(x, **params) returns the d x d Jacobian matrix of f at x; pass
+    ``None`` to use central differences of f. The tangent vectors are re-orthonormalised by a QR decomposition at every
+    step, so the estimate does not overflow for long orbits. Returns the
+    exponents sorted from largest to smallest.
+    """
+    if jac is None:
+        jac = _central_jacobian(f)
+    x = np.asarray(x0, dtype=float)
+    for _ in range(nskip):
+        x = f(x, **params)
+    Q = np.eye(len(x))
+    total = np.zeros(len(x))
+    for _ in range(n):
+        Q, R = np.linalg.qr(jac(x, **params) @ Q)
+        total += np.log(np.abs(np.diag(R)))
+        x = f(x, **params)
+    return np.sort(total / n)[::-1]
+
+
+def _central_jacobian(f, h=1e-6):
+    """Jacobian of a map f(x, **params) by central differences."""
+    def jac(x, **params):
+        x = np.asarray(x, dtype=float)
+        J = np.empty((len(x), len(x)))
+        for k in range(len(x)):
+            e = np.zeros(len(x))
+            e[k] = h * max(1.0, abs(x[k]))
+            J[:, k] = (np.asarray(f(x + e, **params), float)
+                       - np.asarray(f(x - e, **params), float)) / (2 * e[k])
+        return J
+    return jac

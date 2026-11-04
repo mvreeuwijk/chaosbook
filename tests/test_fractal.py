@@ -24,3 +24,12 @@ def test_straight_line_has_dimension_one():
     Y = np.zeros(5000)
     dim, _, _ = box_dimension(X, Y)
     assert abs(dim - 1) < 0.1
+
+
+def test_fit_range_restricts_the_fit():
+    X, Y = chaos_game(n=10000, seed=1)
+    _, boxsize, _ = box_dimension(X, Y)
+    lo, hi = boxsize[3], boxsize[15]
+    dim, bs2, bc2 = box_dimension(X, Y, fit_range=(lo, hi))
+    assert len(bs2) == 21                      # all sizes are still returned
+    assert abs(dim - np.log(3) / np.log(2)) < 0.1

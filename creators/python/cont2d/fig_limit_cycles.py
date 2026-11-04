@@ -21,10 +21,10 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 
 def limit(t, s):
-    """Book's limit-cycle system, written exactly as printed in the chapter."""
+    """Limit-cycle system with r' = (1 - r^2)/4 and theta' = 1 exactly."""
     x, y = s
-    c = x / (4 * np.hypot(x, y)) * (1 - x**2 - y**2)
-    return [-y + c, x + c]
+    k = (1 - x**2 - y**2) / (4 * np.hypot(x, y))
+    return [-y + k * x, x + k * y]
 
 
 def run(f, x0, tend, **kw):

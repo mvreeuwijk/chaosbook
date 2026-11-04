@@ -11,7 +11,7 @@
 
 <p class="sfc-subtitle">A Hands-On Introduction to Nonlinear Dynamics — Python edition</p>
 
-<p class="sfc-authors"><a href="../about.html">Harmen J. Jonker</a> and <a href="../about.html">Maarten van Reeuwijk</a></p>
+<p class="sfc-authors"><a href="about.html">Harmen J. Jonker</a> and <a href="about.html">Maarten van Reeuwijk</a></p>
 
 A hands-on tour from simple one-dimensional maps to strange attractors and
 fractal geometry. Built around the idea of learning by doing, it develops the
@@ -19,8 +19,8 @@ theory alongside concrete computations in Python — with a live exercise lab
 for every chapter, running right in your browser — so that each idea can be
 explored, visualised and experimented with directly.
 
-The Python edition is under construction: the first two chapters and the
-cookbook are available, and further chapters follow.
+The Python edition covers the whole book: all chapters, the cookbook, the
+appendices and an exercise lab for every chapter.
 
 ```{button-ref} phenomenon
 :ref-type: doc
@@ -59,7 +59,7 @@ Download PDF (draft)
 :link: phenomenon
 :link-type: doc
 
-The chapters converted so far, from first phenomena onwards.
+The chapters, from first phenomena to fractal geometry.
 :::
 
 :::{grid-item-card} Exercise labs
@@ -77,8 +77,8 @@ A practical Python reference for the techniques used throughout.
 :::
 
 :::{grid-item-card} About
-:link: ../about.html
-:link-type: url
+:link: about
+:link-type: doc
 
 The authors, and how the book came to be.
 :::
@@ -94,7 +94,12 @@ The authors, and how the book came to be.
 
 phenomenon
 disc1d
+disc2d
+cont1d
 cont2d
+cont3d
+fractals
+practice
 ```
 
 ```{toctree}
@@ -105,6 +110,16 @@ cont2d
 app_cookbook
 ```
 
+```{toctree}
+:hidden:
+:numbered:
+:caption: Appendices
+
+app_twobody
+app_lorenz
+app_polar
+```
+
 ````{only} html
 ```{toctree}
 :hidden:
@@ -113,6 +128,13 @@ app_cookbook
 references
 ```
 ````
+
+```{toctree}
+:hidden:
+:caption: About
+
+about
+```
 
 % In HTML the bibliography lives on its own References page; in the PDF it is
 % rendered here as an end-of-book "Bibliography" (avoids an empty chapter).

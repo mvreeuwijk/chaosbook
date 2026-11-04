@@ -89,7 +89,7 @@ Sensitive dependence on initial conditions in the Lorenz-system. Two time-series
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/phenomenon/fig_lorenz.py)*
 :::
 
-Reducing $\epsilon$ delays the moment at which the two series visibly diverge, but they always do so eventually. If $\epsilon$ is made small enough the solutions appear to stay together indefinitely; this is deceptive, however, and reflects the finite accuracy of the computation rather than the dynamics of the system. Tightening the integration tolerances — for instance `solve_ivp(..., rtol=1e-12, atol=1e-12)`, which makes the solver track the true trajectory more closely — restores the divergence.
+Reducing $\epsilon$ delays the moment at which the two series visibly diverge, but they always do so eventually. If $\epsilon$ is made small enough the solutions appear to stay together indefinitely; this is deceptive, however, and reflects the finite accuracy of the computation rather than the dynamics of the system. A longer integration time `tend` reveals the divergence: with the settings above, $\epsilon = 10^{-14}$ gives a difference of order one only at $t \approx 39$, outside the window $t \in [0,30]$. There is a limit, though. In double precision the numbers next to $x(0) = 2$ are spaced $4.4\cdot 10^{-16}$ apart, so for $\epsilon \lesssim 10^{-16}$ one has `2 + epsilon == 2.0`: the two initial conditions are identical, the two runs are the same run, and they never diverge, however long the integration or however tight the tolerances `rtol` and `atol`.
 
 Apart from analysing the time-series, much can be learned by studying the system in the 3d-*phase-space*. This requires only a minor change of the plotting commands, which gives a plot like {numref}`fig:phenomenon_lorenz_phasespace`:
 
@@ -127,7 +127,7 @@ Trajectories in phase-space. (a) 'butterfly'-shaped appearance of the system dyn
 
 Viewed from various angles, the phase-space trajectory reveals the celebrated butterfly shape. Trajectories launched from different initial conditions — even one as far away as $x(0) = 100$ — are all drawn onto the same object: they converge upon the *attractor* (compare {numref}`fig:phenomenon_lorenz_phasespace`).
 
-The scripts behind these figures are linked beneath each of them. The Lorenz system will be studied in more detail later in the book.
+The scripts behind these figures are linked beneath each of them. The Lorenz system will be studied in more detail in chapter {numref}`chap:cont3d`.
 
 (sec:phenomenon:celestial)=
 ## Celestial Uncertainties
@@ -137,6 +137,10 @@ The scripts behind these figures are linked beneath each of them. The Lorenz sys
 
 Three-body problem.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/phenomenon/fig_schematics.py)*
+:::
 
 Imagine three celestial objects – like stars, planets, moons, meteorites and/or satellites – which influence each other by their gravitational pull. Would it be possible to fully predict the future trajectories of these three interacting objects?
 
@@ -170,7 +174,7 @@ m_1 \ddot{\mathbf{x}}_1 &= G m_1 m_2 \frac{\mathbf{x}_2 - \mathbf{x}_1}
 
 The system constitutes a phase-space with dimension 18: three variables each with six degrees of freedom (three-dimensional position and velocity).
 
-This eighteen-dimensional problem can be reduced dramatically by exploiting the particular structure of the earth–moon–satellite setting. Because the satellite ($m_3$) is exceedingly light compared with the earth ($m_1$) and the moon ($m_2$), i.e. $m_3 \ll m_1,m_2$, it is pulled around by the two heavy bodies but exerts no appreciable influence on them. If, in addition, the two heavy bodies (the *primaries*) are taken to move on circular orbits about their common centre of mass, and the satellite is confined to that orbital plane, the eighteen dimensions collapse to just four. This reduction, from Newton's law {eq}`eq:phenomenon_3body_full` to the compact system below, is carried out step by step in the book's two-body appendix. Writing the satellite position as $\mathbf{x}_{3}(t) = (x(t),y(t))$ and its velocity components as $u=\dot{x}$, $v=\dot{y}$, the resulting equations of motion are
+This eighteen-dimensional problem can be reduced dramatically by exploiting the particular structure of the earth–moon–satellite setting. Because the satellite ($m_3$) is exceedingly light compared with the earth ($m_1$) and the moon ($m_2$), i.e. $m_3 \ll m_1,m_2$, it is pulled around by the two heavy bodies but exerts no appreciable influence on them. If, in addition, the two heavy bodies (the *primaries*) are taken to move on circular orbits about their common centre of mass, and the satellite is confined to that orbital plane, the eighteen dimensions collapse to just four. This reduction, from Newton's law {eq}`eq:phenomenon_3body_full` to the compact system below, is carried out step by step in Appendix {numref}`app:twobody`. Writing the satellite position as $\mathbf{x}_{3}(t) = (x(t),y(t))$ and its velocity components as $u=\dot{x}$, $v=\dot{y}$, the resulting equations of motion are
 
 ```{math}
 :label: eq:phenomenon_3body_simple1_m3_full__phenomenon

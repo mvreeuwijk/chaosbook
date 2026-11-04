@@ -216,6 +216,35 @@ Labels are mathtext, using the shared `book.mplstyle` and the size classes.
 5. **Text:** prose and mathematics are not touched, except where they speak
    specifically about Maple.
 
+6. **Delivery (revised the same day):** separate chapter PRs conflicted with
+   each other on the toctree, the package exports and the manifest. All
+   remaining chapters are therefore merged into one integration branch,
+   `py/rollout`, with one combined PR (#4). cont2d had already gone in
+   separately as #3.
+7. **After the rollout:**
+   1. A Fable agent does a critical review of the whole book.
+   2. A round of fixes follows.
+   3. Later, at a time the author chooses, the editions are swapped so that
+      Python becomes the main edition.
+8. **Splitting the review fixes (author, the same day).** Review findings
+   about the Python edition as it currently stands (conversion issues: code,
+   figure–text mismatches, references, labs) go into the rollout PR (#4).
+   Changes to the book itself (writing style, rigour, examples, figures,
+   prose errata) go in their own PR, applied to BOTH editions. The Rössler
+   band placement (#5) is the first such PR.
+9. **Voice (author, the same day).** The voice of chapters 1–6 is NOT
+   changed. Chapter 7 is lecture material and is rewritten into exactly the
+   lecture voice of chapters 1–6. Chapter 8 looks ahead and may stay more
+   referential; it gets only a light pass towards the house voice. Chapter 5
+   gets error corrections in place, not a rewrite. All 77 [BOOK] review
+   findings are in scope. Planned PR order, each applied to both editions:
+   (1) the [BOOK] content fixes; (2) a copy-edit of chapters 1–6 (typos,
+   markup, sentences that obscure meaning, with minimal wording changes);
+   (3) the chapter 7 rewrite plus the light chapter 8 pass. Chapters 7–8
+   follow the formatting conventions of chapters 1–6, never the other way
+   round. The chapter 7/8 prose work is done by a Fable agent (author's
+   choice), briefed with chapters 1–6 as the reference voice.
+
 ## Conventions for implementers (binding)
 
 These are the pilot's conventions. Read `python/disc1d.md`,

@@ -61,7 +61,7 @@ the system simplifies to
 \end{aligned}
 ```
 
-To get a feeling for the behaviour of this nonlinear system we perform numerical simulation with Python. The key commands are `solve_ivp` and `plot`, and the solution method is exactly identical to that of a 1-D system (see the chapter on one-dimensional continuous systems).
+To get a feeling for the behaviour of this nonlinear system we perform numerical simulation with Python. The key commands are `solve_ivp` and `plot`, and the solution method is exactly identical to that of a 1-D system (see section {numref}`sec:cont1d:fixed_points_stability`).
 
 ````{admonition} Python
 :class: python
@@ -84,7 +84,6 @@ plt.xlabel("$t$")
 plt.ylabel("$x(t), y(t)$")
 plt.legend()
 plt.show()
-print("x max, y max:", x.max(), y.max())
 ```
 ````
 
@@ -126,6 +125,10 @@ The vector $\mathbf{x}$ is called the *state vector* of the system. The space sp
 
 The system {eq}`eq:cont2d:vecx` cases the state vector $\mathbf{x}$ to change at a rate $\mathbf{f}$, thereby moving it though the phase space and tracing out a unique trajectory.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
 
 The phase space is an important concept in the study of dynamical systems, because it allows for a geometrical perspective on the system. Indeed, by comparing equation {eq}`eq:cont2d:vecx` to that describing a weightless particle (tracer) in a flow field $\mathbf{u}(x,y)$
 
@@ -255,12 +258,20 @@ When $T^2 - 4 D < 0$. the eigenvalues will be imaginary, in which case oscillato
 The behaviour of a dynamic system in the neigbourhood of a fixed point.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
+
 ```{figure} _static/cont2d/cont2d_classification.png
 :name: fig:cont2d:classification2
 :width: 12cm
 
 Classification of 2-D linear ODEs based on the trace $T$ and determinant $D$ of the matrix $A$.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
 
 The eigenvalues of the 2-D matrix are related to $T$ and $D$ as:
 
@@ -283,6 +294,10 @@ Linear systems are “uninteresting” in the sense that no matter where you sta
 
 Example of the rich behavior of phase space for a nonlinear ODE.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
 
 Fixed points $(x^*, y^*)$ can be determined in the same way as for one-dimensional continuous systems, and need to satisfy $\dot{x}=0$ and $\dot{y}=0$, i.e.
 
@@ -737,13 +752,13 @@ import chaosbook as cb
 
 def limit(t, s):
     x, y = s
-    c = x / (4 * np.sqrt(x**2 + y**2)) * (1 - x**2 - y**2)
-    return [-y + c, x + c]
+    k = (1 - x**2 - y**2) / (4 * np.sqrt(x**2 + y**2))
+    return [-y + k * x, x + k * y]
 
 # two initial conditions, one inside and one outside the cycle
 ics = [[0.01, 0], [2, 0]]
 cb.phase_portrait(limit, (-2, 2), (-2, 2), style="quiver",
-                  trajectories=ics, tmax=30, colors=["r", "g"])
+                  trajectories=ics, tmax=30, colors=["r", "b"])
 plt.show()
 for x0 in ics:
     sol = solve_ivp(limit, [0, 30], x0, rtol=1e-9)
@@ -753,7 +768,7 @@ for x0 in ics:
 
 After a short transient, the two time-series can be seen to display the same periodic motion ({numref}`fig:cont2d:limit:phase`(a)). Hence, the system forgets about its initial conditions, which is typical for all systems which have an attractor, and then remains locked in a periodic cycle. The limit cycle is perhaps even better discernable in the phase space ({numref}`fig:cont2d:limit:phase`(b)). The trajectory starting close to the origin (red solid line) can be seen to spiral outward initially as it is attracted to the limit cycle. The trajectory starting far from the the origin (blue dashed line) spirals inward and is rapidly attracted to the limit cycle.
 
-In this particular case, the system ({eq}`eq:cont2d:limit_x`)  becomes much simpler when changing to polar coordinates (see the appendix on polar coordinates):
+In this particular case, the system ({eq}`eq:cont2d:limit_x`)  becomes much simpler when changing to polar coordinates (see Appendix {numref}`app:polars`):
 
 $$
 \begin{aligned}
@@ -861,7 +876,7 @@ The short answer to this question is no. There are two types of long-term behavi
 
 The fact that no chaos can occur in 2-D systems follows from the *Poincaré-Bendixson* theorem, which can be used to prove the existence of limit cycles. The theorem considers at a part of the phase space $\Omega$ which does not contain fixed points but does contain at least one trajectory which is confined within $\Omega$. If this is the case, then this trajectory is a *closed* orbit, because it is impossible for trajectories to cross (this would indicate that the solutions were not unique, because one point in the phase space then has multiple values for $\mathbf{f}$).
 
-The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see the next chapter).
+The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see section {numref}`sec:cont3d:strangeattractor`).
 
 We emphasize that this result is only valid for planar continuous 2-D systems. Indeed, chaos is possible in discrete systems with only one degree of freedom, and if the phase space is a torus, non-periodic motion is possible.
 
@@ -1046,7 +1061,7 @@ and the eigenvalues are $\sigma_1 = \mu + 3 x^2$ and $\sigma_2 = -1$. The charac
   - non-existent
 ```
 
-The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in the chapter on one-dimensional continuous systems. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
+The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in section {numref}`sec:cont1d:normalforms`. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
 
 We will avoid some of the mathematical complexity by making use of Python's versatility. In particular, by plotting the behaviour of the fixed points and the the eigenvalues as a function of the control parameter $\mu$, it is possible to determine for which $\mu$ bifurcations occur and to identify their type.
 
@@ -1172,7 +1187,7 @@ A Hopf bifurcation involves the transition of a fixed point from an stable spira
 <iframe src="_static/cont2d/interactive/hopf_slider.html" width="100%" height="460" style="border:none;"></iframe>
 ```
 
-For the example under consideration, it can be proved that a limit cycle exists. Expressed in polar coordinates (see the appendix on polar coordinates), the system ({eq}`eq:cont2d:hopf_x`) becomes:
+For the example under consideration, it can be proved that a limit cycle exists. Expressed in polar coordinates (see Appendix {numref}`app:polars`), the system ({eq}`eq:cont2d:hopf_x`) becomes:
 
 $$
 \begin{aligned}
@@ -1212,7 +1227,7 @@ $$
 
 The equation for the phase angle $\theta$ has solution $\theta = \theta(0) + t$. The right hand side of the equation for $\dot{r}$ is plotted in {numref}`fig:cont2d:global`(c) for three different values of $r$. Clearly, when $\mu<-1/4$, $\dot{r}>0$ for all nonzero $r$ and the trajectory will escape to infinity. At $\mu=-1/4$, the function attains a new root in the neigbourhood of $r=0.7$. This develops into two roots for $\mu>-1/4$.
 
-The fixed points are plotted as a function $\mu$ with the help of a contour plot ({numref}`fig:cont2d:global`(d)), using the code discussed in the chapter on one-dimensional continuous systems to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in the chapter on one-dimensional continuous systems, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
+The fixed points are plotted as a function $\mu$ with the help of a contour plot ({numref}`fig:cont2d:global`(d)), using the code discussed in section {numref}`sec:cont1d:ferromagnet_example` to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in section {numref}`sec:cont1d:saddlenode`, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
 
 ```{subfigure} 2
 :name: fig:cont2d:global
