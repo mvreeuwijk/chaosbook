@@ -338,12 +338,12 @@ which is plotted for $r=3.2$ in {numref}`fig:disc1d:plot_of_g`, together with $y
 In the following Python program we determine the true period-2 solutions for the logistic map, using sympy for the algebra.
 
 ```{code-block} python
-import sympy as sym
+import sympy as sp
 
-x, r = sym.symbols("x r")
+x, r = sp.symbols("x r")
 f = lambda x: r * x * (1 - x)
 g = lambda x: f(f(x))
-fp2 = sym.solve(sym.Eq(x, g(x)), x)
+fp2 = sp.solve(sp.Eq(x, g(x)), x)
 ```
 
 sympy returns the general solution to $x=g(x)$, where $g$ is given by {eq}`eq:disc1d:p2_g_logisticmap`, as a list:
@@ -355,7 +355,7 @@ $$
 In this set we also recognize the fixed points solutions $x^* = f(x^*)$ derived earlier in {eq}`eq:disc1d:fixed_point_logist`. To get the 'true' period-2 solutions, we calculate the period-1 solutions separately and exclude them:
 
 ```{code-block} python
-fp1 = sym.solve(sym.Eq(x, f(x)), x)
+fp1 = sp.solve(sp.Eq(x, f(x)), x)
 truefp2 = [s for s in fp2 if s not in fp1]
 ```
 
@@ -404,8 +404,8 @@ $$
 To determine the stability range of the period-2 solutions of the logistic map we extend the code of the previous example by the following commands
 
 ```{code-block} python
-dg = sym.diff(g(x), x)
-sigma2 = sym.simplify(dg.subs(x, truefp2[0]))
+dg = sp.diff(g(x), x)
+sigma2 = sp.simplify(dg.subs(x, truefp2[0]))
 ```
 
 This gives
@@ -417,7 +417,7 @@ $$
 Next we determine the stability range by
 
 ```{code-block} python
-sym.solve(sym.Eq(sigma2, 1), r), sym.solve(sym.Eq(sigma2, -1), r)
+sp.solve(sp.Eq(sigma2, 1), r), sp.solve(sp.Eq(sigma2, -1), r)
 ```
 
 which, ignoring negative solutions, yields
@@ -497,9 +497,9 @@ To find a period-3 solution for the logistic map we must solve $x^* = g(x^*)$ wi
 
 ```{code-block} python
 f3 = lambda x: f(f(f(x)))
-fp1 = sym.solve(sym.Eq(x, f(x)), x)
-poly = sym.Poly(sym.expand(f3(x) - x).subs(r, 3.84), x)
-roots = sym.nroots(poly)
+fp1 = sp.solve(sp.Eq(x, f(x)), x)
+poly = sp.Poly(sp.expand(f3(x) - x).subs(r, 3.84), x)
+roots = sp.nroots(poly)
 tfp3 = sorted(ro for ro in roots
               if all(abs(ro - s.subs(r, 3.84)) > 1e-6 for s in fp1))
 [round(ro, 6) for ro in tfp3]
@@ -514,7 +514,7 @@ The last line yields
 The stability can be calculated using {eq}`eq:disc1d:periodm_stability_general1`. We determine the derivative $g'$ with sympy and evaluate it at all six points
 
 ```{code-block} python
-df3 = sym.lambdify(x, sym.diff(f3(x), x).subs(r, 3.84))
+df3 = sp.lambdify(x, sp.diff(f3(x), x).subs(r, 3.84))
 [round(df3(ro), 6) for ro in tfp3]
 ```
 
@@ -525,7 +525,7 @@ df3 = sym.lambdify(x, sym.diff(f3(x), x).subs(r, 3.84))
 An alternative way to calculate the stability is by using {eq}`eq:disc1d:periodm_stability_general2`. We start with one solution and apply {eq}`eq:disc1d:pm_fixed_points_mutual` to find the other values that belong to the same periodic solution. This is necessary since the expression for `tfp3` does not tell which solutions belong to each other.
 
 ```{code-block} python
-df = sym.lambdify(x, sym.diff(f(x), x).subs(r, 3.84))
+df = sp.lambdify(x, sp.diff(f(x), x).subs(r, 3.84))
 for k in [0, 1]:
     x3a = float(tfp3[k])
     x3b = 3.84 * x3a * (1 - x3a)
@@ -851,9 +851,9 @@ The chaotic series resulting from {eq}`eq:disc1d:shift_map` with $y_0 = 1/\pi$ i
 :class: python
 
 ```{code-block} python
-from mpmath import mp, mpf
+import mpmath as mp
 
-mp.dps = 150          # plenty of binary digits for 400 doublings
+mp.mp.dps = 150          # plenty of binary digits for 400 doublings
 f = lambda y: 2 * y - int(2 * y)
 N = 400
 Y = np.zeros(N + 1)

@@ -44,6 +44,13 @@ def make_cookbook_copy(dest):
     src = "".join(title["source"])
     src = re.sub(r"\n:::\{only\} html\n.*?\n:::\n", "\n", src, flags=re.DOTALL)
     title["source"] = src.splitlines(keepends=True)
+    # The browser copy starts at "General": the installation advice, the
+    # keyboard shortcuts and the help(sum) and comment demos at the head of
+    # the book version are not needed in a ready-running notebook.
+    general = next(i for i, c in enumerate(nb["cells"])
+                   if c["cell_type"] == "markdown"
+                   and "".join(c["source"]).startswith("## General"))
+    del nb["cells"][1:general]
     nb["cells"].insert(1, SETUP_CELL)
     dest.write_text(json.dumps(nb, indent=1), encoding="utf-8")
 

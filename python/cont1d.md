@@ -103,25 +103,25 @@ The following commands use sympy to find the analytical solution symbolically:
 :class: python
 
 ```{code-block} python
-import sympy as sym
+import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
 
-t = sym.symbols("t")
-x = sym.Function("x")
-x0 = sym.symbols("x0", positive=True)
+t = sp.symbols("t")
+x = sp.Function("x")
+x0 = sp.symbols("x0", positive=True)
 
 f = lambda x: x - x**3                      # define f(x)
-eq = sym.Eq(x(t).diff(t), f(x(t)))          # define differential eq
-sol = sym.dsolve(eq, x(t), ics={x(0): x0})  # solve it analytically
+eq = sp.Eq(x(t).diff(t), f(x(t)))          # define differential eq
+sol = sp.dsolve(eq, x(t), ics={x(0): x0})  # solve it analytically
 print(sol)
 
 # the same function as the closed form derived above?
-book = x0 / sym.sqrt(x0**2 + (1 - x0**2) * sym.exp(-2 * t))
-print(sym.N((sol.rhs - book).subs({t: 1.3, x0: 0.1})))
+book = x0 / sp.sqrt(x0**2 + (1 - x0**2) * sp.exp(-2 * t))
+print(sp.N((sol.rhs - book).subs({t: 1.3, x0: 0.1})))
 
 # plot the solution for x(0) = 0.1
-xs = sym.lambdify(t, sol.rhs.subs(x0, 0.1))
+xs = sp.lambdify(t, sol.rhs.subs(x0, 0.1))
 tt = np.linspace(0, 6, 200)
 plt.plot(tt, xs(tt), "k")
 plt.xlabel("$t$")
@@ -574,15 +574,15 @@ To see that the normal form of the bifurcation is $\dot{x} = rx - x^3$, we apply
 :class: python
 
 ```{code-block} python
-import sympy as sym
+import sympy as sp
 
-x, q = sym.symbols("x q")
-f = -x + sym.tanh(x / (q + 1))
+x, q = sp.symbols("x q")
+f = -x + sp.tanh(x / (q + 1))
 # Taylor expansion to total degree 3 around x = 0, q = 0
 # (multivariate expansion: scale x -> e x, q -> e q and expand in e)
-e = sym.symbols("e")
-ft = sym.series(f.subs({x: e * x, q: e * q}), e, 0, 4).removeO().subs(e, 1)
-print(sym.collect(sym.expand(ft), x))
+e = sp.symbols("e")
+ft = sp.series(f.subs({x: e * x, q: e * q}), e, 0, 4).removeO().subs(e, 1)
+print(sp.collect(sp.expand(ft), x))
 ```
 ````
 

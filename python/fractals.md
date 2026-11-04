@@ -237,14 +237,14 @@ D_2 = \lim_{r\rightarrow 0} \frac{\log C(r)}{\log r}.
 
 As with box-counting, $D_2$ is estimated in practice from the slope of a $\log C(r)$ versus $\log r$ plot over the scaling range. The correlation dimension is generally somewhat smaller than the box-counting dimension, $D_2 \leq D_0$, with equality only when the points are uniformly distributed over the object; it is the member $q=2$ of the family of generalized dimensions.
 
-The following Python fragment computes the correlation integral for a set of $N$ points $(x_n,y_n)$. Rather than sorting distances, the pairwise separations are binned logarithmically between $r_{\min}$ and $r_{\max}$, and the bins are accumulated to form the cumulative count $C(r)$.
+The following Python fragment computes the correlation integral for a set of $N$ points $(x_n,y_n)$. For every point the distances to all earlier points are sorted, and a binary search then counts how many of them are smaller than each of a set of logarithmically spaced radii between $r_{\min}$ and $r_{\max}$; adding up these counts over all points gives the cumulative count $C(r)$.
 
 ````{admonition} Python
 :class: python
 
 ```{code-block} python
 # X, Y: the data set, as above
-D2, r, C = cb.correlation_dimension(X, Y)   # pairs closer than r, binned in log r
+D2, r, C = cb.correlation_dimension(X, Y)   # C(r): pairs closer than r, at log-spaced r
 print(f"D2 = {D2:.3f}   D0 = {dim:.3f}")
 
 plt.loglog(r, C, "o")
