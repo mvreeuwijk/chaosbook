@@ -61,7 +61,7 @@ def classify_fixed_point(J, tol=1e-9):
     return ev, kind
 
 
-def fixed_points(f, guesses, tol=1e-8, **params):
+def fixed_points_nd(f, guesses, tol=1e-8, **params):
     """Fixed points of ``f(t, x, **params)`` found by Newton from many guesses.
 
     ``guesses`` is an iterable of starting states. Returns an (m, N) array of

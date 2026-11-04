@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytest
 
-from chaosbook import (jacobian, classify_fixed_point, fixed_points,
+from chaosbook import (jacobian, classify_fixed_point, fixed_points_nd,
                        phase_portrait, lotka_volterra, vanderpol, hopf,
                        lotka_volterra_invariant, lotka_volterra_allee)
 from scipy.integrate import solve_ivp
@@ -42,7 +42,7 @@ def test_classification_eigenvalues_and_shape_check():
 
 
 def test_lotka_volterra_fixed_points_and_types():
-    pts = fixed_points(lotka_volterra, [[0.1, 0.1], [0.8, 0.9], [2, 2]], alpha=0.75)
+    pts = fixed_points_nd(lotka_volterra, [[0.1, 0.1], [0.8, 0.9], [2, 2]], alpha=0.75)
     assert any(np.allclose(p, [0, 0], atol=1e-6) for p in pts)
     assert any(np.allclose(p, [0.75, 1], atol=1e-6) for p in pts)
     kinds = {tuple(np.round(p, 3)): classify_fixed_point(jacobian(lotka_volterra, p, alpha=0.75))[1]
@@ -71,7 +71,7 @@ def test_lotka_volterra_invariant_is_conserved():
 
 def test_allee_fixed_point_location():
     a, b = 0.5, 3 / 16
-    p = fixed_points(lotka_volterra_allee, [[0.3, 0.6]], alpha=a, beta=b)[0]
+    p = fixed_points_nd(lotka_volterra_allee, [[0.3, 0.6]], alpha=a, beta=b)[0]
     assert np.allclose(p, [a - b, (a - b) / a], atol=1e-6)
 
 
