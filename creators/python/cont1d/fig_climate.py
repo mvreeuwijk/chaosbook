@@ -1,10 +1,9 @@
 """Energy-balance climate model:  beta dT/dt = (1 - a) S/4 - eps sigma T^4.
 
 Produces (in python/_static/cont1d/):
-  cont1d_climate_single_fp.png     T*(eps) for constant albedo a = 0.3
-  cont1d_climate_multiple_fp.png   T*(eps) with a(T) = 0.4 - 0.3 tanh((T - Tm)/DT),
-                                   stable branches black, unstable gray, with
-                                   arrows for the jumps at the two folds
+  cont1d_climate.png   T*(eps): (a) constant albedo a = 0.3; (b) a(T) = 0.4 - 0.3
+                       tanh((T - Tm)/DT), stable branches black, unstable gray,
+                       with arrows for the jumps at the two folds
 Also prints the numbers quoted in the text: T* at eps = 0.61, f'(T*), and the
 critical emissivities (folds) of the multiple-equilibrium model.
 """
@@ -14,7 +13,7 @@ import numpy as np
 from scipy.optimize import fsolve
 
 import chaosbook as cb
-from _common import PANEL, plot_branches, save
+from _common import bf, plot_branches, save
 
 sigma, S, Tm, DT = 5.67e-8, 1370.0, 273.0, 20.0
 beta = 4e7            # h * rho * c_v = 10 * 1000 * 4000 (text and table)
@@ -46,28 +45,26 @@ for T0, e0 in ((280, 0.6), (250, 0.4)):
     else:
         eps_lo, T_lo = ec, Tc
 
-# -- figures ------------------------------------------------------------------------
-fig, ax = plt.subplots(figsize=PANEL)
+# -- figure -------------------------------------------------------------------------
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4), sharey=True)
+ax = axs[0]
 segs = cb.fixed_point_branches(f_const, "eps", 0.3, 1.0, 200, 350, shape=(800, 800))
-plot_branches(ax, segs, lw=2.5)
+plot_branches(ax, segs, lw=2)
 ax.set_xlim(0.3, 1.0)
 ax.set_ylim(200, 350)
 ax.set_xlabel(r"$\epsilon$")
 ax.set_ylabel("$T_*$")
-fig.tight_layout()
-save(fig, "cont1d_climate_single_fp")
 
-fig, ax = plt.subplots(figsize=PANEL)
+ax = axs[1]
 segs = cb.fixed_point_branches(f_alb, "eps", 0.3, 1.0, 200, 350, shape=(1000, 1000))
-plot_branches(ax, segs, lw=2.5)
+plot_branches(ax, segs, lw=2)
 for e, y0, y1 in ((eps_hi, T_hi - 7, 230), (eps_lo, T_lo + 7, 310)):
     ax.annotate("", (e, y1), (e, y0), arrowprops=dict(
         arrowstyle="-|>", color="k", lw=1, mutation_scale=12, shrinkA=0, shrinkB=0))
 ax.set_xlim(0.3, 1.0)
 ax.set_ylim(200, 350)
 ax.set_xlabel(r"$\epsilon$")
-ax.set_ylabel("$T_*$")
-fig.tight_layout()
-save(fig, "cont1d_climate_multiple_fp")
+bf.panel_labels(axs, pad=(-0.02, 0.05))
+save(fig, "cont1d_climate")
 
 print("fig_climate: written")

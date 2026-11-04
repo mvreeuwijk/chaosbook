@@ -1,13 +1,10 @@
 """Normal forms of the 1-D bifurcations: pitchfork, subcritical pitchfork,
 saddle-node and transcritical.
 
-Produces (in python/_static/cont1d/):
-  cont1d_bifur_pitchfork{1,2,3}.png, cont1d_bifur_pitchfork.png
-  cont1d_bifur_pitchfork_sub{1,2,3}.png, cont1d_bifur_pitchfork_sub.png
-  cont1d_bifur_saddle{1,2,3}.png, cont1d_bifur_saddle.png
-  cont1d_bifur_transcrit{1,2,3}.png, cont1d_bifur_transcrit.png
-Panels 1-3 are f(x) for r<0, r=0, r>0 with the fixed points marked
-(filled = stable, open = unstable, half = marginal); the last figure is the
+Produces (in python/_static/cont1d/), one 1x4 figure per normal form:
+  cont1d_normalform_{pitchfork,pitchfork_sub,saddle,transcrit}.png
+Panels (a)-(c) are f(x) for r<0, r=0, r>0 with the fixed points marked
+(filled = stable, open = unstable, half = marginal); panel (d) is the
 bifurcation diagram x*(r), black = stable, gray = unstable.
 """
 
@@ -15,8 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import chaosbook as cb
-from _common import (PANEL, SQUARE, cross_axes, mark_fixed_points,
-                     plot_branches, save)
+from _common import (bf, cross_axes, mark_fixed_points, plot_branches, save)
 
 R = 1.25  # |r| used in the panels (as in the original figures)
 
@@ -43,27 +39,26 @@ TITLES = ("$r<0$", "$r=0$", "$r>0$")
 
 for name, s in SYSTEMS.items():
     f, df = s["f"], s["df"]
-    for k, (r, title) in enumerate(zip(s["rs"], TITLES), start=1):
-        fig, ax = plt.subplots(figsize=SQUARE)
+    fig, axs = plt.subplots(1, 4, figsize=(bf.FULL_W, 2.0),
+                            gridspec_kw=dict(width_ratios=[1, 1, 1, 1.6]))
+    for ax, r, title in zip(axs[:3], s["rs"], TITLES):
         x = np.linspace(*s["xlim"], 400)
-        ax.plot(x, f(x, r), "k", lw=2.5)
+        ax.plot(x, f(x, r), "k", lw=2)
         ax.set_xlim(*s["xlim"])
         ax.set_ylim(*s["ylim"])
         cross_axes(ax, "$x$", "$f(x)$")
-        mark_fixed_points(ax, f, *s["xlim"], dfdx=df, r=r)
+        mark_fixed_points(ax, f, *s["xlim"], dfdx=df, size=6, r=r)
         ax.set_title(title)
-        fig.tight_layout()
-        save(fig, f"cont1d_bifur_{name}{k}")
 
     # bifurcation diagram: zero level set of f(x, r), coloured by sign of f'
     (r0, r1), (x0, x1) = s["diag"]
     segs = cb.fixed_point_branches(f, "r", r0, r1, x0, x1, shape=(800, 800), dfdx=df)
-    fig, ax = plt.subplots(figsize=PANEL)
-    plot_branches(ax, segs)
+    ax = axs[3]
+    plot_branches(ax, segs, lw=3)
     ax.set_xlim(r0, r1)
     ax.set_ylim(x0, x1)
     cross_axes(ax, "$r$", "$x_{*}(r)$", zero=True)
-    fig.tight_layout()
-    save(fig, f"cont1d_bifur_{name}")
+    bf.panel_labels(axs)
+    save(fig, f"cont1d_normalform_{name}")
 
 print("fig_normalforms: written")
