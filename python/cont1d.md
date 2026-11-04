@@ -488,8 +488,6 @@ for T, x, stable in branches:
     plt.plot(T, x, color="k" if stable else "0.7", linewidth=2.5)
 plt.xlabel("$T$")
 plt.ylabel("$x_*(T)$")
-plt.savefig("b4.png", dpi=70); plt.close()
-print(len(branches), "branches;", sum(s for _, _, s in branches), "stable")
 ```
 ````
 
@@ -529,7 +527,6 @@ for n in range(N + 1):
 plt.xlabel("$t$")
 plt.ylabel("$x(t)$")
 plt.show()
-print("final values:", np.round(sol.y[0, -1], 3))
 ```
 ````
 
@@ -707,8 +704,8 @@ snaps, x = [s.reshape(K, K).copy()], np.empty(iters + 1)
 for n in range(iters + 1):                  # dynamics
     i = rng.integers(N)                     # choose spin at random
     h = s.sum() / N + m                     # calc local field
-    p = 0.5 * (1 + np.tanh(s[i] * h / T))   # calc transition prob
-    if rng.random() > p:                    # flip spin or not
+    p = 0.5 * (1 + np.tanh(s[i] * h / T))   # prob. of NOT flipping (aligned spin: p -> 1)
+    if rng.random() > p:                    # flip with probability 1 - p
         s[i] = -s[i]
     if n % 200 == 0:
         snaps.append(s.reshape(K, K).copy())   # store some states
@@ -727,7 +724,6 @@ plt.ylim(-1, 1)
 plt.xlabel("$t$")
 plt.ylabel("$x(t)$")
 plt.show()
-print("initial mean state", x[0], " final", x[-1])
 ```
 ````
 

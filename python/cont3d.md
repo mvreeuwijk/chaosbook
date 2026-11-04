@@ -288,7 +288,6 @@ plt.ylabel(r"$\Lambda$")
 
 # the package does the same, with a numerical Jacobian
 le_cb, local_rates = cb.effective_lyapunov(cb.lorenz, t, X1.T, X2.T)
-print("max |difference| with cb.effective_lyapunov:", np.abs(le - le_cb).max())
 
 # time averages over the run (the perturbation is still tiny: delta < 1)
 print("delta stays below", np.linalg.norm(X2 - X1, axis=0).max())
@@ -497,11 +496,9 @@ for i in range(N // 4, N - 1):
 plt.plot(pcx, pcz, "D", mfc="none")
 plt.xlabel("$x$")
 plt.ylabel("$z$")
-print(len(pcx), "crossings (sampled)")
 
 # cb.poincare_section locates the crossings exactly, by root finding
 tp, Xp = cb.poincare_section(cb.lorenz, [2, 5, 5], T[-1], (1, 0.0), discard=T[N // 4])
-print(len(tp), "crossings (cb.poincare_section)")
 ```
 
 ```{figure} _static/cont3d/cont3d_lorenz_poincare.png
@@ -717,12 +714,10 @@ plt.plot(xx[N // 2:], yy[N // 2:], ".", ms=2)
 plt.axis([-2, 2, -1, 1])
 plt.xlabel("$x$")
 plt.ylabel("$y$")
-print(len(xx), xx.min(), xx.max(), yy.min(), yy.max())
 
 
 # the package does the same in one call (cb.stroboscopic_section)
 P = cb.stroboscopic_section(cb.forced_double_well, ic, dt, 50, phase=phi, f=f, A=A, omega=omega)
-print("agrees with the package:", np.allclose(P[:, :2].T, sol.y[:2, :50], atol=1e-4))
 ```
 
 The result is shown in {numref}`fig:cont3d:doublewell_results`(b). The system does not settle in an limit cycle (which would correspond to a period-$M$ solution) but instead traces out a  fractal object, not too dissimilar to the Hénon map discussed in section {numref}`sec:disc2d:henonlyap`. Note that the result is shown in {numref}`fig:cont3d:doublewell_results`(b) is for the specific case of $\phi=0$, and the Poincaré section will be different for different $\phi$, much like a regular Poincaré section will be different for different surfaces of section. This can be easily verified by experimenting with the code above.

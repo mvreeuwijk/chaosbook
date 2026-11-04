@@ -66,8 +66,10 @@ plt.tight_layout()
 plt.savefig(OUT / "cont2d_global_r.png", dpi=150)
 plt.close()
 
-# fixed points of  F(r, mu) = mu r + r^3 - r^5  (the figure's stability colouring
-# is that of this sign convention: stable where dF/dr < 0)
+# fixed points of the radial equation of panels (a)-(c),  dr/dt = g(r, mu) =
+# -mu r - r^3 + r^5. Stable where dg/dr < 0: the origin for mu > 0, the inner
+# branch (the stable limit cycle born in the saddle-node at mu = -1/4); the
+# outer branch is unstable.
 mus = np.linspace(-0.4, 0.2, 2001)
 plt.figure(figsize=(4.2, 3.2))
 
@@ -77,14 +79,15 @@ def seg(mu_, r_, stable):
              solid_capstyle="butt")
 
 
-# origin: stable for mu < 0
-seg(mus[mus < 0], 0 * mus[mus < 0], True)
-seg(mus[mus >= 0], 0 * mus[mus >= 0], False)
-# non-trivial branches r^2 = (1 +- sqrt(1 + 4 mu))/2 for mu >= -1/4
+# origin: dg/dr = -mu, unstable for mu < 0, stable for mu > 0
+seg(mus[mus < 0], 0 * mus[mus < 0], False)
+seg(mus[mus >= 0], 0 * mus[mus >= 0], True)
+# non-trivial branches r^2 = (1 +- sqrt(1 + 4 mu))/2 for mu >= -1/4;
+# dg/dr = 2 r^2 (2 r^2 - 1): the inner (minus) branch is stable
 mb = mus[mus >= -0.25]
 mb_up = mb[mb <= 0]
-seg(mb_up, np.sqrt((1 + np.sqrt(1 + 4 * mb_up)) / 2), True)
-seg(mb_up, np.sqrt((1 - np.sqrt(1 + 4 * mb_up)) / 2), False)
+seg(mb_up, np.sqrt((1 + np.sqrt(1 + 4 * mb_up)) / 2), False)
+seg(mb_up, np.sqrt((1 - np.sqrt(1 + 4 * mb_up)) / 2), True)
 plt.xlim(-0.4, 0.2)
 plt.ylim(0, 1.02)
 plt.xlabel(r"$\mu$")

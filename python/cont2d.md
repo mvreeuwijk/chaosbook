@@ -84,7 +84,6 @@ plt.xlabel("$t$")
 plt.ylabel("$x(t), y(t)$")
 plt.legend()
 plt.show()
-print("x max, y max:", x.max(), y.max())
 ```
 ````
 
@@ -753,13 +752,13 @@ import chaosbook as cb
 
 def limit(t, s):
     x, y = s
-    c = x / (4 * np.sqrt(x**2 + y**2)) * (1 - x**2 - y**2)
-    return [-y + c, x + c]
+    k = (1 - x**2 - y**2) / (4 * np.sqrt(x**2 + y**2))
+    return [-y + k * x, x + k * y]
 
 # two initial conditions, one inside and one outside the cycle
 ics = [[0.01, 0], [2, 0]]
 cb.phase_portrait(limit, (-2, 2), (-2, 2), style="quiver",
-                  trajectories=ics, tmax=30, colors=["r", "g"])
+                  trajectories=ics, tmax=30, colors=["r", "b"])
 plt.show()
 for x0 in ics:
     sol = solve_ivp(limit, [0, 30], x0, rtol=1e-9)
