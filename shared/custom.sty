@@ -19,18 +19,33 @@
   pre_border-radius=0pt
 }
 
+% Admonitions are flat grey boxes, except the code boxes of either edition
+% ("Maple"/"Maple code" and "Python"/"Python code" titles): those take the
+% same background as the code listings themselves (VerbatimColor above), so a
+% listing inside such a box merges with it instead of sitting as a second,
+% differently coloured box within the first.
 \makeatletter
 \renewenvironment{sphinxadmonition}[2]{%
     \def\admonitionbg{lightgrey}%
     \def\admontitle{#2}%
     \def\MapleTitle{Maple}%
     \def\MapleCodeTitle{Maple code}%
+    \def\PythonTitle{Python}%
+    \def\PythonCodeTitle{Python code}%
     \def\admonitionfontsize{}%
     \ifx\admontitle\MapleTitle
       \def\admonitionbg{mapleyellow}%
       \def\admonitionfontsize{\small}%
     \fi
     \ifx\admontitle\MapleCodeTitle
+      \def\admonitionbg{mapleyellow}%
+      \def\admonitionfontsize{\small}%
+    \fi
+    \ifx\admontitle\PythonTitle
+      \def\admonitionbg{mapleyellow}%
+      \def\admonitionfontsize{\small}%
+    \fi
+    \ifx\admontitle\PythonCodeTitle
       \def\admonitionbg{mapleyellow}%
       \def\admonitionfontsize{\small}%
     \fi

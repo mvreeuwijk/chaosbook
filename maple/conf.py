@@ -176,7 +176,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "Download PDF",
-            "url": "https://mvreeuwijk.github.io/chaosbook/chaosbook.pdf",
+            "url": "https://mvreeuwijk.github.io/chaosbook/maple/chaosbook.pdf",
             "icon": "fa-solid fa-file-pdf",
             "type": "fontawesome",
         },

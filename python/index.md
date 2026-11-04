@@ -20,7 +20,8 @@ for every chapter, running right in your browser — so that each idea can be
 explored, visualised and experimented with directly.
 
 The Python edition covers the whole book: all chapters, the cookbook, the
-appendices and an exercise lab for every chapter.
+appendices and an exercise lab for every chapter. The book is also available
+in its original [Maple edition](https://mvreeuwijk.github.io/chaosbook/maple/).
 
 ```{button-ref} phenomenon
 :ref-type: doc
@@ -30,12 +31,12 @@ appendices and an exercise lab for every chapter.
 Start reading →
 ```
 
-```{button-link} chaosbook-python.pdf
+```{button-link} chaosbook.pdf
 :color: secondary
 :outline:
 :class: sfc-cta
 
-Download PDF (draft)
+Download PDF
 ```
 :::
 
@@ -102,6 +103,9 @@ fractals
 practice
 ```
 
+% HTML only: in the PDF the cookbook is a separate document and the
+% appendices are appended as Appendix A, B, C via latex_appendices (conf.py).
+````{only} html
 ```{toctree}
 :hidden:
 :numbered:
@@ -120,7 +124,6 @@ app_lorenz
 app_polar
 ```
 
-````{only} html
 ```{toctree}
 :hidden:
 :caption: References

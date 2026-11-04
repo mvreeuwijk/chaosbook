@@ -34,8 +34,8 @@ it are in `docs/superpowers/plans/` and `docs/superpowers/reviews/`.
 - [ ] Figure-versus-caption fixes from the full figure audit.
 - [ ] Regenerate the Maple images listed in `creators/MAPLE_TODO.md` once
       Maple is available.
-- [ ] Swap the editions: make the Python edition the main site, with the
-      Maple edition alongside.
+- [x] Swap the editions: the Python edition is the main site, with the
+      Maple edition alongside under `/maple/` (November 2026).
 - [ ] Zenodo DOI and a first release (see §3 below).
 
 ---

@@ -16,27 +16,26 @@ the [About page](maple/about.md) for the full story.
 
 ## Read it
 
-- **Online:** Python edition <https://mvreeuwijk.github.io/chaosbook/python/>,
-  Maple edition <https://mvreeuwijk.github.io/chaosbook/>.
-- **PDF:** each edition's book and cookbook are published alongside the site
-  and rebuilt on every push to `main` (Python: `python/chaosbook-python.pdf`,
-  `python/cookbook.pdf`; Maple: `chaosbook.pdf`, `cookbook.pdf`).
+- **Online:** Python edition <https://mvreeuwijk.github.io/chaosbook/>,
+  Maple edition <https://mvreeuwijk.github.io/chaosbook/maple/>.
+- **PDF:** each edition's book and cookbook are published alongside its pages
+  and rebuilt on every push to `main` (Python: `chaosbook.pdf`, `cookbook.pdf`
+  at the site root; Maple: `maple/chaosbook.pdf`, `maple/cookbook.pdf`).
 - **Exercise labs:** every chapter of the Python edition has a JupyterLite lab
   that runs in the browser, with nothing to install
-  (<https://mvreeuwijk.github.io/chaosbook/python/lite/lab/index.html>).
+  (<https://mvreeuwijk.github.io/chaosbook/lite/lab/index.html>).
 
 ## Status
 
-- **Python edition — complete.** All chapters, the cookbook, the appendices,
-  an exercise lab per chapter, interactive figures, and the small `chaosbook`
-  package (`src/chaosbook/`, tested in `tests/`). It is expected to become the
-  main edition.
-- **Maple edition — complete.** The original edition.
+- **Python edition — complete.** The main edition: all chapters, the cookbook,
+  the appendices, an exercise lab per chapter, interactive figures, and the
+  small `chaosbook` package (`src/chaosbook/`, tested in `tests/`).
+- **Maple edition — complete.** The original edition, published alongside
+  under `/maple/`.
 
 The two editions share the mathematical exposition, figures' content and
 exercises, and differ in the code, the figure-generation workflow and the
-labs. The Python edition is currently published under `/python/` alongside the
-Maple site. See [ROADMAP.md](ROADMAP.md).
+labs. See [ROADMAP.md](ROADMAP.md).
 
 ## Layout
 
@@ -60,15 +59,18 @@ figure → worksheet mapping.
 ## Build
 
     pip install -r requirements.txt
-    make maple                             # HTML -> build/maple/html
     make python                            # HTML -> build/python/html
+    make maple                             # HTML -> build/maple/html
     make python-figures                    # regenerate every Python-edition figure
     make python-lite LITEDIR=<short path>  # the JupyterLite lab layer
 
-PDF (per edition):
+PDF (per edition; `main.tex` is the book, `cookbook.tex` the cookbook):
 
-    sphinx-build -b latex maple build/maple/latex
-    cd build/maple/latex && latexmk -pdf main.tex
+    sphinx-build -b latex python build/python/latex
+    cd build/python/latex && latexmk -pdf main.tex
+
+The published site is assembled by `.github/workflows/pages.yml`: the Python
+edition at the root, the Maple edition under `maple/`, the labs under `lite/`.
 
 ## Contributing & errata
 

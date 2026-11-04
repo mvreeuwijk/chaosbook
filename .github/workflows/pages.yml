@@ -34,21 +34,22 @@ jobs:
       - name: Test the chaosbook package
         run: python -m pytest tests/ -v
 
-      - name: Build the Maple edition (HTML)
-        run: sphinx-build -b html maple build/maple/html
-
-      # The Python edition is published under /python/ so every Maple-edition
-      # URL stays stable. The notebook executes during this build (myst-nb
-      # cache mode; the runner starts clean).
+      # The site (build/site) is the Python edition at the root, with the
+      # original Maple edition alongside under /maple/. The cookbook notebook
+      # executes during the Python build (myst-nb cache mode; the runner
+      # starts clean).
       - name: Build the Python edition (HTML)
-        run: sphinx-build -b html python build/maple/html/python
+        run: sphinx-build -b html python build/site
 
-      # The JupyterLite lab layer lives under /python/lite/: exercise-lab
-      # notebooks with the chaosbook wheel bundled for piplite.
+      - name: Build the Maple edition (HTML)
+        run: sphinx-build -b html maple build/site/maple
+
+      # The JupyterLite lab layer lives under /lite/: exercise-lab notebooks
+      # with the chaosbook wheel bundled for piplite.
       - name: Build the JupyterLite lab layer
         run: |
           pip install -r requirements-lite.txt
-          python python/lite/build_lite.py build/maple/html/python/lite
+          python python/lite/build_lite.py build/site/lite
 
       - name: Install LaTeX toolchain
         run: |
@@ -63,35 +64,33 @@ jobs:
             texlive-science \
             tex-gyre
 
-      - name: Build the Maple edition (PDFs)
-        run: |
-          sphinx-build -b latex maple build/maple/latex
-          # The book, and the cookbook as a separate document.
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/main.tex
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/cookbook.tex
-          # Publish both at the site root so they are downloadable.
-          cp build/maple/latex/main.pdf build/maple/html/chaosbook.pdf
-          cp build/maple/latex/cookbook.pdf build/maple/html/cookbook.pdf
-
+      # Each edition's book and cookbook PDFs sit beside its pages (where the
+      # download buttons point): chaosbook.pdf and cookbook.pdf at the site
+      # root for the Python edition, and under /maple/ for the Maple edition.
       - name: Build the Python edition (PDFs)
         run: |
           sphinx-build -b latex python build/python/latex
-          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/python/latex/cookbook.tex
-          # The draft book PDF of the converted chapters, published so print
-          # figure quality can be judged as chapters roll out.
           latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/python/latex/main.tex
-          # Beside the Python pages, where the cookbook's download button points.
-          cp build/python/latex/cookbook.pdf build/maple/html/python/cookbook.pdf
-          cp build/python/latex/main.pdf build/maple/html/python/chaosbook-python.pdf
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/python/latex/cookbook.tex
+          cp build/python/latex/main.pdf build/site/chaosbook.pdf
+          cp build/python/latex/cookbook.pdf build/site/cookbook.pdf
+
+      - name: Build the Maple edition (PDFs)
+        run: |
+          sphinx-build -b latex maple build/maple/latex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/main.tex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -cd build/maple/latex/cookbook.tex
+          cp build/maple/latex/main.pdf build/site/maple/chaosbook.pdf
+          cp build/maple/latex/cookbook.pdf build/site/maple/cookbook.pdf
 
       # GitHub Pages serves the artifact as-is (no Jekyll), but a .nojekyll
       # keeps underscore-prefixed dirs (_static, _images) safe on any path.
       - name: Disable Jekyll processing
-        run: touch build/maple/html/.nojekyll
+        run: touch build/site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: build/maple/html
+          path: build/site
 
   deploy:
     needs: build
