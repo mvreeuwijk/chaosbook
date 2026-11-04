@@ -43,7 +43,7 @@ with  $x_1(t), x_2(t) \geq 0$.
 
 b) Calculate all fixed points of this system. Give a biological interpretation of each fixed point.
 
-In the sequel we take $r_1 = 3$, and $r_2 = 2$. (What do these value imply from a biological point of view?)
+In the sequel we take $r_1 = 3$, and $r_2 = 2$. (What do these values imply from a biological point of view?)
 
 
 
@@ -102,7 +102,7 @@ g) Again take $a = 0.75$ and $x(0) =0.4$. Since the prey population at $t=0$ is 
 
 **Downloads:** {download}`NuclearReactorCooling.mws <_static/exercises/NuclearReactorCooling.mws>`, {download}`NuclearReactorCooling.eps <_static/exercises/NuclearReactorCooling.eps>`
 
-In a nuclear reactor, heat is carried away from the core by convection. Instead of actively forcing this convection by means of a pump, one can also make use of the density difference between the hot, boiling water in the riser and the cooled water in the downcomer to drive the system (see figure {numref}`fig:reactorsystem`). A large advantage of such an approach is that pump failure and resulting dangerous situations are avoided.
+In a nuclear reactor, heat is carried away from the core by convection. Instead of actively forcing this convection by means of a pump, one can also make use of the density difference between the hot, boiling water in the riser and the cooled water in the downcomer to drive the system (see {numref}`fig:reactorsystem`). A large advantage of such an approach is that pump failure and resulting dangerous situations are avoided.
 
 ```{figure} _static/blank.png
 :name: fig:reactorsystem
@@ -134,7 +134,7 @@ a) Show that, without loss of generality, this set of equations can be written a
 
 b) Show that in the positive quadrant  $(x, y \geq 0)$, any fixed point is stable.
 
-c) Find the value(s) for p where the stable fixed point changes in a stable spiral, and show phaseportraits of both cases.
+c) Find the value(s) for p where the stable fixed point changes into a stable spiral, and show phaseportraits of both cases.
 
 d) Can the system be written as a gradient system, which would rule out closed orbits? If so, give the potential $V$, and if not, why not?
 
