@@ -240,6 +240,7 @@ $$
 
 These three branches have been plotted in {numref}`fig:cont1d_bifur_pitchfork`. The $x_*(r) = 0$ branch changes stability around $r=0$ (indicated by the color change from black to gray). This type of bifurcation is called a *pitchfork* bifurcation – 'bifurc' is the Latin word for fork.
 
+(sec:cont1d:saddlenode)=
 ## Saddle-node bifurcation
 
 ```{subfigure} 2
@@ -304,6 +305,7 @@ $$
 
 The corresponding plots are given in {numref}`fig:cont1d_bifur_transcrit`: one observes that the branches exchange their stability around $r=0$. This 'exchange of stability' characterizes a transcritical bifurcation.
 
+(sec:cont1d:normalforms)=
 ## Universality of bifurcations: normal forms
 
 Although the number of one-dimensional non-linear autonomous systems is infinite, the idea is that commonly only a limited number of bifurcation types occur. The underlying reason is that close to the bifurcation point, the system can be well approximated by the first terms of a Taylor series, of which only a few forms are most likely to occur. Consider the generic autonomous system $\dot{x} = f(x,\mu)$ which undergoes a bifurcation at $\mu=\mu_c$. The fixed point(s) around bifurcation $x_*(\mu)$ satisfy $f(x_*,\mu)=0$. The stability is $\sigma = f'(x_*(\mu),\mu)$. Let $x_c = x_*(\mu_c)$. Precisely at the bifurcation $\sigma = f'(x_c,\mu_c)=0$. Expanding $f(x,\mu)$ via a Taylor series in $x$ and $\mu$ around $(x_c,\mu_c)$
