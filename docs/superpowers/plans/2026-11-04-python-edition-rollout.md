@@ -216,6 +216,17 @@ Labels are mathtext, using the shared `book.mplstyle` and the size classes.
 5. **Text:** prose and mathematics are not touched, except where they speak
    specifically about Maple.
 
+6. **Delivery (revised the same day):** separate chapter PRs conflicted with
+   each other on the toctree, the package exports and the manifest. All
+   remaining chapters are therefore merged into one integration branch,
+   `py/rollout`, with one combined PR (#4). cont2d had already gone in
+   separately as #3.
+7. **After the rollout:**
+   1. A Fable agent does a critical review of the whole book.
+   2. A round of fixes follows.
+   3. Later, at a time the author chooses, the editions are swapped so that
+      Python becomes the main edition.
+
 ## Conventions for implementers (binding)
 
 These are the pilot's conventions. Read `python/disc1d.md`,
