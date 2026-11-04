@@ -54,6 +54,11 @@ save("cont3d_lorenz_lyapunov")
 m = (s1.t > 1) & (delta < 1e-1)
 slope = np.polyfit(s1.t[m], np.log(delta[m]), 1)[0]
 print("fit of ln(delta) against t (delta < 0.1): slope = %.3f" % slope)
+# when does the separation reach the size of the attractor? (saturation)
+t_sat = s1.t[np.argmax(delta > 10)]
+print("delta first exceeds 10 at t = %.2f; delta(t=15) = %.2f; "
+      "mean delta over t in [18, 20] = %.2f"
+      % (t_sat, delta[s1.t >= 15][0], delta[s1.t >= 18].mean()))
 
 # -- effective exponent: N = 6000, dt = 0.005, eps = 1e-12 --------------------
 eps = 1e-12
@@ -61,7 +66,8 @@ dt = 0.005
 x10 = solve_ivp(cb.lorenz, [0, 10], [2, 5, 5], rtol=1e-12, atol=1e-14,
                 method="DOP853").y[:, -1]          # transient t = 10
 a, bb = run(x10, 30 - dt, dt), run(x10 + [eps, 0, 0], 30 - dt, dt)
-le, ev = cb.effective_lyapunov(cb.lorenz, a.t, a.y.T, bb.y.T)
+le, local_rates = cb.effective_lyapunov(cb.lorenz, a.t, a.y.T, bb.y.T)
+ev = local_rates                       # instantaneous stretching rates of J_S
 good = np.linalg.norm(bb.y - a.y, axis=0) < 1.0     # perturbation still small
 print("Lambda_e time average (delta < 1): %.3f; between %.3f and %.3f"
       % (le[good].mean(), ev[good, 0].mean(), ev[good, -1].mean()))

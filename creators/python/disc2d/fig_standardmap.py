@@ -48,7 +48,7 @@ def run(x0, n=2000, ntrans=1000):
 
 # -- series, return plots and deviations -----------------------------------------------
 eps = 1e-8
-for name, x0, nmax in [("quasi", (0.4, 0.1), 750), ("chaos", (0.05, 0.4), 75)]:
+for name, x0, nmax in [("quasi", (0.4, 0.1), 750), ("chaos", (0.1, 0.1), 75)]:
     X = run(x0)
     X2 = cb.orbit(cb.standard_map, X[0] + [eps, 0.0], 2000, K=K)
     plt.figure(figsize=(4.2, 3.2))

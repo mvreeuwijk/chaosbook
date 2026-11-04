@@ -159,7 +159,7 @@ In {numref}`fig:cont3d:lorenzlyapunov` the evolution of the vectorial distance b
 \delta(t) = \delta(0) \mathrm{e}^{\textstyle \Lambda_e t}
 ```
 
-with an *effective* Lyapunov exponent $\Lambda_e \simeq 0.9$. As this Lyapunov exponent is positive, there is clearly a sensitive dependence to initial conditions. Note that the distance between the trajectories does not grow monotonically but fluctuates in time. This is because the distance between the trajectories varies along the attractor. At $t=15$, the distance reaches the size of the attractor and cannot grow any more. At this point the trajectories are no longer correlated to each other. Some caution needs to be taken with the effective Lyapunov exponent. First, the Lyapunov exponent can depend on the starting position on the attractor. Second, the Lorenz equations have three degrees of freedom, which means that there are three principle directions and therefore also three Lyapunov exponents.
+with an *effective* Lyapunov exponent $\Lambda_e \simeq 0.9$. As this Lyapunov exponent is positive, there is clearly a sensitive dependence to initial conditions. Note that the distance between the trajectories does not grow monotonically but fluctuates in time. This is because the distance between the trajectories varies along the attractor. At $tpprox 18$, the distance reaches the size of the attractor and cannot grow any more. At this point the trajectories are no longer correlated to each other. Some caution needs to be taken with the effective Lyapunov exponent. First, the Lyapunov exponent can depend on the starting position on the attractor. Second, the Lorenz equations have three degrees of freedom, which means that there are three principle directions and therefore also three Lyapunov exponents.
 
 To see the relation between these three Lyapunov exponents and the effective Lyapunov exponent, we first derive for the evolution of the distance between two trajectories
 
@@ -287,7 +287,7 @@ plt.xlabel("$t$")
 plt.ylabel(r"$\Lambda$")
 
 # the package does the same, with a numerical Jacobian
-le_cb, ev_cb = cb.effective_lyapunov(cb.lorenz, t, X1.T, X2.T)
+le_cb, local_rates = cb.effective_lyapunov(cb.lorenz, t, X1.T, X2.T)
 print("max |difference| with cb.effective_lyapunov:", np.abs(le - le_cb).max())
 
 # time averages over the run (the perturbation is still tiny: delta < 1)
@@ -298,8 +298,16 @@ print("sum of the eigenvalues:", (l1 + l2 + l3).mean(), " -(sigma+1+b) =", -(sig
 
 # the largest Lyapunov exponent proper, by renormalising the perturbation
 print("largest exponent:", cb.lyapunov_exponent(cb.lorenz, x0, 100, dt=0.02))
+
+# the complete spectrum: integrate the variational equations for the tangent
+# vectors and re-orthonormalise them with a QR decomposition (as in chapter 3)
+jac = lambda t, s: np.array(J_num(*s), float)
+spectrum = cb.lyapunov_spectrum_flow(cb.lorenz, jac, x0, 200, dt=0.05, transient=20)
+print("Lyapunov spectrum:", spectrum, " sum:", spectrum.sum())
 ```
 ````
+
+The last lines of the program compute the Lyapunov spectrum proper with `cb.lyapunov_spectrum_flow`, from the variational equations with a QR re-orthonormalisation; it gives approximately $(0.90,\ 0.00,\ -14.57)$ (the literature value of the largest exponent is 0.906), with the sum $-(\sigma+1+b)$ of the exponents equal to the sum of the eigenvalues above. Compare these numbers with the time averages of $\Lambda_1,\Lambda_2,\Lambda_3$ printed above.
 
 ## Reducing complexity
 
