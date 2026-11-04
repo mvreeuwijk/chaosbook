@@ -61,7 +61,7 @@ the system simplifies to
 \end{aligned}
 ```
 
-To get a feeling for the behaviour of this nonlinear system we perform numerical simulation with Python. The key commands are `solve_ivp` and `plot`, and the solution method is exactly identical to that of a 1-D system (see the chapter on one-dimensional continuous systems).
+To get a feeling for the behaviour of this nonlinear system we perform numerical simulation with Python. The key commands are `solve_ivp` and `plot`, and the solution method is exactly identical to that of a 1-D system (see section {numref}`sec:cont1d:fixed_points_stability`).
 
 ````{admonition} Python
 :class: python
@@ -1046,7 +1046,7 @@ and the eigenvalues are $\sigma_1 = \mu + 3 x^2$ and $\sigma_2 = -1$. The charac
   - non-existent
 ```
 
-The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in the chapter on one-dimensional continuous systems. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
+The “proper” way of analysing bifurcations is by reduction to normal forms, as was done for 1-D systems in section {numref}`sec:cont1d:normalforms`. However, the mathematics become quite complex and are beyond the scope of this book. Please see [Crawford1991, Verhulst1996] for more information.
 
 We will avoid some of the mathematical complexity by making use of Python's versatility. In particular, by plotting the behaviour of the fixed points and the the eigenvalues as a function of the control parameter $\mu$, it is possible to determine for which $\mu$ bifurcations occur and to identify their type.
 
@@ -1212,7 +1212,7 @@ $$
 
 The equation for the phase angle $\theta$ has solution $\theta = \theta(0) + t$. The right hand side of the equation for $\dot{r}$ is plotted in {numref}`fig:cont2d:global`(c) for three different values of $r$. Clearly, when $\mu<-1/4$, $\dot{r}>0$ for all nonzero $r$ and the trajectory will escape to infinity. At $\mu=-1/4$, the function attains a new root in the neigbourhood of $r=0.7$. This develops into two roots for $\mu>-1/4$.
 
-The fixed points are plotted as a function $\mu$ with the help of a contour plot ({numref}`fig:cont2d:global`(d)), using the code discussed in the chapter on one-dimensional continuous systems to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in the chapter on one-dimensional continuous systems, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
+The fixed points are plotted as a function $\mu$ with the help of a contour plot ({numref}`fig:cont2d:global`(d)), using the code discussed in section {numref}`sec:cont1d:ferromagnet_example` to distinguish between the stable branches (black) and the unstable branches (grey). In this plot it is very clear that two new fixed points, one stable and one unstable, come into existence at $\mu=-0,25$ via a saddle-node bifurcation. As discussed in section {numref}`sec:cont1d:saddlenode`, this bifurcation is referred to as a blue-sky bifurcation. It can therefore be said that this system features a “blue sky limit cycle”.
 
 ```{subfigure} 2
 :name: fig:cont2d:global
