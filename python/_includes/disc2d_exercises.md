@@ -22,7 +22,7 @@ $$
 
 where $v_{n}$ represents the ball velocity after the bounce, $\phi_n$ the phase of the oscillating plate. The parameter $k$ is the collision parameter and is associated with the energy loss at a bounce ($0 < k \leq 1$). The parameter $r$ denotes the non-dimensional angular velocity of the plate.
 
-a) Program these equation in Python. The modulo operator `%` also works on real numbers (`x % (2*np.pi)`).
+a) Program these equations in Python. The modulo operator `%` also works on real numbers (`x % (2*np.pi)`).
 
 b) Study the behaviour of this system by looking at the time series ($n,v_n$). Look also at plots of ($\phi_n,v_n$) and return plots of $v_n$. Set $k=0.3, r = 20$. Try also different values of $r$, and $k$.
 
@@ -88,13 +88,13 @@ v^{0}_{n+1} &= v(T_{n},y^{0}_{n},v^{0}_{n})
 
 Take $m^c = 1$, $\delta = 7.0$, $\omega = 60\pi$ and a flow rate of $\mu = 3$.
 
-b) Program equations {eq}`eq0090:t` in Python and study the time series of $T_n$ for $\mu=3$. Take $m^{0}_{1} =\frac{1}{2} m^c$ $v^{0}_1 = 0$, $y^{0}_1 = 1$ to start the sequence. Take $N=200$. Show the time series and the return plot.
+b) Program equations {eq}`eq0090:t` in Python and study the time series of $T_n$ for $\mu=3$. Take $m^{0}_{1} =\frac{1}{2} m^c$, $v^{0}_1 = 0$, $y^{0}_1 = 1$ to start the sequence. Take $N=200$. Show the time series and the return plot.
 
 c) Use 20-digit arithmetic (for example `mpmath` with `mp.mp.dps = 20`). Determine numerically an effective Lyapunov exponent $\Lambda$ for the system at these settings. To this end create a second series with $\tilde{v}^{0}_1 = v^{0}_1 + \epsilon$ with $\epsilon = 10^{-9}$ and find an estimate for $\Lambda$ from the differences between $\tilde{v}$ and $v$.
 
 d) What value of $\Lambda$ do you find when instead you base it on the differences between $\tilde{T}_n$ and $T_n$?
 
-e) Set $\mu=1$. Create a data set and show that a stationary situations is reached. Show that the system can be reduced to the second-order system
+e) Set $\mu=1$. Create a data set and show that a stationary situation is reached. Show that the system can be reduced to the second-order system
 
 $$
 \begin{aligned}
