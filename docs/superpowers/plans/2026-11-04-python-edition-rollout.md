@@ -226,6 +226,12 @@ Labels are mathtext, using the shared `book.mplstyle` and the size classes.
    2. A round of fixes follows.
    3. Later, at a time the author chooses, the editions are swapped so that
       Python becomes the main edition.
+8. **Splitting the review fixes (author, the same day).** Review findings
+   about the Python edition as it currently stands (conversion issues: code,
+   figure–text mismatches, references, labs) go into the rollout PR (#4).
+   Changes to the book itself (writing style, rigour, examples, figures,
+   prose errata) go in their own PR, applied to BOTH editions. The Rössler
+   band placement (#5) is the first such PR.
 
 ## Conventions for implementers (binding)
 
