@@ -1,6 +1,6 @@
 ## Exercises
 
-### Sensitive dependence on initital conditions in the Lorenz System
+### Sensitive dependence on initial conditions in the Lorenz System
 
 **Downloads:** {download}`LorenzSensitiveDependence_start.mws <_static/exercises/LorenzSensitiveDependence_start.mws>`, {download}`LorenzSensitiveDependence.mws <_static/exercises/LorenzSensitiveDependence.mws>`
 
@@ -25,7 +25,7 @@ b) Plot the time series of $y(t)$ instead of $x(t)$. (Note: you only need to sli
 
 c) Change the time range by modifying `tstart` and `tend`.
 
-d) Delete the comment symbols `#‘ at the end of the file. Now you can study simultaneously the system’s behaviour for two different initial conditions. The difference between the initial values of $x$ is $\epsilon$. Reduce the value of $\epsilon$ and observe the effect.
+d) Delete the comment symbols `#` at the end of the file. Now you can study simultaneously the system’s behaviour for two different initial conditions. The difference between the initial values of $x$ is $\epsilon$. Reduce the value of $\epsilon$ and observe the effect.
 
 e) Reduce $\epsilon$ until the solutions are no longer different. Increase `tend` to make sure. Can you understand this seemingly critical value of $\epsilon$?
 
