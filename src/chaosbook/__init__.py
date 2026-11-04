@@ -67,3 +67,23 @@ __all__ += [
     "fixed_point_branches",
     "continuation_sweep",
 ]
+
+from .poincare import (poincare_section, stroboscopic_section, maxima,
+                       effective_lyapunov, lyapunov_exponent)
+from .flows3d import (rossler, forced_double_well, circle_limit_cycle,
+                      rotating_threebody, threebody_potential,
+                      lagrange_points)
+
+__all__ += [
+    "poincare_section",
+    "stroboscopic_section",
+    "maxima",
+    "effective_lyapunov",
+    "lyapunov_exponent",
+    "rossler",
+    "forced_double_well",
+    "circle_limit_cycle",
+    "rotating_threebody",
+    "threebody_potential",
+    "lagrange_points",
+]
