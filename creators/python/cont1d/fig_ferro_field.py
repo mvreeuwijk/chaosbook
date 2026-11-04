@@ -23,13 +23,13 @@ print(f"critical point for m = {m}:  Tc = {Tc:.4f},  xc = {xc:.4f}")
 
 for k, T in enumerate((0.5, Tc, 1.5), start=1):
     fig, ax = plt.subplots(figsize=SQUARE)
-    x = np.linspace(-1, 1, 400)
+    x = np.linspace(-1.1, 1.1, 400)
     ax.plot(x, ferro(x, T=T, m=m), "k", lw=2.5)
-    ax.set_xlim(-1, 1)
+    ax.set_xlim(-1.1, 1.1)
     ax.set_ylim(-0.5, 0.5)
     cross_axes(ax, "$x$", "$f(x)$", ticked=True)
-    ax.set_xticks([-1, -0.5, 0.5, 1])
-    ax.set_yticks([-0.4, -0.2, 0.2, 0.4])
+    ax.set_xticks([-1, -0.5, 0, 0.5, 1])
+    ax.set_yticks([-0.4, -0.2, 0, 0.2, 0.4])
     if k == 2:      # at Tc the fixed points collide; draw the double root by hand
         mark_fixed_points(ax, ferro, 0.0, 1, dfdx=dferro, T=T, m=m)
         ax.plot(xc, 0, "o", ms=8, mfc="k", mec="k", mfcalt="w", fillstyle="right",
@@ -48,7 +48,7 @@ for name, mm in (("large_m", 0.1), ("small_m", 0.005)):
     ax.set_xlim(0, 1.75)
     ax.set_ylim(-1.1, 1.1)
     ax.set_xlabel("$T$")
-    ax.set_ylabel("$x_*(T)$")
+    ax.set_ylabel("$x_{*}(T)$")
     ax.set_xticks([0, 0.5, 1, 1.5])
     ax.set_title(f"$m={mm:g}$")
     fig.tight_layout()

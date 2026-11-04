@@ -37,7 +37,7 @@ def decorate(ax, T):
     ax.set_xlim(-1, 1)
     ax.set_ylim(-1.4, 1.4)
     ax.set_xlabel("$m$")
-    ax.set_ylabel("$x_*(m)$")
+    ax.set_ylabel("$x_{*}(m)$")
     ax.set_title(f"$T={T:g}$")
 
 

@@ -62,7 +62,7 @@ for name, s in SYSTEMS.items():
     plot_branches(ax, segs)
     ax.set_xlim(r0, r1)
     ax.set_ylim(x0, x1)
-    cross_axes(ax, "$r$", "$x_*(r)$", zero=True)
+    cross_axes(ax, "$r$", "$x_{*}(r)$", zero=True)
     fig.tight_layout()
     save(fig, f"cont1d_bifur_{name}")
 

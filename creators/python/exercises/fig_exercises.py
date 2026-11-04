@@ -4,9 +4,12 @@ Produces (in python/_static/exercises/):
   NuclearReactorCooling.png  natural-convection reactor loop (cont2d exercise)
   ex0082r00_1.png            U-tube with bubbles (disc2d exercise 'Kicked U-tube')
   ex0093r00.png              Newton-Raphson iteration (disc1d exercise)
+  ex0036r03_fig1.png         earth-moon-satellite collage (phenomenon
+                             exercise): the photographs are taken from the
+                             Maple edition and the labels of the lost pstex
+                             text layer are drawn on top
 
 Left as they are (not redrawn):
-  ex0036r03_fig1.png         collage of photographs (earth, moon, satellite)
   ex0082r00_2.png            raster basin-of-attraction map taken from the
                              literature; it cannot be regenerated from the
                              information in the exercise
@@ -166,4 +169,26 @@ ax.text(x1, -0.38, "$x_1$", ha="center", va="center", fontsize=14)
 ax.text(x2 - 0.05, 0.32, "$x_2$", ha="center", va="center", fontsize=14)
 fig.savefig(OUT / "ex0093r00.png", dpi=150)
 plt.close(fig)
+
+# --- earth, moon and satellite: label the photograph collage ----------------
+SRC = Path(__file__).resolve().parents[3] / "maple" / "_static" / "exercises"
+img = plt.imread(SRC / "ex0036r03_fig1.png")
+h, w = img.shape[:2]
+fig = plt.figure(figsize=(w / 150, h / 150))
+ax = fig.add_axes([0, 0, 1, 1])
+ax.imshow(img)
+ax.axis("off")
+lab = dict(ha="center", va="center", fontsize=15)
+ax.text(120, 360, "earth, $m_1$", **lab)
+ax.text(1135, 625, "moon, $m_2$", **lab)
+ax.text(735, 105, "satellite", **lab)
+ax.text(805, 493, "$x$", **lab)
+ax.text(413, 140, "$y$", **lab)
+ax.text(395, 520, "$O$", **lab)
+ax.text(780, 375, r"$\mathbf{x}_2$", **lab)
+ax.text(330, 625, r"$\mathbf{x}_1$", **lab)
+ax.text(620, 745, "$R$", **lab)
+fig.savefig(OUT / "ex0036r03_fig1.png", dpi=150)
+plt.close(fig)
+
 print("fig_exercises: written to", OUT)

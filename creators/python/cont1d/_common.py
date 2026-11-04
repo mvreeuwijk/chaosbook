@@ -26,7 +26,17 @@ def save(fig, name):
 
 def cross_axes(ax, xlabel, ylabel, zero=False, ticked=False):
     """Axes crossing at the origin (the book's graph-of-f(x) look), with
-    the axis labels at the ends of the axes and no tick labels."""
+    the axis labels at the ends of the axes and no tick labels.
+
+    With ticked=True the plot is boxed instead: the tick labels sit on the
+    frame, away from the curve and the fixed-point markers, and the zero
+    axes are drawn as thin lines through the origin."""
+    if ticked:
+        ax.axhline(0, color="k", lw=0.8, zorder=1)
+        ax.axvline(0, color="k", lw=0.8, zorder=1)
+        ax.set_xlabel(xlabel)
+        ax.set_ylabel(ylabel)
+        return
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     ax.spines["left"].set_position("zero")
@@ -67,8 +77,10 @@ def mark_fixed_points(ax, f, xlo, xhi, dfdx=None, size=8, marginal="half",
 def plot_branches(ax, segs, lw=4):
     """Draw cb.fixed_point_branches output: stable black, unstable gray."""
     for p, x, stable in segs:
+        # both above the axis spines (zorder 2.5), so the gray branch on
+        # the r-axis stays visible
         ax.plot(p, x, color="k" if stable else GRAY, lw=lw,
-                solid_capstyle="butt", zorder=3 if stable else 2)
+                solid_capstyle="butt", zorder=4 if stable else 3)
 
 
 def ferro(x, T=0.5, m=0.0):

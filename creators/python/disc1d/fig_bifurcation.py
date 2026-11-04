@@ -108,9 +108,10 @@ plt.close()
 
 # -- numerical bifurcation diagram --------------------------------------------
 fig, ax = plt.subplots(figsize=(5.0, 3.5))
-cb.bifurcation_diagram(cb.logistic, 3.3, 4.0, nr=500, n=1000,
+# the full range 0 <= r <= 4, so that the zooms below are true close-ups
+cb.bifurcation_diagram(cb.logistic, 0.0, 4.0, nr=800, n=1000,
                        x0=0.57, discard=0.8, ax=ax)
-ax.set_xlim(3.3, 4.0)
+ax.set_xlim(0.0, 4.0)
 ax.set_ylim(0, 1)
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_logist_series_bifurcation.png", dpi=150)

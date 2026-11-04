@@ -91,7 +91,8 @@ for lab, x0 in [("quasi (0.4,0.1)", (0.4, 0.1)), ("chaos, alternative IC (0.05,0
 
 # -- phase space with several initial conditions ---------------------------------------
 y0s = [0.02, 0.08, 0.16, 0.22, 0.24, 0.32, 0.52]
-cols = ["cyan", "brown", "green", "red", "blue", "black", "violet"]
+# the island around (1/2, 1/2) and (0, 1/2) is grey, as the text says
+cols = ["cyan", "brown", "green", "red", "blue", "black", "#8c8c8c"]
 runs = [run((0.5, y0), n=3000) for y0 in y0s]
 plt.figure(figsize=(4.2, 4.2))
 for X, c in zip(runs, cols):

@@ -156,8 +156,8 @@ fig = go.Figure(
 )
 fig.update_layout(
     title_text="n = 0",
-    xaxis=dict(range=[-1.5, 1.5], title="x_n"),
-    yaxis=dict(range=[-0.5, 0.5], title="y_n", scaleanchor=None),
+    xaxis=dict(range=[-1.5, 1.5], title="xₙ"),
+    yaxis=dict(range=[-0.5, 0.5], title="yₙ", scaleanchor=None),
     margin=dict(l=50, r=10, t=40, b=90),
     updatemenus=[dict(
         type="buttons", direction="left", x=0.0, y=-0.15, showactive=False,
@@ -170,7 +170,8 @@ fig.update_layout(
                                     mode="immediate", transition=dict(duration=0))]),
         ])],
     sliders=[dict(
-        active=0, x=0.25, len=0.75, y=-0.1,
+        active=0, x=0.25, len=0.75, y=-0.1, pad=dict(t=10),
+        font=dict(color="#333333"),
         currentvalue=dict(prefix="n = "),
         steps=[dict(label=str(n), method="animate",
                     args=[[str(n)], dict(mode="immediate",
@@ -179,6 +180,7 @@ fig.update_layout(
                for n in range(13)])],
 )
 target = OUT / "interactive" / "henon_fold.html"
-fig.write_html(target, include_plotlyjs="../../plotly.min.js", full_html=True)
+fig.write_html(target, include_plotlyjs="../../plotly.min.js", full_html=True,
+               auto_play=False)
 print("companion size: %.2f MB" % (target.stat().st_size / 1e6))
 print("fig_henon: assets written to", OUT)

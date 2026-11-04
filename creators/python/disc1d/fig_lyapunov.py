@@ -36,7 +36,8 @@ plt.plot(range(N + 1), X, "-o", markersize=3, label="$x_n$")
 plt.plot(range(N + 1), Y, "-s", markersize=3, label="$y_n$")
 plt.xlabel("$n$")
 plt.ylabel("$x$, $y$")
-plt.legend()
+plt.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=2,
+           borderaxespad=0.2)
 plt.tight_layout()
 plt.savefig(OUT / "disc1d_logist_lyap_r39_lin.png", dpi=150)
 plt.close()
@@ -76,8 +77,8 @@ for r in np.linspace(2.5, 4.0, 1001):
 rs_l, lams_l = cb.lyapunov_sweep(cb.logistic, dlogistic, 2.5, 4.0, nr=1000)
 
 rcursor = np.round(np.arange(2.5, 4.0001, 0.05), 3)
-fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.65, 0.35],
-                    vertical_spacing=0.05)
+fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.62, 0.38],
+                    vertical_spacing=0.1)
 fig.add_trace(go.Scattergl(x=rs_b, y=xs_b, mode="markers",
                            marker=dict(size=1, color="darkblue")), row=1, col=1)
 fig.add_trace(go.Scatter(x=rs_l, y=np.clip(lams_l, -3, None), mode="lines",
@@ -94,10 +95,15 @@ for r in rcursor:
         go.Scatter(x=[r, r], y=[-3, 1]),
     ], layout=dict(title=f"r = {r:.2f},  Λ = {lam:+.3f}")))
 fig.frames = frames
+i0 = int(np.argmin(np.abs(rcursor - 3.0)))    # the cursor starts at r = 3
+lam0 = np.interp(3.0, rs_l, np.clip(lams_l, -3, None))
 fig.update_layout(
+    title=f"r = 3.00,  Λ = {lam0:+.3f}",
     showlegend=False, margin=dict(l=50, r=10, t=40, b=40),
-    yaxis_title="x(r)", yaxis2_title="Λ(r)", xaxis2_title="r",
+    yaxis_title="x(r)", yaxis2_title="Λ(r)", xaxis_title="r", xaxis2_title="r",
+    xaxis_showticklabels=True,
     sliders=[dict(
+        active=i0, pad=dict(t=60), font=dict(color="#333333"),
         currentvalue=dict(prefix="r = "),
         steps=[dict(label=f"{r}", method="animate",
                     args=[[f"{r}"], dict(mode="immediate",
@@ -106,6 +112,7 @@ fig.update_layout(
     )],
 )
 fig.write_html(OUT / "interactive" / "lyapunov_link.html",
-               include_plotlyjs="../../plotly.min.js", full_html=True)
+               include_plotlyjs="../../plotly.min.js", full_html=True,
+               auto_play=False)
 
 print("fig_lyapunov: assets written to", OUT)

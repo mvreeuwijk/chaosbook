@@ -42,6 +42,8 @@ def primaries(t):
 
 
 def draw(ax, xs, ys, xe, ye, xm, ym, rotating=False):
+    # plot in units of the earth-moon distance R, as the captions quote x(0)/R
+    xs, ys, xe, ye, xm, ym = (np.asarray(a) / R for a in (xs, ys, xe, ye, xm, ym))
     if rotating:
         # the primaries are stationary in the co-rotating frame: draw points
         ax.plot(xe[0], ye[0], "ko", markersize=8)               # earth
@@ -50,8 +52,8 @@ def draw(ax, xs, ys, xe, ye, xm, ym, rotating=False):
         ax.plot(xe, ye, "k", linewidth=2.5)           # earth: thick black
         ax.plot(xm, ym, color="gray", linewidth=1.5)  # moon: gray
     ax.plot(xs, ys, "k", linewidth=0.6)               # satellite: thin black
-    ax.set_xlabel("$x$ [m]")
-    ax.set_ylabel("$y$ [m]")
+    ax.set_xlabel("$x/R$")
+    ax.set_ylabel("$y/R$")
     ax.set_aspect("equal")
 
 
@@ -84,19 +86,21 @@ for ax, rotate in zip(axes, [False, True]):
         xs, ys = sol.y[0], sol.y[1]
         if rotate:
             xs, ys = cb.corotating(xs, ys, sol.t, omega)
+        xs, ys = xs / R, ys / R
         ax.plot(xs, ys, color, linewidth=0.6)
         ax.plot(xs[0], ys[0], color + "d")   # diamond: initial location
         ax.plot(xs[-1], ys[-1], color + "o")  # circle: end position
     xe, ye = (cb.corotating(x1, y1, sola.t, omega) if rotate else (x1, y1))
     xm, ym = (cb.corotating(x2, y2, sola.t, omega) if rotate else (x2, y2))
+    xe, ye, xm, ym = xe / R, ye / R, xm / R, ym / R
     if rotate:
         ax.plot(xe[0], ye[0], "ko", markersize=8)
         ax.plot(xm[0], ym[0], "o", color="gray", markersize=5)
     else:
         ax.plot(xe, ye, "k", linewidth=2.5)
         ax.plot(xm, ym, color="gray", linewidth=1.5)
-    ax.set_xlabel("$x$ [m]")
-    ax.set_ylabel("$y$ [m]")
+    ax.set_xlabel("$x/R$")
+    ax.set_ylabel("$y/R$")
     ax.set_aspect("equal")
 plt.tight_layout()
 plt.savefig(OUT / "phenomenon_3body_example_sensitivity.png", dpi=150)
@@ -105,8 +109,9 @@ plt.close()
 # -- interactive: chaotic orbit in the co-rotating frame ---------------------
 sol = run(0.5 * R)
 xs, ys = cb.corotating(sol.y[0], sol.y[1], sol.t, omega)
-xe = -m2 * R / (m1 + m2)
-xm = m1 * R / (m1 + m2)
+xs, ys = xs / R, ys / R
+xe = -m2 / (m1 + m2)
+xm = m1 / (m1 + m2)
 steps = np.linspace(2, len(sol.t) - 1, 80).astype(int)
 frames = [go.Frame(data=[
     go.Scatter(x=xs[:k], y=ys[:k], mode="lines",
@@ -122,8 +127,8 @@ fig.add_trace(go.Scatter(x=[xm], y=[0], mode="markers+text",
                          marker=dict(color="gray", size=9), text=["moon"],
                          textposition="bottom center"))
 fig.update_layout(
-    xaxis=dict(title="x [m]", scaleanchor="y"),
-    yaxis=dict(title="y [m]"),
+    xaxis=dict(title="x/R", scaleanchor="y"),
+    yaxis=dict(title="y/R"),
     showlegend=False, margin=dict(l=40, r=10, t=10, b=40),
     updatemenus=[dict(type="buttons", x=1, y=1.15, xanchor="right",
                       buttons=[dict(label="Play", method="animate",
@@ -132,6 +137,7 @@ fig.update_layout(
                                                      fromcurrent=True)])])],
 )
 fig.write_html(OUT / "interactive" / "threebody.html",
-               include_plotlyjs="../../plotly.min.js", full_html=True)
+               include_plotlyjs="../../plotly.min.js", full_html=True,
+               auto_play=False)
 
 print("fig_3body: all assets written to", OUT)

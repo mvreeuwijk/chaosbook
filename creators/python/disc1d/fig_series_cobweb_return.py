@@ -124,7 +124,7 @@ for r in rgrid:
                    marker=dict(color="crimson", size=4)),
     ]))
 fig = make_subplots(rows=1, cols=3,
-                    subplot_titles=("series x[n]", "cobweb", "return plot"))
+                    subplot_titles=("series xₙ", "cobweb", "return plot"))
 for tr, (row, col) in zip(frames[0].data,
                           [(1, 1), (1, 2), (1, 2), (1, 2), (1, 3)]):
     fig.add_trace(tr, row=row, col=col)
@@ -133,8 +133,9 @@ for fr in frames:
     fr.traces = [0, 1, 2, 3, 4]
 fig.frames = frames
 fig.update_layout(
-    showlegend=False, margin=dict(l=40, r=10, t=40, b=40),
+    showlegend=False, margin=dict(l=50, r=10, t=40, b=40),
     sliders=[dict(
+        pad=dict(t=60), font=dict(color="#333333"),
         currentvalue=dict(prefix="r = "),
         steps=[dict(label=f"{r}", method="animate",
                     args=[[f"{r}"], dict(mode="immediate",
@@ -145,7 +146,14 @@ fig.update_layout(
 fig.update_yaxes(range=[0, 1])
 fig.update_xaxes(range=[0, 1], row=1, col=2)
 fig.update_xaxes(range=[0, 1], row=1, col=3)
+fig.update_xaxes(title_text="n", row=1, col=1)
+fig.update_yaxes(title_text="xₙ", row=1, col=1)
+fig.update_xaxes(title_text="xₙ", row=1, col=2)
+fig.update_yaxes(title_text="xₙ₊₁", row=1, col=2)
+fig.update_xaxes(title_text="xₙ", row=1, col=3)
+fig.update_yaxes(title_text="xₙ₊₁", row=1, col=3)
 fig.write_html(OUT / "interactive" / "logistic_explorer.html",
-               include_plotlyjs="../../plotly.min.js", full_html=True)
+               include_plotlyjs="../../plotly.min.js", full_html=True,
+               auto_play=False)
 
 print("fig_series_cobweb_return: assets written to", OUT)

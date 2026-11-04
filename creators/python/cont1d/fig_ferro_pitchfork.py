@@ -18,13 +18,13 @@ from _common import (GRAY, PANEL, SQUARE, cross_axes, dferro, ferro,
 # -- f(x) at three temperatures ----------------------------------------------
 for k, T in enumerate((0.5, 1.0, 1.5), start=1):
     fig, ax = plt.subplots(figsize=SQUARE)
-    x = np.linspace(-1, 1, 400)
+    x = np.linspace(-1.1, 1.1, 400)
     ax.plot(x, ferro(x, T=T), "k", lw=2.5)
-    ax.set_xlim(-1, 1)
+    ax.set_xlim(-1.1, 1.1)
     ax.set_ylim(-0.3, 0.3)
     cross_axes(ax, "$x$", "$f(x)$", ticked=True)
-    ax.set_xticks([-1, -0.5, 0.5, 1])
-    ax.set_yticks([-0.3, -0.2, -0.1, 0.1, 0.2, 0.3])
+    ax.set_xticks([-1, -0.5, 0, 0.5, 1])
+    ax.set_yticks([-0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3])
     # at T = 1 the origin has f'(0) = 0 but is stable through the cubic term
     mark_fixed_points(ax, ferro, -1, 1, dfdx=dferro, marginal="stable", T=T)
     ax.set_title(f"$T={T:g}$")
@@ -45,7 +45,7 @@ for name, colour in (("cont1d_ferro_pitchfork", False),
     ax.set_xlim(0, 1.75)
     ax.set_ylim(-1.1, 1.1)
     ax.set_xlabel("$T$")
-    ax.set_ylabel("$x_*(T)$")
+    ax.set_ylabel("$x_{*}(T)$")
     ax.set_xticks([0, 0.5, 1, 1.5])
     fig.tight_layout()
     save(fig, name)

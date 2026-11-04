@@ -83,10 +83,11 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5.8, 4.4), sharex=True,
 ax1.plot(xs, color=C_TRUTH, lw=0.8, marker="o", ms=2.2)
 ax1.axhline(xstar, color=C_ANA, ls="--", lw=1.1, label=r"target orbit $x^{*}$")
 ax1.axvline(Ncon, color=C_OBS, lw=1.0)
-ax1.text(Ncon + 4, 0.06, "control on", color=C_OBS, fontsize=11)
+ax1.text(Ncon, 1.02, "control on", color=C_OBS, fontsize=11, ha="center",
+         va="bottom")
 ax1.set_ylabel("$x_n$")
 ax1.set_ylim(0, 1)
-ax1.legend(loc="lower right")
+ax1.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), borderaxespad=0.2)
 ax2.axhline(0, color="#999999", lw=0.6)
 ax2.plot(dr, color=C_FREE, lw=1.0)
 ax2.set_ylabel(r"$\delta r_n$")
