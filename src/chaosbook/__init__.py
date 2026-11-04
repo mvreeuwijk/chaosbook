@@ -53,3 +53,14 @@ __all__ += [
     "double_well",
     "hopf",
 ]
+
+from .flows1d import (fixed_points, stability, classify,
+                      fixed_point_branches, continuation_sweep)
+
+__all__ += [
+    "fixed_points",
+    "stability",
+    "classify",
+    "fixed_point_branches",
+    "continuation_sweep",
+]
