@@ -18,7 +18,7 @@ where $\dot{x} = \mathrm{d} x/\mathrm{d} t$. An example is
 \dot{x} = x(1-x)
 ```
 
-The word autonomous means that the right-hand of {eq}`eqc1d:cont1d` has no explicit time dependence; the dependence on time is implicit through the variable $x$, i.e. $f(x(t))$. For non-autonomous systems the explicit time-dependence is indicated separately
+The word autonomous means that the right-hand side of {eq}`eqc1d:cont1d` has no explicit time dependence; the dependence on time is implicit through the variable $x$, i.e. $f(x(t))$. For non-autonomous systems the explicit time-dependence is indicated separately
 
 ```{math}
 :label: eqc1d:cont1d_nonauto
@@ -157,7 +157,7 @@ Graphs for the system $\dot{x}=f(x)=x-x^3$. (a) Graph of $f(x)=x-x^3$. (b) Evolu
 
 Fortunately it is still possible to get a good understanding of the behaviour of the system even in absence of closed form analytical solutions. Let us revisit example {eq}`eq:cont1d:simplecubic`. A plot of $f(x) = x-x^3$ is shown in {numref}`fig:cont1d:simplecubic`. What happens with the evolution of $x(t)$ when you start at $x(0) = 1.5$? The rate of change, $\dot{x}$, at this point is given by $f(1.5)$. Looking at the graph in {numref}`fig:cont1d:simplecubic` one sees that $f(1.5) < 0$, hence the rate of change is negative, which means that $x$ will decrease (as indicated by the arrow on the $x$-axis). While $x$ decreases, the rate of change $\dot{x}=f(x)$ still remains negative, so $x(t)$ continues to decrease until $x=1$ has been reached. At this point the rate of change has become zero, $\dot{x}= f(1) = 0$, so $x$ will no longer change. If on the other hand one starts at, say, $x_0=0.1$, one finds $f(0.1)>0$ implying that $x$ will increase (indicated by the arrow pointing to the right). Since $f(x)$ remains positive, $x$ increases until it again arrives at $x=1$ where the rate of change is zero. Such points where $\dot{x} = 0$ are called *fixed points*.
 
-Fixed points can be readily located by detecting where the graph of $f(x)$ crosses the $x$-axis. Looking at {numref}`fig:cont1d:simplecubic` one notices three fixed points $x_* = -1,\,x_* =0$ and $x_* =1$, respectively. The fixed point $x_* = 0$ differs from the other two because it is unstable. If one starts exactely at $x(0) = x_* = 0$ then also $x(t) = 0$ for all $t>0$. But a slight perturbation will cause $x$ to evolve towards one of the stable fixed points $x_* = \pm 1$.
+Fixed points can be readily located by detecting where the graph of $f(x)$ crosses the $x$-axis. Looking at {numref}`fig:cont1d:simplecubic` one notices three fixed points $x_* = -1,\,x_* =0$ and $x_* =1$, respectively. The fixed point $x_* = 0$ differs from the other two because it is unstable. If one starts exactly at $x(0) = x_* = 0$ then also $x(t) = 0$ for all $t>0$. But a slight perturbation will cause $x$ to evolve towards one of the stable fixed points $x_* = \pm 1$.
 
 The set of initial conditions that lead to a certain fixed point is called the *domain of attraction* of that fixed point. In the example the attraction domain of $x_*=1$ is $\langle 0,\infty\rangle$, and that of $x_*=-1$ is $\langle -\infty,0\rangle$. The domain of attraction of the unstable fixed point $x_*=0$ is just the point $x=0$ itself.
 
@@ -185,9 +185,9 @@ print(sol.y[0, -1])
 ```
 ````
 
-There was of course no need to employ a numerical procedure since we already had derived the analytical solution {eq}`eq:cont1d:simplecubic_analytical_solution` (which yield the same graphs), but, as mentioned above, having an analytical solution at ones disposal does not happen often, which is why the numerical version is probably more useful in general.
+There was of course no need to employ a numerical procedure since we already had derived the analytical solution {eq}`eq:cont1d:simplecubic_analytical_solution` (which yields the same graphs), but, as mentioned above, having an analytical solution at one's disposal does not happen often, which is why the numerical version is probably more useful in general.
 
-Apart from the numerical/analytical solution, one could have made a sketch of the evolution onseself based solely on the graph of $f(x)$ in {numref}`fig:cont1d:simplecubic`: take for instance the evolution starting at $x_0=0.1$. Initially the rate of change is only moderately positive, but as $x(t)$ slowly increases to larger values also $f(x)$ becomes larger, thus speeding up the increase. As $x$ gets closer to $x_* = 1$, the rate of change decreases and the convergence to 1 slows down and ultimately comes to a halt at $x=1$. In this way one can qualitatively well understand the evolution trajectories of {numref}`fig:cont1d:simplecubic`.
+Apart from the numerical/analytical solution, one could have made a sketch of the evolution oneself based solely on the graph of $f(x)$ in {numref}`fig:cont1d:simplecubic`: take for instance the evolution starting at $x_0=0.1$. Initially the rate of change is only moderately positive, but as $x(t)$ slowly increases to larger values also $f(x)$ becomes larger, thus speeding up the increase. As $x$ gets closer to $x_* = 1$, the rate of change decreases and the convergence to 1 slows down and ultimately comes to a halt at $x=1$. In this way one can qualitatively well understand the evolution trajectories of {numref}`fig:cont1d:simplecubic`.
 
 ```{subfigure} 2
 :name: fig:cont1d:generic_graphical
@@ -275,7 +275,7 @@ Pitchfork bifurcation in $\dot{x} = rx- x^3$. The bifurcation diagram in (d) cor
 
 ## Pitchfork bifurcation
 
-A bifurcation is the process where one or more fixed points are created or annihilated due to changes in an external parameter of the system. It turns out that the number of commonly occuring bifurcation *types* is limited. Apparently there is only a limited number of possibilities to create or destroy fixed-points. We treat the three most common ones below.
+A bifurcation is the process where one or more fixed points are created or annihilated due to changes in an external parameter of the system. It turns out that the number of commonly occurring bifurcation *types* is limited. Apparently there is only a limited number of possibilities to create or destroy fixed-points. We treat the three most common ones below.
 
 As an example, let us add a parameter $r$ to the system {eq}`eq:cont1d:simplecubic`:
 
@@ -287,8 +287,8 @@ where $r$ can be positive or negative (or zero). Sketches of $f_r(x)$ for variou
 
 $$
 \begin{aligned}
-x_* &= 0 & &\sigma = r & &\text{stable for} r <0 \\
- x_* &= \pm \sqrt{r} & &\sigma = -2r & &\text{stable for} r >0
+x_* &= 0 & &\sigma = r & &\text{stable for } r <0 \\
+ x_* &= \pm \sqrt{r} & &\sigma = -2r & &\text{stable for } r >0
 \end{aligned}
 $$
 
@@ -360,8 +360,8 @@ The fixed points follow from $f_r(x_*)=0$, and the stability from $\sigma = f_r'
 
 $$
 \begin{aligned}
-x_* &= 0 && \sigma = r & &\text{stable for} r <0 \\
- x_* &= r &&\sigma = -r & &\text{stable for} r >0
+x_* &= 0 && \sigma = r & &\text{stable for } r <0 \\
+ x_* &= r &&\sigma = -r & &\text{stable for } r >0
 \end{aligned}
 $$
 
@@ -446,7 +446,7 @@ The governing equation for the mean magnetization $x$ of a ferromagnetic system 
 \dot{x} = f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)
 ```
 
-where $m$ represents an externally applied magnetic field. More information about this system can be found in section {numref}`sec:cont1d:ferromagneticspins` below. First we consider the case without external magnetic field $m=0$. In {numref}`fig:cont1d_ferro_pitchfork`(a)-(c) we have plotted $f(x,T)$ for various values of $T$ which reveal three fixed points at $0<T<1$ (two stable and one unstable), two of which are destroyed at $T=1$ leaving one stable fixed points $x_*(T)= 0$ for $T\geq 1$. Such simultaneous creation/annihilation of two fixed points is characteristic of a pitchfork bifurcation. A convenient way to study the parameter dependence graphically is by plotting $f$ for a few values of $T$ (or by animating it with a slider, as in the exercise lab), see below. {numref}`fig:cont1d_ferro_pitchfork` shows the bifurcation diagram. It is difficult to describe the branches by a simple analytical expression, since they are a solution to
+where $m$ represents an externally applied magnetic field. More information about this system can be found in section {numref}`sec:cont1d:ferromagneticspins` below. First we consider the case without external magnetic field $m=0$. In {numref}`fig:cont1d_ferro_pitchfork`(a)-(c) we have plotted $f(x,T)$ for various values of $T$ which reveal three fixed points at $0<T<1$ (two stable and one unstable), two of which are destroyed at $T=1$ leaving one stable fixed point $x_*(T)= 0$ for $T\geq 1$. Such simultaneous creation/annihilation of two fixed points is characteristic of a pitchfork bifurcation. A convenient way to study the parameter dependence graphically is by plotting $f$ for a few values of $T$ (or by animating it with a slider, as in the exercise lab), see below. {numref}`fig:cont1d_ferro_pitchfork` shows the bifurcation diagram. It is difficult to describe the branches by a simple analytical expression, since they are a solution to
 
 $$
 x_* = \tanh\left(\frac{x_*}{T}\right)
@@ -580,7 +580,7 @@ print(xs, cb.stability(f, xs, T=T), cb.classify(cb.stability(f, xs, T=T)))
 ```
 ````
 
-This yields $x_* = 0.957\ldots, \sigma = -0.833\ldots$, showing that the fixed points is stable indeed at $T=0.5$.
+This yields $x_* = 0.957\ldots, \sigma = -0.833\ldots$, showing that the fixed point is stable indeed at $T=0.5$.
 
 To see that the normal form of the bifurcation is $\dot{x} = rx - x^3$, we apply a Taylor approximation around the point of bifurcation, i.e. $T=1,x=0$. First we substitute $q=T-1$ to translate the bifurcation to $q=0$ which is more convenient. With sympy it looks like
 
@@ -635,7 +635,7 @@ Upon substitution $z= x/\sqrt{3}$ and $r=q^2-q$ one obtains $\dot{z} = rz - z^3$
 
 The bifurcation characteristics change substantially when a non-zero external magnetic field is applied. Let us consider $m=0.1$. Graphs of $f(x,T)=-x + \tanh\left(\frac{x+m}{T}\right)$ are shown in {numref}`fig:cont1d_ferro_field_bifurcation`. The solutions to $f(x,T)=0$, i.e. the fixed point branches $x_*(T)$, are shown in {numref}`fig:cont1d_ferro_field_bifurcation`. It was again made with a zero contour, cut by stability as described above, to get information on the stability of the branches.
 
-It is interesting to note that the fixed point branches in this case no longer display a pitchfork bifurcation as was the case for $m=0$ (see Fig {numref}`fig:cont1d_ferro_pitchfork`). Rather, the upper branch, $x_*(T) >0$, is no longer involved in any bifurcation. The lower two branches, on the other hand, now display a saddle node bifurcation, compare {numref}`fig:cont1d_bifur_saddle`. Making a similar plot for $m=0.005$ in {numref}`fig:cont1d_ferro_field_bifurcation` shows that as $m\rightarrow0$ the saddle node bifurcation and the upper fixed point branch will 'melt' together, such that one will retrieve a pitchfork bifurcation at $m=0$.
+It is interesting to note that the fixed point branches in this case no longer display a pitchfork bifurcation as was the case for $m=0$ (see {numref}`fig:cont1d_ferro_pitchfork`). Rather, the upper branch, $x_*(T) >0$, is no longer involved in any bifurcation. The lower two branches, on the other hand, now display a saddle node bifurcation, compare {numref}`fig:cont1d_bifur_saddle`. Making a similar plot for $m=0.005$ in {numref}`fig:cont1d_ferro_field_bifurcation` shows that as $m\rightarrow0$ the saddle node bifurcation and the upper fixed point branch will 'melt' together, such that one will retrieve a pitchfork bifurcation at $m=0$.
 
 To locate the critical value of $T_c$ at which the bifurcation takes place, we search the combination of $x_c$ and $T_c$ that satisfy
 
@@ -675,7 +675,7 @@ h_i = \frac{1}{N} \sum_{j=1}^{N} J_{ij} s_j + m
 
 where the matrix coefficients $J_{ij}$ express the connection strength between spin $i$ and spin $j$; $m$ represents an externally applied magnetic field (if any). One could for example account for the distance between the spatial location $\mathbf{z}_i$ of the spins by taking $J_{ij} = f(|\mathbf{z}_i-\mathbf{z}_j|)$, but here we study the simplified situation where all connections are equal $J_{ij} =1$.
 
-The state of the system at time instance $t$ is given by the vector $\mathbf{s}$. Given that each spins can attain one of two possible states, there are $2^N$ possibilities for $\mathbf{s}$. If the systems has temperature $T$, the probability of a particular state $\mathbf{s}$ is given by the Boltmann distribution
+The state of the system at time instance $t$ is given by the vector $\mathbf{s}$. Given that each spin can attain one of two possible states, there are $2^N$ possibilities for $\mathbf{s}$. If the system has temperature $T$, the probability of a particular state $\mathbf{s}$ is given by the Boltzmann distribution
 
 ```{math}
 :label: eq:cont1d:boltzmann
@@ -693,7 +693,7 @@ p(s_{i} \rightarrow -s_{i}) = \frac{1}{2} \left[ 1 - \tanh\left( \frac{s_i h_i}{
 
 In the limit $T\rightarrow 0$ this implies that if $s_i$ is not aligned with its local field $h_i$, that is $h_i<0$ while $s_i = +1$ or $h_i > 0$ while $s_i = -1$, then the probability of flipping $s_i$ limits to 1, such that the spins will get aligned to the local field: $s_i \rightarrow \text{sign}(h_i)$. For $T>0$, however, there is a non-zero probability that $s_i$ and $h_i$ remain disaligned.
 
-The following Python program gives an implemtation that simulates a ferromagnetic system at predefined temperature $T$. In {numref}`fig:cont1d_ferro_spin_evolution` we give an example of the evolution of $N=400$ spins from two different initial states for $T=0.5$ and $T=1.5$. The external magnetic field was set to $m=0$. The initial state (see also the code) is created by setting all spins to $+1$ (or to $-1$, for the second initial state) and flipping a preset fraction $F$ of them.
+The following Python program gives an implementation that simulates a ferromagnetic system at predefined temperature $T$. In {numref}`fig:cont1d_ferro_spin_evolution` we give an example of the evolution of $N=400$ spins from two different initial states for $T=0.5$ and $T=1.5$. The external magnetic field was set to $m=0$. The initial state (see also the code) is created by setting all spins to $+1$ (or to $-1$, for the second initial state) and flipping a preset fraction $F$ of them.
 
 ````{admonition} Python
 :class: python
@@ -811,7 +811,7 @@ Evolution of the mean state $x$ as a function of time $t=n/N$ for the cases show
 (sec:cont1d:catastrophes)=
 ## Catastrophes, hysteresis, and phase transitions
 
-A saddle node bifurcation is sometimes also called 'hard bifurcation', as opposed to transcritical and pitchfork bifurcations which are called 'soft bifurcation'. The reason for these terms can be understood by looking for instance at the saddle node bifurcation in figure {numref}`fig:cont1d_ferro_field_bifurcation`. If one starts at $T=0$ at the lower branch ($x_*\simeq-1$) and one increases $T$ in a slow manner such that the dynamical system has sufficient time to converge to the fixed point that belongs to the new temperature, one will move along the branch to the right. This can continue until $T_c = 0.7287\ldots$ has been reached. Here the fixed point value is $x_* = x_c = -0.520\ldots$. After a tiny increase of $T$ beyond $T_c$, there is no longer a fixed point in the vicinity, so the system will rapidly move to the upper fixed point branch. Usually this is a dramatic event for the system, sometimes referred to as 'catastrophe', which explains the name 'hard bifurcation'. In a pitchfork or transcritical bifurcation there is no need for a 'jump' to another branch because a smooth ('soft') transition to another branch is possible. Physicist tend to use the terms 'first order phase transition' and 'second order phase transition' for hard and soft bifurcations, respectively.
+A saddle node bifurcation is sometimes also called 'hard bifurcation', as opposed to transcritical and pitchfork bifurcations which are called 'soft bifurcation'. The reason for these terms can be understood by looking for instance at the saddle node bifurcation in {numref}`fig:cont1d_ferro_field_bifurcation`. If one starts at $T=0$ at the lower branch ($x_*\simeq-1$) and one increases $T$ in a slow manner such that the dynamical system has sufficient time to converge to the fixed point that belongs to the new temperature, one will move along the branch to the right. This can continue until $T_c = 0.7287\ldots$ has been reached. Here the fixed point value is $x_* = x_c = -0.520\ldots$. After a tiny increase of $T$ beyond $T_c$, there is no longer a fixed point in the vicinity, so the system will rapidly move to the upper fixed point branch. Usually this is a dramatic event for the system, sometimes referred to as 'catastrophe', which explains the name 'hard bifurcation'. In a pitchfork or transcritical bifurcation there is no need for a 'jump' to another branch because a smooth ('soft') transition to another branch is possible. Physicists tend to use the terms 'first order phase transition' and 'second order phase transition' for hard and soft bifurcations, respectively.
 
 ```{subfigure} 2
 :name: fig:cont1d_ferro_field_hysteresis
@@ -828,7 +828,7 @@ A saddle node bifurcation is sometimes also called 'hard bifurcation', as oppose
 ![ ](_static/cont1d/cont1d_ferro_field_hysteresis_T_0_5.png)
 ![ ](_static/cont1d/cont1d_ferro_field_hysdata_T_0_5.png)
 
-Left column: Fixed point braches as a function of the external magnetic field $m$ for different values of the temperature $T$. The branches were determined as zero contours. Unstable branches are colored gray. Right column: Fixed points determined by numerical integration of the governing equation $\dot{x}=-x+\tanh[(x+m)/T]$ each step using the previously computed fixed point as initial condition. In each of these panels first a forward sweep $m=-1..+1$ is conducted, followed by a backward sweep $m=+1..-1$. The plots illustrate the hysteresis effect when $T<1$, together with the occurence of 'hard' bifurcations as demonstrated by the suddden jumps to the other branch.
+Left column: Fixed point branches as a function of the external magnetic field $m$ for different values of the temperature $T$. The branches were determined as zero contours. Unstable branches are colored gray. Right column: Fixed points determined by numerical integration of the governing equation $\dot{x}=-x+\tanh[(x+m)/T]$ each step using the previously computed fixed point as initial condition. In each of these panels first a forward sweep $m=-1..+1$ is conducted, followed by a backward sweep $m=+1..-1$. The plots illustrate the hysteresis effect when $T<1$, together with the occurrence of 'hard' bifurcations as demonstrated by the sudden jumps to the other branch.
 ```
 
 :::{only} html
@@ -871,7 +871,7 @@ print("backward jump at m =", ms[::-1][np.argmin(np.diff(X2)) + 1])
 ```
 ````
 
-Note that we perform two sweeps. First we increase $m$ from $-1$ to $1$ in small steps and calculate at every step the 'large time' solution ($t=100$ in this case). As initial condition we take the final value of $x$ calculated in the previous step. In the second sweep the direction of $m$ is reversed ($+1\rightarrow -1$). The plots in the right column of {numref}`fig:cont1d_ferro_field_hysteresis` nicely reveal two aspects of the system. Firstly, the sudden jumps, or 'catastrophes', that occur when $T<1$, demonstrating the 'hard bifurcations' in the system. Secondly, one can notice *hysteresis*: the forward sweep is different from the backward sweep. By integrating the system one cannot show the location of the unstable braches, such as in the left column. On the other hand, it provides a good view of how the system really responds. {numref}`fig:cont1d_ferro_field_hysteresis_3d_and_zoom` combines the plots of the left column and right column of {numref}`fig:cont1d_ferro_field_hysteresis` for the case of $T=0.5$, illustrating the stable and unstable parts of the branch, the jumping from one branch to the other (hard bifurcations), and the hysteresis in the system. The right panel shows a three-dimensional view, illustrating the 'folding' of the fixed-point manifold that causes the saddle node bifurcations. The shaded surface can be plotted directly: the equation $f=0$ can be solved for $m$ as a function of $(x,T)$, which gives the surface as a graph over the $(x,T)$ plane:
+Note that we perform two sweeps. First we increase $m$ from $-1$ to $1$ in small steps and calculate at every step the 'large time' solution ($t=100$ in this case). As initial condition we take the final value of $x$ calculated in the previous step. In the second sweep the direction of $m$ is reversed ($+1\rightarrow -1$). The plots in the right column of {numref}`fig:cont1d_ferro_field_hysteresis` nicely reveal two aspects of the system. Firstly, the sudden jumps, or 'catastrophes', that occur when $T<1$, demonstrating the 'hard bifurcations' in the system. Secondly, one can notice *hysteresis*: the forward sweep is different from the backward sweep. By integrating the system one cannot show the location of the unstable branches, such as in the left column. On the other hand, it provides a good view of how the system really responds. {numref}`fig:cont1d_ferro_field_hysteresis_3d_and_zoom` combines the plots of the left column and right column of {numref}`fig:cont1d_ferro_field_hysteresis` for the case of $T=0.5$, illustrating the stable and unstable parts of the branch, the jumping from one branch to the other (hard bifurcations), and the hysteresis in the system. The right panel shows a three-dimensional view, illustrating the 'folding' of the fixed-point manifold that causes the saddle node bifurcations. The shaded surface can be plotted directly: the equation $f=0$ can be solved for $m$ as a function of $(x,T)$, which gives the surface as a graph over the $(x,T)$ plane:
 
 ````{admonition} Python
 :class: python
@@ -943,7 +943,7 @@ Setting $\mathrm{d} T/\mathrm{d} t$ to zero and solving for $T$ one obtains the 
 T_{*} = \left[ \frac{(1-a)S}{4\epsilon \sigma}\right]^{1/4}
 ```
 
-With an average albedo of $a=0.3$ and an emissivity of $\epsilon = 0.61$, one finds $T_*\simeq 289$ K, close to the current global average temperature. This simple model shows the effect of increased emissions of greenhouse gases as this lowers $\epsilon$ and hence increases the value of $T_*$; see figure {numref}`fig:cont1d:climate`. Note that the value of the parameters, i.e. $a,\epsilon$ and $S$ uniquely determine the stationary state $T_*$ (there is only one possible equilibrium). This is a stable equilibrium since the derivative in the fixed point $T_*$ is negative
+With an average albedo of $a=0.3$ and an emissivity of $\epsilon = 0.61$, one finds $T_*\simeq 289$ K, close to the current global average temperature. This simple model shows the effect of increased emissions of greenhouse gases as this lowers $\epsilon$ and hence increases the value of $T_*$; see {numref}`fig:cont1d:climate`. Note that the value of the parameters, i.e. $a,\epsilon$ and $S$ uniquely determine the stationary state $T_*$ (there is only one possible equilibrium). This is a stable equilibrium since the derivative in the fixed point $T_*$ is negative
 
 $$
 f'(T_{*}) = -4\epsilon \sigma T_{*}^{3}/\beta < 0
@@ -1006,7 +1006,7 @@ a(T) &= 0.4 - 0.3 \tanh\left( \frac{T-T_{\text{m}}}{\Delta T} \right)
 \end{aligned}
 ```
 
-where $T_{\text{m}}$ is the melting point of ice. By virtue of the $\tanh$ function and the value of $\Delta T$, the albedo is a smooth function of temperature encompassing both the ice ($T<T_{\text{m}}$) and the liquid water state ($T>T_{\text{m}}$). For $T \ll T_{\text{m}}: a=0.7$, whereas for $T \gg T_{\text{m}}: a=0.1$. Inserting this albedo function in {eq}`eq:cont1d:climate:budget` and solving (numerically) for the fixed point(s) $T_*$ reveals that for a range of $\epsilon$ multiple equilibria occur, see {numref}`fig:cont1d:climate`. One also notes the unstable branch (gray color) and the possibility for hysteresis: if one gradually increases $\epsilon$ beyond $0.697$, one drops to the lower (cold) branch. If one subsequently reduces $\epsilon$ one will stays on the lower branch until the critical value $\epsilon = 0.547$ is reached, beyond which the system jumps back to the upper (hot) branch.
+where $T_{\text{m}}$ is the melting point of ice. By virtue of the $\tanh$ function and the value of $\Delta T$, the albedo is a smooth function of temperature encompassing both the ice ($T<T_{\text{m}}$) and the liquid water state ($T>T_{\text{m}}$). For $T \ll T_{\text{m}}: a=0.7$, whereas for $T \gg T_{\text{m}}: a=0.1$. Inserting this albedo function in {eq}`eq:cont1d:climate:budget` and solving (numerically) for the fixed point(s) $T_*$ reveals that for a range of $\epsilon$ multiple equilibria occur, see {numref}`fig:cont1d:climate`. One also notes the unstable branch (gray color) and the possibility for hysteresis: if one gradually increases $\epsilon$ beyond $0.697$, one drops to the lower (cold) branch. If one subsequently reduces $\epsilon$ one will stay on the lower branch until the critical value $\epsilon = 0.547$ is reached, beyond which the system jumps back to the upper (hot) branch.
 
 The following Python fragment shows how the plot in {numref}`fig:cont1d:climate` was made and how the critical values for $\epsilon$ were determined. For additional coloring of the branches by their stability, one can use the example given in section {numref}`sec:cont1d:ferromagnet_example`.
 

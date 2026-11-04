@@ -28,7 +28,7 @@ d) Take $r=0.3$ and $x(0) = 0.1$; determine the numerical solution and plot the 
 
 
 
-e) Create a bifurcation diagram by plotting the numerically computed 'large time solutions' as a function of $r \in [-0.5,0.5]$ Increase $r$ in small steps, calculate the corresponding 'large time solutions', and take as the initial conditions the equilibrium solution of the previous(!) step. In this way you simulate a *slow* change of the parameter $r$: the system has time to equilibrate to the fixed points belonging to the new value of $r$.
+e) Create a bifurcation diagram by plotting the numerically computed 'large time solutions' as a function of $r \in [-0.5,0.5]$. Increase $r$ in small steps, calculate the corresponding 'large time solutions', and take as the initial conditions the equilibrium solution of the previous(!) step. In this way you simulate a *slow* change of the parameter $r$: the system has time to equilibrate to the fixed points belonging to the new value of $r$.
 
 
 
@@ -51,7 +51,7 @@ with $\nu \leq 1/2$ a parameter.
 
 a) Find the fixed points.
 
-b) Classify the stability of each fixed points in terms of $\nu$.
+b) Classify the stability of each fixed point in terms of $\nu$.
 
 c) Does the system exhibit a bifurcation? If so, indicate for which value of $\nu$, classify the kind of bifurcation, and plot a bifurcation diagram.
 
@@ -74,9 +74,9 @@ a) Find (numerically) all fixed points for $r=3$,
 
 b) and classify their stability.
 
-c) Specify the attraction domains of each these fixed points.
+c) Specify the attraction domains of each of these fixed points.
 
-d) Plot $f_{r}(x)$ for different values of $r$ and determine from the plots how many bifurcations the system undergoes within the range $r\in [-10,10]$? Give a qualitative characterisation the type of bifurcations (saddle-node, transcritical, etc).
+d) Plot $f_{r}(x)$ for different values of $r$ and determine from the plots how many bifurcations the system undergoes within the range $r\in [-10,10]$? Give a qualitative characterisation of the type of bifurcations (saddle-node, transcritical, etc).
 
 e) Prove analytically that the system undergoes a bifurcation when the (marginally stable) fixed points have the values $x_{1}^{*} =-1 - \sqrt{2}/2$, or $x_{2}^{*}=-1+\sqrt{2}/2$. Calculate the critical values $r_1$ and $r_2$ corresponding to the bifurcations at, respectively, $x_{1}^{*}$ and $x_{2}^{*}$.
 
@@ -94,7 +94,7 @@ The latitude dependent temperature of the Earth results from a balance between s
 \dot{T} = -\epsilon (T+273)^4 + w(T) \cos(\theta)
 ```
 
-where $T$ represents the temperature in Celcius and $\theta$ the latitude $\in [0,90^\circ]$. Time has been rescaled by a characteristic timescale involving the heat capacity of the earth. The parameter $\epsilon$ denotes the effective long-wave emissivity. The term $w(T)$ incorporates the net absorption of short-wave radiation and depends on the surface properties (ice absorbs sunlight much less than water) and therefore on the local temperature. We approximate
+where $T$ represents the temperature in Celsius and $\theta$ the latitude $\in [0,90^\circ]$. Time has been rescaled by a characteristic timescale involving the heat capacity of the earth. The parameter $\epsilon$ denotes the effective long-wave emissivity. The term $w(T)$ incorporates the net absorption of short-wave radiation and depends on the surface properties (ice absorbs sunlight much less than water) and therefore on the local temperature. We approximate
 
 $$
 w(T) = a + b \,\text{erf}(c T)
