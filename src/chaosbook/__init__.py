@@ -30,3 +30,14 @@ __all__ = [
     "chaos_game",
     "box_dimension",
 ]
+
+from .flows1d import (fixed_points, stability, classify,
+                      fixed_point_branches, continuation_sweep)
+
+__all__ += [
+    "fixed_points",
+    "stability",
+    "classify",
+    "fixed_point_branches",
+    "continuation_sweep",
+]
