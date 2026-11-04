@@ -179,15 +179,8 @@ while keeping in mind that from the resulting solution set one must exclude peri
 (sec:disc2d:duffing)=
 ### Example: calculating fixed points and their stability for the Duffing map
 
-```{subfigure} 2
+```{figure} _static/disc2d/disc2d_Duffing_series_phase.png
 :name: fig:disc2d:duffing_series
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_Duffing_series1.png)
-![ ](_static/disc2d/disc2d_Duffing_phase1.png)
-![ ](_static/disc2d/disc2d_Duffing_series2.png)
-![ ](_static/disc2d/disc2d_Duffing_phase2.png)
 
 Series and phase space plots of the Duffing map {eq}`eq:duffing_map` with $b=0.1$. (a) Series of $x_n$ for $a=2.52$. (b) Phase plot $(x_n,y_n)$ for $a=2.52$. (c) Series $x_n$ for $a=2.77$. (d) Phase plot $(x_n,y_n)$ for $a=2.77$.
 ```
@@ -294,7 +287,6 @@ which reveals the stability of the fixed points for arbitrary $a,b$. Taking $b$ 
 
 ```{figure} _static/disc2d/disc2d_Duffing_bifurx.png
 :name: fig:disc2d:duffing_bifur
-:height: 40mm
 
 Bifurcation diagram of the Duffing map {eq}`eq:duffing_map` as a function of $a$. $b=0.1$ is fixed.
 ```
@@ -354,13 +346,8 @@ It reveals that the period-2 solution is stable for $a$ in the interval $[2b+2,\
 
 ### Example: a bouncing ball in a bowl
 
-```{subfigure} 2
+```{figure} _static/disc2d/disc2d_bowl_trajectories.png
 :name: fig:disc2d:bouncing_ball_in_a_bowl
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_bowl_chaos.png)
-![ ](_static/disc2d/disc2d_bowl_periodic.png)
 
 Trajectories of a bouncing ball in a parabolic bowl. (a) First 10 bounces for $X_0 = -1.2, U_0 = 2.2, V_0 =1.2$. (b) Two examples of a periodic solution.
 ```
@@ -513,7 +500,6 @@ $$
 
 ```{figure} _static/disc2d/disc2d_bowl_energies.png
 :name: fig:disc2d:bowl_energy
-:width: 100%
 
 Evolution in time of the potential energy $E_{\text{p},n}$ (circles), kinetic energy $E_{\text{k},n}$ (diamonds) and the sum of both $E_{\text{t},n}$ (boxes). Time $t$ was 'recreated' using {eq}`eq:ball_space_time`, allowing the values between bounces to be displayed as well.
 ```
@@ -623,7 +609,6 @@ In practice $\boldsymbol{\epsilon}_{0}$ is never exactly aligned with one eigenv
 
 ```{figure} _static/disc2d/disc2d_HenonAttractor.png
 :name: fig:disc2d:henonattractor
-:height: 4cm
 
 The Hénon attractor for $a=1.4$, $b=0.3$.
 ```
@@ -689,7 +674,6 @@ One may wonder whether the obtained values for the Lyapunov exponents still depe
 
 ```{figure} _static/disc2d/disc2d_HenonLyap.png
 :name: fig:disc2d:henonlyap
-:width: 10cm
 
 The two Lyapunov exponents of the Hénon map determined in three different ways: 1) black lines (and circles): calculated 20 times with $N=200$, 2) dark gray lines: calculated 400 times with $N=10$ and 3) light gray lines: calculated 4000 times with $N=1$.
 ```
@@ -700,17 +684,8 @@ The two Lyapunov exponents of the Hénon map determined in three different ways:
 
 The finding that one Lyapunov exponent is positive and one is negative is typical for chaotic systems. The positive Lyapunov exponent reveals the sensitive dependence on initial conditions and the precise value of $\Lambda_2$ thus quantifies this sensitivity. The negative exponent, on the other hand, demonstrates that the mapping also exerts significant *contraction*; this explains why different initial conditions are *attracted* to the object – the attractor – displayed in {numref}`fig:disc2d:henonattractor`. The action of attraction can be nicely observed in {numref}`fig:disc2d:henonfolding` where we have plotted the first 5 steps for a large number of random initial conditions (the 'holes' represent initial conditions that produce a divergent series and are omitted). The effect of *stretching* due to the positive Lyapunov exponent can be seen in {numref}`fig:disc2d:henonstretching` where we have shown the evolution of the same number of initial conditions, which are now very close to each other.
 
-```{subfigure} 3
+```{figure} _static/disc2d/disc2d_HenonFold.png
 :name: fig:disc2d:henonfolding
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_HenonFold0.png)
-![ ](_static/disc2d/disc2d_HenonFold1.png)
-![ ](_static/disc2d/disc2d_HenonFold2.png)
-![ ](_static/disc2d/disc2d_HenonFold3.png)
-![ ](_static/disc2d/disc2d_HenonFold4.png)
-![ ](_static/disc2d/disc2d_HenonFold5.png)
 
 The action of *contraction* due to the negative Lyapunov exponent: shown are the first 5 steps of the evolution of $10^4$ initial conditions which were randomly drawn from the interval $[-1.25,1.25]\times[-0.4,0.4]$. (a) The initial conditions, $n=0$. (b)-(f) $n=1, \ldots, 5$.
 ```
@@ -724,17 +699,8 @@ The action of *contraction* due to the negative Lyapunov exponent: shown are the
 <iframe src="_static/disc2d/interactive/henon_fold.html" width="100%" height="500" style="border:none;"></iframe>
 ```
 
-```{subfigure} 3
+```{figure} _static/disc2d/disc2d_HenonStretch.png
 :name: fig:disc2d:henonstretching
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_HenonStretch0.png)
-![ ](_static/disc2d/disc2d_HenonStretch4.png)
-![ ](_static/disc2d/disc2d_HenonStretch8.png)
-![ ](_static/disc2d/disc2d_HenonStretch12.png)
-![ ](_static/disc2d/disc2d_HenonStretch16.png)
-![ ](_static/disc2d/disc2d_HenonStretch20.png)
 
 The action of *stretching* due to the positive Lyapunov exponent: the evolution is shown of $10^4$ initial conditions very close to each other (max separation of $0.02$). (a)-(f) $n=0$, $4$, $8$, $12$, $16$ and $20$.
 ```
@@ -760,14 +726,8 @@ Sketch of a kicked rotor system
 
 The conceptually most straightforward example of a system with periodic kicking is the kicked rotor. Imagine a mass $m$ attached to an arm of length $r$ rotating in a horizontal plane ({numref}`fig:disc2d_kickedrotor`). The system is not influenced by gravity, but is subject to linear friction. At fixed intervals $T$, the system is 'kicked': it receives a finite amount of angular momentum in a negligibly short time. The kicking strength $I$ depends on the angle $\theta$.
 
-```{subfigure} 3
+```{figure} _static/disc2d/disc2d_kickedrotor_dynamics.png
 :name: fig:disc2d_kickedrotor_cont
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_kickedrotor_delta.png)
-![ ](_static/disc2d/disc2d_kickedrotor_v.png)
-![ ](_static/disc2d/disc2d_kickedrotor_theta.png)
 
 The dynamics of the undamped kicked rotor system. (a) The impulsive forcing $F_t$. (b) The tangential velocity $v_\theta$. (c) The phase angle $\theta$.
 ```
@@ -911,7 +871,6 @@ where $\Omega > 0$ is a parameter. This linear equation has solution $x_n = x_0 
 
 ```{figure} _static/disc2d/disc2d_circle.png
 :name: fig:disc2d_circle
-:width: 40mm
 
 Sketch of a flow on a circle.
 ```
@@ -971,7 +930,6 @@ print(X[:7])
 
 ```{figure} _static/disc2d/disc2d_lincircle_cobweb.png
 :name: fig:disc2d_lincircle_cobweb
-:width: 60mm
 
 Cobweb diagram for a period-3 solution of the linear map {eq}`eq:disc2d:lincircle`.
 ```
@@ -995,13 +953,8 @@ As an example, we characterise the period-3 solutions $\Omega=\frac{1}{3}$ and $
 
 Intended to quantify periodic solutions on the circle, the rotation number $w$ is by definition a rational number. As a number, $w=4/6$ is simply $w=2/3$. The fraction alone therefore does not tell us the period, and when the period matters we keep the pair $(R,m)$ rather than only $w$. For the linear map {eq}`eq:disc2d:lincircle` the period is always the denominator of $w$ in lowest terms: a 'period-6' solution with $R=4$ is just a period-3 solution with $R=2$, traversed twice. [^fn2]
 
-```{subfigure} 2
+```{figure} _static/disc2d/disc2d_lincircle_quasi.png
 :name: fig:disc2d_lincircle_quasi
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_lincircle_quasi.png)
-![ ](_static/disc2d/disc2d_lincircle_quasi_cobweb.png)
 
 Quasi-periodicity of system {eq}`eq:disc2d:lincircle` for $\Omega=\frac{1}{2} (1 + \sqrt{5})$. (a) Series. (b) Cobweb.
 ```
@@ -1040,7 +993,6 @@ Instead the nonlinearity causes the system to lock into a period-2 solution. Thi
 
 ```{figure} _static/disc2d/disc2d_circlemap_series.png
 :name: fig:disc2d_phaselocking
-:width: 8.50cm
 
 phase locking in a period-2 solution for $\Omega \in [0.464; 0.536]$ and ($K=1$) in the circle map.
 ```
@@ -1059,7 +1011,6 @@ The spontaneous locking into specific modes may seem quite mysterious, but unloc
 
 ```{figure} _static/disc2d/disc2d_circlemap_return_p2.png
 :name: fig:disc2d_circlemap_return_p2
-:width: 60mm
 
 The second iterate $f(f(x))$ for the circle map at $K=1$. Shown are the mappings for $\Omega=0.464$ (thin dashed line), $\Omega=0.500$ (solid line) and $\Omega=0.536$ (dash-dotted line).
 ```
@@ -1179,7 +1130,6 @@ Note that instead of taking the limit of $n \rightarrow \infty$, $W$ is based on
 
 ```{figure} _static/disc2d/disc2d_circlemap_winding.png
 :name: fig:disc2d_circlemap_devilstaircase
-:height: 60mm
 
 Generalized rotation number $W$ as a function of $\Omega$. This is a Devil's staircase.
 ```
@@ -1195,7 +1145,6 @@ Generalized rotation number $W$ as a function of $\Omega$. This is a Devil's sta
 
 ```{figure} _static/disc2d/disc2d_circlemap_bifurcation.png
 :name: fig:disc2d_circlemap:bifurcation
-:height: 50mm
 
 bifurcation diagram and Lyapunov exponents
 ```
@@ -1212,7 +1161,6 @@ Chaos sets in above $K=1$, although regions with mode-locking and with chaos are
 
 ```{figure} _static/disc2d/disc2d_circlemap_lyapunov.png
 :name: fig:circlemap:lyapunov
-:width: 80mm
 
 Lyapunov exponents $\Lambda$ in the $\Omega$-$K$ parameter-space. Coloring is $[-1,1]$; colorscheme: blue=-1; white=0; red=1
 ```
@@ -1236,17 +1184,8 @@ x_{n+1} &= x_n + y_{n+1} \quad \mod 1,\\
 
 Here, $x$ and $y$ are associated with the phase angle and angular momentum, respectively. Clearly, for $K=0$, the map reduces to the linear map we studied in section {numref}`sec:disc2d:lincircle`.
 
-```{subfigure} 2
+```{figure} _static/disc2d/disc2d_standardmap_series.png
 :name: fig:disc2d_standardmap:quasi_series
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_standardmap_quasi.png)
-![ ](_static/disc2d/disc2d_standardmap_chaos.png)
-![ ](_static/disc2d/disc2d_standardmap_quasi_return.png)
-![ ](_static/disc2d/disc2d_standardmap_chaos_return.png)
-![ ](_static/disc2d/disc2d_standardmap_quasi_deviations.png)
-![ ](_static/disc2d/disc2d_standardmap_chaos_deviations.png)
 
 Coexistence of chaotic and quasi-periodic solutions at $K=2$. Note the factor 10 difference in scale for the $x$-axis between (e) and (f). (a) Quasi-periodic; series. (b) Chaotic; series. (c) Quasi-periodic; return plot. (d) Chaos; return plot. (e) Quasi-periodic; deviations. (f) Chaos; deviations.
 ```
@@ -1291,13 +1230,8 @@ The phase space $(x, y)$ of the standard map for $K=2$ is shown in {numref}`fig:
 
 The standard map is periodic (modulo 1) in both $x$ and $y$. Therefore, the phase space is topologically a *torus*. Imagine that the phase space of {numref}`fig:disc2d_standardmap_phase` is glued on a thin sheet of rubber. As $x=0$ and $x=1$ represent the same point, we bring them together, obtaining a cylinder. Now, $y=0$ and $y=1$ also represent identical points, and on bringing together the two ends of the cylinder, one ends up with a torus ({numref}`fig:disc2d_standardmap_phase`).
 
-```{subfigure} 2
+```{figure} _static/disc2d/disc2d_standardmap_phase.png
 :name: fig:disc2d_standardmap_phase
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_standardmap_phase.png)
-![ ](_static/disc2d/disc2d_standardmap_phasetorus.png)
 
 Islands of order in a sea of chaos for the standard map at $K=2$ (a) Phasespace. (b) Mapped onto torus.
 ```
@@ -1345,20 +1279,8 @@ for sigma, mult, vecs in Jstar.eigenvects():
 
 Thus, the largest eigenvalue $\sigma_1=3.73$ with eigenvector $\mathbf{e}_1 = (0.8, 0.6)$ and the other eigenvalue $\sigma_2 = 0.27$ with eigenvector $\mathbf{e}_2 = (-0.34, 0.94)$. Based on $\mathbf{e}_1$, we expect that the cloud will expand at an angle of about $36^o$ with the horizontal.
 
-```{subfigure} 2
+```{figure} _static/disc2d/disc2d_standardmap_saddlenode.png
 :name: fig:disc2d_standardmap_saddlenode_n=-6
-:align: center
-:subcaptions: below
-
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=-6.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=-5.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=-4.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=-3.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=0.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=3.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=4.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=5.png)
-![ ](_static/disc2d/disc2d_standardmap_saddlenode_n=6.png)
 
 Unfolding of the stable and unstable manifolds by following a small cloud of initial conditions around $(0,0)$ (fig e). (f-i) shows the unfolding of the unstable manifold. By iterating the inverse ({eq}`eq:disc2d:standardmap_xi`), (a-d) show the unfolding of the stable manifold. (a) N=-6. (b) N=-5. (c) N=-4. (d) N=-3. (e) N=0. (f) N=3. (g) N=4. (h) N=5. (i) N=6.
 ```
@@ -1371,7 +1293,6 @@ Indeed, when we apply ({eq}`eq:disc2d:standardmap_x`) on the square, it deforms 
 
 ```{figure} _static/disc2d/disc2d_manifolds.png
 :name: fig:disc2d_manifolds
-:width: 9cm
 
 Sketch of the stable and unstable manifolds
 ```
@@ -1410,7 +1331,6 @@ As mentioned before, by inverting ({eq}`eq:disc2d:standardmap_x`), the stable di
 
 ```{figure} _static/disc2d/disc2d_standardmap_manifolds.png
 :name: fig:disc2d_standardmap_manifolds
-:width: 7.5cm
 
 Intertwining of the unstable (black circles) and stable (grey diamonds) manifolds, showing how incredibly complex the phase plane is. Note that this is only a small part of the manifolds, as we have only iterated 6 times (forwards and backwards) instead of infinite.
 ```
