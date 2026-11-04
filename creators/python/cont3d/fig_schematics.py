@@ -7,13 +7,16 @@ Produces (in python/_static/cont3d/):
   cont3d_rosslertopology.png   band structure of the Rossler attractor
 """
 
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Polygon, Rectangle, FancyArrowPatch
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
+
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "cont3d"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -25,8 +28,7 @@ def arrow(ax, p, q, **kw):
 
 
 def save(fig, name):
-    fig.savefig(OUT / f"{name}.png", dpi=150, bbox_inches="tight", pad_inches=0.05)
-    plt.close(fig)
+    bf.save(fig, OUT / f"{name}.png")
 
 
 # -- Poincare section -----------------------------------------------------------
@@ -39,7 +41,7 @@ def spline(pts, n=300, per=False):
     return splev(np.linspace(0, 1, n), tck)
 
 
-fig, ax = plt.subplots(figsize=(4.2, 3.2))
+fig, ax = plt.subplots(figsize=(2.6, 1.9))
 ax.add_patch(Polygon([[0.0, 0.3], [2.7, 0.3], [2.7, 3.1], [0.0, 3.1]],
                      closed=True, fc="0.93", ec="k", lw=1.2))
 xk, xk1, xs = (2.2, 2.0), (1.6, 2.35), (0.95, 2.7)
@@ -57,12 +59,12 @@ for (pt, lab, dx, dy) in [(xs, r"$\mathbf{x}^*$", -0.45, 0.05),
     ax.plot(*pt, "ko", ms=4)
     ax.text(pt[0] + dx, pt[1] + dy, lab)
 ax.plot(0.62, 0.55, "ko", ms=4)
-ax.text(-0.45, 1.7, r"$S$", fontsize=14)
+ax.text(-0.45, 1.7, r"$S$")
 ax.set_xlim(-0.7, 4.6); ax.set_ylim(-0.3, 3.4); ax.set_aspect("equal"); ax.axis("off")
 save(fig, "cont3d_poincaresection")
 
 # -- forced double-well beam ----------------------------------------------------
-fig, ax = plt.subplots(figsize=(5.0, 2.7))
+fig, ax = plt.subplots(figsize=(3.8, 1.9))
 frame = dict(fc="0.9", ec="k", lw=1.2)
 # rigid frame: left wall, top bar, base bar
 ax.add_patch(Rectangle((2.2, 0.0), 6.8, 0.4, **frame))             # base
@@ -86,7 +88,7 @@ ax.set_xlim(-1.4, 12.2); ax.set_ylim(-0.3, 6.3); ax.set_aspect("equal"); ax.axis
 save(fig, "cont3d_doublewell")
 
 # -- perturbation along a trajectory (Lyapunov, formal) --------------------------
-fig, ax = plt.subplots(figsize=(5.0, 2.2))
+fig, ax = plt.subplots(figsize=(bf.MEDIUM[0], 1.6))
 u = np.linspace(0, 1, 300)
 X = 0.3 + 9.2 * u
 Y = 1.4 - 1.5 * np.sin(np.pi * u) + 0.9 * u
@@ -129,7 +131,7 @@ def sp(pts, n=400):
     return x, H_ - y
 
 
-fig, ax = plt.subplots(figsize=(5.0, 5.0 * H_ / W_))
+fig, ax = plt.subplots(figsize=(3.4, 3.1))
 LW = 1.0
 outer = [(716, 845), (790, 700), (860, 520), (940, 340), (1030, 175), (1080, 95), (1130, 40), (1190, 15), (1260, 10), (1400, 60), (1550, 260), (1680, 550), (1750, 850),
          (1768, 1010), (1745, 1160), (1650, 1345), (1450, 1480), (1200, 1565),
@@ -170,8 +172,8 @@ ax.plot(*sp([(75, 1038), (48, 1050), (48, 1075), (70, 1092)]), "k", lw=LW, ls=da
 # dotted segment where the band passes behind
 ax.plot(*sp([(490, 548), (600, 520), (720, 502), (880, 503)]), "k", lw=LW, ls=(0, (1, 2.5)))
 # labels and flow direction
-ax.text(865, H_ - 1220, '"normal band"', ha="center", va="center", fontsize=9)
-ax.text(1130, H_ - 1405, '"Mobius band"', ha="center", va="center", fontsize=9)
+ax.text(865, H_ - 1220, '"normal band"', ha="center", va="center")
+ax.text(1130, H_ - 1405, '"Mobius band"', ha="center", va="center")
 arrow(ax, (1370, H_ - 1215), (1482, H_ - 1050), connectionstyle="arc3,rad=0.25")
 ax.set_xlim(-10, W_); ax.set_ylim(H_ - 1620, H_ + 10); ax.set_aspect("equal"); ax.axis("off")
 save(fig, "cont3d_rosslertopology")
