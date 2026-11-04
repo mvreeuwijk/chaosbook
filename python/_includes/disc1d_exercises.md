@@ -69,7 +69,7 @@ $$
 x_{n+1} = \lambda x_n \left (1 - \frac{x^2_n}{\lambda} \right ) \,\,\,\,\,\,\,0 < \lambda < 3
 $$
 
-$\lambda$ is the free parameter of the mapping; we will take here $0 < \lambda < 3$.$\{ x_n \}$ is real valued.
+$\lambda$ is the free parameter of the mapping; we will take here $0 < \lambda < 3$. $\{ x_n \}$ is real valued.
 
 a) Determine the fixed points. Discuss the role of $\lambda$ on the number of fixed points. Determine the stability of the fixed points (except for $\lambda = 1$).
 
