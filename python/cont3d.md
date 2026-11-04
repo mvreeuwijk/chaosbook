@@ -530,19 +530,7 @@ $$
 \end{aligned}
 $$
 
-with parameters $a$, $b$ and $c$. Note that only the $z$-equation contains a nonlinearity. In the absence of $z$, the first two equations are just those of a harmonic oscillator. As the parameter $a$ is positive there is negative damping, so that the typical behavior when $z \approx 0$ will be that of an unstable spiral. The attractor is shown in {numref}`fig:cont3d:rosslerperiod`(d) for $a=0.432$, $b=2$ and $c=4$. Following a trajectories starting at the center at $z=0$, the trajectory spirals outward. When $x$ becomes sufficiently large (after one or more cycles), the $z$ equation becomes active and the trajectory shoots up. Due to the negative feedback in the $x$-equation it is then reinjected near the center of the spiral. Trajectories are reinjected further to the inside of the spiral when they were further on the outside, generating a surface similar to a Möbius strip ({numref}`fig:cont3d:rosslertopology`). Note that the attractor is a topologically very complex object, as the outward spiralling trajectories are weaved through the reinjected trajectories.
-
-```{figure} _static/cont3d/cont3d_rosslertopology.png
-:name: fig:cont3d:rosslertopology
-:width: 9cm
-
-Schematic of the structure of the Rössler attractor. Trajectories spiral outward on a flat "normal band"; once $x$ is large enough they are lifted, folded over and reinjected near the centre, so that the folded part of the surface forms a "Möbius band".
-```
-
-:::{only} html
-*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont3d/fig_schematics.py)*
-:::
-
+with parameters $a$, $b$ and $c$. Note that only the $z$-equation contains a nonlinearity. In the absence of $z$, the first two equations are just those of a harmonic oscillator. As the parameter $a$ is positive there is negative damping, so that the typical behavior when $z \approx 0$ will be that of an unstable spiral. The attractor is shown in {numref}`fig:cont3d:rosslerperiod`(d) for $a=0.432$, $b=2$ and $c=4$. Following a trajectories starting at the center at $z=0$, the trajectory spirals outward. When $x$ becomes sufficiently large (after one or more cycles), the $z$ equation becomes active and the trajectory shoots up. Due to the negative feedback in the $x$-equation it is then reinjected near the center of the spiral. Trajectories are reinjected further to the inside of the spiral when they were further on the outside, generating a surface similar to a Möbius strip. Note that the attractor is a topologically very complex object, as the outward spiralling trajectories are weaved through the reinjected trajectories.
 
 ```{subfigure} 2
 :name: fig:cont3d:rosslerperiod
