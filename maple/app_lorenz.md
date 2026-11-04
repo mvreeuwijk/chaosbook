@@ -8,7 +8,7 @@ The Hungarian mathematician George Polya (1887–1985) once said: “If you can'
 (app:lorenz:rb)=
 ## Rayleigh–Bénard convection
 
-The model Lorenz considered was a layer of air confined between two flat plates, heated from below and cooled from above. This flow is known as *Rayleigh–B\'{e*nard convection}. It may seem a far stretch from weather prediction, but it shares some essential features. The heating from below resembles the heating of the earth's surface by solar radiation during the day. As hot air is lighter than cold air, it rises due to its buoyancy, forming *thermals* – pockets of rising hot air – that birds and glider pilots gratefully use to stay airborne for extended periods. In the atmosphere, thermals transport not only heat but also water vapour to the free troposphere, making them of primary importance to the hydrological cycle and thus to weather prediction. Rayleigh–Bénard convection has these thermals too ({numref}`fig:app:lorenz:rb_dns`): if there is a predictability problem in this simplified system, one can be certain that it will also be present in the far more complex atmosphere.
+The model Lorenz considered was a layer of air confined between two flat plates, heated from below and cooled from above. This flow is known as *Rayleigh–Bénard convection*. It may seem a far stretch from weather prediction, but it shares some essential features. The heating from below resembles the heating of the earth's surface by solar radiation during the day. As hot air is lighter than cold air, it rises due to its buoyancy, forming *thermals* – pockets of rising hot air – that birds and glider pilots gratefully use to stay airborne for extended periods. In the atmosphere, thermals transport not only heat but also water vapour to the free troposphere, making them of primary importance to the hydrological cycle and thus to weather prediction. Rayleigh–Bénard convection has these thermals too ({numref}`fig:app:lorenz:rb_dns`): if there is a predictability problem in this simplified system, one can be certain that it will also be present in the far more complex atmosphere.
 
 ```{figure} _static/app_lorenz/cont3d_RB_DNS.png
 :name: fig:app:lorenz:rb_dns
@@ -43,23 +43,25 @@ Starting from the convection equations above, Lorenz considered the two-dimensio
 ```{math}
 :label: eq:app:lorenz:u
 \begin{gathered}
-u(x, z, t) = -x(t)\, \frac{(1+a^2)\pi}{a}\, \sin(\pi a x)\cos(\pi z), \\
-w(x, z, t) = x(t)\, \pi (1+a^2)\, \cos(\pi a x)\sin(\pi z), \\
-\Theta(x, z, t) = \frac{1}{r\pi}\Bigl( y(t)\cos(\pi a x)\sin(\pi z)
- - \tfrac{1}{2} z(t)\sin(2\pi z)\Bigr) - \bigl(z - \tfrac{1}{2}\bigr).
+u(\xi, \zeta, t) = -x(t)\, \frac{(1+a^2)\pi}{a}\, \sin(\pi a \xi)\cos(\pi \zeta), \\
+w(\xi, \zeta, t) = x(t)\, \pi (1+a^2)\, \cos(\pi a \xi)\sin(\pi \zeta), \\
+\Theta(\xi, \zeta, t) = \frac{1}{r\pi}\Bigl( y(t)\cos(\pi a \xi)\sin(\pi \zeta)
+ - \tfrac{1}{2} z(t)\sin(2\pi \zeta)\Bigr) - \bigl(\zeta - \tfrac{1}{2}\bigr).
 \end{gathered}
 ```
 
-The key point is that these expressions are *factorised*: all time dependence resides in $x$, $y$ and $z$, while the spatial dependence is carried entirely by the trigonometric terms. Physically, $x(t)$ controls the strength of the convective velocity field; $y(t)$ represents the temperature difference between ascending and descending air; and $z(t)$ measures the deviation of the temperature profile from the linear conduction profile $\Theta(z) = -(z - \tfrac{1}{2})$. A representative flow field described by ({eq}`eq:app:lorenz:u`–{eq}`eq:app:lorenz:u`) is shown in {numref}`fig:app:lorenz:physics`.
+Here $\xi$ and $\zeta$ are the horizontal and vertical coordinates, scaled by the depth of the layer, so that the plates are at $\zeta = 0$ and $\zeta = 1$; we do not call them $x$ and $z$, because those letters are taken by the amplitudes. The constant $a$ sets the shape of the rolls: one roll has width $1/a$.
+
+The key point is that these expressions are *factorised*: all time dependence resides in $x$, $y$ and $z$, while the spatial dependence is carried entirely by the trigonometric terms. Physically, $x(t)$ controls the strength of the convective velocity field; $y(t)$ represents the temperature difference between ascending and descending air; and $z(t)$ measures the deviation of the temperature profile from the linear conduction profile $\Theta(\zeta) = -(\zeta - \tfrac{1}{2})$. A representative flow field described by {eq}`eq:app:lorenz:u` is shown in {numref}`fig:app:lorenz:physics`.
 
 ```{figure} _static/app_lorenz/cont3d_lorenzphysics.png
 :name: fig:app:lorenz:physics
 :width: 120mm
 
-The velocity and temperature field that the variables $x$, $y$ and $z$ describe.
+The velocity and temperature field that the variables $x$, $y$ and $z$ describe, in the $(\xi, \zeta)$-plane.
 ```
 
-Substituting ({eq}`eq:app:lorenz:u`–{eq}`eq:app:lorenz:u`) into the momentum and temperature equations and neglecting the interactions with the higher-order modes that were dropped, these three amplitudes are found to obey the closed system
+Substituting {eq}`eq:app:lorenz:u` into the momentum and temperature equations and neglecting the interactions with the higher-order modes that were dropped, these three amplitudes are found to obey the closed system
 
 $$
 \begin{aligned}
@@ -69,6 +71,6 @@ $$
 \end{aligned}
 $$
 
-The parameter $r$ is a non-dimensional temperature difference which drives the flow; the Prandtl number $\sigma$ is the ratio of kinematic viscosity to thermal diffusivity; and $b$ is a measure of the aspect ratio of the convection rolls, a large value corresponding to a low aspect ratio and vice versa. It should be stressed that this truncation describes only the onset of instability in Rayleigh–Bénard convection, and is quantitatively faithful only near the convective threshold. Remarkably, however, the very same equations describe other physical systems *exactly*, among them a mechanical waterwheel {cite:p}`Strogatz1994` as well as certain lasers and dynamos.
+The parameter $r$ is a non-dimensional temperature difference which drives the flow; the Prandtl number $\sigma$ is the ratio of kinematic viscosity to thermal diffusivity; and $b = 4/(1+a^2)$ is a measure of the aspect ratio of the convection rolls, a large value corresponding to wide, flat rolls (small $a$) and vice versa. It should be stressed that this truncation describes only the onset of instability in Rayleigh–Bénard convection, and is quantitatively faithful only near the convective threshold. Remarkably, however, the very same equations describe other physical systems *exactly*, among them a mechanical waterwheel {cite:p}`Strogatz1994` as well as certain lasers and dynamos.
 
 It was in this system that Lorenz encountered what seemed, in the early sixties, a genuine paradox. The term *deterministic* was then associated with systems whose long-term fate was to settle onto a fixed point or a limit cycle, whereas *nonperiodic* behaviour was associated with random forcing. Yet here the trajectories remained confined to a bounded region of phase space while every small volume of initial conditions was flattened towards zero volume, and Lorenz could show that the system possessed neither a stable fixed point nor a stable limit cycle. He was forced to conclude that the flow was at once deterministic and nonperiodic – he had stumbled upon a strange attractor.

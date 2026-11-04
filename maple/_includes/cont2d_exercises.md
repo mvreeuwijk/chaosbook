@@ -28,7 +28,7 @@ $$
 \end{aligned}
 $$
 
-where it is understood that always $N_1(t), N_2(t) \geq 0$. Furthermore $r_1, r_2 > 0$ and $b_1, b_2 \geq 0$.
+where it is understood that always $N_1(t), N_2(t) \geq 0$. Furthermore $r_1, r_2 > 0$ and $a_1, a_2 \geq 0$.
 
 a) Show that without loss of generality the equations can be rewritten to
 
@@ -54,7 +54,7 @@ d) Calculate with `maple` the linear stability of the fixed points for the case 
 e) Take $b_1 = 1$. Find the critical value of $b_2$ such that the species can still co-exist.
 
 
-### Predator-Prey with Alee effect
+### Predator-Prey with Allee effect
 
 **Downloads:** {download}`PredatorPreyAlee.mws <_static/exercises/PredatorPreyAlee.mws>`
 
@@ -136,9 +136,9 @@ b) Show that in the positive quadrant  $(x, y \geq 0)$, any fixed point is stabl
 
 c) Find the value(s) for p where the stable fixed point changes in a stable spiral, and show phaseportraits of both cases.
 
-d) Can you find a gradient system to rule out closed orbits? If so, which, and if not, why not?
+d) Can the system be written as a gradient system, which would rule out closed orbits? If so, give the potential $V$, and if not, why not?
 
-e) Look at the sign of  $\nabla \cdot \dot{\mathbf{x}}$ in the positive quadrant. Can you explain in words why this makes closed orbits in this region impossible? (hint: use Green's theorem):
+e) Look at the sign of  $\nabla \cdot \dot{\mathbf{x}}$ in the positive quadrant. Can you explain in words why this makes closed orbits in this region impossible? (hint: use Green's theorem, cf. Bendixson's criterion in section {numref}`sec:cont2d:nolimits`):
 
 $$
 \iint_A \nabla \cdot \dot{\mathbf{x}}\ \mathrm{d}A = \oint_S \dot{\mathbf{x}} \cdot \mathbf{n} \ \mathrm{d}s

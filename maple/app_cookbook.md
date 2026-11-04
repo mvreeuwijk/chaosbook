@@ -1279,7 +1279,7 @@ $$
 \end{bmatrix}
 $$
 
-So the fixed point is a saddle node as $\lambda_1>0$ and $\lambda_2 < 0$.
+So the fixed point is a saddle as $\lambda_1>0$ and $\lambda_2 < 0$.
 
 ### Phase portrait
 

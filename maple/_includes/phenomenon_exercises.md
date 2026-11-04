@@ -50,7 +50,7 @@ Consider a satellite in space under influence of the gravitational pull of the e
 
 * - gravitational constant
   - $G$
-  - $6.67 \times 10^{-11}\ Nm^2 kg^{-1}$
+  - $6.67 \times 10^{-11}\ Nm^2 kg^{-2}$
 * - distance between earth and moon
   - $R$
   - $3.84 \times 10^{8}\ m$
@@ -84,7 +84,7 @@ $$
 \end{gathered}
 $$
 
-where $r_1$ and  $r_2$ are the radii of earth and moon, and $\omega$ denotes the angular frequency. Using the law of gravitation $F=G\frac{m m'}{r^2}$, the motion of the satellite is governed by
+where $r_1$ and  $r_2$ are the orbital radii of earth and moon about their centre of mass, and $\omega$ denotes the angular frequency. Using the law of gravitation $F=G\frac{m m'}{r^2}$, the motion of the satellite is governed by
 
 $$
 \mathbf{\ddot{x}} = G m_1 \frac{\mathbf{x}_1 - \mathbf{x}} {\left|\mathbf{x}_1 - \mathbf{x}\right|^3} + G m_2 \frac{\mathbf{x}_2 - \mathbf{x}} {\left|\mathbf{x}_2 - \mathbf{x}\right|^3}.

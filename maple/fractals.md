@@ -181,7 +181,7 @@ eq  := fit[leastsquare[[x,y], y=a*x+b]]([xli, yli]);   # slope = -D0
 ```
 ````
 
-The final least-squares fit returns a line $y = a\,x + b$ with $x=\log\delta$ and $y=\log(\text{boxes})$. By {eq}`eq:fractals:boxcount_scaling` the box-counting dimension is $D_0 = -a$, i.e. minus the slope. Applying this procedure to the Sierpinski gasket of {numref}`fig:fractals:sierpinski` recovers the analytical value $\log 3/\log 2$, provided that enough points are used. This last caveat is important: the box-counting method only works over the range of scales that is adequately sampled by the data. When the number of points $N$ is too small, the finest boxes each contain at most one point, $N(\varepsilon)$ saturates at $N$, and the estimated slope flattens out. As a result, too few data points always lead to an *underestimate* of the dimension at small $\varepsilon$ ({numref}`fig:fractals:boxcount_fit`). A complete, self-contained version of this pipeline – generating a self-similar point set, counting occupied boxes over a range of sizes, and extracting the slope by a least-squares fit – is worked through in the {doc}`cookbook <app_cookbook>`.
+The final least-squares fit returns a line $y = a\,x + b$ with $x=\log\varepsilon$ and $y=\log(\text{boxes})$. By {eq}`eq:fractals:boxcount_scaling` the box-counting dimension is $D_0 = -a$, i.e. minus the slope. Applying this procedure to the Sierpinski gasket of {numref}`fig:fractals:sierpinski` recovers the analytical value $\log 3/\log 2$, provided that enough points are used. This last caveat is important: the box-counting method only works over the range of scales that is adequately sampled by the data. When the number of points $N$ is too small, the finest boxes each contain at most one point, $N(\varepsilon)$ saturates at $N$, and the estimated slope flattens out. As a result, too few data points always lead to an *underestimate* of the dimension at small $\varepsilon$ ({numref}`fig:fractals:boxcount_fit`). A complete, self-contained version of this pipeline – generating a self-similar point set, counting occupied boxes over a range of sizes, and extracting the slope by a least-squares fit – is worked through in the {doc}`cookbook <app_cookbook>`.
 
 ```{figure} _static/fractals/fractals_boxcount_fit.png
 :name: fig:fractals:boxcount_fit
@@ -251,7 +251,7 @@ loli := seq([log(scale[m]), log(cor[m])], m=1..M):
 ```
 ````
 
-The slope of a straight-line fit to `loli` yields the correlation dimension $D_2$ directly. Applied to the dripping-faucet attractors, this procedure gives values close to, but slightly below, the box-counting dimensions of section {numref}`sec:fractals:boxcounting`, consistent with the general ordering $D_2\leq D_0$.
+The slope of a straight-line fit to `loli` yields the correlation dimension $D_2$ directly. By the general ordering $D_2\leq D_0$, the value obtained is at most the box-counting dimension of section {numref}`sec:fractals:boxcounting`. For the dripping-faucet attractors the comparison is left as an exercise.
 
 (sec:fractals:multifractal)=
 ## Multifractals and generalized dimensions

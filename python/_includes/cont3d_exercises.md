@@ -9,11 +9,9 @@
 :::
 ::::
 
-### Poincar\'{e
+### Poincaré section of the Rössler system
 
 **Lab:** starter cell *Exercise: Poincaré section of the Rössler system* in the exercise lab (button above).
-
--section of the Rossler system}
 
 Consider the Rössler system
 
@@ -78,7 +76,7 @@ f) Discuss the results of question {ref}`eq0101:num <eq0101:num>` with respect t
 
 **Lab:** starter cell *Exercise: Belousov-Zhabotinski reaction* in the exercise lab (button above).
 
-The Belousov-Zhabotinski (BZ) reaction is a well-known chemical oscillator. It can be made by dissolving malomic acid and ammonium nitrate in sulfuric acid. When sodium bromate is added, the solution will oscillate between yellow and clear. The behaviour of the BZ-oscillator can be modeled by the Gaspard-Nicolis equations, which are given by
+The Belousov-Zhabotinski (BZ) reaction is a well-known chemical oscillator. It can be made by dissolving malonic acid and cerium ammonium nitrate (the catalyst) in sulfuric acid. When sodium bromate is added, the solution will oscillate between yellow and clear. The behaviour of the BZ-oscillator can be modeled by the Gaspard-Nicolis equations, which are given by
 
 $$
 \begin{gathered}

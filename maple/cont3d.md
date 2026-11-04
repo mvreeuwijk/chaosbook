@@ -11,7 +11,7 @@ The methods discussed in the previous chapter, such as the concept of phase spac
 \dot{\mathbf{x}} = \mathbf{f}(\mathbf{x}),
 ```
 
-For 3-D continuous systems we will adopt the notation $\mathbf{x} = (x, y, z)^T$ and $\mathbf{f} = (f, g, h)^T)$. One important distinction between second-order continuous systems and higher-order systems is that the former cannot feature chaotic behavior, as it is topologically impossible for trajectories to cross in phase-space (Poincaré Bendixson theorem). Chaotic behaviour is possible for continuous systems of third order and higher.
+For 3-D continuous systems we will adopt the notation $\mathbf{x} = (x, y, z)^T$ and $\mathbf{f} = (f, g, h)^T$. One important distinction between second-order continuous systems and higher-order systems is that the former cannot feature chaotic behavior, as it is topologically impossible for trajectories to cross in phase-space (Poincaré Bendixson theorem). Chaotic behaviour is possible for continuous systems of third order and higher.
 
 As an example, let us return our attention to the celebrated Lorenz equations introduced in chapter {numref}`chap:endstart`, which are given by
 
@@ -74,7 +74,7 @@ $$
 \nabla \cdot \mathbf{f} =\frac{\partial {f_1}}{\partial {x_1}} + \frac{\partial {f_2}}{\partial {x_2}} + \frac{\partial {f_3}}{\partial {x_3}}.
 $$
 
-When $\nabla   \cdot   \mathbf{f}=0$, the system conserves volume and is called *conservative*, the class of Hamiltonian systems (section {numref}`sec:cont2d:conservative`) being prime examples. When $\nabla   \cdot   \mathbf{f} < 0$, the volume reduces as a function of time and the system is called *dissipative*. Dissipative systems have attractors but conservative systems do not. However, that both conservative and dissipative systems may display chaotic behaviour.
+When $\nabla   \cdot   \mathbf{f}=0$, the system conserves volume and is called *conservative*, the class of Hamiltonian systems (section {numref}`sec:cont2d:conservative`) being prime examples. When $\nabla   \cdot   \mathbf{f} < 0$, the volume reduces as a function of time and the system is called *dissipative*. Dissipative systems have attractors but conservative systems do not. Note, however, that both conservative and dissipative systems may display chaotic behaviour.
 
 For the Lorenz equations, the divergence is given by
 
@@ -89,7 +89,7 @@ $$
 V(t) = V(0) \mathrm{e}^{-(\sigma +1 +b)t }
 $$
 
-This equation confirms that all volumes $V(0)$ in the phase space shrink to zero volume: $V(t)\rightarrow 0$. Here we seem to hit a paradox: if everywhere in the phase space the volume tends to zero, then the resulting geometry must have a dimension lower than three (because it has no volume). But it cannot be two-dimensional either because as we have seen in the previous chapter, there can be no chaos in a flow with only two degrees of freedom (IS POINCARE BENDIXSON THEOREM IN C5?). As we will see later, the geometry of the attractor has a fractal dimension, slightly larger than 2, thus yielding an escape from the paradox.
+This equation confirms that all volumes $V(0)$ in the phase space shrink to zero volume: $V(t)\rightarrow 0$. Here we seem to hit a paradox: if everywhere in the phase space the volume tends to zero, then the resulting geometry must have a dimension lower than three (because it has no volume). But it cannot be two-dimensional either because as we have seen in the previous chapter, there can be no chaos in a flow with only two degrees of freedom (the Poincaré-Bendixson theorem, section {numref}`sec:cont2d:nochaos`). As we will see later, the geometry of the attractor has a fractal dimension, slightly larger than 2, thus yielding an escape from the paradox.
 
 How can one reconcile the shrinking of $V$ to zero on the one hand with the notion of sensitive dependence on initial conditions on the other hand? After all, the latter notion is associated with *diverging* trajectories. This will be investigated numerically, by slightly perturbing a point on the attractor and monitoring the growth of the difference $\mathbf{\delta}$. To get an initial condition which is already *on* the attractor, we start with an arbitrary initial boundary condition and integrate the system for some time $T$. When $T$ is large enough, the trajectory will have converged onto the attractor (see {numref}`fig:cont3d:lorenzattractor`) and we can take $\mathbf{x}(T)$ as the initial condition. In this way the transient phase is disregarded. With this new initial condition we integrate the system once more and obtain a trajectory $\mathbf{x}_1(t)$ which will be on the attractor. We also study the trajectory $\mathbf{x}_2(t)$ starting from an initial condition that is slightly perturbed: $\mathbf{x}_2(0) = \mathbf{x}_1(0) + \boldsymbol{\epsilon}(0)$, where it is understood that $\Vert \boldsymbol{\epsilon}\Vert \ll 1$. In particular we are now interested in the *evolution* of the deviation between the two trajectories, i.e.
 
@@ -187,22 +187,26 @@ So if one has the complete data of the trajectories $\mathbf{x}_1(t)$, $\mathbf{
 Instantaneous (effective) Lyapunov exponent $\Lambda_e$ determined for the Lorenz system from {eq}`eq:cont3d:lyap_instant`.
 ```
 
-{eq}`eq:cont3d:lyap_instant` also provides the link between $\Lambda_e$ and the three Lyapunov exponents that are present in the system. Indeed, if $\boldsymbol{\epsilon}$ is exactly aligned with one of the eigenvectors of $J_{\text{S}}$, say $\mathbf{e}_1$, than $\Lambda_e = \Lambda_1$, where $\Lambda_1$ is the corresponding eigenvalue of $J_{\text{S}}$. The same holds for the other eigenvectors. So first we note that we can associate the Lyapunov exponents with the eigenvalues $J_{\text{S}}$; secondly, if we arrange $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ we note from {eq}`eq:cont3d:lyap_instant` that
+{eq}`eq:cont3d:lyap_instant` also tells us what $\Lambda_e$ can and cannot be. Let $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ be the eigenvalues of $J_{\text{S}}$ and $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$ the corresponding eigenvectors. If $\boldsymbol{\epsilon}$ is exactly aligned with $\mathbf{e}_1$, then $\Lambda_e = \Lambda_1$, and the same holds for the other eigenvectors. For any other $\boldsymbol{\epsilon}$ we note from {eq}`eq:cont3d:lyap_instant` that
 
 $$
 \Lambda_1 \leq \Lambda_e \leq \Lambda_3
 $$
 
-i.e. the effective Lyapunov exponent is always between the three Lyapunov exponents based on $J_{\text{S}}$; thirdly we note that $J_{\text{S}}$ is time dependent as it depends on $\mathbf{x}_1(t)$, so also the eigenvectors depend on time, and also the Lyapunov exponents $\Lambda_1(t),\Lambda_2(t),\Lambda_3(t)$, see {numref}`fig:cont3d:lorenzlyapcomprehensive`.
+i.e. the effective Lyapunov exponent is always between the smallest and the largest eigenvalue of $J_{\text{S}}$. These eigenvalues are the *local stretching rates*: they tell us how fast a perturbation grows or shrinks at this instant, in the three principal directions of $J_{\text{S}}$. They are not the Lyapunov exponents of the system, as we will see below. Note that $J_{\text{S}}$ depends on $\mathbf{x}_1(t)$, so the eigenvectors and the rates $\Lambda_1(t),\Lambda_2(t),\Lambda_3(t)$ change along the orbit, see {numref}`fig:cont3d:lorenzlyapcomprehensive`.
 
 ```{figure} _static/cont3d/cont3d_LorenzLyapComprehensive.png
 :name: fig:cont3d:lorenzlyapcomprehensive
 :width: 70%
 
-The three Lyapunov exponents of the Lorenz system as well as the effective Lyapunov exponent $\Lambda_e$ (black line). Bottom: Cumulative average of the Lyapunov exponents in time, showing the convergence to $\Lambda_e \simeq 0.9$.
+Top: the three local stretching rates $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ (the eigenvalues of $J_{\text{S}}$) along an orbit of the Lorenz system, together with the effective Lyapunov exponent $\Lambda_e$ (black line). Bottom: cumulative time averages. The averages of the stretching rates are not the Lyapunov exponents; only $\Lambda_e$ converges to the largest Lyapunov exponent, $\Lambda_e \simeq 0.9$.
 ```
 
-{numref}`fig:cont3d:lorenzlyapcomprehensive` shows all Lyapunov exponents as a function of time. Apart from the strong fluctuations in time one notices that generally one Lyapunov exponent is negative, one positive and one near zero. This appears to be rather typical for chaotic systems. The negative exponent causes the contraction of trajectories towards the attractor, whereas the positive exponent causes the divergence along the attractor and hence the sensitivity to initial conditions. One also notes the fact that $\Lambda_e$ is always between the smallest and the largest Lyapunov exponent, but also that the effective Lyapunov exponent is by no means equal to the average $(\Lambda_1+\Lambda_2+\Lambda_3)/3$. Finally, it is interesting to study whether there are specific regions on the attractor that can be associated with strong divergence ($\Lambda_e \gg 0$), or strong convergence events ($\Lambda_e \ll 0$). This is indeed the case, as shown in {numref}`fig:cont3d:lorenzlyapattractor`.
+{numref}`fig:cont3d:lorenzlyapcomprehensive` shows the stretching rates as a function of time. They fluctuate strongly. At any instant one rate is strongly negative, one is positive and one is small. One also notes that $\Lambda_e$ is always between the smallest and the largest rate, but that it is by no means equal to the average $(\Lambda_1+\Lambda_2+\Lambda_3)/3$.
+
+Now let us average over time. The time averages of the three rates converge to about $4.2$, $-2.3$ and $-15.6$. The time average of $\Lambda_e$ converges to $0.9$, in agreement with {numref}`fig:cont3d:lorenzlyapunov`. Which of these are the Lyapunov exponents? The Lyapunov exponents of a flow are defined as in chapter {numref}`sec:disc2d`: they are the long-time average growth rates of perturbations that evolve according to $\dot{\boldsymbol{\epsilon}} = J(\mathbf{x}_1(t)) \boldsymbol{\epsilon}$, the continuous-time counterpart of the product of Jacobians in {eq}`eq:disc2d:lyap_anyorder`. For the Lorenz system at $r=28$ this gives $(0.906, 0, -14.57)$. The averaged stretching rates are something else. The eigenvectors of $J_{\text{S}}$ rotate along the orbit, so a perturbation that is stretched at the rate $\Lambda_3$ now is no longer aligned with $\mathbf{e}_3$ a moment later, and is then squeezed. The average of $\Lambda_3(t)$ thus counts stretching that no perturbation keeps. What a perturbation does keep is measured by $\Lambda_e$: it aligns itself with the direction of largest long-time growth, and its average is the largest Lyapunov exponent.
+
+The spectrum $(0.906, 0, -14.57)$ is typical for a chaotic flow. The positive exponent causes the divergence along the attractor and hence the sensitivity to initial conditions. The exponent zero belongs to a perturbation along the flow direction $\mathbf{f}(\mathbf{x}_1)$: shifting a point along its own trajectory neither grows nor shrinks on average. The negative exponent causes the contraction of trajectories towards the attractor. Only the sum is shared: the three stretching rates add up to $\mathrm{tr}\,J_{\text{S}} = \mathrm{tr}\,J = \nabla \cdot \mathbf{f} = -(\sigma + 1 + b)$ at every instant, and so do the three Lyapunov exponents, in agreement with the volume contraction {eq}`eq:cont3d:vevolution`. Finally, it is interesting to study whether there are specific regions on the attractor that can be associated with strong divergence ($\Lambda_e \gg 0$), or strong convergence events ($\Lambda_e \ll 0$). This is indeed the case, as shown in {numref}`fig:cont3d:lorenzlyapattractor`.
 
 ```{figure} _static/cont3d/cont3d_lorenzlyapattractor.png
 :name: fig:cont3d:lorenzlyapattractor
@@ -210,7 +214,7 @@ The three Lyapunov exponents of the Lorenz system as well as the effective Lyapu
 Effective Lyapunov exponent $\Lambda_e$ on the attractor. Circles denote $\Lambda_e > 6$, and crosses $\Lambda_e < -6$
 ```
 
-The following maple program performs the calculation of the three Lyapunov exponents and the effective Lyapunov exponent such as shown in {numref}`fig:cont3d:lorenzlyapcomprehensive`.
+The following maple program calculates the three local stretching rates and the effective Lyapunov exponent shown in {numref}`fig:cont3d:lorenzlyapcomprehensive`.
 
 ````{admonition} Maple
 :class: maple
@@ -324,7 +328,7 @@ Note that the transition from a 3-D continuous to a 1-D discrete system is a for
 ![ ](_static/cont3d/cont3d_lorenz_zmax.png)
 ![ ](_static/cont3d/cont3d_lorenz_map.png)
 
-Construction of the Lorenz-map (b) of the Lorenz system, obtained by making a return plot of the data in {numref}`fig:cont3d:lorenzmap`. (a) The local maxima $z_n$ obtained from a time series $z(t)$ of the Lorenz system. (b) The Lorenz map.
+Construction of the Lorenz map. (a) The local maxima $z_n$ obtained from a time series $z(t)$ of the Lorenz system. (b) The Lorenz map, obtained by making a return plot of the data in (a).
 ```
 
 With a discrete series $z_n$, plotted in {numref}`fig:cont3d:lorenzmap`, we have entered familiar territory (chapter {numref}`sec:disc1d`), and the natural next step is to study whether the relation between $z_n$ and $z_{n+1}$  can be described by a one-dimensional discrete mapping $z_{n+1} = f(z_n)$. This can be done by looking at the return plot of $z_n$, shown in {numref}`fig:cont3d:lorenzmap`. This plot defines the *Lorenz map* of the continuous Lorenz system {eq}`eq:cont3d:lorenzx`. Indeed, the sequence appears to collapse onto a practically symmetric curve with a cusp in the center. To a large extent the return-plot reminisces the tent map {eq}`eq:disc1d:tent_map`, but closer inspection reveals that the curve in {numref}`fig:cont3d:lorenzmap` has a finite thickness and formally cannot be described by a one-dimensional mapping. However, the thickness is so small that for the sake of argument the relation between $z_{n+1}$ and $z_n$ will still be treated as a one-dimensional map.
@@ -333,7 +337,7 @@ So how does the Lorenz map help in ruling out stable limit cycles? Sampling the 
 
 ```{math}
 :label: eq:cont3d:stability_lorenzmap
-\sigma^{(m)} = f'(z_1) (f'(z_2)) \ldots f'(z_m).
+\sigma^{(m)} = f'(z_1)\, f'(z_2) \ldots f'(z_m).
 ```
 
 As discussed in section {numref}`sec:disc1d:period_m`, the criterion for stability is given by $| \sigma^{(m)} | < 1$. Now the remarkable observation to be made in {numref}`fig:cont3d:lorenzmap` is that at each $z$, the slope $|f'(z)|$ is larger than one. By {eq}`eq:cont3d:stability_lorenzmap` it is therefore inevitable that $| \sigma^{(m)} | > 1$ for all possible sequences, and hence there are no stable limit cycles possible. In this way Lorenz showed that the Lorenz system indeed produces a deterministic *non-periodic* flow in phase space[^fn1]. In the early sixties, this concept was truly groundbreaking. Associated with the term deterministic were systems, whose long term behavior was either to settle in a fixed point or end up in a limit cycle. Nonperiodic solutions on the other hand, were associated with random forcings which prevented the system from settling in a limit cycle or fixed point. But here was a deterministic system of ordinary differential equations with only three degrees of freedom which produced a flow that *never* repeats itself!
@@ -342,7 +346,7 @@ As discussed in section {numref}`sec:disc1d:period_m`, the criterion for stabili
 
 The idea behind a Poincaré section is to reduce the complexity of an $N$-dimensional continuous dynamical system to a $N-1$-dimensional *discrete* map by inserting a *surface of section* $S$ into the phase space and sampling the intersections of a trajectory $\mathbf{x}(t)$ with $S$. This is particularly useful for oscillating systems, i.e. where the trajectory orbits in a limit cycle or has chaotic behavior. In {numref}`fig:cont3d:poincaresection`, a typical trajectory is sketched which starts on the surface of section $S$ at point $\mathbf{x}_k$. The trajectory $\mathbf{x}(t)$ is governed by the flow $\mathbf{f}(\mathbf{x}(t))$, and after a certain amount of time, the trajectory intersects $S$ again at $\mathbf{x}_{k+1}$, and so on.
 
-The mapping $\mathbf{x}_{k+1} = P(\mathbf{x}_k)$ is called the *Poincar\'{e* map}. The surface of section does not need to be a plane, but can be curved if  convenient for the flow under consideration. The main requirement to choose the surface of section is that the trajectories must intersect it: the surface should not be parallel to the flow.
+The mapping $\mathbf{x}_{k+1} = P(\mathbf{x}_k)$ is called the *Poincaré map*. The surface of section does not need to be a plane, but can be curved if  convenient for the flow under consideration. The main requirement to choose the surface of section is that the trajectories must intersect it: the surface should not be parallel to the flow.
 
 ```{figure} _static/cont3d/cont3d_poincaresection.png
 :name: fig:cont3d:poincaresection
@@ -432,7 +436,7 @@ plot([seq([pcx[i], pcz[i]], i=1..nops([pcx]))], style=point, symbol=diamond);
 Poincare section at $y=0$ for the Lorenz system.
 ```
 
-The result is shown in {numref}`fig:cont3d:lorenzpoincare`. As can be seen, the discrete mapping results in a (nearly) one-dimensional curve, which has strong similarities with the Lorenz map ({numref}`fig:cont3d:lorenzmap`). Note that the integration has only been carried out for a limited amount of time – longer integration would have resulted more data points on the map and therefore less holes.
+The result is shown in {numref}`fig:cont3d:lorenzpoincare`. As can be seen, the discrete mapping results in a (nearly) one-dimensional curve, which has strong similarities with the Lorenz map ({numref}`fig:cont3d:lorenzmap`). Note that the integration has only been carried out for a limited amount of time – longer integration would have resulted in more data points on the map and therefore fewer holes.
 ````
 
 (sec:cont3d:perioddoubling)=
@@ -475,7 +479,7 @@ The period doubling route to chaos of the Rössler system. (a) $c=3$: Period 1. 
 
 As for the Lorenz map, we sample the maxima of $x$ in order to reduce the complexity of the data. In {numref}`fig:cont3d:rosslerperiod`, the behavior of the system is shown for four different values of $c$. For $c=3$ ({numref}`fig:cont3d:rosslerperiod`a), the system settles into a limit cycle, and subsequent maxima in $x$ will be identical. This situation resembles that of a fixed point (period-1) solution for a one-dimensional map. For $c=3.4$ ({numref}`fig:cont3d:rosslerperiod`b), the system  settles into a limit cycle which has become more complex: the trajectory performs two cycles before returning to the same location. This is reflected in the sequence of the $x$-maxima, which shows a period-2 solution. A period-4 limit cycle is shown in {numref}`fig:cont3d:rosslerperiod`c and the chaotic timeseries in {numref}`fig:cont3d:rosslerperiod`d. In fact, the Rössler system has a full period doubling route to chaos, which is shown in {numref}`fig:cont3d:bifurcation`a. Clearly, there is a strong similarity with the bifurcation diagram of the logistic map, {numref}`fig:disc1d:series_bifurcation_logist`.
 
-A clue for the period-doubling behavior could have been inferred from the return plot of $z_n$ in a fully chaotic state ($c=4$) ({numref}`fig:cont3d:rosslerreturn`). The return plot is very similar to the logistic map, and has both requirements for Feigenbaum's universality (section {numref}`sec:disc1d:universality`): 1) a unimodal map; and 2) a differentiable maximum. From the Lorenz map ({numref}`fig:cont3d:lorenzmap`) one might  anticipate that the Lorenz system will behave rather differently than the Rössler system, as the cusp implies that the map is is not differentiable at its maximum. Shown in {numref}`fig:cont3d:bifurcation`b is the bifurcation diagram in terms of $r$ for the Lorenz equations. The other two parameters are $\sigma=10$ and $b=8/3$. As can be seen, the system is stable up to a certain value for $r$, after which it bursts into chaotic behaviour without a single trace of period doubling.
+A clue for the period-doubling behavior could have been inferred from the return plot of $x_n$ in a fully chaotic state ($c=4$) ({numref}`fig:cont3d:rosslerreturn`). The return plot is very similar to the logistic map, and has both requirements for Feigenbaum's universality (section {numref}`sec:disc1d:universality`): 1) a unimodal map; and 2) a quadratic maximum. From the Lorenz map ({numref}`fig:cont3d:lorenzmap`) one might  anticipate that the Lorenz system will behave rather differently than the Rössler system, as the cusp implies that the map is is not differentiable at its maximum. Shown in {numref}`fig:cont3d:bifurcation`b is the bifurcation diagram in terms of $r$ for the Lorenz equations. The other two parameters are $\sigma=10$ and $b=8/3$. As can be seen, the system is stable up to a certain value for $r$, after which it bursts into chaotic behaviour without a single trace of period doubling.
 
 ```{figure} _static/cont3d/cont3d_rosslerreturn.png
 :name: fig:cont3d:rosslerreturn
@@ -489,7 +493,7 @@ $$
 1 < r < \frac{\sigma ( \sigma + b + 3)}{\sigma - b - 1}.
 $$
 
-at $r_c = \frac{\sigma ( \sigma  + b + 3)}{\sigma - b - 1}$, $x^*_2$ and $x^*_3$ undergo a Hopf bifurcation. Recall that the Hopf bifurcation represents a transition from a stable spiral (negative real part of eigenvalue) to an unstable spiral (positive real part of eigenvalue). In this case there is no stabilizing flow away from the fixed point, which means that no limit cycle can form; this bifurcation thence marks an immediate transition to chaos[^fn2].
+at $r_c = \frac{\sigma ( \sigma  + b + 3)}{\sigma - b - 1}$, $x^*_2$ and $x^*_3$ undergo a Hopf bifurcation. Recall that the Hopf bifurcation represents a transition from a stable spiral (negative real part of eigenvalue) to an unstable spiral (positive real part of eigenvalue). Here the Hopf bifurcation is subcritical (section {numref}`sec:cont2d:bif_hopf`): an unstable limit cycle shrinks onto the fixed point, and no stable limit cycle forms. The strange attractor already exists for $r > 24.06$, so that for $24.06 < r < r_c = 24.74$ it coexists with the two stable fixed points, and the initial condition decides which of the two is reached. At $r_c$ the fixed points lose their stability and only the strange attractor remains[^fn2].
 
 ```{subfigure} 2
 :name: fig:cont3d:bifurcation
@@ -523,7 +527,7 @@ $$
 
 Even though the equation for $z$ is trivial to solve, this result is significant because it incorporated non-autonomous systems into the geometrical interpretation that the phase space provides.
 
-A commonly used concept to reduce the complexity of forced systems is to sample the state vector $\mathbf{x}(t)$ at time fixed intervals $2 \pi / \omega$. By sampling at the same frequency as the forcing, information is provided about whether the system displays forced periodic behavior or has more complex dynamics. This is commonly referred to as a *stroboscopic Poincar\'{e* section}.
+A commonly used concept to reduce the complexity of forced systems is to sample the state vector $\mathbf{x}(t)$ at time fixed intervals $2 \pi / \omega$. By sampling at the same frequency as the forcing, information is provided about whether the system displays forced periodic behavior or has more complex dynamics. This is commonly referred to as a *stroboscopic Poincaré section*.
 
 ````{admonition} Example
 :class: example
@@ -539,7 +543,7 @@ Consider a damped and forced version of the double-well oscillator discussed in 
 \end{aligned}
 ```
 
-Here, $f$ is a damping coefficient and $\omega$ and $A$ are the forcing frequency $\omega$ and amplitude $A$, respectively. Physically, this system can represent a slender steel beam with a damping coefficient $f$  that is clamped in a rigid framework, with two permanent magnets at the base pulling the beam in opposite directions ({numref}`fig:cont3d:doublewell`). As we have seen in section {numref}`sec:cont2d:conservative`, in the absence of friction and forcing ($f=0$ and $A=0$) this system has a potential $V=x^4/4-x^2/2+y^2/2$ ({numref}`fig:cont2d:conservative_e` or {numref}`fig:cont3d:doublewell_results`(a)) that has two minima representing the stable equilibrium solutions in which the beam is buckled to one side; the problem earns its name due to the two wells that form as a result.
+Here, $f$ is a damping coefficient and $\omega$ and $A$ are the forcing frequency $\omega$ and amplitude $A$, respectively. Physically, this system can represent a slender steel beam with a damping coefficient $f$  that is clamped in a rigid framework, with two permanent magnets at the base pulling the beam in opposite directions ({numref}`fig:cont3d:doublewell`). As we have seen in section {numref}`sec:cont2d:conservative`, in the absence of friction and forcing ($f=0$ and $A=0$) this system has a total energy $H=x^4/4-x^2/2+y^2/2$ ({numref}`fig:cont2d:conservative_e` or {numref}`fig:cont3d:doublewell_results`(a)) that has two minima representing the stable equilibrium solutions in which the beam is buckled to one side; the problem earns its name due to the two wells that form as a result.
 
 ```{figure} _static/cont3d/cont3d_doublewell.png
 :name: fig:cont3d:doublewell
@@ -548,7 +552,7 @@ Here, $f$ is a damping coefficient and $\omega$ and $A$ are the forcing frequenc
 Sketch of the mechanical system [Strogatz1994].
 ```
 
-In the absence of the forcing, the system has three fixed points, $\mathbf{x}^* \in \{ (-1,0), (0,0), (1,0)\}$. The fixed point at the origin is a saddle node and the other two are stable fixed points. For low values of $A$, the damping will exceed the forcing and the system will end up in one of the wells in a limit cycle. If the forcing amplitude $A$ exceeds a certain value, the system is perturbed so strongly that it is no longer confined to one well only and can move between the two wells. An example is shown in {numref}`fig:cont3d:doublewell_results`(a) for parameter values  $\omega=1$, $f=0.15$, $A=0.3$, and initial conditions $x(0)=0$, $y(0)=0$ and $z(0)=0$. Apart from the trajectories, isolines of the potential $V$ and the three fixed points are shown. The code used to produce the figure is given below.
+In the absence of the forcing, the system has three fixed points, $\mathbf{x}^* \in \{ (-1,0), (0,0), (1,0)\}$. The fixed point at the origin is a saddle and the other two are stable fixed points. For low values of $A$, the damping will exceed the forcing and the system will end up in one of the wells in a limit cycle. If the forcing amplitude $A$ exceeds a certain value, the system is perturbed so strongly that it is no longer confined to one well only and can move between the two wells. An example is shown in {numref}`fig:cont3d:doublewell_results`(a) for parameter values  $\omega=1$, $f=0.15$, $A=0.3$, and initial conditions $x(0)=0$, $y(0)=0$ and $z(0)=0$. Apart from the trajectories, isolines of the total energy $H$ and the three fixed points are shown. The code used to produce the figure is given below.
 
 ```{code-block} maple
 restart; with(plots):
@@ -604,11 +608,9 @@ The result is shown in {numref}`fig:cont3d:doublewell_results`(b). The system do
 
 ## Chaos in conservative systems
 
-As a final topic of this book we consider the three-body problem that was briefly touched upon in chapter {numref}`chap:endstart`. The three-body problem is a canonical problem in celestial mechanics that was pivotal in the realisation that deterministic systems are not always predictable. Whilst the two-body problem is relatively straightforward to solve, as was done by Kepler and formalised by Newton in the 17th century, the solution to the three-body problem remained elusive for several centuries. Newton tried to solve the dynamics of the sun-earth-moon system and remarked about this problem that "...his head never ached but with his studies on the moon"[^fn3]. It was a strong-held belief that solving the three-body problem was merely a matter of time but despite important contributions made by heavy-weights like Euler and Lagrange the problem was not solved. It was not until the early 20th century that Henri Poincaré showed unambiguously that there are fundamental issues with the integrability of the three-body system, and thus its predictability.
+As a final topic of this book we consider the three-body problem that was briefly touched upon in chapter {numref}`chap:endstart`. The three-body problem is a canonical problem in celestial mechanics that was pivotal in the realisation that deterministic systems are not always predictable. Whilst the two-body problem is relatively straightforward to solve, as was done by Kepler and formalised by Newton in the 17th century, the solution to the three-body problem remained elusive for several centuries. Newton tried to solve the dynamics of the sun-earth-moon system and remarked about this problem that "...his head never ached but with his studies on the moon"[^fn3]. It was a strong-held belief that solving the three-body problem was merely a matter of time but despite important contributions made by heavy-weights like Euler and Lagrange the problem was not solved. It was not until the end of the 19th century that Henri Poincaré showed unambiguously that there are fundamental issues with the integrability of the three-body system, and thus its predictability.
 
-NEEDS DIAGRAM
-
-Poincaré's work mostly focussed on the restricted three-body problem, which is a simplified version of the three-body problem in which 1) one body is assumed much smaller than the other two, e.g. a sun-moon-satellite problem; 2) the two heavy bodies rotate in the same plane; and 3) the two heavy objects rotate around each other in a circular motion. Even in this very simplified setting the system governing the motion of the lightest body (the satellite) is governed by a system of four coupled ordinary differential equations:
+Poincaré's work mostly focussed on the restricted three-body problem, which is a simplified version of the three-body problem in which 1) one body is assumed much smaller than the other two, e.g. an earth-moon-satellite problem; 2) the two heavy bodies rotate in the same plane; and 3) the two heavy objects rotate around each other in a circular motion. Even in this very simplified setting the system governing the motion of the lightest body (the satellite) is governed by a system of four coupled ordinary differential equations:
 
 ```{math}
 :label: eq:phenomenon_3body_simple1_m3_full__cont3d
@@ -653,7 +655,7 @@ and earth- and moon-positions
 \end{gathered}
 ```
 
-This is a problem without friction and the system is thus conservative. The most convenient way to see this is to consider the system in terms of a coordinate system that co-rotates with the two bodies; the two heavy bodies are static in this reference frame, which considerably simplifies the analysis. The drawback of the transformation is that the rotating coordinate system introduces pseudo-forces, i.e. centripetal and Coriolis forces. For a derivation, we refer to {cite}`Tel2006`. The result is, after making the system dimensionless using the distance between the two heavy bodies $R$ and the angular velocity $\omega = \sqrt{G(m_1+m_2)/R^3}$:
+This is a problem without friction and the system is thus conservative. The most convenient way to see this is to consider the system in terms of a coordinate system that co-rotates with the two bodies; the two heavy bodies are static in this reference frame, which considerably simplifies the analysis. The drawback of the transformation is that the rotating coordinate system introduces pseudo-forces, i.e. centrifugal and Coriolis forces. For a derivation, we refer to {cite}`Tel2006`. The result is, after making the system dimensionless using the distance between the two heavy bodies $R$ and the angular velocity $\omega = \sqrt{G(m_1+m_2)/R^3}$:
 
 ```{math}
 :label: eq:cont3d:3body_x_nd
@@ -671,11 +673,15 @@ $$
 V(x,y) = -\underbrace{\frac{\mu_1}{d_1}}_{(a)}-\underbrace{\frac{\mu_2}{d_2}}_{(b)}-\underbrace{\frac{1}{2} (x^2+y^2)}_{(c)}-\underbrace{\frac{\mu_1 \mu_2}{2}}_{(d)}
 $$
 
-The potential comprises four different terms: (a) the potential of mass 1; (b) the potential of mass 2; (c) the centripetal force due to rotating frame of reference; and (d) a constant to make maximum value of the potential independent of $\mu$. The landscape generated by $V$ is interesting due to the competition between the two attracting gravitational forces (a,b) and the repelling centripetal force (c). In {numref}`fig:cont4d:3body_v`, the potential function is shown for $\mu = m_2/(m_1+m_2)=0.2$ (consistent with the values displayed in table {numref}`table:phenomenon_3bodyconstants`), and note that $\mu_1=1-\mu$ and $\mu_2 = \mu$. The singularities in the potential are at the positions of the two heavy bodies $\mathbf{x}_1 = (-\mu,0)$ and $\mathbf{x}_2=(1-\mu,0)$.
+The potential comprises four different terms: (a) the potential of mass 1; (b) the potential of mass 2; (c) the centrifugal force due to the rotating frame of reference; and (d) a constant to make maximum value of the potential independent of $\mu$. The landscape generated by $V$ is interesting due to the competition between the two attracting gravitational forces (a,b) and the repelling centrifugal force (c). In {numref}`fig:cont4d:3body_v`, the potential function is shown for $\mu = m_2/(m_1+m_2)=0.2$ (consistent with the values displayed in table {numref}`table:phenomenon_3bodyconstants`), and note that $\mu_1=1-\mu$ and $\mu_2 = \mu$. The singularities in the potential are at the positions of the two heavy bodies $\mathbf{x}_1 = (-\mu,0)$ and $\mathbf{x}_2=(1-\mu,0)$.
 
-```{figure} _static/cont3d/cont4d_3body_V.png
+```{subfigure} 2
 :name: fig:cont4d:3body_v
-:width: 60mm
+:align: center
+:subcaptions: below
+
+![ ](_static/cont3d/cont4d_3body_V.png)
+![ ](_static/cont3d/cont4d_3body_Vcut.png)
 
 The potential $V$ for the restricted three-body system at $\mu=0.2$. (a) isolines of $V$ and the Lagrange points (red diamonds). (b) a cross-section of $V$ at $y=0$, showing the wells with singularies at $x=-\mu$ and $x=1-\mu$, as well are the Lagrange points $L1-L3$ with $V_2 < V_1 < V_3$ (red diamonds).
 ```
@@ -694,7 +700,7 @@ $$
 
 which by definition remains constant along a trajectory as a function of time. This allows for a geometrical interpretation of the system; a trajectory with initial energy $H_0$ will remain confined to the three-dimensional subspace in the four-dimensional phase space for which $H(x,y,u,v)=H_0$. The potential $V$ can be used to assess which region of the phase-space is accessible for a trajectory with a given $H=H_0$. Indeed, the system will by definition not be able to access the region for which $V>H_0$, which is called the *Hill region*.
 
-The extrema on the surface of $V$ are positioned at locations for which both  $\partial V /\partial x=0$ and $\partial V /\partial y=0$. Lagrange discovered that for the restricted three-body problem there exist five distinct extrema, which are commonly referred to as the Lagrange points $L1-L5$. These are indicated by diamonds in {numref}`fig:cont4d:3body_v`. The Lagrange points L1-L3 are positioned on the x-axis and are numbered by convention as indicated in {numref}`fig:cont4d:3body_v`(b). A stability calculation shows that these are all saddle points. The Lagrange point L1 is the most important point for our purposes: its potential $V_{L1}$ dictates whether a satellite with energy $H_0$ is able to escape from the gravitational of pull of the two bodies. Indeed, for $H_0<V_{L1}$ the trajectory cannot escape. The Lagrange point L2 with $V_{L2} < V_{L1}$ dictates whether the satellite's orbit must remain confined to one of the two heavy bodies. There exists an energy band $V_{L2} < H_0 < V_{L1}$ for which the satellite can orbit both bodies whilst it is still unable to escape. Finally, a satellite with energy $V_{L1} < H_0 < V_{L3}$ is able to escape the system on the side of the light body only.
+The extrema on the surface of $V$ are positioned at locations for which both  $\partial V /\partial x=0$ and $\partial V /\partial y=0$. Lagrange discovered that for the restricted three-body problem there exist five distinct extrema, which are commonly referred to as the Lagrange points $L1-L5$. These are indicated by diamonds in {numref}`fig:cont4d:3body_v`. The Lagrange points L1-L3 are positioned on the x-axis and are numbered by convention as indicated in {numref}`fig:cont4d:3body_v`(b). Note that this numbering interchanges L1 and L2 with respect to the convention common in astronomy, where L1 lies between the two bodies. A stability calculation shows that these are all saddle points. The Lagrange point L1 is the most important point for our purposes: its potential $V_{L1}$ dictates whether a satellite with energy $H_0$ is able to escape from the gravitational of pull of the two bodies. Indeed, for $H_0<V_{L1}$ the trajectory cannot escape. The Lagrange point L2 with $V_{L2} < V_{L1}$ dictates whether the satellite's orbit must remain confined to one of the two heavy bodies. There exists an energy band $V_{L2} < H_0 < V_{L1}$ for which the satellite can orbit both bodies whilst it is still unable to escape. Finally, a satellite with energy $V_{L1} < H_0 < V_{L3}$ is able to escape the system on the side of the light body only.
 
 The equation governing the position of the Lagrange points $L1-L3$ is a fifth order polynomial that does not have a closed-form solution, although several approximations have been developed over the years. However, it is straightforward to determine these numerically using maple, by recognising that the two heavy bodies separate the Lagrange points $L1-L3$:
 
@@ -732,12 +738,12 @@ For $\mu=0.2$, maple returns $(x_L1, x_L2, x_L3)=(1.27, 0.44. -1.08)$ and associ
 ![ ](_static/cont3d/cont4d_3body_traj4.png)
 ![ ](_static/cont3d/cont4d_3body_Poincare.png)
 
-. The behaviour of the three-body system at $\mu=0.2$ for four different initial conditions. (a-d) the trajectories in space. (e) $(x_n, u_n)$ projection of a Poincaré section at $y=0$ (colours correspond to different initial conditions). The Hill region $V>V_1$ is denoted in grey. (e) Poincaré section.
+The behaviour of the three-body system at $\mu=0.2$ for four different initial conditions. (a-d) The trajectories in space; the Hill region $V>V_{L1}$ is denoted in grey. (e) $(x_n, u_n)$ projection of a Poincaré section at $y=0$ (colours correspond to the initial conditions of (a-d)).
 ```
 
-One of the typical features of conservative system is that there are regions of the phase space in which the trajectories are periodic or quasi-periodic that are surrounded by regions in which the system displays chaotic behavior, similar to the standard map discussed in section {numref}`sec:disc2d:standardmap`. In {numref}`fig:cont4d:3body_poincare` the trajectories for four different initial conditions are shown. In Figs {numref}`fig:cont4d:3body_poincare`(a-c), $H_0 < V_{L1}$ and the trajectories orbit one of the two bodies. For the initial condition shown in {numref}`fig:cont4d:3body_poincare`(d) the trajectory has an energy $V_2 < H_0 < V_1$ and as can be seen the trajectory revolves around both bodies.
+One of the typical features of conservative system is that there are regions of the phase space in which the trajectories are periodic or quasi-periodic that are surrounded by regions in which the system displays chaotic behavior, similar to the standard map discussed in section {numref}`sec:disc2d:standardmap`. In {numref}`fig:cont4d:3body_poincare` the trajectories for four different initial conditions are shown. In Figs {numref}`fig:cont4d:3body_poincare`(a) and (c), $H_0 < V_{L2}$ ($H_0 = -2.54$ and $-2.71$), so that the trajectories are confined to one of the two bodies. The orbit in {numref}`fig:cont4d:3body_poincare`(b) has $H_0 = -1.51 > V_{L1}$: its energy would allow it to escape, yet it keeps circling the light body. For the initial condition shown in {numref}`fig:cont4d:3body_poincare`(d) the trajectory has an energy $V_{L2} < H_0 = -1.94 < V_{L1}$ and as can be seen the trajectory revolves around both bodies.
 
-We construct a Poincaré section for the plane $y=0$ and consider only those crossings for which $v>0$, thereby ensuring that only full revelations are considered. The Poincaré section reduces the 4-D continuous system to a 3-D discrete system, of which we show the ($x_n, u_n$) projection in {numref}`fig:cont4d:3body_poincare`(e). Note that as conservative systems do not have an attractor, there is no need to discard transients, and all the data can be used. The orbits of Figs {numref}`fig:cont4d:3body_poincare`(a-c) correspond to quasi-periodic orbits as is clear from the  development of a closed loop in the Poincaré section. The behaviour of the orbit shown in {numref}`fig:cont4d:3body_poincare`(d) is entirely different, as the system visits very large regions in the phase space. This is a chaotic trajectory. Another interesting point is that the chaotic regions are intertwined with the (quasi)-periodic regions as is evident from the orbits of Figs {numref}`fig:cont4d:3body_poincare`(a,c).
+We construct a Poincaré section for the plane $y=0$ and consider only those crossings for which $v>0$, thereby ensuring that only full revolutions are considered. The Poincaré section reduces the 4-D continuous system to a 3-D discrete system, of which we show the ($x_n, u_n$) projection in {numref}`fig:cont4d:3body_poincare`(e). Note that as conservative systems do not have an attractor, there is no need to discard transients, and all the data can be used. The orbits of Figs {numref}`fig:cont4d:3body_poincare`(a-c) correspond to quasi-periodic orbits as is clear from the  development of a closed loop in the Poincaré section. The behaviour of the orbit shown in {numref}`fig:cont4d:3body_poincare`(d) is entirely different, as the system visits very large regions in the phase space. This is a chaotic trajectory. Another interesting point is that the chaotic regions are intertwined with the (quasi)-periodic regions as is evident from the orbits of Figs {numref}`fig:cont4d:3body_poincare`(a,c).
 
 Conservative systems represent a vast area of research and the observations above give a flavour of the dynamics. For more information we refer to e.g. {cite}`Ott1993,Schuster1995,Tel2006`.
 
