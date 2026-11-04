@@ -80,7 +80,7 @@ $$
  \end{array} \right], \\
  r_1 = R \frac{m_2}{m_1+m_2}, \ \ \
  r_2 = R \frac{m_1}{m_1+m_2}, \ \ \
- \omega = 2 \sqrt{\frac{G(m_1+m_2)}{R^3} },
+ \omega = \sqrt{\frac{G(m_1+m_2)}{R^3} },
 \end{gathered}
 $$
 

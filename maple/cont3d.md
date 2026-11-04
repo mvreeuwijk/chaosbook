@@ -352,7 +352,7 @@ The mapping $\mathbf{x}_{k+1} = P(\mathbf{x}_k)$ is called the *Poincaré map*. 
 :name: fig:cont3d:poincaresection
 :width: 50mm
 
-A Poincaré section samples the intersections of a trajectory in phase space with the surface $S$. [Strogatz1994].
+A Poincaré section samples the intersections of a trajectory in phase space with the surface $S$. (after Strogatz, 1994).
 ```
 
 A simple limit cycle will correspond to a fixed point $\mathbf{x}^* = P(\mathbf{x}^*)$ on the surface of section $S$ ({numref}`fig:cont3d:poincaresection`). If the limit cycle is more complex than shown, i.e. when it requires $M$ intersections to return back to its original position, then the discrete mapping has period-$M$ behavior. For chaotic behavior, the Poincaré map will never return to the same place, and a low dimensional version of the attractor will emerge (for dissipative systems).
@@ -541,7 +541,7 @@ Here, $f$ is a damping coefficient and $\omega$ and $A$ are the forcing frequenc
 :name: fig:cont3d:doublewell
 :width: 60mm
 
-Sketch of the mechanical system [Strogatz1994].
+Sketch of the mechanical system (after Strogatz, 1994).
 ```
 
 In the absence of the forcing, the system has three fixed points, $\mathbf{x}^* \in \{ (-1,0), (0,0), (1,0)\}$. The fixed point at the origin is a saddle and the other two are stable fixed points. For low values of $A$, the damping will exceed the forcing and the system will end up in one of the wells in a limit cycle. If the forcing amplitude $A$ exceeds a certain value, the system is perturbed so strongly that it is no longer confined to one well only and can move between the two wells. An example is shown in {numref}`fig:cont3d:doublewell_results`(a) for parameter values  $\omega=1$, $f=0.15$, $A=0.3$, and initial conditions $x(0)=0$, $y(0)=0$ and $z(0)=0$. Apart from the trajectories, isolines of the total energy $H$ and the three fixed points are shown. The code used to produce the figure is given below.

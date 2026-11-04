@@ -409,7 +409,7 @@ The mapping $\mathbf{x}_{k+1} = P(\mathbf{x}_k)$ is called the *Poincaré map*. 
 :name: fig:cont3d:poincaresection
 :width: 50mm
 
-A Poincaré section samples the intersections of a trajectory in phase space with the surface $S$. [Strogatz1994].
+A Poincaré section samples the intersections of a trajectory in phase space with the surface $S$. (after Strogatz, 1994).
 ```
 
 :::{only} html
@@ -648,7 +648,7 @@ Here, $f$ is a damping coefficient and $\omega$ and $A$ are the forcing frequenc
 :name: fig:cont3d:doublewell
 :width: 60mm
 
-Sketch of the mechanical system [Strogatz1994].
+Sketch of the mechanical system (after Strogatz, 1994).
 ```
 
 :::{only} html

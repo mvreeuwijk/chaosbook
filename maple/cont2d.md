@@ -283,7 +283,7 @@ g(x^*,y^*) &= 0
 
 The lines for which $f(x,y)=0$ and $g(x,y)=0$ are called *nullclines* and fixed points exist on the intersection of both nullclines.
 
-For the Lotka-Volterra equations {eq}`eq:cont2d:lv_x`,{eq}`eq:cont2d:lv_x`, the requirements of $\dot{x}=x-xy=0$ and $\dot{y}=xy - \alpha y = 0$ lead to, respectively
+For the Lotka-Volterra equations {eq}`eq:cont2d:lv_x`, the requirements of $\dot{x}=x-xy=0$ and $\dot{y}=xy - \alpha y = 0$ lead to, respectively
 
 $$
 \begin{aligned}
@@ -367,7 +367,7 @@ $$
 
 where $\tilde{\delta}$ and $\tilde{\epsilon}$ denote the coordinates in the eigendirections and $\sigma_{1,2}$ are the eigenvalues of $J(x^*, y^*)$. The different types of fixed points are exactly those presented in {numref}`fig:cont2d:classification2`, the only difference with linear systems being that the behaviour is limited to the local neighborhood of the fixed point.
 
-The following `maple` fragment determines the stability of the two fixed points of the Lotka-Volterra equations {eq}`eq:cont2d:lv_x`,{eq}`eq:cont2d:lv_x`:
+The following `maple` fragment determines the stability of the two fixed points of the Lotka-Volterra equations {eq}`eq:cont2d:lv_x`:
 
 ````{admonition} Maple
 :class: maple
@@ -549,7 +549,7 @@ where $c$ is a coefficient. Of course, the Hamiltonian is just the total energy 
 ````{admonition} Example
 :class: example
 
-Consider the motion of a particle in a double-well potential given by $V(x) = \frac{1}{4} x^4 - \frac{1}{2} x^2$ (and therefore $F(x) = - m (x^3-x)$), for which the governing equations are (cf. {eq}`eq:cont2d:smham_x`, {eq}`eq:cont2d:smham_x`):
+Consider the motion of a particle in a double-well potential given by $V(x) = \frac{1}{4} x^4 - \frac{1}{2} x^2$ (and therefore $F(x) = - m (x^3-x)$), for which the governing equations are (cf. {eq}`eq:cont2d:smham_x`):
 
 ```{math}
 :label: eq:cont2d:doublewell_x

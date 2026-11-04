@@ -936,11 +936,11 @@ Instead the nonlinearity causes the system to lock into a period-2 solution. Thi
 phase locking in a period-2 solution for $\Omega \in [0.464; 0.536]$ and ($K=1$) in the circle map.
 ```
 
-The tendency of a system to modify its frequency due to external impulses occurs in many situations. For example, crickets in South East Asia are known to chirp at a certain frequency and do so over extensive periods of time. Apparently, the crickets can increase or decrease their own natural chirping frequency depending on stimuli from outside to lock their phase with the other crickets.
+The tendency of a system to modify its frequency due to external impulses occurs in many situations. For example, fireflies in South East Asia are known to flash at a certain frequency and do so over extensive periods of time. Apparently, the fireflies can increase or decrease their own natural flashing frequency depending on stimuli from outside to lock their phase with the other fireflies.
 
 For more information on this topic, see {cite:p}`Strogatz1994`.
 
-Normally, phase-locking is the result of two competing timescales: a natural internal timescale (such as the cricket's preferred chirping rate) and an external forcing time scale (the chirping rate of the other crickets).
+Normally, phase-locking is the result of two competing timescales: a natural internal timescale (such as the firefly's preferred flashing rate) and an external forcing time scale (the flashing rate of the other fireflies).
 
 The spontaneous locking into specific modes may seem quite mysterious, but unlocking the secret behind the mode-locking of the circle map will require nothing more than the tools of chapter {numref}`sec:disc1d`. As we are interested in period-2 solutions $x_{n+2} = x_n = x^*$, it is natural to consider the second iterate $x_{n+2} = f(f(x_n))$ and study it for various values of $\Omega$. Shown in {numref}`fig:disc2d_circlemap_return_p2` are the mappings for $\Omega=0.464$, $0.500$ and $0.536$. As $\Omega$ increases, the mappings shift upwards. Around $\Omega=0.464$ (thin dashed line), the mapping starts intersecting with $y=x$, which lasts up to $\Omega=0.536$ (dash-dotted line). Thus, the phase-dependent acceleration or deceleration introduced by the nonlinearity, makes that period-2 solutions are possible over a finite range of $\Omega$.
 
