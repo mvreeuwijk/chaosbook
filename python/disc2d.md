@@ -245,7 +245,7 @@ $$
 Fixed points $(x^*,y^*)$ follow from solving {eq}`eq:disc2d:general_map_fp`, which in this case amounts to solving
 
 $$
-\begin{aligned} x^* &= y* & y^* &=-b y^* +ay^*-y^{*3} \end{aligned}
+\begin{aligned} x^* &= y^* & y^* &=-b y^* +ay^*-y^{*3} \end{aligned}
 $$
 
 This yields three fixed points
@@ -522,23 +522,23 @@ Evolution in time of the potential energy $E_{\text{p},n}$ (circles), kinetic en
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_bowl.py)*
 :::
 
-Does the system {eq}`eq:ball_dimless` allow stationary (periodic) situations? There is a period-1 solution possible where the ball hops up and down precisely in the center with no horizontal velocity: $X^*=Y^*=0$. One can obtain infinitely many period-2 solutions when $v_0=1$:
+Does the system {eq}`eq:ball_dimless` allow stationary (periodic) situations? There is a period-1 solution possible where the ball hops up and down precisely in the center with no horizontal velocity: $X^*=U^*=0$, for any $V^*$. Strictly speaking this orbit is a limit $U_n\rightarrow 0$, because the map {eq}`eq:ball_dimless` divides by $U_n$. One can obtain infinitely many period-2 solutions when $V_0=1$:
 
 $$
-\begin{aligned} (x_0,u_0,v_0)&=(-a,a,1) \,\rightarrow \, (a,-a,1) \,\rightarrow \,(-a,a,1) \,\rightarrow \, \end{aligned}
+\begin{aligned} (X_0,U_0,V_0)&=(-a,a,1) \,\rightarrow \, (a,-a,1) \,\rightarrow \,(-a,a,1) \,\rightarrow \, \end{aligned}
 $$
 
 with arbitrary $a$. With a little more effort one can also find less obvious solutions such as the asymmetric periodic trajectory
 
 $$
-\begin{aligned} (x_0,u_0,v_0)&=\Bigl(-\frac{1}{2},\frac{1}{2},\frac{23}{8}\Bigr) \,\rightarrow \,\Bigl(2, -2, -\frac{7}{8}\Bigr)\,\rightarrow \,\Bigl(-\frac{1}{2},\frac{1}{2},\frac{23}{8}\Bigr)\,\rightarrow \, \end{aligned}
+\begin{aligned} (X_0,U_0,V_0)&=\Bigl(-\frac{1}{2},\frac{1}{2},\frac{23}{8}\Bigr) \,\rightarrow \,\Bigl(2, -2, -\frac{7}{8}\Bigr)\,\rightarrow \,\Bigl(-\frac{1}{2},\frac{1}{2},\frac{23}{8}\Bigr)\,\rightarrow \, \end{aligned}
 $$
 
 Both periodic solutions are shown in {numref}`fig:disc2d:bouncing_ball_in_a_bowl`.
 
 ## Growth of errors revisited: Lyapunov exponents of higher order mappings
 
-Consider two data-sets resulting from the same mapping $\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_{n})$, $\mathbf{y}_{n+1}=\mathbf{f}(\mathbf{y}_{n})$ but resulting from slightly differing initial conditions, i.e. $\mathbf{y}_{n} = \mathbf{x}_0+\boldsymbol{\epsilon}_0$ with $\lVert\boldsymbol{\epsilon}_0\rVert\ll 1$. Denoting the difference between the two data-sets at step $n$ as $\boldsymbol{\epsilon}_n$ and assuming the differences are still small, one can derive (see section {numref}`sec:disc2d:twodimmaps`)
+Consider two data-sets resulting from the same mapping $\mathbf{x}_{n+1}=\mathbf{f}(\mathbf{x}_{n})$, $\mathbf{y}_{n+1}=\mathbf{f}(\mathbf{y}_{n})$ but resulting from slightly differing initial conditions, i.e. $\mathbf{y}_{0} = \mathbf{x}_0+\boldsymbol{\epsilon}_0$ with $\lVert\boldsymbol{\epsilon}_0\rVert\ll 1$. Denoting the difference between the two data-sets at step $n$ as $\boldsymbol{\epsilon}_n$ and assuming the differences are still small, one can derive (see section {numref}`sec:disc2d:twodimmaps`)
 
 $$
 \begin{aligned}
@@ -610,6 +610,13 @@ $$
 $$
 
 showing that the 'measured' effective  Lyapunov exponent will always be between the values obtained from {eq}`eq:disc2d:lyap_anyorder`. But it is incorrect to assume that $\Lambda_{\text{e}}$ will be an average of the $\Lambda_1,\ldots,\Lambda_m$.
+
+In practice $\boldsymbol{\epsilon}_{0}$ is never exactly aligned with one eigenvector. A generic perturbation has a component along the most unstable direction, and this component grows fastest, so that after some steps it dominates. For a generic perturbation the effective exponent therefore tends to the largest Lyapunov exponent:
+
+```{math}
+:label: eq:disc2d:lyap_effective_max
+\Lambda_{\text{e}} \rightarrow \Lambda_m = \Lambda_{\text{max}}
+```
 
 (sec:disc2d:henonlyap)=
 ### Example: Lyapunov exponents of the Hénon map
@@ -748,15 +755,15 @@ The dynamics of the undamped kicked rotor system
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_kickedrotor.py)*
 :::
 
-Before deriving the governing equations, let us analyse a typical timeseries of the kicked rotor system ({numref}`fig:disc2d_kickedrotor_cont`). The rotor is kicked at intervals $T=10$ and for simplicity friction has been neglected. {numref}`fig:disc2d_kickedrotor_cont` shows the impulsive forcing $F_t$ due to the kicks, the radial velocity $v_\theta$ and the phase angle $\theta$ as a function of time. In between the kicks, no force acts on the rotor so the velocity stays constant. As a result, the angle $\theta$ changes linearly with time. At $t=10$, the system is kicked ($F_t$ shows the direction and relative magnitude of the forcing), by which the velocity changes instanteneously. The angle does not change in this short instance. As the kick at $t=10$ is large and positive, the rotor speeds up ($v_\theta$ increases), which translates to an increase in the slope of $\theta$. As the kicking strength $I$ depends on the angle $\theta$, each kick is generally of different strength. This property gives rise to some very complicated dynamics. But before we can explore this complexity, we need to develop the governing equations for the kicked rotor system.
+Before deriving the governing equations, let us analyse a typical timeseries of the kicked rotor system ({numref}`fig:disc2d_kickedrotor_cont`). The rotor is kicked at intervals $T=10$ and for simplicity friction has been neglected. {numref}`fig:disc2d_kickedrotor_cont` shows the impulsive forcing $F_t$ due to the kicks, the tangential velocity $v_\theta$ and the phase angle $\theta$ as a function of time. In between the kicks, no force acts on the rotor so the velocity stays constant. As a result, the angle $\theta$ changes linearly with time. At $t=10$, the system is kicked ($F_t$ shows the direction and relative magnitude of the forcing), by which the velocity changes instanteneously. The angle does not change in this short instance. As the kick at $t=10$ is large and positive, the rotor speeds up ($v_\theta$ increases), which translates to an increase in the slope of $\theta$. As the kicking strength $I$ depends on the angle $\theta$, each kick is generally of different strength. This property gives rise to some very complicated dynamics. But before we can explore this complexity, we need to develop the governing equations for the kicked rotor system.
 
-The kicked rotor is governed by conservation of angular momentum $J$, which states that the rate-of-change of $J$ is equal to the applied torque:
+The kicked rotor is governed by the balance of angular momentum $J$, which states that the rate-of-change of $J$ is equal to the applied torque:
 
 $$
 \dot{J} = \sum F_\theta r.
 $$
 
-Here $F_\theta$ is the force in the $x,y$ plane perpendicular to the arm. In between the kicks, the rotor is subject to linear friction $F_\theta=-\gamma v_\theta$, where $v_\theta$ is the radial velocity and $\gamma$ a friction coefficient. The angular momentum $J$ is defined as $J=m r v_\theta$ and $v_\theta = r \dot{\theta}$, so that the rotor (in absence of kicks) is governed by the following two linear ODE's:
+Here $F_\theta$ is the force in the $x,y$ plane perpendicular to the arm. In between the kicks, the rotor is subject to linear friction $F_\theta=-\gamma v_\theta$, where $v_\theta$ is the tangential velocity and $\gamma$ a friction coefficient. The angular momentum $J$ is defined as $J=m r v_\theta$ and $v_\theta = r \dot{\theta}$, so that the rotor (in absence of kicks) is governed by the following two linear ODE's:
 
 ```{math}
 :label: eq:disc2d:thetadot
@@ -766,7 +773,7 @@ r \dot{\theta} &= v_\theta, \\
 \end{aligned}
 ```
 
-Due to linearity, we can solve the system ({eq}`eq:disc2d:thetadot`) without complications. Denoting the state of the system immediately after a kick by ($\theta_n^+,v_n^+)$, the phase angle $\theta$ and radial velocity $v_\theta$ evolve according to
+Due to linearity, we can solve the system ({eq}`eq:disc2d:thetadot`) without complications. Denoting the state of the system immediately after a kick by ($\theta_n^+,v_n^+)$, the phase angle $\theta$ and tangential velocity $v_\theta$ evolve according to
 
 ```{math}
 :label: eq:disc2d:kickedrotor_sol_theta
@@ -803,8 +810,8 @@ Thus, the kick happens over such a short time that the angle does not change. Ho
 ```{math}
 :label: eq:disc2d:kickedrotor_theta
 \begin{aligned}
-\theta_{n+1}^{-} &= \frac{\tau}{r} (1 - e^{-T/\tau}) (v_n^{-} - V(\theta_n)) + \theta_n^{-} \\
-v_{n+1}^{-} &= (v_{n}^{-} - V(\theta_n)) e^{-T/\tau}
+\theta_{n+1}^{-} &= \frac{\tau}{r} (1 - e^{-T/\tau}) (v_n^{-} + V(\theta_n)) + \theta_n^{-} \\
+v_{n+1}^{-} &= (v_{n}^{-} + V(\theta_n)) e^{-T/\tau}
 \end{aligned}
 ```
 
@@ -823,7 +830,7 @@ $$
 \left(\begin{array}{c}
  \theta_n \\
  v_n
-\end{array}\right) -
+\end{array}\right) +
 \left(\begin{array}{c}
  \frac{\tau}{r} \left(1- e^{-T/\tau}\right) \\
  e^{-T/\tau}
@@ -838,7 +845,7 @@ From the general damped kicked rotor system ({eq}`eq:disc2d:kickedrotor_theta`),
 
 $$
 \begin{aligned}
-\theta_{n+1} &= \theta_n - \frac{\tau}{r} V(\theta_n), \\
+\theta_{n+1} &= \theta_n + \frac{\tau}{r} V(\theta_n), \\
  v_{n+1} &= 0.
 \end{aligned}
 $$
@@ -846,7 +853,7 @@ $$
 Clearly, $v_{n+1} = 0$ holds for all $n$ (as $T \gg \tau$, the rotor has come to a halt before the next kick). Hence, the system is governed by the following one-dimensional discrete map:
 
 $$
-\theta_{n+1} = \theta_n - \frac{\tau}{r} V(\theta_n). \\
+\theta_{n+1} = \theta_n + \frac{\tau}{r} V(\theta_n). \\
 $$
 
 When we take for $V(\theta)$ a function of the form $V(\theta) = A+B\sin \theta$  and normalise $\theta$ and $v$ appropriately we obtain the *circle map*. This map will be discussed in detail in section {numref}`sec:disc2d:circlemap`.
@@ -864,11 +871,11 @@ the system ({eq}`eq:disc2d:kickedrotor_theta`) simplifies to
 $$
 \begin{aligned}
 \theta_{n+1} &= \theta_n + \frac{T}{r} v_{n+1}, \\
- v_{n+1} &= v_n - V(\theta_{n}).
+ v_{n+1} &= v_n + V(\theta_{n}).
 \end{aligned}
 $$
 
-When we take for $V(\theta)$ a sinusoidally varying function $I(\theta) = A \sin \theta$ and normalise $\theta$ and $v$ appropriately, we obtain the *standard map*. This map will be discussed in detail in section {numref}`sec:disc2d:standardmap`.
+When we take for $V(\theta)$ a sinusoidally varying function $V(\theta) = A \sin \theta$ and normalise $\theta$ and $v$ appropriately, we obtain the *standard map*. This map will be discussed in detail in section {numref}`sec:disc2d:standardmap`.
 
 (sec:disc2d:lincircle)=
 ### Linear maps on the circle
@@ -965,7 +972,7 @@ For the linear map {eq}`eq:disc2d:lincircle`, $f^{(m)}(x_n) = x_n + m \Omega$, s
 
 As an example, we characterise the period-3 solutions $\Omega=\frac{1}{3}$ and $\Omega=\frac{2}{3}$. For $\Omega=\frac{1}{3}$, the system returns to its original position each three iterations ($m=3$) after one revolution ($R=m \Omega = 1$), and thus $w=1/3$. For $\Omega=\frac{2}{3}$, the system returns to its original position each three iterations ($m=3$) but after two revolutions ($R=m \Omega = 2$), and thus $w=2/3$. Thus, for the linear map, the rotation number $w$ is identical to the value of $\Omega$ when the solution is periodic.
 
-Intended to quantify periodic solutions on the circle, the rotation number $w$ is by definition a rational number. However, the standard simplification rules of fractions do not apply to $w$. Take for example $w=4/6$, which one may want to simplify to $w=2/3$. This simplification is not allowed because $w=4/6$ corresponds to a period-6 cycle and $w=2/3$ to a period-3 cycle. If we could make this simplification, then the $w=4/6$ case was not a period-6 solution in the first place, but two subsequent period-3 solutions. [^fn2]
+Intended to quantify periodic solutions on the circle, the rotation number $w$ is by definition a rational number. As a number, $w=4/6$ is simply $w=2/3$. The fraction alone therefore does not tell us the period, and when the period matters we keep the pair $(R,m)$ rather than only $w$. For the linear map {eq}`eq:disc2d:lincircle` the period is always the denominator of $w$ in lowest terms: a 'period-6' solution with $R=4$ is just a period-3 solution with $R=2$, traversed twice. [^fn2]
 
 ```{subfigure} 2
 :name: fig:disc2d_lincircle_quasi
@@ -975,7 +982,7 @@ Intended to quantify periodic solutions on the circle, the rotation number $w$ i
 ![ ](_static/disc2d/disc2d_lincircle_quasi.png)
 ![ ](_static/disc2d/disc2d_lincircle_quasi_cobweb.png)
 
-Quasi-periodicity of system {eq}`eq:disc2d:lincircle` for $\Omega=10.17$. (a) Series. (b) Cobweb.
+Quasi-periodicity of system {eq}`eq:disc2d:lincircle` for $\Omega=\frac{1}{2} (1 + \sqrt{5})$. (a) Series. (b) Cobweb.
 ```
 
 :::{only} html
@@ -984,7 +991,7 @@ Quasi-periodicity of system {eq}`eq:disc2d:lincircle` for $\Omega=10.17$. (a) Se
 
 As follows from {eq}`eq:disc2d:lincircle_p`, there are an infinite number of cases for $\Omega$ with periodic solutions. Nevertheless, there are infinitely more cases for which the system is not periodic. That is, for all $\Omega$ that are *not* a fraction but an irrational number, the solution will not be periodic. {numref}`fig:disc2d_lincircle_quasi` shows the behavior of the system for $\Omega=\frac{1}{2} (1 + \sqrt{5})$. Although the iteration sequence shows that there is much order in the system, the cobweb diagram fills up as $n \rightarrow \infty$, indicating that the system traverses the entire domain. This is naturally a direct result of the choice of $\Omega$: an irrational number cannot be converted to a fraction. Thus, no matter how many iterations and revolutions, the system will never return to its original location. A series like this is called *quasi-periodic*, as the space-filling behavior is a result of the mismatch between $\Omega$ and the size of the domain (which is 1).
 
-Quasi-periodic and chaotic series share the ability never to return at the same location. Nevertheless, the two are fundamentally different. The difference resides in the sensitivity to initial conditions. The exact solution of {eq}`eq:disc2d:lincircle` is given by $x_n = x_0 + n \Omega \mod 1$. Introducing a second series $y_n$ with slightly perturbed initial conditions $y_0 = y_0 + \epsilon_0$ and solution $y_n = y_0 + n \Omega \mod 1$, the difference $y_n - x_n$ is given by
+Quasi-periodic and chaotic series share the ability never to return at the same location. Nevertheless, the two are fundamentally different. The difference resides in the sensitivity to initial conditions. The exact solution of {eq}`eq:disc2d:lincircle` is given by $x_n = x_0 + n \Omega \mod 1$. Introducing a second series $y_n$ with slightly perturbed initial conditions $y_0 = x_0 + \epsilon_0$ and solution $y_n = y_0 + n \Omega \mod 1$, the difference $y_n - x_n$ is given by
 
 $$
 y_n - x_n = y_0 - x_0 = \epsilon_0.
@@ -1006,7 +1013,7 @@ This map can be derived from the kicked rotor when one assumes that the kicking 
 
 The question we set out to answer is how a non-linear sinusoidal term modifies the (quasi-)periodic behavior in {eq}`eq:disc2d:circlemap` one would have for $K=0$. One could surmise that the nonlinear term will destroy the periodic states and creates chaotic series. However, as we will see, instead of destroying periodic solutions, the nonlinear term in {eq}`eq:disc2d:circlemap` does the opposite: it stabilises the system.
 
-Let us set $K = 1$ and vary $\Omega$ in the neighbourhood of $\Omega=1/2$. In {numref}`fig:disc2d_phaselocking`, series are shown for $\Omega \in \{ 0.460, 0.464, 0.500, 0.536, 0.540 \}$. Apparently, the system has period-2 behavior in the entire interval $\Omega \in [ 0.464, 0.536]$. This is interesting, since without the nonlineary, period-2 solutions were only present for $\Omega=1/2$. To compare, without the nonlinearity $\Omega = 0.464$ would result in a periodic solution with a rotation number $w=\frac{464}{1000}$.
+Let us set $K = 1$ and vary $\Omega$ in the neighbourhood of $\Omega=1/2$. In {numref}`fig:disc2d_phaselocking`, series are shown for $\Omega \in \{ 0.460, 0.464, 0.500, 0.536, 0.540 \}$. Apparently, the system has period-2 behavior in the entire interval $\Omega \in [ 0.464, 0.536]$. This is interesting, since without the nonlineary, period-2 solutions were only present for $\Omega=1/2$. To compare, without the nonlinearity $\Omega = 0.464 = \frac{58}{125}$ would result in a period-125 solution with a rotation number $w=\frac{58}{125}$.
 
 Instead the nonlinearity causes the system to lock into a period-2 solution. This behavior is called *mode locking* or also *phase locking*.
 
@@ -1085,7 +1092,7 @@ $$
 \end{aligned}
 $$
 
-The first two solutions are the ones we are looking for; judging from the fact that $x=0.25$ and $x=0.75$ are on the line $y=x$ they must correspond to period-1 solutions. Therefore, the stability region for the period-$2$ solution is $\Omega \in [ 0.46301; 0.53698 ]$.
+The first two solutions are the ones we are looking for; judging from the fact that $x=0.25$ and $x=0.75$ are fixed points of $f$ itself ($f(x)=x \mod 1$ for these values of $\Omega$) they must correspond to period-1 solutions. Therefore, the stability region for the period-$2$ solution is $\Omega \in [ 0.46302; 0.53698 ]$.
 
 The circle map {eq}`eq:disc2d:circlemap` has some very special characteristics for $K=1$ and $\Omega \in [0,1]$. To demonstrate this, we introduce a generalized rotation number $W$ defined by
 
@@ -1220,18 +1227,18 @@ Here, $x$ and $y$ are associated with the phase angle and angular momentum, resp
 ![ ](_static/disc2d/disc2d_standardmap_quasi_deviations.png)
 ![ ](_static/disc2d/disc2d_standardmap_chaos_deviations.png)
 
-Coexistence of chaotic and quasi-periodic solutions at $K=2$. Note the factor 10 difference in scale for the $x$-axis between {numref}`fig:disc2d_standardmap:quasi_series` and {numref}`fig:disc2d_standardmap:quasi_series`. (a) Quasi-periodic; series. (b) Chaotic; series. (c) Quasi-periodic; return plot. (d) Chaos; return plot. (e) Quasi-periodic; deviations. (f) Chaos; deviations.
+Coexistence of chaotic and quasi-periodic solutions at $K=2$. Note the factor 10 difference in scale for the $x$-axis between (e) and (f). (a) Quasi-periodic; series. (b) Chaotic; series. (c) Quasi-periodic; return plot. (d) Chaos; return plot. (e) Quasi-periodic; deviations. (f) Chaos; deviations.
 ```
 
 :::{only} html
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_standardmap.py)*
 :::
 
-Unlike the maps we studied so far, the behavior of the standard map depends strongly on its initial conditions. Indeed, chaotic behavior was normally obtained by changing a system parameter, such as $r$ in the case of the logistic map. For the standard map, (quasi-) periodic solutions can coexist with chaotic solutions at fixed $K$. {numref}`fig:disc2d_standardmap:quasi_series` shows a time-series with initial conditions $(x_0, y_0) = (0.4, 0.1)$ at $K=2$. Although there seems to be some order in the system judging from the hexagonal-like patterns, the series seems to traverse an entire interval of $x$.  The return plot of ({numref}`fig:disc2d_standardmap:quasi_series`) shows that all points fall on one curve, which suggests that the series is either quasi-periodic or chaotic. One can distinguish between the two by studying the sensitivity to initial conditions, and {numref}`fig:disc2d_standardmap:quasi_series` shows that the deviations, starting from $10^{-8}$, grow only algebraically and not exponentially, reaching about $4\cdot 10^{-6}$ after 750 iterations. The assiocated Lyapunov exponent $\Lambda \approx 0$, and we conclude that this series is quasi-periodic.
+Unlike the maps we studied so far, the behavior of the standard map depends strongly on its initial conditions. Indeed, chaotic behavior was normally obtained by changing a system parameter, such as $r$ in the case of the logistic map. For the standard map, (quasi-) periodic solutions can coexist with chaotic solutions at fixed $K$. {numref}`fig:disc2d_standardmap:quasi_series`(a) shows a time-series with initial conditions $(x_0, y_0) = (0.4, 0.1)$ at $K=2$. Although there seems to be some order in the system judging from the hexagonal-like patterns, the series seems to traverse an entire interval of $x$.  The return plot ({numref}`fig:disc2d_standardmap:quasi_series`(c)) shows that all points fall on one curve, which suggests that the series is either quasi-periodic or chaotic. One can distinguish between the two by studying the sensitivity to initial conditions, and {numref}`fig:disc2d_standardmap:quasi_series`(e) shows that the deviations, starting from $10^{-8}$, grow only algebraically and not exponentially, reaching about $4\cdot 10^{-6}$ after 750 iterations. The assiocated Lyapunov exponent $\Lambda \approx 0$, and we conclude that this series is quasi-periodic.
 
-On the other hand, using initial conditions $(x_0, y_0) = (0.1, 0.1)$, the standard map displays chaotic behavior. The series is shown in {numref}`fig:disc2d_standardmap:quasi_series`, and its return plot in {numref}`fig:disc2d_standardmap:quasi_series`. The return plot reveals very little order in the system: based on a current value $x_n$ practically all values can be expected for $x_{n+1}$, except when $x_n$ is near $0.5$. The chaotic nature of the series can be verified by the sensitive dependence on initial conditions ({numref}`fig:disc2d_standardmap:quasi_series`), with an estimated (effective) Lyapunov exponent of $\Lambda \simeq 0.4$.
+On the other hand, using initial conditions $(x_0, y_0) = (0.1, 0.1)$, the standard map displays chaotic behavior. The series is shown in {numref}`fig:disc2d_standardmap:quasi_series`(b), and its return plot in {numref}`fig:disc2d_standardmap:quasi_series`(d). The return plot reveals very little order in the system: based on a current value $x_n$ practically all values can be expected for $x_{n+1}$, except when $x_n$ is near $0.5$. The chaotic nature of the series can be verified by the sensitive dependence on initial conditions ({numref}`fig:disc2d_standardmap:quasi_series`(f)), with an estimated (effective) Lyapunov exponent of $\Lambda \simeq 0.4$.
 
-The return plot for the chaotic series ({numref}`fig:disc2d_standardmap:quasi_series`) shows no sign of an attractor. In this respect, the standard map is fundamentally different from other 2D discrete maps such as the Hénon map . This is because the standard map is *area preserving*. If one were to start out with a little square of initial conditions and apply ({eq}`eq:disc2d:standardmap_x`) its area will remain the same. This can be shown by calculating the determinant of the Jacobian:
+The return plot for the chaotic series ({numref}`fig:disc2d_standardmap:quasi_series`(d)) shows no sign of an attractor. In this respect, the standard map is fundamentally different from other 2D discrete maps such as the Hénon map. This is because the standard map is *area preserving*. If one were to start out with a little square of initial conditions and apply ({eq}`eq:disc2d:standardmap_x`) its area will remain the same. This can be shown by calculating the determinant of the Jacobian:
 
 ````{admonition} Python
 :class: python
@@ -1292,11 +1299,11 @@ $$
 \sigma_{1,2} = 1 + \frac{1}{2} K \pm \frac{1}{2} \sqrt{K (K+4)}.
 $$
 
-For all $K>0$, $\sigma_1 > 1$ and $0 < \sigma_2 < 1$. Therefore, the fixed point $(0,0)$ is a saddle node. In many ways, this saddle node in the domain is the source of the complex behavior, and we will explore this below.
+For all $K>0$, $\sigma_1 > 1$ and $0 < \sigma_2 < 1$. Therefore, the fixed point $(0,0)$ is a saddle. In many ways, this saddle in the domain is the source of the complex behavior, and we will explore this below.
 
-Let us follow the evolution of a large cloud of initial conditions focused very near the saddle node $(0, 0)$.
+Let us follow the evolution of a large cloud of initial conditions focused very near the saddle $(0, 0)$.
 
-The initial shape is a small square square, which is shown in {numref}`fig:disc2d_standardmap_saddlenode_n=-6`. As before, we take $K=2$, for which the eigenvalues and eigenvectors can be calculated by
+The initial shape is a small square square, which is shown in {numref}`fig:disc2d_standardmap_saddlenode_n=-6`(e). As before, we take $K=2$, for which the eigenvalues and eigenvectors can be calculated by
 
 ````{admonition} Python
 :class: python
@@ -1315,7 +1322,7 @@ for sigma, mult, vecs in Jstar.eigenvects():
 ```
 ````
 
-Thus, the largest eigenvalue $\sigma_1=3.73$ with eigenvector $\mathbf{e}_1 = (0.8, 0.6)$ and the other eigenvalue $\sigma_2 = 0.27$ with eigenvector $\mathbf{e}_2 = (-0.35, 0.97)$. Based on $\mathbf{e}_1$, we expect that the cloud will expand at an angle of about $40^o$ with the horizontal.
+Thus, the largest eigenvalue $\sigma_1=3.73$ with eigenvector $\mathbf{e}_1 = (0.8, 0.6)$ and the other eigenvalue $\sigma_2 = 0.27$ with eigenvector $\mathbf{e}_2 = (-0.34, 0.94)$. Based on $\mathbf{e}_1$, we expect that the cloud will expand at an angle of about $36^o$ with the horizontal.
 
 ```{subfigure} 2
 :name: fig:disc2d_standardmap_saddlenode_n=-6
@@ -1339,7 +1346,7 @@ Unfolding of the stable and unstable manifolds by following a small cloud of ini
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_standardmap.py)*
 :::
 
-Indeed, when we apply ({eq}`eq:disc2d:standardmap_x`) on the square, it deforms into a parallelogram; expanding in the direction of $\sigma_1$ and contracting in the direction of $\sigma_2$ whilst preserving its area. In the first few iterations, changes are too small to be visible at the size of the domain, but at $n=3$ ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`) the points have escaped the vicinity of the fixed point. Note that due to constant expansion in one direction and contraction into the other, the initial square deforms into a curve. In the next iteration ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`), the curve spans the entire domain and at $n=5$ ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`), the curve deflects back towards its origin but now from the stable direction. As the curve approaches the fixed point ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`) it starts oscillating back and forth with increasing amplitude as the fixed point approaches.
+Indeed, when we apply ({eq}`eq:disc2d:standardmap_x`) on the square, it deforms into a parallelogram; expanding in the direction of $\sigma_1$ and contracting in the direction of $\sigma_2$ whilst preserving its area. In the first few iterations, changes are too small to be visible at the size of the domain, but at $n=3$ ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`(f)) the points have escaped the vicinity of the fixed point. Note that due to constant expansion in one direction and contraction into the other, the initial square deforms into a curve. In the next iteration ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`(g)), the curve spans the entire domain and at $n=5$ ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`(h)), the curve deflects back towards its origin but now from the stable direction. As the curve approaches the fixed point ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`(i)) it starts oscillating back and forth with increasing amplitude as the fixed point approaches.
 
 ```{figure} _static/disc2d/disc2d_manifolds.png
 :name: fig:disc2d_manifolds
@@ -1352,7 +1359,7 @@ Sketch of the stable and unstable manifolds
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_schematics.py)*
 :::
 
-The curve that is emerging in {numref}`fig:disc2d_standardmap_saddlenode_n=-6` is called the *unstable manifold*, and is denoted by $W^u$. The unstable manifold $W^u$ is defined as the set of points in the domain which originate from the fixed point. Denoting the map by $\mathbf{f}$, its inverse by $\mathbf{f}^{-1}$ and the fixed point by $\mathbf{x}^*$, the unstable manifold $W^u$ is the set of all $\mathbf{x}$ for which
+The curve that is emerging in {numref}`fig:disc2d_standardmap_saddlenode_n=-6`(f)-(i) is called the *unstable manifold*, and is denoted by $W^u$. The unstable manifold $W^u$ is defined as the set of points in the domain which originate from the fixed point. Denoting the map by $\mathbf{f}$, its inverse by $\mathbf{f}^{-1}$ and the fixed point by $\mathbf{x}^*$, the unstable manifold $W^u$ is the set of all $\mathbf{x}$ for which
 
 $$
 \lim_{n \rightarrow \infty} \mathbf{f}^{(-n)}(\mathbf{x}) = \mathbf{x}^*
@@ -1378,25 +1385,25 @@ x_n = f^{-1}(x_{n+1}, y_{n+1})
 \end{aligned}
 ```
 
-As mentioned before, by inverting ({eq}`eq:disc2d:standardmap_x`), the stable directions near the fixed point become unstable and vice versa. If we repeatedly apply ({eq}`eq:disc2d:standardmap_xi`) to the cloud of initial conditions ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`), we obtain after 3 iterations {numref}`fig:disc2d_standardmap_saddlenode_n=-6`, after 4 iterations {numref}`fig:disc2d_standardmap_saddlenode_n=-6` and so on. As can be seen, the stable manifold has qualitatively the same features as the unstable manifold, in that it turns back on itself and starts oscillating with increasing amplitude as it approaches the fixed point.
+As mentioned before, by inverting ({eq}`eq:disc2d:standardmap_x`), the stable directions near the fixed point become unstable and vice versa. If we repeatedly apply ({eq}`eq:disc2d:standardmap_xi`) to the cloud of initial conditions ({numref}`fig:disc2d_standardmap_saddlenode_n=-6`(e)), we obtain after 3 iterations {numref}`fig:disc2d_standardmap_saddlenode_n=-6`(d), after 4 iterations {numref}`fig:disc2d_standardmap_saddlenode_n=-6`(c) and so on. As can be seen, the stable manifold has qualitatively the same features as the unstable manifold, in that it turns back on itself and starts oscillating with increasing amplitude as it approaches the fixed point.
 
 ```{figure} _static/disc2d/disc2d_standardmap_manifolds.png
 :name: fig:disc2d_standardmap_manifolds
 :width: 7.5cm
 
-Intertwining of the unstable (black circles) and stable (grey diamonds) manifolds, showing how incredibly complex the phase plane is. Note that this only a small part of the manifolds, as we have only iterated 7 times instead of infinite.
+Intertwining of the unstable (black circles) and stable (grey diamonds) manifolds, showing how incredibly complex the phase plane is. Note that this only a small part of the manifolds, as we have only iterated 6 times (forwards and backwards) instead of infinite.
 ```
 
 :::{only} html
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/disc2d/fig_standardmap.py)*
 :::
 
-By plotting the stable and unstable manifolds $W^s$ and $W^u$ in one graph ({numref}`fig:disc2d_standardmap_manifolds`), we see that the stable and unstable manifolds intersect many times. This means that there are points in the phase space which end up in the saddle node at (0, 0) both in the limit of $n \rightarrow - \infty$ or $n \rightarrow \infty$. An intersection of a stable and unstable manifold originating from the same fixed point is called a *homoclinic intersection*. If a stable manifold from a fixed point intersects with an unstable manifold from another fixed point, the intersection is called an *heteroclinic* intersection. There are either zero or infinitely many intersections of $W^s$ and $W^u$. This is easy to verify, because when there is one intersection $\mathbf{x}_i$, applying the mapping $\mathbf{f}$ will generate another intersection. Iterating again will generate another intersection and so on to infinity. The same holds for applying the inverse $\mathbf{f}^{-1}$ on $\mathbf{x}_i$.
+By plotting the stable and unstable manifolds $W^s$ and $W^u$ in one graph ({numref}`fig:disc2d_standardmap_manifolds`), we see that the stable and unstable manifolds intersect many times. This means that there are points in the phase space which end up in the saddle at (0, 0) both in the limit of $n \rightarrow - \infty$ or $n \rightarrow \infty$. An intersection of a stable and unstable manifold originating from the same fixed point is called a *homoclinic intersection*. If a stable manifold from a fixed point intersects with an unstable manifold from another fixed point, the intersection is called an *heteroclinic* intersection. There are either zero or infinitely many intersections of $W^s$ and $W^u$. This is easy to verify, because when there is one intersection $\mathbf{x}_i$, applying the mapping $\mathbf{f}$ will generate another intersection. Iterating again will generate another intersection and so on to infinity. The same holds for applying the inverse $\mathbf{f}^{-1}$ on $\mathbf{x}_i$.
 
 For more information, we refer to e.g. {cite}`Ott1993,Schuster1995`.
 
 [^fn1]: This is a somewhat simpler version of a ball bouncing in a wedge shaped confinement
-[^fn2]: The state $w=4/6$ does not exist for the linear map {eq}`eq:disc2d:lincircle`. The realisable period-6 solutions, after excluding the period 1,2 and 3 solutions from {eq}`eq:disc2d:lincircle_p`, are $w= \in \{ 1/6, 5/6 \}$. However, for nonlinear maps a state like $w=4/6$ can exist, because not all increments have the same size.
+[^fn2]: A period-6 solution with $R=4$ does not exist for the linear map {eq}`eq:disc2d:lincircle`. The realisable period-6 solutions, after excluding the period 1,2 and 3 solutions from {eq}`eq:disc2d:lincircle_p`, are $w \in \{ 1/6, 5/6 \}$. The same holds for the circle map {eq}`eq:disc2d:circlemap` as long as it is invertible ($K \leq 1$). For $K>1$, however, a period-3 solution with $w=2/3$ can period-double into a period-6 solution with $(R,m)=(4,6)$, because not all increments have the same size.
 
 ```{include} _includes/disc2d_exercises.md
 ```
