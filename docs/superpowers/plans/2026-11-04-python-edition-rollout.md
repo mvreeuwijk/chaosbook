@@ -232,6 +232,18 @@ Labels are mathtext, using the shared `book.mplstyle` and the size classes.
    Changes to the book itself (writing style, rigour, examples, figures,
    prose errata) go in their own PR, applied to BOTH editions. The Rössler
    band placement (#5) is the first such PR.
+9. **Voice (author, the same day).** The voice of chapters 1–6 is NOT
+   changed. Chapter 7 is lecture material and is rewritten into exactly the
+   lecture voice of chapters 1–6. Chapter 8 looks ahead and may stay more
+   referential; it gets only a light pass towards the house voice. Chapter 5
+   gets error corrections in place, not a rewrite. All 77 [BOOK] review
+   findings are in scope. Planned PR order, each applied to both editions:
+   (1) the [BOOK] content fixes; (2) a copy-edit of chapters 1–6 (typos,
+   markup, sentences that obscure meaning, with minimal wording changes);
+   (3) the chapter 7 rewrite plus the light chapter 8 pass. Chapters 7–8
+   follow the formatting conventions of chapters 1–6, never the other way
+   round. The chapter 7/8 prose work is done by a Fable agent (author's
+   choice), briefed with chapters 1–6 as the reference voice.
 
 ## Conventions for implementers (binding)
 
