@@ -44,6 +44,12 @@ for r in [1.5, 3.2, 3.5, 3.9]:
 for r in [2.7, 3.2, 3.9]:
     fig, ax = plt.subplots(figsize=(4.2, 4.2))
     cb.cobweb(cb.logistic, x0=0.1, n=30, ax=ax, r=r)
+    if r == 2.7:
+        # the construction lines of the text: from every point on the diagonal
+        # straight down to the x-axis, where the next iterate x_k is read off
+        X = cb.orbit(cb.logistic, x0=0.1, n=30, r=r)
+        for xk in X[1:6]:
+            ax.plot([xk, xk], [0, xk], ":", color="0.4", lw=1.0)
     plt.tight_layout()
     plt.savefig(OUT / f"disc1d_logist_cobweb_r{tag(r)}.png", dpi=150)
     plt.close()

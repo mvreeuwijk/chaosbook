@@ -1318,7 +1318,7 @@ def F(r):
         x = cb.logistic(x, r)
     return x - 0.5
 
-rs = np.linspace(2, 3.56, 2000)
+rs = np.linspace(1.9, 3.56, 2000)
 vals = [F(r) for r in rs]
 [round(brentq(F, rs[i], rs[i + 1]), 9)
  for i in range(len(rs) - 1) if vals[i] * vals[i + 1] < 0]
@@ -1328,10 +1328,10 @@ vals = [F(r) for r in rs]
 directly gives the first four values of $r$ of superstability (recall that a period 8 also solves for periods 1,2,4)
 
 $$
-2., 3.236067977, 3.498561699, 3.554640863
+2.0, 3.236067977, 3.498561699, 3.554640863
 $$
 
-Unfortunately this method breaks down for period 16 and higher due to practical reasons; $f^{(m)}(1/2)$ is a polynomial in $r$ with leading order $r^{2^m-1}$. For $m=8$ this gives already $r^{255}$; for period-16 it amounts to $r^{65535}$ which is hardly managable of course.
+The same scan works for longer periods when $F$ iterates the map more often; for period 16, 32 and 64 it finds the largest superstable value of $r$ below $r_\infty$ at 3.56666738, 3.56924353 and 3.56979529. The practical drawback is that the roots crowd together as $r_\infty$ is approached, so that an ever finer grid in $r$ is needed to separate them (a root between two grid points that happen to have the same sign of $F$ is missed), and the accuracy of every root is limited by the bracketing and the tolerance of `brentq`. A method that needs no grid and gives control over the error is the Newton-Raphson iteration, which we describe next.
 
 Seed at $x_0$ where $x_0$ satisfies $q'(x_0) = 0$ to satisfy the superstability criterion. For the logistic map and the sine map $x_0 = 1/2$. Next we pick some value of $r$ and generate
 
