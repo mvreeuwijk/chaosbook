@@ -26,7 +26,7 @@ Reproduce the twin experiment of {numref}`fig:practice:assimilation`.
 
 a) Integrate a "truth" trajectory and generate noisy observations of the full state at intervals $\Delta t_{\text{obs}} = 0.2$, adding Gaussian noise of standard deviation $1.5$ to each component. Starting from a deliberately wrong initial guess, run a free forecast (no assimilation) and confirm that it diverges from the truth within the predictability horizon.
 
-b) Implement the extended Kalman filter of section {numref}`sec:practice:assimilation`, reusing the Jacobian $J$ of the chapter on chaos in continuous systems to propagate the covariance. Show that the analysis tracks the truth and that its RMS error stays well below that of the free forecast.
+b) Implement the extended Kalman filter of section {numref}`sec:practice:assimilation`, reusing the Jacobian $J$ of chapter {numref}`chap:cont3d` to propagate the covariance. Show that the analysis tracks the truth and that its RMS error stays well below that of the free forecast.
 
 c) Study the effect of the observation frequency and noise. What happens as $\Delta t_{\text{obs}}$ is increased towards the predictability horizon? What happens if only the $x$-component is observed instead of the full state?
 
@@ -57,7 +57,7 @@ c) How does the time taken to capture the orbit depend on the size of the allowe
 
 a) Integrate the Lorenz system and keep only the $x(t)$ time series. Form the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ and plot the reconstructed attractor for a few values of the delay $\tau$, as in {numref}`fig:practice:reconstruction`.
 
-b) Estimate the correlation dimension (see the section on the correlation dimension in the chapter on fractals) of the reconstructed attractor and compare it with the value obtained from the full three-dimensional trajectory. Are they consistent, as Takens' theorem requires?
+b) Estimate the correlation dimension (section {numref}`sec:fractals:correlation`) of the reconstructed attractor and compare it with the value obtained from the full three-dimensional trajectory. Are they consistent, as Takens' theorem requires?
 
 c) Now reconstruct from data you did not generate: the file `dataset1.txt` (load it with `np.loadtxt`) contains a one-dimensional time series $xx[1]\ldots xx[N]$, "measured" with a constant sampling rate. Reconstruct the attractor by plotting the points $(xx[j], xx[j+\Delta j], xx[j + 2\Delta j])$ for all possible $j$, and vary $\Delta j$ to get the best result. A 3D line plot (`ax.plot` on axes created with `projection="3d"`) may be useful; see also the starter cell in the exercise lab.
 

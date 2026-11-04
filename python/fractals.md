@@ -171,7 +171,7 @@ $$
 exactly the similarity dimension {eq}`eq:fractals:koch_dimension`. Equivalently, measuring the curve with a ruler of length $\varepsilon$ returns an apparent length $L(\varepsilon) = N(\varepsilon)\,\varepsilon \propto \varepsilon^{\,1-D_0}$, which diverges as $\varepsilon\rightarrow 0$: the finer the yardstick, the longer the coastline. Running the box-counting program below on a set of points sampled along the curve recovers the same slope numerically.
 ````
 
-The Python program below implements the box-counting procedure for a set of $N$ points $(x_n,y_n)$ in the plane, as would be obtained from the return plot of an experimental time series (such as the dripping-faucet data of the chapter on discrete mappings of higher order). The box size is halved repeatedly by increasing the integer exponent $p$, so that $\varepsilon = (x_{\max}-x_{\min})/2^{p}$.
+The Python program below implements the box-counting procedure for a set of $N$ points $(x_n,y_n)$ in the plane, as would be obtained from the return plot of an experimental time series (such as the dripping-faucet data of chapter {numref}`sec:disc2d`). The box size is halved repeatedly by increasing the integer exponent $p$, so that $\varepsilon = (x_{\max}-x_{\min})/2^{p}$.
 
 ````{admonition} Python
 :class: python
@@ -205,7 +205,7 @@ Determination of the box-counting dimension from the slope of $\log N(\varepsilo
 *[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/fractals/fig_dimensions.py)*
 :::
 
-The same procedure applies without modification to the strange attractors of the previous chapters, since a Poincaré section turns a continuous flow into a cloud of points in the plane. Applied to the Lorenz attractor it returns a dimension slightly above two, confirming the non-integer dimension anticipated in the chapter on chaos in continuous systems and resolving the volume-contraction paradox with which this chapter opened.
+The same procedure applies without modification to the strange attractors of the previous chapters, since a Poincaré section turns a continuous flow into a cloud of points in the plane. Applied to the Lorenz attractor it returns a dimension slightly above two, confirming the non-integer dimension anticipated in chapter {numref}`chap:cont3d` and resolving the volume-contraction paradox with which this chapter opened.
 
 (sec:fractals:correlation)=
 ## The correlation dimension

@@ -127,7 +127,7 @@ Trajectories in phase-space. (a) 'butterfly'-shaped appearance of the system dyn
 
 Viewed from various angles, the phase-space trajectory reveals the celebrated butterfly shape. Trajectories launched from different initial conditions — even one as far away as $x(0) = 100$ — are all drawn onto the same object: they converge upon the *attractor* (compare {numref}`fig:phenomenon_lorenz_phasespace`).
 
-The scripts behind these figures are linked beneath each of them. The Lorenz system will be studied in more detail later in the book.
+The scripts behind these figures are linked beneath each of them. The Lorenz system will be studied in more detail in chapter {numref}`chap:cont3d`.
 
 (sec:phenomenon:celestial)=
 ## Celestial Uncertainties
@@ -174,7 +174,7 @@ m_1 \ddot{\mathbf{x}}_1 &= G m_1 m_2 \frac{\mathbf{x}_2 - \mathbf{x}_1}
 
 The system constitutes a phase-space with dimension 18: three variables each with six degrees of freedom (three-dimensional position and velocity).
 
-This eighteen-dimensional problem can be reduced dramatically by exploiting the particular structure of the earth–moon–satellite setting. Because the satellite ($m_3$) is exceedingly light compared with the earth ($m_1$) and the moon ($m_2$), i.e. $m_3 \ll m_1,m_2$, it is pulled around by the two heavy bodies but exerts no appreciable influence on them. If, in addition, the two heavy bodies (the *primaries*) are taken to move on circular orbits about their common centre of mass, and the satellite is confined to that orbital plane, the eighteen dimensions collapse to just four. This reduction, from Newton's law {eq}`eq:phenomenon_3body_full` to the compact system below, is carried out step by step in the book's two-body appendix. Writing the satellite position as $\mathbf{x}_{3}(t) = (x(t),y(t))$ and its velocity components as $u=\dot{x}$, $v=\dot{y}$, the resulting equations of motion are
+This eighteen-dimensional problem can be reduced dramatically by exploiting the particular structure of the earth–moon–satellite setting. Because the satellite ($m_3$) is exceedingly light compared with the earth ($m_1$) and the moon ($m_2$), i.e. $m_3 \ll m_1,m_2$, it is pulled around by the two heavy bodies but exerts no appreciable influence on them. If, in addition, the two heavy bodies (the *primaries*) are taken to move on circular orbits about their common centre of mass, and the satellite is confined to that orbital plane, the eighteen dimensions collapse to just four. This reduction, from Newton's law {eq}`eq:phenomenon_3body_full` to the compact system below, is carried out step by step in Appendix {numref}`app:twobody`. Writing the satellite position as $\mathbf{x}_{3}(t) = (x(t),y(t))$ and its velocity components as $u=\dot{x}$, $v=\dot{y}$, the resulting equations of motion are
 
 ```{math}
 :label: eq:phenomenon_3body_simple1_m3_full__phenomenon

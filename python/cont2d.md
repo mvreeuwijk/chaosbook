@@ -769,7 +769,7 @@ for x0 in ics:
 
 After a short transient, the two time-series can be seen to display the same periodic motion ({numref}`fig:cont2d:limit:phase`(a)). Hence, the system forgets about its initial conditions, which is typical for all systems which have an attractor, and then remains locked in a periodic cycle. The limit cycle is perhaps even better discernable in the phase space ({numref}`fig:cont2d:limit:phase`(b)). The trajectory starting close to the origin (red solid line) can be seen to spiral outward initially as it is attracted to the limit cycle. The trajectory starting far from the the origin (blue dashed line) spirals inward and is rapidly attracted to the limit cycle.
 
-In this particular case, the system ({eq}`eq:cont2d:limit_x`)  becomes much simpler when changing to polar coordinates (see the appendix on polar coordinates):
+In this particular case, the system ({eq}`eq:cont2d:limit_x`)  becomes much simpler when changing to polar coordinates (see Appendix {numref}`app:polars`):
 
 $$
 \begin{aligned}
@@ -877,7 +877,7 @@ The short answer to this question is no. There are two types of long-term behavi
 
 The fact that no chaos can occur in 2-D systems follows from the *Poincaré-Bendixson* theorem, which can be used to prove the existence of limit cycles. The theorem considers at a part of the phase space $\Omega$ which does not contain fixed points but does contain at least one trajectory which is confined within $\Omega$. If this is the case, then this trajectory is a *closed* orbit, because it is impossible for trajectories to cross (this would indicate that the solutions were not unique, because one point in the phase space then has multiple values for $\mathbf{f}$).
 
-The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see the next chapter).
+The theorem in itself is not very practical because it is nontrivial to prove that trajectories remain within $\Omega$. However, as the theorem proves that the only attractor which occupies a region in the phase space is a limit cycle, it automatically rules out chaos (more formally: no strange attractor can exist in 2-D, see section {numref}`sec:cont3d:strangeattractor`).
 
 We emphasize that this result is only valid for planar continuous 2-D systems. Indeed, chaos is possible in discrete systems with only one degree of freedom, and if the phase space is a torus, non-periodic motion is possible.
 
@@ -1188,7 +1188,7 @@ A Hopf bifurcation involves the transition of a fixed point from an stable spira
 <iframe src="_static/cont2d/interactive/hopf_slider.html" width="100%" height="460" style="border:none;"></iframe>
 ```
 
-For the example under consideration, it can be proved that a limit cycle exists. Expressed in polar coordinates (see the appendix on polar coordinates), the system ({eq}`eq:cont2d:hopf_x`) becomes:
+For the example under consideration, it can be proved that a limit cycle exists. Expressed in polar coordinates (see Appendix {numref}`app:polars`), the system ({eq}`eq:cont2d:hopf_x`) becomes:
 
 $$
 \begin{aligned}
