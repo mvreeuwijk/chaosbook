@@ -59,6 +59,6 @@ a) Integrate the Lorenz system and keep only the $x(t)$ time series. Form the de
 
 b) Estimate the correlation dimension (section {numref}`sec:fractals:correlation`) of the reconstructed attractor and compare it with the value obtained from the full three-dimensional trajectory. Are they consistent, as Takens' theorem requires?
 
-c) Now reconstruct from data you did not generate: the file `dataset1.txt` (load it with `np.loadtxt`) contains a one-dimensional time series $xx[1]\ldots xx[N]$, "measured" with a constant sampling rate. Reconstruct the attractor by plotting the points $(xx[j], xx[j+\Delta j], xx[j + 2\Delta j])$ for all possible $j$, and vary $\Delta j$ to get the best result. A 3D line plot (`ax.plot` on axes created with `projection="3d"`) may be useful; see also the starter cell in the exercise lab.
+c) Now reconstruct from data you did not generate: the file `dataset1.txt` (load it with `np.loadtxt`) contains a one-dimensional time series $xx[0]\ldots xx[N-1]$, "measured" with a constant sampling rate. Reconstruct the attractor by plotting the points $(xx[j], xx[j+\Delta j], xx[j + 2\Delta j])$ for all possible $j$, and vary $\Delta j$ to get the best result. A 3D line plot (`ax.plot` on axes created with `projection="3d"`) may be useful; see also the starter cell in the exercise lab.
 
 d) Do the same for `dataset2.txt`, which has some additional noise superimposed.

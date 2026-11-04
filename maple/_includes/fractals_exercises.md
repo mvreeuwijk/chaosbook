@@ -6,7 +6,7 @@
 
 a) Write a maple program to calculate the *correlation dimension* of a set consisting of $N$ points $(x_n,y_n)$.
 
-b) Calculate the correlation dimension of the dripping faucet attractors and compare the values with the box-dimension.
+b) Calculate the correlation dimension of the dripping-faucet attractors of the exercise *Dripping Faucet Model* in chapter {numref}`sec:disc2d`, and compare the values with their box-counting dimension (section {numref}`sec:fractals:boxcounting`).
 
 
 ### Fractal Properties of the Forced Double Well Oscillator
