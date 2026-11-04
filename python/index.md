@@ -94,6 +94,7 @@ The authors, and how the book came to be.
 
 phenomenon
 disc1d
+practice
 ```
 
 ```{toctree}
