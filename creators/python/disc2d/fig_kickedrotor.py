@@ -1,8 +1,7 @@
 """Kicked-rotor figures for "Discrete mappings of higher order".
 
 Produces (in python/_static/disc2d/):
-  disc2d_kickedrotor.png         hand-drawn sketch, copied from the Maple edition
-                                 (no generating script exists)
+  (disc2d_kickedrotor.png, the sketch, is drawn by fig_schematics.py)
   disc2d_kickedrotor_delta.png   kicking force F_t at t = 0, 10, ..., 50
   disc2d_kickedrotor_v.png       velocity v before (circle) and after (square) kicks
   disc2d_kickedrotor_theta.png   phase angle theta at kicks
@@ -10,7 +9,6 @@ K = 0.5, T = 10, tau = 5e8 (friction negligible), r = m = 1,
 theta_0 = 0.4, v_0 = 0.05.
 """
 
-import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -23,8 +21,6 @@ ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "python" / "_static" / "disc2d"
 OUT.mkdir(parents=True, exist_ok=True)
 
-shutil.copyfile(ROOT / "maple" / "_static" / "disc2d" / "disc2d_kickedrotor.png",
-                OUT / "disc2d_kickedrotor.png")
 
 K, T, tau, r, m = 0.5, 10.0, 5e8, 1.0, 1.0
 N = 5

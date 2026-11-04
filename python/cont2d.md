@@ -127,6 +127,10 @@ The vector $\mathbf{x}$ is called the *state vector* of the system. The space sp
 The system {eq}`eq:cont2d:vecx` cases the state vector $\mathbf{x}$ to change at a rate $\mathbf{f}$, thereby moving it though the phase space and tracing out a unique trajectory.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
+
 The phase space is an important concept in the study of dynamical systems, because it allows for a geometrical perspective on the system. Indeed, by comparing equation {eq}`eq:cont2d:vecx` to that describing a weightless particle (tracer) in a flow field $\mathbf{u}(x,y)$
 
 $$
@@ -255,12 +259,20 @@ When $T^2 - 4 D < 0$. the eigenvalues will be imaginary, in which case oscillato
 The behaviour of a dynamic system in the neigbourhood of a fixed point.
 ```
 
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
+
 ```{figure} _static/cont2d/cont2d_classification.png
 :name: fig:cont2d:classification2
 :width: 12cm
 
 Classification of 2-D linear ODEs based on the trace $T$ and determinant $D$ of the matrix $A$.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
 
 The eigenvalues of the 2-D matrix are related to $T$ and $D$ as:
 
@@ -283,6 +295,10 @@ Linear systems are “uninteresting” in the sense that no matter where you sta
 
 Example of the rich behavior of phase space for a nonlinear ODE.
 ```
+
+:::{only} html
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont2d/fig_schematics.py)*
+:::
 
 Fixed points $(x^*, y^*)$ can be determined in the same way as for one-dimensional continuous systems, and need to satisfy $\dot{x}=0$ and $\dot{y}=0$, i.e.
 
