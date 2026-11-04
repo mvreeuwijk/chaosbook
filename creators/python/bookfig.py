@@ -54,9 +54,12 @@ def out(chapter):
     return p
 
 
-def panel_labels(axes, order="row", start=0, loc=(0.0, 1.0), pad=(-0.02, 0.02),
+def panel_labels(axes, order="row", start=0, loc=(0.0, 1.0), pad=(0.0, 0.03),
                  **kw):
-    """Write (a), (b), ... at the top left, just outside each axes.
+    """Write (a), (b), ... just above the top-left corner of each axes.
+
+    Above the frame rather than beside it, so the label never sits on the
+    top y tick label. Works for 2-D and 3-D axes.
 
     axes  : a 2-D array from plt.subplots, or a flat list in label order.
     order : "row" labels across rows first, "col" down columns first (so a
@@ -69,14 +72,17 @@ def panel_labels(axes, order="row", start=0, loc=(0.0, 1.0), pad=(-0.02, 0.02),
     else:
         flat = arr.ravel()
     style = dict(fontsize=matplotlib.rcParams["axes.labelsize"],
-                 va="bottom", ha="right")
+                 va="bottom", ha="left")
     style.update(kw)
     for i, ax in enumerate(flat):
         if ax is None or not ax.get_visible():
             continue
-        ax.text(loc[0] + pad[0], loc[1] + pad[1],
-                f"({ascii_lowercase[start + i]})",
-                transform=ax.transAxes, **style)
+        x, y = loc[0] + pad[0], loc[1] + pad[1]
+        s = f"({ascii_lowercase[start + i]})"
+        if getattr(ax, "name", "") == "3d":
+            ax.text2D(x, y, s, transform=ax.transAxes, **style)
+        else:
+            ax.text(x, y, s, transform=ax.transAxes, **style)
 
 
 def save(fig, path, check=True):
