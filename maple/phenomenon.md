@@ -189,8 +189,9 @@ Here $R$ is the (constant) earth–moon distance and $\omega$ the angular freque
 ```{table} Parameters in the three-body problem.
 :name: table:phenomenon_3bodyconstants
 
-| gravitational constant | $G$ | $6.67 \cdot 10^{-11}$ | Nm$^2$ kg$^{-2}$ |
+| Quantity | Symbol | Value | Unit |
 | --- | --- | --- | --- |
+| gravitational constant | $G$ | $6.67 \cdot 10^{-11}$ | Nm$^2$ kg$^{-2}$ |
 | distance between earth and moon | $R$ | $3.84 \cdot 10^{8}$ | m |
 | mass of earth | $m_1$ | $5.97 \cdot 10^{24}$ | kg |
 | mass of 'moon' in example | $m_2$ | $m_1/4$ | kg |

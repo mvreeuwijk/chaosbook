@@ -32,6 +32,7 @@
     \def\MapleCodeTitle{Maple code}%
     \def\PythonTitle{Python}%
     \def\PythonCodeTitle{Python code}%
+    \def\ExampleTitle{Example}%
     \def\admonitionfontsize{}%
     \ifx\admontitle\MapleTitle
       \def\admonitionbg{mapleyellow}%
@@ -48,6 +49,12 @@
     \ifx\admontitle\PythonCodeTitle
       \def\admonitionbg{mapleyellow}%
       \def\admonitionfontsize{\small}%
+    \fi
+    % Example boxes mix prose and code listings: same warm background, so a
+    % listing does not sit as a yellow box inside a grey one (body text keeps
+    % its normal size).
+    \ifx\admontitle\ExampleTitle
+      \def\admonitionbg{mapleyellow}%
     \fi
     \begin{tcolorbox}[
         colframe=white,              % No border
