@@ -18,10 +18,11 @@ from plotly.subplots import make_subplots
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "fractals"
+OUT = bf.out("fractals")
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 GRAY, RED = "#888888", "#b22222"
 
@@ -48,7 +49,7 @@ counts = np.array([len(np.unique(np.floor(np.column_stack([X, Y]) / e).astype(in
 good = counts < len(X) / 4
 slope, icpt = np.polyfit(np.log(eps[good][3:]), np.log(counts[good][3:]), 1)
 
-fig, ax = plt.subplots(figsize=(4.2, 3.2))
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
 ax.plot(np.log(eps[~good]), np.log(counts[~good]), "o", color=GRAY)
 ax.plot(np.log(eps[good]), np.log(counts[good]), "o", mfc="none", mec="k",
         label="box counts")
@@ -56,32 +57,28 @@ xx = np.array([np.log(eps[good][3]), np.log(eps[good][-1])])
 ax.plot(xx, slope * xx + icpt, color=RED, lw=2,
         label=rf"fit, slope $=-D_0={slope:.2f}$")
 ax.axhline(np.log(len(X)), color=GRAY, ls=":", lw=1)
-ax.text(np.log(eps[-1]), np.log(len(X)) + 0.3, r"$\log N_{\rm pts}$", color=GRAY, fontsize=10)
+ax.text(np.log(eps[-1]), np.log(len(X)) + 0.3, r"$\log N_{\rm pts}$", color=GRAY)
 ax.annotate("under-sampled\n(flattening)", (np.log(eps[-2]), np.log(counts[-2])),
-            xytext=(np.log(eps[-4]) + 0.3, 9.8), color=GRAY, fontsize=11,
+            xytext=(np.log(eps[-4]) + 0.3, 9.8), color=GRAY,
             arrowprops=dict(arrowstyle="->", color=GRAY))
 ax.set_xlabel(r"$\log\varepsilon$")
 ax.set_ylabel(r"$\log N(\varepsilon)$")
 ax.legend(loc="lower left")
-fig.tight_layout()
-fig.savefig(OUT / "fractals_boxcount_fit.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "fractals_boxcount_fit.png")
 print("boxcount fit slope", slope, "N counts", counts)
 
 # -- binomial measure -------------------------------------------------------
 k, p1 = 9, 0.7
 m = binomial_measure(p1, k)
 x = (np.arange(2**k) + 0.5) / 2**k
-fig, ax = plt.subplots(figsize=(5.0, 2.8))
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
 ax.vlines(x, 0, m, color="k", lw=1)
 ax.set_xlim(0, 1)
 ax.set_ylim(0, m.max() * 1.05)
 ax.set_xlabel("position")
 ax.set_ylabel(r"measure $p_i$")
-ax.set_title(rf"$p_1={p1},\ p_2={1 - p1:.1f},\ k={k}$", fontsize=11)
-fig.tight_layout()
-fig.savefig(OUT / "fractals_binomial.png", dpi=150)
-plt.close(fig)
+ax.set_title(rf"$p_1={p1},\ p_2={1 - p1:.1f},\ k={k}$")
+bf.save(fig, OUT / "fractals_binomial.png")
 
 # -- D_q: closed form against box counting ------------------------------------
 qs = np.array([q for q in range(-10, 11) if q != 1])
@@ -89,17 +86,15 @@ Dnum = cb.generalized_dimensions(x, qs=qs, pmin=2, pmax=k, weights=m,
                                  origin=0.0, size=1.0)
 qq = np.linspace(-10, 10, 400)
 qq = qq[np.abs(qq - 1) > 1e-3]
-fig, ax = plt.subplots(figsize=(4.2, 3.2))
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
 ax.plot(qq, dq_exact(qq, p1), "k", lw=2, label="analytical")
 ax.plot(qs, Dnum, "o", mfc="white", mec=RED, mew=1.5, ls="none", label="box counting")
 ax.set_xlim(-10, 10)
 ax.set_xlabel("$q$")
 ax.set_ylabel("$D_q$")
-ax.set_title(rf"$p_1={p1},\ p_2={1 - p1:.1f}$", fontsize=11)
+ax.set_title(rf"$p_1={p1},\ p_2={1 - p1:.1f}$")
 ax.legend()
-fig.tight_layout()
-fig.savefig(OUT / "fractals_Dq.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "fractals_Dq.png")
 print("max |Dq numerical - analytical|", np.abs(Dnum - dq_exact(qs, p1)).max())
 
 # -- interactive: binomial slider --------------------------------------------
