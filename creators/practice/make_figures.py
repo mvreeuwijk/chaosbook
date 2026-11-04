@@ -178,10 +178,10 @@ def fig_horizon():
     sat = spread[int(18 / dt):].mean()
     ax.axhline(sat, color=C_FREE, lw=1.0, ls=":", label="attractor size")
 
-    # predictability horizon: spread reaches a fraction of saturation
+    # predictability horizon, as defined in the text: the time at which the
+    # exponential growth from the initial spread reaches the attractor size
     thr = 0.4 * sat
-    ih = np.argmax(spread > thr)
-    th = t[ih]
+    th = np.log(sat / s0) / Le
     ax.axvline(th, color=C_OBS, lw=1.0)
     ax.annotate("predictability\nhorizon", xy=(th, thr), xytext=(th + 1.0, 3e-2),
                 color=C_OBS, fontsize=9,
