@@ -17,7 +17,7 @@ Consider the Rössler system
 
 for $a=b=0.2, c=5$. Check out the `Cookbook.mws` how to obtain the numerical data in `Array` format. Integrate the system and remove the transient. (Take $dt=0.02$).
 
-a) Calculate a Poincaré-section by selecting those instance when the trajectories traverse the $y=0$ plane from positive to negative. To this end loop through the data-points $n=1 \ldots N$, check when the condition $y[n-1]>0$ *and* $y[n]\leq 0$ is satisfied and store the *crossing*-coordinates $x_c = x[n],z_c = z[n]$ in a new array or list. Plot the point-series thus obtained in the $x-z$ plane.
+a) Calculate a Poincaré-section by selecting those instances when the trajectories traverse the $y=0$ plane from positive to negative. To this end loop through the data-points $n=1 \ldots N$, check when the condition $y[n-1]>0$ *and* $y[n]\leq 0$ is satisfied and store the *crossing*-coordinates $x_c = x[n],z_c = z[n]$ in a new array or list. Plot the point-series thus obtained in the $x-z$ plane.
 
 b) Display the Poincaré-section and the attractor in the same plot.
 
@@ -28,7 +28,7 @@ c) Repeat the procedure for different values of $c$ between 2 and 6.
 
 **Downloads:** {download}`EarthMagneticField.mws <_static/exercises/EarthMagneticField.mws>`
 
-Consider the following system that was inpired on a simplified version of the equations governing the Earth's magnetic field.
+Consider the following system that was inspired by a simplified version of the equations governing the Earth's magnetic field.
 
 $$
 \begin{aligned}
@@ -54,7 +54,7 @@ and show that $\{x_* = 1/k, y_* = k, z_* = 3/(4k^2)\}$ and $\{x_* = - 1/k, y_* =
 
 c) Calculate the stability of the fixed points at $k=0.72$, and $k=0.75$.
 
-d) Based on your stability analysis, was there a bifurcation between $k=0.72$ and $k=0.75$. If so, what kind?
+d) Based on your stability analysis, was there a bifurcation between $k=0.72$ and $k=0.75$? If so, what kind?
 
 (eq0101:num)=
 
@@ -104,7 +104,7 @@ e) What does it mean when a dynamical system is called dissipative? Find an appr
 
 **Downloads:** {download}`BVP.mws <_static/exercises/BVP.mws>`, {download}`ex0089r01_1.eps <_static/exercises/ex0089r01_1.eps>`
 
-Neurons are a major class of cells in the nervous system whose main role is to process and transmit neural information. Normally, information is received through the dendrites and is sent through the axon, which can be tens to thousands of times the size of the cell body. The cell membrane in the axon and cell body contain voltage-gated ion channels which allow the neuron to generate and propagate an electrical impulse (an action potential).
+Neurons are a major class of cells in the nervous system whose main role is to process and transmit neural information. Normally, information is received through the dendrites and is sent through the axon, which can be tens to thousands of times the size of the cell body. The cell membrane in the axon and cell body contains voltage-gated ion channels which allow the neuron to generate and propagate an electrical impulse (an action potential).
 
 ```{figure} _static/exercises/ex0089r01_1.png
 :name: fig:ex0089r01:ex0089r01_1
