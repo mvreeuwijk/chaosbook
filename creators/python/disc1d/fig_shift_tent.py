@@ -6,8 +6,8 @@ neat illustration of the chapter's round-off story. To draw 400
 meaningful steps we iterate in extended precision with mpmath.
 
 Produces (in python/_static/disc1d/):
-  disc1d_shiftmap_series.png / disc1d_shiftmap_returnplot.png
-  disc1d_tentmap_series.png  / disc1d_tentmap_returnplot.png
+  disc1d_shiftmap_series_return.png, disc1d_tentmap_series_return.png
+  (1x2: series (a) and return plot (b))
 """
 
 from pathlib import Path
@@ -16,8 +16,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from mpmath import mp, mpf
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 mp.dps = 150  # enough digits for 400 doublings
 
@@ -44,20 +45,16 @@ for name, f, y0, label in [
     ("tentmap", tent, 1 / mp.pi, "z"),
 ]:
     Y = run_map(f, y0)
-    plt.figure(figsize=(4.2, 3.2))
-    plt.plot(range(N + 1), Y, "o", markersize=2)
-    plt.xlabel("$n$")
-    plt.ylabel(f"${label}_n$")
-    plt.tight_layout()
-    plt.savefig(OUT / f"disc1d_{name}_series.png", dpi=150)
-    plt.close()
-
-    plt.figure(figsize=(4.2, 4.2))
-    plt.plot(Y[:-1], Y[1:], "o", markersize=2)
-    plt.xlabel(f"${label}_n$")
-    plt.ylabel(f"${label}_{{n+1}}$")
-    plt.tight_layout()
-    plt.savefig(OUT / f"disc1d_{name}_returnplot.png", dpi=150)
-    plt.close()
+    fig, (axs, axr) = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4),
+                                   width_ratios=[3, 2])
+    axs.plot(range(N + 1), Y, "o", markersize=2)
+    axs.set_xlabel("$n$")
+    axs.set_ylabel(f"${label}_n$")
+    axr.plot(Y[:-1], Y[1:], "o", markersize=2)
+    axr.set_xlabel(f"${label}_n$")
+    axr.set_ylabel(f"${label}_{{n+1}}$")
+    axr.set_aspect("equal")
+    bf.panel_labels([axs, axr])
+    bf.save(fig, OUT / f"disc1d_{name}_series_return.png")
 
 print("fig_shift_tent: assets written to", OUT)

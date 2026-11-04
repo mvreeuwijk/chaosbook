@@ -2,11 +2,9 @@
 
 Produces (in python/_static/disc1d/):
   disc1d_logist_attractor_r1_5.png        many x0 converge to x*=1/3
-  disc1d_logist_attractor_local_r2_0.png  superstable convergence (sigma=0)
-  disc1d_logist_attractor_local_r1_5.png  ordinary convergence
+  disc1d_logist_attractor_local.png       1x2: superstable (r=2), ordinary (r=1.5)
   disc1d_logist_p2graph.png               f, g=f(f(x)), y=x at r=3.2
-  disc1d_logist_p3graph_r380.png          f, f^(3), y=x at r=3.80
-  disc1d_logist_p3graph_r384.png          f, f^(3), y=x at r=3.84
+  disc1d_logist_p3graph.png               1x2: f, f^(3), y=x at r=3.80, 3.84
 """
 
 from pathlib import Path
@@ -34,18 +32,16 @@ plt.xlabel("$n$")
 plt.ylabel("$x_n$")
 bf.save(plt.gcf(), OUT / "disc1d_logist_attractor_r1_5.png")
 
-# -- local convergence: superstable (r=2) vs ordinary (r=1.5) ----------------
-for r, xstar in [(2.0, 0.5), (1.5, 1 / 3)]:
-    plt.figure(figsize=(4.2, 3.2))
+# -- local convergence: superstable (r=2) vs ordinary (r=1.5), 1x2 ----------
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.3))
+for ax, (r, xstar) in zip(axs, [(2.0, 0.5), (1.5, 1 / 3)]):
     X = cb.orbit(cb.logistic, x0=xstar + 0.2, n=12, r=r)
-    plt.plot(range(len(X)), X, "-o", markersize=4)
-    plt.axhline(xstar, color="gray", linewidth=0.8)
-    plt.xlabel("$n$")
-    plt.ylabel("$x_n$")
-    plt.tight_layout()
-    plt.savefig(OUT / f"disc1d_logist_attractor_local_r{str(r).replace('.', '_')}.png",
-                dpi=150)
-    plt.close()
+    ax.plot(range(len(X)), X, "-o", markersize=3)
+    ax.axhline(xstar, color="gray", linewidth=0.8)
+    ax.set_xlabel("$n$")
+    ax.set_ylabel("$x_n$")
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc1d_logist_attractor_local.png")
 
 
 def compose(f, m, x, r):
@@ -80,38 +76,36 @@ def sigma_at(p, r, m=3):
 # -- f, g = f(f(x)), y = x at r = 3.2 with period-2 and fixed points ---------
 r = 3.2
 xs = np.linspace(0, 1, 400)
-plt.figure(figsize=(4.2, 4.2))
-plt.plot(xs, cb.logistic(xs, r), "k", label="$f(x)$")
-plt.plot(xs, compose(cb.logistic, 2, xs, r), "k--", label="$g(x)=f(f(x))$")
-plt.plot(xs, xs, color="gray", linewidth=0.8)
+fig, ax = plt.subplots(figsize=bf.SQUARE)
+ax.plot(xs, cb.logistic(xs, r), "k", label="$f(x)$")
+ax.plot(xs, compose(cb.logistic, 2, xs, r), "k--", label="$g(x)=f(f(x))$")
+ax.plot(xs, xs, color="gray", linewidth=0.8)
 fixed = [0, 1 - 1 / r]
 p2 = periodic_points(2, r, exclude=tuple(fixed))
-plt.plot(p2, p2, "ko", markersize=7)
-plt.plot(fixed, fixed, "o", color="gray", markersize=9)
-plt.xlabel("$x$")
-plt.ylabel("$y$")
-plt.legend()
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_p2graph.png", dpi=150)
-plt.close()
+ax.plot(p2, p2, "ko", markersize=5)
+ax.plot(fixed, fixed, "o", color="gray", markersize=6)
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+ax.legend()
+bf.save(fig, OUT / "disc1d_logist_p2graph.png")
 
-# -- f, f^(3), y = x at r = 3.80 and 3.84 ------------------------------------
-for r, name in [(3.80, "r380"), (3.84, "r384")]:
-    plt.figure(figsize=(4.2, 4.2))
-    plt.plot(xs, cb.logistic(xs, r), "k")
-    plt.plot(xs, compose(cb.logistic, 3, xs, r), "k--")
-    plt.plot(xs, xs, color="gray", linewidth=0.8)
+# -- f, f^(3), y = x at r = 3.80 and 3.84: 1x2 ------------------------------
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 3.0))
+for ax, r in zip(axs, [3.80, 3.84]):
+    ax.plot(xs, cb.logistic(xs, r), "k")
+    ax.plot(xs, compose(cb.logistic, 3, xs, r), "k--")
+    ax.plot(xs, xs, color="gray", linewidth=0.8)
     fixed = [0, 1 - 1 / r]
-    plt.plot(fixed, fixed, "o", color="gray", markersize=10)
+    ax.plot(fixed, fixed, "o", color="gray", markersize=7)
     p3 = periodic_points(3, r, exclude=tuple(fixed))
     for p in p3:
         # classify each root by its own orbit's stability, not a shared one
         color = "k" if abs(sigma_at(p, r)) < 1 else "gray"
-        plt.plot(p, p, "o", color=color, markersize=5)
-    plt.xlabel("$x$")
-    plt.ylabel("$y$")
-    plt.tight_layout()
-    plt.savefig(OUT / f"disc1d_logist_p3graph_{name}.png", dpi=150)
-    plt.close()
+        ax.plot(p, p, "o", color=color, markersize=3.5)
+    ax.set_xlabel("$x$")
+    ax.set_ylabel("$y$")
+    ax.set_aspect("equal")
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc1d_logist_p3graph.png")
 
 print("fig_fixedpoints: assets written to", OUT)

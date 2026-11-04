@@ -1,8 +1,8 @@
 """Universality / Feigenbaum figures for "Chaos in Iterative Maps".
 
 Produces (in python/_static/disc1d/):
-  disc1d_doubling_logist.png / disc1d_doubling_sinmap.png
-  disc1d_universality_logist.png / disc1d_universality_sinmap.png
+  disc1d_doubling.png      1x2: logistic, sine
+  disc1d_universality.png  1x2: logistic, sine
   disc1d_not_so_universal.png   delta(eta) for f = r(1-|2x-1|^eta)
 """
 
@@ -13,48 +13,47 @@ import numpy as np
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 OUT.mkdir(parents=True, exist_ok=True)
 
 RC_LOGIST, RC_SINE = 3.56994537, 0.86557928
 
-# -- plain bifurcation diagrams with the accumulation point marked -----------
-for f, rmin, rmax, rc, name in [
-    (cb.logistic, 2.8, 4.0, RC_LOGIST, "disc1d_doubling_logist"),
-    (cb.sine, 0.6, 1.0, RC_SINE, "disc1d_doubling_sinmap"),
-]:
-    fig, ax = plt.subplots(figsize=(4.2, 3.2))
+# -- plain bifurcation diagrams with the accumulation point marked: 1x2 -----
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4))
+for ax, (f, rmin, rmax, rc) in zip(axs, [
+    (cb.logistic, 2.8, 4.0, RC_LOGIST),
+    (cb.sine, 0.6, 1.0, RC_SINE),
+]):
     cb.bifurcation_diagram(f, rmin, rmax, nr=600, n=1000,
                            x0=0.57, discard=0.8, ax=ax)
     ax.annotate("", xy=(rc, 0.02), xytext=(rc, 0.14),
                 arrowprops=dict(arrowstyle="->", color="black"))
     ax.set_xlim(rmin, rmax)
     ax.set_ylim(0, 1)
-    plt.tight_layout()
-    plt.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close()
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc1d_doubling.png")
 
-# -- rescaled diagrams: a = -ln(r_inf - r) -----------------------------------
-for f, rc, rmin, amax, name in [
-    (cb.logistic, RC_LOGIST, 2.8, 10.2, "disc1d_universality_logist"),
-    (cb.sine, RC_SINE, 0.3, 10.2, "disc1d_universality_sinmap"),
-]:
+# -- rescaled diagrams: a = -ln(r_inf - r): 1x2 ------------------------------
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4))
+for ax, (f, rc, rmin, amax) in zip(axs, [
+    (cb.logistic, RC_LOGIST, 2.8, 10.2),
+    (cb.sine, RC_SINE, 0.3, 10.2),
+]):
     amin = -np.log(rc - rmin)
-    plt.figure(figsize=(4.2, 3.2))
     for a in np.linspace(amin, amax, 501):
         r = rc - np.exp(-a)
         X = cb.orbit(f, x0=0.57, n=1000, r=r)
-        plt.plot([a] * 201, X[800:], ",", color="black")
-    plt.xlim(amin, amax)
-    plt.ylim(0.33, 0.9)
-    plt.xlabel("$a$")
-    plt.ylabel("$x(a)$")
-    plt.tight_layout()
-    plt.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close()
+        ax.plot([a] * 201, X[800:], ".", markersize=1, markeredgewidth=0, color="black")
+    ax.set_xlim(amin, amax)
+    ax.set_ylim(0.33, 0.9)
+    ax.set_xlabel("$a$")
+    ax.set_ylabel("$x(a)$")
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc1d_universality.png")
 
 
 # -- delta(eta) via Newton-Raphson on superstable orbits ---------------------
@@ -155,13 +154,11 @@ for eta in np.arange(1.2, 4.01, 0.2):
         print(f"fig_universality: dropping eta={eta:.2f} "
               f"(superstable_r did not converge: {exc})")
 
-plt.figure(figsize=(5.0, 3.5))
-plt.plot(etas, deltas, "ko-", markersize=5)
-plt.axhline(4.6692, color="gray", linewidth=0.8)
-plt.xlabel("$\\eta$")
-plt.ylabel("$\\delta$")
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_not_so_universal.png", dpi=150)
-plt.close()
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
+ax.plot(etas, deltas, "ko-", markersize=3)
+ax.axhline(4.6692, color="gray", linewidth=0.8)
+ax.set_xlabel(r"$\eta$")
+ax.set_ylabel(r"$\delta$")
+bf.save(fig, OUT / "disc1d_not_so_universal.png")
 
 print("fig_universality: assets written to", OUT)
