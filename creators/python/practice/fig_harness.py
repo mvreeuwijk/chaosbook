@@ -15,9 +15,11 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "practice"
-OUT.mkdir(parents=True, exist_ok=True)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, save)
+
+OUT = bf.out("practice")
 
 C_TRUTH, C_FREE, C_ANA, C_OBS = "#111111", "#c0392b", "#1f6aa5", "#e08a1e"
 
@@ -43,7 +45,7 @@ for i in range(1, max(times) + 1):
     blob1, blob2 = mix_step(blob1), mix_step(blob2)
     snaps[i] = (blob1, blob2)
 
-fig, axes = plt.subplots(1, 3, figsize=(9.0, 3.4))
+fig, axes = plt.subplots(1, 3, figsize=(bf.FULL_W, 2.4))
 for ax, s in zip(axes, times):
     p1, p2 = snaps[s]
     ax.scatter(p1[:, 0], p1[:, 1], s=1.5, color=C_FREE, edgecolors="none")
@@ -56,9 +58,7 @@ for ax, s in zip(axes, times):
     ax.set_aspect("equal")
     ax.set_xlabel("$x$")
 axes[0].set_ylabel("$y$")
-fig.tight_layout()
-fig.savefig(OUT / "practice_mixing.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "practice_mixing.png")
 
 # -- controlling chaos: OGY on the logistic map -------------------------------
 r0 = 3.9
@@ -78,24 +78,23 @@ for k in range(N):
 captured = Ncon + int(np.argmax(np.abs(xs[Ncon:] - xstar) < 1e-6))
 print(f"control: captured onto x* = {xstar:.4f} at n = {captured}")
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5.8, 4.4), sharex=True,
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(bf.MEDIUM[0], 2.9), sharex=True,
                                height_ratios=[3, 1])
 ax1.plot(xs, color=C_TRUTH, lw=0.8, marker="o", ms=2.2)
 ax1.axhline(xstar, color=C_ANA, ls="--", lw=1.1, label=r"target orbit $x^{*}$")
 ax1.axvline(Ncon, color=C_OBS, lw=1.0)
-ax1.text(Ncon + 4, 0.06, "control on", color=C_OBS, fontsize=11)
+ax1.text(Ncon, 1.02, "control on", color=C_OBS, fontsize=8, ha="center",
+         va="bottom")
 ax1.set_ylabel("$x_n$")
 ax1.set_ylim(0, 1)
-ax1.legend(loc="lower right")
+ax1.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), borderaxespad=0.2)
 ax2.axhline(0, color="#999999", lw=0.6)
 ax2.plot(dr, color=C_FREE, lw=1.0)
 ax2.set_ylabel(r"$\delta r_n$")
 ax2.set_xlabel("$n$")
 ax2.set_xlim(0, N)
 ax2.set_ylim(-drmax, drmax)
-fig.tight_layout()
-fig.savefig(OUT / "practice_control.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "practice_control.png")
 
 # -- attractor reconstruction from x(t) alone (Takens) -----------------------
 xa = solve_ivp(cb.lorenz, [0, 50], [1, 1, 1], rtol=1e-10, atol=1e-12).y[:, -1]
@@ -106,7 +105,7 @@ tau = 18                               # delay, in samples
 M = len(X) - 2 * tau
 emb = np.column_stack([X[:M], X[tau:M + tau], X[2 * tau:M + 2 * tau]])
 
-fig = plt.figure(figsize=(9.0, 4.2))
+fig = plt.figure(figsize=(bf.FULL_W, 2.8))
 ax1 = fig.add_subplot(121, projection="3d")
 ax1.plot(*sol.y, color=C_TRUTH, lw=0.3)
 ax1.set_title(r"true attractor $(x,y,z)$")
@@ -117,9 +116,7 @@ for ax in (ax1, ax2):
     ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
     ax.grid(False)
     ax.view_init(elev=22, azim=-125)
-fig.tight_layout()
-fig.savefig(OUT / "practice_reconstruction.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "practice_reconstruction.png")
 
 
 # -- the Takens route in industry: a noisy Rossler signal (illustrative) -----
@@ -137,7 +134,7 @@ p = xs_r + 0.20 * rng.standard_normal(len(xs_r))        # measurement noise
 tau = 12
 emb = np.column_stack([p[:-2 * tau], p[tau:-tau], p[2 * tau:]])
 
-fig = plt.figure(figsize=(9.0, 3.6))
+fig = plt.figure(figsize=(bf.FULL_W, 2.4))
 ax1 = fig.add_subplot(121)
 ax1.plot(np.arange(700) * dt, p[:700], color=C_TRUTH, lw=0.7)
 ax1.set_title(r"measured signal $p(t)$")
@@ -150,7 +147,5 @@ ax2.set_title("reconstructed attractor (fingerprint)")
 ax2.set_xticks([]); ax2.set_yticks([]); ax2.set_zticks([])
 ax2.grid(False)
 ax2.view_init(elev=26, azim=-60)
-fig.tight_layout()
-fig.savefig(OUT / "practice_reactor.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "practice_reactor.png")
 print("fig_harness: assets written to", OUT)

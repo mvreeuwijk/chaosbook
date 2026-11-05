@@ -51,6 +51,10 @@ def make_cookbook_copy(dest):
                    if c["cell_type"] == "markdown"
                    and "".join(c["source"]).startswith("## General"))
     del nb["cells"][1:general]
+    # Cells tagged remove-cell exist only for the book build (the hidden
+    # figure-style setup); JupyterLab would show them, so leave them out.
+    nb["cells"] = [c for c in nb["cells"]
+                   if "remove-cell" not in c.get("metadata", {}).get("tags", [])]
     nb["cells"].insert(1, SETUP_CELL)
     dest.write_text(json.dumps(nb, indent=1), encoding="utf-8")
 

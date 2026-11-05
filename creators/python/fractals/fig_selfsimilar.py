@@ -12,11 +12,11 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "fractals"
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = bf.out("fractals")
 
 
 def koch_step(pts, turn):
@@ -29,23 +29,21 @@ def koch_step(pts, turn):
 
 
 # -- von Koch curve ----------------------------------------------------------
-fig, axes = plt.subplots(4, 1, figsize=(3.6, 5.0))
+fig, axes = plt.subplots(4, 1, figsize=(3.0, 4.2))
 pts = [0j, 1 + 0j]
 for n, ax in enumerate(axes):
     z = np.array(pts)
     ax.plot(z.real, z.imag, "k", lw=1.5)
     ax.set_aspect("equal")
-    ax.set_xlim(-0.02, 1.02)
+    ax.set_xlim(-0.2, 1.02)
     ax.set_ylim(-0.02, 0.34)
     ax.axis("off")
-    ax.text(-0.04, 0.0, f"$n={n}$", ha="right", va="center")
+    ax.text(-0.03, 0.0, f"$n={n}$", ha="right", va="center")
     pts = koch_step(pts, np.pi / 3)
-fig.tight_layout()
-fig.savefig(OUT / "fractals_koch.png", dpi=150, bbox_inches="tight")
-plt.close(fig)
+bf.save(fig, OUT / "fractals_koch.png")
 
 # -- Cantor set --------------------------------------------------------------
-fig, ax = plt.subplots(figsize=(5.0, 2.6))
+fig, ax = plt.subplots(figsize=(bf.MEDIUM[0], 2.0))
 segs = [(0.0, 1.0)]
 for n in range(6):
     for a, b in segs:
@@ -53,10 +51,9 @@ for n in range(6):
     ax.text(-0.03, -n, f"$n={n}$", ha="right", va="center")
     segs = [s for a, b in segs
             for s in ((a, a + (b - a) / 3), (b - (b - a) / 3, b))]
-ax.set_xlim(-0.2, 1.01)
+ax.set_xlim(-0.25, 1.01)
 ax.axis("off")
-fig.savefig(OUT / "fractals_cantor.png", dpi=150, bbox_inches="tight")
-plt.close(fig)
+bf.save(fig, OUT / "fractals_cantor.png")
 
 # -- Sierpinski gasket (ported from creators/fractals/make_sierpinski.py) ----
 V0 = np.array([[0.0, 0.0], [1.0, 0.0], [0.5, np.sqrt(3) / 2]])
@@ -72,18 +69,16 @@ def draw(ax, v, depth):
         draw(ax, np.array([m20, m12, v[2]]), depth - 1)
 
 
-fig, axes = plt.subplots(1, 4, figsize=(9.2, 2.6))
+fig, axes = plt.subplots(1, 4, figsize=(bf.FULL_W, 1.6))
 for n, ax in enumerate(axes):
     draw(ax, V0, n)
     ax.set_aspect("equal")
     ax.axis("off")
     ax.set_title(f"$n={n}$")
-fig.tight_layout()
-fig.savefig(OUT / "fractals_sierpinski.png", dpi=150, bbox_inches="tight")
-plt.close(fig)
+bf.save(fig, OUT / "fractals_sierpinski.png")
 
 # -- Koch island -------------------------------------------------------------
-fig, axes = plt.subplots(1, 3, figsize=(9.0, 3.0))
+fig, axes = plt.subplots(1, 3, figsize=(bf.FULL_W, 2.1))
 for n, ax in enumerate(axes):
     corners = [0j, 1 + 0j, 0.5 + 1j * np.sqrt(3) / 2, 0j]
     for _ in range(n):  # outward bumps: rotate by -pi/3 on this orientation
@@ -95,7 +90,5 @@ for n, ax in enumerate(axes):
     ax.set_ylim(-0.45, 1.25)
     ax.axis("off")
     ax.set_title(f"$n={n}$")
-fig.tight_layout()
-fig.savefig(OUT / "fractals_kochisland.png", dpi=150, bbox_inches="tight")
-plt.close(fig)
+bf.save(fig, OUT / "fractals_kochisland.png")
 print("wrote koch, cantor, sierpinski, kochisland")

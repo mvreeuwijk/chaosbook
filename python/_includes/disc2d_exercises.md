@@ -118,7 +118,6 @@ with $\mu \in [0,1]$ a frictional parameter.
 
 ```{figure} _static/exercises/ex0082r00_1.png
 :name: fig:ex0082r00:ex0082r00_1
-:width: 32mm
 ```
 
 a) Verify that the solution to this equation is given by
@@ -172,9 +171,8 @@ e) Take $\mu=0.01$, $K=0.1$ and $\phi=0.76$ and vary the initial conditions. Can
 
 ```{figure} _static/exercises/ex0082r00_2.png
 :name: fig:ex0082r00:ex0082r00_2
-:width: 80mm
 
-Dependence of solution on initial conditions for $K=0.1$, $\mu=4.17 \times 10^{-3}$ (a smaller friction than the $\mu=0.01$ of the exercise) and $\phi=0.76$.
+Dependence of solution on initial conditions for $K=0.1$, $\mu=4.17 \times 10^{-3}$ (a smaller friction than the $\mu=0.01$ of the exercise) and $\phi=0.76$. Each initial condition $(\delta_0, \dot{\delta}_0)$ is coloured by the rotation number (revolutions per kick) that its solution settles on. The horizontal axis is $\delta_0$; the vertical axis, also labelled $\delta_0$ in the plot, is $\dot{\delta}_0$.
 ```
 
 f) Use the phase-space starter cell in the lab to study the behavior of the system in the phase space. For $K=0.1$, $\mu=0.01$ and $\phi=0.76$,  calculate the rotation number $\#revolutions/\#kicks$ for various initial conditions.

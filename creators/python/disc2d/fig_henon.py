@@ -3,10 +3,9 @@
 a = 1.4, b = 0.3 throughout. Produces (in python/_static/disc2d/):
   disc2d_HenonAttractor.png     x0=(0.1, 0.3), 10000 steps, first 100 dropped
   disc2d_HenonLyap.png          Lyapunov exponents from blocks of N = 1, 10, 200
-  disc2d_HenonFold0..5.png      10^4 random initial conditions in
+  disc2d_HenonFold.png          2x3 panels; 10^4 random initial conditions in
                                 [-1.23,1.23] x [-0.41,0.41], steps n = 0..5
-  disc2d_HenonStretch{0,4,...,20}.png
-                                10^4 initial conditions in a 0.02 x 0.02 box
+  disc2d_HenonStretch.png       2x3 panels; 10^4 initial conditions in a 0.02 x 0.02 box
                                 near (1.02, 0.31), steps n = 0, 4, ..., 20
   interactive/henon_fold.html   play-button animation of the folding
 """
@@ -19,8 +18,9 @@ import plotly.graph_objects as go
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc2d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -35,15 +35,13 @@ def henon_jac(x, a=a, b=b):
 
 # -- the attractor -------------------------------------------------------------
 X = cb.orbit(cb.henon, x0=(0.1, 0.3), n=10000, a=a, b=b)[100:]
-plt.figure(figsize=(4.2, 4.2))
-plt.plot(X[:, 0], X[:, 1], "k.", markersize=1)
-plt.xlim(-1.5, 1.5)
-plt.ylim(-0.4, 0.4)
-plt.xlabel("$x_n$")
-plt.ylabel("$y_n$")
-plt.tight_layout()
-plt.savefig(OUT / "disc2d_HenonAttractor.png", dpi=150)
-plt.close()
+fig, ax = plt.subplots(figsize=bf.SQUARE)
+ax.plot(X[:, 0], X[:, 1], "k.", markersize=1)
+ax.set_xlim(-1.5, 1.5)
+ax.set_ylim(-0.4, 0.4)
+ax.set_xlabel("$x_n$")
+ax.set_ylabel("$y_n$")
+bf.save(fig, OUT / "disc2d_HenonAttractor.png")
 
 
 # -- Lyapunov exponents from blocks of N iterations -----------------------------
@@ -70,21 +68,19 @@ def block_exponents(N, P, x0=(0.1, 0.3)):
 
 runs = [(1, 4000, "0.7", 1.0, "-"), (10, 400, "0.3", 2.0, "-"),
         (200, 20, "0.0", 2.0, "-o")]
-plt.figure(figsize=(5.0, 3.5))
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
 means = {}
 for N, P, grey, lw, style in runs:
     l1, l2 = block_exponents(N, P)
     means[N] = (l1.mean(), l2.mean())
     t = (np.arange(1, P + 1) - 0.5) * N
     for lam in (l1, l2):
-        plt.plot(t, lam, style, color=grey, lw=lw, markersize=5)
-plt.xlim(0, 4000)
-plt.ylim(-2.6, 1.6)
-plt.xlabel("$n$")
-plt.ylabel(r"$\Lambda$")
-plt.tight_layout()
-plt.savefig(OUT / "disc2d_HenonLyap.png", dpi=150)
-plt.close()
+        ax.plot(t, lam, style, color=grey, lw=lw, markersize=5)
+ax.set_xlim(0, 4000)
+ax.set_ylim(-2.6, 1.6)
+ax.set_xlabel("$n$")
+ax.set_ylabel(r"$\Lambda$")
+bf.save(fig, OUT / "disc2d_HenonLyap.png")
 for N, (m1, m2) in means.items():
     print(f"block average, N={N}: Lambda_1 = {m1:.6f}, Lambda_2 = {m2:.6f}")
 spec = cb.lyapunov_spectrum(cb.henon, henon_jac, (0.1, 0.3), n=200000,
@@ -117,23 +113,25 @@ FOLD = evolve(fold0, 12)
 STRETCH = evolve(stretch0, 20)
 
 
-def snapshot(P, n, name):
-    plt.figure(figsize=(4.2, 4.2))
-    plt.plot(P[:, 0], P[:, 1], "k.", markersize=1)
-    plt.xlim(-1.5, 1.5)
-    plt.ylim(-0.5, 0.5)
-    plt.title(f"$n={n}$")
-    plt.xlabel("$x_n$")
-    plt.ylabel("$y_n$")
-    plt.tight_layout()
-    plt.savefig(OUT / name, dpi=150)
-    plt.close()
+def snapshots(frames, ns, name):
+    """2 x 3 grid of the ensemble at steps ns, letters (a)-(f) row by row."""
+    fig, axs = plt.subplots(2, 3, figsize=(bf.FULL_W, 3.6), sharex=True,
+                            sharey=True)
+    for ax, n in zip(axs.ravel(), ns):
+        ax.plot(frames[n][:, 0], frames[n][:, 1], "k.", markersize=1)
+        ax.set_xlim(-1.5, 1.5)
+        ax.set_ylim(-0.5, 0.5)
+        ax.set_title(f"$n={n}$")
+    for ax in axs[-1]:
+        ax.set_xlabel("$x_n$")
+    for ax in axs[:, 0]:
+        ax.set_ylabel("$y_n$")
+    bf.panel_labels(axs)
+    bf.save(fig, OUT / name)
 
 
-for n in range(6):
-    snapshot(FOLD[n], n, f"disc2d_HenonFold{n}.png")
-for n in range(0, 21, 4):
-    snapshot(STRETCH[n], n, f"disc2d_HenonStretch{n}.png")
+snapshots(FOLD, range(6), "disc2d_HenonFold.png")
+snapshots(STRETCH, range(0, 21, 4), "disc2d_HenonStretch.png")
 print("survivors of fold after 5 steps:", int(np.sum(~np.isnan(FOLD[5, :, 0]))),
       "of", NPTS)
 
@@ -156,8 +154,8 @@ fig = go.Figure(
 )
 fig.update_layout(
     title_text="n = 0",
-    xaxis=dict(range=[-1.5, 1.5], title="x_n"),
-    yaxis=dict(range=[-0.5, 0.5], title="y_n", scaleanchor=None),
+    xaxis=dict(range=[-1.5, 1.5], title="xₙ"),
+    yaxis=dict(range=[-0.5, 0.5], title="yₙ", scaleanchor=None),
     margin=dict(l=50, r=10, t=40, b=90),
     updatemenus=[dict(
         type="buttons", direction="left", x=0.0, y=-0.15, showactive=False,
@@ -170,7 +168,8 @@ fig.update_layout(
                                     mode="immediate", transition=dict(duration=0))]),
         ])],
     sliders=[dict(
-        active=0, x=0.25, len=0.75, y=-0.1,
+        active=0, x=0.25, len=0.75, y=-0.1, pad=dict(t=10),
+        font=dict(color="#333333"),
         currentvalue=dict(prefix="n = "),
         steps=[dict(label=str(n), method="animate",
                     args=[[str(n)], dict(mode="immediate",
@@ -179,6 +178,7 @@ fig.update_layout(
                for n in range(13)])],
 )
 target = OUT / "interactive" / "henon_fold.html"
-fig.write_html(target, include_plotlyjs="../../plotly.min.js", full_html=True)
+fig.write_html(target, include_plotlyjs="../../plotly.min.js", full_html=True,
+               auto_play=False)
 print("companion size: %.2f MB" % (target.stat().st_size / 1e6))
 print("fig_henon: assets written to", OUT)

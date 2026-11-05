@@ -272,7 +272,7 @@ applied only while it stays small, $|\delta r_n| \le \delta r_{\max}$. The orbit
 :name: fig:practice:control
 :width: 90mm
 
-Controlling chaos. Left of the marker the logistic map ($r=3.9$) iterates chaotically. Once control is enabled it waits until the orbit strays near the target fixed point $x^{*}$ and then, with the minuscule parameter nudges $\delta r_n$ shown below, locks the motion onto it.
+Controlling chaos. Left of the marker the logistic map ($r=3.9$) iterates chaotically. Once control is enabled it waits until the orbit strays near the target fixed point $x^{*}$ and then, with the minuscule parameter nudge $\delta r_n$ shown below (here a single nudge suffices), locks the motion onto it.
 ```
 
 ````{admonition} Maple
@@ -308,7 +308,7 @@ The third use reads chaos from data. In an experiment one seldom measures the fu
 :name: fig:practice:reconstruction
 :width: 100%
 
-Attractor reconstruction. From the single recorded coordinate $x(t)$ of the Lorenz system (left), the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ trace out a reconstruction (right) with the same two-lobed topology as the original – the content of Takens' theorem.
+Attractor reconstruction. The Lorenz attractor (left), and its reconstruction from the single recorded coordinate $x(t)$ alone (right): the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ trace out an object with the same two-lobed topology as the original – the content of Takens' theorem.
 ```
 
 ````{admonition} Maple

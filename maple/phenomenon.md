@@ -189,8 +189,9 @@ Here $R$ is the (constant) earth–moon distance and $\omega$ the angular freque
 ```{table} Parameters in the three-body problem.
 :name: table:phenomenon_3bodyconstants
 
-| gravitational constant | $G$ | $6.67 \cdot 10^{-11}$ | Nm$^2$ kg$^{-2}$ |
+| Quantity | Symbol | Value | Unit |
 | --- | --- | --- | --- |
+| gravitational constant | $G$ | $6.67 \cdot 10^{-11}$ | Nm$^2$ kg$^{-2}$ |
 | distance between earth and moon | $R$ | $3.84 \cdot 10^{8}$ | m |
 | mass of earth | $m_1$ | $5.97 \cdot 10^{24}$ | kg |
 | mass of 'moon' in example | $m_2$ | $m_1/4$ | kg |
@@ -218,11 +219,15 @@ A characteristic feature of chaos is the sensitive dependence on initial conditi
 
 In the exercise  you can manipulate a `maple` -worksheet that contains an implementation of the three-body problem {eq}`eq:phenomenon_3body_simple1_m3_full__phenomenon`. You can change the initial position and velocity of the satellite and get a feeling for the sensitivity on the initial conditions.
 
-```{figure} _static/phenomenon/phenomenon_3body_example_sensitivity.png
+```{subfigure} 2
 :name: fig:phenomenon_3body_example_sensitivity
-:width: 100mm
+:align: center
+:subcaptions: below
 
-Sensitivity on initial conditions: two trajectories initiated from slightly different positions with a relative difference in $x(0)$ of $10^{-4}$. Integration time is two months. Diamond: initial locations. Circles: end position of satellites after two months. Top: trajectories in reference frame that moves with the center of mass. Bottom: the trajectories in the reference frame that additionally co-rotates with the earth and moon.
+![ ](_static/phenomenon/phenomenon_3body_example_sensitivity.png)
+![ ](_static/phenomenon/phenomenon_3body_example_sensitivity_corot.png)
+
+Sensitivity on initial conditions: two trajectories initiated from slightly different positions with a relative difference in $x(0)$ of $10^{-4}$. Integration time is two months. Diamond: initial locations. Circles: end position of satellites after two months. (a) Trajectories in reference frame that moves with the center of mass. (b) The trajectories in the reference frame that additionally co-rotates with the earth and moon.
 ```
 
 ```{include} _includes/phenomenon_exercises.md

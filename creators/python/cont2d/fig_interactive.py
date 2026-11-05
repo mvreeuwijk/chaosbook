@@ -3,7 +3,8 @@
 Precomputed frames, one slider each (serverless), written to
 python/_static/cont2d/interactive/:
   hopf_slider.html           Hopf normal form: phase plane and x(t) versus mu
-  lotka_volterra_slider.html Lotka-Volterra: orbits, fixed point and time series versus alpha
+  lotka_volterra_slider.html Lotka-Volterra: orbits, fixed point and time series versus
+                             alpha (each orbit keeps its colour in both panels)
 """
 
 from pathlib import Path
@@ -39,8 +40,10 @@ def build(name, grid, make_frame, titles, layout_axes, prefix, fmt):
         fig.add_trace(tr, row=1, col=1 if tr.meta == "phase" else 2)
     fig.frames = frames
     fig.update_layout(
-        showlegend=False, margin=dict(l=45, r=10, t=40, b=40),
+        # the bottom margin leaves room for the slider below the axis titles
+        showlegend=False, height=540, margin=dict(l=45, r=10, t=50, b=130),
         sliders=[dict(
+            y=0, yanchor="top", pad=dict(t=55), font=dict(color="#333333"),
             currentvalue=dict(prefix=prefix),
             steps=[dict(label=fmt(p), method="animate",
                         args=[[fmt(p)], dict(mode="immediate",
@@ -48,7 +51,7 @@ def build(name, grid, make_frame, titles, layout_axes, prefix, fmt):
                    for p in grid])])
     layout_axes(fig)
     fig.write_html(OUT / name, include_plotlyjs="../../plotly.min.js",
-                   full_html=True)
+                   full_html=True, auto_play=False)
     print(name, (OUT / name).stat().st_size, "bytes")
 
 
@@ -89,8 +92,8 @@ def hopf_axes(fig):
 
 
 build("hopf_slider.html", mus, hopf_frame,
-      ("phase plane: Re(sigma) = mu, Im(sigma) = +-1", "x(t)"),
-      hopf_axes, "mu = ", lambda m: f"{m:g}")
+      ("phase plane: Re σ = μ, Im σ = ±1", "x(t)"),
+      hopf_axes, "μ = ", lambda m: f"{m:g}")
 
 
 # --- Lotka-Volterra ---------------------------------------------------------------
@@ -104,11 +107,12 @@ def lv_frame(a):
         t, y = integrate(cb.lotka_volterra, x0, 40, 600, alpha=a)
         out.append(go.Scatter(x=y[0], y=y[1], mode="lines", meta="phase",
                               line=dict(color=col, width=1.5)))
+    # time series of the crimson orbit: same colour, x solid and y dashed
     t, y = integrate(cb.lotka_volterra, ICS[0][0], 40, 600, alpha=a)
     out.append(go.Scatter(x=t, y=y[0], mode="lines", meta="time",
-                          line=dict(color="blue", width=1.5)))
+                          line=dict(color=ICS[0][1], width=1.5)))
     out.append(go.Scatter(x=t, y=y[1], mode="lines", meta="time",
-                          line=dict(color="red", dash="dash", width=1.5)))
+                          line=dict(color=ICS[0][1], dash="dash", width=1.5)))
     out.append(go.Scatter(x=[a], y=[1], mode="markers", meta="phase",
                           marker=dict(color="black", size=8)))
     out.append(go.Scatter(x=[0], y=[0], mode="markers", meta="phase",
@@ -126,5 +130,6 @@ def lv_axes(fig):
 
 
 build("lotka_volterra_slider.html", alphas, lv_frame,
-      ("phase plane (fixed point at (alpha, 1))", "x(t) blue, y(t) red"),
-      lv_axes, "alpha = ", lambda a: f"{a:g}")
+      ("phase plane, fixed point (α, 1)",
+       "red orbit: x(t) solid, y(t) dashed"),
+      lv_axes, "α = ", lambda a: f"{a:g}")

@@ -24,17 +24,19 @@ RED = "#c0392b"
 
 
 def write(fig, name, height):
-    fig.update_layout(height=height, margin=dict(l=55, r=10, t=40, b=40),
+    # the bottom margin leaves room for the slider below the x-axis titles
+    fig.update_layout(height=height + 70, margin=dict(l=55, r=10, t=60, b=130),
                       showlegend=False, template="simple_white")
-    fig.write_html(HTML / name, include_plotlyjs="../../plotly.min.js", full_html=True)
+    fig.write_html(HTML / name, include_plotlyjs="../../plotly.min.js", full_html=True,
+                   auto_play=False)
     print(f"{name}: {(HTML / name).stat().st_size / 1e3:.0f} kB")
 
 
 def add_slider(fig, names, labels, prefix):
     fig.update_layout(sliders=[dict(
-        active=0, x=0.05, len=0.9, y=-0.02,
+        active=0, x=0.05, len=0.9, y=0, yanchor="top",
         currentvalue=dict(prefix=prefix, font=dict(size=14)),
-        pad=dict(t=30, b=0),
+        font=dict(color="#333333"), pad=dict(t=55, b=0),
         steps=[dict(method="animate", label=lab,
                     args=[[nm], dict(mode="immediate", frame=dict(duration=0, redraw=True),
                                      transition=dict(duration=0))])
@@ -69,13 +71,13 @@ def zeros(a):
 
 # =========================================================================== 1
 SYSTEMS = [
-    ("pitchfork: x' = rx - x^3", lambda x, r: r * x - x**3,
+    ("pitchfork<br>ẋ = rx − x³", lambda x, r: r * x - x**3,
      lambda x, r: r - 3 * x**2, (-2, 2)),
-    ("subcritical: x' = rx + x^3", lambda x, r: r * x + x**3,
+    ("subcritical<br>ẋ = rx + x³", lambda x, r: r * x + x**3,
      lambda x, r: r + 3 * x**2, (-2, 2)),
-    ("saddle-node: x' = r - x^2", lambda x, r: r - x**2,
+    ("saddle-node<br>ẋ = r − x²", lambda x, r: r - x**2,
      lambda x, r: -2 * x, (-3.5, 2)),
-    ("transcritical: x' = rx - x^2", lambda x, r: r * x - x**2,
+    ("transcritical<br>ẋ = rx − x²", lambda x, r: r * x - x**2,
      lambda x, r: r - 2 * x, (-4, 2)),
 ]
 XL = 1.5
@@ -111,7 +113,7 @@ for c in range(4):
                      title_text="f(x)" if c == 0 else "")
     fig.update_xaxes(range=[-XL, XL], zeroline=True, row=2, col=c + 1, title_text="r")
     fig.update_yaxes(range=[-XL, XL], zeroline=True, row=2, col=c + 1,
-                     title_text="x*(r)" if c == 0 else "")
+                     title_text="x<sub>*</sub>(r)" if c == 0 else "")
 frames = []
 for r in rs:
     data, idx = [], []
@@ -156,7 +158,7 @@ for c, m in enumerate(FM, start=1):
                      title_text="f(x)" if c == 1 else "")
     fig.update_xaxes(range=[0, 2], row=2, col=c, title_text="T")
     fig.update_yaxes(range=[-1.1, 1.1], zeroline=True, row=2, col=c,
-                     title_text="x*(T)" if c == 1 else "")
+                     title_text="x<sub>*</sub>(T)" if c == 1 else "")
 frames = []
 for T in Ts:
     data, idx = [], []
@@ -221,7 +223,7 @@ for c, T in enumerate(TH, start=1):
                      title_text="f(x)" if c == 1 else "")
     fig.update_xaxes(range=[-1, 1], zeroline=True, row=2, col=c, title_text="m")
     fig.update_yaxes(range=[-1.4, 1.4], zeroline=True, row=2, col=c,
-                     title_text="x*(m)" if c == 1 else "")
+                     title_text="x<sub>*</sub>(m)" if c == 1 else "")
 frames, labels = [], []
 for k in range(len(path)):
     data, idx = [], []

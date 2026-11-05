@@ -3,8 +3,8 @@
 Produces (in python/_static/disc2d/):
   disc2d_circle                    sketch of a flow on a circle
   disc2d_lincircle_cobweb          period-3 cobweb of x + Omega mod 1
-  disc2d_lincircle_quasi           quasi-periodic series, Omega = golden ratio
-  disc2d_lincircle_quasi_cobweb    its cobweb
+  disc2d_lincircle_quasi           (a) quasi-periodic series, Omega = golden
+                                   ratio, (b) its cobweb
   disc2d_circlemap_series          phase locking, Omega near 1/2 (K = 1)
   disc2d_circlemap_return_p2       second iterate f(f(x)) for three Omega
   disc2d_circlemap_winding         Devil's staircase W(Omega) at K = 1
@@ -22,15 +22,15 @@ from scipy.optimize import fsolve
 
 import chaosbook as cb
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc2d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
 
 def save(name):
-    plt.tight_layout()
-    plt.savefig(OUT / f"{name}.png", dpi=150)
-    plt.close()
+    bf.save(plt.gcf(), OUT / f"{name}.png")
 
 
 def mod1(x):
@@ -70,7 +70,7 @@ def cobweb_black(f, x0, n, ax, lw_map=2.0, **params):
 
 
 # -- sketch of a circle ------------------------------------------------------
-fig, ax = plt.subplots(figsize=(4.2, 4.2))
+fig, ax = plt.subplots(figsize=(2.5, 2.5))
 t = np.linspace(0, 2 * np.pi, 400)
 ax.plot(np.cos(t), np.sin(t), "k", lw=1.5)
 for ang, lab, ha, va in [(0, "$0$", "left", "center"),
@@ -83,7 +83,7 @@ for ang, lab, ha, va in [(0, "$0$", "left", "center"),
 th = 0.8
 ax.plot([0, np.cos(th)], [0, np.sin(th)], "k", lw=0.8)
 ax.plot([0, 1], [0, 0], "k", lw=0.8)
-ax.plot(np.cos(th), np.sin(th), "ko", markersize=12)
+ax.plot(np.cos(th), np.sin(th), "ko", markersize=8)
 ax.set_aspect("equal")
 ax.set_xlim(-1.45, 1.45)
 ax.set_ylim(-1.45, 1.45)
@@ -91,7 +91,7 @@ ax.axis("off")
 save("disc2d_circle")
 
 # -- linear map on the circle: period 3 --------------------------------------
-fig, ax = plt.subplots(figsize=(4.2, 4.2))
+fig, ax = plt.subplots(figsize=bf.SQUARE)
 X = cobweb_black(lin, 0.2, 40, ax, Omega=1 / 3)
 # the original figure labels x_1, x_2, x_0 (= x_3) on the axes
 ax.set_xticks([X[1], X[2], X[3]], ["$x_1$", "$x_2$", "$x_0$"])
@@ -105,22 +105,22 @@ print("period-3 orbit (Omega=1/3, x0=0.2):", np.round(X[:5], 4))
 # -- quasi-periodic ------------------------------------------------------------
 Om = (1 + np.sqrt(5)) / 2
 X = cb.orbit(lin, 0.2, 150, Omega=Om)
-plt.figure(figsize=(4.2, 3.2))
-plt.plot(np.arange(1, 101), X[1:101], "ko", markersize=3, mfc="none")
-plt.xlim(0, 100)
-plt.ylim(0, 1)
-plt.xlabel("$n$")
-plt.ylabel("$x_n$")
+fig, (a1, a2) = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.5),
+                             gridspec_kw=dict(width_ratios=[3, 2]))
+a1.plot(np.arange(1, 101), X[1:101], "ko", markersize=3, mfc="none")
+a1.set_xlim(0, 100)
+a1.set_ylim(0, 1)
+a1.set_xlabel("$n$")
+a1.set_ylabel("$x_n$")
+cobweb_black(lin, 0.2, 150, a2, lw_map=1.5, Omega=Om)
+a2.set_xticks([0, 1])
+a2.set_yticks([0, 1])
+bf.panel_labels([a1, a2])
 save("disc2d_lincircle_quasi")
-fig, ax = plt.subplots(figsize=(4.2, 4.2))
-cobweb_black(lin, 0.2, 150, ax, lw_map=1.5, Omega=Om)
-ax.set_xticks([0, 1])
-ax.set_yticks([0, 1])
-save("disc2d_lincircle_quasi_cobweb")
 
 # -- phase locking: series -----------------------------------------------------
 Oms = [0.46, 0.464, 0.5, 0.536, 0.54]
-plt.figure(figsize=(5.0, 4.5))
+plt.figure(figsize=(3.8, 3.4))
 for i, Om in enumerate(Oms):
     off = 1.5 * (len(Oms) - 1 - i)
     X = cb.orbit(circ, 0.1, 2000, Omega=Om)          # discard transient
@@ -136,7 +136,7 @@ save("disc2d_circlemap_series")
 
 # -- second iterate ---------------------------------------------------------------
 xs = np.linspace(0, 1, 4001)
-plt.figure(figsize=(4.2, 4.2))
+plt.figure(figsize=bf.SQUARE)
 plt.plot(xs, xs, "k", lw=1)
 for Om, ls, lw in [(0.464, "--", 1.2), (0.5, "-", 2.2), (0.536, "-.", 1.5)]:
     y = circ(circ(xs, Om), Om)
@@ -187,13 +187,13 @@ assert np.allclose(chk, winding(np.array([0.3, 0.5]), 200))
 
 Os = np.linspace(0, 1, 501)
 W = winding(Os, 200)
-fig, ax = plt.subplots(figsize=(4.2, 4.2))
+fig, ax = plt.subplots(figsize=bf.SQUARE)
 ax.plot([0, 1], [0, 1], "k", lw=1)
 ax.plot(Os, W, "kD", markersize=2, mfc="none")
 for (xx, yy, s) in [(0.1, 0.02, "0/1"), (0.23, 1 / 4, "1/4"), (0.30, 1 / 3, "1/3"),
                     (0.42, 1 / 2, "1/2"), (0.60, 2 / 3, "2/3"),
                     (0.67, 3 / 4, "3/4"), (0.88, 1.01, "1/1")]:
-    ax.text(xx, yy + 0.015, s, ha="center", va="bottom", fontsize=11)
+    ax.text(xx, yy + 0.015, s, ha="center", va="bottom", fontsize=8)
 ax.set_xlim(0, 1)
 ax.set_ylim(0, 1.06)
 ax.set_xticks([0, 1])
@@ -218,7 +218,7 @@ for k in range(1, N + 1):
         pts_O.append(Os)
         pts_x.append(mod1(x))
 lam /= 0.75 * N
-fig, (a1, a2) = plt.subplots(2, 1, figsize=(5.0, 4.5), sharex=True,
+fig, (a1, a2) = plt.subplots(2, 1, figsize=(3.8, 3.4), sharex=True,
                              gridspec_kw=dict(height_ratios=[1.3, 1]))
 a1.plot(np.concatenate(pts_O), np.concatenate(pts_x), "k.", markersize=1.5)
 a1.set_ylabel("$x$")
@@ -243,7 +243,7 @@ for _ in range(300):
     x = cb.circle_map(x, Og, Kg)
     acc += np.log(np.maximum(np.abs(1 + Kg * np.cos(2 * np.pi * x)), 1e-12))
 Lam = acc / 300
-plt.figure(figsize=(4.2, 4.2))
+plt.figure(figsize=bf.SQUARE)
 plt.imshow(Lam, origin="lower", extent=[0, 1, 0, 10], aspect="auto",
            cmap="bwr", vmin=-1, vmax=1, interpolation="nearest")
 plt.xlabel(r"$\Omega$")

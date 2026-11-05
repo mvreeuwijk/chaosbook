@@ -16,8 +16,9 @@ from plotly.subplots import make_subplots
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc1d"
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
@@ -31,28 +32,25 @@ def dlogistic(x, r):
 N, eps = 60, 1e-9
 X = cb.orbit(cb.logistic, x0=0.1, n=N, r=3.9)
 Y = cb.orbit(cb.logistic, x0=0.1 + eps, n=N, r=3.9)
-plt.figure(figsize=(5.0, 3.5))
-plt.plot(range(N + 1), X, "-o", markersize=3, label="$x_n$")
-plt.plot(range(N + 1), Y, "-s", markersize=3, label="$y_n$")
-plt.xlabel("$n$")
-plt.ylabel("$x$, $y$")
-plt.legend()
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_lyap_r39_lin.png", dpi=150)
-plt.close()
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
+ax.plot(range(N + 1), X, "-o", markersize=3, label="$x_n$")
+ax.plot(range(N + 1), Y, "-s", markersize=3, label="$y_n$")
+ax.set_xlabel("$n$")
+ax.set_ylabel("$x$, $y$")
+ax.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=2,
+          borderaxespad=0.2)
+bf.save(fig, OUT / "disc1d_logist_lyap_r39_lin.png")
 
-plt.figure(figsize=(5.0, 3.5))
-plt.plot(range(N + 1), np.log(np.abs(Y - X)), "o", markersize=3)
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
+ax.plot(range(N + 1), np.log(np.abs(Y - X)), "o", markersize=3)
 n = np.arange(0, 36)
-plt.plot(n, np.log(eps) + 0.6 * n, "k--")
-plt.xlabel("$n$")
-plt.ylabel("$\\ln|y_n - x_n|$")
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_lyap_r39_log.png", dpi=150)
-plt.close()
+ax.plot(n, np.log(eps) + 0.6 * n, "k--")
+ax.set_xlabel("$n$")
+ax.set_ylabel(r"$\ln|y_n - x_n|$")
+bf.save(fig, OUT / "disc1d_logist_lyap_r39_log.png")
 
 # -- combined bifurcation + Lambda(r) ----------------------------------------
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6.2, 6),
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(3.8, 3.4),
                                sharex=True, height_ratios=[2, 1])
 cb.bifurcation_diagram(cb.logistic, 2.5, 4.0, nr=800, n=1000,
                        x0=0.57, discard=0.8, ax=ax1)
@@ -60,12 +58,10 @@ rs, lams = cb.lyapunov_sweep(cb.logistic, dlogistic, 2.5, 4.0, nr=800)
 ax2.plot(rs, lams, "k", linewidth=0.7)
 ax2.axhline(0, color="gray", linewidth=0.8)
 ax2.set_xlabel("$r$")
-ax2.set_ylabel("$\\Lambda(r)$")
+ax2.set_ylabel(r"$\Lambda(r)$")
 ax2.set_ylim(-2.5, 1)
 ax1.set_xlim(2.5, 4)
-plt.tight_layout()
-plt.savefig(OUT / "disc1d_logist_lyap_bifurcation.png", dpi=150)
-plt.close()
+bf.save(fig, OUT / "disc1d_logist_lyap_bifurcation.png")
 
 # -- interactive: bifurcation + Lambda(r) with a linked r-cursor -------------
 rs_b, xs_b = [], []
@@ -76,8 +72,8 @@ for r in np.linspace(2.5, 4.0, 1001):
 rs_l, lams_l = cb.lyapunov_sweep(cb.logistic, dlogistic, 2.5, 4.0, nr=1000)
 
 rcursor = np.round(np.arange(2.5, 4.0001, 0.05), 3)
-fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.65, 0.35],
-                    vertical_spacing=0.05)
+fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.62, 0.38],
+                    vertical_spacing=0.1)
 fig.add_trace(go.Scattergl(x=rs_b, y=xs_b, mode="markers",
                            marker=dict(size=1, color="darkblue")), row=1, col=1)
 fig.add_trace(go.Scatter(x=rs_l, y=np.clip(lams_l, -3, None), mode="lines",
@@ -94,10 +90,15 @@ for r in rcursor:
         go.Scatter(x=[r, r], y=[-3, 1]),
     ], layout=dict(title=f"r = {r:.2f},  Λ = {lam:+.3f}")))
 fig.frames = frames
+i0 = int(np.argmin(np.abs(rcursor - 3.0)))    # the cursor starts at r = 3
+lam0 = np.interp(3.0, rs_l, np.clip(lams_l, -3, None))
 fig.update_layout(
+    title=f"r = 3.00,  Λ = {lam0:+.3f}",
     showlegend=False, margin=dict(l=50, r=10, t=40, b=40),
-    yaxis_title="x(r)", yaxis2_title="Λ(r)", xaxis2_title="r",
+    yaxis_title="x(r)", yaxis2_title="Λ(r)", xaxis_title="r", xaxis2_title="r",
+    xaxis_showticklabels=True,
     sliders=[dict(
+        active=i0, pad=dict(t=60), font=dict(color="#333333"),
         currentvalue=dict(prefix="r = "),
         steps=[dict(label=f"{r}", method="animate",
                     args=[[f"{r}"], dict(mode="immediate",
@@ -106,6 +107,7 @@ fig.update_layout(
     )],
 )
 fig.write_html(OUT / "interactive" / "lyapunov_link.html",
-               include_plotlyjs="../../plotly.min.js", full_html=True)
+               include_plotlyjs="../../plotly.min.js", full_html=True,
+               auto_play=False)
 
 print("fig_lyapunov: assets written to", OUT)

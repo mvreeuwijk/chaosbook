@@ -5,6 +5,12 @@
 # resources (refs.bib, custom.sty, custom.css) come from ../shared via the
 # settings below.
 
+import os
+import sys
+
+# Shared Sphinx extensions (../shared/_ext).
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'shared', '_ext')))
+
 extensions = [
     'myst_nb',  # notebooks + MyST markdown (loads the MyST parser itself)
     'sphinx.ext.autosectionlabel',
@@ -13,7 +19,12 @@ extensions = [
     'sphinxcontrib.bibtex',
     'sphinx_subfigure',
     'sphinx_math_dollar',
+    # Figures are saved at their printed size and included without :width:;
+    # this shows them at that same physical size in HTML
+    # (creators/python/bookfig.py has the house style).
+    'natural_size',
 ]
+natural_size_html_scale = 1.1
 
 autosectionlabel_prefix_document = True
 

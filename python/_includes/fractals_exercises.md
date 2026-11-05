@@ -26,7 +26,6 @@ Consider a slender steel beam with a damping coefficient $f$ that is clamped in 
 
 ```{figure} _static/exercises/ex0121r00_fig1.png
 :name: fig0121:3dc_sketch
-:width: 80mm
 
 Sketch of the mechanical system.
 ```
@@ -52,7 +51,6 @@ b) Determine the box-dimension of this attractor.
 
 ```{figure} _static/exercises/ex0121r00_fig2.png
 :name: fig0121:3dc_poincare
-:width: 100mm
 
 Result from executing the starter cell with $N=10000$.
 ```

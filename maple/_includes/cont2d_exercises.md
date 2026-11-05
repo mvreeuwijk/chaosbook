@@ -104,7 +104,8 @@ g) Again take $a = 0.75$ and $x(0) =0.4$. Since the prey population at $t=0$ is 
 
 In a nuclear reactor, heat is carried away from the core by convection. Instead of actively forcing this convection by means of a pump, one can also make use of the density difference between the hot, boiling water in the riser and the cooled water in the downcomer to drive the system (see {numref}`fig:reactorsystem`). A large advantage of such an approach is that pump failure and resulting dangerous situations are avoided.
 
-```{figure} _static/blank.png
+```{figure} _static/exercises/NuclearReactorCooling.png
+:width: 70mm
 :name: fig:reactorsystem
 
 Natural convection reactor cooling

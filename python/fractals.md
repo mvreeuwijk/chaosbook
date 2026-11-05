@@ -12,7 +12,6 @@ A geometrical object is called *self-similar* when it is built up out of smaller
 
 ```{figure} _static/fractals/fractals_koch.png
 :name: fig:fractals:koch
-:width: 90mm
 
 Construction of the von Koch curve. At each step every segment is replaced by four segments of one third of its length.
 ```
@@ -88,7 +87,6 @@ The Cantor set is an example of a *dust*: its dimension lies between zero (a poi
 
 ```{figure} _static/fractals/fractals_cantor.png
 :name: fig:fractals:cantor
-:width: 95mm
 
 The middle-third Cantor set. At each stage the central third of every segment is removed.
 ```
@@ -108,7 +106,6 @@ As expected the dimension lies between one and two. The gasket is pierced by hol
 
 ```{figure} _static/fractals/fractals_sierpinski.png
 :name: fig:fractals:sierpinski
-:width: 105mm
 
 The first iterations of the Sierpinski gasket.
 ```
@@ -149,7 +146,6 @@ Consequently the *hydraulic diameter* $D_n = 4A_n/P_n \rightarrow 0$: the island
 
 ```{figure} _static/fractals/fractals_kochisland.png
 :name: fig:fractals:kochisland
-:width: 105mm
 
 Construction of the Koch island.
 ```
@@ -224,7 +220,6 @@ With $N=10^4$ points we thus recover the analytical value of the gasket to two d
 
 ```{figure} _static/fractals/fractals_boxcount_fit.png
 :name: fig:fractals:boxcount_fit
-:width: 85mm
 
 Determination of the box-counting dimension from the slope of $\log N(\varepsilon)$ against $\log\varepsilon$.
 ```
@@ -367,7 +362,6 @@ generates a self-similar *measure* on the interval ({numref}`fig:fractals:binomi
 
 ```{figure} _static/fractals/fractals_binomial.png
 :name: fig:fractals:binomial
-:width: 100mm
 
 A binomial multifractal measure obtained by repeatedly redistributing the mass of each sub-interval in the ratio $p_1:p_2$.
 ```
@@ -393,7 +387,6 @@ One verifies immediately that $D_0 = \log 2/\log 2 = 1$: the measure lives on th
 
 ```{figure} _static/fractals/fractals_Dq.png
 :name: fig:fractals:dq
-:width: 85mm
 
 The generalized-dimension spectrum $D_q$ of the binomial multifractal, comparing the analytical result with the box-counting procedure.
 ```
@@ -509,9 +502,8 @@ The anisotropy parameter $r$ – the height of the interface bulges relative to 
 
 ```{figure} _static/fractals/fractals_tnti.png
 :name: fig:fractals:tnti
-:width: 100%
 
-A self-similar model of the turbulent/non-turbulent interface [Krug2017]. (a) The generator: a segment of length $l_n$ is replaced by two segments meeting at a vertex displaced by $r\,l_n$ off the midpoint. (b) Curves after five iterations for $r=0.3$ and $r=0.2$; the smaller $r$ produces a smoother, lower-dimensional interface. (c) The fractal exponent $\beta = \log m/\log(2/m)$ as a function of the anisotropy $r$, with the neutral-turbulence value $\beta=1/3$ marked.
+A self-similar model of the turbulent/non-turbulent interface (after Krug et al., 2017). (a) The generator: a segment of length $l_n$ is replaced by two segments meeting at a vertex displaced by $r\,l_n$ off the midpoint. (b) Curves after five iterations for $r=0.3$ and $r=0.2$; the smaller $r$ produces a smoother, lower-dimensional interface. (c) The fractal exponent $\beta = \log m/\log(2/m)$ as a function of the anisotropy $r$, with the neutral-turbulence value $\beta=1/3$ marked.
 ```
 
 :::{only} html
@@ -528,7 +520,6 @@ The value $7/3$ is no accident. It is precisely the surface dimension for which 
 
 ```{figure} _static/fractals/fractals_cloudscaling.png
 :name: fig:fractals:clouds
-:width: 80mm
 
 Surface area $A$ against linear size $L=V^{1/3}$ for a population of simulated cumulus clouds (schematic, after Siebesma \& Jonker, 2000). The clouds obey $A\sim L^{D_s}$ with $D_s\simeq 7/3$ (solid line), well above the $D_s=2$ of smooth, Euclidean shapes (dashed line).
 ```

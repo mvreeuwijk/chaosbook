@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{sphinx}
 \usepackage{tcolorbox}
+\tcbuselibrary{breakable}  % long example/code boxes continue on the next page
 \usepackage{manfnt}
 \usepackage{tikz}
 \usepackage[labelfont=bf]{caption}
@@ -32,6 +33,7 @@
     \def\MapleCodeTitle{Maple code}%
     \def\PythonTitle{Python}%
     \def\PythonCodeTitle{Python code}%
+    \def\ExampleTitle{Example}%
     \def\admonitionfontsize{}%
     \ifx\admontitle\MapleTitle
       \def\admonitionbg{mapleyellow}%
@@ -49,7 +51,14 @@
       \def\admonitionbg{mapleyellow}%
       \def\admonitionfontsize{\small}%
     \fi
+    % Example boxes mix prose and code listings: same warm background, so a
+    % listing does not sit as a yellow box inside a grey one (body text keeps
+    % its normal size).
+    \ifx\admontitle\ExampleTitle
+      \def\admonitionbg{mapleyellow}%
+    \fi
     \begin{tcolorbox}[
+        breakable,                   % May continue on the next page
         colframe=white,              % No border
         colback=\admonitionbg,       % Per-title background
         sharp corners,               % Square corners

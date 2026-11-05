@@ -19,7 +19,6 @@ of exactly the form {eq}`eq:cont3d:system` that we have studied since chapter {n
 
 ```{figure} _static/practice/practice_weathermodel.png
 :name: fig:practice:weathermodel
-:width: 100%
 
 A weather model is a dynamical system. The discretised atmospheric fields are stacked into one state vector $\mathbf{x}$ of dimension of order $10^{9}$, whose evolution obeys $\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x})$. The Lorenz system is the same kind of object at the opposite extreme of dimension.
 ```
@@ -44,7 +43,6 @@ Since the initial state is never known exactly, the honest response is to abando
 
 ```{figure} _static/practice/practice_ensemble.png
 :name: fig:practice:ensemble
-:width: 100%
 
 An ensemble forecast for the Lorenz system, shown in the $(x,z)$ projection. A tight blob of initial conditions (left) is stretched into a filament by the flow, and eventually spread over the whole attractor. The width of the cloud is the forecast uncertainty.
 ```
@@ -55,7 +53,6 @@ An ensemble forecast for the Lorenz system, shown in the $(x,z)$ projection. A t
 
 ```{figure} _static/practice/practice_horizon.png
 :name: fig:practice:horizon
-:width: 80mm
 
 Growth of the ensemble spread $\delta(t)$ for the blob of {numref}`fig:practice:ensemble`. The spread grows as $\mathrm{e}^{\Lambda_e t}$ with $\Lambda_e = 0.9$ (dashed) until it saturates at the size of the attractor (dotted). The predictability horizon is reached when the two meet.
 ```
@@ -135,7 +132,6 @@ Advancing the uncertainty is the only subtlety. The textbook Kalman filter is li
 
 ```{figure} _static/practice/practice_assimilation.png
 :name: fig:practice:assimilation
-:width: 100%
 
 Data assimilation for the Lorenz system. Top: the $x$-component of the truth, a free forecast started from a wrong initial condition, and the Kalman-filter analysis fed noisy observations (dots). Bottom: the RMS error of the two estimates. The free forecast diverges within the predictability horizon; the analysis stays locked on.
 ```
@@ -231,7 +227,6 @@ The billion dimensions of a weather model are, in a sense, an illusion. The syst
 
 ```{figure} _static/practice/practice_manifold.png
 :name: fig:practice:manifold
-:width: 85mm
 
 Trajectories of a dissipative system, launched from scattered initial conditions in a high-dimensional state space, collapse onto a low-dimensional attracting manifold. Reduced-order models seek coordinates on this manifold.
 ```
@@ -244,7 +239,6 @@ The oldest and most widely used of these methods is *proper orthogonal decomposi
 
 ```{figure} _static/practice/practice_pod.png
 :name: fig:practice:pod
-:width: 100%
 
 Proper orthogonal decomposition of a field with low-dimensional structure. Left: the energy is captured almost entirely by the first three modes. Right: a single snapshot, reconstructed with one, two and three modes, converges rapidly to the full field; the residual is noise.
 ```
@@ -257,7 +251,6 @@ POD organises a field by energy, but says nothing about its dynamics. A compleme
 
 ```{figure} _static/practice/practice_koopman.png
 :name: fig:practice:koopman
-:width: 90mm
 
 The Koopman viewpoint. The flow is nonlinear in the state $\mathbf{x}$, but by lifting to a space of observables $g(\mathbf{x})$ it can be represented by a linear operator $\mathcal{K}$. Dynamic mode decomposition approximates this operator from data.
 ```
@@ -289,7 +282,6 @@ with both coordinates taken modulo one so that the fluid stays on the square. Th
 
 ```{figure} _static/practice/practice_mixing.png
 :name: fig:practice:mixing
-:width: 100%
 
 Chaotic mixing. Two blobs of dye advected by a simple time-periodic flow are stretched and folded into ever finer filaments and, within a few periods, interleaved throughout the domain – efficient mixing produced by a smooth, laminar flow.
 ```
@@ -342,9 +334,8 @@ applied only while it stays small, $|\delta r_n| \le \delta r_{\max}$. The orbit
 
 ```{figure} _static/practice/practice_control.png
 :name: fig:practice:control
-:width: 90mm
 
-Controlling chaos. Left of the marker the logistic map ($r=3.9$) iterates chaotically. Once control is enabled it waits until the orbit strays near the target fixed point $x^{*}$ and then, with the minuscule parameter nudges $\delta r_n$ shown below, locks the motion onto it.
+Controlling chaos. Left of the marker the logistic map ($r=3.9$) iterates chaotically. Once control is enabled it waits until the orbit strays near the target fixed point $x^{*}$ and then, with the minuscule parameter nudge $\delta r_n$ shown below (here a single nudge suffices), locks the motion onto it.
 ```
 
 :::{only} html
@@ -386,9 +377,8 @@ The third use reads chaos from data. In an experiment one seldom measures the fu
 
 ```{figure} _static/practice/practice_reconstruction.png
 :name: fig:practice:reconstruction
-:width: 100%
 
-Attractor reconstruction. From the single recorded coordinate $x(t)$ of the Lorenz system (left), the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ trace out a reconstruction (right) with the same two-lobed topology as the original – the content of Takens' theorem.
+Attractor reconstruction. The Lorenz attractor (left), and its reconstruction from the single recorded coordinate $x(t)$ alone (right): the delay-coordinate vectors $(x_t, x_{t+\tau}, x_{t+2\tau})$ trace out an object with the same two-lobed topology as the original – the content of Takens' theorem.
 ```
 
 :::{only} html
@@ -430,7 +420,6 @@ The delay-embedding idea is not confined to the laboratory. Industrial *fluidise
 
 ```{figure} _static/practice/practice_reactor.png
 :name: fig:practice:reactor
-:width: 100%
 
 The Takens route in industry (illustrative). A single measured signal – here a noisy chaotic time series standing in for the pressure in a fluidised-bed reactor (left) – is turned by delay embedding into a reconstructed attractor (right). The shape of this "fingerprint" characterises the operating regime, and changes in it give early warning of malfunction.
 ```

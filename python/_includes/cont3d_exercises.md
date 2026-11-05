@@ -117,7 +117,6 @@ Neurons are a major class of cells in the nervous system whose main role is to p
 
 ```{figure} _static/exercises/ex0089r01_1.png
 :name: fig:ex0089r01:ex0089r01_1
-:width: 65mm
 ```
 
 The axon can be modeled by combining the equations for an excitable membrane with the differential equations for an electrical core conductor cable, which gives a set of coupled non-linear partial differential equations. When the spatial variation of the voltages is negligible, these equations reduce to a set of coupled ordinary differential equations, known as the Bonhoeffer-van der Pol oscillator:

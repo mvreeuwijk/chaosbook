@@ -28,7 +28,6 @@ As an example, let us return our attention to the celebrated Lorenz equations in
 
 ```{figure} _static/cont3d/cont3d_lorenz_time.png
 :name: fig:cont3d:lorenzxtime
-:width: 100mm
 
 A typical timeseries of $x$ showing typical aperiodic behavior.
 ```
@@ -41,13 +40,8 @@ When all three variables $x(t)$, $y(t)$ and $z(t)$ are plotted in the phase spac
 
 Trajectories starting far away ({numref}`fig:cont3d:lorenzattractor`(b)) can be seen to converge upon the strange attractor.
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont3d_lorenz_attractors.png
 :name: fig:cont3d:lorenzattractor
-:align: center
-:subcaptions: below
-
-![ ](_static/cont3d/cont3d_lorenz_attractor.png)
-![ ](_static/cont3d/cont3d_lorenz_attraction.png)
 
 The strange attractor of the Lorenz equations. (a) single trajectory $\mathbf{x}(t)$. (b) All trajectories in the basin of attraction end up on the strange attractor.
 ```
@@ -143,7 +137,6 @@ print("slope of ln(delta):", np.polyfit(t[m], np.log(delta[m]), 1)[0])
 
 ```{figure} _static/cont3d/cont3d_lorenz_lyapunov.png
 :name: fig:cont3d:lorenzlyapunov
-:width: 100mm
 
 The growth of a small perturbation in the initial values. The effective Lyapunov exponent $\Lambda_e \approx 0.9$.
 ```
@@ -203,7 +196,6 @@ So if one has the complete data of the trajectories $\mathbf{x}_1(t)$, $\mathbf{
 
 ```{figure} _static/cont3d/cont3d_LorenzLyapEffective.png
 :name: fig:cont3d:lorenzlyapt
-:width: 100%
 
 Instantaneous (effective) Lyapunov exponent $\Lambda_e$ determined for the Lorenz system from {eq}`eq:cont3d:lyap_instant`.
 ```
@@ -222,9 +214,8 @@ i.e. the effective Lyapunov exponent is always between the smallest and the larg
 
 ```{figure} _static/cont3d/cont3d_LorenzLyapComprehensive.png
 :name: fig:cont3d:lorenzlyapcomprehensive
-:width: 70%
 
-Top: the three local stretching rates $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ (the eigenvalues of $J_{\text{S}}$) along an orbit of the Lorenz system, together with the effective Lyapunov exponent $\Lambda_e$ (black line). Bottom: cumulative time averages. The averages of the stretching rates are not the Lyapunov exponents; only $\Lambda_e$ converges to the largest Lyapunov exponent, $\Lambda_e \simeq 0.9$.
+Top: the three local stretching rates $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ (the eigenvalues of $J_{\text{S}}$) along an orbit of the Lorenz system, together with the effective Lyapunov exponent $\Lambda_e$ (black line). Bottom: cumulative time averages over a longer orbit ($t \leq 400$). The averages of the stretching rates are not the Lyapunov exponents; only $\Lambda_e$ converges to the largest Lyapunov exponent, $\Lambda_e \simeq 0.9$.
 ```
 
 :::{only} html
@@ -233,7 +224,7 @@ Top: the three local stretching rates $\Lambda_1 \leq \Lambda_2 \leq \Lambda_3$ 
 
 {numref}`fig:cont3d:lorenzlyapcomprehensive` shows the stretching rates as a function of time. They fluctuate strongly. At any instant one rate is strongly negative, one is positive and one is small. One also notes that $\Lambda_e$ is always between the smallest and the largest rate, but that it is by no means equal to the average $(\Lambda_1+\Lambda_2+\Lambda_3)/3$.
 
-Now let us average over time. The time averages of the three rates converge to about $4.2$, $-2.3$ and $-15.6$. The time average of $\Lambda_e$ converges to $0.9$, in agreement with {numref}`fig:cont3d:lorenzlyapunov`. Which of these are the Lyapunov exponents? The Lyapunov exponents of a flow are defined as in chapter {numref}`sec:disc2d`: they are the long-time average growth rates of perturbations that evolve according to $\dot{\boldsymbol{\epsilon}} = J(\mathbf{x}_1(t)) \boldsymbol{\epsilon}$, the continuous-time counterpart of the product of Jacobians in {eq}`eq:disc2d:lyap_anyorder`. For the Lorenz system at $r=28$ this gives $(0.906, 0, -14.57)$. The averaged stretching rates are something else. The eigenvectors of $J_{\text{S}}$ rotate along the orbit, so a perturbation that is stretched at the rate $\Lambda_3$ now is no longer aligned with $\mathbf{e}_3$ a moment later, and is then squeezed. The average of $\Lambda_3(t)$ thus counts stretching that no perturbation keeps. What a perturbation does keep is measured by $\Lambda_e$: it aligns itself with the direction of largest long-time growth, and its average is the largest Lyapunov exponent.
+Now let us average over time. The time averages of the three rates converge to about $4.3$, $-2.3$ and $-15.7$. The time average of $\Lambda_e$ converges to $0.9$, in agreement with {numref}`fig:cont3d:lorenzlyapunov`. Which of these are the Lyapunov exponents? The Lyapunov exponents of a flow are defined as in chapter {numref}`sec:disc2d`: they are the long-time average growth rates of perturbations that evolve according to $\dot{\boldsymbol{\epsilon}} = J(\mathbf{x}_1(t)) \boldsymbol{\epsilon}$, the continuous-time counterpart of the product of Jacobians in {eq}`eq:disc2d:lyap_anyorder`. For the Lorenz system at $r=28$ this gives $(0.906, 0, -14.57)$. The averaged stretching rates are something else. The eigenvectors of $J_{\text{S}}$ rotate along the orbit, so a perturbation that is stretched at the rate $\Lambda_3$ now is no longer aligned with $\mathbf{e}_3$ a moment later, and is then squeezed. The average of $\Lambda_3(t)$ thus counts stretching that no perturbation keeps. What a perturbation does keep is measured by $\Lambda_e$: it aligns itself with the direction of largest long-time growth, and its average is the largest Lyapunov exponent.
 
 The spectrum $(0.906, 0, -14.57)$ is typical for a chaotic flow. The positive exponent causes the divergence along the attractor and hence the sensitivity to initial conditions. The exponent zero belongs to a perturbation along the flow direction $\mathbf{f}(\mathbf{x}_1)$: shifting a point along its own trajectory neither grows nor shrinks on average. The negative exponent causes the contraction of trajectories towards the attractor. Only the sum is shared: the three stretching rates add up to $\mathrm{tr}\,J_{\text{S}} = \mathrm{tr}\,J = \nabla \cdot \mathbf{f} = -(\sigma + 1 + b)$ at every instant, and so do the three Lyapunov exponents, in agreement with the volume contraction {eq}`eq:cont3d:vevolution`. Finally, it is interesting to study whether there are specific regions on the attractor that can be associated with strong divergence ($\Lambda_e \gg 0$), or strong convergence events ($\Lambda_e \ll 0$). This is indeed the case, as shown in {numref}`fig:cont3d:lorenzlyapattractor`.
 
@@ -310,7 +301,7 @@ print("Lyapunov spectrum:", spectrum, " sum:", spectrum.sum())
 ```
 ````
 
-The last lines of the program compute the Lyapunov exponents with `cb.lyapunov_spectrum_flow`, which integrates $\dot{\boldsymbol{\epsilon}} = J \boldsymbol{\epsilon}$ for three perturbations and keeps them orthogonal with a QR decomposition, as in chapter {numref}`sec:disc2d`. It gives approximately $(0.90,\ 0.00,\ -14.57)$ (the literature value of the largest exponent is 0.906). Compare these numbers with the time averages $(4.2, -2.3, -15.6)$ of the stretching rates printed above: only the sum $-(\sigma+1+b)$ is the same.
+The last lines of the program compute the Lyapunov exponents with `cb.lyapunov_spectrum_flow`, which integrates $\dot{\boldsymbol{\epsilon}} = J \boldsymbol{\epsilon}$ for three perturbations and keeps them orthogonal with a QR decomposition, as in chapter {numref}`sec:disc2d`. It gives approximately $(0.90,\ 0.00,\ -14.57)$ (the literature value of the largest exponent is 0.906). Compare these numbers with the time averages $(4.3, -2.3, -15.7)$ of the stretching rates printed above: only the sum $-(\sigma+1+b)$ is the same.
 
 ## Reducing complexity
 
@@ -328,7 +319,6 @@ All but the first item comprise a reduction from a continuous system to a discre
 
 ```{figure} _static/cont3d/cont3d_lorenz_attractoryz.png
 :name: fig:cont3d:lorenzattractoryz
-:width: 80mm
 
 Phase space projection to the $y-z$ plane. Note the apparent relation between succeeding maxima of $z$.
 ```
@@ -373,13 +363,8 @@ plt.ylabel("$z_{n+1}$")
 
 Note that the transition from a 3-D continuous to a 1-D discrete system is a formidable reduction in complexity!
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont3d_lorenz_zmax_map.png
 :name: fig:cont3d:lorenzmap
-:align: center
-:subcaptions: below
-
-![ ](_static/cont3d/cont3d_lorenz_zmax.png)
-![ ](_static/cont3d/cont3d_lorenz_map.png)
 
 Construction of the Lorenz map. (a) The local maxima $z_n$ obtained from a time series $z(t)$ of the Lorenz system. (b) The Lorenz map, obtained by making a return plot of the data in (a).
 ```
@@ -407,7 +392,6 @@ The mapping $\mathbf{x}_{k+1} = P(\mathbf{x}_k)$ is called the *Poincaré map*. 
 
 ```{figure} _static/cont3d/cont3d_poincaresection.png
 :name: fig:cont3d:poincaresection
-:width: 50mm
 
 A Poincaré section samples the intersections of a trajectory in phase space with the surface $S$. (after Strogatz, 1994).
 ```
@@ -463,14 +447,8 @@ $$
 where we used that $\theta_0=0$. This mapping is shown in {numref}`fig:cont3d:poincare_ex`b for $a=0.2$. Clearly, $r^*=1$ is a stable fixed point of this mapping, which confirms the convergence to a limit cycle.
 ````
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont3d_poincare_example.png
 :name: fig:cont3d:poincare_ex
-:align: center
-:subcaptions: below
-
-![ ](_static/cont3d/cont3d_poincare_exphase.png)
-![ ](_static/cont3d/cont3d_poincare_exmap.png)
-![ ](_static/cont3d/cont3d_poincare_exseq.png)
 
 Phaseportrait and the mapping for the Poincaré section. (a) Phase portrait with surface of section (red line) and the intersections (solid circles). (b) The Poincaré map. (c) Some iterations of the Poincaré map, showing the approach towards the fixed point in $r$.
 ```
@@ -507,7 +485,6 @@ tp, Xp = cb.poincare_section(cb.lorenz, [2, 5, 5], T[-1], (1, 0.0), discard=T[N 
 
 ```{figure} _static/cont3d/cont3d_lorenz_poincare.png
 :name: fig:cont3d:lorenzpoincare
-:width: 60mm
 
 Poincaré section at $y=0$ for the Lorenz system.
 ```
@@ -539,11 +516,10 @@ $$
 \end{aligned}
 $$
 
-with parameters $a$, $b$ and $c$. Note that only the $z$-equation contains a nonlinearity. In the absence of $z$, the first two equations are just those of a harmonic oscillator. As the parameter $a$ is positive there is negative damping, so that the typical behavior when $z \approx 0$ will be that of an unstable spiral. The attractor is shown in {numref}`fig:cont3d:rosslerperiod`(d) for $a=0.432$, $b=2$ and $c=4$. Following a trajectory starting at the center at $z=0$, the trajectory spirals outward. When $x$ becomes sufficiently large (after one or more cycles), the $z$ equation becomes active and the trajectory shoots up. Due to the negative feedback in the $x$-equation it is then reinjected near the center of the spiral. Trajectories are reinjected further to the inside of the spiral when they were further on the outside, generating a surface similar to a Möbius strip ({numref}`fig:cont3d:rosslertopology`). Note that the attractor is a topologically very complex object, as the outward spiralling trajectories are weaved through the reinjected trajectories.
+with parameters $a$, $b$ and $c$. Note that only the $z$-equation contains a nonlinearity. In the absence of $z$, the first two equations are just those of a harmonic oscillator. As the parameter $a$ is positive there is negative damping, so that the typical behavior when $z \approx 0$ will be that of an unstable spiral. The attractor is shown in {numref}`fig:cont3d:rosslerperiod`(g) for $a=0.432$, $b=2$ and $c=4$. Following a trajectory starting at the center at $z=0$, the trajectory spirals outward. When $x$ becomes sufficiently large (after one or more cycles), the $z$ equation becomes active and the trajectory shoots up. Due to the negative feedback in the $x$-equation it is then reinjected near the center of the spiral. Trajectories are reinjected further to the inside of the spiral when they were further on the outside, generating a surface similar to a Möbius strip ({numref}`fig:cont3d:rosslertopology`). Note that the attractor is a topologically very complex object, as the outward spiralling trajectories are weaved through the reinjected trajectories.
 
 ```{figure} _static/cont3d/cont3d_rosslertopology.png
 :name: fig:cont3d:rosslertopology
-:width: 9cm
 
 Schematic of the structure of the Rössler attractor. Trajectories spiral outward on a flat "normal band"; once $x$ is large enough they are lifted, folded over and reinjected near the centre, so that the folded part of the surface forms a "Möbius band".
 ```
@@ -553,17 +529,10 @@ Schematic of the structure of the Rössler attractor. Trajectories spiral outwar
 :::
 
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont3d_rosslerperiod.png
 :name: fig:cont3d:rosslerperiod
-:align: center
-:subcaptions: below
 
-![ ](_static/cont3d/cont3d_rosslerperiod1a.png)
-![ ](_static/cont3d/cont3d_rosslerperiod2a.png)
-![ ](_static/cont3d/cont3d_rosslerperiod3a.png)
-![ ](_static/cont3d/cont3d_rosslerperiod4a.png)
-
-The period doubling route to chaos of the Rössler system. (a) $c=3$: Period 1. (b) $c=3.4$: Period 2. (c) $c=3.55$: Period 4. (d) $c=4.0$: Chaos.
+The period doubling route to chaos of the Rössler system. Top row: the attractor; bottom row: the sequence of maxima $x_n$. (a, b) $c=3$: Period 1. (c, d) $c=3.4$: Period 2. (e, f) $c=3.55$: Period 4. (g, h) $c=4.0$: Chaos.
 ```
 
 :::{only} html
@@ -575,7 +544,7 @@ The period doubling route to chaos of the Rössler system. (a) $c=3$: Period 1. 
 <iframe src="_static/cont3d/interactive/rossler3d.html" width="100%" height="520" style="border:none;"></iframe>
 ```
 
-As for the Lorenz map, we sample the maxima of $x$ in order to reduce the complexity of the data. In {numref}`fig:cont3d:rosslerperiod`, the behavior of the system is shown for four different values of $c$. For $c=3$ ({numref}`fig:cont3d:rosslerperiod`a), the system settles into a limit cycle, and subsequent maxima in $x$ will be identical. This situation resembles that of a fixed point (period-1) solution for a one-dimensional map. For $c=3.4$ ({numref}`fig:cont3d:rosslerperiod`b), the system  settles into a limit cycle which has become more complex: the trajectory performs two cycles before returning to the same location. This is reflected in the sequence of the $x$-maxima, which shows a period-2 solution. A period-4 limit cycle is shown in {numref}`fig:cont3d:rosslerperiod`c and the chaotic timeseries in {numref}`fig:cont3d:rosslerperiod`d. In fact, the Rössler system has a full period doubling route to chaos, which is shown in {numref}`fig:cont3d:bifurcation`a. Clearly, there is a strong similarity with the bifurcation diagram of the logistic map, {numref}`fig:disc1d:series_bifurcation_logist`.
+As for the Lorenz map, we sample the maxima of $x$ in order to reduce the complexity of the data. In {numref}`fig:cont3d:rosslerperiod`, the behavior of the system is shown for four different values of $c$. For $c=3$ ({numref}`fig:cont3d:rosslerperiod`(a, b)), the system settles into a limit cycle, and subsequent maxima in $x$ will be identical. This situation resembles that of a fixed point (period-1) solution for a one-dimensional map. For $c=3.4$ ({numref}`fig:cont3d:rosslerperiod`(c, d)), the system  settles into a limit cycle which has become more complex: the trajectory performs two cycles before returning to the same location. This is reflected in the sequence of the $x$-maxima, which shows a period-2 solution. A period-4 limit cycle is shown in {numref}`fig:cont3d:rosslerperiod`(e, f) and the chaotic case in {numref}`fig:cont3d:rosslerperiod`(g, h). In fact, the Rössler system has a full period doubling route to chaos, which is shown in {numref}`fig:cont3d:bifurcation`a. Clearly, there is a strong similarity with the bifurcation diagram of the logistic map, {numref}`fig:disc1d:series_bifurcation_logist`.
 
 A clue for the period-doubling behavior could have been inferred from the return plot of $x_n$ in a fully chaotic state ($c=4$) ({numref}`fig:cont3d:rosslerreturn`). The return plot is very similar to the logistic map, and has both requirements for Feigenbaum's universality (section {numref}`sec:disc1d:universality`): 1) a unimodal map; and 2) a quadratic maximum. From the Lorenz map ({numref}`fig:cont3d:lorenzmap`) one might  anticipate that the Lorenz system will behave rather differently than the Rössler system, as the cusp implies that the map is not differentiable at its maximum. Shown in {numref}`fig:cont3d:bifurcation`b is the bifurcation diagram in terms of $r$ for the Lorenz equations. The other two parameters are $\sigma=10$ and $b=8/3$. As can be seen, the system is stable up to a certain value for $r$, after which it bursts into chaotic behaviour without a single trace of period doubling.
 
@@ -597,19 +566,14 @@ $$
 
 at $r_c = \frac{\sigma ( \sigma  + b + 3)}{\sigma - b - 1}$, $x^*_2$ and $x^*_3$ undergo a Hopf bifurcation. Recall that the Hopf bifurcation represents a transition from a stable spiral (negative real part of eigenvalue) to an unstable spiral (positive real part of eigenvalue). Here the Hopf bifurcation is subcritical (section {numref}`sec:cont2d:bif_hopf`): an unstable limit cycle shrinks onto the fixed point, and no stable limit cycle forms. The strange attractor already exists for $r > 24.06$, so that for $24.06 < r < r_c = 24.74$ it coexists with the two stable fixed points, and the initial condition decides which of the two is reached. At $r_c$ the fixed points lose their stability and only the strange attractor remains[^fn2].
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont3d_bifurcation.png
 :name: fig:cont3d:bifurcation
-:align: center
-:subcaptions: below
-
-![ ](_static/cont3d/cont3d_rosslerbifurcation.png)
-![ ](_static/cont3d/cont3d_lorenz_bifurcation.png)
 
 Bifurcation diagram of the Rössler and Lorenz equations based on maxima in $x$ and $z$, respectively. (a) Rössler system. (b) Lorenz system.
 ```
 
 :::{only} html
-*Code behind this figure: [panel (a)](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont3d/fig_rossler.py) · [panel (b)](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont3d/fig_lorenz.py)*
+*[Code behind this figure](https://github.com/mvreeuwijk/chaosbook/blob/main/creators/python/cont3d/fig_rossler.py)*
 :::
 
 ```{raw} html
@@ -658,7 +622,6 @@ Here, $f$ is a damping coefficient and $\omega$ and $A$ are the forcing frequenc
 
 ```{figure} _static/cont3d/cont3d_doublewell.png
 :name: fig:cont3d:doublewell
-:width: 60mm
 
 Sketch of the mechanical system (after Strogatz, 1994).
 ```
@@ -694,15 +657,10 @@ plt.xlabel("$x$")
 plt.ylabel("$y$")
 ```
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont3d_doublewell_results.png
 :name: fig:cont3d:doublewell_results
-:align: center
-:subcaptions: below
 
-![ ](_static/cont3d/cont3d_doublewell_phasespace.png)
-![ ](_static/cont3d/cont3d_doublewell_poincare.png)
-
-a) An (x,y) projection of a phase space trajectory for the forced double-well system (red line), together with contours of the total energy (black lines) and the three fixed points (circles). The forcing is of sufficient amplitude such that the state vector moves erratically between the two wells. b) A stroboscopic Poincaré section for the double-well system.
+(a) An (x,y) projection of a phase space trajectory for the forced double-well system (red line), together with contours of the total energy (black lines) and the three fixed points (circles). The forcing is of sufficient amplitude such that the state vector moves erratically between the two wells. (b) A stroboscopic Poincaré section for the double-well system.
 ```
 
 :::{only} html
@@ -808,13 +766,8 @@ $$
 
 The potential comprises four different terms: (a) the potential of mass 1; (b) the potential of mass 2; (c) the centrifugal force due to the rotating frame of reference; and (d) a constant to make maximum value of the potential independent of $\mu$. The landscape generated by $V$ is interesting due to the competition between the two attracting gravitational forces (a,b) and the repelling centrifugal force (c). In {numref}`fig:cont4d:3body_v`, the potential function is shown for $\mu = m_2/(m_1+m_2)=0.2$ (consistent with the values displayed in {numref}`table:phenomenon_3bodyconstants`), and note that $\mu_1=1-\mu$ and $\mu_2 = \mu$. The singularities in the potential are at the positions of the two heavy bodies $\mathbf{x}_1 = (-\mu,0)$ and $\mathbf{x}_2=(1-\mu,0)$.
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont4d_3body_V.png
 :name: fig:cont4d:3body_v
-:align: center
-:subcaptions: below
-
-![ ](_static/cont3d/cont4d_3body_V.png)
-![ ](_static/cont3d/cont4d_3body_Vcut.png)
 
 The potential $V$ for the restricted three-body system at $\mu=0.2$. (a) isolines of $V$ and the Lagrange points (red diamonds). (b) a cross-section of $V$ at $y=0$, showing the wells with singularities at $x=-\mu$ and $x=1-\mu$, as well as the Lagrange points $L1-L3$ with $V_2 < V_1 < V_3$ (red diamonds).
 ```
@@ -869,16 +822,8 @@ print(cb.lagrange_points(mu))
 
 For $\mu=0.2$, Python returns $(x_L1, x_L2, x_L3)=(1.27, 0.44, -1.08)$ and associated potentials $(V_{L1}, V_{L2}, V_{L3})=(-1.86, -1.98, -1.68)$.
 
-```{subfigure} 2
+```{figure} _static/cont3d/cont4d_3body_trajectories.png
 :name: fig:cont4d:3body_poincare
-:align: center
-:subcaptions: below
-
-![ ](_static/cont3d/cont4d_3body_traj1.png)
-![ ](_static/cont3d/cont4d_3body_traj2.png)
-![ ](_static/cont3d/cont4d_3body_traj3.png)
-![ ](_static/cont3d/cont4d_3body_traj4.png)
-![ ](_static/cont3d/cont4d_3body_Poincare.png)
 
 The behaviour of the three-body system at $\mu=0.2$ for four different initial conditions. (a-d) The trajectories in space; the Hill region $V>V_{L1}$ is denoted in grey. (e) $(x_n, u_n)$ projection of a Poincaré section at $y=0$ (colours correspond to the initial conditions of (a-d)).
 ```

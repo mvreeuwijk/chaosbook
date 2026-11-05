@@ -2,8 +2,8 @@
 
 Dimensionless bowl y = x^2/2; the map (X, U, V) -> (X', U', V') is the one in
 the chapter. Produces (in python/_static/disc2d/):
-  disc2d_bowl_chaos.png     first 10 bounces, X0=-1.2, U0=2.2, V0=1.2
-  disc2d_bowl_periodic.png  the two periodic solutions
+  disc2d_bowl_trajectories.png  (a) first 10 bounces, X0=-1.2, U0=2.2, V0=1.2;
+                                (b) the two periodic solutions
   disc2d_bowl_energies.png  Ep, Ek and Et against recreated time, 20 bounces
 """
 
@@ -14,8 +14,9 @@ import numpy as np
 
 import chaosbook as cb
 
-STYLE = Path(__file__).resolve().parents[1] / "book.mplstyle"
-plt.style.use(STYLE)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, panel labels, save)
 
 OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "disc2d"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -48,21 +49,17 @@ def trajectory(ax, S, nseg):
 
 xb = np.linspace(-2.5, 2.5, 300)
 
-# -- chaotic trajectory --------------------------------------------------------
+# -- (a) chaotic trajectory, (b) two periodic solutions -----------------------
 S = cb.orbit(bounce, x0=(-1.2, 2.2, 1.2), n=20)
-fig, ax = plt.subplots(figsize=(4.2, 3.2))
+fig, axs = plt.subplots(1, 2, figsize=(bf.FULL_W, 2.4))
+ax = axs[0]
 ax.plot(xb, yb(xb), "k", lw=2.5)
 trajectory(ax, S, 10)
 ax.set_xlim(-2.5, 2.5)
 ax.set_ylim(0, 4.3)
 ax.set_xlabel("$x$")
 ax.set_ylabel("$y$")
-fig.tight_layout()
-fig.savefig(OUT / "disc2d_bowl_chaos.png", dpi=150)
-plt.close(fig)
-
-# -- two periodic solutions ----------------------------------------------------
-fig, ax = plt.subplots(figsize=(4.2, 3.2))
+ax = axs[1]
 ax.plot(xb, yb(xb), "k", lw=2.5)
 Sa = cb.orbit(bounce, x0=(-0.5, 0.5, 23 / 8), n=3)
 Sb = cb.orbit(bounce, x0=(-2.2, 2.2, 1.0), n=3)
@@ -72,16 +69,15 @@ ax.set_xlim(-2.5, 2.5)
 ax.set_ylim(0, 4.5)
 ax.set_xlabel("$x$")
 ax.set_ylabel("$y$")
-fig.tight_layout()
-fig.savefig(OUT / "disc2d_bowl_periodic.png", dpi=150)
-plt.close(fig)
+bf.panel_labels(axs)
+bf.save(fig, OUT / "disc2d_bowl_trajectories.png")
 
 # -- energies against recreated time -------------------------------------------
 N = 20
 T = np.zeros(N + 1)
 for n in range(N):
     T[n + 1] = T[n] + (S[n + 1, 0] - S[n, 0]) / S[n, 1]
-fig, ax = plt.subplots(figsize=(6.5, 2.6))
+fig, ax = plt.subplots(figsize=(bf.FULL_W, 2.3))
 for n in range(N):
     x = np.linspace(S[n, 0], S[n + 1, 0], 200)
     X0, U0, V0 = S[n]
@@ -101,8 +97,6 @@ ax.set_xlabel("$t$")
 ax.set_ylabel("$E(t)$")
 ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=3,
           columnspacing=1.5, handletextpad=0.3)
-fig.tight_layout()
-fig.savefig(OUT / "disc2d_bowl_energies.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "disc2d_bowl_energies.png")
 print("Et range over bounces:", (Ep_n + Ek_n).min(), (Ep_n + Ek_n).max())
 print("fig_bowl: assets written to", OUT)

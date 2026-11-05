@@ -16,8 +16,11 @@ from scipy.integrate import solve_ivp
 
 import chaosbook as cb
 
-plt.style.use(Path(__file__).resolve().parents[1] / "book.mplstyle")
-OUT = Path(__file__).resolve().parents[3] / "python" / "_static" / "practice"
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bookfig as bf  # noqa: E402  (house style: sizes, save)
+
+OUT = bf.out("practice")
 (OUT / "interactive").mkdir(parents=True, exist_ok=True)
 
 C_ANA, C_TRUTH, C_FREE, C_OBS, C_FAINT = "#1f6aa5", "#111111", "#c0392b", "#e08a1e", "#b8b8b8"
@@ -55,7 +58,7 @@ back = solve_ivp(cb.lorenz, [0, 60], x0, t_eval=np.arange(0, 60, 0.01),
 # -- ensemble snapshots at t = 0, 3, 8 --------------------------------------
 times = [0.0, 3.0, 8.0]
 cloud = ensemble(x0, 0.5, 400, np.array(times), seed=1)
-fig, axes = plt.subplots(1, 3, figsize=(9.0, 3.2))
+fig, axes = plt.subplots(1, 3, figsize=(bf.FULL_W, 2.4))
 for ax, t, pts in zip(axes, times, cloud):
     ax.plot(back[0], back[2], color=C_FAINT, lw=0.3, alpha=0.7, zorder=1)
     ax.scatter(pts[:, 0], pts[:, 2], s=6, color=C_ANA, alpha=0.7,
@@ -67,9 +70,7 @@ for ax, t, pts in zip(axes, times, cloud):
     ax.set_xticks([-20, 0, 20])
     ax.set_yticks([0, 25, 50])
 axes[0].set_ylabel("$z$")
-fig.tight_layout()
-fig.savefig(OUT / "practice_ensemble.png", dpi=150)
-plt.close(fig)
+bf.save(fig, OUT / "practice_ensemble.png")
 
 # -- spread delta(t) and the predictability horizon -------------------------
 T = 22.0
@@ -81,7 +82,7 @@ sat = delta[t >= 18].mean()
 # exponential growth delta(0) exp(Le t) reaches the size of the attractor
 th = np.log(sat / delta[0]) / Le
 
-fig, ax = plt.subplots(figsize=(5.0, 3.5))
+fig, ax = plt.subplots(figsize=bf.MEDIUM)
 ax.semilogy(t, delta, color=C_ANA, lw=1.6, label="ensemble spread")
 tref = np.linspace(0, 14, 50)
 ax.semilogy(tref, delta[0] * np.exp(Le * tref), "--", color=C_TRUTH, lw=1.1,
@@ -89,16 +90,14 @@ ax.semilogy(tref, delta[0] * np.exp(Le * tref), "--", color=C_TRUTH, lw=1.1,
 ax.axhline(sat, color=C_FREE, lw=1.0, ls=":", label="attractor size")
 ax.axvline(th, color=C_OBS, lw=1.0)
 ax.annotate("predictability\nhorizon", xy=(th, 0.4 * sat), xytext=(th + 1.0, 3e-2),
-            color=C_OBS, fontsize=11,
+            color=C_OBS, fontsize=8,
             arrowprops=dict(arrowstyle="->", color=C_OBS, lw=0.8))
 ax.set_xlabel("$t$")
 ax.set_ylabel(r"ensemble spread $\delta(t)$")
 ax.set_xlim(0, T)
 ax.set_ylim(5e-4, 5e1)
-ax.legend(loc="lower right", fontsize=10)
-fig.tight_layout()
-fig.savefig(OUT / "practice_horizon.png", dpi=150)
-plt.close(fig)
+ax.legend(loc="lower right")
+bf.save(fig, OUT / "practice_horizon.png")
 print(f"horizon: delta(0) = {delta[0]:.2e}, spread saturates at {sat:.2f}; "
       f"t_h = ln(sat/delta0)/Le = {th:.2f}")
 print(f"  (text numbers: ln(10/1e-3)/0.9 = {np.log(10 / 1e-3) / 0.9:.2f}; "
