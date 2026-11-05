@@ -28,10 +28,13 @@ it are in `docs/superpowers/plans/` and `docs/superpowers/reviews/`.
 - [x] Python edition: all chapters converted (PRs #1–#6).
 - [x] Critical referee review of the whole book
       (`docs/superpowers/reviews/2026-11-04-book-review.md`).
-- [ ] Review fixes: conversion fixes (merged with the rollout), book content
+- [x] Review fixes: conversion fixes (merged with the rollout), book content
       fixes for both editions, copy-edit of chapters 1–6, chapter 7 in the
       lecture voice (PRs #7–#9).
-- [ ] Figure-versus-caption fixes from the full figure audit.
+- [x] Figure-versus-caption fixes from the full figure audit (PR #13).
+- [x] Figure house style for the Python edition: every figure generated at
+      its printed size, combined multi-panel figures, no width scaling
+      (PR #13; `docs/superpowers/plans/2026-11-04-figure-house-style.md`).
 - [ ] Regenerate the Maple images listed in `creators/MAPLE_TODO.md` once
       Maple is available.
 - [x] Swap the editions: the Python edition is the main site, with the
