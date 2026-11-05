@@ -214,7 +214,6 @@ latex_documents = [
    u'Harmen J. Jonker and Maarten van Reeuwijk', 'howto'),
 ]
 
-latex_toplevel_sectioning = "chapter"
 latex_docclass = {"manual": "book"}
 
 # Appendices belong inside the book, rendered as Appendix A, B, ... (the

@@ -59,9 +59,9 @@ Pending:
 
 - `exercises/ex0036r03_fig1.png` (three-body exercise): the pstex text layer
   was lost, so the schematic has no labels (earth, moon, satellite, R, x, y).
-  The Python figure is being redrawn; once it is, copy it to
-  `maple/_static/exercises/` as well (the `.pdf` twin there must then be
-  rewritten).
+  The Python figure has been redrawn with the labels
+  (`creators/python/exercises/fig_exercises.py`); the Maple image is left
+  as it is until the Maple figures are regenerated.
 
 Fixed in the Maple text rather than the image (no Maple change needed):
 the hysteresis figure now includes the ten existing Maple panels; the
@@ -71,3 +71,28 @@ start is (0.05, 0.4), as in `disc2d/disc2d_standardmap.mw`; the reactor
 exercise uses `exercises/NuclearReactorCooling.png`; and the cookbook code
 and printed output now match its images (`x=-2..3`, the list `p`, `r := 3.5`,
 the phase-portrait initial conditions).
+
+## Cosmetic problems in Maple images (figure audit, 2026-11-04)
+
+These images show the right content but are hard to read. Fix them when the
+worksheets are rerun; none needs a text change.
+
+| Figure (`maple/_static/...`) | Problem |
+|---|---|
+| `phenomenon/phenomenon_3body_example{1a..3b}.png` | The "y/R" label is clipped at the left edge of the left-column panels. |
+| `practice/practice_assimilation.png` | The legend of the RMS-error panel overlaps the curves at t ≈ 10.5-12. |
+| `disc1d/disc1d_not_so_universal.png` | No axis labels (δ, η). |
+| `disc1d/disc1d_logist_return_*`, `tentmap_returnplot`, `shiftmap_returnplot`, `unknownmapping_{return,series}_*`, `logist_lyap_r39_lin` | Rotated y-labels clipped or printed over the ticks; `logist_lyap_r39_lin` has no legend for the o/+ markers. |
+| `disc2d/disc2d_standardmap_{quasi,chaos}_deviations.png` | The n-axis is drawn at the top, with clipped labels. |
+| `cont1d/cont1d_generic_graphical_unstable.png` | The unstable fixed point is a grey disc; elsewhere it is an open circle. |
+| `cont1d/` normal-form and ferromagnet panels | Axis labels and ticks sit inside the plot, crossed by the curves (re-export with boxed axes). |
+| `cont2d/` pitchfork, global and Hopf panels | Labels and ticks collide with the curves. |
+| `cont3d/` Lorenz, Rössler, Poincaré and double-well figures | Labels Z_n, x[n] instead of z_n, x_n; labels inside the plots; some clipped. |
+| `cont3d/cont4d_3body_traj1-4.png` | No y-axis label (y/R). |
+| `app_cookbook`: `cookbook_plot_lines2.png` | A title "y=sin(ax)" that the printed code does not request. |
+
+Open question: in `cont3d_lorenzlyapattractor.png` the Maple and Python
+editions mark different regions (Python: circles for Λe > 6 on the outer rims
+of the lobes; Maple: circles near the z-axis at z ≈ 30-45). The Python script
+computes Λe from the formula in the text and its picture matches the caption,
+so the Maple worksheet is the one to check.
