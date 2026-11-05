@@ -42,3 +42,23 @@ fonts.
 - 3.9 can be smaller.
 - 3.10, 3.11, 3.12, 3.14, 3.15, 3.16, 3.17 should be larger.
 - The figure in exercise 3 (comment cut off; check it).
+
+## Status (5 November 2026, branch `py/figures`)
+
+All comments above are applied. Every figure is now generated at its
+printed size and included without scaling (10 pt labels, 9 pt ticks), so
+the fonts are the same in every figure, in the PDF and in the HTML.
+
+- 1.1/1.2 consistent; 1.4 smaller (3.8 in); 1.5 one 2x3 figure that fits
+  the page; 1.6 two panels side by side; exercise 1.3.1 image about half
+  its old size.
+- 2.2 three panels in one row; 2.4 one 2x3 figure that fits the page; 2.5,
+  2.7, 2.14, 2.23 at the standard sizes; 2.18, 2.19 full width but low;
+  2.24 at the medium size.
+- 3.2, 3.5, 3.10-3.12, 3.14-3.17 at the standard sizes; 3.4 and 3.9
+  smaller. 3.7 and 3.8 were not merged: the figure audit had already made
+  each a six-panel figure, so the dead space is gone. Exercise 3.5: the
+  U-tube sketch is larger; the rotation-number image is an old raster
+  without a script and prints at its natural size.
+- Example and code boxes: one warm background; long boxes break across
+  pages (both editions).
