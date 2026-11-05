@@ -91,8 +91,8 @@ for _ in range(6):
     ax.scatter(*pts[0], color=C_FREE, s=12)
 ax.text2D(0.5, 0.94, "high-dimensional state space", transform=ax.transAxes,
           ha="center", fontsize=8)
-ax.text2D(0.72, 0.06, "low-dimensional\nattracting manifold",
-          transform=ax.transAxes, ha="center", fontsize=8, color=C_ANA)
+ax.text2D(0.99, 0.02, "low-dimensional\nattracting manifold",
+          transform=ax.transAxes, ha="right", fontsize=8, color=C_ANA)
 ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
 ax.grid(False)
 ax.view_init(elev=22, azim=-60)

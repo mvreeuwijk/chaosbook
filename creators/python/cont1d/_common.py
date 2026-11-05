@@ -44,9 +44,11 @@ def cross_axes(ax, xlabel, ylabel, zero=False, ticked=False):
     ax.annotate(xlabel, (1, 0), xycoords=("axes fraction", "data"),
                 xytext=(0, -22 if ticked else -5), textcoords="offset points",
                 ha="right", va="top")
+    # the label sits to the right of the vertical axis: the curves of the
+    # normal forms run through the upper left, where a left label collides
     ax.annotate(ylabel, (0, 1), xycoords=("data", "axes fraction"),
-                xytext=(6 if ticked else -5, -2), textcoords="offset points",
-                ha="left" if ticked else "right", va="top")
+                xytext=(5, -2), textcoords="offset points",
+                ha="left", va="top")
     if zero:
         ax.annotate("0", (0, 0), xytext=(-4, -4), textcoords="offset points",
                     ha="right", va="top")

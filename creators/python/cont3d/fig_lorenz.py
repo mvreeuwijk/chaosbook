@@ -52,9 +52,10 @@ plt.xlim(0, 30)
 save("cont3d_lorenz_time")
 
 # -- attractor (a) and attraction from four far starts (b), one 1x2 figure ----
-fig = plt.figure(figsize=(bf.FULL_W, 3.0))
-ax_a = fig.add_subplot(1, 2, 1, projection="3d")
-ax_b = fig.add_subplot(1, 2, 2, projection="3d")
+# explicit axes: constrained layout leaves wide empty bands around 3-D axes
+fig = plt.figure(figsize=(bf.FULL_W, 2.7), layout="none")
+ax_a = fig.add_axes([0.0, 0.0, 0.5, 1.0], projection="3d")
+ax_b = fig.add_axes([0.5, 0.0, 0.5, 1.0], projection="3d")
 sol = run([2, 5, 5], 60, 0.005)
 m = sol.t >= 10
 ax_a.plot(*sol.y[:, m], "k", lw=0.4)
@@ -64,10 +65,11 @@ for dx, dz, col in [(-50, -100, "tab:blue"), (-50, 100, "tab:orange"),
     s_ = run([2 + dx, 5, 5 + dz], 20, 0.004)
     ax_b.plot(*s_.y, color=col, lw=0.6)
 ax_b.view_init(elev=11, azim=-108)
+ax_b.set_xticks([-50, 0, 50]); ax_b.set_yticks([-100, 0, 100])  # uncrowded
 for ax in (ax_a, ax_b):
     ax.set_xlabel("$x$"); ax.set_ylabel("$y$"); ax.set_zlabel("$z$")
-    ax.set_box_aspect(None, zoom=0.92)
-bf.panel_labels([ax_a, ax_b])
+    ax.set_box_aspect(None, zoom=0.88)
+bf.panel_labels([ax_a, ax_b], loc=(0.04, 0.9), pad=(0, 0))
 save("cont3d_lorenz_attractors")
 
 # -- long run for projection, maxima and sections (N = 20000, dt = 0.01) ------

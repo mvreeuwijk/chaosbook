@@ -4,6 +4,7 @@ Produces (in python/_static/phenomenon/):
   phenomenon_lorenz_xt_series.png          time series x(t)
   phenomenon_lorenz_xt_two_series.png      sensitivity, (a) epsilon = 1e-3,
                                            (b) epsilon = 1e-5
+  phenomenon_lorenz_phasespace_far.png     front-page cover (panel (b) alone)
   phenomenon_lorenz_phasespace.png         (a) the butterfly attractor,
                                            (b) convergence onto it
   interactive/lorenz3d.html                rotatable 3D attractor
@@ -54,8 +55,10 @@ bf.save(fig, OUT / "phenomenon_lorenz_xt_two_series.png")
 # -- phase space: the butterfly (a), and convergence onto it (b) -------------
 solb = run([2, 5, 5], 40, n=12000)
 solf = run([100, 5, 5], 40, n=12000)
-fig = plt.figure(figsize=(bf.FULL_W, 3.0))
-axs = [fig.add_subplot(1, 2, k + 1, projection="3d") for k in range(2)]
+# explicit axes: constrained layout leaves wide empty bands around 3-D axes
+fig = plt.figure(figsize=(bf.FULL_W, 2.7), layout="none")
+axs = [fig.add_axes([0.5 * k, 0.0, 0.5, 1.0], projection="3d")
+       for k in range(2)]
 axs[0].plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
 axs[1].plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
 axs[1].plot(solf.y[0], solf.y[1], solf.y[2], "r", linewidth=0.6)
@@ -63,11 +66,18 @@ for ax in axs:
     ax.set_xlabel("$x$")
     ax.set_ylabel("$y$")
     ax.set_zlabel("$z$")
-    ax.set_box_aspect(None, zoom=0.78)   # keep the axis labels inside
-for ax, lab in zip(axs, "ab"):      # 3-D axes: text2D, not text
-    ax.text2D(0.02, 0.92, f"({lab})", transform=ax.transAxes,
-              fontsize=plt.rcParams["axes.labelsize"])
+    ax.set_box_aspect(None, zoom=0.82)   # keep the axis labels inside
+bf.panel_labels(axs, loc=(0.04, 0.9), pad=(0, 0))
 bf.save(fig, OUT / "phenomenon_lorenz_phasespace.png")
+
+# -- cover image of the front page (python/index.md): panel (b) on its own ---
+fig = plt.figure(figsize=bf.SQUARE, layout="none")
+ax = fig.add_axes([-0.07, 0.0, 1.0, 1.0], projection="3d")  # room for the z label
+ax.plot(solb.y[0], solb.y[1], solb.y[2], "b", linewidth=0.4)
+ax.plot(solf.y[0], solf.y[1], solf.y[2], "r", linewidth=0.6)
+ax.set_xlabel("$x$"); ax.set_ylabel("$y$"); ax.set_zlabel("$z$")
+ax.set_box_aspect(None, zoom=0.78)
+bf.save(fig, OUT / "phenomenon_lorenz_phasespace_far.png")
 
 # -- interactive: rotatable attractor ---------------------------------------
 fig = go.Figure(go.Scatter3d(

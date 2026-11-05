@@ -100,7 +100,7 @@ bf.save(fig, OUT / "NuclearReactorCooling.png")
 
 S = 0.62
 # --- U-tube with bubbles ------------------------------------------------------
-fig, ax = blank((1.3, 1.86), (-0.75, 3.75), (-0.55, 4.6))
+fig, ax = blank((2.0, 2.86), (-0.75, 3.75), (-0.55, 4.6))
 cx, rad, wall = 1.5, 1.2, 0.17        # tube centre-line radius, wall gap
 th = np.linspace(np.pi, 2 * np.pi, 100)
 yb, ytop = 1.4, 4.1                    # bottom centre of the bend, top of legs
